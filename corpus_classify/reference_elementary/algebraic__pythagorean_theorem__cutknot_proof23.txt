@@ -1,0 +1,43 @@
+Let the sides of a triangle have lengths a , b and c . Introduce the semiperimeter
+p = ( a + b + c )/2 and the area S . Then Heron's formula asserts that
+
+S 2 = p ( p - a )( p - b )( p - c )
+
+W. Dunham analyzes the original Heron's proof in his Journey through Genius .
+
+For the right triangle with hypotenuse c , we have S = ab /2. We'll modify the right
+hand side of the formula by noting that
+
+p - a = (-  a + b + c )/2,
+p - b = ( a - b + c )/2,
+p - c = ( a + b - c )/2.
+
+It takes a little algebra to show that
+
+16S 2 = ( a + b + c )(- a + b + c )( a - b + c )( a + b - c )
+  = 2 a 2 b 2 + 2 a 2 c 2 + 2 b 2 c 2 - ( a 4 + b 4 + c 4 )
+
+For the right triangle, 16 S 2 = 4 a 2 b 2 . So we have
+
+4 a 2 b 2 = 2 a 2 b 2 + 2 a 2 c 2 + 2 b 2 c 2 - ( a 4 + b 4 + c 4 )
+
+Taking all terms to the left side and grouping them yields
+
+( a 4 + 2 a 2 b 2 + b 4 ) - 2 a 2 c 2 - 2 b 2 c 2 + c 4 = 0
+
+With a little more effort
+
+( a 2 + b 2 ) 2 - 2 c 2 ( a 2 + b 2 ) + c 4 = 0
+
+And finally
+
+[( a 2 + b 2 ) - c 2 ] 2 = 0
+
+Remark
+For a quadrilateral with sides a , b , c and d inscribed in a circle there exists a generalization of Heron's formula discovered by Brahmagupta. In this case, the semiperimeter is defined as p = ( a + b + c + d )/2. Then the following formula holds
+
+S 2 = ( p - a )( p - b )( p - c )( p - d )
+
+Since any triangle is inscribable in a circle, we may let one side, say d , shrink to 0. This leads to Heron's formula.
+
+Note : the derivative of the right-hand side of Heron's formula - when equated to zero - also leads to the Pythagorean theorem.

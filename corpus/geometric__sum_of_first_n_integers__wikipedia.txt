@@ -1,0 +1,5 @@
+The fact that the nth triangular number equals n(n + 1)/2 can be illustrated using a visual proof. For every triangular number T_n, imagine a "half-rectangle" arrangement of objects corresponding to the triangular number. Copying this arrangement and rotating it to create a rectangular figure doubles the number of objects, producing a rectangle with dimensions n by (n + 1), which is also the number of objects in the rectangle. Clearly, the triangular number itself is always exactly half of the number of objects in such a figure, or:
+
+T_n = n(n + 1)/2.
+
+The case n = 4 illustrates this: 2·T_4 = 4·(4 + 1) = 20, counting the original arrangement together with the copy, which implies that T_4 = 4·(4 + 1)/2 = 10, the count of the original arrangement alone.

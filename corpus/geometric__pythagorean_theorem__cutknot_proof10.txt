@@ -1,0 +1,7 @@
+This and the next 3 proofs came from [ PWW ].
+The triangles in Proof #3 may be rearranged in yet another way that makes
+the Pythagorean identity obvious.
+
+(A more elucidating diagram on the right was kindly sent to me by Monty Phister . The proof admits a hinged dissection illustrated by a Java applet .)
+
+The first two pieces may be combined into one. The result appear in a 1830 book Sanpo Shinsyo - New Mathematics - by Chiba Tanehide (1775-1849), [H. Fukagawa, A. Rothman, Sacred Mathematics: Japanese Temple Geometry , Princeton University Press, 2008, p. 83].

@@ -1,0 +1,25 @@
+.DS_Store
+*.pdf
+Rplots.pdf
+
+# Large / regenerable stylo artifacts
+freq_table_*.txt
+final_results.txt
+output/pdf_cache/
+output/**/*.rds
+output/jams_quadrant/stylo_full_analysis.json
+output/contemporary_build.log
+output/contemporary_scrape_pass2.log
+output/corpus_build.log
+output/rolling_minmax_result.rds
+output/rolling_minmax_stopwords.png
+
+# Reference chunks (rebuild via scripts/build_research_reference.py)
+corpus_classify/reference_research/chunks/
+corpus_classify/reference_research/balanced/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/

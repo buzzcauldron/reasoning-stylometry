@@ -1,0 +1,13 @@
+Let D and E be points on the hypotenuse AB such that BD = BC and AE = AC. Let AD = x, DE = y, BE = z. Then AC = x + y, BC = y + z, AB = x + y + z. The Pythagorean theorem is then equivalent to the algebraic identity
+
+(y + z)² + (x + y)² = (x + y + z)².
+
+Which simplifies to
+
+y² = 2xz.
+
+To see that the latter is true calculate the power of point A with respect to circle B(C), i.e. the circle centered at B and passing through C, in two ways: first, as the square of the tangent AC and then as the product AD·AL:
+
+(x + y)² = x(x + 2(y + z)),
+
+which also simplifies to y² = 2xz.

@@ -1,0 +1,10 @@
+Melissa Running from MathForum has kindly sent me a link (that since disappeared) to a page by Donald B. Wagner, an expert on history of science and technology in China. Dr. Wagner appeared to have reconstructed a proof by Liu Hui (third century AD). However (see below), there are serious doubts to the authorship of the proof.
+
+Elisha Loomis cites this proof with the following comment:
+
+Benjir von Gutheil, oberlehrer at Nurnberg, Germany, produced the above proof. He died in the trenches in France, 1914. So wrote J. Adams, August 1933.
+Let us call it the B. von Gutheil World War Proof.
+
+Judging by the Sweet Land movie, such forgiving attitude towards a German colleague may not have been common at the time close to the WWI. It might have been even more guarded in the 1930s during the rise to power of the nazis in Germany.
+
+(I thank D. Rogers for bringing the reference to Loomis' collection to my attention. He also expressed a reservation as regard the attribution of the proof to Liu Hui and traced its early appearance to Karl Julius Walther Lietzmann's Geometrische aufgabensamming Ausgabe B: fuer Realanstalten , published in Leipzig by Teubner in 1916 . Interestingly, the proof has not been included in Lietzmann's earlier Der Pythagoreische Lehrsatz published in 1912.)

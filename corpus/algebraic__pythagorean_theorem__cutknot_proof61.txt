@@ -1,0 +1,9 @@
+(B. F. Yanney and J. A. Calderhead, Am Math Monthly , v.3, n. 12 (1896), 299-300, #XIX)
+
+This is a third in the family of proofs that invoke the Intersecting Chords theorem. The radius of the circle equals now the altitude from the right angle C. Unlike in the other two proofs, there are now no exceptional cases. Referring to the diagram,
+
+AD² = AH·AE = b² - CD²,
+BD² = BK·BL = a² - CD²,
+2AD·BD = 2CD².
+
+Adding the three yields the Pythagorean identity.

@@ -1,0 +1,1342 @@
+arXiv:math/9807012v1  [math.GT]  2 Jul 1998
+The number of Reidemeister Moves Needed for
+Unknotting
+Joel Hass and Jeﬀrey C. Lagarias ∗
+November 26, 2024
+Abstract
+There is a positive constant c1 such that for any diagram D representing the unknot, there is a sequence of at most 2 c1n Reidemeister moves
+that will convert it to a trivial knot diagram, where n is the number of
+crossings in D. A similar result holds for elementary moves on a polygonal knot K embedded in the 1-skeleton of the interior of a compact,
+orientable, triangulated P L 3-manifold M . There is a positive constant
+c2 such that for each t ≥ 1, if M consists of t tetrahedra, and K is unknotted, then there is a sequence of at most 2 c2t elementary moves in M
+which transforms K to a triangle contained inside one tetrahedron of M .
+We obtain explicit values for c1 and c2.
+Keywords: knot theory, knot diagram, Reidemeister move, normal surf aces,
+computational complexity
+∗This paper grew out of work begun while the authors were visit ing the Mathematical
+Sciences Research Institute in Berkeley in 1996/7. Researc h at MSRI is supported in part by
+NSF grant DMS-9022140. The ﬁrst author is partially support ed by NSF grant DMS-9704286.
+1
+The Number of Reidemeister Moves
+Needed for Unknotting
+Joel Hass
+University of California, Davis
+Davis, CA 95616
+Jeﬀrey C. Lagarias
+AT&T Labs – Research
+Florham Park, NJ 07932
+(November 26, 2024)
+1 Introduction
+A knot is an embedding of a circle S1 in a 3-manifold M , usually taken to
+be R3 or S3. In the 1920’s Alexander and Briggs [2, §4] and Reidemeister [23]
+observed that questions about ambient isotopy of polygonal knots in R3 can
+be reduced to combinatorial questions about knot diagrams. These are labeled
+planar graphs with overcrossings and undercrossings marke d, representing a
+projection of the knot onto a plane. They showed that any ambi ent isotopy
+of a polygonal knot can be achieved by a ﬁnite sequence of piec ewise linear
+moves which slide the knot across a single triangle, which ar e called elementary
+moves (or ∆-moves). They also showed that two knots were ambient is otopic if
+and only if their knot diagrams were equivalent under a ﬁnite sequence of local
+combinatorial changes, now called Reidemeister moves, see §7.
+A triangle in M deﬁnes a trivial knot , and a loop in the plane with no
+crossings is said to be a trivial knot diagram . A knot diagram D is unknotted if
+it is equivalent to a trivial knot diagram under Reidemeiste r moves.
+We measure the complexity of a knot diagram D by using its crossing number, the number of vertices in the planar graph D, see §7. A problem of long
+2
+standing is to determine an upper bound for the number of Reid emeister moves
+needed to transform an unknotted knot diagram D to the trivial knot diagram,
+as an explicit function of the crossing number n, see Welsh [30, p. 95]. This
+paper obtains such a bound.
+Theorem 1.1 There is a positive constant c1, such that for each n ≥ 1, any
+unknotted knot diagram D with n crossings can be transformed to the trivial
+knot diagram using at most 2c1n Reidemeister moves.
+We obtain the explicit value of 10 11 for c1; this value can clearly be improved.
+In this paper we have not attempted to get an optimal value for c1, and several
+of our estimates are accordingly rather rough.
+In 1934 Goeritz [9] showed that there exist diagrams D of the unknot such
+that any sequence of Reidemeister moves converting D to the trivial knot must
+pass through some intermediate knot diagram D′ that has more crossings than
+D.
+Figure 1: Goeritz’s unknot.
+It is not known how much larger the number of crossings needs t o be for a
+general n-crossing knot, but Theorem 1.1 implies the following upper bound.
+Corollary 1.1 Any unknotted knot diagram D with n crossings can be transformed by Reidemeister moves to a trivial knot diagram throu gh a sequence of
+knot diagrams each of which has at most 2c1n crossings.
+This holds because each Reidemeister move creates or destro ys at most two
+crossings, and all crossings must be eliminated by the ﬁnal R eidemeister move.
+3
+It seems possible that for each knot diagram representing th e unknot there
+exists some sequence of Reidemeister moves taking it to the t rivial knot diagram
+which keeps the crossing number of all intermediate knot dia grams bounded by
+a polynomial in n.
+In a general triangulated 3-manifold, a trivial knot is a tri angle lying inside
+one tetrahedron and an elementary move takes place entirely within a single
+tetrahedron of the triangulation. The proof of Theorem 1.1 i s based on a general
+result that bounds the number of elementary moves needed to t ransform a closed
+polygonal curve K embedded in the 1-skeleton of a triangulated P L 3-manifold
+M to a trivial knot.
+Theorem 1.2 There is a constant c2 such that for each t ≥ 1, any compact,
+orientable, P L 3-manifold with boundary ( M, ∂M ) triangulated by t tetrahedra
+has the following property: If K is an unknot embedded in the 1-skeleton of
+interior ( M ), then K can be isotoped to the trivial knot using at most 2c2t
+elementary moves.
+We obtain the explicit value c2 = 10 7. The hypothesis that K lies in the
+interior of M can be weakened to requiring only that K lies in M , as we indicate
+in §6.
+The methods we use are based on the normal surface theory of Kn eser [20]
+and Haken [10]. Haken applied this theory to obtain an algori thm to decide if a
+knot is trivial. See [11] for a survey of algorithms to recogn ize unknotting, and
+[5] and [4] for possible alternate approaches based on braid s.
+The paper is organized as follows. In §2 we deﬁne elementary moves and
+outline the proof of Theorem 1.2. In §3, §4 and §5 we bound the number of
+elementary moves needed to isotop a curve in three distinct s ettings. First
+we consider an isotopy of a curve to a point across a compressi ng disk in a
+3-manifold, secondly we consider an isotopy through a solid torus from a core
+to a longitude, and ﬁnally we consider an isotopy across a sur face between
+two isotopic curves. In §6 we tie these results together to complete the proof
+of Theorem 1.2. We then consider the more special case of knot s in R3. In
+4
+§7 we outline the proof of Theorem 1.1 and begin it by relating e lementary
+moves to Reidemeister moves. In §8 we start with a knot diagram and show
+how to construct a triangulation of a convex submanifold of R3 containing the
+corresponding knot on its 1-skeleton. This allows us to appl y Theorem 1.2. In
+§9 we complete the proof of Theorem 1.1.
+Note: After completing this paper we learned that S. Galatolo has o btained
+results about the case of Reidemeister moves in R3 similar to those stated in
+Theorem 1.1 and Corollary 1.1, and at about the same time. Gal atolo’s constructions are also based on an analysis of normal surfaces. An announcement
+of his results will appear in [8].
+2 Elementary Moves in a 3-manifold
+In this section we deﬁne elementary moves for knots and links . Elementary
+moves are well-deﬁned in arbitrary triangulated P L 3-manifolds. In section 7
+we will discuss Reidemeister moves, which are associated to knots and links in
+R3, and relate these two concepts for manifolds P L-embedded in R3.
+A (piecewise linear, unoriented) knot K in a triangulated P L manifold M is
+a closed embedded polygonal curve. An (unoriented) link L is a ﬁnite union of
+nonintersecting knots in M . Let |L|denote the number of vertices of L.
+An elementary move (or ∆- move) on a knot or link consists of one of the
+following operations, see Burde and Zieschang [6, p. 4], Mur asugi [21, p. 7].
+Each of these operations is required to take place in a single tetrahedron of M .
+(1) Split an edge into two edges by adding a new vertex to its in terior.
+(1′) [Reverse of (1)] Combine two edges whose union is a line segm ent, erasing
+their common vertex.
+(2) Given a line segment AB of L that contains a single interior vertex D
+and a point C not in L such that the triangle ABC intersects L only in edge
+AB, erase edge AB and add two new edges AC and BC and new vertex C.
+(2′) [Reverse of (2)] If for two adjacent edges AC and BC of K the triangle
+ABC intersects L only in AC and BC then erase AC, BC and vertex C and
+5
+add the edge AB, with a new interior vertex D.
+Figure 2: Two types of elementary moves.
+Corresponding to elementary moves of type (2), (2 ′) is the piecewise-linear
+operation of linearly pulling the edges of a link across a tri angle ABC . To deﬁne
+this operation, an extra vertex D on the segment AB must be speciﬁed; this is
+the role of elementary moves (1) and (1 ′).
+Two knots K1 and K2 are equivalent if one can be reached from the other by
+a ﬁnite sequence of elementary moves. This gives the same equ ivalence classes
+as requiring K1 and K2 to be ambient isotopic [25] in M . The unknot is the
+class of knots equivalent to a triangle contained in a tetrah edron, and a knot
+K is unknotted if it is equivalent to the unknot. Equivalently, an unknot is the
+boundary of a P L embedded disk in M [25]. We will work with knots embedded
+in the interior of M . This is not a signiﬁcant restriction, since it is possible t o
+perturb any knot which meets ∂M into the interior of M after some simplicial
+subdivision.
+We conclude this section by outlining the proof of Theorem 1. 2. We ﬁrst
+construct a compact triangulated P L submanifold MK by removing a solid torus
+neighborhood of K. By removing the interior of a solid torus neighborhood RK
+of K we construct a new triangulated manifold MK = M − RK. The boundary
+of MK consists of the original boundary ∂M plus a 2-torus ∂R K, called the
+peripheral torus.
+If K is unknotted then MK contains an essential normal disk S. Essential
+means that ∂S ⊆ ∂R K is not the boundary of any disk in the torus ∂R K. Drawing on Haken’s normal surface theory, a result of Hass, Lagar ias and Pippenger
+[12] implies that S can be chosen to contain at most 2 8t+6 triangles. We present
+6
+this argument for completeness in §2. Its boundary ∂S is a curve K2. K2 is
+isotopic to K within ¯RK. There is a sequence of at most 2 8t+7 elementary moves
+which deform K2 to a triangle across triangles in S. This is carried out in §3.
+It remains to relate K2 to K by elementary moves.
+In §3 we construct a curve K1 isotopic to K in RK which is a longitude, a
+curve on the peripheral torus, ∂R K, which bounds an embedded disk in MK
+but not inside the peripheral torus. Such curves exist if K is unknotted in M .
+In §4 we construct a longitude K2 that lies in the 1-skeleton of the peripheral
+2-torus ∂R K, consists of at most O(2c3t) line segments and can be isotoped to K
+using at most O(2c3t) elementary moves. In §5 we prove results which are used
+to show that there is a sequence of at most O(2c4t) elementary moves which
+deform K1 to K2 while remaining entirely in the peripheral 2-torus ∂R K. In §6
+we combine these results to complete the proof. All the const ants and bounds
+above are explicitly computed.
+The proof of Theorem 1.2 in eﬀect deforms the original knot K to a trivial
+knot with elementary moves made inside three surfaces: an an nulus is used to
+go from K to the longitude K1, a 2-torus is used to go from K1 to the boundary
+of a normal disk K2, and a disk is used to go from K2 to the trivial knot.
+3 Normal surfaces and elementary moves across
+an essential disk
+In this section we assume given a compact P L 3-manifold with (possibly
+empty) boundary ( M, ∂M ), which is triangulated using t tetrahedra. We will
+work with a knot K embedded in the 1-skeleton of Interior( M ). By barycentrically subdividing M twice, we obtain a manifold ( M ′′, ∂M ′′) in which K has a
+regular neighborhood RK. The regular neighborhood, obtained by taking the
+closed star of K in M ′′, is a solid torus with ∂R K disjoint from ∂M . We let
+MK = (M ′′\RK) ∪ ∂R K and note that its boundary ∂M K = ∂M ′′∪ ∂R K. We
+call the manifold ( MK, ∂M K) with ∂R K marked a truncated knot complement
+7
+for K.
+A meridian on the peripheral torus ∂R K is an oriented simple closed curve
+µ whose homology class [ µ ] in H1(∂R, Z) generates the kernel of the map
+j∗ : H1(∂R K, Z)→ H1(RK , Z),
+where j : ∂R K֒→RK is the inclusion map. Equivalently, it is a simple closed
+curve which bounds a disk in RK but not in ∂R K.
+A longitude on the peripheral torus ∂R K is an oriented simple closed curve λ
+which intersects a meridian transversely at a single point a nd whose homology
+class [ λ ] in H1(∂R, Z) generates the kernel of the map
+i∗ : H1(∂R, Z)→ H1(MK, Z),
+where i : ∂R K֒→MK is the inclusion map, provided that this kernel is nontrivial. Note that the kernel is always inﬁnite cyclic or tri vial [6].
+If the core K of the solid torus RK is unknotted in M , then a longitude
+exists, and it bounds a disk in MK. For general K, a longitude does not exist
+when K represents an element of inﬁnite order in H1(M, Z). If M ∼
+= S3, or more
+generally a homology sphere, then a longitude exists for any K. This curve is
+sometimes called a preferred longitude.
+When a longitude λ of ∂R K exists, its intersection number on ∂R K with a
+meridian µ is ± 1, and the homology classes [ µ ] and [ λ ] generate H1(∂R, Z) ∼
+=
+Z ⊕ Z.
+A properly embedded disk in a 3-manifold with boundary ( M, ∂M ) is a disk
+S PL-embedded in M which satisﬁes S ∩ ∂M = ∂S . An essential disk in M is
+a properly embedded disk such that ∂S does not bound a disk in ∂M , i.e. the
+homotopy class of ∂S in π 1(∂M ) is non-trivial.
+Lemma 3.1 Let MK be a triangulated P L 3-manifold which is a truncated knot
+complement for K. Then K is unknotted if and only if MK contains an essential
+disk S with ∂S a longitude in ∂R K.
+8
+Proof. If K is unknotted then it bounds a disk which is embedded in M .
+This disk can be intersected with MK to give an essential P L disk S in MK.
+Conversely if MK contains an essential P L disk S with ∂S ⊆ ∂R K, then the
+boundary ∂S of S represents a longitude on ∂R K, which is isotopic to K in RK
+[6, p. 29, Thorem 3.1], and therefore is equivalent to K. This disk can be used
+to contract ∂S until it becomes a single triangle in MK. The ﬁrst homology
+group of a torus, Z ⊕ Z, is canonically isomorphic to its fundamental group,
+and the statement about the homology class of [ ∂S ] is a consequence. □
+We will use normal surface theory in the form described in Jac o and Rubinstein [18, Section 1]. A normal surface S in a triangulated compact 3-manifold
+M is a P L-surface whose intersection with each tetrahedron in M consists of a
+disjoint set of elementary disks . These are either triangles and quadrilaterals.
+A quadrilateral consists of two triangles glued together al ong an edge lying interior to the tetrahedron. All other edges of each triangle o r quadrilateral are
+contained in the 2-skeleton of the tetrahedron, and do not in tersect any vertices.
+(See Figure 3).
+Figure 3: Elementary disks in a normal surface.
+Within each tetrahedron of M there are only 7 kinds of possible triangle or
+P L quadrilateral, up to P L-isotopies that map the tetrahedron to itself. These
+are labeled by the 7 possible ways of partitioning the vertic es of the tetrahedron
+into the two nonempty sets determined by cutting the tetrahe dron along the
+triangle or quadrilateral. W. Haken observed that the isoto py-type of a normal
+surface is completely determined by the number of pieces of e ach of the 7 kinds
+9
+that occur in each tetrahedron ∗. This can be described by a nonnegative integer
+vector v = v(S) ∈ Z7t, which gives the normal coordinates of S. He also showed
+that the set of allowable values v(S) for a normal surface S lie in a certain
+homogeneous rational cone CM in R7t which we call the Haken normal cone . If
+v = ( v1, v2, . . . , v 7t) ∈ R7t, then Haken’s normal cone is speciﬁed by a set of
+linear equations and inequalities of the form
+vi ≥ 0 , for 1 ≤ i ≤ 7t , (3.1)
+vi1 + vi2 = vi3 + vi4 (up to 6 t equations) . (3.2)
+The second set of equations expresses matching conditions which say that the
+number of edges on a common triangular face of two adjacent te trahedra coming
+from regions in each of the tetrahedra must match. For each tr iangular face
+there are three types of edges (speciﬁed by a pair of edges on t he triangle),
+which yields 3 matching conditions per face. Triangular fac es in the boundary
+∂M give no matching equations. The cone CM is rational because all equations
+3.1, 3.2 have integer coeﬃcients. We let
+CM (Z) = CM ∩ Z7t , (3.3)
+which is the set of integral vectors in the Haken normal cone CM . Haken deﬁned
+a fundamental surface to be a normal surface S such that
+v(S) ̸= v1 + v2 , with v1, v2 ∈ C M (Z)\{0} .
+Such a vector v(S) is called an element of the minimal Hilbert basis H(CM )
+of CM , using the terminology of integer programming, see Schrijv er [27, Theorem 16.4].
+Theorem 3.1 (Haken) If a triangulated, irreducible, orientable, compa ct 3manifold with boundary ( M, ∂M ) contains an essential disk whose boundary
+is in a component ∂R of ∂M , then it contains such an essential disk S with
+boundary in ∂R which is a fundamental normal surface.
+∗Haken’s [10] treatment of normal surfaces was based on a form ulation using cells. W e
+follow an alternate development based on tetrahedra, as in J aco and Rubinstein [18, Section 1]
+and Jaco and Tollefson [19]
+10
+Proof. See Jaco-Rubinstein [18, Theorem 2.3] for a treatment of the existence
+of an essential normal disk in M with boundary on ∂R . For a fundamental disk,
+we refer to Jaco and Tollefson [19, Corollary 6.4], which est ablishes the stronger
+result that there exists such a disk that is a fundamental sur face and is also a
+vertex surface, which means that v(S) lies on an extreme ray of Haken’s normal
+cone CM . □
+Remark. This result applies in arbitrary 3-manifolds. The proof in [ 19] assumes compactness and irreducibility of M , but these hypotheses can be removed. A classical theorem of Alexander implies that knot co mplements in the
+3-sphere are always irreducible.
+Hass, Lagarias and Pippenger [12] give a simple bound for the complexity
+of any fundamental surface, whose proof we include for compl eteness.
+Lemma 3.2 Let M be a triangulated compact 3-manifold, possibly with boundary, that contains t tetrahedra.
+(1) Any vertex minimal solution v ∈ Z7t of the Haken normal cone C M in
+R7t has
+max
+1≤ i≤ 7t
+(vi) ≤ 27t− 1 . (3.4)
+(2) Any minimal Hilbert basis element v ∈ Z7t of the Haken fundamental cone
+CM has
+max
+1≤ i≤ 7t
+(vi) < t ·27t+2 . (3.5)
+Proof. (1) Choose a maximal linearly independent subset of matchin g condition equations 3.2. There will be 7 t − d of them, where d = dim R( C M ). Any
+vertex ray is determined by adjoining to these equations d − 1 other binding
+inequality constraints
+{vik = 0; 1 ≤ k ≤ d − 1} ,
+with the proviso that the resulting system have rank 7 t − 1. These conditions
+yield a (7 t− 1)× 7t integer matrix M of rank 7 t− 1, and the vertex ray elements
+11
+z = (z1, . . . , z 7t) satisfy
+M z = 0 .
+In order to get a feasible vertex ray in C M all nonzero coordinates zi must have
+the same sign.
+At least one of the unit coordinate vectors e1, e2, . . . e7t must be linearly
+independent of the row space of M. Adjoin it as a ﬁrst row to M an d we
+obtain a full rank 7 t × 7t integer matrix
+˜M =
+[ ek
+M
+]
+, det( ˜M) ̸= 0 .
+Consider the adjoint matrix ad j( ˜M) = det( ˜M) ˜M
+− 1
+, which has integer entries
+wij = ad j( ˜M)ij = (− 1)i+j det ˜M[j|i] , (3.6)
+in which ˜M[j|i] is the minor obtained by crossing out the jth row and ith column
+of ˜M. Let
+w = [w11, w21, . . . , w 7t, 1]t
+be the ﬁrst column of ad j( ˜M). Since ˜Mad j( ˜M) = det( ˜M) I this yields
+Mw = 0 ,
+and w ̸= 0 because ⟨ek, w⟩ = det( ˜M) ̸= 0. We bound the entries of w using
+Hadamard’s inequality, which states for an m × m real matrix N that
+det( N) 2 ≤
+m∏
+i=1
+∥ni∥2 , (3.7)
+in which ∥ni∥2 is the Euclidean length of the ith row ni of N. We apply this to
+equation 3.6, and observe that each row of the (7 t − 1) × (7t − 1) matrix ˜M[j|i]
+has squared Euclidean length at most 4, because this is true f or all row vectors
+in the system of equations 3.2 and for ek. Applied to equation 3.6 this gives
+|wij|2 ≤ 47t− 1 .
+However equation 3.6 shows that w ∈ Z7t, and a vertex minimal solution v in
+the extreme ray is obtained by dividing w by the greatest common divisor of
+12
+its elements, hence
+max
+1≤ i≤ 7t
+|vi| ≤ max
+1≤ i≤ 7t
+|wi1| ≤ 27t− 1 .
+(2) A simplicial cone C in R7t is a d-dimensional pointed cone which has
+exactly d extreme rays. Let v(1), . . . , v(d) ∈ Z7t be the vertex minimal solutions
+for the extreme rays. Each point in C can be expressed as a nonn egative linear
+combination of the v(j), as
+v =
+d∑
+j=1
+cjv(j), each cj ≥ 0 .
+If v is in the minimal Hilbert basis H( C) of the cone C, then 0 ≤ cj ≤ 1, for
+otherwise one has
+v = (v − v(j)) + v(j) ,
+and both v− v(j) and v(j) are nonzero integer vectors in C, which is a contradiction. Thus, any minimal Hilbert basis element v = ( v1, . . . , v 7t) of a simplicial
+cone satisﬁes
+|vi| ≤
+d∑
+j=1
+|v(j)| for 1 ≤ i ≤ 7t . (3.8)
+The cone C M may not be simplicial, but we can partition it into a set of
+simplicial cones { C(k)
+m } each of whose extreme rays are extreme rays of C M
+itself. We have
+H( C M ) ⊆
+⋃
+k
+H( C (k)
+M ) .
+Thus all Hilbert basis elements of H( C M ) satisfy the bound 3.8 for Hilbert
+basis elements of H( C (k)
+M ). Using equation 3.4 to bound |v(j)|we obtain
+|vi| ≤ d27t− 1 < 7t27t− 1 < t27t+2 ,
+as claimed. □
+A P L-embedded normal disk S can be used as a template to transform its
+boundary ∂S to a single triangle by a sequence of elementary moves, in suc h a
+way that all intermediate curves lie on the surface S.
+13
+Lemma 3.3 Let M be a piecewise-linear triangulated compact 3-manifold wit h
+boundary, and let S be a normal disk in M that consists of w triangles. Then
+∂S can be isotoped to a triangle by a sequence of at most 2w elementary moves
+on M , each of which takes place in a triangle or edge contained wit hin S.
+Proof. We will construct a sequence of w simple closed curves
+∂S = C0, C1, C2, . . . , C w− 1 = ∂T
+where T is a triangle in S, and such that for 0 ≤ i ≤ w − 1:
+(i) Ci+1 is obtained from Ci by at most two elementary moves; either a move
+of type 2 ′ across a single triangle in S followed by a move of type 1 ′ which
+removes the extra vertex created by the ﬁrst move, or a move of type 1
+followed by a move of type 2 across a single triangle in S.
+(ii) There is a triangulated disk Si contained in S which consists of w − i
+triangles, such that Ci = ∂S i.
+The construction proceeds by eliminating triangles in S one at a time by a
+sequence of steps, each consisting of two elementary moves, in such a way as to
+preserve the property that each Sj is a topological disk. We proceed by induction
+on j, with the base case j = 0 holding by hypothesis. For the induction step,
+we note that the only way that removing from Sj a triangle that contains at
+least one edge of ∂S j can yield a surface Sj+1 that is not a topological disk is
+by producing a vertex v that is a cut-point, i.e. v is visited twice in the curve
+∂S j+1. In that case v is a vertex of ∂S j, which implies that the triangle that is
+removed must have exactly one edge on ∂S j, and the pair of elementary moves
+pulls this edge across to the two edges of this triangle that a re adjacent to v.
+We therefore proceed by ﬁrst checking if Sj has any triangle having two edges
+on ∂S j. If so, we remove this triangle to obtain Sj+1. If this cannot be done,
+then Sj must contain an interior vertex, because a triangulated pol ygon that
+has no interior vertices and contains more than one triangle contains at least 2
+triangles having two edges on the boundary. In this case ther e exists a triangle
+14
+having one edge on the boundary which also has an interior ver tex, and we can
+pull across this triangle to obtain Sj+1. This completes the induction step. □
+Putting all these results together yields:
+Lemma 3.4 Let MK be a triangulated P L 3-manifold consisting of t tetrahedra
+which is a truncated knot complement for K. If K is unknotted, then there is
+an essential normal disk S in MK that contains at most 28t+6 triangles, and S
+has a polygonal boundary K1 = ∂S which lies on the peripheral 2-torus ∂R K
+and consists of at most 28t+7 line segments. The boundary K1 of S can be
+transformed to a single triangle by at most 28t+7 elementary moves, with all
+intermediate curves being the boundary of some triangulate d subdisk of S.
+Proof. By Lemma 3.1 and Theorem 3.1 there exists an essential normal
+disk which is a fundamental surface for MK. The bound of Lemma 3.2 implies
+that this surface contains at most 7 t2 ·27t+2 < t 2 ·27t+5 < 28t+5 triangles
+and quadrilaterals. Since each quadrilateral consists of t wo triangles in the
+triangulation, we obtain the upper bound 2 8t+6 for the total number of triangles.
+The boundary ∂S contains at most two edges of each triangle, for a total of at
+most 2 8t+7 edges. Lemma 3.3 gives the stated bound on elementary moves. □
+Remark. We could improve the above estimate by using a vertex minimal
+solution which is a disk.
+4 Longitudes and cores of solid tori
+In this section we bound the number of elementary moves neede d to isotop a
+knot K in the 1-skeleton of a triangulated compact 3-manifold ( M, ∂M ) across
+an annulus to a curve K2 which is a longitude on the peripheral torus ∂R K of
+K. The main result of this section is the following:
+Theorem 4.1 Let (M, ∂M ) be a triangulated compact P L 3-manifold with t
+tetrahedra, let K be an unknotted curve embedded in Interior (M ), and let ∂R K
+be the peripheral torus of K in the second barycentric subdivision of M . Then
+15
+there exists a P L closed curve K2 in ∂R K which is a longitude for ∂R K in MK
+such that:
+(i). There is an embedded P L annulus S in the solid torus RK whose two
+boundary components are K2 and K, and which consists of at most 21858t
+triangles.
+(ii). There is an isotopy from K2 to K across S that consists of at most
+21858t+1 elementary moves.
+Remarks. The closed curve K2 is embedded in ∂R K but generally does not
+lie in its 1-skeleton. In the special case that ( M, ∂M ) is P L-homeomorphic to
+a triangulated convex polyhedron in R3, as occurs with a standard knot, the
+exponential bounds in (i), (ii) can be improved to bounds pol ynomial in t, as
+we indicate after the proof.
+The proof of Theorem 4.1 proceeds in three steps. We ﬁrst cons truct a closed
+curve α embedded in the 1-skeleton of RK which is parallel to the core K, i.e. its
+homology class [ α ] in H1(∂R K, Z) has intersection number ± 1 with a meridian
+[µ ]. We next observe that the homology class in H1(∂R K, Z) of a longitude K2
+is necessarily
+[K2] = ± ([α ] + k[µ ]) (4.9)
+for some integer k. The second step is to bound |k|by an exponential function
+of t. The third step is to obtain K2 from α by adding k twists to α near a ﬁxed
+meridian µ . Given K2, we construct a triangulated annular surface S embedded
+in RK which lies in the 2-skeleton of RK except in a “collar” of one meridian
+disk, into which the k twists are inserted. All vertices of the triangulated annul us
+S lie on its boundary ∂S = K2 ∪ K. Finally we obtain an isotopy giving the
+elementary move bound by pulling K across the triangles in S to K2.
+We begin with some preliminary lemmas involving P L topology, which pin
+down some of the combinatorial structure of the regular neig hborhood of K.
+Background for P L topology can be found in [17] or [26].
+16
+Let v0, . . . , v r be the vertices of the knot K in M . Since RK lies in the
+second barycentric subdivision of M , each edge [ vi, vi+1] of K is subdivided
+into four edges by the addition of three new vertices . We will continue to
+denote the subdivided curve by K. Denote the original vertices vi by w4i and
+let w4i+1, w4i+2, w4i+3, 0 ≤ i ≤ r denote the new vertices added in the two
+barycentric subdivisions. We also use the convention that ws = w0, where
+s = 4 r + 4 is the total number of vertices, so that the vertices wi of K are
+cyclically ordered.
+We will break up the solid torus RK into a union of what we call wheels
+and wedges. For each edge [ wi− 1, wi] let the wheel around that edge be the
+closed star St([wi− 1, wi], RK) of the edge [ wi− 1, wi] in the solid torus RK. This
+is the union of all the tetrahedra in RK having [ wi− 1, wi] as an edge, and is
+homeomorphic to a closed ball. For each vertex wi on K let the wedge around
+wi be the union of all the tetrahedra in RK meeting K only at the point wi.
+Let
+µ i = lk([wi− 1, wi], RK) , 1 ≤ k ≤ s , (4.10)
+be the link of the edge [ wi− 1, wi] in the solid torus RK.
+/BnZr/BnZr/BnZr/BnZr/BnZr
+/BnZr/BnZr/BnZr/BnZr/BnZr
+yyyyy
+yyyyy
+/BnZr/BnZr/BnZr/BnZr/BnZr
+/BnZr/BnZr/BnZr/BnZr/BnZr
+/BnZr/BnZr/BnZr/BnZr/BnZr
+yyyyy
+yyyyy
+yyyyy
+/BnZr/BnZr
+/BnZr/BnZr
+/BnZr/BnZr
+yy
+yy
+yy
+w0
+w1 w3 w4
+w2
+w5 w6
+µ1 =µ2 µ3 =µ4 µ5 =µ6
+wheel wedge
+Figure 4: A 2-dimensional section of RK.
+Lemma 4.1 (1) Each µ i lies in ∂R K and is a meridian.
+(2) µ i and µ j coincide if i is odd and j = i + i or if i is even and j = i − 1.
+Otherwise µ i and µ j are disjoint.
+(3) An edge on ∂R K either lies on some µ i or else lies on a unique triangle in
+RK whose opposite vertex w lies on K.
+17
+Proof. (1) The closed star St([wi− 1, wi], RK) is supported on the set of
+tetrahedra in RK having [ wi− 1, wi] as an edge. Each such tetrahedron has one
+edge which is disjoint from [ wi− 1, wi], and the link µ i is the union of these
+edges. The surface Di which is obtained by coning µ i to the vertex wi forms a
+topological disk in RK whose boundary is µ i, and which intersect K transversely
+in a single point. Thus µ i is a meridian; see Figure 5.
+(2) This follows since RK is a barycentric subdivision. The vertices wi
+with i odd were added during the second barycentric subdivision. P rior to the
+second subdivision, these vertices lay along interior poin ts of edges of K. The
+two meridians associated to the edges [ wi− 1, wi] and [ wi, wi+1] coincide; see
+Figure 4 for a cross sectional sketch of RK. For i even, the distance between
+wi− 1 and wi+1 in link(wi) is at least four, since the link has been barycentrically
+subdivided. If µ i ∩ µ i+1 ̸= ∅ then this distance equals two.
+(3) Each edge in ∂R K is an edge of a triangle with a vertex wi on K, since
+RK is obtained by taking the closed star of K in M ′′. If the edge is in a meridian
+µ i, then it lies in triangles with vertices at both wi− 1 and wi or wi and wi+1.
+If it doesn’t lie on a meridian then it is contained in the wedg e around wi. Any
+triangle containing the edge and a point w′ on K cannot cross the two wheels
+meeting wi, and the point w′ must coincide with w. □
+wk
+D k
+wk+2
+Dk+2
+wk+1
+µk = µk+1 µk+2 = µk+3
+K
+Figure 5: Adjacent meridians. The index k is odd.
+Lemma 4.2 There exists an embedded closed curve α in the 1-skeleton of ∂R K
+which is parallel to K in RK. There is an annulus S0 embedded in the 2-skeleton
+of the solid torus RK whose boundary components are α and K, and all vertices
+18
+of S0 lie in its boundary α ∪ K.
+Proof. We construct α as the union of a sequence of arcs. For each odd
+i, 1 ≤ i ≤ s, we pick a path α i in the 1-skeleton of ∂R K that connects a vertex
+xi of µ i = µ i+1 to a vertex xi+1 on µ i+2 = µ i+3, does not cross µ i− 1, and is
+shortest among all such paths. (We don’t allow α i to cross µ i− 1 to prevent it
+from running between the curves in the wrong direction.) We s et xs = x0 as
+before. Note that α i is embedded and that it meets the collection of meridians
+only at its endpoints, since otherwise it can be shortened.
+We then add for each odd i a connecting path β i on µ i from the endpoint
+xi− 1 of α i− 2 to the initial point xi of α i, and we set
+α = β 1α 1β 3α 3β 5 . . . β s− 1α s− 1 . (4.11)
+The path α is a closed curve, and is embedded in ∂R K.
+We construct the surface S0 as follows. Each path β i, 1 ≤ i ≤ s, i odd,
+lies on a meridian µ i = µ i+1 which is the boundary of a meridian disk Di+1
+centered at the vertex wi+1 on K, and we cone β i to wi+1 along Di+1, obtaining
+a subdisk of Di+1. For each edge α i that lies on the boundary of the wedge
+around the vertex wi+1, there is a unique triangle containing that edge and
+wi+1. For ﬁxed i, the union of these triangles forms a disk in RK meeting K at
+the point wi+1, and ∂R K along β i ∪ α i, and whose boundary consists of β i ∪ α i
+together with two interior edges of RK, one running from the initial point xi− 1
+of β i to wi+1 and one running from the endpoint xi+1 of α i to wi+1 .
+Finally for each meridian µ i with i odd, there is a pair of triangles
+[wi− 1, wi, xi− 1]
+and
+[wi, wi+1, xi− 1],
+whose union is a disk contained in the two wheels around [ wi− 1, wi] and [wi, wi+1],
+and connecting the free edge running from the endpoint xi− 1 of α i− 2 to wi− 1
+to the free edge running from the initial point (also xi− 1) of β i to wi+1. The
+19
+union of all these disks forms an annulus which is embedded in the 2-skeleton
+of RK, whose boundary components are α and K, and all vertices of which lie
+in α ∪ K. See Figure 6. □
+w0 w1 w3 w4w2 w5 w6
+x1 x3
+x5
+x2 x4
+α1 α3 β5β3β1
+x0
+Figure 6: The annulus S0.
+Proof of Theorem 4.1. We wish to convert the closed curve α given in
+Lemma 4.2 to a longitude K2 by adding “twists”. The homology class [ K2] of
+a longitude K2 satisﬁes
+[K2] = ± ([α ] + k[µ ])
+where µ is a ﬁxed meridian. According to Lemma 4.1 we may choose µ to be
+µ 1 taken with a ﬁxed orientation.
+The number k represents the number of “twists” that we must insert in α
+to convert it to the knot K2. We proceed to bound k in terms of the number of
+tetrahedra t in the original manifold M . We may assume k ̸= 0 for otherwise
+we are done. The value of k is uniquely determined by the requirement that
+the homology class [ α ] + k[µ ] vanish in H1(MK, Z). (Here we use the fact that
+[µ ] is nonvanishing in H1(MK, Z).) This is equivalent to the curve α + kµ
+being a boundary in the cycle group. The manifold MK contains at most 576 t
+tetrahedra, since it is contained in the second barycentric subdivision, hence
+the number e of edges in MK is at most 3456 t. The group of boundaries in the
+P L chain complex of MK is generated by the paths around all 2-simplices in
+MK, and the number f of these is at most 2304 t. We choose ﬁxed orientations
+for the edges and faces, and we can then describe a basis of gen erators for the
+group of boundaries using an e × f matrix M = [ M ab] with entries
+Mab =
+{ ± 1 if a is an edge in the oriented 2-simplex b ,
+0 otherwise .
+20
+in which each column of M has exactly three nonzero entries. L et cα be the
+e × 1-vector describing α as an oriented cycle in MK, and cµ be the e × 1 vector
+describing µ as an oriented cycle in MK. All entries in cα and cµ are 0,1 or − 1.
+The condition for cα + kcµ to be a boundary is that the linear system
+Mx = cα + kcµ (4.12)
+have a solution in integer unknowns x = ( x1, . . . , x f )T . The hypotheses imply
+that this linear system is solvable over Z for a unique value of k. By taking a
+generating set of boundary faces, we have that M is of full col umn rank. The
+meridian class cµ is not in the column space of M since otherwise µ would
+bound a surface in MK and the unknotted curve K would represent an element
+of inﬁnite order in H1(M, Z). It follows that there is at most one real value of
+k for which the system (4.12) is solvable, for if there were two then cµ would
+be in the column space of M. Thus cµ is linearly independent of the column
+space of M and the linear system
+[ M , cµ ]
+[ x
+− k
+]
+= cα ,
+has full column rank. Choosing a suitable f +1 rows of [ M cµ ] yields an invertible
+matrix ˜M and
+[ x
+− k ] = ˜M
+− 1
+˜cα ,
+in which ˜cα is the subset of cα determined by the same f + 1 rows. By Cramer’s
+rule we have
+− k = 1
+det( ˜M)
+f +1∑
+i=1
+˜M[i, f + 1](˜cα )i ,
+where ˜M[i, f + 1] denotes a minor of ˜M on the last column. Since |(˜cα )i| ≤ 1
+we have
+|k| ≤
+f +1∑
+i=1
+|˜M[i, f + 1]|. (4.13)
+We bound the terms in this expression using Hadamard’s deter minant bound
+(3.7). Each column of ˜M has at most three nonzero entries, each equal to ± 1,
+except the last column, which does not appear in the f × f minor ˜M[i, f + 1].
+21
+This yields the bound
+|˜M[i, f + 1]|2 ≤ 3f , 1 ≤ i ≤ f + 1 ,
+which with (4.13) yields
+|k| ≤ (f + 1)3
+f
+2 ≤ (2304t + 1)31152t . (4.14)
+We now describe how the “twists” are added to α and the surface S0 of
+Lemma 4.2. to yield an annulus S with boundary a longitude. The disk D2
+cuts the core K at the point w2 and stretches to the boundary. We add the
+twists to S0 by modifying it inside the wedge around w2. Let A denote the
+surface consisting of the set of closed triangles in the wedg e around w2 which
+intersect the meridian µ 2 and which lie in ∂R K. Then A is an annulus, and
+we suppose it contains ℓ triangles. The ﬁrst edge e of α 1 has one endpoint on
+µ 1 = µ 2 and the other endpoint disjoint from µ 2 and on the other boundary
+component of A.
+We replace the edge [ x1, v] of α with a path α ′ of kℓ edges which form a
+spiral going k times around A, starting at x1 and ending at v; see Figure 8. To
+convert the surface S0 of Lemma 4.2 to the desired surface S, we ﬁrst subdivide
+the interval [ x1, v] into kℓ segments by adding vertices y1, y2, . . . , y kℓ − 1. We
+remove the triangle [ x1, v, w2] from S0 and add kℓ new triangles, obtained by
+coning the edges of α ′ to w2. This construction produces the surface S, which
+is also an annulus and which also has its vertices either on K or ∂R K.
+It is now straightforward to complete the proof. To prove (i) we observe that
+the number of triangles in S is at most the number of triangles in RK, which is
+at most 2304 t, plus the number kℓ of extra triangles added in the “twisting” step
+in constructing S from S0. The trivial bound for ℓ is the number of triangles in
+M ′′which is at most 2304 t. Combining this with (4.14) yields at most
+2304t + kℓ ≤ 2304t + (2304t + 1)31152t(2304t) ≤ t2 ·31152t+20 < 21858t
+triangles in S.
+22
+x1
+vµ1 =µ2
+µ3 =µ4
+∂S0
+∂RK
+w2
+Figure 7: S0.
+µ1 =µ2
+µ3 =µ4∂S
+∂RK
+x1
+v
+w2
+Figure 8: Adding twists replaces S0 by S.
+23
+To prove (ii) we pull the curve K across S to K2 one triangle at a time.
+Using the fact that all vertices of S are in the boundary ∂S , a suitable legal
+order of triangles to pull across is easily found. Counting t wo elementary moves
+per triangle, this yields at most 2 1858t+1 elementary moves in total. □
+Remark. In the special case that the manifold M is embedded in R3, as when
+we start with a standard knot complement, we can improve the b ounds (i), (ii)
+of Theorem 4.1 to be polynomial in n. We sketch the idea. The knot K has at
+most 2304 t edges in M . Using the embedding of the manifold M in R3 we can
+ﬁnd a regular projection of the knot to a knot diagram D, and this has O(n2)crossings, as we show in Lemma 7.1 of §7. We can specify a curve α in the
+1-skeleton of ∂R K which is parallel to the core K whose projection runs just to
+the right of K in the projection plane. Choose an orientation of K. A longitude
+of a knot K in R3 is characterized by having a linking number with K equal
+to zero. The linking number is easily calculated from the pro jection. To each
+crossing of K is associated a sign, and the sum of these signs, called the writhe
+of the knot, gives the linking number of a curve with K. To ensure that the
+linking number is zero, we alter the construction of α . Near every overcrossing
+of K, we add a full twist of α around K. This twist is positive if the sign of the
+crossing is negative, and vice versa. The result is a knot K2 in R3 that lies on
+the peripheral torus whose linking number with K is zero. We can construct
+the associated annulus S in RK with boundary components K and K2 similar
+to the proof given for Theorem 4.1, and it has O(n2) triangles. In this argument
+the key step is that the writhe is bounded in terms of the numbe r of crossings
+of D, which is O(n2), and this gives a bound k = O(n2) in place of (4.14).
+5 Isotopies of curves on a surface
+In this section we examine isotopies between two P L curves α and β on an
+oriented triangulated surface F , and bound the number of elementary moves
+24
+needed to move α to β . In the application, the surface will be the peripheral
+torus ∂R K of a knot K, α will be K1, the boundary of a normal disk, isotopic
+on ∂R K to β , and β will be a ﬁxed longitudinal curve K2, parallel to K in its
+regular neighborhood RK. We derive the results of this section for a general
+surface, since no extra work is needed.
+Our main result is the following.
+Theorem 5.1 Let F be a triangulated orientable surface with u triangles, and
+let α and β be embedded isotopic P L curves on F , each having at most s line
+segments. Then there is an isotopy carrying β to α via no more than 211(s +
+u2)4u3 elementary moves.
+Corollary 5.1 Let F be a triangulated orientable surface with at most 210t
+triangles, and let α and β be embedded isotopic P L curves on F , each having at
+most 21070209t line segments. Then there is an isotopy carrying β to α via no
+more than 2107t− 1 elementary moves.
+We will work with specially positioned curves and isotopies , called basic, which
+we now deﬁne. Let E be a unit edge length equilateral triangle. Let E′ be an
+equilateral triangle of half the size; see Figure 9. A basic arc in E is one of two
+types:
+(a) Type 1. An arc running between the interiors of two distinct edges of
+E. This type of arc contains three straight line segments. The ﬁrst segment
+runs from the initial point towards the center of E until it meets E′. The third
+segment runs from the ﬁnal point of the arc towards the center of E until it
+meets E′. The middle line segment connects the two in E′.
+(b) Type 2. An arc with both of its endpoints on the interior of a single ed ge
+of E. This type of arc contains two straight line segments, each o f which makes
+an angle of 1 o with the edge.
+25
+Arcs of type 2 are disjoint from any arcs of type 1 with non-lin king endpoints,
+since an arc of type one makes an angle larger than 30 0 with an edge of E, and
+arcs of type 2 are disjoint from the smaller equilateral tria ngle.
+Now let E′ be any triangle and ﬁx a linear map from E to E′. A basic arc
+in E′ is deﬁned to be the image of a basic arc in E.
+Figure 9: Type 1 and type 2 basic arcs.
+A basic curve in a triangulated surface is a curve which meets each triangl e
+in a union of basic arcs.
+Lemma 5.1 Any two basic arcs in a triangle with distinct endpoints whic h lie
+on the interiors of the edges of E intersect in either zero or one point. Any
+collection of disjoint embedded curves in a triangle can be i sotoped, without
+moving their endpoints, to a collection of embedded basic ar cs.
+Proof. Two basic arcs with distinct endpoints intersect if and only if their
+endpoints link on the boundary of the triangle. Any family of disjoint embedded
+arcs in a triangle is isotopic, rel boundary, to any other suc h family. □
+Figure 10: Any set of arcs can be isotoped to a set of basic arcs .
+A basic move of a basic curve in a triangulated surface is deﬁned to be one
+of the following curve isotopies, each of which produces a ne w basic curve:
+26
+1
+2
+3
+Figure 11: Basic move of types 1, 2 and 3.
+(a) Type 1. An isotopy that slides an arc of the curve that crosses an edge
+along that edge.
+(b) Type 2. An isotopy that isotops an arc of the curve that crosses an edg e
+of the triangulation across an adjacent vertex, and then iso tops each of the arcs
+of intersection with a triangle created or altered in this pr ocess to basic arcs.
+(c) Type 3. An isotopy that slides an arc of the curve with both endpoints on
+one edge of a triangle E across the 2-gon it forms with that edge. This results
+in the joining of two arcs in an adjacent triangle E′. If the two arcs give a closed
+curve in E′, the closed curve is removed. Otherwise, this new arc is isot oped in
+E′ to a basic arc.
+We count the number of elementary moves required by each basi c move. We
+ﬁrst look in a single triangle.
+Lemma 5.2 Let α = α 1 ∪ α 2 ∪ ... ∪ α n and β = β 1 ∪ β 2 ∪ ... ∪ β n each be a
+union of n connected polygonal arcs in a triangle with the endpoints of α i and β i
+27
+equal, and having a total of a and b edges respectively. Then α can be isotoped
+to β in the triangle using at most a + b type 2 elementary moves, and 2(a + b)
+elementary moves in total.
+Proof. We will count the number of required elementary moves in two c ases.
+In each case we will isotop both α and β to an intermediate curve γ , which stays
+close to the boundary of the triangle. To construct γ , we ﬁrst pick θ to be a
+positive angle which is small enough so that for any vertex v in α ∪ β which lies
+on an edge of the triangle and any vertex w in α ∪ β which does not lie on that
+edge, the angle between that edge and the line segment vw is greater than θ .
+Given an arc α i of α , we construct an arc γ i with the same endpoints,
+but with interior disjoint from α and containing just two segments. If α i runs
+between distinct edges of the triangle then it cuts oﬀ a subdi sk containing a
+single vertex of the triangle. Construct γ i to consist of two segments, each
+of which makes an angle of θ with the edges going towards that vertex. By
+deﬁnition of θ , γ i will be disjoint from the interiors of α i and β i. If α i has both
+endpoints on a single edge of the triangle, then it cuts oﬀ a su bdisk containing
+no vertices and a segment of one edge. Construct γ i to consist of two segments
+contained in this disk, each of which makes an angle of θ with its edge. Again,
+γ i will be disjoint from the interiors of α i and β i.
+(1) α and β are connected.
+If α does not meet both sides of β , then the region between them can be
+triangulated with a + b − 2 triangles, which can be used to isotop α to β
+using a + b − 2 type 2 elementary moves. If they intersect, then applying
+the previous argument shows that each can be isotoped to the d isjoint
+curve γ by using a and b type 2 elementary moves respectively. It follows
+that we can always isotop α to β using at most a + b type 2 elementary
+moves, and 2( a + b) elementary moves of all types.
+(2) α and β are not connected.
+28
+We will construct an isotopy from α to β which keeps the curves embedded
+at each stage. Let ai be the number of segments of α i, so that ∑n
+i=1 ai = a.
+Each arc α i of α cuts oﬀ a disk meeting exactly one vertex of the triangle
+in which it lies, if it runs between distinct edges of the tria ngle, or no
+vertices if it runs from an edge back to that edge. An arc of α is said
+to be outermost if it cuts oﬀ a disk which contains no other arcs of α .
+Let α i be outermost. Then γ i is disjoint from all the other arcs in α ∪ β
+and meets α i ∪ β i only in their endpoints. The number of segments of γ i
+is two, and γ = ⋃γ i is embedded. We can isotop the outermost arc α i
+of α to the arc γ i with the same endpoints without ever introducing any
+new intersections in α , since the other arcs in α lie on the other side of
+α i from γ i. This isotopy requires at most ai type 2 elementary moves,
+as in the previous case. We then repeat for an outermost arc α j among
+the collection of arcs of α − {α i}. This isotopy takes place between α j
+and γ j, and in particular never meets γ i. Repeating for all arcs in α , we
+can isotope the entire collection α to γ using at most ∑n
+i=1 ai = a type 2
+elementary moves. Similarly, we can isotop β to γ using at most b type
+2 elementary moves. It follows that we can isotop α to β using at most
+a + b type 2 elementary moves.
+The total number of elementary moves required in these isoto pies is at most
+twice the number of type 2 elementary moves.
+□
+Deﬁne the length of a P L curve transverse to the 1-skeleton of a triangulated
+surface to be the number of edges of the 1-skeleton that it cro sses, counted with
+multiplicity.
+Lemma 5.3 A basic move in a surface with a triangulation of valence at mo st
+V can be realized by at most 28 elementary moves for a type 1 basi c move,
+6V + 24 elementary moves for a type 2 basic move, and 22 elementary mo ves
+for a type 3 basic move. In all cases 17V elementary moves suﬃce.
+29
+Proof. We count the number of elementary moves required for each typ e of
+basic move.
+Lemma 5.2 implies that a type 1 basic move requires at most 14 e lementary
+moves in each of the two triangles meeting the edge along whic h the curve is
+isotoped.
+The type 2 basic move can be done in the following sequence of s teps.
+(1) Two type 2 elementary moves slide the arc in a neighborhoo d of an edge
+to pass through the adjacent vertex.
+(2) Two type 2 elementary moves slide the curve to run along ed ges in a
+neighborhood of the adjacent vertex.
+(3) V − 2 type 2 elementary moves slide the arc over a neighborhood of the
+vertex in each adjacent triangle.
+(4) At most 7 type 2 elementary moves slide the arc to basic cur ves in each
+of the original two triangles, by Lemma 5.2.
+(5) Two type 2 elementary moves slide the arc to basic curves i n each of the
+V − 2 triangles where new intersections were introduced.
+Summing, this basic move requires less than 3 V + 12 type 2 elementary moves,
+and 6 V + 24 in total.
+The type three basic move requires
+(1) One type 2 elementary move to slide the arc to coincide wit h a subarc of
+its adjacent edge.
+(2) At most 10 type 2 elementary moves slide the resulting arc to a basic
+curve with the same endpoints in the adjacent triangle, by an application
+of Lemma 5.2. This sums to at most 11 elementary moves of type 2 and
+22 elementary moves of all types.
+Since V ≥ 3, in all cases 17 V elementary moves suﬃce. □
+If two basic curves are isotopic using only basic moves of typ e 1, we say that
+they are parallel basic curves.
+30
+Figure 12: Elementary moves for a type 2 basic move.
+Lemma 5.4 Let α and β be two parallel basic curves with total length ℓ. Then
+α can be isotoped to coincide with β by ℓ/ 2 basic moves of type 1. Similarly, α
+can be isotoped across β by ℓ/ 2 basic moves of type 1.
+Proof. Each of α and β has length ℓ/ 2 and they intersect each triangle of
+the surface in pairs of parallel basic arcs. Using ℓ/ 2 basic moves of type 1,
+we can either move the intersections of α along each edge to coincide with the
+intersection of β with that edge, or move the intersections past to the other si de
+of β . □
+Let α and β be intersecting simple closed curves in general position on a
+surface F . A 2-gon is a subdisk of F whose boundary consists of one subarc of
+each of α and β . A 2-gon is innermost if no arc of α or β meets its interior. In
+some cases, it can be shown that curves with excess intersect ion create innermost
+2-gons. This is analyzed in some generality in [14]. The foll owing is Lemma 3.1
+of [14].
+Lemma 5.5 Let F be a compact orientable surface and let α and β be isotopic
+simple closed curves on F , intersecting transversely. Then either α and β are
+disjoint or there is an innermost 2-gon on F bounded by one arc from each of
+α and β .
+31
+Proof. The lift of α to the universal cover of F is a family of disjoint lines
+˜α , and the lift of β is a similar family ˜β . Assume α and β intersect. Then a lift
+α 1 of α and a lift β 1 of β also intersect. The curves α 1 and β 1 are isotopic to
+disjoint lines by a lift of an isotopy making α and β disjoint. The fundamental
+group of F acts on the universal cover, and α 1 and β 1 have a common cyclic
+stabilizer. It follows that they intersect inﬁnitely often . An arc of each between
+adjacent crossing points cuts oﬀ a 2-gon in the universal cov er. A ﬁnite number
+of arcs of ˜α ∪ ˜β meet this 2-gon. Each such arc is disjoint from either ˜ α or ˜β ,
+so that it cuts oﬀ a smaller 2-gon inside the previous one. We c an pass to an
+innermost 2-gon whose interior meets no arc of ˜ α ∪ ˜β . This 2-gon is disjoint
+from any of its translates, and must project 1-1 down to F . □
+Lemma 5.6 Let F be an orientable triangulated surface with u triangles, and
+let α and β be isotopic simple basic curves on F intersecting transversely. Let l
+be the length of α ∪ β , and let V be the maximal valence of a vertex in F . There
+is an isotopy carrying β to α via no more than l4uV basic moves.
+Proof. We treat cases. Note that V ≥ 3, l ≥ 4 and u ≥ 4.
+Case 1: α and β are disjoint.
+Then α and β bound a subsurface of F homeomorphic to an annulus. We
+will perform a series of basic moves which isotop the curves t o coincide.
+The edges of F induces a cellulation of the annulus. The cells are subdisks
+of triangles, bounded by arcs in α ∪ β . If there is a vertex in this cellulation, we
+can slide α or β over a vertex by a basic move of type 2. Repeating at most u
+times, we eliminate all vertices in the annulus. The length o f α ∪ β is increased
+by at most V − 2 each time we do a basic move, so the ﬁnal curves have total
+length at most l + u(V − 2) = l + uV − 2u.
+The annulus between the curves is cut by the edges of F into a collection of
+cells. Since α and β are disjoint, and each cell boundary contains an edge lying
+on the 1-skeleton between each edge lying on α ∪ β , all cells are even sided. An
+Euler characteristic calculation shows that either all cel ls are 4-gons, or there is
+32
+a 2-gon cell in the annulus, bounded by a basic arc of type 2 and an arc on an
+edge of the triangulation.
+If there is a cell which is a 2-gon, we can perform a basic move o f type 3
+which slides an arc of α or β across that 2-gon. This decreases the length of
+α ∪ β by two. After repeating at most ( l + uV − 2u)/ 2 times, we eliminate all
+2-gon cells from the annulus, and arrive at a cellulation in w hich all cells are
+4-gons. When all cells are 4-gons, the two boundary componen ts of the annulus
+are parallel basic curves, each of length at most ( l + uV − 2u)/ 2. Using at most
+(l + uV − 2u)/ 2 basic moves of type 1, we can make the two curves coincide.
+The total number of basic moves required in the three steps ab ove is bounded
+by
+u + (l + uV − 2u)/ 2 + (l + uV − 2u)/ 2 = l + uV.
+Case 2: α and β intersect.
+Two basic arcs in a triangle with distinct endpoints interse ct at most once,
+so the total number of intersections of α and β is at most l2/ 4. Lemma 5.5
+gives the existence of an innermost disk D1 on the surface, bounded by subarcs
+α 1 of α and β 1 of β . The 1-skeleton of F induces a cellulation of D1. The cells
+are bounded by arcs in α 1 ∪ β 1 and arcs in the 1-skeleton of F . If D1 contains
+a vertex of F , we can isotop α 1 or β 1 over a vertex (possibly a diﬀerent one)
+by a basic move of type 2, keeping α ∪ β embedded. The number of vertices is
+bounded above by u, so repeating at most u times, we eliminate all vertices in
+D1, using at most u basic moves of type 2. The length of α 1 ∪ β 1 is increased
+by at most V − 2 by each basic move, so α and β are isotoped to curves with
+total length less than l + u(V − 2) = l + uV − 2u.
+Since α 1 and β 1 meet at exactly two points in the boundary of D1, there are
+at most two cells in D1 with an odd number of sides. An Euler characteristic
+calculation shows that one of three cases occurs:
+Case 1. All of D1 is contained in a single triangle, or
+Case 2. There is a 2-gon cell in D1, or
+Case 3. All cells of D1 are 4-gons, other then two 3-gons containing points
+33
+of α 1 ∩ β 1.
+The ﬁrst case is impossible because basic arcs don’t interse ct in more than
+one point in a single triangle. A 2-gon cell in D1 gives a basic arc of type 2.
+We can use this to perform a basic move of type 3, which slides a n arc of α 1 or
+β 1 across a 2-gon. This decreases the length of α 1 ∪ β 1 by two, and thus can
+be repeated at most ( l + uV − 2u)/ 2 times. This leaves us in Case 3. We can
+then isotop β 1 across α 1, using at most ( l + uV − 2u)/ 2 basic moves of type
+1. We have then eliminated the innermost 2-gon D1, reducing the number of
+intersection points of α and β by two, while using at most l + uV basic moves.
+The length of α ∪ β is now bounded by the larger value l + uV . If α and
+β still intersect, we repeat with another innermost disk. Eli minating this disk
+requires at most ( l + uV ) + uV = l + 2uV basic moves. Repeating at most l2/ 4
+times we eliminate all intersections and arrive at disjoint curves. Summing the
+resulting series, which has at most l2/ 4 terms, gives a bound of
+l + uV + (l + 2uV ) . . . + (l + (l2/ 4)uV ) ≤ l3/ 4 + l2
+4 ( l2
+4 − 1)uV / 2 ≤ l3/ 4 +l4uV / 32
+basic moves. With the curves now disjoint, and having length less than l+ l2
+4 uV ,
+case 1 isotops them to coincide using at most l + l2
+4 uV + uV basic moves. The
+total number of basic moves used is less than
+l3/ 4 + l4uV / 32 + l + l2
+4 uV + uV.
+Since l ≥ 4 and u ≥ 4,
+l4uV ≥ l4uV / 32+2l3uV ≥ l4uV / 32+l3/ 4+4l2uV ≥ l4uV / 32+l3/ 4+l+l2uV / 4+uV
+so the sum is less than l4uV as claimed. □
+Lemma 5.7 Let F be an orientable triangulated surface with u triangles, and
+let α and β be isotopic basic curves on F in general position. Let l be the total
+length of α ∪ β . Then there is an isotopy carrying β to α via no more than
+17l4u3 elementary moves.
+34
+Proof. The required number of basic moves is at most l4uV , and each basic
+move requires at most 17 V elementary moves, so the total number of elementary
+moves required is less than 17 l4uV 2. We know V ≤ u so that 17 l4u3 gives a
+bound on the number of elementary moves. □
+We now give the proof of the main result of this section.
+Proof of Theorem 5.1: We begin by isotoping α to a basic curve. First we
+perturb α to miss the zero-skeleton of the triangulation. There are at most u
+vertices, and each has at most V edges coming into it, where V is the maximal
+valence of the triangulation of the surface. We can perturb α near any vertex
+which it passes through so that it crosses at most V / 2 edges near that vertex.
+This requires a total of at most u(V / 2 + 1) type 2 elementary moves, and uV + 2
+elementary moves of both types. The number of segments on the curve has now
+been increased to at most s + uV / 2 + u < s + uV .
+Next we isotop the intersection of α with each triangle to a union of basic
+arcs. This can increase the number of segments by at most a fac tor of three, to
+3(s+uV ) and requires less than 4( s+U V ) elementary moves by Lemma 5.2. We
+can do similar moves on β , resulting in new curves α and β which are transversely
+intersecting basic curves with a total of at most 6( s + uV ) segments. Note that
+the length of a basic curve is between one third and one half of the number of
+segments it contains, therefore α ∪ β has length at most 3( s + uV ). We now
+apply Lemma 5.7, isotoping the curves together using at most 17[3(s + uV )]4u3
+elementary moves. We can bound V by u, obtaining a bound of at most
+u2 + 2 + 4(s + u2) + 1377[(s + u2)]4u3 < 211(s + u2)4u3
+elementary moves. □
+6 Proof of Theorem 1.2
+We combine the results of §2–§5 to prove Theorem 1.2.
+35
+Proof of Theorem 1.2: To prove Theorem 1.2, we ﬁrst construct a compact
+triangulated P L submanifold MK of M obtained by removing a solid torus
+neighborhood of K. We barycentrically subdivide M twice and construct a
+new triangulated manifold MK = M − RK , by removing the interior of a
+regular neighborhood RK of K. The boundary of MK consists of a subdivision
+of the original boundary ∂M plus a 2-torus ∂R K, the peripheral torus. The
+manifolds MK and RK contain between them 576 t tetrahedra. As outlined in
+§3, we deform the original knot K across an annulus by elementary moves to
+a longitude K1 on the peripheral 2-torus ∂R K. Then we deform K1 on the
+peripheral torus by elementary moves to the boundary K2 of the embedded
+normal disk given by Haken’s Theorem 3.1. Finally we deform t he curve K2
+across this disk using elementary moves to a triangle.
+We count elementary moves. By Lemma 3.4 the normal disk with K2 as
+boundary contains at most 2 8·576t+6 = 2 4608t+6 triangles, and the number of
+edges |K2|of K2 is at most
+|K2| ≤ 24608t+7 < 24609t = s2 . (6.15)
+Also by Lemma 3.4 it takes at most 2 4608t+7 elementary moves to transform K2
+to a triangle.
+By Theorem 4.1 the longitude K1 consists of at most
+|K1| ≤ 21858(576t)+1 < 21070209t = s1 (6.16)
+edges, and the isotopy from K to K1 requires at most the same number of
+elementary moves.
+It remains to bound the number of elementary moves needed to c arry K1 to
+K2, using Theorem 5.1. We note that K1 is isotopic to K2 if properly oriented.
+Theorem 5.1 applies with s = max( s1, s2) = s1 to yield a bound of at most
+211(s + u2)4u3 elementary moves taking K1 to K2, where u is the number of
+triangles on the peripheral torus. Since u ≤ 576t < 210t, Corollary 5.1 yields a
+bound of 2 107t− 1 for the number of elementary moves taking K1 to K2. For the
+three steps together we obtain a bound of 2 4609t + 21070209t + 2107t− 1 < 2107t.
+36
+□
+Remark. The assumption K ⊆ Interior (M ) was used to allow the peripheral
+torus RK to be constructible by two barycentric subdivisions and to h ave ∂R K
+disjoint from ∂M . For the general case that K ⊆ M , we could proceed by
+barycentrically subdividing M twice, then isotoping K oﬀ the boundary ∂M
+to a “parallel” knot K ′′ contained strictly in the interior of M ′′, using O(t)
+elementary moves. Now Theorem 1.2 applies to K ′′in ( M ′′, ∂M ′′).
+7 Reidemeister moves and elementary moves in
+R3
+The remainder of the paper is concerned with 3-manifolds emb edded in R3,
+and is devoted to proving the Reidemeister move bound of Theo rem 1.1.
+We outline the proof of Theorem 1.1. We have given a knot diagr am D with
+n vertices. We use it to construct a triangulated P L manifold M embedded in
+R3 which contains a knot K in its 1-skeleton whose projection on the xy-plane in
+R3 is the knot diagram D. In section 8 we show that such a manifold M can be
+constructed using O(n) tetrahedra. Now Theorem 1.2 shows that we can isotop
+K to a trivial knot using 2 c3n elementary moves. We project these elementary
+moves down onto the xy-plane and obtain a sequence of Reidemeister moves.
+The proof is completed by bounding the number of Reidemeiste r moves in terms
+of elementary moves, which we do below.
+In the rest of this section we describe Reidemeister moves an d relate them
+to elementary moves. We recall basic facts about knot and lin k diagrams.
+A projection of a link in R3 into a plane is regular if all crossings are in
+general position, and at most 2 edges intersect the pre-imag e of any point.
+Corresponding to a regular projection of a link is a link diagram . This is a
+labeled planar graph having the following properties:
+(i) Any connected component of D with no vertices is an (isolated) loop.
+37
+(ii) Each vertex has exactly four adjacent edges, with two ed ges labeled “undercrossing” and two labeled “overcrossing” at the vertex.
+(iii) The labeling prescribes a cyclic ordering of edges at e ach vertex, and “overcrossing edges” are adjacent to “undercrossing edges” in th is ordering.
+Conversely, for any labeled planar graph D satisfying (i)–(iii) there exists an
+unoriented link L having projection D. We note that the cyclic ordering of
+vertices in (iii) actually speciﬁes a planar embedding of th e graph D, since it
+determines the faces of the planar embedding.
+A link component in a link diagram D is obtained by tracing a closed path of
+edges such that each pair of consecutive edges match at their common vertex,
+either both overcrossing or both undercrossing. The order of D is the number
+of components it contains. A link diagram component of D is a connected component of the underlying graph; it can be the union of several link components.
+The crossing measure |D|of a link diagram is
+|D|= #(vertices) + #(link diagram components) − 1 . (7.17)
+A knot diagram is a link diagram that consists of one link component. A
+trivial knot diagram is a knot diagram that has no vertices. If D is a knot
+diagram, then |D|is the crossing number of the knot projection.
+Lemma 7.1 If a polygonal link L has regular projection D, then
+|D| ≤ |L|2 . (7.18)
+Proof. The number of vertices |L|is at least as large as the number of distinct
+line segments it contains. Since line segments project to li ne segments, each pair
+of line segments produces at most one crossing. There are les s than |L|2 pairs.
+Furthermore line segments that project into diﬀerent conne cted components of
+|D|cannot produce any crossings. Thus the number of noninterse cting pairs of
+line segments is at least #(components of D) − 1, so 7.18 follows. □
+The bound 7.18 is the correct order of magnitude, because one can easily
+construct a sequence of knots K with |K|→∞ , which have the property that
+38
+|D|> 1
+2 |K|2. There is no upper bound for |L|in terms of |D|, but there does
+exist a link L with a projection having diagram D, with |L| ≤ c|D|, see [12,
+Lemma 5.1] and §3.
+Reidemeister moves are local moves on link diagrams that are analogous to
+elementary moves. They convert a link diagram D to another link diagram D′
+by a local change in its structure. For unoriented links ther e are four kinds of
+Reidemeister moves, examples of which are pictured in Figur e 13, see one of [21,
+p. 48], [1],[6],[],[25]. (For oriented links there are more Reidemeister moves, see
+Wu [33].)
+Figure 13: Reidemeister moves of types 1, 2 and 3.
+We call two knot diagrams D1 and D2 equivalent if and only if one can
+be converted into the other by a ﬁnite sequence of Reidemeist er moves. This
+relation corresponds to knot equivalence: Knots K1 and K2 have knot diagrams
+D1 and D2 that are equivalent if and only if D1 and D2 are equivalent.
+Reidemeister moves on a link diagram D are related to elementary moves
+on a link L whose projection is D, but the correspondence of moves is not
+one-to-one.
+Lemma 7.2 Let L be a polygonal link and suppose that it has diagram D as
+regular projection on a plane. Let L′ be a link derived from L by an elementary
+move of type (2) or (2′), and suppose that it has regular projection D′ on the
+same plane. Then there is a sequence of at most 2|L|+ 2|D|Reidemeister moves
+that converts D to D′.
+39
+Proof. As a line segment is moved aﬃnely in R3 with one end ﬁxed, its
+projection intersects the projection of any vertex of the po lygonal link L in
+at most one point. Therefore it can generate at most one type I or type II
+Reidemeister move involving the projection of that vertex. The number of
+vertices is bounded by |L|. Similarly, each pair of crossing segments in D can
+produce at most one type III Reidemeister move. Since two lin e segments are
+moved in a type (2) or (2 ′) elementary move, this yields at most 2 |L|+ 2|D|
+Reidemeister moves. □
+The bound of Lemma 7.2 is nearly best possible.
+We use these lemmas to prove a bound for Reidemeister moves in terms of
+elementary moves.
+Theorem 7.1 Let L and L′ be polygonal links each consisting of at most n
+line segments and suppose that D and D′ are link diagrams obtained by regular
+projection of L and L′ on a ﬁxed plane. If L can be transformed to L′ using k
+elementary moves, then D can be transformed to D′ using at most 2k(n+ 1
+2 k+1)2
+Reidemeister moves.
+Proof. Let L = L0, L1, L2, . . . , L k = L′ be the set of intermediate links
+occurring in the sequence of elementary moves, and let Di denote the projection
+of Li on the ﬁxed plane. We may assume that all projections are regu lar, by
+applying a a transversality argument and inﬁnitesimally mo ving the plane of
+projection [6, Prop. 1.12]. Since an elementary move change s the number of
+vertices by at most one, and |L0|, |Lk| ≤ n, we have, for 1 ≤ i ≤ k, that
+|Li| ≤ min(n + i, n + k − i) ≤ n + 1
+2 k . (7.19)
+Lemma 7.1 gives
+|Di| ≤ |Li|2 ≤ (n + 1
+2 k)2 = n2 + nk + k2
+4 . (7.20)
+Thus we obtain
+2|Li|+ 2|Di| ≤ 2(n + 1
+2 k + 1)2 ,
+and applying Lemma 7.2 to each Li separately yields the upper bound 2 k(n +
+1
+2 k + 1)2. □
+40
+8 Triangulation of knot complements in R3
+In this section we construct a triangulated 3-manifold MK which is a knot
+complement in a ball embedded in R3. That is, MK = S3 − (RK ∪ B), in which
+RK is an open regular neighborhood of the knot K, B is an open ball containing
+the point at inﬁnity in its interior, and ¯RK ∩ ¯B = ∅. The manifold MK has
+boundary ∂M K = ∂R K ∪∂B which consists of two connected components, which
+are topologically a 2-sphere and a torus. As in §2, we call such a manifold MK
+a truncated knot complement .
+We carry out this construction more generally for link diagr ams, as it requires
+no extra work. Given a link diagram L with crossing measure n, we construct a
+triangulated manifold M in R3 which contains O(n) tetrahedra and has a link
+L in its 1-skeleton which has a regular projection that gives t he link diagram L.
+Theorem 8.1 Given a link diagram L of crossing measure n, one can construct
+a triangulated convex polyhedron P in R3 such that:
+(i) The triangulation contains at most 840n tetrahedra.
+(ii) Every vertex in the triangulation is a lattice point (x, y, z) ∈ Z3, with
+0 ≤ x ≤ 30n, 0 ≤ y < 30n and − 6 ≤ z ≤ 6.
+(iii) There is a link L embedded in the 1-skeleton of the triangulation which
+lies entirely in the interior of P , and whose orthogonal projection on the
+plane z = 0 is regular and is a link diagram isomorphic to L.
+Proof. The link diagram L comes with a topological planar embedding which
+determines the faces. We begin by adding extra vertices to L. To each edge or
+non-isolated loop we add two new vertices of degree 2, which s plits it into three
+edges. To each isolated loop we add three new vertices of degr ee 2, making it an
+isolated triangle. The resulting labeled graph G is still planar, has no loops or
+multiple edges, and has at most 5 n vertices. (The worst case consists of several
+disjoint single crossing projections.) Let m denote the number of vertices of G,
+41
+and call the m − n vertices added special vertices. Note that each vertex of the
+original graph has associated to it four distinct special ve rtices.
+Using the topological planar embedding of G, we next add extra edges to
+triangulate each face of G, obtaining a topologically embedded triangulated
+planar graph G′. The graph G′ has m vertices and 2 m − 4 bounded triangular
+faces, and the unbounded face is also a triangle. We next enca se the graph
+G′ in a triangulated planar graph H′ with m + 3 vertices and 2 m + 2 bounded
+triangular faces, by framing the outside triangular face wi th a larger triangle and
+then adding 6 edges to subdivide the resulting concentric re gion into 6 triangles,
+obtaining G′′. See Figure 14.
+Figure 14: Triangulating a knot projection.
+Our next goal is to replace the topological embedding of G′′in the plane with
+a straight-line embedding. In 1952 Fary showed that straigh t-line embeddings
+always exist, and a recent result of de Frajsseix, Pach and Po llack [7] states that
+the vertices can be chosen to lie in a small rectangular grid o f integer lattice
+points. Their results imply that there exists a planar embed ding of H′ whose
+vertices V (H′) lie in the plane z = − 1, and are contained in the grid
+{(x, y, − 1) : 0 ≤ x, y ≤ 10n − 1 ; x, y ∈ Z} ,
+and all edges of the graph H′ are straight line segments.
+Next we make an identical copy H′′of H′ on the plane z = 1 with H′′=
+H′ + (0, 0, 2), and vertex set V (H′′) = V (H′) + (0, 0, 2). We now consider the
+polyhedron P ′ which is the convex hull of V (H′) and V (H′′). It is a triangular
+42
+prism, because the outside face of H′ is a triangle. We add m1 vertical edges
+connecting each vertex v ∈ V (H′) to its copy v+(0, 0, 1) ∈ V (H′′). Let E denote
+these edges, together with all the edges in H′ and H′′. Using these edges, the
+polyhedron P ′ decomposes into 2 m+ 2 triangular prisms {Qj : 1 ≤ j ≤ 2m− 4},
+with the top and bottom faces of each being congruent triangu lar faces of H′
+and H′′.
+We next triangulate P ′ by dissecting each of the 2 m + 2 triangular prisms
+into 14 tetrahedra, as follows. We subdivide each vertical r ectangular face into
+four triangles using its diagonals. Then we cone each rectan gular face to the
+centroid of P ′, and note that the centroid lies in the plane z = 0. We add 4
+new vertices to each prism, one on each rectangular face and o ne in the center.
+The point of this subdivision is that the triangulations of a djacent prisms are
+compatible. Note also that all new vertices added lie in the l attice 1
+3 Z2.
+Let E ′ denote all the edges in the union of these triangulated prism s. We
+identify the link diagram G with the graph G embedded in H′. We next observe
+that there is a polygonal link L embedded in the edge set E ′ whose projection is
+the link diagram L. We insist that any edge in D that runs to an undercrossing
+have its vertex which is an undercrossing be in the plane z = − 1, while any edge
+that runs to an overcrossing have the overcrossing vertex in the plane z = 1.
+Each such edge goes from one of the n original vertices of L to a special vertex
+adjacent to that vertex. Edges that do not meet vertices labe led overcrossing
+or undercrossing are assigned to the z = − 1 plane. The edge corresponding to
+an edge running from the z = − 1 to the z = 1 plane is contained in one of
+the diagonals added to a prism. The resulting embedding L in P ′ has a regular
+orthogonal projection onto the ( x, y)-plane, since no edges are vertical and only
+transverse double points occur as singularities in the proj ection. Note that no
+edge of L touches the outer triangle of H′ because all edges project to the graph
+G′ contained strictly inside H′. This will be important for property (iii).
+The knot edges lie in the upper and lower boundary of P ′, but do not touch
+its sides. To have them not touch the boundary we take two addi tional copies of
+P ′ and glue one to its top, along the plane z = 1, and one to its bottom, along
+43
+the plane z = − 1. The knot now lies entirely in the interior of the resulting
+polyhedron P ′′. All the vertices added in this construction lie in 1
+3 Z2. The total
+number of tetrahedra used in triangulating P ′′is 84( m + 1), which is at most
+420(n + 1), or at most 840 n for n ≥ 1.
+Now triple all coordinates ( x, y, z) → (3x, 3y, 3z) to obtain a triangulated
+polytope P = 3P ′′with integer vertices, with a triangulation that satisﬁes ( i)–
+(iii). □
+Remark. (1). The construction in Theorem 8.1 can be eﬀectively compu ted
+in time O(n log n) using the Hopcroft-Tarjan planarity algorithms [16] and t he
+embedding algorithm of de Frajsseix, Pach and Pollack [7, Se ction 4].
+(2). One can ask whether a polygonal knot K in R3 that consists of n line
+segments can be embedded in the 1-skeleton of some triangula ted polyhedron
+that uses O(n) tetrahedra. We do not know if this can always be done. There
+exist polygonal knots whose planar projections in any direc tion have at least
+Ω(n2) crossings. Avis and El Gindy [3] showed that a set of n points in general
+position in R3 can be embedded as vertices of a triangulation of their conve x
+hull using O(n) tetrahedra, but that in the general case Ω( n2) tetrahedra are
+sometimes needed.
+9 Proof of Theorem 1.1
+We combine the earlier results to prove Theorem 1.1 with an ex plicit bound
+on the number of Reidemeister moves required to isotop an unk not to the trivial
+projection.
+Proof of Theorem 1.1. Applying Theorem 8.1 to the knot diagram D yields
+a triangulated convex polyhedron M embedded in R3 with t tetrahedra, where,
+t ≤ 840n ,
+44
+and with a knot K embedded in the 1-skeleton of the interior of M that projects
+to D. The hypotheses of Theorem 1.2 are satisﬁed for M , hence there is a
+sequence of at most 2 c2t elementary moves transforming K to the trivial knot
+in M , with c2 = 10 7. Now Theorem 7.1 gives a bound of at most
+2c2t
+(
+6 ·840n + 1
+2 ·2c2t + 1
+) 2
+. (9.21)
+Reidemeister moves, since K contains at most 6 ·840n line segments.
+The bound (9.21) yields the desired bound of the form 2 c1n for an explicit
+constant c1. Using the value c2 = 10 7 from the proof of Theorem 1.2, one ﬁnds
+that c1 = 10 11 suﬃces. □
+References
+[1] C. Adams, The Knot Book. An elementary introduction to the mathematic al
+theory of knots , W. H. Freeman, New York, 1994.
+[2] J. W. Alexander and G. B. Briggs, On types of knotted curves , Ann. Math.,
+28 (1926/27), 562–586.
+[3] D. Avis and H. El Gindy, Triangulating Point Sets in Space , Disc. & Comp.
+Geom., 2 (1987), 99–111.
+[4] J. Birman and M.D. Hirsch, Recognizing the unknot, preprint, 1997.
+[5] J. Birman and W. Menasco, Studying links via closed braids V: The unlink,
+Trans. AMS, 329, 1992, 585–606.
+[6] G. Burde and H. Zieschang, Knots, de Gruyter 1985.
+[7] H. de Frajsseix, J. Pach and R. Pollack, How to draw a planar graph on a
+grid, Combinatorica, 10 (1990), 41–51.
+[8] S. Galatolo, On a problem in eﬀective knot theory, Rendiconti dell Accademia dei Lincei (to appear).
+45
+[9] L. Goeritz, Bemerkungen zur knotentheorie, Abh. Math. Sem. Univ. Hamburg, 10 (1934), 201–210.
+[10] W. Haken, Theorie der Normalﬂachen, ein Isotopie Kriterium f¨ ur ein
+Kreis, Acta Math., 105 (1961), 245–375.
+[11] J. Hass, Algorithms for recognizing knots and 3-manifolds, to appear in
+Chaos, Fractals and Solitons.
+[12] J. Hass, J. C. Lagarias and N. Pippenger, The computational complexity of
+knot and link problems, preprint, 1997.
+[13] J. Hass, J. C. Lagarias and N. Pippenger, The computational complexity of
+knot and link problems, preliminary report, Proc. 38th Annual Symposium
+on Foundations of Computer Science, (1997), 172–181.
+[14] J. Hass and G. P. Scott, Intersections of curves on surfaces, Israel Math.
+J., 51 (1985), 90–120.
+[15] G. Hempel, 3-Manifolds, Princeton University Press, Princeton NJ, 1976.
+[16] J. E. Hopcroft and R. E. Tarjan, Eﬃcient planarity testing, J. Assoc. Comp.
+Mach., 21 (1974), 549–568.
+[17] J.F.P. Hudson, Piecewise-Linear Topology, W.A. Benjamin Inc. 1969.
+[18] W. Jaco and H. Rubinstein, P L Equivariant Surgery and Invariant Decompositions of 3-Manifolds, Advances in Math., 73 (1989), 149–191.
+[19] W. Jaco and J. L. Tollefson, Algorithms for the complete decomposition of
+a closed 3-manifold, Ill. J. Math., 39 (1995), 358–406.
+[20] H. Kneser, Geschlossene Flachen in dreidimensionalen Mannigfaltigk eiten,
+Jahresbericht Math. Verein., 28 (1929), 248–260.
+[21] K. Murasugi, Knot Theory and Its Applications , Birkhauser, Boston MA,
+1996.
+46
+[22] H. Reidemeister, Knoten und Gruppen , Abh. Math. Sem., Univ. Hamburg,
+5 (1926), 7–23.
+[23] H. Reidemeister, Elementare Begr¨ undang der Knotentheorie, Abh. Math.
+Sem. Univ. Hamburg, 5 (1926), 24–32.
+[24] H. Reidemeister, Knotentheorie, Springer: Berlin 1932; Chelsea; New York,
+1948. (English translation: Knot Theory , BCS Associates, Moscow, ID
+1984.)
+[25] D. Rolfsen, Knot and Links , Publish or Perish Inc., Berkeley CA, 1976.
+[26] C.P. Rourke and B.J. Sanderson, Introduction to Piecewise-Linear Topology, Springer-Verlag, Berlin, Heidelberg, New York, 1982.
+[27] A. Schrijver, Theory of Linear and Integer Programming , John Wiley and
+Sons, New York, 1986.
+[28] H. Schubert, Bestimmung der Primfactor zerlegung von Verkettungen,
+Math. Z., 76 (1961), 116–148.
+[29] A. Seb¨ o, Hilbert bases, Caraetheodory’s theorem and combinatorial optimization, in Integer Programming and Combinatorial Optimization, R.
+Kannan and W. R. Pulleybank, Eds., U. Waterloo Press, 1990, 4 31–455.
+[30] D. J. A. Welsh, Complexity: Knots, Colourings and Counting , Cambridge
+University Press, Cambridge 1993.
+[31] D. J. A. Welsh, The complexity of knots , in Quo Vadis, Graph Theory?, J.
+Gimbel, J. Kennedy and L. V. Quintoo, eds., North-Holland, A msterdam,
+1993, 159–173. (Also: Annals Disc. Math., 55 (1993), 159–173.)
+[32] D. J. A. Welsh, Knots and braids: some algorithmic questions, in Graph
+structure Theory, Seattle, W A 1991, Contemporary Math. Vol . 147, AMS,
+Providence RI, 1993, 109–123.
+47
+[33] F. Y. Wu, Knot Theory and Statistical Mechanics, Rev. Mod. Phys., 64
+(1992), 1099–1131.
+email: hass@math.ucdavis.edu
+jcl@research.att.com
+address: Prof. J. Hass
+Dept. of Mathematics
+Univ. of California, Davis
+Davis, CA 95616
+Dr. J. C. Lagarias
+Room C235, AT&T Labs–Research
+180 Park Avenue
+Florham Park, NJ 07932-0971
+48

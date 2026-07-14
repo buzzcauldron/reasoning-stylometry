@@ -1,0 +1,9 @@
+Draw a circle with radius c and a right triangle with sides a and b as shown. In this situation, one may apply any of a few well known facts. For example, in the diagram three points F, G, H located on the circle form another right triangle with the altitude FK of length a. Its hypotenuse GH is split in two pieces: (c + b) and (c - b). So, as in Proof #6 , we get a² = (c + b)(c - b) = c² - b².
+
+[ Loomis , #53] attributes this construction to the great Leibniz, but lengthens the proof about threefold with meandering and misguided derivations.
+
+B. F. Yanney and J. A. Calderhead ( Am Math Monthly , v.3, n. 12 (1896), 299-300) offer a somewhat different route. Imagine FK is extended to the second intersection F' with the circle. Then, by the Intersecting Chords theorem, FK·KF' = GK·KH, with the same implication.
+
+More recently, Daniel J. Hardisky, arrived at the proof by a different route. Construct two isosceles triangles $ABD$ and $ABE,$ with $D$ and $E$ on $AC$ on both sides of $A.$ Then note that $\angle DBE$ is right.
+
+This argument is reminescent of a characterization of right triangles discussed elsewhere .

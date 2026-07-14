@@ -1,0 +1,89 @@
+{
+  "corpus_dir": "corpus_classify/reference_v2",
+  "n_texts": 297,
+  "n_geometric": 121,
+  "n_algebraic": 176,
+  "geo_word_stats": {
+    "n": 121,
+    "median": 1021,
+    "min": 151,
+    "max": 23093,
+    "under_200": 6,
+    "under_400": 18
+  },
+  "alg_word_stats": {
+    "n": 176,
+    "median": 1084,
+    "min": 159,
+    "max": 31019,
+    "under_200": 4,
+    "under_400": 12
+  },
+  "class_separability_l1": 0.001445,
+  "leave_one_out_accuracy": "245/297",
+  "leave_one_out_pct": 82.5,
+  "top_discriminators": [
+    {
+      "word": "the",
+      "geo_minus_alg": -0.01481
+    },
+    {
+      "word": "we",
+      "geo_minus_alg": -0.01291
+    },
+    {
+      "word": "in",
+      "geo_minus_alg": 0.00896
+    },
+    {
+      "word": "by",
+      "geo_minus_alg": -0.00843
+    },
+    {
+      "word": "at",
+      "geo_minus_alg": 0.00703
+    },
+    {
+      "word": "it",
+      "geo_minus_alg": 0.00653
+    },
+    {
+      "word": "is",
+      "geo_minus_alg": -0.00583
+    },
+    {
+      "word": "most",
+      "geo_minus_alg": 0.00565
+    },
+    {
+      "word": "where",
+      "geo_minus_alg": -0.00539
+    },
+    {
+      "word": "a",
+      "geo_minus_alg": -0.00524
+    }
+  ],
+  "test_predictions_vs_centroid": [
+    {
+      "file": "algebraic__algebraic_style__hrushovski_approx_subgroups.txt",
+      "predicted": "algebraic"
+    },
+    {
+      "file": "algebraic__geometric_style__dritschel_mccullough_rational_dilation.txt",
+      "predicted": "geometric"
+    },
+    {
+      "file": "geometric__algebraic_style__bateman_katz_cap_sets.txt",
+      "predicted": "algebraic"
+    },
+    {
+      "file": "geometric__geometric_style__masur_schleimer_disk_complex.txt",
+      "predicted": "algebraic"
+    }
+  ],
+  "verdict": [
+    "CRITICAL: geometric/algebraic stopword centroids nearly identical (L1=0.0014). Function words do not separate classes in this corpus.",
+    "WEAK: leave-one-out accuracy only 82% on the reference set itself."
+  ]
+}

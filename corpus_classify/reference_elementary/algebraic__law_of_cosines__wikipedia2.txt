@@ -1,0 +1,23 @@
+The law of cosines can be proven algebraically from the law of sines and a few standard trigonometric identities. To start, the three angles of a triangle sum to a straight angle, so α + β + γ = π radians. Thus by the angle sum identities for sine and cosine,
+
+sin γ = sin(π − γ) = sin(α + β) = sin α cos β + cos α sin β,
+cos γ = −cos(π − γ) = −cos(α + β) = sin α sin β − cos α cos β.
+
+Squaring the first of these identities, then substituting cos α cos β = sin α sin β − cos γ from the second, and finally replacing cos²α + sin²α = cos²β + sin²β = 1, the Pythagorean trigonometric identity, we have:
+
+sin²γ = (sin α cos β + cos α sin β)²
+      = sin²α cos²β + 2 sin α sin β cos α cos β + cos²α sin²β
+      = sin²α cos²β + 2 sin α sin β (sin α sin β − cos γ) + cos²α sin²β
+      = sin²α (cos²β + sin²β) + sin²β (cos²α + sin²α) − 2 sin α sin β cos γ
+      = sin²α + sin²β − 2 sin α sin β cos γ.
+
+The law of sines holds that
+
+a / sin α = b / sin β = c / sin γ = k,
+
+so to prove the law of cosines, we multiply both sides of the previous identity by k²:
+
+sin²γ · c²/sin²γ = sin²α · a²/sin²α + sin²β · b²/sin²β − 2 sin α sin β cos γ · ab/(sin α sin β),
+c² = a² + b² − 2ab cos γ.
+
+This concludes the proof.

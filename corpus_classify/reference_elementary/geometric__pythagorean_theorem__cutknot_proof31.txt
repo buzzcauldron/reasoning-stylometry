@@ -1,0 +1,12 @@
+Given right ΔABC, let, as usual, denote the lengths of sides BC, AC and that of the hypotenuse as a, b, and c, respectively. Erect squares on sides BC and AC as on the diagram. According to SAS , triangles ABC and PCQ are equal, so that ∠QPC = ∠A. Let M be the midpoint of the hypotenuse. Denote the intersection of MC and PQ as R. Let's show that MR PQ.
+
+The median to the hypotenuse equals half of the latter. Therefore, ΔCMB is isosceles and ∠MBC = ∠MCB. But we also have ∠PCR = ∠MCB. From here and ∠QPC = ∠A it follows that angle CRP is right, or MR   PQ.
+
+With these preliminaries we turn to triangles MCP and MCQ. We evaluate their areas in two different ways:
+
+One one hand, the altitude from M to PC equals AC/2 = b/2. But also PC = b. Therefore, Area(ΔMCP) = b²/4. On the other
+hand, Area(ΔMCP) = CM·PR/2 = c·PR/4. Similarly, Area(ΔMCQ) = a²/4 and also Area(ΔMCQ) = CM·RQ/2 = c·RQ/4.
+
+We may sum up the two identities: a²/4 + b²/4 = c·PR/4 + c·RQ/4, or a²/4 + b²/4 = c·c/4.
+
+(My gratitude goes to Floor van Lamoen who brought this proof to my attention. It appeared in Pythagoras - a dutch math magazine for schoolkids - in the December 1998 issue, in an article by Bruno Ernst. The proof is attributed to an American High School student from 1938 by the name of Ann Condit.)

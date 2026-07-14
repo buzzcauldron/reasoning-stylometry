@@ -1,0 +1,7 @@
+Cracked Domino - a proof by Mario Pacek (aka Pakoslaw Gwizdalski) - also requires some thought.
+
+The proof sent via email was accompanied by the following message:
+
+This new, extraordinary and extremely elegant proof of quite probably the most fundamental theorem in mathematics (hands down winner with respect to the # of proofs 367?) is superior to all known to science including the Chinese and James A. Garfield's (20th US president), because it is direct, does not involve any formulas and even preschoolers can get it. Quite probably it is identical to the lost original one - but who can prove that? Not in the Guinness Book of Records yet!
+
+The manner in which the pieces are combined may well be original. The dissection itself is well known (see Proofs 26 and 27 ) and is described in Frederickson's book, p. 29. It's remarked there that B. Brodie (1884) observed that the dissection like that also applies to similar rectangles. The dissection is also a particular instance of the superposition proof by K.O.Friedrichs .

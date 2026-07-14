@@ -1,0 +1,40 @@
+This one is by Michael Hardy from University of Toledo and was published in The Mathematical Intelligencer in 1988. It must be taken with a grain of salt.
+
+Let ABC be a right triangle with hypotenuse BC. Denote AC = x and BC = y. Then, as C moves along the line AC, x changes and so does y. Assume x changed by a small amount dx. Then y changed by a small amount dy. The triangle CDE may be approximately considered right. Assuming it is, it shares one angle (D) with triangle ABD, and is therefore similar to the latter. This leads to the proportion x/y = dy/dx, or a (separable) differential equation
+
+y·dy - x·dx = 0,
+
+which after integration gives y² - x² = const. The value of the constant is determined from the initial condition for x = 0. Since y(0) = a, y² = x² + a² for all x.
+
+It is easy to take an issue with this proof. What does it mean for a triangle to be approximately right ? I can offer the following explanation. Triangles ABC and ABD are right by construction. We have, AB² + AC² = BC² and also AB² + AD² = BD², by the Pythagorean theorem. In terms of x and y, the theorem appears as
+
+  x² + a² = y²
+  (x + dx)² + a² = (y + dy)²
+
+which, after subtraction, gives
+
+y·dy - x·dx = (dx² - dy²)/2.
+
+For small dx and dy, dx² and dy² are even smaller and might be neglected, leading to the approximate y·dy - x·dx = 0.
+
+The trick in Michael's vignette is in skipping the issue of approximation. But can one really justify the derivation without relying on the Pythagorean theorem in the first place? Regardless, I find it very much to my enjoyment to have the ubiquitous equation y·dy - x·dx = 0 placed in that geometric context.
+
+An amplified, but apparently independent, version of this proof has been published by Mike Staring ( Mathematics Magazine , V. 69, n. 1 (Feb., 1996), 45-46).
+
+Assuming Δx > 0 and detecting similar triangles,
+
+Δf / Δx = CQ/CD > CP/CD = CA/CB = x/f(x).
+
+But also,
+
+Δf / Δx = SD/CD < RD/CD = AD/BD = (x + Δx) / (f(x) + Δf) < x/f(x) + Δx/f(x).
+
+Passing to the limit as Δx tends to 0 + , we get
+
+df / dx = x / f(x).
+
+The case of Δx < 0 is treated similarly. Now, solving the differential equation we get
+
+f  2 (x) = x² + c.
+
+The constant c is found from the boundary condition f(0) = b: c = b². And the proof is complete.

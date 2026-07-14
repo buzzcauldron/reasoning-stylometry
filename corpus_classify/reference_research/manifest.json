@@ -1,0 +1,5184 @@
+{
+  "version": "4.0",
+  "description": "Research-register corpus: cross_view/within_view labels plus contemporary arXiv scrape (keyword-tagged geometric/algebraic style).",
+  "min_words_per_chunk": 400,
+  "chunk_target_words": 1200,
+  "exclude_test_papers": [
+    "0909.2190",
+    "1010.3174",
+    "1107.3666",
+    "1809.03427",
+    "math/0310398"
+  ],
+  "sources": [
+    {
+      "style": "algebraic",
+      "arxiv": "0705.0710",
+      "title": "cross_view style mean -0.24",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "0710.1470",
+      "title": "cross_view style mean -0.25",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "0711.2704",
+      "title": "cross_view style mean -0.03",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "0803.3351",
+      "title": "cross_view style mean -0.25",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "0804.3582",
+      "title": "cross_view style mean -0.20",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "0905.3377",
+      "title": "cross_view style mean -0.11",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "0906.1238",
+      "title": "cross_view style mean -0.03",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "0912.1054",
+      "title": "cross_view style mean -0.07",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1001.2096",
+      "title": "cross_view style mean -0.09",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1001.5008",
+      "title": "cross_view style mean -0.20",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1002.4256",
+      "title": "cross_view style mean -0.04",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1002.4374",
+      "title": "cross_view style mean -0.12",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1004.2578",
+      "title": "cross_view style mean -0.20",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1004.2781",
+      "title": "cross_view style mean -0.05",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1005.5120",
+      "title": "cross_view style mean -0.15",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1006.2723",
+      "title": "cross_view style mean -0.25",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1008.4749",
+      "title": "cross_view style mean -0.05",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1011.3342",
+      "title": "cross_view style mean -0.33",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1103.4322",
+      "title": "cross_view style mean -0.03",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1106.0930",
+      "title": "cross_view style mean -0.15",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1107.3377",
+      "title": "cross_view style mean -0.02",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1111.5932",
+      "title": "cross_view style mean -0.04",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1201.0188",
+      "title": "cross_view style mean -0.01",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1202.2405",
+      "title": "cross_view style mean -0.20",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1202.3839",
+      "title": "cross_view style mean -0.28",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1204.1606",
+      "title": "cross_view style mean -0.19",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1204.6530",
+      "title": "cross_view style mean -0.09",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1205.2525",
+      "title": "cross_view style mean -0.04",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1205.5534",
+      "title": "cross_view style mean -0.08",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1209.3217",
+      "title": "cross_view style mean -0.01",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1210.6325",
+      "title": "cross_view style mean -0.07",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1310.0528",
+      "title": "cross_view style mean -0.34",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1311.4960",
+      "title": "cross_view style mean -0.05",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1402.5149",
+      "title": "cross_view style mean -0.20",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1405.0401",
+      "title": "cross_view style mean -0.28",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1506.07129",
+      "title": "cross_view style mean -0.26",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1608.00499",
+      "title": "cross_view style mean -0.28",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1610.04888",
+      "title": "cross_view style mean -0.11",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1703.07898",
+      "title": "cross_view style mean -0.24",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1802.08934",
+      "title": "cross_view style mean -0.08",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1809.01714",
+      "title": "cross_view style mean -0.11",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1901.07166",
+      "title": "cross_view style mean -0.15",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "1909.07649",
+      "title": "cross_view style mean -0.11",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2006.00340",
+      "title": "cross_view style mean -0.17",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2012.05888",
+      "title": "cross_view style mean -0.14",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2112.07070",
+      "title": "cross_view style mean -0.10",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "math/0007007",
+      "title": "cross_view style mean -0.03",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "math/0102201",
+      "title": "cross_view style mean -0.25",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "math/0109048",
+      "title": "cross_view style mean -0.20",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "math/0111200",
+      "title": "cross_view style mean -0.13",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "math/0211391",
+      "title": "cross_view style mean -0.28",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "math/0212094",
+      "title": "cross_view style mean -0.38",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "math/0306277",
+      "title": "cross_view style mean -0.04",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "math/0406109",
+      "title": "cross_view style mean -0.50",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "math/0406330",
+      "title": "cross_view style mean -0.17",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "math/0407161",
+      "title": "cross_view style mean -0.03",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "math/0412126",
+      "title": "cross_view style mean -0.06",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "math/0505035",
+      "title": "cross_view style mean -0.09",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "math/0508632",
+      "title": "cross_view style mean -0.03",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "math/0601760",
+      "title": "cross_view style mean -0.26",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "math/0607446",
+      "title": "cross_view style mean -0.26",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "math/0701247",
+      "title": "cross_view style mean -0.14",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "math/0701334",
+      "title": "cross_view style mean -0.33",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "math/9807012",
+      "title": "cross_view style mean -0.07",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "0705.4325",
+      "title": "cross_view style mean +0.07",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "0711.3899",
+      "title": "cross_view style mean +0.19",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "0802.3208",
+      "title": "cross_view style mean +0.14",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "0910.1390",
+      "title": "cross_view style mean +0.08",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "1007.3085",
+      "title": "cross_view style mean +0.04",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "1009.0287",
+      "title": "cross_view style mean +0.07",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "1103.5619",
+      "title": "cross_view style mean +0.03",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "1109.4047",
+      "title": "cross_view style mean +0.08",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "1203.0360",
+      "title": "cross_view style mean +0.09",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "1205.6742",
+      "title": "cross_view style mean +0.09",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "1206.2601",
+      "title": "cross_view style mean +0.10",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "1303.2354",
+      "title": "cross_view style mean +0.05",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "1307.0487",
+      "title": "cross_view style mean +0.20",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "1403.0945",
+      "title": "cross_view style mean +0.04",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "1408.0543",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "1507.05842",
+      "title": "cross_view style mean +0.32",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "1705.09989",
+      "title": "cross_view style mean +0.10",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "1709.09439",
+      "title": "cross_view style mean +0.17",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "1710.05039",
+      "title": "cross_view style mean +0.00",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "1804.03701",
+      "title": "cross_view style mean +0.07",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2108.02828",
+      "title": "cross_view style mean +0.15",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "alg-geom/9711031",
+      "title": "cross_view style mean +0.01",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0204019",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0211401",
+      "title": "cross_view style mean +0.08",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0302269",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0303319",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0305219",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0305583",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0306038",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0306388",
+      "title": "cross_view style mean +0.00",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0307224",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0402159",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0405573",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0407087",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0410310",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0410496",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0411468",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0412033",
+      "title": "cross_view style mean +0.03",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0412357",
+      "title": "cross_view style mean +0.14",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0503113",
+      "title": "cross_view style mean -0.11",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0504212",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0505404",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0505581",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0506396",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0506576",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0507693",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0508347",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0508888",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0511710",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0512599",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0603575",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0603674",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0604266",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0604375",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0607442",
+      "title": "cross_view style mean +0.15",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0607598",
+      "title": "cross_view style mean +0.10",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0608137",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0608426",
+      "title": "cross_view style mean +0.06",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0610674",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0610962",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0701329",
+      "title": "cross_view style mean -0.08",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0703468",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0703858",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0711.0803",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/0804.3021",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/9803091",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "math/9901044",
+      "title": "cross_view style mean +0.50",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.11861v1",
+      "title": "Almost Ricci--Bourguignon Solitons on Contact Metric Three-Manifolds",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.11809v1",
+      "title": "Duals of higher vector bundles and cotangents of Lie 2-groupoids",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.11804v1",
+      "title": "Lifting Symplectomorphism Group Actions on Bi-Lagrangian Structures to the Whitney Sum",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.11735v1",
+      "title": "Genus bounds for knot polynomials of Lie superalgebras",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.11610v1",
+      "title": "Sectional Curvature and Structural Functions of a Two-Dimensional or Three-Dimensional Lorentzian Manifold",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.11592v1",
+      "title": "The Lorentzian Problem on the Group $SU(2)$",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.11544v1",
+      "title": "Eigenvalues on spheres",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.11489v1",
+      "title": "Asymptotic expansion of induced Grassmannian Chern forms and distribution of random degeneracy sets",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.11411v1",
+      "title": "On the uniqueness of surfaces of constant spacetime mean curvature in asymptotically Schwarzschildean lightcones",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.11370v1",
+      "title": "Splitting the Goldman-Turaev Lie bialgebra along a simple separating curve",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.11365v1",
+      "title": "Renormalized Area of Catenoids in the Hyperbolic Space",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.11296v1",
+      "title": "A Numerical Criterion for the 2-Hessian Equation on Compact K\u00e4hler Manifolds",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.11238v1",
+      "title": "Asymmetry-aided measurement-based quantum repeaters and distributed quantum computing with a decoder-free client",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.11236v1",
+      "title": "Formation of Trapped Surfaces from Spacelike Initial Data",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.11227v1",
+      "title": "Sharp $L^p$-uncertainty principles on Finsler measure spaces",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.11092v1",
+      "title": "A Tractable Pseudo-Metric on Non-Parametric Exponential Statistical Manifolds via SPD Geometry",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.11082v1",
+      "title": "Real sutured Heegaard Floer homology",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.11067v1",
+      "title": "Blow-up phenomena for the $\u03c3_2$-Yamabe equation",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.11057v1",
+      "title": "Genericity of hyperbolic 3-manifolds via Dehn surgery",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.10904v1",
+      "title": "Yang-Mills theory for multiplicative Ehresmann connections",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.10837v1",
+      "title": "Eventual Morse Minimality of Heat Flow on Lens Spaces",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.10827v1",
+      "title": "A curvature characterization of the Cartan minimal hypersurface in $\\mathbb S^5$",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.10761v1",
+      "title": "A Three-Degree-of-Freedom Chesnavich Model for Roaming: Derivation, Phase-Space Geometry, NHIM-Anchored Dividing Surfaces, and Roaming Transport",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.10733v1",
+      "title": "On Chern's Conjecture for Minimal Submanifolds with Flat Normal Bundle in Spheres",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.10717v1",
+      "title": "Separatrix structure and the geometry of reset distributions",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.10688v1",
+      "title": "Topology of the links of cDV singularities of types $cA_n$ for $n>0$ and $cD_n$ for $n>4$",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.10662v1",
+      "title": "The Bernstein-Gelfand-Gelfand (BGG) Construction: Algebra, Geometry, and Analysis; Part I",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.10529v1",
+      "title": "Toroidal 3-manifolds have circularly orderable fundamental groups",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.10426v1",
+      "title": "Spacelike Brakke flows with boundary in pseudo-Euclidean space",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.10424v1",
+      "title": "Uniform Comparison of Hyperbolic Ball Volumes on the Universal Cover",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.10398v1",
+      "title": "Finiteness of pseudo-Anosov flows without perfect fits",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.10344v1",
+      "title": "Minima of geodeics length functions for non-uniform filling",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.10321v1",
+      "title": "Discontinuous Prior-Mode Sections and the Geometry of Ambiguity in Intrinsic Image Decomposition",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.10292v1",
+      "title": "On generalized $\u03be$-Parallel Maps",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.10220v1",
+      "title": "Nonrationality Degree of Toric Quasifolds",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.10216v1",
+      "title": "Formalizing Abstract Simplicial Complexes & Stellar Subdivisions in Lean",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.10157v1",
+      "title": "A family of area-minimizing tensor varieties",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.10149v1",
+      "title": "An Explicit Model for Conic Laplacians on \\(\\mb P^1\\)",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.10018v1",
+      "title": "Spanning solids and Murasugi sum in dimension four",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.09981v1",
+      "title": "Fixed Point Floer Cohomology of Dehn Twists I: Splitting Formulas",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.09946v1",
+      "title": "Statistics on Yau's conjecture: Variance asymptotics",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.09662v1",
+      "title": "PHINN-EEG: Topological Time-Series Analysis of Dream-State EEG -- Dynamic Betti Curves for Dream Content Classification and Topology-Conditioned Neural Signal Synthesis",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.09636v1",
+      "title": "Boundary behaviour of eigenfunctions and superharmonic functions on harmonic manifolds of purely exponential volume growth",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.09633v1",
+      "title": "On the density and surjectivity of $\\mathbf{SO(3)}$-Witten-Reshetikhin-Turaev quantum representations",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.09601v1",
+      "title": "Homological Topological Quantum Field Theories",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.09472v1",
+      "title": "Scalar Curvature Rigidity for Products of convex Hypersurfaces and even dimensional Manifolds",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.09353v1",
+      "title": "A rescaling principle for quasiregular curves with applications to hyperbolicity",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.09325v1",
+      "title": "A note on the stability of surfaces along null cones under area-preserving variations",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.09300v1",
+      "title": "A fractional de Rham complex for coframe-attached Maxwell equations",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.09107v1",
+      "title": "The curvature of left-invariant magnetic systems",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.09034v1",
+      "title": "Upper Bounds for Hessian Matrices of Positive Solutions to Heat Equations on K\u00e4hler Manifolds",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.08939v1",
+      "title": "Diffeological Riemannian orbifolds",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.08933v1",
+      "title": "Notes on a Cotton-type tensor for electrostatic systems",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.08905v1",
+      "title": "On The Morel Structure Conjecture",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.08810v1",
+      "title": "Locally Euclidean Discretized Graph Configuration Spaces",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.08764v1",
+      "title": "One-cusped Dehn fillings of the sisters of the Whitehead and $6^2_2$ link complements",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.08631v1",
+      "title": "Existence of two embedded minimal spheres in $S^3$ with an arbitrary metric",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.08473v1",
+      "title": "Hyperbolic manifolds without positive spun triangulations",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.08458v1",
+      "title": "Building confidence regions for Reeb graphs using the interleaving distance",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.08356v1",
+      "title": "Coarse embeddings of products of trees as quasi-isometry invariants",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.08230v1",
+      "title": "Selecting Interpretable Circular Coordinates from Data",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.08188v1",
+      "title": "Probabilistic pseudo knot theory",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.07986v1",
+      "title": "Invariant solutions for the asymptotic Plateau problem in $\\mathbb{H}^3$",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.07940v1",
+      "title": "On cube and Cremona rigidity for higher-rank lattices",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.07936v1",
+      "title": "Exotic $\\mathbb{R}^4$'s, RBG Links, and End Floer Homology",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.07886v1",
+      "title": "Combining cusped triangle groups with Blaschke products: commensurable matings",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.07876v1",
+      "title": "On the number of shared Dehn surgeries between two knots",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.07856v1",
+      "title": "Algebraizability of Vector Bundles over Real Algebraic Varieties",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.07587v1",
+      "title": "Abelianizations of finite-index subgroups of the handlebody group",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.07496v1",
+      "title": "Finite complete rewriting systems for graphs of free groups with applications to free-by-cyclic, one-relator, and three-manifold groups",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.07424v1",
+      "title": "On rank two Kleinian groups with three parabolics",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.07150v1",
+      "title": "On 4-dimensional convex projective domains invariant by a lattice of $\\mathrm{SL}_2 (\\mathbb{R})$",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.07054v1",
+      "title": "Quantitative hyperbolicity for complex manifolds via numerical invariants",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.07017v1",
+      "title": "Robust Observability for Schr\u00f6dinger Equations with Rough Potentials on 2D Compact Hyperbolic Surfaces",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.08923v1",
+      "title": "Singularity of Cannon-Thurston maps",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.06810v1",
+      "title": "Soft cells, Tubular Tilings and the Hidden Phases in Binary Mixtures",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.06686v1",
+      "title": "The Algebraic Montgomery-Yang Problem",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.06554v1",
+      "title": "The Thick Part of the $\\mathrm{PSL}_n(\\mathbb{R})$-Hitchin-Riemann Moduli Space has Infinite Volume",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.06524v1",
+      "title": "Lower Bounds for Approximating the Vietoris-Rips Filtration",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.06473v1",
+      "title": "Dynamics and geometry of character varieties for surface groups",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.06422v1",
+      "title": "Finite-Field QED Corrections to Vacuum Birefringence and Magnetar Polarization Transport",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.06263v1",
+      "title": "Closed geodesics in homology classes on random hyperbolic surfaces of large genus",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.06172v1",
+      "title": "Cone and constrained colorful Carath\u00e9odory Theorems",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.06061v1",
+      "title": "On the Gap Between the Co-Indices of a Free Z_2-Space and Its Suspension",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05974v1",
+      "title": "Boundary zeros of stable polynomials in the unit ball",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05960v1",
+      "title": "Detecting invariant manifolds of dynamical systems using persistent homology",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05710v1",
+      "title": "Visualizing Local Maxima of the Ohio overdose epidemic with Vineyards",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05703v1",
+      "title": "Simultaneous universal circles and continuous extension",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05664v1",
+      "title": "Slow Manifold Reduction for Inertial Particles with Quadratic Drag",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05662v2",
+      "title": "Convex projective manifolds, symmetric spaces and geometric decompositions",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05360v1",
+      "title": "Noncommutative Cartier Formulae",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05232v1",
+      "title": "Bordered hyperbolic manifolds with a fixed perimeter-to-volume ratio",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05231v1",
+      "title": "Hamiltonian group actions in cosymplectic geometry",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05211v1",
+      "title": "Equivariant cosymplectic geometry",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.04530v1",
+      "title": "Regularity of profinite isomorphisms of hyperbolic 3-manifolds",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.04496v1",
+      "title": "Robust transitivity versus trapping regions for partially hyperbolic diffeomorphisms",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.03838v1",
+      "title": "Uniform asymptotic stability and regions of attraction for systems on Riemannian manifolds",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.03782v1",
+      "title": "String topology operations under Chen's iterated integrals and homotopy transfer",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05430v2",
+      "title": "The Noncommutative Foliation Invariant (NCFI): extension to the odd codimension case and computed examples",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.03484v1",
+      "title": "Homotopic distances and group-like spaces",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.03128v1",
+      "title": "Conformal symmetries and MOTS stability",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.03095v1",
+      "title": "On the rigidity of Finslerian conformal circle-preserving transformations",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.02244v1",
+      "title": "Foliations by constant spacetime mean curvature surfaces for asymptotically hyperboloidal initial data sets",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.01991v1",
+      "title": "Every cusp singularity link admits infinitely many strong symplectic fillings",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.01809v2",
+      "title": "Foliated and Mather-Jacobian discrepancies via tangential arcs",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.01672v1",
+      "title": "Constructing depth one laminations transverse to pseudo-Anosov flows",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.01652v1",
+      "title": "Right-angled Artin groups of large girth and finite volume hyperbolic $3$--manifold groups",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.01385v1",
+      "title": "Quantum JT Gravity in a box as a P\u00f6schl-Teller Scattering Problem",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.01196v1",
+      "title": "Coarse geometry of homeomorphism groups: Classifying countable Stone spaces",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.01003v1",
+      "title": "Small Sets of Generators for Handlebody Groups",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.00556v1",
+      "title": "Group-Equivariant Poincar\u00e9 Convolutional Networks",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.00428v1",
+      "title": "HyFL-CLIP: Hyperbolic Fine-Tuning of CLIP for Robust Long-Context Understanding",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.31393v2",
+      "title": "Montel's theorem and tautness in calibrated geometry",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.31295v1",
+      "title": "Exotic diffeomorphisms of reducible $4$-manifolds with odd $b_+$",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.30403v1",
+      "title": "The entropy-degree theorem for Alexandrov spaces",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.00036v1",
+      "title": "Gravitating Tubes Beyond World Line Paradigm In General Relativity",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.29189v2",
+      "title": "Stable Ballistic Prograde Cyclers in the Three-Body Problem",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.28206v1",
+      "title": "Homogeneous Hypersurfaces in 4-dimensional Thurston Geometries with 4-dimensional Isometry Group",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.28107v1",
+      "title": "Chromatic Euler characteristics and duality for infinite groups",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.27912v1",
+      "title": "Polar homogeneous foliations on symmetric spaces of rank one",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.27340v1",
+      "title": "Godbillon-Vey classes of Lie subalgebroids",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.27145v1",
+      "title": "On L-space surgeries on two-bridge links",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.27074v2",
+      "title": "Distinguishing Gromov-Thurston manifolds using algebraic Dehn fillings",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.25940v1",
+      "title": "Boundary Rigidity in a fixed conformal class for Asymptotically Hyperbolic Manifolds",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.25848v1",
+      "title": "On the Moser trick for Lie subalgebras and foliations",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.25791v1",
+      "title": "Biharmonic Wintgen ideal submanifolds in Riemannian manifolds of constant sectional curvature",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.25464v1",
+      "title": "Bochner Flatness and Soliton Dynamics in Lorentzian K\u00e4hler Spacetime Geometry",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.25289v1",
+      "title": "Conjugacy Distinguished Cosets in Hyperbolic $3$-Manifold Groups",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.09710v1",
+      "title": "Manifold Constrained Tabular Deep Neural Networks",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.25132v2",
+      "title": "Band Width Estimates and Rigidity of Manifolds with Negative Curvature",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.24771v2",
+      "title": "Autoregressive Processes on Riemannian Manifolds",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.24761v1",
+      "title": "On Chen-Teo geometries with cosmological constant",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.24754v1",
+      "title": "Existence of classical minimal surfaces in $4$ and $5$-manifolds",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.24378v1",
+      "title": "Central extensions of mapping class groups of surfaces from stated skein algebras",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.23648v1",
+      "title": "Optimal Stopping for a Diffusion with Unobserved Bernoulli Drift",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.22286v4",
+      "title": "Deformation of affine structures and the cohomology of Koszul-Vinberg algebras on the lie groups SO(2), H3(R) and Galilei group SGal(3)",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.21997v1",
+      "title": "Failure of local equi-Lipschitzness for families of Lorentz distances to Cauchy surface foliations",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.21610v1",
+      "title": "Closed counterexamples to Toponogov's question on mixed curvature",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.21291v1",
+      "title": "The diameter function is a topological Morse function",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.19619v1",
+      "title": "Some constructions of uniformly positive scalar curvature metrics on open manifolds",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.19246v1",
+      "title": "Markovian actions are Anosov-like",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.17492v1",
+      "title": "The horizontal Laplacian of a Riemannian submersion with totally geodesic fibers and an integrable horizontal distribution",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.17193v1",
+      "title": "Configuration Spaces and Braid Groups",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.16588v1",
+      "title": "A characterization of pseudo-Anosov orbit spaces via bifoliated planes",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.13774v1",
+      "title": "A note on the quantization of angular momentum for black holes",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.13009v1",
+      "title": "Teichm\u00fcller isometries induced by certain irreducible periodic mapping classes",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.01466v1",
+      "title": "Galois actions on surfaces and a higher genus Grothendieck-Teichm\u00fcller group",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2605.31383v2",
+      "title": "Extendable mapping classes of knotted surfaces obtained by rim surgery in $S^4$",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2605.28963v1",
+      "title": "Generalisable presentations and compactness properties of locally compact right-angled Artin groups",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2605.27126v1",
+      "title": "A contact version of Kirby's theorem",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2605.26777v1",
+      "title": "The combinatorial structure of the unit tangent spheres and cotangent spheres of Teichm{\u00fc}ller space with Thurston's Finsler metric",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2605.23829v2",
+      "title": "Outer automorphism groups of hyperbolic groups, bounded extensions, and hierarchical hyperbolicity",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2605.23822v1",
+      "title": "Coarse Structures on Homogeneous Spaces",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2605.23626v1",
+      "title": "Integrals of general geometric random variables on the moduli space of hyperbolic surfaces",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2605.17874v1",
+      "title": "Realizing crosscap transpositions as monodromies of singular fibrations",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2605.13372v1",
+      "title": "Generating the mapping class group of a nonorientable surface of genus $g \\geq 13$ by two elements",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2605.13064v1",
+      "title": "Non-arithmeticity of length spectra of subgroups of mapping class groups",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2605.12837v1",
+      "title": "Pseudo-Anosov flows and the geometry of Anosov-like group actions",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2605.10248v1",
+      "title": "From branching quasiflats to flats in CAT(0) cube complexes",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2605.02823v1",
+      "title": "Invariant measures for Deroin-Tholozan representations",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2605.02107v1",
+      "title": "AoI-Aware Multi-Robot Sensing and Transport on Connected Graphs",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2604.27531v2",
+      "title": "$\\mathbb{K}$-framings and $\\mathbb{K}$-quadratic forms on surfaces",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2604.22387v1",
+      "title": "A universal non-embedding theorem for 3-manifolds",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2604.18815v1",
+      "title": "The Dehn-Nielsen-Baer Theorem for Bounded Surfaces",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2604.15627v2",
+      "title": "A note on the Burnside problem for homeomorphism groups of manifolds",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2604.14271v1",
+      "title": "Magic and Non-Clifford Gates in Topological Quantum Field Theory",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2604.13194v2",
+      "title": "Boundary Dehn twists are often commutators",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2604.12520v2",
+      "title": "Simplicity of action-based $C^{*}$-algebras from hyperbolic actions",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2604.06686v1",
+      "title": "Relative numbers of ends and quasi-median graphs",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2603.20424v1",
+      "title": "From cut sets to cube complexes",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2603.12095v1",
+      "title": "Profinite isomorphisms, stable commutator length, and fixed point properties",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2602.15636v3",
+      "title": "On the large-scale geometry of graph braid groups via cubical structures",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2601.17929v1",
+      "title": "Quasi-isometric rigidity of the integers: an elementary primer",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2601.07702v1",
+      "title": "Asymptotic-M\u00f6bius maps",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2601.01057v1",
+      "title": "Finite Stature in Graphs of Cube Complexes with Cyclonormal Edges",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2512.24136v1",
+      "title": "Bicombing the mapping class group and Teichm\u00fcller space via stable cubical intervals",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2512.20926v2",
+      "title": "Uncovering Hierarchical Structure in LLM Embeddings with $\u03b4$-Hyperbolicity, Ultrametricity, and Neighbor Joining",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2512.20595v1",
+      "title": "Cube Bench: A Benchmark for Spatial Visual Reasoning in MLLMs",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2511.16463v1",
+      "title": "The metric Rips filtration, universal quasigeodesic cones, and hierarchically hyperbolic spaces",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2511.04238v1",
+      "title": "On the Vietoris-Rips Complexes of Integer Lattices",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2511.03887v1",
+      "title": "On a lemma of Milnor and Schwarz, apr\u00e8s Rosendal",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2510.12058v1",
+      "title": "On proper affine actions with better decaying cocycles",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2510.11336v1",
+      "title": "Asymptotically rigid mapping class groups III: Presentations and isomorphisms",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2510.10838v1",
+      "title": "Survey on Cremona groups from a median geometric point of view",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2510.09399v2",
+      "title": "Cobordism maps in Khovanov homology and singular instanton homology II",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2510.05669v1",
+      "title": "Boundary actions of CAT(0) spaces: topological freeness and applications to $C^*$-algebras",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2509.21566v2",
+      "title": "Cocycle stability in permutations of random simplicial complexes",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2509.20532v2",
+      "title": "A notion of quasiconvex subgroups in acylindrically hyperbolic groups",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2509.13447v1",
+      "title": "Cubical small-cancellation quotients of non-products",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2509.11279v1",
+      "title": "Ancona inequalities along generic geodesic rays",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2509.04613v2",
+      "title": "Hyperfiniteness of the boundary action of virtually special groups",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2508.15738v3",
+      "title": "Characterizing hierarchically hyperbolic free by cyclic groups",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2508.14244v1",
+      "title": "Volumes of end-periodic mapping tori",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2508.07531v1",
+      "title": "Parametrization of Symmetry in Data",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2507.23666v1",
+      "title": "Pseudo-Isometric Surgery",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2507.17973v1",
+      "title": "Primitive invariants from laminations",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2507.07076v1",
+      "title": "Surjectivity of the Cannon--Thurston map in metric (graph) bundles",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2507.02440v3",
+      "title": "Handlebodies, Outer space, and tropical geometry",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2507.00702v1",
+      "title": "Configuration Spaces of Colored Graphs",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2506.10108v1",
+      "title": "Visual metrics on boundaries of hyperbolic spaces",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2506.04882v3",
+      "title": "Isoperimetric inequalities in Hadamard spaces of asymptotic rank two",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2506.04437v5",
+      "title": "Graph quandles: Generalized Cayley graphs of racks and right quasigroups",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2505.23293v3",
+      "title": "Cell structure of mediangle graphs",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2505.12095v2",
+      "title": "Cobordism maps in Khovanov homology and singular instanton homology I",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2505.10334v1",
+      "title": "Borel asymptotic dimension of the Roller boundary of finite dimensional CAT(0) cube complexes",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2505.07682v1",
+      "title": "Hardy-Littlewood maximal operator on spaces of exponential volume growth",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2505.07873v1",
+      "title": "Solutions to two open problems in geometric group theory",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2504.17048v1",
+      "title": "Asymptotically CAT(0) metrics, Z-structures, and the Farrell-Jones Conjecture",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2504.14192v1",
+      "title": "Some questions related to free-by-cyclic groups and tubular groups",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2504.10406v1",
+      "title": "A discrete model for surface configuration spaces",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2504.06456v2",
+      "title": "Characterization of higher rank via affine maps",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2503.18047v1",
+      "title": "Cubulating the sphere with many facets",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2503.16360v3",
+      "title": "A \"cubist\" decomposition of the Handel-Mosher axis bundle",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2503.08411v1",
+      "title": "Homotopy types of complexes of hyperplanes in quasi-median graphs and applications to right-angled Artin groups",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2503.05527v1",
+      "title": "Outer space and finiteness properties for symmetric automorphisms of RAAGs, and generalisations",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2502.21251v1",
+      "title": "Virtual Cactus Group is Virtually Special Compact",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11777v1",
+      "title": "N\u00e9ron--Severi groups of proper schemes over finite fields",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11767v1",
+      "title": "Mackeyfication of equivariant categories I",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11687v1",
+      "title": "The Coding Conception of Set",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11639v1",
+      "title": "The chain replacement of a poset flow",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11619v1",
+      "title": "Dense-codense expansions of quasiminimal pregeometry structures",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11595v1",
+      "title": "Exact Cardinality And Nonredundant Parametrization Of Character-Polynomial Codes",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11561v1",
+      "title": "Ray and end spaces: characterizations and classification up to homeomorphism",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11552v1",
+      "title": "Global dimension of a string algebra",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11525v1",
+      "title": "Pure-homogeneous Abelian groups",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11493v1",
+      "title": "Agentic Skill Optimization over Lie Algebroids",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11456v1",
+      "title": "Balanced notation for $\u03c4$-rigid pairs",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11367v1",
+      "title": "Weak essentially undecidable theories of hereditarily finite multisets",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11361v1",
+      "title": "Kaluzhnin-Krasner embedding theorem for monoids",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11329v1",
+      "title": "Fuss-free cumulative universes: theory and practice",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11261v1",
+      "title": "p-adic Properties of Translated Division Polynomials and Somos Sequences",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11169v1",
+      "title": "Cartan calculus in tangent categories",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11133v1",
+      "title": "FFLV bases for covariant representations of $\\mathfrak{gl}(m|n)$",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11100v1",
+      "title": "$\\mathfrak{so}_n(\\mathbb{C})$-modules which are free over an abelian nilradical",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11085v1",
+      "title": "Higher Structures of Rota--Baxter Lie $H$-Pseudoalgebras",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11068v1",
+      "title": "Exact Frequencies of Consecutive Quadratic Residue and Nonresidue Patterns Modulo a Prime",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11033v1",
+      "title": "Limit laws for component-pruned sparse random graphs and percolated tori",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10935v1",
+      "title": "Infinite Belligerent Jump Inversion and Computable Scott Analysis",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10922v1",
+      "title": "Properties of the Tropical Characteristic Polynomial of Symmetric Matrices",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10913v1",
+      "title": "$\u03c4$-Hochschild (co)homology, the square of the Serre bimodule, and the Coxeter automorphism of the Tamarkin--Tsygan calculus",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10886v1",
+      "title": "A cofibrant model of Waldhausen K-theory",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10880v1",
+      "title": "First-Order Modal Logic in HOL: Deep and Shallow Embeddings with Automated Faithfulness (Extended Preprint)",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10821v1",
+      "title": "Superconformal algebras over arbitrary rings of coefficients",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10782v1",
+      "title": "Poisson derivations and cohomology of Poisson nilpotent algebras",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10683v1",
+      "title": "Extended generalized permutahedra, and cointeracting bialgebras",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10660v1",
+      "title": "The Aubert and Bernstein involutions for disconnected groups",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10602v1",
+      "title": "The quantum double of the restricted quantum group $\\mathbf{\\overline{u}}_q(\\mathfrak{sl_2})$",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10442v1",
+      "title": "Decomposing time-varying data into simple pieces: structured decompositions of narratives",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10351v1",
+      "title": "Matrix generators for the unit groups of $L_K(1,d)$",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10327v1",
+      "title": "Symmetry for the spin highest weight module $V(\u039b_n)$",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10323v1",
+      "title": "A bitopological duality for some subordination Boolean algebras",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10289v1",
+      "title": "Bump-Friedberg type periods beyond the cuspidal spectrum",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10264v1",
+      "title": "Block-exoticity of reduction simple fusion systems on $S(n,p)$",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10253v1",
+      "title": "Homological rigidity of quiver representations over $\\mathbb{F}_1$",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10242v1",
+      "title": "Locally subcartesian closed categories",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10184v1",
+      "title": "Reconstruction of Formal Schemes from Categories of Nuclear Modules",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10073v1",
+      "title": "Base Change Fundamental Lemma for Central Elements in Depth-zero Hecke Algebras over Local Function Fields",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10051v1",
+      "title": "Simultaneous popular polynomial differences over finite fields",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10010v1",
+      "title": "Weights and characters for affine Hecke algebras",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.09949v1",
+      "title": "Ryser, Glynn, and the discrete Fourier transform: orthogonal schemes for the permanent",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.09612v1",
+      "title": "Change of Enrichment for Monoidal Model Categories",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.09595v1",
+      "title": "Generalized action monads and descent",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.09439v1",
+      "title": "Smooth Realizations of Line Configurations",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.09398v1",
+      "title": "Topological line arrangements with high multiplicities",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.09384v1",
+      "title": "Centers of q-Schur algebras",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.09379v1",
+      "title": "Indecomposable extensions of perverse sheaves over a closed stratum",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.09302v1",
+      "title": "On Polar Decomposition of Dual Matrices",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.09173v1",
+      "title": "On the codegree Tur\u00e1n density of projective geometries",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.09069v1",
+      "title": "Reducing stable forking dependence to finitely many pregeometries",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.09032v1",
+      "title": "Quantum Logic as the Logic of Contexts",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.09799v1",
+      "title": "Affine monodromy and exact value distributions over finite fields",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.08913v1",
+      "title": "Hilbert schemes of points on canonical surfaces",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.08911v1",
+      "title": "A diagrammatic field theory of quantum error correction",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.08909v1",
+      "title": "Ranked Discontinuities of Multivalued Functions",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.08730v1",
+      "title": "Modal logics of conjunctively closed provability predicates",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.08609v1",
+      "title": "Proof of Rump's Retraction Conjecture for Quasilinear Cycle Sets",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.08600v1",
+      "title": "High-degree cohomology of congruence subgroups of $\\text{SL}_n(\\mathcal{O})$ via cohomology of $S$-arithmetic groups",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.08485v1",
+      "title": "The fundamental theorems of invariant theory for linearly oligomorphic groups",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.08455v1",
+      "title": "Homology of the Lie Algebra of Locally Generated Derivations of a Discrete and Proper Metric Space",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.08389v1",
+      "title": "On $q$-pre-Lie algebras",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.08352v1",
+      "title": "Splendid extensions",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.08311v1",
+      "title": "On Complement and Supplement Ideals of Nearrings",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.08308v1",
+      "title": "Representations of $p$-adic reductive groups",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.08304v1",
+      "title": "A Study Of Skew-Polycyclic Codes Over A Non-Chain Ring",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.08296v1",
+      "title": "Braiding structures on categorical multi-Interval Jones-Wassermann subfactor",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.08271v1",
+      "title": "The $C^*$-algebras of locally finite undirected graphs: A complete description of their K-theory",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.08245v1",
+      "title": "On the Self-adjoint properties of the standard Whittaker $(\\mathfrak{g}, K)$-modules",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.08239v1",
+      "title": "On the Etzion-Silberstein conjecture for block Ferrers diagrams",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.08210v1",
+      "title": "Subword representations and weak hypercube dimension for acyclic categories",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.08206v1",
+      "title": "A Constructive Field of Infinitesimals: Chunk and Permeate Approach",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.08139v1",
+      "title": "Invertibility of Anticommutator and Commutators of Higher Degree of $n$-potent Elements",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.08126v1",
+      "title": "Independence relations induced by ideals",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.08064v1",
+      "title": "Polish spaces of separable Banach lattices",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.08052v1",
+      "title": "Complex curves in o-minimal geometry",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.07913v1",
+      "title": "A majorization relation for a sum of two tensor products of positive semidefinite operators",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.07900v1",
+      "title": "A technique for computing oriented cohomology rings of semisimple algebraic groups",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.07898v1",
+      "title": "A $(24_4,32_3)$-configuration on the Schur quartic with logarithmic Chern slope $14/5$",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.07786v1",
+      "title": "Chiral Tube Algebras I: Topological Defect Lines, Twisted Modules, and Finite Gauging",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.07780v1",
+      "title": "Colimits of Enriched Categories",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.07755v1",
+      "title": "Waring Problem for matrices over finite local rings",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.07667v1",
+      "title": "On Two Algebraic Realizations of Schubert Calculus",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.07659v1",
+      "title": "Palindromic Poincar\u00e9 polynomials in Type $B$",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.07653v1",
+      "title": "Athinization of irreducible $\\widehat{\\mathfrak{gl}}_n$-modules with dominant highest weights",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.07555v1",
+      "title": "Magnitude of module categories",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.07525v1",
+      "title": "Geometry and topology of the tempered Iwahori-spherical representations of a split semisimple $p$-adic group",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.07512v1",
+      "title": "Aubert duality and co-tempered data",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.07473v1",
+      "title": "The space of preorders on a commutative monoid",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.07427v1",
+      "title": "$p$-adic Maass--Shimura operators on $\u03bc$-ordinary Igusa varieties",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.07412v1",
+      "title": "The Knop-Luna-Vust theory of spherical embeddings, extended to non-reductive groups",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.07369v1",
+      "title": "On dynamical irreducible set of polynomials",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.07323v1",
+      "title": "Lattices and semilattices derived from commutative rings of characteristic 2 satisfying the identity $x^{2^n}\\approx x$",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.07319v1",
+      "title": "Maximal-Hull $z$-Ideals, Congruence Closures, and Coherent Frames of Commutative Semirings",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.07243v1",
+      "title": "Noncommutative vector field calculi",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.07227v1",
+      "title": "On the simplicity of Katsura algebras",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.07211v1",
+      "title": "Extriangulated ideal quotients and $d$-Auslander categories",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.07088v1",
+      "title": "Relative homotopy moment maps",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.07066v1",
+      "title": "Multiplication Beyond Groups: Stratified Fourier Mechanisms in Transformer Circuits",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.07042v1",
+      "title": "Global geometrization of local smooth integral models in the Hitchin fibration for $\\mathrm{GL}_n$: The Bass case",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.07028v1",
+      "title": "Mutation matrices from Poisson CGL extensions",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06960v1",
+      "title": "From $(n+1)$-term subcategories to $(n+1)$-term complexes",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06927v1",
+      "title": "A categorification of the Brenti--Welker identity",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06869v1",
+      "title": "An Erd\u0151s-P\u00f3sa theorem for cycles and faces of distinct lengths",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06823v1",
+      "title": "Twisted double functors and loosely discrete opfibrations",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06733v1",
+      "title": "Graded Locally Finite and Just Infinite Steinberg Algebras",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06694v1",
+      "title": "The tolerant learning hierarchy for c.e. sets",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06676v1",
+      "title": "Enriched $\\infty$-operads as marked algebras",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06454v1",
+      "title": "Categories with conjugation and octagons of Witt groups",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06418v1",
+      "title": "Lie and Jordan Isomorphisms of Algebras of Triangular Matrices over Associative Rings",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06386v1",
+      "title": "On the Beck--Chevalley condition",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06359v1",
+      "title": "Proof Theory and Interpolation for Sacchetti's Logics",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06271v1",
+      "title": "A Unique Normal Form for Tensor Trains over Arbitrary Fields",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06218v1",
+      "title": "Chains and Antichains inside Many-One Degrees and Variants",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06206v1",
+      "title": "Automorphism group schemes of Kantor pairs of associative central simple structurable algebras",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06022v1",
+      "title": "Correlations of zeros of a family of $L$-functions in function fields with symplectic symmetry",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.05983v1",
+      "title": "The Surplus Parking Gathering Problem in Infinite Grids",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.05941v1",
+      "title": "Finite dimensional zero Jordan product determined algebras are generated by idempotents",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.05767v1",
+      "title": "Universal Cycles for Affine Planes and 3-Subspaces over Finite Fields",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.05723v1",
+      "title": "Generalized Marshall Quotients and Real Semigroups of Continuous and Differentiable Functions",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.05688v1",
+      "title": "Circular Hessenberg pairs and the tridiagonal relations",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.05592v1",
+      "title": "Polarised noncrossing partititions and the coherent self-dual $\u03c9$-equivalence",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.05542v1",
+      "title": "A measurable equivariant Weierstrass theorem",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.05532v1",
+      "title": "Exact sequences of rt-categories",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.05386v2",
+      "title": "Logical Spectroscopy: Lifted-Product Codes with Addressable Bases",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.05358v1",
+      "title": "On a complete characterization of path-free complexes associated with complete multipartite graphs",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.05245v1",
+      "title": "Geminga and Monogem in the CTAO Era: Probing TeV Halos and Cosmic-Ray Transport",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.05228v1",
+      "title": "Centers of Algebras in Monoidal 2-Categories",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.05212v1",
+      "title": "Toric decomposition in algebraic groups",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.05075v1",
+      "title": "Exceptional rational functions of degree 5 over finite fields: classification by monodromy, ramification, and the Riemann-Hurwitz formula",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.04712v1",
+      "title": "Piecewise Symmetric Tensors",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.04539v1",
+      "title": "Lie algebras and coherence",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.04411v1",
+      "title": "Galois and separable extensions of Tambara functors",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.04266v1",
+      "title": "Phase-Factor-Controlled Interaction and Bonding between a Chiral Bobber and a Skyrmion String in the Conical Phase",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.04177v1",
+      "title": "Distinctness of the generalized $n$-dimensional Kloosterman sums",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.04015v1",
+      "title": "The Delayed Stabilizer ZX-Calculus",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.03996v1",
+      "title": "Finite Observations, Infinite Behaviour: bicategorical semantics for stateful monoidal processes",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.03995v1",
+      "title": "Merging $\\lim^1 \\mathbf{A} \\ne 0$ with other nonvanishing constructions",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.03827v1",
+      "title": "Affine cellular algebras and asymptotic algebras",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.03684v1",
+      "title": "A Note on the 2-Local Homotopy Types of $G_2$-Gauge Groups",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.03638v1",
+      "title": "The compositional inverses of the permutation polynomials of the form $x+\u03b3\\operatorname{Tr}_{q}^{q^n}(H(x))$ over $\\mathbb{F}_{q^n}$",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.03630v1",
+      "title": "On the inverses of permutation polynomials of the form $h(\u03c8(x))\\varphi(x)+g(\u03c8(x))$ over finite fields",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.03479v1",
+      "title": "The multilinear forms Cayley graph and the eigenvalue method for tensor codes",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.03444v1",
+      "title": "On Determinacy for Cut and Choose Games of Uncountable Length",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.03384v1",
+      "title": "Sum-product Phenomenon Via Dimension",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.03237v1",
+      "title": "Fusion rules from the Norton inequality",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.03055v1",
+      "title": "SHiPPO: Recurrent Memory with Transported Polynomial Projections",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.02950v1",
+      "title": "Some terminal orders on 3-folds",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.02870v1",
+      "title": "The theory of the Ziegler degrees",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.02754v1",
+      "title": "Possibilistic collapse and extremality of simplicial distributions",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.02751v1",
+      "title": "On Factoring Quantum-Plane Skew Polynomials over $\\mathbb{Q}(\u03c9)(t)$",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.02725v2",
+      "title": "A note on ultrahomogeneous unary algebras",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.02420v1",
+      "title": "Directed univalence for simplicial objects in an $\\infty$-topos",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.02377v1",
+      "title": "Generalized Rank Weight and Extended Generalized Poset Weight Defined For Codes Over Rings: A Galois Connection Approach",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.02364v1",
+      "title": "Deterministic Polynomial-time Exact-root Computation for Sparse Polynomials with Bounded Total Degree",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.02311v1",
+      "title": "Bimodules in differential polynomial rings",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.02250v1",
+      "title": "Conceptual completeness for subgeometric logics",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.02239v1",
+      "title": "Cyclic Codes and Cyclically Covering Subspaces over Finite Fields",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.02138v1",
+      "title": "Universal minimal flows of the homeomorphism groups of pseudo-solenoids are non-metrizable",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.02132v1",
+      "title": "The universal zero-sum invariant and weighted zero-sum for infinite abelian groups II",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.01970v1",
+      "title": "Bisimulations in second-order arithmetic",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.01544v2",
+      "title": "Formalized $q$-series: The Rogers-Ramanujan Identities and Beyond",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.01322v1",
+      "title": "Wormholes as red herrings: reflection positivity and the reconstruction of unitary quantum field theories",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.01058v1",
+      "title": "Large silting mutation in extriangulated categories",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.00220v1",
+      "title": "A Category Theory Account of AI Identity",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.31879v1",
+      "title": "Intuitionistic K is a Bisimulation-Invariant Fragment of Intuitionistic First-Order Logic",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.30273v1",
+      "title": "Signed Measures as the Linear Envelope of Positive Measures",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.25649v1",
+      "title": "Essentially commuting projections onto shift-invariant subspaces",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.20228v1",
+      "title": "Wild automorphisms and compound isotriviality",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.19426v1",
+      "title": "Three-dimensional Foliated Fractional Quantum Hall Phases",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.18533v2",
+      "title": "On the notion of a patterning property in model theory",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.15737v1",
+      "title": "Interpolation and Query Rewriting",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.15712v1",
+      "title": "Odds Law: The Decomposition Algebra On How Intelligence Organizes Itself to Solve Difficult Problems Reliably",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.15439v1",
+      "title": "The functoriality of moves on graphs and the extended covariant functoriality of graph algebras",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.15437v1",
+      "title": "GPU-Accelerated Search and Certification of Bounded Indistinguishability in Finite Kripke Semantics",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.15392v3",
+      "title": "Ring-induced localizations of nilpotent groups",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.17088v1",
+      "title": "Deformation Theory of Monoid Schemes I",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.17080v1",
+      "title": "HRDX: A Large-Scale Vector HD-Map Dataset",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.10105v1",
+      "title": "Amenable absorption in von Neumann algebras of hyperbolic groups",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.09329v1",
+      "title": "A hyperamalgamation property",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.09087v1",
+      "title": "On the minimal model theory for generalized pairs of relative log numerical dimension zero",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.02985v1",
+      "title": "Questions on the structure of random embeddings of $L(\\mathbb{F}_2)$",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.02269v2",
+      "title": "A Cohesive $\\infty$-Topos with a Quantum Modality from Finite-Dimensional $C^{*}$-Algebras",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.02115v1",
+      "title": "Error Bounds for a Diffusion Model-Based Drift Estimator",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2605.31128v1",
+      "title": "The classification of integral endotrivial complexes",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2605.29930v2",
+      "title": "Toward AI That Understands Self and Others: A World-Model Theory of Cognitive Diversity and Alignment",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2605.29450v1",
+      "title": "Protecting On-Device AI Inference: A Systematic Review of Attacks and Defence Mechanisms",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2605.28988v1",
+      "title": "Free Products of Banach Lattices",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2605.28299v2",
+      "title": "Classification Theory and the Construction of PAC Fields",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2605.26896v1",
+      "title": "Relating forcing relations",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2605.22071v1",
+      "title": "Duality theory for categorical theories",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2605.21634v1",
+      "title": "bioETH-PRS: Confidential Polygenic Risk Scoring without a Trusted Evaluator via Fully Homomorphic Encryption on a Programmable Blockchain",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2605.19542v1",
+      "title": "Linear Algebraic Method and the Erd\u0151s-Heilbronn Conjecture",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2605.19177v1",
+      "title": "A formula of counting divisors in integers rings: a generalization of the divisor function $d_0(n)$",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2605.17972v1",
+      "title": "Decay of weighted cusp counts for congruence subgroups of $SL_2$ over number fields",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2605.16910v1",
+      "title": "Tropical curves with parallel rays",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2605.16669v1",
+      "title": "On ultraproduct approximations and property (T) factors",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2605.15144v1",
+      "title": "Guises and Perspectives: An Intentional and Hyperintensional Sketch",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2605.14095v1",
+      "title": "The category of centralizer lattices of groups",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2605.12776v1",
+      "title": "Model theory and Connes' bicentralizer problem",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2605.11650v1",
+      "title": "Schur Products of Constacyclic Codes via the Constacyclic Discrete Fourier Transform",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2605.09563v1",
+      "title": "Yoshida algebra for groupoids",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2605.06533v1",
+      "title": "Relational Dualities and Bisimulation",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2605.05117v1",
+      "title": "On immanants of Cayley tables",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2605.03274v2",
+      "title": "Formalizing Singer Sidon Constructions and Sidon Set Infrastructure in Lean 4",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2605.00655v1",
+      "title": "Type Theory With Erasure",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2604.26187v1",
+      "title": "Special classes of functions",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2604.23997v2",
+      "title": "The Birational Invariance Of Fundamental Group Schemes",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2604.22052v1",
+      "title": "Turnstile Streaming Algorithms Might (Still) as Well Be Linear Sketches, for Polynomial-Length Streams",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2604.21678v1",
+      "title": "Model theory of class-sized logics",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2604.21292v1",
+      "title": "Large values in time series and additive combinatorics",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2604.20294v1",
+      "title": "Lattice-ordered algebras admitting a polynomial growth continuous function calculus",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2604.19546v3",
+      "title": "The Lefschetz Type Theorem For Fundamental Group Schemes",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2604.17374v1",
+      "title": "The generalized continuous model theory, Borel complexity and stability",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2604.15592v1",
+      "title": "Algebraic Geometry over Non-Algebraically Closed Fields -- A-Coherent Sheaves over a Ringed Space",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2604.13698v1",
+      "title": "Global dimension of dg algebras via compact silting objects",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2604.13642v1",
+      "title": "Lawler-Moore Speedups via Additive Combinatorics",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2604.12432v4",
+      "title": "On a new theory of models for formal mathematical systems",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2604.12212v2",
+      "title": "Free information geometry and the model theory of noncommutative stochastic processes",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2604.11020v1",
+      "title": "Inferring World Belief States in Dynamic Real-World Environments",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2604.10686v4",
+      "title": "Vector valued de Branges spaces, CNU contractions and functional models",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2604.10624v1",
+      "title": "Semiprojective Banach lattices",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2604.08724v1",
+      "title": "Subindices and subfactors of infinite groups and numbers",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2604.04666v1",
+      "title": "Quantum affine vertex algebra at root of unity",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2604.03979v1",
+      "title": "Stationary Distributions in Monotone Markov Models: Theory and Applications",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2604.01258v1",
+      "title": "RBF Kernel Parameter Formula for Data Classification Methods",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2604.00720v1",
+      "title": "Approximation of structures:local and global",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2603.29626v1",
+      "title": "Seymour-tight orientations",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2603.29528v1",
+      "title": "AKE principles for deeply ramified fields",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2603.27835v1",
+      "title": "Geometry of ample/lopsided sets",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2603.27736v1",
+      "title": "Universe Reduction for APSP: Equivalence of Three Fine-Grained Hypotheses",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2603.27710v2",
+      "title": "Galois representation of the product of two Drinfeld modules of generic characteristic",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2603.26616v1",
+      "title": "Ultrahomogeneity and $\u03c9$-categoricity of monounary algebras",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2603.23157v2",
+      "title": "The universal property of graded $KK^G$-theory",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2603.22795v1",
+      "title": "Exponential Separation of Quantum and Classical One-Way Numbers-on-Forehead Communication",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2603.22561v1",
+      "title": "AI Mental Models: Learned Intuition and Deliberation in a Bounded Neural Architecture",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2603.22256v1",
+      "title": "Entropy of affine permutations and universality of affine atomic lengths",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2603.22143v1",
+      "title": "A note on polynomial equidistribution and recurrence in finite characteristic",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2603.21292v1",
+      "title": "Parabolic distance in $\\mathbb F_q^2$: a sharp exponent and new results",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2603.20951v1",
+      "title": "Ultrapowers of determinacy models as iteration trees on HOD",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2603.20660v1",
+      "title": "Lagrangian classes in K-theory",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2603.17084v1",
+      "title": "On the model theory of the Free Factor Complex of rank 2",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2603.15048v2",
+      "title": "Homomorphisms of topological rings and change-of-scalar functors",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2603.11773v1",
+      "title": "A note on a very abstract chromatic number and extremal problems",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2603.06483v1",
+      "title": "Uniform sum-product phenomenon for algebraic groups and Bremner's conjecture",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2602.22081v2",
+      "title": "Multichannel Conflict-Avoiding Codes for Expanded Scenarios",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2602.19765v1",
+      "title": "Relevant maps and the algebraic skeleton of simplicial toric prevarieties",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2602.19168v1",
+      "title": "Structure of sets with small product sets in torsion-free groups, cyclic groups of prime orders and abelian groups",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2602.16199v1",
+      "title": "Dual partially harmonic tensors and quantized Schur--Weyl duality",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2602.14332v2",
+      "title": "2-dimensional Lawvere theories, commutativity, and higher Day convolution",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2602.12894v1",
+      "title": "Distance-based certification for leader election in meshed graphs and local recognition of their subclasses",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2602.12861v1",
+      "title": "Stone duality of Lawson compact algebraic L-domain",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2602.11943v2",
+      "title": "The Simplicial Cylinder DG Ring",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2602.11110v2",
+      "title": "The Base Change Of Fundamental Group Schemes",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2602.08390v1",
+      "title": "Nearly tight bound for rainbow clique subdivisions in properly edge-colored graphs and applications",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2602.07292v1",
+      "title": "The first 128 digits of an autoconvolution inequality",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2602.05990v1",
+      "title": "Categories graded by group homomorphisms",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2602.04049v1",
+      "title": "A categorical framework for cellular automata",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2602.02218v1",
+      "title": "The $\\infty$-category of $\\infty$-categories in simplicial type theory",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2601.21553v1",
+      "title": "Strassen's support functionals coincide with the quantum functionals",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2601.14465v2",
+      "title": "Avoiding configurations of small size in the square grid",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2601.05044v1",
+      "title": "An Invitation to \"Fine-grained Complexity of NP-Complete Problems\"",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2512.22835v1",
+      "title": "The Hilton-Milner type results of $(k, \\ell)$-sum-free sets in $\\mathbb F_p^n$",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2512.14529v1",
+      "title": "Low-codimensional Subvarieties Inside Dense Multilinear Varieties",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2512.08455v2",
+      "title": "Roth-type theorems in additive combinatroics",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2512.04081v1",
+      "title": "Additive relations in irrational powers",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2509.26156v2",
+      "title": "Rotation sets and axes in the fine curve graph for torus homeomorphisms",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2509.24034v1",
+      "title": "Generalized additive bases and difference bases for Cartesian product of finite abelian groups",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2509.22962v1",
+      "title": "Finding arithmetic progressions in dense sets of integers",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2509.19722v1",
+      "title": "Weighted uniform distribution of subpolynomial functions along primes and applications",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2509.04726v1",
+      "title": "An arithmetic measure of width for convex bodies",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2509.04717v2",
+      "title": "Classification of Finite Groups With Equal Left and Right Quotient Sets",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2509.02338v1",
+      "title": "Algorithmic Polynomial Freiman-Ruzsa Theorems",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.11782",
+      "title": "All simplices exhibit canonical Ramsey property",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.11695",
+      "title": "On two counterexamples in the geometry of numbers",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.11572",
+      "title": "Obstructions to smoothing orbicurves and Orbifold Hecke algebras",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.11331",
+      "title": "Higher degree obstructions to quasiconformal equivalence",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.11319",
+      "title": "A dual linear programming bound for sphere packing in dimension 36",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.10881",
+      "title": "The isomorphic section-projection problem for convex bodies",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.10769",
+      "title": "Sharp Poincar\u00e9 Interpolation Along Wasserstein Geodesics",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.10636",
+      "title": "Anisotropic isoperimetric double tilings of the plane",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.10373",
+      "title": "Dimension-free cotype for isotropic log-concave random polytope spaces",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.10104",
+      "title": "A uniform bound in the dimensional Brunn--Minkowski inequality for even log-concave measures",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.10022",
+      "title": "Computable functions as Reeb flows",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.09412",
+      "title": "Quantitative stability of the intersection body operator near the ball, and the dynamical origin of the two--dimensional degeneracy",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.09252",
+      "title": "Deformations and second-order rigidity of polytopes",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.08944",
+      "title": "Illuminating Primitive Polytopes",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.08869",
+      "title": "Inequalities for convex functions of random points inside and on the boundary of convex bodies",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.08622",
+      "title": "Deformed Hermitian-Yang-Mills equation on the manifold of full flags",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.08621",
+      "title": "The Rosenberg $ \\mathbb{S}^{1} $-Stability Conjecture for $ \u03c7(X) = 0 $",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.08612",
+      "title": "Point-dimension theory (part II): The point-cross dimension",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.08523",
+      "title": "Equigeodesic vectors for homogeneous Riemannian submersions",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.08338",
+      "title": "Rigidity in the planar Ulam floating body problem with perimetral densities $\u03c3=\\tfrac18,\\tfrac38$ under central symmetry",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.08325",
+      "title": "Geometric smoothing by the K\u00e4hler-Ricci Flow",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.08322",
+      "title": "A reverse Riesz estimate combined with a spectral gap implies a Poincar\u00e9 inequality",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.08217",
+      "title": "Spherically symmetric Finsler metrics satisfying the $\u03c3$T-condition",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.07809",
+      "title": "Separation profiles of hyperbolic planar and apex-minor-free graphs",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.07694",
+      "title": "Minimum Norm Interpolation via The Local Theory of Banach Spaces: The Role of Gaussianity",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.07599",
+      "title": "Regularity of Solutions to Monge-Amp\u00e8re Equations on Stein Spaces",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.07360",
+      "title": "On the generalised Lie derivative of (s)pinor fields",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.07306",
+      "title": "Wrench-Based Bayesian Pose Estimation via Matrix--Fisher Gaussian Inference",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.07285",
+      "title": "Noncompact Iwasawa factorization and translationally equivariant hyperbolic affine spheres",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.07149",
+      "title": "Applications of relative multisymplectic geometry",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.07134",
+      "title": "Naked Singularities beyond Spherical Symmetry: Singular Inner Cauchy Horizons for the Einstein-Scalar Field System",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.07059",
+      "title": "A solvmanifold with a left-invariant complex structure whose universal cover is not Stein",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.07057",
+      "title": "Hamiltonian reduction from particular integrals",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.06801",
+      "title": "Simplicial subdivision of simplices of arbitrary dimension in spaces of constant curvature with bounded quality",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.06345",
+      "title": "Comparison of K\u00e4hler quotients of torus actions",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.06041",
+      "title": "High-dimensional limits and extremizers for maximal functions associated with log-concave densities",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05986",
+      "title": "Symplectic billiards as Minkowski billiards",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05945",
+      "title": "On the mathematics table problem",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05923",
+      "title": "Triangulating Spun 2-Knot Complements",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05918",
+      "title": "Shifted Poisson unfoldings and quantum anomalies",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05826",
+      "title": "Rigidity of maps between configuration spaces",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05821",
+      "title": "On classification of Finslerian spaces with nontrivial concircular transformations",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05812",
+      "title": "Equivalent characterizations of John and uniform domains in doubling metric spaces",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05706",
+      "title": "Rigid ternary relations in finite-dimensional Hilbert-space Grassmannians",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05603",
+      "title": "Homology fiber bundles of varieties, that are not topological fiber bundles",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05575",
+      "title": "Virtual Jeffrey--Kirwan localisation",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05362",
+      "title": "Rerouting Curves on Surfaces",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05349",
+      "title": "The microscopic weighting on a metric space",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05304",
+      "title": "Quantitative stability in distribution for the Sobolev inequality under curvature dimension condition",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05283",
+      "title": "The Burau representation of the braid group is faithful for n = 4",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05255",
+      "title": "No-$(k+1)$-in-line problem for $k \\geqslant 3$",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05170",
+      "title": "Symplectically aspherical K\u00e4hler manifolds, scalar curvature, and the fundamental group",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05117",
+      "title": "On the metric projection onto a convex set: reverse H\u00f6lder inequalities and upper bounds",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05099",
+      "title": "The sharp asymptotic density of zero-sum-free spherical sets",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05036",
+      "title": "Coarse higher medians, symmetric spaces, and convex projective geometry",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05023",
+      "title": "Rigidity on compact surfaces through hyperbolic symmetries",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.04737",
+      "title": "Homotopy index polynomials for knotoids",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.04695",
+      "title": "On the Dax invariants of $S^2$-bundles over surfaces",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.04592",
+      "title": "On the Arc Length of a Supercircle and a Hypergeometric Formulation of $\u03c0$",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.04477",
+      "title": "Equivariant Grid Homology for Strongly Invertible Knots",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.04418",
+      "title": "Impossibility of a nontrivial Brunn--Minkowski inequality for higher Dirichlet eigenvalue",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.04039",
+      "title": "Algebra of the Infrared with Curve-Valued Potential",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.03843",
+      "title": "Family Floer SYZ mirror algorithm for the Grassmannian $Gr(2,4)$",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.03815",
+      "title": "A simplex-based measure of symmetry",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.03649",
+      "title": "Convex hypersurfaces and robust heterodimensional dynamics",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.03584",
+      "title": "Non-universality of sumsets of lacunary sequences and arbitrary sets",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.03582",
+      "title": "L_p-Rogers--Shephard type inequalities for L_p-zonoids and symmetric bodies",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.03497",
+      "title": "Isolated Hypersurface Singularities May Be Stably Degenerate",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.03230",
+      "title": "A Finitary Approach to Coarse Separation of Euclidean spaces",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.03139",
+      "title": "Two-boost problem for the rotating Kepler problem",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.03127",
+      "title": "Preimage Regions of Symmetric Separable Maps on the Simplex: Convexity and Barycentric Star-Shapedness",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.03041",
+      "title": "Disproof of the tree product conjecture via the Heisenberg group",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.03019",
+      "title": "Conformally symplectic topology from a dynamical viewpoint",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.02769",
+      "title": "Homotopy minimal periods for fiber maps on $S^{1}$-bundles over $S^{1}$",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.02434",
+      "title": "A Topological Formula for Potts Lattice Gauge Theory Correlations",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.02060",
+      "title": "Equivariant twisted $R$-algebras via Thom spectra",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.01889",
+      "title": "Reduced characteristic number criteria for equivariant bordism of $T^k$- and $(\\mathbb{Z}_2)^k$-manifolds with isolated fixed points",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.01826",
+      "title": "Fundamental racks of braid spaces of complex reflection groups",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.01482",
+      "title": "A homotopy coherent Pontryagin-Thom isomorphism",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.01371",
+      "title": "Categorical structures of Kuranishi spaces with $L_{\\infty}[1]$-algebras",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.01219",
+      "title": "Multiplicity of closed Reeb orbits on contact manifolds with periodic equivariant symplectic homology",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.01028",
+      "title": "$A_3$-formality for pro-2 Demushkin groups",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.01024",
+      "title": "Madelung hydrodynamics and Poisson geometry of wave functions",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.00737",
+      "title": "Polar Coordinates and Fundamental Group",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.00441",
+      "title": "Tall Complexity One Spaces with k-colorable Skeleton",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.00236",
+      "title": "Homology manifolds via six functor formalisms",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.31674",
+      "title": "Rabinowitz Floer homology for Legendrian submanifolds in prequantization bundles",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.30965",
+      "title": "Homotopies in Batalin-Vilkovisky Formalism",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.29317",
+      "title": "Three-Dimensional Real Affine Lie Groups",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.28985",
+      "title": "Homotopy models for $L_{\\infty}[1]$-algebras in higher degrees",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.28768",
+      "title": "Finiteness and boundedness of positive monotone Hamiltonian GKM$_3$ spaces",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.28767",
+      "title": "Infinite-Time Singularities with Vanishing Mean Curvature for Lagrangian Mean Curvature Flow in Gibbons--Hawking Spaces",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.28316",
+      "title": "Infinite ECH Capacities and Anosov Flows",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.28265",
+      "title": "Some geometric perspectives on Contact Hamiltonian Dynamics",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.28256",
+      "title": "The quantum connection and its mod p reduction",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.27953",
+      "title": "An Abstract Perturbation Theorem for Compact Moduli Spaces",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.01264",
+      "title": "New constructions relating Real and Complex Contact Structure",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.26843",
+      "title": "On Periodic Geodesics of Half-Lie Groups",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.24951",
+      "title": "Holomorphic Hulls for Compact 3-Manifolds",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.24662",
+      "title": "A symmetry reduction of the Painlev\u00e9 IV hierarchy to the Flaschka-Newell Painlev\u00e9 II hierarchy",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.24503",
+      "title": "Asymptotics for Toeplitz operators with symbol an indicator function",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.24363",
+      "title": "$p$-adic integrable systems: from biquadratic equations to local models",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.24249",
+      "title": "Brane quantization of $A_n$-resolutions",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.23184",
+      "title": "Hyperbolic solitons on trans-Sasakian space forms and its submanifolds",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.21909",
+      "title": "Heat Kernel and Resurgence",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.21039",
+      "title": "Taut polynomials from finite quotients of fibered hyperbolic 3-manifold groups",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.19858",
+      "title": "Spectral Positive Mass Theorem for Asymptotically Hyperbolic 3-manifolds with Toroidal Infinity",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.19567",
+      "title": "Geometric Rigidity via Harmonic Twisted Spinors",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.18740",
+      "title": "Bottom of the spectrum of complete noncompact K\u00e4hler manifolds",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.18095",
+      "title": "Large primordial non-Gaussianity from transient turns in Higgs-$R^2$ inflation",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.18086",
+      "title": "Branched Covers of Hyperbolic Groups",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.18034",
+      "title": "Quasimorphisms and Poincar\u00e9 duality in dimension 3",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.17335",
+      "title": "Mazur's knot and the Octahedron",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.16282",
+      "title": "Geometry-Driven Islanding Detection and Fault Classification for Grid-Forming Inverters: A Normally Hyperbolic Invariant Manifold Framework with Physics-Derived Thresholds",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.15104",
+      "title": "Text-Driven Fusion for Infrared and Visible Images: Achieving Image Scene Adaptation on Hyperbolic Space",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.14934",
+      "title": "Separable Neural Architectures as Physical World Models: from Mathematical Theory to Applications",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.14889",
+      "title": "Quasimorphisms and Pseudo-Anosov flows",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.14429",
+      "title": "Holomorphic families of knots",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.12912",
+      "title": "Birkhoff conjecture and finite energy foliations in Hill's lunar problem",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2604.00448",
+      "title": "Morse diagrams, Murasugi sums, and the mapping class group",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2603.29397",
+      "title": "The Andersen-Masbaum-Ueno conjecture for the derived subgroup of the Johnson kernel",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2603.28694",
+      "title": "Measurable boundary maps and Patterson--Sullivan measures for non-Borel Anosov groups on the Furstenberg boundary",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2603.25714",
+      "title": "Spectrum of SL(2,R)-characters: the once-punctured torus case",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2603.25586",
+      "title": "An explicit presentation for asymptotically rigid mapping class groups",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2603.21560",
+      "title": "The non-peripheral curve graph and divergence in big mapping class groups",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2603.14582",
+      "title": "Recognising conjugacy classes of Dehn twists on $\\mathbb D_3$",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2603.14338",
+      "title": "Fixed point theorem for cluster modular groups",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2603.12484",
+      "title": "Mapping class group action on the cohomology of the $\\mathrm{SL}_n$ character variety",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2603.04096",
+      "title": "Strong Approximation for the Character Variety of the Four-Times Punctured Sphere",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2603.02848",
+      "title": "Anabelian perspectives in Galois-Teichm\u00fcller theory",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2602.24179",
+      "title": "When loxodromics are pseudo-Anosovs on witnesses",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2602.23275",
+      "title": "Cusped spaces for hierarchically hyperbolic groups, and applications to Dehn filling quotients",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2602.22393",
+      "title": "Hatcher-Thurston complex for surfaces with non-planar ends",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2501.03900",
+      "title": "Realising VCD for untwisted automorphism groups of RAAGs",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2501.01688",
+      "title": "Explicit polynomial bounds on Dehn functions of subgroups of hyperbolic groups",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2412.08248",
+      "title": "Product separability for special cube complexes",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2411.06242",
+      "title": "Spatial Cube Complexes",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2410.16390",
+      "title": "Asphericity of cubical presentations: the general case",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2409.14290",
+      "title": "On the boundary criterion for relative cubulation: multi-ended parabolics",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2409.09133",
+      "title": "Markov chains, CAT(0) cube complexes, and enumeration: monotone paths in a strip mix slowly",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2409.08663",
+      "title": "Factor system for graphs and combinatorial HHS",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2408.10105",
+      "title": "Topological and Dynamic Properties of the Sublinearly Morse Boundary and the Quasi-Redirecting Boundary",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2408.09091",
+      "title": "On the Girth of Groups acting on CAT(0) cube complexes",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2407.17034",
+      "title": "A vanishing criterion for cup products and Massey products in bounded cohomology",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2407.09275",
+      "title": "Coarse obstructions to cocompact cubulation",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2406.02121",
+      "title": "Surface groups among cubulated hyperbolic and one-relator groups",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2406.09432",
+      "title": "Acylindrical hyperbolicity and the centers of Artin groups that are not free of infinity",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11691",
+      "title": "On the Hilbert depth of a special class of squarefree monomial ideals",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11657",
+      "title": "Trajectory Planning and Certification for 3-DOF Robot Manipulators Using Real Quantifier Elimination Based on Comprehensive Gr\u00f6bner Systems",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11381",
+      "title": "Common extensions of valuations to rational function fields",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11259",
+      "title": "Collinearly complete sets and finite subgroups from configurations of skew $n$-planes in $\\mathbb P^{2n+1}_K$",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11223",
+      "title": "Extending valuations of local domains to complete local domains without changing the value group",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11219",
+      "title": "Integral closure for (additively idempotent) semirings",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11093",
+      "title": "Existence of a far-flung Gorenstein numerical semigroup attaining the Herzog--Kumashiro--Stamate bound",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10976",
+      "title": "Graded n-Absorbing Ideals and their Combinatorial Structure",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10778",
+      "title": "The Arithmetic of Semirings Part I: Ideals",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10691",
+      "title": "Geometrically vertex decomposable star configurations",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10639",
+      "title": "Characteristic Independence of Betti Numbers of Monomial Ideals in Five Variables",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10492",
+      "title": "Polynomials over idempotent semifields",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10393",
+      "title": "Buchsbaum modules and parameter ideals under flat extensions",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10300",
+      "title": "Homological invariants of edge ideals of the multiple extended complete split-like graphs",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10178",
+      "title": "Factorizations in rational monogenic semidomains",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.09340",
+      "title": "On the Jung-van der Kulk decomposition into Pascal finite factors",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.09028",
+      "title": "On $F$-thresholds of differential power filtrations",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.08995",
+      "title": "$S_r$ properties of generalized Cohen--Macaulay modules and rings having liftable local cohomology via Serre depth",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.08965",
+      "title": "Factoring maps to big Cohen-Macaulay algebras through blowups",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.08871",
+      "title": "Derived Kunz and Radu--Andr\u00e9 Theorems",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.07672",
+      "title": "A category of locally convex Lie algebroids",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.07458",
+      "title": "Analytic Spread via Linear Matroids",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06926",
+      "title": "Harish-Chandra images of orthosymplectic Sugawara operators and Casimir elements",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06899",
+      "title": "Covers of Bruhat-Tits trees",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06749",
+      "title": "A field-independent filtration of plethystic modules for $\\mathrm{SL}_2(\\mathbb{F})$ that categorifies a product rule for the Cartan subalgebra of $\\mathcal{U}_q(\\mathfrak{sl}_2)$",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06710",
+      "title": "Honeycombs and Sums of Hermitian Matrices, Revisited",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06635",
+      "title": "Schreyer resolution of modules over formal power series",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06543",
+      "title": "Inner Products and Banach Algebra structures on Bicomplex Numbers and Their Associated Spaces",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06512",
+      "title": "Commutativity of nilpotent cohomological Hall algebras of $\\mathbf{A}^2$",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06490",
+      "title": "Convergent realizations of Lie subalgebras",
+      "content_topic": "geometric"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06487",
+      "title": "Dual imaginary vectors, tight monomial cones and quantum Frobenius morphism",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06397",
+      "title": "Fast Rational Univariate Representation via Gaussian Elimination",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06394",
+      "title": "Purity of extremal rays of Betti cones",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06372",
+      "title": "Groebner.jl: Fast Gr\u00f6bner Tracing in Julia",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06164",
+      "title": "Brauer groups of resolved quiver moduli via gerbes",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.05556",
+      "title": "Graded families of ideals and convex regions",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.05213",
+      "title": "Integer Coefficient Power Series with Prescribed Zero Sets",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.05160",
+      "title": "Algebraic Modelings of the Supersingular Isogeny Problem",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.05021",
+      "title": "Semigroup approach to admissible representations of the infinite symmetric group",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.04964",
+      "title": "A Join-Matching Theorem for Squarefree Powers of Edge Ideals, with Applications to Wheel and Related Graphs",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.04933",
+      "title": "Theta correspondence as a C*-correspondence",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.04931",
+      "title": "A note on prismatic sites for p-quasisyntomic rings",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.04843",
+      "title": "Localization and Affine Schemes over $\\mathbb{F}_1$",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.04831",
+      "title": "On two questions of Qi on saturated filtrations",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.04793",
+      "title": "A family of generalized Gelfand pairs attached to $3$-step nilpotent Lie groups",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.04480",
+      "title": "Category $\\mathcal{O}$ for truncated shifted Yangians and the bi-infinite Bott-Samelson variety",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.04340",
+      "title": "On the number of Frobenius periodic vector bundles on elliptic curves",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.04231",
+      "title": "Ordered alternating paths and the depth of symbolic powers of cover ideals of graphs",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.03500",
+      "title": "Standard Veronese degree and star configurations",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.03475",
+      "title": "On Landweber`s unique factorization problem",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.01467",
+      "title": "Pure infiniteness and primary factorisation",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.01411",
+      "title": "Homomorphisms from topological groups to inverse limits",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.01195",
+      "title": "Hopf algebraic homogeneous spaces interpreted rationally: the Abe-Kanno theorem",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.01110",
+      "title": "Definability of Functional Properties in the Basic Modal-Temporal Language over Ordered Frames",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.01068",
+      "title": "New results about Q and $\u0394$-spaces",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.01066",
+      "title": "Double Transposed Poisson Algebras",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.01054",
+      "title": "Residual finite-dimensionality of ultragraph algebras via branching systems",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.00792",
+      "title": "On a new class of high-corank Kac-Moody algebras",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.00757",
+      "title": "A generalization of a representation of the integers modulo $p$, for the purpose of occasionally establishing the unsolvability of diophantine inequalities",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.00404",
+      "title": "Sums of units in finite rings and applications to Cayley graphs",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.00393",
+      "title": "Local (Anti-)Superderivations on Nilpotent Lie Superalgebras",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.00367",
+      "title": "The continuous oriented chromatic number of directed Schreier graphs of $\\mathbb Z^2$-shift actions",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.00359",
+      "title": "The Equivalence Problem for Generalized Airy Operators",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.00323",
+      "title": "Solvability and nilpotency of transposed Novikov-Poisson algebras",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.01271",
+      "title": "On Strong Structural Completeness of Varieties and Quasivarieties",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.00146",
+      "title": "Fukaya categories of Coulomb branches as unique deformations",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.32031",
+      "title": "Intersection theorems over DG-rings revisited",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.31885",
+      "title": "Halo Semantics for Modal Logic",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.31883",
+      "title": "Possibly Relevant Translations",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.31871",
+      "title": "On Interpretations of Normal Modal Logics",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.31870",
+      "title": "Intuitionistic Monotone Modal Logic: Proof Theory and Semantics",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.31862",
+      "title": "Modal Measurable Logics via a Modal Loomis-Sikorski Representation Theorem",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.31854",
+      "title": "Coequivalence Relations and Descent in Modal Logic",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.31853",
+      "title": "Conditionals and Modalities in Constructive Quantum Logics",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.31788",
+      "title": "On a family of liftings of the Jordan plane",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.31766",
+      "title": "Embedding a graded matrix algebra into an elementary graded",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.31747",
+      "title": "Random generation of the special linear Lie algebra over finite fields",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.31514",
+      "title": "MINT: Dynamic-Precision CNN Inference with MSDF Digit-Serial Arithmetic on FPGA",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.30254",
+      "title": "Computads with invertible generators for weak \u03c9-categories",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.30198",
+      "title": "Steinberg Algebras of Ample Semicategories and their Boolean-Cartan Restriction Semigroups",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.30165",
+      "title": "Braided cogroupoids",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.29728",
+      "title": "Ideal $n$-cotorsion pairs in Frobenius extriangulated categories",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.29373",
+      "title": "An Oriented Street--Roberts Conjecture",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.28984",
+      "title": "Compositional Dynamics in Learning and Mechanics",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.28736",
+      "title": "The points of canonical extensions of doctrines",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.28691",
+      "title": "A general framework for the faithful pointfree representation of $T_0$-spaces",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.28291",
+      "title": "Composing Quantum Instruments",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.27805",
+      "title": "The quantum instrument monad",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.27737",
+      "title": "Reduction of Probabilistic Chemical Reaction Networks",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.27574",
+      "title": "The Gray Product of $(\\infty, n)$-Categories via Lax Grids",
+      "content_topic": "algebraic"
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.26755",
+      "title": "On categories of monads and comonads in double categories",
+      "content_topic": "algebraic"
+    }
+  ],
+  "contemporary_meta": {
+    "n_added": 238,
+    "year_from": "2026"
+  },
+  "stats": {
+    "n_geometric": 430,
+    "n_algebraic": 430,
+    "n_total": 860
+  }
+}

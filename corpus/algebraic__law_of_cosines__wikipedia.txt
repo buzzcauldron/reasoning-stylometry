@@ -1,0 +1,16 @@
+Consider a triangle with sides of length a, b, c, where θ is the measurement of the angle opposite the side of length c. This triangle can be placed on the Cartesian coordinate system with side a aligned along the x axis and angle θ placed at the origin, by plotting the components of the three points of the triangle:
+
+A = (b cos θ, b sin θ), B = (a, 0), and C = (0, 0).
+
+By the distance formula,
+
+c = √((a − b cos θ)² + (0 − b sin θ)²).
+
+Squaring both sides and simplifying,
+
+c² = (a − b cos θ)² + (−b sin θ)²
+   = a² − 2ab cos θ + b² cos²θ + b² sin²θ
+   = a² + b²(sin²θ + cos²θ) − 2ab cos θ
+   = a² + b² − 2ab cos θ.
+
+An advantage of this proof is that it does not require the consideration of separate cases depending on whether the angle γ is acute, right, or obtuse. However, the cases could themselves be combined by using concepts of signed lengths and areas and a concept of signed cosine, without needing a full Cartesian coordinate system.

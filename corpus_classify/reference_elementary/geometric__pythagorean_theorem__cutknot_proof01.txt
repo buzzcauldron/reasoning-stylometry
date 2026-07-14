@@ -1,0 +1,15 @@
+This is probably the most famous of all proofs of the Pythagorean proposition. It's the first of Euclid's two proofs (I.47). The underlying configuration became known under a variety of names, the Bride's Chair likely being the most popular.
+
+The proof has been illustrated by an award winning Java applet written by Jim Morey. I include it on a separate page with Jim's kind permission. The proof below is a somewhat shortened version of the original Euclidean proof as it appears in Sir Thomas Heath's translation .
+
+First of all, ΔABF = ΔAEC by SAS . This is because, AE = AB , AF = AC, and
+
+∠BAF = ∠BAC + ∠CAF = ∠CAB + ∠BAE = ∠CAE.
+
+ΔABF has base AF and the altitude from B equal to AC. Its area therefore equals half that of square on the side AC. On the other hand, ΔAEC has AE and the altitude from C equal to AM, where M is the point of intersection of AB with the line CL parallel to AE. Thus the area of ΔAEC equals half that of the rectangle AELM. Which says that the area AC² of the square on side AC equals the area of the rectangle AELM.
+
+Similarly, the area BC² of the square on side BC equals that of rectangle BMLD. Finally, the two rectangles AELM and BMLD make up the square on the hypotenuse AB.
+
+The configuration at hand admits numerous variations. B. F. Yanney and J. A. Calderhead ( Am Math Monthly , v.4, n 6/7, (1987), 168-170 published several proofs based on the following diagrams
+
+Some properties of this configuration has been proved on the Bride's Chair and others at the special Properties of the Figures in Euclid I.47 page.

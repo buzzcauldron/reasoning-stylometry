@@ -1,0 +1,4 @@
+The same pieces as in proof #26 may be rearranged in yet another manner.
+This dissection is often attributed to the 17 th century Dutch mathematician Frans van Schooten. [ Frederickson , p. 35] considers it as a hinged variant of one by ibn Qurra, see the note in parentheses following proof #2 . Dr. France Dacar from Slovenia has pointed out that this same diagram is easily explained with a tessellation in proof #15 . As a matter of fact, it may be better explained by a different tessellation . (I thank Douglas Rogers for setting this straight for me.)
+
+The configuration at hand admits numerous variations. B. F. Yanney and J. A. Calderhead ( Am Math Monthly , v. 6, n. 2 (1899), 33-34) published several proofs based on the following diagrams (multiple proofs per diagram at that)

@@ -1,0 +1,20 @@
+The standard way to derive the quadratic formula is to apply the method of completing the square to the generic quadratic equation ax² + bx + c = 0. The idea is to transform the equation into the form (x + k)² = s for some expressions k and s written in terms of the coefficients, take the square root of both sides, and then isolate x.
+
+We start by dividing the equation by the quadratic coefficient a, which is allowed because a is non-zero. Afterwards, we subtract the constant term c/a to isolate it on the right-hand side:
+
+ax² + bx + c = 0
+x² + (b/a)x + c/a = 0
+x² + (b/a)x = −c/a.
+
+The left-hand side is now of the form x² + 2kx, and we can complete the square by adding a constant k² to obtain a squared binomial x² + 2kx + k² = (x + k)². In this example we add (b/2a)² to both sides so that the left-hand side can be factored:
+
+x² + 2(b/2a)x + (b/2a)² = −c/a + (b/2a)²
+(x + b/2a)² = (b² − 4ac)/(4a²).
+
+Because the left-hand side is now a perfect square, we can easily take the square root of both sides:
+
+x + b/2a = ±√(b² − 4ac)/(2a).
+
+Finally, subtracting b/2a from both sides to isolate x produces the quadratic formula:
+
+x = (−b ± √(b² − 4ac)) / (2a).

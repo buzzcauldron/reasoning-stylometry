@@ -1,0 +1,11 @@
+For positive a and b, (a + b)/2 ≥ √(ab), with equality if and only if a = b.
+
+For a proof, assume a > b and construct a right triangle with hypotenuse (a + b)/2 and one side equal to (a − b)/2. From the Pythagorean theorem, the remaining side will equal √(ab). Since, in a right triangle, the hypotenuse is the largest side, the inequality has been proved in the case a > b. It obviously turns into equality when a = b.
+
+One may argue that the proof followed from an algebraic identity,
+
+(a + b)² − (a − b)² = 4ab.
+
+In that case, the Pythagorean theorem furnishes an intuitive geometric illustration: just draw two touching circles with radii a/2 and b/2.
+
+(a + b)/2 is known as the arithmetic mean of the numbers a and b; √(ab) is their geometric mean, also known as the mean proportional, because if k = √(ab) then a/k = k/b and vice versa.

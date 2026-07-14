@@ -1,0 +1,13 @@
+(B. F. Yanney and J. A. Calderhead, Am Math Monthly , v.3, n. 12 (1896), 299-300, #XVIII)
+
+The idea is the same as before ( proof #59 ), but now the circle has the radius b, the length of the longer leg. Having the sides produced as in the diagram, we get
+
+AB·BK = BJ·BF,
+
+or
+
+c·BK = (b - a)(b + a).
+
+BK, which is AK - c, can be found from the similarity of triangles ABC and AKH: AK = 2b²/c.
+
+Note that, similar to the previous proof, this one, too, does not work in case of the isosceles triangle.

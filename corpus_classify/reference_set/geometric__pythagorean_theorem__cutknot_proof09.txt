@@ -1,0 +1,16 @@
+Another proof stems from a rearrangement of rigid pieces, much like proof #2 . It makes the algebraic part of proof #4 completely redundant. There is nothing much one can add to the two pictures.
+
+(My sincere thanks go to Monty Phister for the kind permission to use the graphics.)
+
+There is an interactive simulation to toy with. And another one that clearly shows its relation to proofs #24 or #69 .
+
+Loomis (pp. 49-50) mentions that the proof "was devised by Maurice Laisnez, a high school boy, in the Junior-Senior High School of South Bend, Ind., and sent to me, May 16, 1939, by his class teacher, Wilson Thornton."
+
+The proof has been published by Rufus Isaac in Mathematics Magazine , Vol. 48 (1975), p. 198.
+
+A slightly different rearragement leads to a hinged dissection illustrated by a Java applet .
+
+R. B. Nelsen reproduces the proof with a remark "based on the one from Zhou bi suan jing , a Chinese document dating from approximately 200 BC." Sir Thomas L. Heath mentions it in his commentary (1908) on Euclid I.47 without attribution but with a reference to two other contemporary commentators.
+
+Professor Xiaolin Zhong of UCLA came up with a version packed into a single square. "The proof is obvious by simply moving
+$\Delta ABH$ and $\Delta BCD$ into $\Delta HGF$ and $\Delta FED,$ respectively."

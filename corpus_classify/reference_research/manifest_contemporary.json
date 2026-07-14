@@ -1,0 +1,5393 @@
+{
+  "version": "1.0",
+  "description": "Contemporary arXiv papers keyword-tagged for geometric/algebraic style.",
+  "year_from": 2015,
+  "year_to": 2026,
+  "sources": [
+    {
+      "style": "geometric",
+      "arxiv": "2607.11782",
+      "title": "All simplices exhibit canonical Ramsey property",
+      "content_topic": "geometric",
+      "published": "2026-07-13",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 2.4,
+      "keyword_score_alg": 1.6,
+      "keyword_margin": 0.8,
+      "keyword_hits_geo": [
+        "simplex"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.CO",
+        "math.CO",
+        "math.MG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.11695",
+      "title": "On two counterexamples in the geometry of numbers",
+      "content_topic": "geometric",
+      "published": "2026-07-13",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 2.9,
+      "keyword_score_alg": 0.8,
+      "keyword_margin": 2.1,
+      "keyword_hits_geo": [
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "lattice"
+      ],
+      "categories": [
+        "math.MG",
+        "math.MG",
+        "math.SP"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.11572",
+      "title": "Obstructions to smoothing orbicurves and Orbifold Hecke algebras",
+      "content_topic": "geometric",
+      "published": "2026-07-13",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 3.0,
+      "keyword_score_alg": 2.7,
+      "keyword_margin": 0.3,
+      "keyword_hits_geo": [
+        "manifold",
+        "orbifold"
+      ],
+      "keyword_hits_alg": [
+        "category",
+        "morphism"
+      ],
+      "categories": [
+        "math.SG",
+        "math.SG",
+        "math.QA"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.11331",
+      "title": "Higher degree obstructions to quasiconformal equivalence",
+      "content_topic": "geometric",
+      "published": "2026-07-13",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 5.7,
+      "keyword_score_alg": 1.2,
+      "keyword_margin": 4.5,
+      "keyword_hits_geo": [
+        "riemannian",
+        "manifold"
+      ],
+      "keyword_hits_alg": [
+        "category"
+      ],
+      "categories": [
+        "math.MG",
+        "math.MG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.11319",
+      "title": "A dual linear programming bound for sphere packing in dimension 36",
+      "content_topic": "geometric",
+      "published": "2026-07-13",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 2.9,
+      "keyword_score_alg": 1.8,
+      "keyword_margin": 1.1,
+      "keyword_hits_geo": [
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "logic"
+      ],
+      "categories": [
+        "math.MG",
+        "math.MG",
+        "math.NT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.10881",
+      "title": "The isomorphic section-projection problem for convex bodies",
+      "content_topic": "geometric",
+      "published": "2026-07-12",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 2.4,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 2.4,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.MG",
+        "math.MG",
+        "math.CA"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.10769",
+      "title": "Sharp Poincar\u00e9 Interpolation Along Wasserstein Geodesics",
+      "content_topic": "geometric",
+      "published": "2026-07-12",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 5.0,
+      "keyword_score_alg": 1.4,
+      "keyword_margin": 3.6,
+      "keyword_hits_geo": [
+        "geodesic",
+        "curvature"
+      ],
+      "keyword_hits_alg": [
+        "character",
+        "logic"
+      ],
+      "categories": [
+        "math.PR",
+        "math.PR",
+        "math.FA",
+        "math.MG",
+        "math.SP"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.10636",
+      "title": "Anisotropic isoperimetric double tilings of the plane",
+      "content_topic": "algebraic",
+      "published": "2026-07-12",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 1.2,
+      "keyword_score_alg": 1.6,
+      "keyword_margin": -0.4,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "ring",
+        "lattice"
+      ],
+      "categories": [
+        "math.AP",
+        "math.AP",
+        "math.MG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.10373",
+      "title": "Dimension-free cotype for isotropic log-concave random polytope spaces",
+      "content_topic": "geometric",
+      "published": "2026-07-11",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 1.7,
+      "keyword_score_alg": 1.2,
+      "keyword_margin": 0.5,
+      "keyword_hits_geo": [
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "scheme"
+      ],
+      "categories": [
+        "math.FA",
+        "math.FA",
+        "math.MG",
+        "math.PR"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.10104",
+      "title": "A uniform bound in the dimensional Brunn--Minkowski inequality for even log-concave measures",
+      "content_topic": "geometric",
+      "published": "2026-07-11",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 2.9,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 2.9,
+      "keyword_hits_geo": [
+        "dimension"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.MG",
+        "math.MG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.10022",
+      "title": "Computable functions as Reeb flows",
+      "content_topic": "geometric",
+      "published": "2026-07-10",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 1.5,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 1.5,
+      "keyword_hits_geo": [
+        "manifold"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.SG",
+        "math.SG",
+        "cs.CC",
+        "math.DS"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.09412",
+      "title": "Quantitative stability of the intersection body operator near the ball, and the dynamical origin of the two--dimensional degeneracy",
+      "content_topic": "geometric",
+      "published": "2026-07-10",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 4.4,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 4.4,
+      "keyword_hits_geo": [
+        "manifold",
+        "dimension"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.MG",
+        "math.MG",
+        "math.DS"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.09252",
+      "title": "Deformations and second-order rigidity of polytopes",
+      "content_topic": "algebraic",
+      "published": "2026-07-10",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 1.7,
+      "keyword_score_alg": 2.6,
+      "keyword_margin": -0.9,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.CO",
+        "math.CO",
+        "math.AG",
+        "math.MG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.08944",
+      "title": "Illuminating Primitive Polytopes",
+      "content_topic": "geometric",
+      "published": "2026-07-09",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 2.9,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 2.9,
+      "keyword_hits_geo": [
+        "dimension"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.MG",
+        "math.MG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.08869",
+      "title": "Inequalities for convex functions of random points inside and on the boundary of convex bodies",
+      "content_topic": "geometric",
+      "published": "2026-07-09",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 1.8,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 1.8,
+      "keyword_hits_geo": [
+        "boundary"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.PR",
+        "math.PR",
+        "math.MG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.08622",
+      "title": "Deformed Hermitian-Yang-Mills equation on the manifold of full flags",
+      "content_topic": "geometric",
+      "published": "2026-07-09",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 4.5,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 4.5,
+      "keyword_hits_geo": [
+        "manifold"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.DG",
+        "math.DG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.08621",
+      "title": "The Rosenberg $ \\mathbb{S}^{1} $-Stability Conjecture for $ \u03c7(X) = 0 $",
+      "content_topic": "geometric",
+      "published": "2026-07-09",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 8.1,
+      "keyword_score_alg": 0.6,
+      "keyword_margin": 7.5,
+      "keyword_hits_geo": [
+        "curvature",
+        "riemannian",
+        "manifold"
+      ],
+      "keyword_hits_alg": [
+        "character"
+      ],
+      "categories": [
+        "math.DG",
+        "math.DG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.08612",
+      "title": "Point-dimension theory (part II): The point-cross dimension",
+      "content_topic": "geometric",
+      "published": "2026-07-09",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 2.9,
+      "keyword_score_alg": 0.8,
+      "keyword_margin": 2.1,
+      "keyword_hits_geo": [
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "ring"
+      ],
+      "categories": [
+        "math.MG",
+        "math.MG",
+        "math.CA",
+        "math.FA",
+        "math.GN"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.08523",
+      "title": "Equigeodesic vectors for homogeneous Riemannian submersions",
+      "content_topic": "geometric",
+      "published": "2026-07-09",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 9.3,
+      "keyword_score_alg": 0.6,
+      "keyword_margin": 8.7,
+      "keyword_hits_geo": [
+        "geodesic",
+        "riemannian",
+        "manifold",
+        "fibration"
+      ],
+      "keyword_hits_alg": [
+        "character"
+      ],
+      "categories": [
+        "math.DG",
+        "math.DG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.08338",
+      "title": "Rigidity in the planar Ulam floating body problem with perimetral densities $\u03c3=\\tfrac18,\\tfrac38$ under central symmetry",
+      "content_topic": "geometric",
+      "published": "2026-07-09",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 3.0,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 3.0,
+      "keyword_hits_geo": [
+        "boundary"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.MG",
+        "math.MG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.08325",
+      "title": "Geometric smoothing by the K\u00e4hler-Ricci Flow",
+      "content_topic": "geometric",
+      "published": "2026-07-09",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 5.0,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 5.0,
+      "keyword_hits_geo": [
+        "manifold",
+        "dimension"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.DG",
+        "math.DG",
+        "math.AP",
+        "math.CV"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.08322",
+      "title": "A reverse Riesz estimate combined with a spectral gap implies a Poincar\u00e9 inequality",
+      "content_topic": "geometric",
+      "published": "2026-07-09",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 4.8,
+      "keyword_score_alg": 1.5,
+      "keyword_margin": 3.3,
+      "keyword_hits_geo": [
+        "riemannian",
+        "manifold"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.FA",
+        "math.FA",
+        "math.DG",
+        "math.OA"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.08217",
+      "title": "Spherically symmetric Finsler metrics satisfying the $\u03c3$T-condition",
+      "content_topic": "geometric",
+      "published": "2026-07-09",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 3.0,
+      "keyword_score_alg": 1.8,
+      "keyword_margin": 1.2,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "category",
+        "character"
+      ],
+      "categories": [
+        "math.DG",
+        "math.DG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.07809",
+      "title": "Separation profiles of hyperbolic planar and apex-minor-free graphs",
+      "content_topic": "geometric",
+      "published": "2026-07-08",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 3.0,
+      "keyword_score_alg": 2.4,
+      "keyword_margin": 0.6,
+      "keyword_hits_geo": [
+        "hyperbolic"
+      ],
+      "keyword_hits_alg": [
+        "ring"
+      ],
+      "categories": [
+        "math.CO",
+        "math.CO",
+        "math.MG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.07694",
+      "title": "Minimum Norm Interpolation via The Local Theory of Banach Spaces: The Role of Gaussianity",
+      "content_topic": "geometric",
+      "published": "2026-07-08",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 1.7,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 1.7,
+      "keyword_hits_geo": [
+        "dimension"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.ST",
+        "math.ST",
+        "math.MG",
+        "math.PR"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.07599",
+      "title": "Regularity of Solutions to Monge-Amp\u00e8re Equations on Stein Spaces",
+      "content_topic": "geometric",
+      "published": "2026-07-08",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 2.1,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 2.1,
+      "keyword_hits_geo": [
+        "boundary"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.CV",
+        "math.CV",
+        "math.AP",
+        "math.DG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.07360",
+      "title": "On the generalised Lie derivative of (s)pinor fields",
+      "content_topic": "geometric",
+      "published": "2026-07-08",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 3.0,
+      "keyword_score_alg": 1.5,
+      "keyword_margin": 1.5,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "morphism"
+      ],
+      "categories": [
+        "math.DG",
+        "math.DG",
+        "hep-th",
+        "math-ph"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.07306",
+      "title": "Wrench-Based Bayesian Pose Estimation via Matrix--Fisher Gaussian Inference",
+      "content_topic": "geometric",
+      "published": "2026-07-08",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 2.4,
+      "keyword_score_alg": 1.4,
+      "keyword_margin": 1.0,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "ring",
+        "character"
+      ],
+      "categories": [
+        "math.MG",
+        "math.MG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.07285",
+      "title": "Noncompact Iwasawa factorization and translationally equivariant hyperbolic affine spheres",
+      "content_topic": "geometric",
+      "published": "2026-07-08",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 4.8,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 4.8,
+      "keyword_hits_geo": [
+        "hyperbolic"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.DG",
+        "math.DG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.07149",
+      "title": "Applications of relative multisymplectic geometry",
+      "content_topic": "geometric",
+      "published": "2026-07-08",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 6.3,
+      "keyword_score_alg": 3.2,
+      "keyword_margin": 3.1,
+      "keyword_hits_geo": [
+        "homotopy",
+        "surface",
+        "moduli space",
+        "symplectic",
+        "topological",
+        "boundary"
+      ],
+      "keyword_hits_alg": [
+        "functor",
+        "character",
+        "logic"
+      ],
+      "categories": [
+        "math.SG",
+        "math.SG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.07134",
+      "title": "Naked Singularities beyond Spherical Symmetry: Singular Inner Cauchy Horizons for the Einstein-Scalar Field System",
+      "content_topic": "geometric",
+      "published": "2026-07-08",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 3.2,
+      "keyword_score_alg": 1.4,
+      "keyword_margin": 1.8,
+      "keyword_hits_geo": [
+        "surface",
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "character",
+        "asymptotic"
+      ],
+      "categories": [
+        "gr-qc",
+        "gr-qc",
+        "math-ph",
+        "math.AP",
+        "math.DG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.07059",
+      "title": "A solvmanifold with a left-invariant complex structure whose universal cover is not Stein",
+      "content_topic": "geometric",
+      "published": "2026-07-08",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 4.5,
+      "keyword_score_alg": 0.8,
+      "keyword_margin": 3.7,
+      "keyword_hits_geo": [
+        "manifold"
+      ],
+      "keyword_hits_alg": [
+        "lattice"
+      ],
+      "categories": [
+        "math.DG",
+        "math.DG",
+        "math.CV"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.07057",
+      "title": "Hamiltonian reduction from particular integrals",
+      "content_topic": "geometric",
+      "published": "2026-07-08",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 4.5,
+      "keyword_score_alg": 0.6,
+      "keyword_margin": 3.9,
+      "keyword_hits_geo": [
+        "manifold",
+        "symplectic",
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "character"
+      ],
+      "categories": [
+        "math-ph",
+        "math-ph",
+        "math.DG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.06801",
+      "title": "Simplicial subdivision of simplices of arbitrary dimension in spaces of constant curvature with bounded quality",
+      "content_topic": "geometric",
+      "published": "2026-07-07",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 4.7,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 4.7,
+      "keyword_hits_geo": [
+        "curvature",
+        "simplex",
+        "dimension"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "cs.CG",
+        "cs.CG",
+        "math.MG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.06345",
+      "title": "Comparison of K\u00e4hler quotients of torus actions",
+      "content_topic": "geometric",
+      "published": "2026-07-07",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 4.0,
+      "keyword_score_alg": 2.0,
+      "keyword_margin": 2.0,
+      "keyword_hits_geo": [
+        "manifold"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.AG",
+        "math.AG",
+        "math.DG",
+        "math.SG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.06041",
+      "title": "High-dimensional limits and extremizers for maximal functions associated with log-concave densities",
+      "content_topic": "algebraic",
+      "published": "2026-07-07",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 1.7,
+      "keyword_score_alg": 2.3,
+      "keyword_margin": -0.6,
+      "keyword_hits_geo": [
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "fourier",
+        "asymptotic"
+      ],
+      "categories": [
+        "math.CA",
+        "math.CA",
+        "math.FA",
+        "math.MG",
+        "math.PR"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05986",
+      "title": "Symplectic billiards as Minkowski billiards",
+      "content_topic": "geometric",
+      "published": "2026-07-07",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 2.8,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 2.8,
+      "keyword_hits_geo": [
+        "billiard",
+        "symplectic",
+        "dimension"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.DS",
+        "math.DS",
+        "math.SG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05945",
+      "title": "On the mathematics table problem",
+      "content_topic": "geometric",
+      "published": "2026-07-07",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 5.6,
+      "keyword_score_alg": 0.8,
+      "keyword_margin": 4.8,
+      "keyword_hits_geo": [
+        "surface",
+        "topological",
+        "boundary"
+      ],
+      "keyword_hits_alg": [
+        "logic"
+      ],
+      "categories": [
+        "math.GT",
+        "math.GT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05923",
+      "title": "Triangulating Spun 2-Knot Complements",
+      "content_topic": "geometric",
+      "published": "2026-07-07",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 7.2,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 7.2,
+      "keyword_hits_geo": [
+        "embedding",
+        "knot",
+        "triangulation"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.GT",
+        "math.GT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05918",
+      "title": "Shifted Poisson unfoldings and quantum anomalies",
+      "content_topic": "geometric",
+      "published": "2026-07-07",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 2.8,
+      "keyword_score_alg": 2.0,
+      "keyword_margin": 0.8,
+      "keyword_hits_geo": [
+        "homotopy",
+        "boundary"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.AG",
+        "math.AG",
+        "math-ph",
+        "math.SG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05826",
+      "title": "Rigidity of maps between configuration spaces",
+      "content_topic": "geometric",
+      "published": "2026-07-07",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 4.7,
+      "keyword_score_alg": 4.3,
+      "keyword_margin": 0.4,
+      "keyword_hits_geo": [
+        "configuration space"
+      ],
+      "keyword_hits_alg": [
+        "homomorphism",
+        "morphism"
+      ],
+      "categories": [
+        "math.GT",
+        "math.GT",
+        "math.AG",
+        "math.GR"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05821",
+      "title": "On classification of Finslerian spaces with nontrivial concircular transformations",
+      "content_topic": "geometric",
+      "published": "2026-07-07",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 7.5,
+      "keyword_score_alg": 1.5,
+      "keyword_margin": 6.0,
+      "keyword_hits_geo": [
+        "curvature",
+        "manifold"
+      ],
+      "keyword_hits_alg": [
+        "morphism"
+      ],
+      "categories": [
+        "math.DG",
+        "math.DG",
+        "math.AP",
+        "math.MG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05812",
+      "title": "Equivalent characterizations of John and uniform domains in doubling metric spaces",
+      "content_topic": "geometric",
+      "published": "2026-07-07",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 2.6,
+      "keyword_score_alg": 0.6,
+      "keyword_margin": 2.0,
+      "keyword_hits_geo": [
+        "metric space"
+      ],
+      "keyword_hits_alg": [
+        "character"
+      ],
+      "categories": [
+        "math.CV",
+        "math.CV",
+        "math.MG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05706",
+      "title": "Rigid ternary relations in finite-dimensional Hilbert-space Grassmannians",
+      "content_topic": "algebraic",
+      "published": "2026-07-07",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 2.2,
+      "keyword_score_alg": 2.6,
+      "keyword_margin": -0.4,
+      "keyword_hits_geo": [
+        "dimension"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.CO",
+        "math.CO",
+        "math.AG",
+        "math.FA",
+        "math.MG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05603",
+      "title": "Homology fiber bundles of varieties, that are not topological fiber bundles",
+      "content_topic": "geometric",
+      "published": "2026-07-06",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 4.5,
+      "keyword_score_alg": 4.3,
+      "keyword_margin": 0.2,
+      "keyword_hits_geo": [
+        "fiber bundle",
+        "topological"
+      ],
+      "keyword_hits_alg": [
+        "morphism",
+        "logic"
+      ],
+      "categories": [
+        "math.AG",
+        "math.AG",
+        "math.CV",
+        "math.GT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05575",
+      "title": "Virtual Jeffrey--Kirwan localisation",
+      "content_topic": "algebraic",
+      "published": "2026-07-06",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 2.0,
+      "keyword_score_alg": 2.0,
+      "keyword_margin": 0.0,
+      "keyword_hits_geo": [
+        "symplectic"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.AG",
+        "math.AG",
+        "math.SG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05362",
+      "title": "Rerouting Curves on Surfaces",
+      "content_topic": "geometric",
+      "published": "2026-07-06",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 3.9,
+      "keyword_score_alg": 0.8,
+      "keyword_margin": 3.1,
+      "keyword_hits_geo": [
+        "embedding",
+        "surface"
+      ],
+      "keyword_hits_alg": [
+        "ring"
+      ],
+      "categories": [
+        "cs.CG",
+        "cs.CG",
+        "math.GT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05349",
+      "title": "The microscopic weighting on a metric space",
+      "content_topic": "geometric",
+      "published": "2026-07-06",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 7.4,
+      "keyword_score_alg": 1.4,
+      "keyword_margin": 6.0,
+      "keyword_hits_geo": [
+        "hyperbolic",
+        "embedding",
+        "metric space",
+        "boundary"
+      ],
+      "keyword_hits_alg": [
+        "character"
+      ],
+      "categories": [
+        "math.MG",
+        "math.MG",
+        "math.CO"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05304",
+      "title": "Quantitative stability in distribution for the Sobolev inequality under curvature dimension condition",
+      "content_topic": "geometric",
+      "published": "2026-07-06",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 5.0,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 5.0,
+      "keyword_hits_geo": [
+        "curvature",
+        "dimension"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.AP",
+        "math.AP",
+        "math.DG",
+        "math.MG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05283",
+      "title": "The Burau representation of the braid group is faithful for n = 4",
+      "content_topic": "geometric",
+      "published": "2026-07-06",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 3.0,
+      "keyword_score_alg": 1.0,
+      "keyword_margin": 2.0,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "representation"
+      ],
+      "categories": [
+        "math.GT",
+        "math.GT",
+        "math.GR"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05255",
+      "title": "No-$(k+1)$-in-line problem for $k \\geqslant 3$",
+      "content_topic": "algebraic",
+      "published": "2026-07-06",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 1.2,
+      "keyword_score_alg": 1.6,
+      "keyword_margin": -0.4,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.CO",
+        "math.CO",
+        "math.MG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05170",
+      "title": "Symplectically aspherical K\u00e4hler manifolds, scalar curvature, and the fundamental group",
+      "content_topic": "geometric",
+      "published": "2026-07-06",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 12.9,
+      "keyword_score_alg": 1.8,
+      "keyword_margin": 11.1,
+      "keyword_hits_geo": [
+        "curvature",
+        "riemannian",
+        "manifold",
+        "symplectic",
+        "fundamental group",
+        "topological"
+      ],
+      "keyword_hits_alg": [
+        "logic"
+      ],
+      "categories": [
+        "math.GT",
+        "math.GT",
+        "math.AG",
+        "math.DG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05117",
+      "title": "On the metric projection onto a convex set: reverse H\u00f6lder inequalities and upper bounds",
+      "content_topic": "geometric",
+      "published": "2026-07-06",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 2.9,
+      "keyword_score_alg": 1.0,
+      "keyword_margin": 1.9,
+      "keyword_hits_geo": [
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "polynomial"
+      ],
+      "categories": [
+        "math.MG",
+        "math.MG",
+        "math.FA",
+        "math.PR"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05099",
+      "title": "The sharp asymptotic density of zero-sum-free spherical sets",
+      "content_topic": "geometric",
+      "published": "2026-07-06",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 2.9,
+      "keyword_score_alg": 2.4,
+      "keyword_margin": 0.5,
+      "keyword_hits_geo": [
+        "surface",
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "asymptotic"
+      ],
+      "categories": [
+        "math.CO",
+        "math.CO",
+        "math.MG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05036",
+      "title": "Coarse higher medians, symmetric spaces, and convex projective geometry",
+      "content_topic": "geometric",
+      "published": "2026-07-06",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 5.6,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 5.6,
+      "keyword_hits_geo": [
+        "metric space"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.GT",
+        "math.GT",
+        "math.MG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.05023",
+      "title": "Rigidity on compact surfaces through hyperbolic symmetries",
+      "content_topic": "geometric",
+      "published": "2026-07-06",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 7.2,
+      "keyword_score_alg": 2.4,
+      "keyword_margin": 4.8,
+      "keyword_hits_geo": [
+        "hyperbolic",
+        "surface"
+      ],
+      "keyword_hits_alg": [
+        "character",
+        "combinatorial"
+      ],
+      "categories": [
+        "math.DG",
+        "math.DG",
+        "math.CO",
+        "math.MG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.04737",
+      "title": "Homotopy index polynomials for knotoids",
+      "content_topic": "geometric",
+      "published": "2026-07-06",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 6.9,
+      "keyword_score_alg": 1.0,
+      "keyword_margin": 5.9,
+      "keyword_hits_geo": [
+        "homotopy",
+        "knot",
+        "surface"
+      ],
+      "keyword_hits_alg": [
+        "polynomial"
+      ],
+      "categories": [
+        "math.GT",
+        "math.GT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.04695",
+      "title": "On the Dax invariants of $S^2$-bundles over surfaces",
+      "content_topic": "geometric",
+      "published": "2026-07-06",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 7.0,
+      "keyword_score_alg": 3.3,
+      "keyword_margin": 3.7,
+      "keyword_hits_geo": [
+        "embedding",
+        "isotopy",
+        "surface"
+      ],
+      "keyword_hits_alg": [
+        "homomorphism",
+        "morphism"
+      ],
+      "categories": [
+        "math.GT",
+        "math.GT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.04592",
+      "title": "On the Arc Length of a Supercircle and a Hypergeometric Formulation of $\u03c0$",
+      "content_topic": "geometric",
+      "published": "2026-07-06",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 1.2,
+      "keyword_score_alg": 1.0,
+      "keyword_margin": 0.2,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "representation"
+      ],
+      "categories": [
+        "math.CA",
+        "math.CA",
+        "math.MG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.04477",
+      "title": "Equivariant Grid Homology for Strongly Invertible Knots",
+      "content_topic": "geometric",
+      "published": "2026-07-05",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 4.5,
+      "keyword_score_alg": 1.0,
+      "keyword_margin": 3.5,
+      "keyword_hits_geo": [
+        "knot"
+      ],
+      "keyword_hits_alg": [
+        "representation"
+      ],
+      "categories": [
+        "math.GT",
+        "math.GT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.04418",
+      "title": "Impossibility of a nontrivial Brunn--Minkowski inequality for higher Dirichlet eigenvalue",
+      "content_topic": "geometric",
+      "published": "2026-07-05",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 2.4,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 2.4,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.MG",
+        "math.MG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.04039",
+      "title": "Algebra of the Infrared with Curve-Valued Potential",
+      "content_topic": "geometric",
+      "published": "2026-07-04",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 1.0,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 1.0,
+      "keyword_hits_geo": [
+        "fundamental group"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.SG",
+        "math.SG",
+        "math.QA"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.03843",
+      "title": "Family Floer SYZ mirror algorithm for the Grassmannian $Gr(2,4)$",
+      "content_topic": "geometric",
+      "published": "2026-07-04",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 3.5,
+      "keyword_score_alg": 2.0,
+      "keyword_margin": 1.5,
+      "keyword_hits_geo": [
+        "floer",
+        "fibration"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.AG",
+        "math.AG",
+        "math.SG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.03815",
+      "title": "A simplex-based measure of symmetry",
+      "content_topic": "geometric",
+      "published": "2026-07-04",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 4.9,
+      "keyword_score_alg": 0.6,
+      "keyword_margin": 4.3,
+      "keyword_hits_geo": [
+        "simplex",
+        "convex hull"
+      ],
+      "keyword_hits_alg": [
+        "character"
+      ],
+      "categories": [
+        "math.MG",
+        "math.MG",
+        "cs.LG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.03649",
+      "title": "Convex hypersurfaces and robust heterodimensional dynamics",
+      "content_topic": "geometric",
+      "published": "2026-07-04",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 4.8,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 4.8,
+      "keyword_hits_geo": [
+        "manifold",
+        "isotopy",
+        "surface",
+        "dimension"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.SG",
+        "math.SG",
+        "math.DS"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.03584",
+      "title": "Non-universality of sumsets of lacunary sequences and arbitrary sets",
+      "content_topic": "geometric",
+      "published": "2026-07-03",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 1.2,
+      "keyword_score_alg": 0.8,
+      "keyword_margin": 0.4,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "ring"
+      ],
+      "categories": [
+        "math.CA",
+        "math.CA",
+        "math.MG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.03582",
+      "title": "L_p-Rogers--Shephard type inequalities for L_p-zonoids and symmetric bodies",
+      "content_topic": "geometric",
+      "published": "2026-07-03",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 2.9,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 2.9,
+      "keyword_hits_geo": [
+        "dimension"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.MG",
+        "math.MG",
+        "math.FA"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.03497",
+      "title": "Isolated Hypersurface Singularities May Be Stably Degenerate",
+      "content_topic": "geometric",
+      "published": "2026-07-03",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 4.2,
+      "keyword_score_alg": 2.0,
+      "keyword_margin": 2.2,
+      "keyword_hits_geo": [
+        "surface",
+        "moduli space",
+        "dimension"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.AG",
+        "math.AG",
+        "math.SG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.03230",
+      "title": "A Finitary Approach to Coarse Separation of Euclidean spaces",
+      "content_topic": "geometric",
+      "published": "2026-07-03",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 9.7,
+      "keyword_score_alg": 0.8,
+      "keyword_margin": 8.9,
+      "keyword_hits_geo": [
+        "geodesic",
+        "embedding",
+        "metric space",
+        "fundamental group",
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "asymptotic"
+      ],
+      "categories": [
+        "math.MG",
+        "math.MG",
+        "math.AT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.03139",
+      "title": "Two-boost problem for the rotating Kepler problem",
+      "content_topic": "geometric",
+      "published": "2026-07-03",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 2.7,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 2.7,
+      "keyword_hits_geo": [
+        "surface",
+        "floer"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.SG",
+        "math.SG",
+        "math-ph"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.03127",
+      "title": "Preimage Regions of Symmetric Separable Maps on the Simplex: Convexity and Barycentric Star-Shapedness",
+      "content_topic": "geometric",
+      "published": "2026-07-03",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 4.1,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 4.1,
+      "keyword_hits_geo": [
+        "simplex",
+        "dimension"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.MG",
+        "math.MG",
+        "math.CA"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.03041",
+      "title": "Disproof of the tree product conjecture via the Heisenberg group",
+      "content_topic": "geometric",
+      "published": "2026-07-03",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 2.9,
+      "keyword_score_alg": 2.6,
+      "keyword_margin": 0.3,
+      "keyword_hits_geo": [
+        "embedding",
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "polynomial"
+      ],
+      "categories": [
+        "math.CO",
+        "math.CO",
+        "math.GR",
+        "math.MG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.03019",
+      "title": "Conformally symplectic topology from a dynamical viewpoint",
+      "content_topic": "geometric",
+      "published": "2026-07-03",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 2.2,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 2.2,
+      "keyword_hits_geo": [
+        "surface",
+        "symplectic"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.SG",
+        "math.SG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.02769",
+      "title": "Homotopy minimal periods for fiber maps on $S^{1}$-bundles over $S^{1}$",
+      "content_topic": "geometric",
+      "published": "2026-07-02",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 4.8,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 4.8,
+      "keyword_hits_geo": [
+        "homotopy",
+        "fiber bundle"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.AT",
+        "math.AT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.02434",
+      "title": "A Topological Formula for Potts Lattice Gauge Theory Correlations",
+      "content_topic": "geometric",
+      "published": "2026-07-02",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 4.3,
+      "keyword_score_alg": 1.6,
+      "keyword_margin": 2.7,
+      "keyword_hits_geo": [
+        "gauge theory",
+        "topological",
+        "boundary",
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "lattice",
+        "logic"
+      ],
+      "categories": [
+        "math.PR",
+        "math.PR",
+        "math-ph",
+        "math.AT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.02060",
+      "title": "Equivariant twisted $R$-algebras via Thom spectra",
+      "content_topic": "geometric",
+      "published": "2026-07-02",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 3.2,
+      "keyword_score_alg": 2.8,
+      "keyword_margin": 0.4,
+      "keyword_hits_geo": [
+        "topological"
+      ],
+      "keyword_hits_alg": [
+        "module",
+        "ring",
+        "logic"
+      ],
+      "categories": [
+        "math.AT",
+        "math.AT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.01889",
+      "title": "Reduced characteristic number criteria for equivariant bordism of $T^k$- and $(\\mathbb{Z}_2)^k$-manifolds with isolated fixed points",
+      "content_topic": "geometric",
+      "published": "2026-07-02",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 3.9,
+      "keyword_score_alg": 1.6,
+      "keyword_margin": 2.3,
+      "keyword_hits_geo": [
+        "manifold"
+      ],
+      "keyword_hits_alg": [
+        "polynomial",
+        "character"
+      ],
+      "categories": [
+        "math.AT",
+        "math.AT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.01826",
+      "title": "Fundamental racks of braid spaces of complex reflection groups",
+      "content_topic": "geometric",
+      "published": "2026-07-02",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 9.5,
+      "keyword_score_alg": 1.0,
+      "keyword_margin": 8.5,
+      "keyword_hits_geo": [
+        "hyperbolic",
+        "link",
+        "orbifold",
+        "fundamental group"
+      ],
+      "keyword_hits_alg": [
+        "representation"
+      ],
+      "categories": [
+        "math.GT",
+        "math.GT",
+        "math.AT",
+        "math.GR"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.01482",
+      "title": "A homotopy coherent Pontryagin-Thom isomorphism",
+      "content_topic": "geometric",
+      "published": "2026-07-01",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 5.1,
+      "keyword_score_alg": 3.5,
+      "keyword_margin": 1.6,
+      "keyword_hits_geo": [
+        "manifold",
+        "homotopy"
+      ],
+      "keyword_hits_alg": [
+        "category",
+        "morphism",
+        "ring"
+      ],
+      "categories": [
+        "math.AT",
+        "math.AT",
+        "math.SG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.01371",
+      "title": "Categorical structures of Kuranishi spaces with $L_{\\infty}[1]$-algebras",
+      "content_topic": "geometric",
+      "published": "2026-07-01",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 3.9,
+      "keyword_score_alg": 2.7,
+      "keyword_margin": 1.2,
+      "keyword_hits_geo": [
+        "manifold",
+        "embedding"
+      ],
+      "keyword_hits_alg": [
+        "category",
+        "morphism"
+      ],
+      "categories": [
+        "math.SG",
+        "math.SG",
+        "math.AT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.01219",
+      "title": "Multiplicity of closed Reeb orbits on contact manifolds with periodic equivariant symplectic homology",
+      "content_topic": "geometric",
+      "published": "2026-07-01",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 6.3,
+      "keyword_score_alg": 1.4,
+      "keyword_margin": 4.9,
+      "keyword_hits_geo": [
+        "manifold",
+        "orbifold",
+        "symplectic",
+        "floer",
+        "topological"
+      ],
+      "keyword_hits_alg": [
+        "character",
+        "logic"
+      ],
+      "categories": [
+        "math.SG",
+        "math.SG",
+        "math.DS"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.01028",
+      "title": "$A_3$-formality for pro-2 Demushkin groups",
+      "content_topic": "geometric",
+      "published": "2026-07-01",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 1.2,
+      "keyword_score_alg": 1.0,
+      "keyword_margin": 0.2,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.GR",
+        "math.GR",
+        "math.AT",
+        "math.KT",
+        "math.NT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.01024",
+      "title": "Madelung hydrodynamics and Poisson geometry of wave functions",
+      "content_topic": "geometric",
+      "published": "2026-07-01",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 7.5,
+      "keyword_score_alg": 1.5,
+      "keyword_margin": 6.0,
+      "keyword_hits_geo": [
+        "manifold",
+        "knot",
+        "symplectic",
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "morphism"
+      ],
+      "categories": [
+        "math.DG",
+        "math.DG",
+        "math-ph",
+        "math.SG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.00737",
+      "title": "Polar Coordinates and Fundamental Group",
+      "content_topic": "geometric",
+      "published": "2026-07-01",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 3.4,
+      "keyword_score_alg": 0.8,
+      "keyword_margin": 2.6,
+      "keyword_hits_geo": [
+        "fundamental group"
+      ],
+      "keyword_hits_alg": [
+        "ring"
+      ],
+      "categories": [
+        "math.AT",
+        "math.AT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.00441",
+      "title": "Tall Complexity One Spaces with k-colorable Skeleton",
+      "content_topic": "geometric",
+      "published": "2026-07-01",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 4.2,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 4.2,
+      "keyword_hits_geo": [
+        "manifold",
+        "surface",
+        "symplectic",
+        "dimension"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.SG",
+        "math.SG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.00236",
+      "title": "Homology manifolds via six functor formalisms",
+      "content_topic": "geometric",
+      "published": "2026-06-30",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 8.9,
+      "keyword_score_alg": 6.0,
+      "keyword_margin": 2.9,
+      "keyword_hits_geo": [
+        "manifold",
+        "homotopy",
+        "fibration",
+        "topological",
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "functor",
+        "character",
+        "sheaf",
+        "logic"
+      ],
+      "categories": [
+        "math.AT",
+        "math.AT",
+        "math.CT",
+        "math.GT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.31674",
+      "title": "Rabinowitz Floer homology for Legendrian submanifolds in prequantization bundles",
+      "content_topic": "geometric",
+      "published": "2026-06-30",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 4.8,
+      "keyword_score_alg": 3.1,
+      "keyword_margin": 1.7,
+      "keyword_hits_geo": [
+        "manifold",
+        "symplectic",
+        "floer",
+        "topological"
+      ],
+      "keyword_hits_alg": [
+        "morphism",
+        "ring",
+        "logic"
+      ],
+      "categories": [
+        "math.SG",
+        "math.SG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.30965",
+      "title": "Homotopies in Batalin-Vilkovisky Formalism",
+      "content_topic": "geometric",
+      "published": "2026-06-29",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 2.7,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 2.7,
+      "keyword_hits_geo": [
+        "homotopy"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math-ph",
+        "math-ph",
+        "hep-th",
+        "math.DG",
+        "math.SG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.29317",
+      "title": "Three-Dimensional Real Affine Lie Groups",
+      "content_topic": "algebraic",
+      "published": "2026-06-28",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 2.5,
+      "keyword_score_alg": 3.3,
+      "keyword_margin": -0.8,
+      "keyword_hits_geo": [
+        "geodesic",
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "morphism",
+        "character"
+      ],
+      "categories": [
+        "math.SG",
+        "math.SG",
+        "math.RT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.28985",
+      "title": "Homotopy models for $L_{\\infty}[1]$-algebras in higher degrees",
+      "content_topic": "geometric",
+      "published": "2026-06-27",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 3.6,
+      "keyword_score_alg": 1.5,
+      "keyword_margin": 2.1,
+      "keyword_hits_geo": [
+        "homotopy"
+      ],
+      "keyword_hits_alg": [
+        "morphism"
+      ],
+      "categories": [
+        "math.AT",
+        "math.AT",
+        "math.QA",
+        "math.SG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.28768",
+      "title": "Finiteness and boundedness of positive monotone Hamiltonian GKM$_3$ spaces",
+      "content_topic": "geometric",
+      "published": "2026-06-27",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 3.0,
+      "keyword_score_alg": 1.4,
+      "keyword_margin": 1.6,
+      "keyword_hits_geo": [
+        "manifold",
+        "symplectic",
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "character",
+        "lattice"
+      ],
+      "categories": [
+        "math.SG",
+        "math.SG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.28767",
+      "title": "Infinite-Time Singularities with Vanishing Mean Curvature for Lagrangian Mean Curvature Flow in Gibbons--Hawking Spaces",
+      "content_topic": "geometric",
+      "published": "2026-06-27",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 4.8,
+      "keyword_score_alg": 0.8,
+      "keyword_margin": 4.0,
+      "keyword_hits_geo": [
+        "curvature"
+      ],
+      "keyword_hits_alg": [
+        "asymptotic"
+      ],
+      "categories": [
+        "math.DG",
+        "math.DG",
+        "math.AP",
+        "math.SG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.28316",
+      "title": "Infinite ECH Capacities and Anosov Flows",
+      "content_topic": "geometric",
+      "published": "2026-06-26",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 7.2,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 7.2,
+      "keyword_hits_geo": [
+        "manifold",
+        "surface",
+        "symplectic",
+        "floer",
+        "dimension"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.SG",
+        "math.SG",
+        "math.DS",
+        "math.GT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.28265",
+      "title": "Some geometric perspectives on Contact Hamiltonian Dynamics",
+      "content_topic": "geometric",
+      "published": "2026-06-26",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 4.0,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 4.0,
+      "keyword_hits_geo": [
+        "manifold",
+        "symplectic",
+        "contact structure"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.SG",
+        "math.SG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.28256",
+      "title": "The quantum connection and its mod p reduction",
+      "content_topic": "geometric",
+      "published": "2026-06-26",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 3.0,
+      "keyword_score_alg": 1.0,
+      "keyword_margin": 2.0,
+      "keyword_hits_geo": [
+        "manifold",
+        "symplectic"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.SG",
+        "math.SG",
+        "math.AG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.27953",
+      "title": "An Abstract Perturbation Theorem for Compact Moduli Spaces",
+      "content_topic": "geometric",
+      "published": "2026-06-26",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 4.0,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 4.0,
+      "keyword_hits_geo": [
+        "manifold",
+        "moduli space",
+        "symplectic"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.SG",
+        "math.SG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2607.01264",
+      "title": "New constructions relating Real and Complex Contact Structure",
+      "content_topic": "geometric",
+      "published": "2026-06-25",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 7.2,
+      "keyword_score_alg": 1.0,
+      "keyword_margin": 6.2,
+      "keyword_hits_geo": [
+        "manifold",
+        "embedding",
+        "contact structure"
+      ],
+      "keyword_hits_alg": [
+        "tensor"
+      ],
+      "categories": [
+        "math.SG",
+        "math.SG",
+        "math.DG",
+        "math.GT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.26843",
+      "title": "On Periodic Geodesics of Half-Lie Groups",
+      "content_topic": "geometric",
+      "published": "2026-06-25",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 11.0,
+      "keyword_score_alg": 1.5,
+      "keyword_margin": 9.5,
+      "keyword_hits_geo": [
+        "geodesic",
+        "riemannian",
+        "manifold",
+        "homotopy",
+        "fundamental group",
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "morphism"
+      ],
+      "categories": [
+        "math.DG",
+        "math.DG",
+        "math.DS",
+        "math.SG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.24951",
+      "title": "Holomorphic Hulls for Compact 3-Manifolds",
+      "content_topic": "geometric",
+      "published": "2026-06-23",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 8.2,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 8.2,
+      "keyword_hits_geo": [
+        "hyperbolic",
+        "manifold",
+        "embedding",
+        "knot",
+        "link",
+        "surface"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.CV",
+        "math.CV"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.24662",
+      "title": "A symmetry reduction of the Painlev\u00e9 IV hierarchy to the Flaschka-Newell Painlev\u00e9 II hierarchy",
+      "content_topic": "geometric",
+      "published": "2026-06-23",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 3.0,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 3.0,
+      "keyword_hits_geo": [
+        "manifold"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math-ph",
+        "math-ph",
+        "math.DG",
+        "math.SG",
+        "nlin.SI"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.24503",
+      "title": "Asymptotics for Toeplitz operators with symbol an indicator function",
+      "content_topic": "geometric",
+      "published": "2026-06-23",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 6.1,
+      "keyword_score_alg": 1.8,
+      "keyword_margin": 4.3,
+      "keyword_hits_geo": [
+        "manifold",
+        "symplectic",
+        "boundary"
+      ],
+      "keyword_hits_alg": [
+        "polynomial",
+        "asymptotic"
+      ],
+      "categories": [
+        "math.DG",
+        "math.DG",
+        "math.CV",
+        "math.FA",
+        "math.SG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.24363",
+      "title": "$p$-adic integrable systems: from biquadratic equations to local models",
+      "content_topic": "algebraic",
+      "published": "2026-06-23",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 1.5,
+      "keyword_score_alg": 1.5,
+      "keyword_margin": 0.0,
+      "keyword_hits_geo": [
+        "symplectic",
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "galois"
+      ],
+      "categories": [
+        "math.SG",
+        "math.SG",
+        "math-ph"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.24249",
+      "title": "Brane quantization of $A_n$-resolutions",
+      "content_topic": "algebraic",
+      "published": "2026-06-23",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 2.0,
+      "keyword_score_alg": 2.5,
+      "keyword_margin": -0.5,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "morphism"
+      ],
+      "categories": [
+        "math.SG",
+        "math.SG",
+        "math-ph",
+        "math.AG",
+        "math.DG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.23184",
+      "title": "Hyperbolic solitons on trans-Sasakian space forms and its submanifolds",
+      "content_topic": "geometric",
+      "published": "2026-06-22",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 6.3,
+      "keyword_score_alg": 1.6,
+      "keyword_margin": 4.7,
+      "keyword_hits_geo": [
+        "hyperbolic",
+        "manifold"
+      ],
+      "keyword_hits_alg": [
+        "character",
+        "tensor"
+      ],
+      "categories": [
+        "math.DG",
+        "math.DG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.21909",
+      "title": "Heat Kernel and Resurgence",
+      "content_topic": "geometric",
+      "published": "2026-06-20",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 10.6,
+      "keyword_score_alg": 0.8,
+      "keyword_margin": 9.8,
+      "keyword_hits_geo": [
+        "geodesic",
+        "riemannian",
+        "hyperbolic",
+        "manifold",
+        "floer",
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "asymptotic"
+      ],
+      "categories": [
+        "math-ph",
+        "math-ph",
+        "hep-th",
+        "math.CV",
+        "math.DG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.21039",
+      "title": "Taut polynomials from finite quotients of fibered hyperbolic 3-manifold groups",
+      "content_topic": "geometric",
+      "published": "2026-06-19",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 6.3,
+      "keyword_score_alg": 1.8,
+      "keyword_margin": 4.5,
+      "keyword_hits_geo": [
+        "hyperbolic",
+        "manifold"
+      ],
+      "keyword_hits_alg": [
+        "ring",
+        "polynomial"
+      ],
+      "categories": [
+        "math.GT",
+        "math.GT",
+        "math.DS",
+        "math.GR"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.19858",
+      "title": "Spectral Positive Mass Theorem for Asymptotically Hyperbolic 3-manifolds with Toroidal Infinity",
+      "content_topic": "geometric",
+      "published": "2026-06-18",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 8.1,
+      "keyword_score_alg": 0.8,
+      "keyword_margin": 7.3,
+      "keyword_hits_geo": [
+        "curvature",
+        "hyperbolic",
+        "manifold"
+      ],
+      "keyword_hits_alg": [
+        "asymptotic"
+      ],
+      "categories": [
+        "math.DG",
+        "math.DG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.19567",
+      "title": "Geometric Rigidity via Harmonic Twisted Spinors",
+      "content_topic": "geometric",
+      "published": "2026-06-17",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 11.4,
+      "keyword_score_alg": 1.6,
+      "keyword_margin": 9.8,
+      "keyword_hits_geo": [
+        "curvature",
+        "riemannian",
+        "hyperbolic",
+        "manifold"
+      ],
+      "keyword_hits_alg": [
+        "ring",
+        "logic"
+      ],
+      "categories": [
+        "math.DG",
+        "math.DG",
+        "math.GT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.18740",
+      "title": "Bottom of the spectrum of complete noncompact K\u00e4hler manifolds",
+      "content_topic": "geometric",
+      "published": "2026-06-17",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 8.1,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 8.1,
+      "keyword_hits_geo": [
+        "curvature",
+        "hyperbolic",
+        "manifold"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.DG",
+        "math.DG",
+        "math.CV"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.18095",
+      "title": "Large primordial non-Gaussianity from transient turns in Higgs-$R^2$ inflation",
+      "content_topic": "geometric",
+      "published": "2026-06-16",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 5.1,
+      "keyword_score_alg": 0.8,
+      "keyword_margin": 4.3,
+      "keyword_hits_geo": [
+        "curvature",
+        "hyperbolic",
+        "manifold"
+      ],
+      "keyword_hits_alg": [
+        "ring"
+      ],
+      "categories": [
+        "astro-ph.CO",
+        "astro-ph.CO",
+        "hep-th"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.18086",
+      "title": "Branched Covers of Hyperbolic Groups",
+      "content_topic": "geometric",
+      "published": "2026-06-16",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 6.9,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 6.9,
+      "keyword_hits_geo": [
+        "geodesic",
+        "hyperbolic",
+        "manifold",
+        "fundamental group",
+        "boundary"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.GR",
+        "math.GR"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.18034",
+      "title": "Quasimorphisms and Poincar\u00e9 duality in dimension 3",
+      "content_topic": "geometric",
+      "published": "2026-06-16",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 9.5,
+      "keyword_score_alg": 2.3,
+      "keyword_margin": 7.2,
+      "keyword_hits_geo": [
+        "riemannian",
+        "hyperbolic",
+        "manifold",
+        "metric space",
+        "fundamental group",
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "morphism",
+        "logic"
+      ],
+      "categories": [
+        "math.GR",
+        "math.GR",
+        "math.GT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.17335",
+      "title": "Mazur's knot and the Octahedron",
+      "content_topic": "geometric",
+      "published": "2026-06-15",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 10.8,
+      "keyword_score_alg": 1.0,
+      "keyword_margin": 9.8,
+      "keyword_hits_geo": [
+        "geodesic",
+        "hyperbolic",
+        "manifold",
+        "knot",
+        "link"
+      ],
+      "keyword_hits_alg": [
+        "ideal"
+      ],
+      "categories": [
+        "math.GT",
+        "math.GT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.16282",
+      "title": "Geometry-Driven Islanding Detection and Fault Classification for Grid-Forming Inverters: A Normally Hyperbolic Invariant Manifold Framework with Physics-Derived Thresholds",
+      "content_topic": "geometric",
+      "published": "2026-06-15",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 3.3,
+      "keyword_score_alg": 0.8,
+      "keyword_margin": 2.5,
+      "keyword_hits_geo": [
+        "hyperbolic",
+        "manifold"
+      ],
+      "keyword_hits_alg": [
+        "asymptotic"
+      ],
+      "categories": [
+        "eess.SY",
+        "eess.SY"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.15104",
+      "title": "Text-Driven Fusion for Infrared and Visible Images: Achieving Image Scene Adaptation on Hyperbolic Space",
+      "content_topic": "geometric",
+      "published": "2026-06-13",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 7.1,
+      "keyword_score_alg": 1.6,
+      "keyword_margin": 5.5,
+      "keyword_hits_geo": [
+        "curvature",
+        "hyperbolic",
+        "manifold",
+        "embedding",
+        "topological"
+      ],
+      "keyword_hits_alg": [
+        "ring",
+        "logic"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.CV"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.14934",
+      "title": "Separable Neural Architectures as Physical World Models: from Mathematical Theory to Applications",
+      "content_topic": "geometric",
+      "published": "2026-06-12",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 3.8,
+      "keyword_score_alg": 2.8,
+      "keyword_margin": 1.0,
+      "keyword_hits_geo": [
+        "hyperbolic",
+        "manifold",
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "ring",
+        "representation",
+        "tensor"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.14889",
+      "title": "Quasimorphisms and Pseudo-Anosov flows",
+      "content_topic": "geometric",
+      "published": "2026-06-12",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 4.8,
+      "keyword_score_alg": 1.5,
+      "keyword_margin": 3.3,
+      "keyword_hits_geo": [
+        "hyperbolic",
+        "manifold"
+      ],
+      "keyword_hits_alg": [
+        "morphism"
+      ],
+      "categories": [
+        "math.DS",
+        "math.DS",
+        "math.GR",
+        "math.GT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.14429",
+      "title": "Holomorphic families of knots",
+      "content_topic": "geometric",
+      "published": "2026-06-12",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 10.1,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 10.1,
+      "keyword_hits_geo": [
+        "geodesic",
+        "manifold",
+        "knot",
+        "foliation",
+        "dimension"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.DG",
+        "math.DG",
+        "math.CV"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2606.12912",
+      "title": "Birkhoff conjecture and finite energy foliations in Hill's lunar problem",
+      "content_topic": "geometric",
+      "published": "2026-06-11",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 3.8,
+      "keyword_score_alg": 0.8,
+      "keyword_margin": 3.0,
+      "keyword_hits_geo": [
+        "surface",
+        "foliation",
+        "symplectic"
+      ],
+      "keyword_hits_alg": [
+        "asymptotic"
+      ],
+      "categories": [
+        "math.SG",
+        "math.SG",
+        "math-ph",
+        "math.DS"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2604.00448",
+      "title": "Morse diagrams, Murasugi sums, and the mapping class group",
+      "content_topic": "geometric",
+      "published": "2026-04-01",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 9.8,
+      "keyword_score_alg": 1.0,
+      "keyword_margin": 8.8,
+      "keyword_hits_geo": [
+        "manifold",
+        "surface",
+        "mapping class",
+        "contact structure",
+        "boundary"
+      ],
+      "keyword_hits_alg": [
+        "combinatorial"
+      ],
+      "categories": [
+        "math.GT",
+        "math.GT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2603.29397",
+      "title": "The Andersen-Masbaum-Ueno conjecture for the derived subgroup of the Johnson kernel",
+      "content_topic": "geometric",
+      "published": "2026-03-31",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 6.2,
+      "keyword_score_alg": 2.2,
+      "keyword_margin": 4.0,
+      "keyword_hits_geo": [
+        "surface",
+        "mapping class"
+      ],
+      "keyword_hits_alg": [
+        "representation"
+      ],
+      "categories": [
+        "math.GT",
+        "math.GT",
+        "math.RT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2603.28694",
+      "title": "Measurable boundary maps and Patterson--Sullivan measures for non-Borel Anosov groups on the Furstenberg boundary",
+      "content_topic": "geometric",
+      "published": "2026-03-30",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 8.9,
+      "keyword_score_alg": 1.0,
+      "keyword_margin": 7.9,
+      "keyword_hits_geo": [
+        "hyperbolic",
+        "manifold",
+        "mapping class",
+        "boundary"
+      ],
+      "keyword_hits_alg": [
+        "representation"
+      ],
+      "categories": [
+        "math.GT",
+        "math.GT",
+        "math.DS",
+        "math.GR"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2603.25714",
+      "title": "Spectrum of SL(2,R)-characters: the once-punctured torus case",
+      "content_topic": "geometric",
+      "published": "2026-03-26",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 8.0,
+      "keyword_score_alg": 2.4,
+      "keyword_margin": 5.6,
+      "keyword_hits_geo": [
+        "surface",
+        "mapping class",
+        "lamination",
+        "fundamental group",
+        "topological"
+      ],
+      "keyword_hits_alg": [
+        "representation",
+        "character",
+        "logic"
+      ],
+      "categories": [
+        "math.DS",
+        "math.DS",
+        "math.GT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2603.25586",
+      "title": "An explicit presentation for asymptotically rigid mapping class groups",
+      "content_topic": "geometric",
+      "published": "2026-03-26",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 7.2,
+      "keyword_score_alg": 0.8,
+      "keyword_margin": 6.4,
+      "keyword_hits_geo": [
+        "surface",
+        "mapping class",
+        "fundamental group"
+      ],
+      "keyword_hits_alg": [
+        "asymptotic"
+      ],
+      "categories": [
+        "math.GT",
+        "math.GT",
+        "math.GR"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2603.21560",
+      "title": "The non-peripheral curve graph and divergence in big mapping class groups",
+      "content_topic": "geometric",
+      "published": "2026-03-23",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 8.0,
+      "keyword_score_alg": 0.8,
+      "keyword_margin": 7.2,
+      "keyword_hits_geo": [
+        "hyperbolic",
+        "surface",
+        "mapping class"
+      ],
+      "keyword_hits_alg": [
+        "ring"
+      ],
+      "categories": [
+        "math.GT",
+        "math.GT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2603.14582",
+      "title": "Recognising conjugacy classes of Dehn twists on $\\mathbb D_3$",
+      "content_topic": "geometric",
+      "published": "2026-03-15",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 5.0,
+      "keyword_score_alg": 0.8,
+      "keyword_margin": 4.2,
+      "keyword_hits_geo": [
+        "mapping class"
+      ],
+      "keyword_hits_alg": [
+        "ring"
+      ],
+      "categories": [
+        "math.GT",
+        "math.GT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2603.14338",
+      "title": "Fixed point theorem for cluster modular groups",
+      "content_topic": "geometric",
+      "published": "2026-03-15",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 8.5,
+      "keyword_score_alg": 0.8,
+      "keyword_margin": 7.7,
+      "keyword_hits_geo": [
+        "manifold",
+        "mapping class",
+        "teichm\u00fcller"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.GT",
+        "math.GT",
+        "math.CO",
+        "math.GR"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2603.12484",
+      "title": "Mapping class group action on the cohomology of the $\\mathrm{SL}_n$ character variety",
+      "content_topic": "geometric",
+      "published": "2026-03-12",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 5.7,
+      "keyword_score_alg": 2.6,
+      "keyword_margin": 3.1,
+      "keyword_hits_geo": [
+        "surface",
+        "mapping class"
+      ],
+      "keyword_hits_alg": [
+        "character"
+      ],
+      "categories": [
+        "math.AG",
+        "math.AG",
+        "math.GT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2603.04096",
+      "title": "Strong Approximation for the Character Variety of the Four-Times Punctured Sphere",
+      "content_topic": "algebraic",
+      "published": "2026-03-04",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 3.2,
+      "keyword_score_alg": 3.6,
+      "keyword_margin": -0.4,
+      "keyword_hits_geo": [
+        "surface",
+        "mapping class"
+      ],
+      "keyword_hits_alg": [
+        "character",
+        "combinatorial"
+      ],
+      "categories": [
+        "math.NT",
+        "math.NT",
+        "math.DS",
+        "math.GR"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2603.02848",
+      "title": "Anabelian perspectives in Galois-Teichm\u00fcller theory",
+      "content_topic": "geometric",
+      "published": "2026-03-03",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 7.7,
+      "keyword_score_alg": 6.3,
+      "keyword_margin": 1.4,
+      "keyword_hits_geo": [
+        "homotopy",
+        "mapping class",
+        "teichm\u00fcller",
+        "moduli space"
+      ],
+      "keyword_hits_alg": [
+        "functor",
+        "galois",
+        "combinatorial"
+      ],
+      "categories": [
+        "math.AG",
+        "math.AG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2602.24179",
+      "title": "When loxodromics are pseudo-Anosovs on witnesses",
+      "content_topic": "geometric",
+      "published": "2026-02-27",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 6.8,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 6.8,
+      "keyword_hits_geo": [
+        "mapping class",
+        "handlebody"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.GT",
+        "math.GT",
+        "math.GR"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2602.23275",
+      "title": "Cusped spaces for hierarchically hyperbolic groups, and applications to Dehn filling quotients",
+      "content_topic": "geometric",
+      "published": "2026-02-26",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 6.8,
+      "keyword_score_alg": 1.5,
+      "keyword_margin": 5.3,
+      "keyword_hits_geo": [
+        "hyperbolic",
+        "mapping class"
+      ],
+      "keyword_hits_alg": [
+        "morphism"
+      ],
+      "categories": [
+        "math.GT",
+        "math.GT",
+        "math.GR"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2602.22393",
+      "title": "Hatcher-Thurston complex for surfaces with non-planar ends",
+      "content_topic": "geometric",
+      "published": "2026-02-25",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 6.2,
+      "keyword_score_alg": 1.5,
+      "keyword_margin": 4.7,
+      "keyword_hits_geo": [
+        "surface",
+        "mapping class"
+      ],
+      "keyword_hits_alg": [
+        "morphism"
+      ],
+      "categories": [
+        "math.GT",
+        "math.GT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2501.03900",
+      "title": "Realising VCD for untwisted automorphism groups of RAAGs",
+      "content_topic": "geometric",
+      "published": "2025-01-07",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 3.6,
+      "keyword_score_alg": 2.3,
+      "keyword_margin": 1.3,
+      "keyword_hits_geo": [
+        "dimension",
+        "cube complex"
+      ],
+      "keyword_hits_alg": [
+        "morphism",
+        "logic"
+      ],
+      "categories": [
+        "math.GR",
+        "math.GR",
+        "math.GT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2501.01688",
+      "title": "Explicit polynomial bounds on Dehn functions of subgroups of hyperbolic groups",
+      "content_topic": "geometric",
+      "published": "2025-01-03",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 4.9,
+      "keyword_score_alg": 1.8,
+      "keyword_margin": 3.1,
+      "keyword_hits_geo": [
+        "hyperbolic",
+        "cube complex"
+      ],
+      "keyword_hits_alg": [
+        "ring",
+        "polynomial"
+      ],
+      "categories": [
+        "math.GR",
+        "math.GR",
+        "math.GT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2412.08248",
+      "title": "Product separability for special cube complexes",
+      "content_topic": "geometric",
+      "published": "2024-12-11",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 5.4,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 5.4,
+      "keyword_hits_geo": [
+        "hyperbolic",
+        "cube complex",
+        "cat(0)"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.GR",
+        "math.GR"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2411.06242",
+      "title": "Spatial Cube Complexes",
+      "content_topic": "geometric",
+      "published": "2024-11-09",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 5.1,
+      "keyword_score_alg": 1.8,
+      "keyword_margin": 3.3,
+      "keyword_hits_geo": [
+        "cube complex",
+        "cat(0)"
+      ],
+      "keyword_hits_alg": [
+        "category",
+        "character"
+      ],
+      "categories": [
+        "math.GR",
+        "math.GR",
+        "math.GT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2410.16390",
+      "title": "Asphericity of cubical presentations: the general case",
+      "content_topic": "geometric",
+      "published": "2024-10-21",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 4.6,
+      "keyword_score_alg": 0.8,
+      "keyword_margin": 3.8,
+      "keyword_hits_geo": [
+        "fundamental group",
+        "dimension",
+        "cube complex"
+      ],
+      "keyword_hits_alg": [
+        "logic"
+      ],
+      "categories": [
+        "math.GR",
+        "math.GR",
+        "math.GT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2409.14290",
+      "title": "On the boundary criterion for relative cubulation: multi-ended parabolics",
+      "content_topic": "geometric",
+      "published": "2024-09-22",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 7.5,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 7.5,
+      "keyword_hits_geo": [
+        "hyperbolic",
+        "boundary",
+        "cube complex",
+        "cat(0)"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.GR",
+        "math.GR",
+        "math.GT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2409.09133",
+      "title": "Markov chains, CAT(0) cube complexes, and enumeration: monotone paths in a strip mix slowly",
+      "content_topic": "geometric",
+      "published": "2024-09-13",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 3.6,
+      "keyword_score_alg": 2.6,
+      "keyword_margin": 1.0,
+      "keyword_hits_geo": [
+        "cube complex",
+        "cat(0)"
+      ],
+      "keyword_hits_alg": [
+        "combinatorial"
+      ],
+      "categories": [
+        "math.CO",
+        "math.CO",
+        "math.PR"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2409.08663",
+      "title": "Factor system for graphs and combinatorial HHS",
+      "content_topic": "geometric",
+      "published": "2024-09-13",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 6.6,
+      "keyword_score_alg": 1.0,
+      "keyword_margin": 5.6,
+      "keyword_hits_geo": [
+        "cube complex",
+        "cat(0)"
+      ],
+      "keyword_hits_alg": [
+        "combinatorial"
+      ],
+      "categories": [
+        "math.GT",
+        "math.GT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2408.10105",
+      "title": "Topological and Dynamic Properties of the Sublinearly Morse Boundary and the Quasi-Redirecting Boundary",
+      "content_topic": "geometric",
+      "published": "2024-08-19",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 14.3,
+      "keyword_score_alg": 0.8,
+      "keyword_margin": 13.5,
+      "keyword_hits_geo": [
+        "geodesic",
+        "metric space",
+        "topological",
+        "boundary",
+        "dimension",
+        "geometric group",
+        "cube complex",
+        "cat(0)"
+      ],
+      "keyword_hits_alg": [
+        "logic"
+      ],
+      "categories": [
+        "math.MG",
+        "math.MG",
+        "math.GR",
+        "math.GT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2408.09091",
+      "title": "On the Girth of Groups acting on CAT(0) cube complexes",
+      "content_topic": "geometric",
+      "published": "2024-08-17",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 5.6,
+      "keyword_score_alg": 2.3,
+      "keyword_margin": 3.3,
+      "keyword_hits_geo": [
+        "dimension",
+        "cube complex",
+        "cat(0)"
+      ],
+      "keyword_hits_alg": [
+        "morphism",
+        "lattice"
+      ],
+      "categories": [
+        "math.GR",
+        "math.GR",
+        "math.GT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2407.17034",
+      "title": "A vanishing criterion for cup products and Massey products in bounded cohomology",
+      "content_topic": "geometric",
+      "published": "2024-07-24",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 5.1,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 5.1,
+      "keyword_hits_geo": [
+        "cube complex",
+        "cat(0)"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.GR",
+        "math.GR",
+        "math.GT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2407.09275",
+      "title": "Coarse obstructions to cocompact cubulation",
+      "content_topic": "geometric",
+      "published": "2024-07-12",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 5.3,
+      "keyword_score_alg": 0.8,
+      "keyword_margin": 4.5,
+      "keyword_hits_geo": [
+        "dimension",
+        "cube complex",
+        "cat(0)"
+      ],
+      "keyword_hits_alg": [
+        "ring"
+      ],
+      "categories": [
+        "math.GR",
+        "math.GR",
+        "math.MG"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2406.02121",
+      "title": "Surface groups among cubulated hyperbolic and one-relator groups",
+      "content_topic": "geometric",
+      "published": "2024-06-04",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 7.1,
+      "keyword_score_alg": 0.8,
+      "keyword_margin": 6.3,
+      "keyword_hits_geo": [
+        "hyperbolic",
+        "surface",
+        "fundamental group",
+        "cube complex"
+      ],
+      "keyword_hits_alg": [
+        "ring"
+      ],
+      "categories": [
+        "math.GR",
+        "math.GR",
+        "math.GT"
+      ]
+    },
+    {
+      "style": "geometric",
+      "arxiv": "2406.09432",
+      "title": "Acylindrical hyperbolicity and the centers of Artin groups that are not free of infinity",
+      "content_topic": "geometric",
+      "published": "2024-06-02",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 4.9,
+      "keyword_score_alg": 0.0,
+      "keyword_margin": 4.9,
+      "keyword_hits_geo": [
+        "hyperbolic",
+        "cube complex"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.GR",
+        "math.GR",
+        "math.GT"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11691",
+      "title": "On the Hilbert depth of a special class of squarefree monomial ideals",
+      "content_topic": "algebraic",
+      "published": "2026-07-13",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 5.2,
+      "keyword_margin": -5.2,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "ring",
+        "ideal",
+        "polynomial"
+      ],
+      "categories": [
+        "math.AC",
+        "math.AC"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11657",
+      "title": "Trajectory Planning and Certification for 3-DOF Robot Manipulators Using Real Quantifier Elimination Based on Comprehensive Gr\u00f6bner Systems",
+      "content_topic": "algebraic",
+      "published": "2026-07-13",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 1.2,
+      "keyword_margin": -1.2,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [],
+      "categories": [
+        "cs.RO",
+        "cs.RO",
+        "cs.SC",
+        "math.AC"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11381",
+      "title": "Common extensions of valuations to rational function fields",
+      "content_topic": "algebraic",
+      "published": "2026-07-13",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.5,
+      "keyword_score_alg": 5.0,
+      "keyword_margin": -4.5,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "polynomial",
+        "character"
+      ],
+      "categories": [
+        "math.AC",
+        "math.AC",
+        "math.AG"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11259",
+      "title": "Collinearly complete sets and finite subgroups from configurations of skew $n$-planes in $\\mathbb P^{2n+1}_K$",
+      "content_topic": "algebraic",
+      "published": "2026-07-13",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 2.7,
+      "keyword_score_alg": 3.8,
+      "keyword_margin": -1.1,
+      "keyword_hits_geo": [
+        "surface",
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "character"
+      ],
+      "categories": [
+        "math.AG",
+        "math.AG",
+        "math.AC"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11223",
+      "title": "Extending valuations of local domains to complete local domains without changing the value group",
+      "content_topic": "algebraic",
+      "published": "2026-07-13",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.5,
+      "keyword_score_alg": 5.8,
+      "keyword_margin": -5.3,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "ring",
+        "ideal",
+        "character"
+      ],
+      "categories": [
+        "math.AC",
+        "math.AC",
+        "math.AG"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11219",
+      "title": "Integral closure for (additively idempotent) semirings",
+      "content_topic": "algebraic",
+      "published": "2026-07-13",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.5,
+      "keyword_score_alg": 4.2,
+      "keyword_margin": -3.7,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "ring"
+      ],
+      "categories": [
+        "math.AC",
+        "math.AC",
+        "math.AG"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.11093",
+      "title": "Existence of a far-flung Gorenstein numerical semigroup attaining the Herzog--Kumashiro--Stamate bound",
+      "content_topic": "algebraic",
+      "published": "2026-07-13",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 2.4,
+      "keyword_margin": -2.4,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.AC",
+        "math.AC"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10976",
+      "title": "Graded n-Absorbing Ideals and their Combinatorial Structure",
+      "content_topic": "algebraic",
+      "published": "2026-07-13",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 1.2,
+      "keyword_score_alg": 7.0,
+      "keyword_margin": -5.8,
+      "keyword_hits_geo": [
+        "simplex"
+      ],
+      "keyword_hits_alg": [
+        "ring",
+        "ideal",
+        "polynomial",
+        "combinatorial",
+        "lattice"
+      ],
+      "categories": [
+        "math.AC",
+        "math.AC"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10778",
+      "title": "The Arithmetic of Semirings Part I: Ideals",
+      "content_topic": "algebraic",
+      "published": "2026-07-12",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 5.8,
+      "keyword_margin": -5.8,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "ring",
+        "ideal",
+        "character"
+      ],
+      "categories": [
+        "math.AC",
+        "math.AC",
+        "math.NT"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10691",
+      "title": "Geometrically vertex decomposable star configurations",
+      "content_topic": "algebraic",
+      "published": "2026-07-12",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.5,
+      "keyword_score_alg": 4.4,
+      "keyword_margin": -3.9,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "ideal"
+      ],
+      "categories": [
+        "math.AC",
+        "math.AC",
+        "math.AG"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10639",
+      "title": "Characteristic Independence of Betti Numbers of Monomial Ideals in Five Variables",
+      "content_topic": "algebraic",
+      "published": "2026-07-12",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 2.3,
+      "keyword_score_alg": 5.6,
+      "keyword_margin": -3.3,
+      "keyword_hits_geo": [
+        "triangulation",
+        "topological"
+      ],
+      "keyword_hits_alg": [
+        "ideal",
+        "character",
+        "logic"
+      ],
+      "categories": [
+        "math.AC",
+        "math.AC",
+        "math.CO"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10492",
+      "title": "Polynomials over idempotent semifields",
+      "content_topic": "algebraic",
+      "published": "2026-07-11",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 4.0,
+      "keyword_margin": -4.0,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "polynomial",
+        "character"
+      ],
+      "categories": [
+        "math.AC",
+        "math.AC"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10393",
+      "title": "Buchsbaum modules and parameter ideals under flat extensions",
+      "content_topic": "algebraic",
+      "published": "2026-07-11",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 9.3,
+      "keyword_margin": -9.3,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "homomorphism",
+        "morphism",
+        "module",
+        "ring",
+        "ideal",
+        "character"
+      ],
+      "categories": [
+        "math.AC",
+        "math.AC"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10300",
+      "title": "Homological invariants of edge ideals of the multiple extended complete split-like graphs",
+      "content_topic": "algebraic",
+      "published": "2026-07-11",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.5,
+      "keyword_score_alg": 7.0,
+      "keyword_margin": -6.5,
+      "keyword_hits_geo": [
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "ideal",
+        "polynomial",
+        "tensor",
+        "logic"
+      ],
+      "categories": [
+        "math.AC",
+        "math.AC",
+        "cs.DM",
+        "math.CO"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.10178",
+      "title": "Factorizations in rational monogenic semidomains",
+      "content_topic": "algebraic",
+      "published": "2026-07-11",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 4.2,
+      "keyword_margin": -4.2,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "ring",
+        "ideal"
+      ],
+      "categories": [
+        "math.AC",
+        "math.AC"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.09340",
+      "title": "On the Jung-van der Kulk decomposition into Pascal finite factors",
+      "content_topic": "algebraic",
+      "published": "2026-07-10",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 1.5,
+      "keyword_score_alg": 6.3,
+      "keyword_margin": -4.8,
+      "keyword_hits_geo": [
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "morphism",
+        "polynomial",
+        "character"
+      ],
+      "categories": [
+        "math.AG",
+        "math.AG",
+        "math.AC"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.09028",
+      "title": "On $F$-thresholds of differential power filtrations",
+      "content_topic": "algebraic",
+      "published": "2026-07-10",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 1.0,
+      "keyword_score_alg": 6.2,
+      "keyword_margin": -5.2,
+      "keyword_hits_geo": [
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "ring",
+        "ideal",
+        "polynomial"
+      ],
+      "categories": [
+        "math.AC",
+        "math.AC",
+        "math.AG"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.08995",
+      "title": "$S_r$ properties of generalized Cohen--Macaulay modules and rings having liftable local cohomology via Serre depth",
+      "content_topic": "algebraic",
+      "published": "2026-07-09",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.5,
+      "keyword_score_alg": 6.0,
+      "keyword_margin": -5.5,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "module",
+        "ring",
+        "character"
+      ],
+      "categories": [
+        "math.AC",
+        "math.AC",
+        "math.AG"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.08965",
+      "title": "Factoring maps to big Cohen-Macaulay algebras through blowups",
+      "content_topic": "algebraic",
+      "published": "2026-07-09",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 1.0,
+      "keyword_score_alg": 9.9,
+      "keyword_margin": -8.9,
+      "keyword_hits_geo": [
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "functor",
+        "category",
+        "module",
+        "ring",
+        "derived category"
+      ],
+      "categories": [
+        "math.AC",
+        "math.AC",
+        "math.AG"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.08871",
+      "title": "Derived Kunz and Radu--Andr\u00e9 Theorems",
+      "content_topic": "algebraic",
+      "published": "2026-07-09",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 2.4,
+      "keyword_margin": -2.4,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.AC",
+        "math.AC"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.07672",
+      "title": "A category of locally convex Lie algebroids",
+      "content_topic": "algebraic",
+      "published": "2026-07-08",
+      "query_bucket": "geometric",
+      "keyword_score_geo": 3.5,
+      "keyword_score_alg": 4.5,
+      "keyword_margin": -1.0,
+      "keyword_hits_geo": [
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "category",
+        "morphism",
+        "ring",
+        "representation"
+      ],
+      "categories": [
+        "math.DG",
+        "math.DG",
+        "math.FA"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.07458",
+      "title": "Analytic Spread via Linear Matroids",
+      "content_topic": "algebraic",
+      "published": "2026-07-08",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 5.2,
+      "keyword_margin": -5.2,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "ideal",
+        "combinatorial"
+      ],
+      "categories": [
+        "math.AC",
+        "math.AC",
+        "math.CO"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06926",
+      "title": "Harish-Chandra images of orthosymplectic Sugawara operators and Casimir elements",
+      "content_topic": "algebraic",
+      "published": "2026-07-08",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 1.0,
+      "keyword_score_alg": 5.7,
+      "keyword_margin": -4.7,
+      "keyword_hits_geo": [
+        "symplectic"
+      ],
+      "keyword_hits_alg": [
+        "homomorphism",
+        "morphism"
+      ],
+      "categories": [
+        "math.RT",
+        "math.RT",
+        "math-ph",
+        "math.QA"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06899",
+      "title": "Covers of Bruhat-Tits trees",
+      "content_topic": "algebraic",
+      "published": "2026-07-08",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 4.9,
+      "keyword_margin": -4.9,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "morphism"
+      ],
+      "categories": [
+        "math.RT",
+        "math.RT",
+        "math.NT"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06749",
+      "title": "A field-independent filtration of plethystic modules for $\\mathrm{SL}_2(\\mathbb{F})$ that categorifies a product rule for the Cartan subalgebra of $\\mathcal{U}_q(\\mathfrak{sl}_2)$",
+      "content_topic": "algebraic",
+      "published": "2026-07-07",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 11.7,
+      "keyword_margin": -11.7,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "functor",
+        "morphism",
+        "module",
+        "ring",
+        "representation",
+        "scheme",
+        "combinatorial"
+      ],
+      "categories": [
+        "math.RT",
+        "math.RT",
+        "math.CO"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06710",
+      "title": "Honeycombs and Sums of Hermitian Matrices, Revisited",
+      "content_topic": "algebraic",
+      "published": "2026-07-07",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.6,
+      "keyword_score_alg": 4.6,
+      "keyword_margin": -4.0,
+      "keyword_hits_geo": [
+        "boundary"
+      ],
+      "keyword_hits_alg": [
+        "ring",
+        "axiom"
+      ],
+      "categories": [
+        "math.CO",
+        "math.CO",
+        "math.RT"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06635",
+      "title": "Schreyer resolution of modules over formal power series",
+      "content_topic": "algebraic",
+      "published": "2026-07-07",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 7.7,
+      "keyword_margin": -7.7,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "module",
+        "polynomial",
+        "representation",
+        "character",
+        "formal power series"
+      ],
+      "categories": [
+        "math.AC",
+        "math.AC"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06543",
+      "title": "Inner Products and Banach Algebra structures on Bicomplex Numbers and Their Associated Spaces",
+      "content_topic": "algebraic",
+      "published": "2026-07-07",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 3.4,
+      "keyword_margin": -3.4,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "polynomial"
+      ],
+      "categories": [
+        "math.RT",
+        "math.RT",
+        "math.CV",
+        "math.FA",
+        "math.GN"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06512",
+      "title": "Commutativity of nilpotent cohomological Hall algebras of $\\mathbf{A}^2$",
+      "content_topic": "algebraic",
+      "published": "2026-07-07",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 1.0,
+      "keyword_score_alg": 5.2,
+      "keyword_margin": -4.2,
+      "keyword_hits_geo": [
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "lie algebra",
+        "logic"
+      ],
+      "categories": [
+        "math.RT",
+        "math.RT",
+        "math.AG"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06490",
+      "title": "Convergent realizations of Lie subalgebras",
+      "content_topic": "geometric",
+      "published": "2026-07-07",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 3.5,
+      "keyword_score_alg": 3.3,
+      "keyword_margin": 0.2,
+      "keyword_hits_geo": [
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "character",
+        "formal power series"
+      ],
+      "categories": [
+        "math.DG",
+        "math.DG",
+        "math.OC",
+        "math.RT"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06487",
+      "title": "Dual imaginary vectors, tight monomial cones and quantum Frobenius morphism",
+      "content_topic": "algebraic",
+      "published": "2026-07-07",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.5,
+      "keyword_score_alg": 4.9,
+      "keyword_margin": -4.4,
+      "keyword_hits_geo": [
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "morphism",
+        "lie algebra"
+      ],
+      "categories": [
+        "math.RT",
+        "math.RT",
+        "math.QA"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06397",
+      "title": "Fast Rational Univariate Representation via Gaussian Elimination",
+      "content_topic": "algebraic",
+      "published": "2026-07-07",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.5,
+      "keyword_score_alg": 4.2,
+      "keyword_margin": -3.7,
+      "keyword_hits_geo": [
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "ideal",
+        "polynomial",
+        "representation"
+      ],
+      "categories": [
+        "cs.SC",
+        "cs.SC",
+        "cs.DS",
+        "math.AC"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06394",
+      "title": "Purity of extremal rays of Betti cones",
+      "content_topic": "algebraic",
+      "published": "2026-07-07",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.5,
+      "keyword_score_alg": 7.5,
+      "keyword_margin": -7.0,
+      "keyword_hits_geo": [
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "module",
+        "ring",
+        "polynomial",
+        "character",
+        "finite field"
+      ],
+      "categories": [
+        "math.AC",
+        "math.AC"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06372",
+      "title": "Groebner.jl: Fast Gr\u00f6bner Tracing in Julia",
+      "content_topic": "algebraic",
+      "published": "2026-07-07",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 3.2,
+      "keyword_margin": -3.2,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "ideal",
+        "polynomial"
+      ],
+      "categories": [
+        "cs.SC",
+        "cs.SC",
+        "math.AC"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.06164",
+      "title": "Brauer groups of resolved quiver moduli via gerbes",
+      "content_topic": "algebraic",
+      "published": "2026-07-07",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 2.5,
+      "keyword_score_alg": 5.0,
+      "keyword_margin": -2.5,
+      "keyword_hits_geo": [
+        "moduli space"
+      ],
+      "keyword_hits_alg": [
+        "representation",
+        "logic"
+      ],
+      "categories": [
+        "math.AG",
+        "math.AG",
+        "math.RT"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.05556",
+      "title": "Graded families of ideals and convex regions",
+      "content_topic": "algebraic",
+      "published": "2026-07-06",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 1.0,
+      "keyword_score_alg": 6.6,
+      "keyword_margin": -5.6,
+      "keyword_hits_geo": [
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "ideal",
+        "character",
+        "asymptotic"
+      ],
+      "categories": [
+        "math.AC",
+        "math.AC",
+        "math.AG",
+        "math.CO"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.05213",
+      "title": "Integer Coefficient Power Series with Prescribed Zero Sets",
+      "content_topic": "algebraic",
+      "published": "2026-07-06",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 3.4,
+      "keyword_margin": -3.4,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "scheme"
+      ],
+      "categories": [
+        "math.CV",
+        "math.CV",
+        "math.AC",
+        "math.NT"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.05160",
+      "title": "Algebraic Modelings of the Supersingular Isogeny Problem",
+      "content_topic": "algebraic",
+      "published": "2026-07-06",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.5,
+      "keyword_score_alg": 2.2,
+      "keyword_margin": -1.7,
+      "keyword_hits_geo": [
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "polynomial"
+      ],
+      "categories": [
+        "cs.SC",
+        "cs.SC",
+        "cs.CR",
+        "math.AC"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.05021",
+      "title": "Semigroup approach to admissible representations of the infinite symmetric group",
+      "content_topic": "algebraic",
+      "published": "2026-07-06",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 3.4,
+      "keyword_margin": -3.4,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "representation"
+      ],
+      "categories": [
+        "math.RT",
+        "math.RT"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.04964",
+      "title": "A Join-Matching Theorem for Squarefree Powers of Edge Ideals, with Applications to Wheel and Related Graphs",
+      "content_topic": "algebraic",
+      "published": "2026-07-06",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.5,
+      "keyword_score_alg": 4.2,
+      "keyword_margin": -3.7,
+      "keyword_hits_geo": [
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "ideal"
+      ],
+      "categories": [
+        "math.AC",
+        "math.AC",
+        "math.CO"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.04933",
+      "title": "Theta correspondence as a C*-correspondence",
+      "content_topic": "algebraic",
+      "published": "2026-07-06",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 4.9,
+      "keyword_margin": -4.9,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.RT",
+        "math.RT",
+        "math.NT",
+        "math.OA"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.04931",
+      "title": "A note on prismatic sites for p-quasisyntomic rings",
+      "content_topic": "algebraic",
+      "published": "2026-07-06",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 1.0,
+      "keyword_score_alg": 4.0,
+      "keyword_margin": -3.0,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "ring"
+      ],
+      "categories": [
+        "math.AG",
+        "math.AG",
+        "math.AC"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.04843",
+      "title": "Localization and Affine Schemes over $\\mathbb{F}_1$",
+      "content_topic": "algebraic",
+      "published": "2026-07-06",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 2.2,
+      "keyword_score_alg": 9.0,
+      "keyword_margin": -6.8,
+      "keyword_hits_geo": [
+        "homotopy"
+      ],
+      "keyword_hits_alg": [
+        "functor",
+        "category",
+        "ring",
+        "scheme",
+        "algebraic geometry"
+      ],
+      "categories": [
+        "math.AG",
+        "math.AG",
+        "math.AC"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.04831",
+      "title": "On two questions of Qi on saturated filtrations",
+      "content_topic": "algebraic",
+      "published": "2026-07-06",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 1.9,
+      "keyword_score_alg": 3.4,
+      "keyword_margin": -1.5,
+      "keyword_hits_geo": [
+        "metric space"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.AC",
+        "math.AC",
+        "math.AG"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.04793",
+      "title": "A family of generalized Gelfand pairs attached to $3$-step nilpotent Lie groups",
+      "content_topic": "algebraic",
+      "published": "2026-07-06",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 2.7,
+      "keyword_margin": -2.7,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "morphism"
+      ],
+      "categories": [
+        "math.FA",
+        "math.FA",
+        "math.RT"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.04480",
+      "title": "Category $\\mathcal{O}$ for truncated shifted Yangians and the bi-infinite Bott-Samelson variety",
+      "content_topic": "algebraic",
+      "published": "2026-07-05",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.5,
+      "keyword_score_alg": 7.4,
+      "keyword_margin": -6.9,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "category",
+        "ring",
+        "representation",
+        "lie algebra"
+      ],
+      "categories": [
+        "math.RT",
+        "math.RT",
+        "math.AG",
+        "math.QA"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.04340",
+      "title": "On the number of Frobenius periodic vector bundles on elliptic curves",
+      "content_topic": "algebraic",
+      "published": "2026-07-05",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 2.0,
+      "keyword_score_alg": 6.3,
+      "keyword_margin": -4.3,
+      "keyword_hits_geo": [
+        "fundamental group"
+      ],
+      "keyword_hits_alg": [
+        "representation",
+        "character",
+        "generating function"
+      ],
+      "categories": [
+        "math.AG",
+        "math.AG",
+        "math.RT"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.04231",
+      "title": "Ordered alternating paths and the depth of symbolic powers of cover ideals of graphs",
+      "content_topic": "algebraic",
+      "published": "2026-07-05",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 6.0,
+      "keyword_margin": -6.0,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "ring",
+        "ideal",
+        "polynomial"
+      ],
+      "categories": [
+        "math.AC",
+        "math.AC",
+        "math.CO"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.03500",
+      "title": "Standard Veronese degree and star configurations",
+      "content_topic": "algebraic",
+      "published": "2026-07-03",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 4.2,
+      "keyword_margin": -4.2,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "ideal"
+      ],
+      "categories": [
+        "math.AC",
+        "math.AC",
+        "math.CO"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.03475",
+      "title": "On Landweber`s unique factorization problem",
+      "content_topic": "algebraic",
+      "published": "2026-07-03",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 5.7,
+      "keyword_margin": -5.7,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "ring",
+        "polynomial",
+        "formal power series"
+      ],
+      "categories": [
+        "math.AC",
+        "math.AC"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.01467",
+      "title": "Pure infiniteness and primary factorisation",
+      "content_topic": "algebraic",
+      "published": "2026-07-01",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 3.3,
+      "keyword_margin": -3.3,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "ring",
+        "ideal"
+      ],
+      "categories": [
+        "math.FA",
+        "math.FA",
+        "math.RA"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.01411",
+      "title": "Homomorphisms from topological groups to inverse limits",
+      "content_topic": "algebraic",
+      "published": "2026-07-01",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.8,
+      "keyword_score_alg": 5.9,
+      "keyword_margin": -5.1,
+      "keyword_hits_geo": [
+        "topological"
+      ],
+      "keyword_hits_alg": [
+        "homomorphism",
+        "morphism",
+        "logic"
+      ],
+      "categories": [
+        "math.GR",
+        "math.GR",
+        "math.LO"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.01195",
+      "title": "Hopf algebraic homogeneous spaces interpreted rationally: the Abe-Kanno theorem",
+      "content_topic": "algebraic",
+      "published": "2026-07-01",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.5,
+      "keyword_score_alg": 5.0,
+      "keyword_margin": -4.5,
+      "keyword_hits_geo": [
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "ring",
+        "hopf"
+      ],
+      "categories": [
+        "math.RA",
+        "math.RA"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.01110",
+      "title": "Definability of Functional Properties in the Basic Modal-Temporal Language over Ordered Frames",
+      "content_topic": "algebraic",
+      "published": "2026-07-01",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 4.1,
+      "keyword_margin": -4.1,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "definable",
+        "logic"
+      ],
+      "categories": [
+        "cs.LO",
+        "cs.LO",
+        "math.LO"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.01068",
+      "title": "New results about Q and $\u0394$-spaces",
+      "content_topic": "algebraic",
+      "published": "2026-07-01",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.8,
+      "keyword_score_alg": 2.6,
+      "keyword_margin": -1.8,
+      "keyword_hits_geo": [
+        "topological"
+      ],
+      "keyword_hits_alg": [
+        "logic"
+      ],
+      "categories": [
+        "math.GN",
+        "math.GN",
+        "math.LO"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.01066",
+      "title": "Double Transposed Poisson Algebras",
+      "content_topic": "algebraic",
+      "published": "2026-07-01",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 5.7,
+      "keyword_margin": -5.7,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "ring",
+        "representation"
+      ],
+      "categories": [
+        "math.RT",
+        "math.RT",
+        "math.QA",
+        "math.RA"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.01054",
+      "title": "Residual finite-dimensionality of ultragraph algebras via branching systems",
+      "content_topic": "algebraic",
+      "published": "2026-07-01",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 2.1,
+      "keyword_score_alg": 7.1,
+      "keyword_margin": -5.0,
+      "keyword_hits_geo": [
+        "link",
+        "boundary",
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "representation",
+        "character",
+        "combinatorial"
+      ],
+      "categories": [
+        "math.OA",
+        "math.OA",
+        "math.RA"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.00792",
+      "title": "On a new class of high-corank Kac-Moody algebras",
+      "content_topic": "algebraic",
+      "published": "2026-07-01",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 5.4,
+      "keyword_margin": -5.4,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "ring",
+        "asymptotic",
+        "lattice"
+      ],
+      "categories": [
+        "math.RA",
+        "math.RA",
+        "hep-th",
+        "math-ph"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.00757",
+      "title": "A generalization of a representation of the integers modulo $p$, for the purpose of occasionally establishing the unsolvability of diophantine inequalities",
+      "content_topic": "algebraic",
+      "published": "2026-07-01",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 4.6,
+      "keyword_margin": -4.6,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "representation"
+      ],
+      "categories": [
+        "math.LO",
+        "math.LO"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.00404",
+      "title": "Sums of units in finite rings and applications to Cayley graphs",
+      "content_topic": "algebraic",
+      "published": "2026-07-01",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 5.9,
+      "keyword_margin": -5.9,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "ring",
+        "finite field",
+        "number theory"
+      ],
+      "categories": [
+        "math.RA",
+        "math.RA"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.00393",
+      "title": "Local (Anti-)Superderivations on Nilpotent Lie Superalgebras",
+      "content_topic": "algebraic",
+      "published": "2026-07-01",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.5,
+      "keyword_score_alg": 3.0,
+      "keyword_margin": -2.5,
+      "keyword_hits_geo": [
+        "dimension"
+      ],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.RA",
+        "math.RA"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.00367",
+      "title": "The continuous oriented chromatic number of directed Schreier graphs of $\\mathbb Z^2$-shift actions",
+      "content_topic": "algebraic",
+      "published": "2026-07-01",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 7.7,
+      "keyword_margin": -7.7,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "homomorphism",
+        "morphism"
+      ],
+      "categories": [
+        "math.LO",
+        "math.LO",
+        "math.CO"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.00359",
+      "title": "The Equivalence Problem for Generalized Airy Operators",
+      "content_topic": "algebraic",
+      "published": "2026-07-01",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 3.0,
+      "keyword_margin": -3.0,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.RA",
+        "math.RA"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.00323",
+      "title": "Solvability and nilpotency of transposed Novikov-Poisson algebras",
+      "content_topic": "algebraic",
+      "published": "2026-07-01",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 3.0,
+      "keyword_margin": -3.0,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [],
+      "categories": [
+        "math.RA",
+        "math.RA"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.01271",
+      "title": "On Strong Structural Completeness of Varieties and Quasivarieties",
+      "content_topic": "algebraic",
+      "published": "2026-06-30",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 4.4,
+      "keyword_margin": -4.4,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "logic"
+      ],
+      "categories": [
+        "math.LO",
+        "math.LO",
+        "cs.LO"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2607.00146",
+      "title": "Fukaya categories of Coulomb branches as unique deformations",
+      "content_topic": "algebraic",
+      "published": "2026-06-30",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 1.0,
+      "keyword_score_alg": 7.8,
+      "keyword_margin": -6.8,
+      "keyword_hits_geo": [
+        "symplectic"
+      ],
+      "keyword_hits_alg": [
+        "category",
+        "morphism",
+        "scheme"
+      ],
+      "categories": [
+        "math.RT",
+        "math.RT",
+        "math.RA",
+        "math.SG"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.32031",
+      "title": "Intersection theorems over DG-rings revisited",
+      "content_topic": "algebraic",
+      "published": "2026-06-30",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.5,
+      "keyword_score_alg": 5.9,
+      "keyword_margin": -5.4,
+      "keyword_hits_geo": [
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "module",
+        "ring"
+      ],
+      "categories": [
+        "math.AC",
+        "math.AC",
+        "math.RA"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.31885",
+      "title": "Halo Semantics for Modal Logic",
+      "content_topic": "algebraic",
+      "published": "2026-06-30",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.8,
+      "keyword_score_alg": 5.4,
+      "keyword_margin": -4.6,
+      "keyword_hits_geo": [
+        "topological"
+      ],
+      "keyword_hits_alg": [
+        "logic",
+        "axiom"
+      ],
+      "categories": [
+        "math.LO",
+        "math.LO",
+        "cs.LO",
+        "math.GN"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.31883",
+      "title": "Possibly Relevant Translations",
+      "content_topic": "algebraic",
+      "published": "2026-06-30",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 4.4,
+      "keyword_margin": -4.4,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "logic"
+      ],
+      "categories": [
+        "math.LO",
+        "math.LO",
+        "cs.LO"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.31871",
+      "title": "On Interpretations of Normal Modal Logics",
+      "content_topic": "algebraic",
+      "published": "2026-06-30",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 4.4,
+      "keyword_margin": -4.4,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "logic"
+      ],
+      "categories": [
+        "math.LO",
+        "math.LO"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.31870",
+      "title": "Intuitionistic Monotone Modal Logic: Proof Theory and Semantics",
+      "content_topic": "algebraic",
+      "published": "2026-06-30",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 3.2,
+      "keyword_margin": -3.2,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "character",
+        "logic"
+      ],
+      "categories": [
+        "cs.LO",
+        "cs.LO",
+        "math.LO"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.31862",
+      "title": "Modal Measurable Logics via a Modal Loomis-Sikorski Representation Theorem",
+      "content_topic": "algebraic",
+      "published": "2026-06-30",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 6.4,
+      "keyword_margin": -6.4,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "ideal",
+        "representation",
+        "logic"
+      ],
+      "categories": [
+        "math.LO",
+        "math.LO",
+        "cs.LO"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.31854",
+      "title": "Coequivalence Relations and Descent in Modal Logic",
+      "content_topic": "algebraic",
+      "published": "2026-06-30",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 8.2,
+      "keyword_margin": -8.2,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "category",
+        "ring",
+        "logic"
+      ],
+      "categories": [
+        "math.LO",
+        "math.LO",
+        "math.CT"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.31853",
+      "title": "Conditionals and Modalities in Constructive Quantum Logics",
+      "content_topic": "algebraic",
+      "published": "2026-06-30",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 6.8,
+      "keyword_margin": -6.8,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "character",
+        "lattice",
+        "logic",
+        "axiom"
+      ],
+      "categories": [
+        "math.LO",
+        "math.LO",
+        "cs.LO"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.31788",
+      "title": "On a family of liftings of the Jordan plane",
+      "content_topic": "algebraic",
+      "published": "2026-06-30",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.5,
+      "keyword_score_alg": 7.9,
+      "keyword_margin": -7.4,
+      "keyword_hits_geo": [
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "morphism",
+        "module",
+        "ideal",
+        "hopf"
+      ],
+      "categories": [
+        "math.RA",
+        "math.RA"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.31766",
+      "title": "Embedding a graded matrix algebra into an elementary graded",
+      "content_topic": "algebraic",
+      "published": "2026-06-30",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 1.2,
+      "keyword_score_alg": 3.8,
+      "keyword_margin": -2.6,
+      "keyword_hits_geo": [
+        "embedding"
+      ],
+      "keyword_hits_alg": [
+        "ring"
+      ],
+      "categories": [
+        "math.RA",
+        "math.RA"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.31747",
+      "title": "Random generation of the special linear Lie algebra over finite fields",
+      "content_topic": "algebraic",
+      "published": "2026-06-30",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 6.1,
+      "keyword_margin": -6.1,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "character",
+        "finite field",
+        "lie algebra"
+      ],
+      "categories": [
+        "math.RA",
+        "math.RA"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.31514",
+      "title": "MINT: Dynamic-Precision CNN Inference with MSDF Digit-Serial Arithmetic on FPGA",
+      "content_topic": "algebraic",
+      "published": "2026-06-30",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 2.8,
+      "keyword_margin": -2.8,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "representation"
+      ],
+      "categories": [
+        "cs.AR",
+        "cs.AR",
+        "math.LO",
+        "math.OC"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.30254",
+      "title": "Computads with invertible generators for weak \u03c9-categories",
+      "content_topic": "algebraic",
+      "published": "2026-06-29",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 7.3,
+      "keyword_margin": -7.3,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "category",
+        "morphism",
+        "sheaf"
+      ],
+      "categories": [
+        "math.CT",
+        "math.CT"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.30198",
+      "title": "Steinberg Algebras of Ample Semicategories and their Boolean-Cartan Restriction Semigroups",
+      "content_topic": "algebraic",
+      "published": "2026-06-29",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 6.4,
+      "keyword_margin": -6.4,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "representation",
+        "character"
+      ],
+      "categories": [
+        "math.RA",
+        "math.RA",
+        "math.CT"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.30165",
+      "title": "Braided cogroupoids",
+      "content_topic": "algebraic",
+      "published": "2026-06-29",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 7.5,
+      "keyword_margin": -7.5,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "module",
+        "hopf"
+      ],
+      "categories": [
+        "math.CT",
+        "math.CT",
+        "math.QA",
+        "math.RA"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.29728",
+      "title": "Ideal $n$-cotorsion pairs in Frobenius extriangulated categories",
+      "content_topic": "algebraic",
+      "published": "2026-06-29",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 7.2,
+      "keyword_margin": -7.2,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "category",
+        "ring",
+        "ideal"
+      ],
+      "categories": [
+        "math.RT",
+        "math.RT",
+        "math.CT"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.29373",
+      "title": "An Oriented Street--Roberts Conjecture",
+      "content_topic": "algebraic",
+      "published": "2026-06-28",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 3.6,
+      "keyword_score_alg": 4.0,
+      "keyword_margin": -0.4,
+      "keyword_hits_geo": [
+        "homotopy"
+      ],
+      "keyword_hits_alg": [
+        "category",
+        "tensor"
+      ],
+      "categories": [
+        "math.AT",
+        "math.AT",
+        "math.CT"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.28984",
+      "title": "Compositional Dynamics in Learning and Mechanics",
+      "content_topic": "algebraic",
+      "published": "2026-06-27",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 1.5,
+      "keyword_score_alg": 9.1,
+      "keyword_margin": -7.6,
+      "keyword_hits_geo": [
+        "manifold"
+      ],
+      "keyword_hits_alg": [
+        "functor",
+        "category",
+        "morphism",
+        "polynomial"
+      ],
+      "categories": [
+        "math.CT",
+        "math.CT",
+        "cs.AI"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.28736",
+      "title": "The points of canonical extensions of doctrines",
+      "content_topic": "algebraic",
+      "published": "2026-06-27",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 8.7,
+      "keyword_margin": -8.7,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "category",
+        "morphism",
+        "character",
+        "sheaf",
+        "logic"
+      ],
+      "categories": [
+        "math.CT",
+        "math.CT"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.28691",
+      "title": "A general framework for the faithful pointfree representation of $T_0$-spaces",
+      "content_topic": "algebraic",
+      "published": "2026-06-27",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.5,
+      "keyword_score_alg": 10.5,
+      "keyword_margin": -10.0,
+      "keyword_hits_geo": [
+        "dimension"
+      ],
+      "keyword_hits_alg": [
+        "functor",
+        "category",
+        "morphism",
+        "ring",
+        "representation",
+        "character"
+      ],
+      "categories": [
+        "math.CT",
+        "math.CT",
+        "math.GN"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.28291",
+      "title": "Composing Quantum Instruments",
+      "content_topic": "algebraic",
+      "published": "2026-06-26",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 7.3,
+      "keyword_margin": -7.3,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "category",
+        "tensor",
+        "von neumann"
+      ],
+      "categories": [
+        "quant-ph",
+        "quant-ph",
+        "cs.LO",
+        "math-ph",
+        "math.CT"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.27805",
+      "title": "The quantum instrument monad",
+      "content_topic": "algebraic",
+      "published": "2026-06-26",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 4.8,
+      "keyword_margin": -4.8,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "category",
+        "von neumann"
+      ],
+      "categories": [
+        "cs.LO",
+        "cs.LO",
+        "cs.PL",
+        "math.CT",
+        "quant-ph"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.27737",
+      "title": "Reduction of Probabilistic Chemical Reaction Networks",
+      "content_topic": "algebraic",
+      "published": "2026-06-26",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 2.6,
+      "keyword_margin": -2.6,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "ring"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.LG",
+        "math.CT"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.27574",
+      "title": "The Gray Product of $(\\infty, n)$-Categories via Lax Grids",
+      "content_topic": "algebraic",
+      "published": "2026-06-25",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 2.7,
+      "keyword_score_alg": 4.6,
+      "keyword_margin": -1.9,
+      "keyword_hits_geo": [
+        "manifold"
+      ],
+      "keyword_hits_alg": [
+        "tensor"
+      ],
+      "categories": [
+        "math.CT",
+        "math.CT",
+        "math.AT"
+      ]
+    },
+    {
+      "style": "algebraic",
+      "arxiv": "2606.26755",
+      "title": "On categories of monads and comonads in double categories",
+      "content_topic": "algebraic",
+      "published": "2026-06-25",
+      "query_bucket": "algebraic",
+      "keyword_score_geo": 0.0,
+      "keyword_score_alg": 7.3,
+      "keyword_margin": -7.3,
+      "keyword_hits_geo": [],
+      "keyword_hits_alg": [
+        "category",
+        "morphism",
+        "tensor"
+      ],
+      "categories": [
+        "math.CT",
+        "math.CT"
+      ]
+    }
+  ],
+  "stats": {
+    "n_geometric": 147,
+    "n_algebraic": 91,
+    "n_total": 238
+  }
+}

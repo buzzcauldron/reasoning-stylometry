@@ -1,0 +1,13 @@
+This proof is by weininjieda from Yingkou, China who plans to become a teacher of mathematics, Chinese and history. It was included in E. S. Loomis' collection, for which he refers to an earlier publication by J. Versluys (1914), where the proof is credited to Cecil Hawkins (1909) of England.
+
+Let CE = BC = a, CD = AC = b, F is the intersection of DE and AB.
+
+ΔCED = ΔABC, hence DE = AB = c. Since, AC BD and BE AD, ED AB, as the third altitude in ΔABD. Now from
+
+Area(ΔABD) = Area(ΔABE) + Area(ΔACD) + Area(ΔBCE)
+
+we obtain
+
+c(c + EF) = EF·c + b² + a²,
+
+which implies the Pythagorean identity.

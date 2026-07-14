@@ -1,0 +1,12 @@
+We start with two squares with sides a and b , respectively, placed side by side. The
+total area of the two squares is a²+b² .
+
+The construction did not start with a triangle but now we draw two of them, both with
+sides a and b and hypotenuse c . Note that the segment common to the two squares has been
+removed. At this point we therefore have two triangles and a strange looking shape.
+
+As a last step, we rotate the triangles 90°, each around its top vertex. The
+right one is rotated clockwise whereas the left triangle is rotated counterclockwise.
+Obviously the resulting shape is a square with the side c and area c² . This proof appears in a dynamic incarnation .
+
+(A variant of this proof is found in an extant manuscript by Thâbit ibn Qurra located in the library of Aya Sofya Musium in Turkey, registered under the number 4832. [R. Shloming, Thâbit ibn Qurra and the Pythagorean Theorem , Mathematics Teacher 63 (Oct., 1970), 519-528]. ibn Qurra's diagram is similar to that in proof #27 . The proof itself starts with noting the presence of four equal right triangles surrounding a strangely looking shape as in the current proof #2. These four triangles correspond in pairs to the starting and ending positions of the rotated triangles in the current proof. This same configuration could be observed in a proof by tessellation .)

@@ -1,0 +1,12 @@
+The simplest non-trivial case is for two non-negative numbers x and y, that is,
+
+(x + y)/2 ≥ √(xy),
+
+with equality if and only if x = y. This follows from the fact that the square of a real number is always non-negative, and from the identity (a ± b)² = a² ± 2ab + b²:
+
+0 ≤ (x − y)²
+  = x² − 2xy + y²
+  = x² + 2xy + y² − 4xy
+  = (x + y)² − 4xy.
+
+Hence (x + y)² ≥ 4xy, with equality when (x − y)² = 0, that is, when x = y. The inequality then follows from taking the positive square root of both sides and then dividing both sides by 2.

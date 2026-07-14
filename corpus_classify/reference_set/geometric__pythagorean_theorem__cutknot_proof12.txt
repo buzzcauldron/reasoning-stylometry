@@ -1,0 +1,7 @@
+This proof is a variation on #1, one of the original Euclid's proofs. In parts 1,2, and 3,
+the two small squares are sheared towards each other such that the total shaded area remains
+unchanged (and equal to a²+b².) In part 3, the length of the vertical
+portion of the shaded area's border is exactly c because the two leftover triangles are copies
+of the original one. This means one may slide down the shaded area as in part 4. From here the
+Pythagorean Theorem follows easily.
+(This proof can be found in H. Eves, In Mathematical Circles , MAA, 2002, pp. 74-75)

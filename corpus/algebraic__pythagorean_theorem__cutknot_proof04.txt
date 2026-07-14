@@ -1,0 +1,20 @@
+The fourth approach starts with the same four triangles, except that, this time, they combine to form a square with the side ( a + b ) and a hole with the side c . We can compute the area of the big square in two ways. Thus
+
+( a + b )² = 4· ab /2 + c ²
+
+simplifying which we get the needed identity.
+
+A proof which combines this with proof #3 is credited to the 12th century Hindu mathematician Bhaskara (Bhaskara II):
+
+Nelsen (p. 4) gives Bhaskara credit also for proof #3 .
+
+Here we add the two identities
+
+c ² = ( a - b )² + 4· ab /2 and
+c ² = ( a + b )² - 4· ab /2
+
+which gives
+
+2 c ² = 2 a ² + 2 b ².
+
+The latter needs only be divided by 2. Its variant, specifically applied to the 3-4-5 triangle , has featured in the Chinese classic Chou Pei Suan Ching dated somewhere between 300 BC and 200 AD and which Loomis refers to as proof 253.

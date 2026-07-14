@@ -1,0 +1,9 @@
+This proof I found in R. Nelsen's sequel Proofs Without Words II . (It's due to Poo-sung Park and was originally published in Mathematics Magazine , Dec 1999 ). Starting with one of the sides of a right triangle, construct 4 congruent right isosceles triangles with hypotenuses of any subsequent two perpendicular and apices away from the given triangle. The hypotenuse of the first of these triangles (in red in the diagram) should coincide with one of the sides.
+
+The apices of the isosceles triangles form a square with the side equal to the hypotenuse of the given triangle. The hypotenuses of those triangles cut the sides of the square at their midpoints. So that there appear to be 4 pairs of equal triangles (one of the pairs is in green). One of the triangles in the pair is inside the square, the other is outside. Let the sides of the original triangle be a, b, c (hypotenuse). If the first isosceles triangle was built on side b, then each has area b²/4. We obtain
+
+a² + 4b²/4 = c²
+
+There's a dynamic illustration and another diagram that shows how to dissect two smaller squares and rearrange them into the big one.
+
+This diagram also has a dynamic variant .

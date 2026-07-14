@@ -1,0 +1,19 @@
+The following proof related to #39 , have been submitted by Adam Rose (Sept. 23, 2004.)
+
+Start with two identical right triangles: ABC and AFE, A the intersection of BE and CF. Mark D on AB and G on extension of AF, such that
+
+BC = BD = FG (= EF).
+
+(For further notations refer to the above diagram.) ΔBCD is isosceles. Therefore, ∠BCD = p /2 - α/2. Since angle C is right,
+
+∠ACD = p /2 - ( p /2 - α/2) = α/2.
+
+Since ∠AFE is exterior to ΔEFG, ∠AFE = ∠FEG + ∠FGE. But ΔEFG is also isosceles. Thus
+
+∠AGE = ∠FGE = α/2.
+
+We now have two lines, CD and EG, crossed by CG with two alternate interior angles, ACD and AGE, equal. Therefore, CD||EG. Triangles ACD and AGE are similar, and AD/AC = AE/AG:
+
+b/(c - a) = (c + a)/b,
+
+and the Pythagorean theorem follows.

@@ -1,0 +1,11 @@
+Here is the second proof from Dr. Scott Brodie's letter.
+
+We take as known a Power of a Point theorem : If a point is taken exterior to a circle, and from the point a segment is drawn tangent to the circle and another segment (a secant) is drawn which cuts the circle in two distinct points, then the square of the length of the tangent is equal to the product of the distance along the secant from the external point to the nearer point of intersection with the circle and the distance along the secant to the farther point of intersection with the circle.
+
+Let ABC be a right triangle, with the right angle at C. Draw the altitude from C to the hypotenuse; let P denote the foot of this altitude. Then since CPB is right, the point P lies on the circle with diameter BC; and since CPA is right, the point P lies on the circle with diameter AC. Therefore the intersection of the two circles on the legs BC, CA of the original right triangle coincides with P, and in particular, lies on AB. Denote by x and y the lengths of segments BP and PA, respectively, and, as usual let a, b, c denote the lengths of the sides of ABC opposite the angles A, B, C respectively. Then, x + y = c .
+
+Since angle C is right, BC is tangent to the circle with diameter CA, and the Power of a Point theorem states that a² = xc ; similarly, AC is tangent to the circle with diameter BC, and b² = yc . Adding, we find a² + b² = xc + yc = c² , Q.E.D.
+
+Dr. Brodie also created a Geometer's SketchPad file to illustrate this proof.
+
+(This proof has been published as number XXIV in a collection of proofs by B. F. Yanney and J. A. Calderhead in Am Math Monthly , v. 4, n. 1 (1897), pp. 11-12.)

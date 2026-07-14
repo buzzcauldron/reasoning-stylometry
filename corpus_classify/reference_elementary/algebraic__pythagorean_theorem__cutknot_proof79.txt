@@ -1,0 +1,19 @@
+There are several proofs on this page that make use of the Intersecting Chords theorem , notably proofs ## 59 , 60 , and 61 , where the circle to whose chords the theorem applied had the radius equal to the short leg of ΔABC, the long leg and the altitude from the right angle, respectively. Loomis' book lists these among its collection of algebraic proofs along with several others that derive the Pythagorean theorem by means of the Intersecting Chords theorem applied to chords in a fanciful variety of circles added to ΔABC. Alexandre Wajnberg from Unité de Recherches sur l'Enseignement des Mathématiques, Université Libre de Bruxelles came up with a variant that appears to fill an omission in this series of proofs. The construction also looks simpler and more natural than any listed by Loomis. What a surprise!
+
+Consider the circumcircle of ΔABC whose radius equals a half hypotenuse (r = c/2).
+
+In the diagram, DF is the diameter perpendicular to side BC and serves as its perpendicular bisector. E and H are the midpoints of BC and AC, respectively, making EO = CH. From the Intersecting Chords theorem ,
+
+CE × EB = DE × EF,
+
+which, in terms of side length a, b, c, appears as
+
+(a/2)² = (c/2 - b/2)(c/2 + b/2).
+
+This simplifies to the required a² = c² - b².
+
+Alexandre has also observed that the Intersecting Chords theorem appears as Euclid III.35 : If in a circle two straight lines cut one another, then the rectangle contained by the segments of the one equals the rectangle contained by the segments of the other. The proof there is probably one of the longest in the book, proceeds in four steps and, which is even more aggravating, makes use of the Pythagorean theorem itself. Luckily, one avoids a vicious circle with a most simple and elegant proof of the Intersecting Chords theorem that requires no more than the similarity of triangles and equality of inscribed angles subtended by the same arc in a circle, both of which do not depend on the Pythagorean theorem for their proof.
+
+Scott Brodie offered an explantion for a peculiar strategy in Euclid's proofs of Euclid III.35 (and also Euclid III.36 ). The simple reason that Euclid is clearly engaging in virtuosic "geometric algebra" based on the Pythagorean theorem is to avoid arguments by similarity, which he had to defer until after developing in great detail his elaborate theory of proportion in Book V .
+
+Lastly, Intersecting Chords theorem applies in the same diagram at point H. Indeed, since HO = a/2, GH × HI = AH × HC gives (c/2 - a/2)(c/2 + a/2) = (b/2)(b/2), with the same degree of success.

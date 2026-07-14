@@ -1,0 +1,12 @@
+This formula can be proven formally using mathematical induction. It is clearly true for 1:
+
+1 = 1(1 + 1)/2 = 2/2 = 1.
+
+Now assume that, for some natural number m, 1 + 2 + ... + m = m(m + 1)/2. We can then verify it for m + 1:
+
+1 + 2 + ... + m + (m + 1) = m(m + 1)/2 + m + 1
+                          = (m² + m)/2 + (2m + 2)/2
+                          = (m² + 3m + 2)/2
+                          = (m + 1)(m + 2)/2,
+
+so if the formula is true for m, it is true for m + 1. Since it is clearly true for 1, it is therefore true for 2, 3, and ultimately all natural numbers n by induction.

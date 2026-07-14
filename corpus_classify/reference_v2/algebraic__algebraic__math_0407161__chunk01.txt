@@ -1,0 +1,2801 @@
+arXiv:math/0407161v3  [math.GT]  22 Oct 2005
+SHRINKWRAPPING AND THE T AMING OF HYPERBOLIC
+3–MANIFOLDS
+DANNY CALEGARI AND DA VID GABAI
+0. I NTRODUCTION
+During the period 1960–1980, Ahlfors, Bers, Kra, Marden, Ma skit, Sullivan,
+Thurston and many others developed the theory of geometrically ﬁnite ends of hyperbolic 3–manifolds. It remained to understand those ends which are n ot geometrically ﬁnite; such ends are called geometrically inﬁnite.
+Around 1978 William Thurston gave a conjectural descriptio n of geometrically
+inﬁnite ends of complete hyperbolic 3–manifolds. An example of a geometrically
+inﬁnite end is given by an inﬁnite cyclic covering space of a c losed hyperbolic 3manifold which ﬁbers over the circle. Such an end has cross se ctions of uniformly
+bounded area. By contrast, the area of sections of geometric ally ﬁnite ends grow
+exponentially in the distance from the convex core.
+For the sake of clarity we will assume throughout this introd uction that N =
+H3/ Γ where Γ is parabolic free. Precise statements of the parabolic case will be
+given in§7.
+Thurston’s idea was formalized by Bonahon [Bo] and Canary [C a] with the following.
+Deﬁnition 0.1. An endE of a hyperbolic 3-manifold N is simply degenerate if it has
+a closed neighborhood of the formS× [0,∞ ) whereS is a closed surface, and there
+exists a sequence{Si} of CAT(− 1) surfaces exitingE which are homotopic toS× 0
+inE. This means that there exists a sequence of maps fi : S→ N such that the
+induced path metrics induce CAT (− 1) structures on the Si’s, f (Si)⊂ S× [i,∞ )
+andf is homotopic to a homeomorphism onto S× 0 via a homotopy supported in
+S× [0,∞ ).
+Here by CAT (− 1), we mean as usual a geodesic metric space for which geodesic triangles are “thinner” than comparison triangles in hyperbolic space. If the
+metrics pulled back by the fi are smooth, this is equivalent to the condition that
+the Riemannian curvature is bounded above by− 1. See [BH] for a reference. Note
+that by Gauss–Bonnet, the area of a CAT (− 1) surface can be estimated from its
+Euler characteristic; it follows that a simply degenerate e nd has cross sections of
+uniformly bounded area, just like the end of a cyclic cover of a manifold ﬁbering
+over the circle.
+Francis Bonahon [Bo] observed that geometrically inﬁnite ends are exactly those
+ends possessing an exiting sequence of closed geodesics. Th is will be our working
+deﬁnition of such ends throughout this paper.
+partially supported by Therese Calegari and NSF grant DMS-0 405491.
+partially supported by NSF grant DMS-0071852.
+V ersion 1.00, October 22, 2005.
+1
+2 DANNY CALEGARI AND DA VID GABAI
+The following is our main result.
+Theorem 0.2. An endE of a complete hyperbolic 3-manifold N with ﬁnitely generated
+fundamental group is simply degenerate if there exists a seq uence of closed geodesics exitingE.
+Consequently we have,
+Theorem 0.3. LetN be a complete hyperbolic 3-manifold with ﬁnitely generated fundamental group. Then every end of N is geometrically tame, i.e. it is either geometrically
+ﬁnite or simply degenerate.
+In 1974 Marden [Ma] showed that a geometrically ﬁnite hyperb olic 3-manifold
+is topologically tame, i.e. is the interior of a compact 3-manifold. He asked wheth er
+all complete hyperbolic 3-manifolds with ﬁnitely generate d fundamental group
+are topologically tame. This question is now known as the T ame Ends Conjectureor
+Marden Conjecture.
+Theorem 0.4. If N is a complete hyperbolic 3-manifold with ﬁnitely generated fundamental group, then N is topologically tame.
+Ian Agol [Ag] has independently proven Theorem 0.4.
+There have been many important steps towards Theorem 0.2. Th e seminal result was obtained by Thurston ([T], Theorem 9.2) who proved T heorems 0.3 and
+0.4 for certain algebraic limits of quasi Fuchsian groups. B onahon [Bo] established Theorems 0.2 and 0.4 when π1(N ) is freely indecomposible and Canary
+[Ca] proved that topological tameness implies geometrical tameness. Results in
+the direction of 0.4 were also obtained by Canary-Minsky [Ca M], Kleineidam–
+Souto [KS], Evans [Ev], Brock–Bromberg–Evans–Souto [BBES ], Ohshika, Brock–
+Souto [BS] and Souto [So].
+Thurston ﬁrst discovered how to obtain analytic conclusion s from the existence
+of exiting sequences of CAT (− 1) surfaces. Thurston’s work as generalized by
+Bonahon [Bo] and Canary [Ca] combined with Theorem 0.2 yield s a positive proof
+of the Ahlfors’ Measure Conjecture [A2].
+Theorem 0.5. If Γ is a ﬁnitely generated Kleinian group, then the limit set LΓ is either
+S2
+∞ or has Lebesgue measure zero. If LΓ =S2
+∞ , then Γ acts ergodically on S2
+∞ .
+Theorem 0.5 is one of the many analytical consequences of our main result.
+Indeed Theorem 0.2 implies that a complete hyperbolic 3-man ifoldN with ﬁnitely
+generated fundamental group is analytically tame as deﬁned by Canary [Ca]. It
+follows from Canary that the various results of §9 [Ca] hold for N .
+Our main result is the last step needed to prove the following monumental
+result, the other parts being established by Alhfors, Bers, Kra, Marden, Maskit,
+Mostow , Prasad, Sullivan, Thurston, Minsky , Masur–Minsky, Brock–Canary–Minsky ,
+Ohshika, Kleineidam–Souto, Lecuire, Kim–Lecuire–Ohshik a, Hossein–Souto and
+Rees. See [Mi] and [BCM].
+Theorem 0.6 (Classiﬁcation Theorem). IfN is a complete hyperbolic 3-manifold with
+ﬁnitely generated fundamental group, then N is determined up to isometry by its topological type, the conformal boundary of its geometrically ﬁnit e ends and the ending laminations of its geometrically inﬁnite ends.
+SHRINKWRAPPING AND THE TAMING OF HYPERBOLIC 3–MANIFOLDS 3
+The following result was conjectured by Bers, Sullivan and T hurston. Theorem
+0.4 is one of many results, many of them recent, needed to buil d a proof. Major
+contributions were made by Alhfors, Bers, Kra, Marden, Mask it, Mostow , Prasad,
+Sullivan, Thurston, Minsky , Masur–Minsky , Brock–Canary–Minsky , Ohshika, Kleineidam–
+Souto, Lecuire, Kim–Lecuire–Ohshika, Hossein–Souto, Rees, Bromberg and Brock–
+Bromberg.
+Theorem 0.7 (Density Theorem) . If N = H3/ Γ is a complete ﬁnitely generated 3manifold with ﬁnitely generated fundamental group, then Γ is the algebraic limit of geometrically ﬁnite Kleinian groups.
+The main technical innovation of this paper is a new technique called shrinkwrapping for producing CAT(− 1) surfaces in hyperbolic 3-manifolds. Historically , such
+surfaces have been immensely important in the study of hyper bolic 3-manifolds,
+e.g. see [T], [Bo], [Ca] and [CaM].
+Given a locally ﬁnite set ∆ of pairwise disjoint simple closed curves in the 3manifoldN , we say that the embedded surface S⊂ N is 2-incompressible rel. ∆ if
+every compressing disc for S meets ∆ at least twice. Here is a sample theorem.
+Theorem 0.8 (Existence of shrinkwrapped surface) . LetM be a complete, orientable,
+parabolic free hyperbolic 3–manifold, and let Γ be a ﬁnite collection of pairwise disjoint simple closed geodesics in M . Further, let S⊂ M\Γ be a closed embedded 2–incompressible
+surface rel. Γ which is either nonseparating in M or separates some component of Γ from
+another. ThenS is homotopic to a CAT (− 1) surfaceT via a homotopy
+F :S× [0, 1]→ M
+such that
+(1) F (S× 0) = S
+(2) F (S× t) = St is an embedding disjoint from Γ for 0≤ t< 1
+(3) F (S× 1) = T
+(4) IfT ′ is any other surface with these properties, then area (T )≤ area(T ′)
+We say that T is obtained from S by shrinkwrapping rel. Γ, or if Γ is understood, T is
+obtained fromS by shrinkwrapping.
+In fact, we prove the stronger result that T is Γ–minimal (to be deﬁned in §1)
+which implies in particular that it is intrinsically CAT (− 1)
+Here is the main technical result of this paper.
+Theorem 0.9. LetE be an end of the complete orientable hyperbolic 3-manifold N with
+ﬁnitely generated fundamental group. Let C be a 3-dimensional compact core of N ,∂EC
+the component of ∂C facingE andg = genus(∂EC). If there exists a sequence of closed
+geodesics exitingE, then there exists a sequence{Si} of CAT(− 1) surfaces of genusg exitingE such that each{Si} is homologically separating inE. That is, each Si homologically
+separates∂EC fromE.
+Theorem 0.4 can now be deduced from Theorem 0.9 and Souto [So] ; however,
+we prove that Theorem 0.9 implies Theorem 0.4 using only 3-ma nifold topology
+and elementary hyperbolic geometry .
+The proof of Theorem 0.9 blends elementary aspects of minima l surface theory ,
+hyperbolic geometry , and 3-manifold topology . The method will be demonstrated
+4 DANNY CALEGARI AND DA VID GABAI
+in§4 where we give a proof of Canary’s theorem. The ﬁrst time read er is urged to
+begin with that section.
+This paper is organized as follows. In §1 and§2 we establish the shrinkwrapping technique for ﬁnding CAT (− 1) surfaces in hyperbolic 3-manifolds. In §3 we
+prove the existence of ǫ-separated simple geodesics exiting the end of parabolic
+free manifolds. In§4 we prove Canary’s theorem. This proof will model the proof
+of the general case. The general strategy will be outlined at the end of that section.
+In§5 we develop the topological theory of end reductions in 3-ma nifolds. In§6 we
+give the proofs of our main results. In §7 we give the necessary embellishments of
+our methods to state and prove our results in the case of manif olds with parabolic
+cusps.
+Notation 0.10. IfX⊂ Y , then N (X) denotes a regular neighborhood of X inY
+and int(X) denotes the interior of X. If X is a topological space, then|X|denotes
+the number of components ofX. IfA,B are topological subspaces of a third space,
+thenA\B denotes the intersection of A with the complement of B.
+Acknowledgements 0.11. The ﬁrst author is grateful to Nick Makarov for some
+useful analytic discussions. The second author is grateful to Michael Freedman for
+many long conversations in Fall 1996 which introduced him to the T ame Ends conjecture. He thanks Francis Bonahon, Y air Minsky and Jeff Bro ck for their interest
+and helpful comments. Part of this research was carried out w hile he was visiting
+Nara W omen’s University , the T echnion and the Institute forAdvanced Study . He
+thanks them for their hospitality . W e thank the referees for their many thoughtful
+suggestions and comments.
+1. S HRINKWRAPPING
+In this section, we introduce a new technical tool for ﬁnding CAT(− 1) surfaces
+in hyperbolic 3–manifolds, called shrinkwrapping. Roughly speaking, given a collection of simple closed geodesics Γ in a hyperbolic 3–manifoldM and an embedded surface S⊂ M\Γ, a surface T ⊂ M is obtained from S by shrinkwrappingS
+rel. Γ if it homotopic to S, can be approximated by an isotopy from S supported
+inM\Γ, and is least area subject to these constraints.
+Given mild topological conditions on M, Γ,S (namely 2–incompressibility , to
+be deﬁned below) the shrinkwrapped surface exists, and is CA T(− 1) with respect
+to the path metric induced by the Riemannian metric on M .
+W e use some basic analytical tools throughout this section,including the Gauss–
+Bonnet formula, the coarea formula, and the Arzela–Ascoli t heorem. At a number
+of points we must invoke results from the literature to estab lish existence of minimal surfaces ([MSY]), existence of limits with area and cur vature control ([CiSc]),
+and regularity of the shrinkwrapped surfaces along Γ ([Ri],[Fre]). General references are [CM], [Js] [Fed] and [B].
+1.1. Geometry of surfaces. For convenience, we state some elementary but fundamental lemmas concerning curvature of (smooth) surfaces in Riemannian 3manifolds.
+W e use the following standard terms to refer to different kin ds of minimal surfaces:
+Deﬁnition 1.1. A smooth surface Σ in a Riemannian 3-manifold is minimal if it is
+a critical point for area with respect to all smooth compactl y supported variations.
+SHRINKWRAPPING AND THE TAMING OF HYPERBOLIC 3–MANIFOLDS 5
+It is locally least area (also called stable) if it is a local minimum for area with respect
+to all smooth, compactly supported variations. A closed, em bedded surface is
+globally least area if it is an absolute minimum for area amongst all smooth surfa ces
+in its isotopy class.
+Note that we do not require that our minimal or locally least a rea surfaces are
+complete.
+Any subsurface of a globally least area surface is locally le ast area, and a locally
+least area surface is minimal. A smooth surface is minimal if f its mean curvature
+vector ﬁeld vanishes identically . For more details, consult [CM], especially chapter
+5.
+The intrinsic curvature of a minimal surface is controlled b y the geometry of
+the ambient manifold. The following lemma is formula 5.6 on p age 100 of [CM].
+Lemma 1.2 (Monotonicity of curvature) . Let Σ be a minimal surface in a Riemannian
+manifoldM . Let KΣ denote the curvature of Σ, and KM the sectional curvature of M .
+Then restricted to the tangent space T Σ,
+KΣ =KM− 1
+2|A|2
+whereA denotes the second fundamental form of Σ.
+In particular, if the Riemannian curvature onM is bounded from above by some
+constantK, then the curvature of a minimal surface Σ inM is also bounded above
+byK.
+The following lemma is just the usual Gauss–Bonnet formula:
+Lemma 1.3 (Gauss–Bonnet formula). Let Σ be aC3 Riemannian surface with (possibly
+empty)C3 boundary ∂Σ. Let KΣ denote the Gauss curvature of Σ, and κ the geodesic
+curvature along∂Σ. Then ∫
+Σ
+KΣ = 2πχ (Σ)−
+∫
+∂ Σ
+κdl
+Many simple proofs exist in the literature. For example, see [Js].
+If∂Σ is merely piecewise C3, with ﬁnitely many corners pi and external angles
+α i, the Gauss–Bonnet formula must be modiﬁed as follows:
+Lemma 1.4 (Gauss–Bonnet with corners) . Let Σ be a C3 Riemannian surface with
+boundary∂Σ which is piecewiseC3, and has external angles α i at ﬁnitely many pointspi.
+LetKΣ andκ be as above. Then∫
+Σ
+KΣ = 2πχ (Σ)−
+∫
+∂ Σ
+κdl−
+∑
+i
+α i
+Observe forabc a geodesic triangle with external anglesα 1,α 2,α 3 that Lemma 1.4
+implies ∫
+abc
+K = 2π−
+∑
+i
+α i
+Notice that the geodesic curvature κ vanishes precisely when ∂Σ is a geodesic,
+that is, a critical point for the length functional. More gen erally , letν be the normal
+bundle of ∂Σ in Σ, oriented so that the inward unit normal is a positive sectio n.
+The exponential map restricted to ν deﬁnes a map
+φ :∂Σ× [0,ǫ ]→ Σ
+6 DANNY CALEGARI AND DA VID GABAI
+for small ǫ, where φ(·, 0) = Id|∂ Σ, and φ(∂Σ,t ) for small t is the boundary in Σ of
+the tubulart neighborhood of∂Σ. Then
+∫
+∂ Σ
+κdl =− d
+dt
+⏐
+⏐
+⏐
+t=0
+length(φ t(∂Σ))
+Note that if Σ is a surface with sectional curvature bounded above by − 1, then
+by integrating this formula we see that the ball Bt(p) of radiust in Σ about a point
+p∈ Σ satisﬁes
+area(Bt(p))≥ 2π (cosh(t)− 1)>πt 2
+for smallt> 0.
+1.2. Comparison geometry . For basic elements of the theory of comparison geometry , see [BH].
+Deﬁnition 1.5 (Comparison triangle) . Leta1a2a3 be a geodesic triangle in a geodesic metric space X. Let κ∈ R be given. A κ–comparison triangle is a geodesic
+triangle
+a1a2a3 in the complete simply–connected Riemannian 2–manifold of constant sectional curvature κ, where the edges aiaj andaiaj satisfy
+length(aiaj) = length(aiaj)
+Given a point x∈ a1a2 on one of the edges of a1a2a3, there is a corresponding
+pointx∈ a1a2 on one of the edges of the comparison triangle, satisfying
+length(a1x) = length(a1x)
+and
+length(xa2) = length(xa2)
+Remark 1.6. Note that if κ > 0, the comparison triangle might not exist if the
+edge lengths are too big, but if κ≤ 0 the comparison triangle always exists, and is
+unique up to isometry .
+There is a slight issue of terminology to be aware of here. In a surface, a triangle
+is a polygonal disk with 3 geodesic edges. In a path metric space , a triangle is just a
+union of 3 geodesic segments with common endpoints.
+Deﬁnition 1.7 (CAT(κ)). Let S be a closed surface with a path metric g. Let ˜S
+denote the universal cover of ˜S, with path metric induced by the pullback of the
+path metric g. Let κ ∈ R be given. S is said to be CAT(κ) if for every geodesic
+triangleabc in ˜S, and every point z on the edge bc, the distance in ˜S froma toz is
+no more than the distance from a toz in aκ–comparison triangle.
+By Lemma 1.4 applied to geodesic triangles, one can show that aC3 surface Σ
+with sectional curvatureKΣ satisfyingKΣ≤ κ everywhere is CAT(κ) with respect
+to the Riemannian path metric. This fact is essentially due t o Alexandrov; see [B]
+for a proof.
+More generally , suppose Σ is a surface which is C3 outside a closed, nowhere
+dense subset X ⊂ Σ. Furthermore, suppose that KΣ ≤ κ holds in Σ\X, and
+suppose that the formula from Lemma 1.4 holds for every geode sic triangle with
+vertices in Σ\X (which is a dense set of geodesic triangles). Then the same ar gument shows that Σ is CAT(κ). See e.g. [Re] §8, pp. 135–140 for more details, and a
+general discussion of metric surfaces with (integral) curv ature bounds.
+SHRINKWRAPPING AND THE TAMING OF HYPERBOLIC 3–MANIFOLDS 7
+Deﬁnition 1.8 (Γ–minimal surfaces) . Let κ ∈ R be given. Let M be a complete
+Riemannian 3–manifold with sectional curvature bounded above by κ, and let Γ
+be an embedded collection of simple closed geodesics in M . An immersion
+ψ :S→ M
+is Γ–minimal if it is smooth with mean curvature 0 in M\Γ, and is metrically
+CAT(κ) with respect to the path metric induced by ψ from the Riemannian metric
+onM .
+Notice by Lemma 1.2 that a smooth surface S with mean curvature 0 in M is
+CAT(κ), so a minimal surface (in the usual sense) is an example of a Γ–minimal
+surface.
+1.3. Statement of shrinkwrapping theorem.
+Deﬁnition 1.9 (2–incompressibility). An embedded surface S in a 3–manifoldM
+disjoint from a collection Γ of simple closed curves is said to be 2–incompressible rel.
+Γ if any essential compressing disk for S must intersect Γ in at least two points. If
+Γ is understood, we say S is 2–incompressible.
+Theorem 1.10 (Existence of shrinkwrapped surface). LetM be a complete, orientable,
+parabolic free hyperbolic 3–manifold, and let Γ be a ﬁnite collection of pairwise disjoint simple closed geodesics in M . Further, let S⊂ M\Γ be a closed embedded 2–incompressible
+surface rel. Γ which is either nonseparating in M or separates some component of Γ from
+another. ThenS is homotopic to a Γ–minimal surfaceT via a homotopy
+F :S× [0, 1]→ M
+such that
+(1) F (S× 0) = S
+(2) F (S× t) = St is an embedding disjoint from Γ for 0≤ t< 1
+(3) F (S× 1) = T
+(4) IfT ′ is any other surface with these properties, then area (T )≤ area(T ′)
+We say that T is obtained from S by shrinkwrapping rel. Γ, or if Γ is understood, T is
+obtained fromS by shrinkwrapping.
+The remainder of this section will be taken up with the proof o f Theorem 1.10.
+Remark 1.11. In fact, for our applications, the property we want to use of o ur
+surface T is that we can estimate its diameter (rel. the thin part of M ) from its
+Euler characteristic. This follows from a Gauss–Bonnet est imate and the bounded
+diameter lemma (Lemma 1.15, to be proved below). In fact, our argument will
+show directly that the surface T satisﬁes Gauss–Bonnet; the fact that it is CAT (− 1)
+is logically superﬂuous for the purposes of this paper.
+1.4. Deforming metrics along geodesics.
+Deﬁnition 1.12 (δ–separation). Let Γ be a collection of disjoint simple geodesics in
+a Riemannian manifold M . The collection Γ isδ–separated if any path α : I→ M
+with endpoints on Γ and satisfying
+length(α (I))≤ δ
+8 DANNY CALEGARI AND DA VID GABAI
+is homotopic rel. endpoints into Γ. The supremum of such δ is called the separation
+constant of Γ. The collection Γ is weaklyδ–separated if
+dist(γ,γ ′)>δ
+wheneverγ,γ ′ are distinct components of Γ. The supremum of such δ is called the
+weak separation constant of Γ.
+Deﬁnition 1.13 (Neighborhood and tube neighborhood) . Letr >0 be given. For
+a point x∈ M , we let Nr(x) denote the closed ball of radius r about x, and let
+N<r(x),∂N r(x) denote respectively the interior and the boundary of Nr(x). For a
+closed geodesic γ inM , we let Nr(γ) denote the closed tube of radius r aboutγ,
+and letN<r(γ),∂N r(γ) denote respectively the interior and the boundary ofNr(γ).
+If Γ denotes a union of geodesics γi, then we use the shorthand notation
+Nr(Γ) =
+⋃
+γ i
+Nr(γi)
+Remark 1.14. T opologically ,∂N r(x) is a sphere and ∂N r(γ) is a torus, for sufﬁciently small r. Similarly ,Nr(x) is a closed ball, and Nr(γ) is a closed solid torus.
+If Γ isδ–separated, thenNδ/ 2(Γ) is a union of solid tori.
+Lemma 1.15 (Bounded Diameter Lemma). LetM be a complete hyperbolic 3–manifold.
+Let Γ be a disjoint collection of δ–separated embedded geodesics. Let ǫ >0 be a Margulis
+constant for dimension 3, and letM≤ ǫ denote the subset of M where the injectivity radius
+is at most ǫ. If S⊂ M\Γ is a 2–incompressible Γ–minimal surface, then there is a constantC =C(χ (S),ǫ,δ )∈ R andn =n(χ (S),ǫ,δ )∈ Z such that for each component Si
+ofS∩ (M\M≤ ǫ), we have
+diam(Si)≤ C
+Furthermore,S can only intersect at most n components ofM≤ ǫ.
+Proof. Since S is 2–incompressible, any point x∈ S either lies in M≤ ǫ, or is the
+center of an embedded m–disk inS, where
+m = min(ǫ/ 2,δ/ 2)
+Since S is CAT(− 1), Gauss–Bonnet implies that the area of an embedded m–
+disk inS has area at least 2π (cosh(m)− 1)>πm 2.
+This implies that if x∈ S∩ M\M≤ ǫ then
+area(S∩ Nm(x))≥ πm 2
+The proof now follows by a standard covering argument. □
+A surfaceS satisfying the conclusion of the Bounded Diameter Lemma is s ometimes said to have diameter bounded by C moduloM≤ ǫ.
+Remark 1.16. Note that if ǫ is a Margulis constant, then M≤ ǫ consists of Margulis
+tubes and cusps. Note that the same argument shows that, away from the thin part
+ofM and anǫ neighborhood of Γ, the diameter of S can be bounded by a constant
+depending only on χ (S) andǫ.
+The basic idea in the proof of Theorem 1.10 is to search for a le ast area representative of the isotopy class of the surface S, subject to the constraint that the
+track of this isotopy does not cross Γ. Unfortunately ,M\Γ is not complete, so the
+prospects for doing minimal surface theory in this manifold are remote. T o remedy this, we deform the metric on M in a neighborhood of Γ in such a way that
+SHRINKWRAPPING AND THE TAMING OF HYPERBOLIC 3–MANIFOLDS 9
+we can guarantee the existence of a least area surface repres entative with respect
+to the deformed metric, and then take a limit of such surfaces under a sequence
+of smaller and smaller such metric deformations. W e describe the deformations of
+interest below .
+In fact, for technical reasons which will become apparent in §1.8, the deformations described below are not quite adequate for our purpo ses, and we must
+consider metrics which are deformed twice — ﬁrstly , a mild deformation which
+satisﬁes curvature pinching − 1 ≤ K ≤ 0, and which is totally Euclidean in a
+neighborhood of Γ, and secondly a deformation analogous to the kind described
+below in Deﬁnition 1.17, which is supported in this totally E uclidean neighborhood. Since the reason for this “double perturbation” will n ot be apparent until
+§1.8, we postpone discussion of such deformations until that time.
+Deﬁnition 1.17 (Deforming metrics) . Let δ > 0 be such that Γ is δ–separated.
+Choose some smallr withr<δ/ 2. Fort∈ [0, 1) we deﬁne a family of Riemannian
+metricsgt onM in the following manner. The metrics gt agree with the hyperbolic
+metric away from some ﬁxed tubular neighborhood Nr(Γ).
+Let
+h :Nr(1− t)(Γ)→ [0,r (1− t)]
+be the function whose value at a point p is the hyperbolic distance from p to
+Γ. W e deﬁne a metric gt on M which agrees with the hyperbolic metric outside
+Nr(1− t)(Γ), and on Nr(1− t)(Γ) is conformally equivalent to the hyperbolic metric,
+as follows. Let φ : [0, 1]→ [0, 1] be a C∞ bump function, which is equal to 1 on
+the interval [1/ 3, 2/ 3], which is equal to 0 on the intervals [0, 1/ 4] and [3/ 4, 1], and
+which is strictly increasing on [1/ 4, 1/ 3] and strictly decreasing on [2/ 3, 3/ 4]. Then
+deﬁne the ratio
+gt length element
+hyperbolic length element = 1 + 2φ
+(
+h(p)
+r(1− t)
+)
+W e are really only interested in the behaviour of the metrics gt as t→ 1. As
+such, the choice of r is irrelevant. However, for convenience, we will ﬁx some
+smallr throughout the remainder of§1.
+The deformed metrics gt have the following properties:
+Lemma 1.18 (Metric properties). Thegt metric satisﬁes the following properties:
+(1) For each t there is an f (t) satisfyingr(1− t)/ 4<f (t)< 3r(1− t)/ 4 such that
+the union of tori ∂N f (t)(Γ) are totally geodesic for the gt metric
+(2) For each component γi and each t, the metric gt restricted to Nr(γi) admits a
+family of isometries which preserve γi and acts transitively on the unit normal
+bundle (inM ) toγi
+(3) The area of a disk cross–section on Nr(1− t) isO((1− t)2).
+(4) The metric gt dominates the hyperbolic metric on 2–planes. That is, for all 2–
+vectorsν, thegt area ofν is at least as large as the hyperbolic area of ν
+Proof. Statement (2) follows from the fact that the deﬁnition of gt has the desired
+symmetries. Statements (3) and (4) follow from the fact that the ratio of the gt
+metric to the hyperbolic metric is pinched between 1 and 3. Now , a radially symmetric circle linking Γ of radius s has length 2π cosh(s) in the hyperbolic metric,
+and therefore has length
+2π cosh(s)(1 + 2φ(s/r (1− t)))
+10 DANNY CALEGARI AND DA VID GABAI
+in the gt metric. For sufﬁciently small (but ﬁxed) r, this function of s has a local
+minimum on the interval [r(1− t)/ 4, 3r(1− t)/ 4]. It follows that the family of
+radially symmetric tori linking a component of Γ has a local minimum for area in
+the interval [r(1− t)/ 4, 3r(1− t)/ 4]. By property (2), such a torus must be totally
+geodesic for the gt metric. □
+Notation 1.19. W e denote length of an arcα :I→ M with respect to the gt metric
+as lengtht(α (I)), and area of a surface ψ :R→ M with respect to the gt metric as
+areat(ψ (R)).
+1.5. Constructing the homotopy . As a ﬁrst approximation, we wish to construct
+surfaces in M\Γ which are globally least area with respect to the gt metric. There
+are various tools for constructing least area surfaces in Ri emannian 3-manifolds
+under various conditions, and subject to various constrain ts. Typically one works
+in closed 3-manifolds, but if one wants to work in 3-manifolds with boundary , the
+“correct” boundary condition to impose is mean convexity . A co-oriented surface
+in a Riemannian 3-manifold is said to be mean convex if the mean curvature vector of the surface always points to the negative side of the su rface, where it does
+not vanish. T otally geodesic surfaces and other minimal sur faces are examples of
+mean convex surfaces, with respect to any co-orientation. S uch surfaces act as barriers for minimal surfaces, in the following sense: suppose thatS1 is a mean convex
+surface, and S2 is a minimal surface. Suppose further that S2 is on the negative
+side of S1. Then if S2 andS1 are tangent, they are equal. One should stress that
+this barrier property is local. See [MSY] for a more thorough discussion of barrier
+surfaces.
+Lemma 1.20 (Minimal surface exists) . Let M, Γ,S be as in the statement of Theorem 1.10. Let f (t) be as in Lemma 1.18, so that ∂N f (t)(Γ) is totally geodesic with respect to the gt metric. Then for each t, there exists an embedded surface St isotopic in
+M\Nf (t)(Γ) toS, and which is globally gt–least area among all such surfaces.
+Proof. Note that with respect to the gt metrics, the surfaces ∂N f (t)(Γ) described in
+Lemma 1.18 are totally geodesic, and therefore act as barrie r surfaces. W e remove
+the tubular neighborhoods of Γ bounded by these totally geodesic surfaces, and
+denote the result M\Nf (t)(Γ) byM ′ throughout the remainder of this proof. W e
+assume, after a small isotopy if necessary , that S does not intersect Nf (t) for any
+t, and therefore we can (and do) think of S as a surface in M ′. Notice that M ′ is a
+complete Riemannian manifold with totally geodesic bounda ry . W e will construct
+the surfaceSt inM ′, in the same isotopy class as S (also inM ′).
+If there exists a lower bound on the injectivity radius in M ′ with respect to the
+gt metric, then the main theorem of [MSY] implies that either su ch a globally least
+area surface St can be found, or S is the boundary of a twisted I–bundle over a
+closed surface in M ′, or else S can be homotoped off every compact set in M ′.
+First we show that these last two possibilities cannot occur. IfS is nonseparating
+inM , then it intersects some essential loop β with algebraic intersection number
+1. It follows that S cannot be homotoped off β , and does not bound an I–bundle.
+Similarly , ifγ1,γ 2 are distinct geodesics of Γ separated from each other by S, then
+theγi’s can be joined by an arc α which has algebraic intersection number 1 with
+the surface S. The same is true of any S′ homotopic to S; it follows that S cannot
+be homotoped off the arc α , nor does it bound an I–bundle disjoint from Γ, and
+therefore does not bound an I–bundle inM ′.
+SHRINKWRAPPING AND THE TAMING OF HYPERBOLIC 3–MANIFOLDS 11
+Now suppose that the injectivity radius on M ′ is not bounded below . W e use
+the following trick. Let g′
+t be obtained from the metric gt by perturbing it on the
+complement of some enormous compact regionE so that it has a ﬂaring end there,
+and such that there is a barrierg′
+t-minimal surface close to∂E , separating the complement ofE inM ′ fromS. Then by [MSY] there is a globally g′
+t least area surface
+S′
+t, contained in the compact subset of M ′ bounded by this barrier surface. Since
+S′
+t must either intersect β orα , by the Bounded Diameter Lemma 1.15, unless the
+hyperbolic area of S′
+t∩ E is very large, the diameter of S′
+t in E is much smaller
+than the distance from α orβ to∂E . Since by hypothesis, S′
+t is least area for the g′
+t
+metric, its restriction to E has hyperbolic area less than the hyperbolic area of S,
+and therefore there is an a priori upper bound on its diameter in E. By choosing E
+big enough, we see that S′
+t is contained in the interior of E, wheregt andg′
+t agree.
+ThusS′
+t is globally least area for the gt metric in M ′, and therefore St = S′
+t exists
+for anyt. □
+The bounded diameter lemma easily implies the following:
+Lemma 1.21 (Compact set). There is a ﬁxed compact set E⊂ M such that the surfaces
+St constructed in Lemma 1.20 are all contained in E.
+Proof. Since the hyperbolic areas of the St are all uniformly bounded (by e.g.
+the hyperbolic area of S) and are 2–incompressible rel. Γ, they have uniformly
+bounded diameter away from Γ outside of Margulis tubes. Since for homological
+reasons they must intersect the compact sets α or β , they can intersect at most
+ﬁnitely many Margulis tubes. It follows that they are all con tained in a ﬁxed
+bounded neighborhoodE ofα orβ , containing Γ. □
+T o extract good limits of sequences of minimal surfaces, one generally needs
+a priori bounds on the area and the total curvature of the limiting sur faces. Here
+for a surface S, the total curvature ofS is just the integral of the absolute value of
+the (Gauss) curvature over S. For minimal surfaces of a ﬁxed topological type in
+a manifold with sectional curvature bounded above, a curvat ure bound follows
+from an area bound by Gauss–Bonnet. However, our surfaces St are minimal with
+respect to the gt metrics, which have no uniform upper bound on their sectiona l
+curvature, so we must work slightly harder to show that the th eSt have uniformly
+bounded total curvature. More precisely , we show that their restrictions to the
+complement of any ﬁxed tubular neighborhood Nǫ(Γ) have uniformly bounded
+total curvature.
+Lemma 1.22 (Finite total curvature). LetSt be the surfaces constructed in Lemma 1.20.
+Fix some small, positive ǫ. Then the subsurfaces
+S′
+t :=St∩ M\Nǫ(Γ)
+have uniformly bounded total curvature.
+Proof. Having chosenǫ, we choose t large enough so that r(1− t)<ǫ/ 2.
+Observe ﬁrstly that each St hasgt area less that the gt area of S, and therefore
+hyperbolic area less that the hyperbolic area of S for sufﬁciently larget.
+Letτt,s = St∩ ∂N s(Γ) for small s. By the coarea formula (see [Fed],[CM] page
+8) we can estimate
+area(St∩ (Nǫ(Γ)\Nǫ/ 2(Γ)))≥
+∫ ǫ
+ǫ/ 2
+length(τt,s )ds
+12 DANNY CALEGARI AND DA VID GABAI
+If the integral of geodesic curvature along a component σ ofτt,ǫ is large, then the
+length of the curves obtained by isotoping σ intoSt∩ Nǫ(Γ) grows very rapidly ,
+by the deﬁnition of geodesic curvature.
+Since there is an a priori bound on the hyperbolic area of St, it follows that there
+cannot be any long components of τt,s with big integral geodesic curvature. More
+precisely , consider a long component σ of τt,s . For l∈ [0,ǫ/ 2] the boundary σl
+of the l-neighborhood of σ in St∩ Nǫ(Γ) is contained in Nǫ(Γ)\Nǫ/ 2(Γ). If the
+integral of the geodesic curvature along σl were sufﬁciently large for everyl, then
+the derivative of the length of the σl would be large for every l, and therefore the
+lengths of the σl would be large for all l∈ [ǫ/ 4,ǫ/ 2]. It follows that the hyperbolic
+area of the ǫ/ 2 collar neighborhood of σ in St would be very large, contrary to
+existence of an a priori upper bound on the total hyperbolic area of St.
+This contradiction implies that for somel, the integral of the geodesic curvature
+along σl can be bounded from above. T o summarize, for each constant C1 > 0
+there is a constant C2 > 0, such that for each component σ ofτt,ǫ which has length
+≥ C1 there is a loop
+σ ′⊂ St∩ (Nǫ(Γ)\Nǫ/ 2(Γ))
+isotopic toσ by a short isotopy , satisfying
+∫
+σ ′
+κdl ≤ C2
+On the other hand, since St isgt minimal, there is a constant C1 > 0 such that
+each componentσ ofτt,ǫ which has length≤ C1 bounds a hyperbolic globally least
+area disk which is contained inM\Nǫ/ 2(Γ). For t sufﬁciently close to 1, such a disk
+is contained in M\Nr(1− t)(Γ), and therefore must actually be a subdisk of St.
+By the coarea formula above, we can choose ǫ so that length(τt,s ) is a priori
+bounded. It follows that if S′′
+t is the subsurface of St bounded by the components of τt,s of length > C1 then we have a priori upper bounds on the area of S′′
+t ,
+on
+∫
+∂S ′′
+t
+κdl , and on −χ (S′′
+t ). Moreover, S′′
+t is contained in M\Nr(1− t) where the
+metricgt agrees with the hyperbolic metric, so the curvature K ofS′′
+t is bounded
+above by− 1 pointwise, by Lemma 1.2. By the Gauss–Bonnet formula, this g ives
+an a priori upper bound on the total curvature of S′′
+t , and therefore onS′
+t⊂ S′′
+t . □
+Remark 1.23. A more highbrow proof of Lemma 1.22 follows from Theorem 1
+of [S], using the fact that the surfaces S′
+t are locally least area for the hyperbolic
+metric, fort sufﬁciently close to 1 (depending onǫ).
+Lemma 1.24 (Limit exists) . Let St be the surfaces constructed in Lemma 1.20. Then
+there is an increasing sequence
+0<t 1<t 2<···
+such that limi→∞ ti = 1 , and the Sti converge on compact subsets of M\Γ in the C∞
+topology to some T ′⊂ M\Γ with closureT inM .
+Proof. By deﬁnition, the surfaces St havegt area bounded above by the gt area of
+S. Moreover, since S is disjoint from Γ, for sufﬁciently large t, the gt area of S is
+equal to the hyperbolic area of S. Since the gt area dominates the hyperbolic area,
+it follows that the St have hyperbolic area bounded above, and by Lemma 1.22,
+for any ǫ, the restrictions of St to M\Nǫ(Γ) have uniformly bounded ﬁnite total
+curvature.
+SHRINKWRAPPING AND THE TAMING OF HYPERBOLIC 3–MANIFOLDS 13
+Moreover, by Lemma 1.21, each St is contained in a ﬁxed compact subset of
+M . By standard compactness theorems (see e.g. [CiSc]) any inﬁ nite sequence Sti
+contains a subsequence which converges on compact subsets o fE\Γ, away from
+ﬁnitely many points where some subsurface with nontrivial t opology might collapse. That is, there might be isolated points p such that for any neighborhood U
+ofp, the intersection of Sti withU contains loops which are essential in Sti for all
+sufﬁcient largei.
+But S is 2–incompressible rel. Γ, so in particular it is incompressible in M\Γ,
+and no such collapse can take place. So after passing to a subs equence, a limit
+T ′⊂ M\Γ exists (compare [MSY]). Since each St is a globally least area surface
+inM\Nf (t)(Γ) with respect to the gt metric, it is a locally least area surface with
+respect to the hyperbolic metric on M\Nr(1− t)(Γ). It follows that T ′ is locally least
+area in the hyperbolic metric, properly embedded in M\Γ, and we can deﬁne T to
+be the closure of T ′ inM . □
+Lemma 1.25 (Interpolating isotopy). Let{ti} be the sequence as in Lemma 1.24. Then
+after possibly passing to a subsequence, there is an isotopy F : S× [0, 1)→ M\Γ such
+that
+F (S,t i) = Sti
+and such that for each p∈ S the track of the isotopy F (p, [0, 1)) either converges to some
+well–deﬁned limit F (p, 1)∈ M\Γ or else it is eventually contained in Nǫ(Γ) for any
+ǫ> 0.
+Proof. Fix some smallǫ. Outside Nǫ(Γ), the surfaces Sti converge uniformly in the
+C∞ topology toT ′. It follows that for any ǫ, and fori sufﬁciently large (depending
+onǫ), the restrictions ofSti andSti+1 to the complement of Nǫ(Γ) are both sections
+of the exponentiated unit normal bundle of T ′\Nǫ(Γ), and therefore we can isotope these subsets of Sti toSti+1 along the ﬁbers of the normal bundle. W e wish
+to patch this partial isotopy together with a partial isotop y supported in a small
+neighborhood ofNǫ(Γ) to deﬁne the correct isotopy from Sti toSti+1.
+Let Z be obtained from Nǫ(Γ) by isotoping it slightly into M\Nǫ(Γ) so that it
+is transverse to T , and therefore also to Sti fori sufﬁciently large. For each i, we
+consider the intersection
+τi =Sti∩ ∂Z
+and observe that the limit satisﬁes
+lim
+i→∞
+τi =τ =T∩ ∂Z
+Let σ be a component of τ which is inessential in ∂Z . Then for large i, σ can
+be approximated by σi ⊂ τi which are inessential in ∂Z . Since the Sti are 2–
+incompressible rel. Γ, the loops σi must bound subdisks Di ofSti. Since ∂Z is a
+convex surface with respect to the hyperbolic metric, and th egt metric agrees with
+the hyperbolic metric outside Z for larget, it follows that the disks Di are actually
+contained inZ\Γ for largei. It follows that Di andDi+1 are isotopic by an isotopy
+supported inZ\Γ, which restricts to a very small isotopy of σi toσi+1 in∂Z .
+Let σ be a component of τ which is essential in ∂Z . Then so is σi for large
+i. Again, since S, and therefore Sti is 2–incompressible rel. Γ, it follows that σi
+cannot be a meridian of ∂Z , and must actually be a longitude. It follows that there
+is another essential curve σ ′
+i in each τi, such that the essential curves σ ′
+i and σi
+14 DANNY CALEGARI AND DA VID GABAI
+cobound a subsurface Ai inSti∩ Z\Γ. After passing to a diagonal subsequence,
+we can assume that the σ ′
+i converge to some component σ ′ ofτ.
+By 2–incompressibility , the surfacesAi are annuli. Note that there are two relative isotopy classes of such annuli. By passing to a further d iagonal subsequence,
+we can assume Ai andAi+1 are isotopic in Z\Γ by an isotopy which restricts to a
+very small isotopy of σi∪ σ ′
+i toσi+1∪ σ ′
+i+1 in∂Z .
+W e have shown that for any smallǫ and any sequenceSti, there is an arbitrarily
+large index i and inﬁnitely many indices j withi < jso that the surfaces Sti and
+Stj are isotopic, and the isotopy can be chosen to have the follow ing properties:
+(1) The isotopy takes Nǫ(Γ)∩ Sti to Nǫ(Γ)∩ Stj by an isotopy supported in
+Nǫ(Γ).
+(2) Outside Nǫ(Γ), the tracks of the isotopy are contained in ﬁbers of the exponentiated normal bundle of T ′\Nǫ(Γ).
+Choose a sequence ǫi→ 0, and pick a subsequence of the Sti’s and relabel so that
+Sti,S ti+1 satisfy the properties above with respect toNǫi(Γ). Then the composition
+of this inﬁnite sequence of isotopies is F . □
+Remark 1.26. The reason for the circumlocutions in the statement of Lemma 1.25
+is that we have not yet proved that T is a limit of the St as maps fromS toM . This
+will follow in §1.6, where we analyze the structure of T near a point p∈ Γ, and
+show it has a well–deﬁned tangent cone.
+1.6. Existence of tangent cone. W e have constructedT as a subset ofM , and have
+observed that away from Γ,T is a minimal surface for the hyperbolic metric. W e
+refer to the intersection T∩ Γ as the coincidence set. In general, one cannot expect
+T to be smooth along the coincidence set. However, we show that it does have a
+well-deﬁned tangent cone in the sense of Gromov , and this tangent cone is in fact
+of a very special form. In particular, this is enough to imply that T exists as the
+image of a map from S toM , and we may extend the isotopy F :S× [0, 1)→ M
+to a homotopy F :S× [0, 1]→ M withT =F (S, 1).
+By a tangent cone we mean the following: at each point p∈ T∩ Γ, consider
+the pair of metric spaces (Ns(p),T s(p)) whereTs(p) is the intersection Ts = T∩
+Ns(p). W e rescale the metric on this pair by the factor 1/s . Then we claim that this
+sequence of (rescaled) pairs of metric spaces converge in th e Gromov-Hausdorff
+sense to a limit (B,C ) where B is the unit ball in Euclidean 3-space, and C is
+the cone (to the origin) over a great bigon in the unit sphere. Here by a great
+bigon we mean the union of two spherical geodesics joining antipod al points in
+the sphere. In fact we do not quite show that T has this structure, but rather
+that each local branch of T has this structure. Here we are thinking of the map
+F (·, 1) : S→ M whose image is T , and by “local branch” we mean the image of a
+regular neigborhood of a point preimage.
+Lemma 1.27 (T angent cone). LetT be as constructed in Lemma 1.24. Let p∈ T∩ Γ.
+Then near p, T is a (topologically immersed) surface, each local branch of which has a
+well–deﬁned tangent cone, which is the cone on a great bigon.
+Proof. W e use what is essentially a curve–shortening argument. For each small s,
+deﬁne
+Ts =∂N s(p)∩ T
+SHRINKWRAPPING AND THE TAMING OF HYPERBOLIC 3–MANIFOLDS 15
+For each point q∈ T\Γ, we deﬁne α (q) to be the angle between the tangent space
+to T at q, and the radial geodesic through q emanating from p. By the coarea
+formula, we can calculate
+area(T∩ Ns(p)) =
+∫ s
+0
+∫
+Tt
+1
+cos(α )dldt≥
+∫ s
+0
+length(Tt)dt
+wheredl denotes the length element in each Tt. Note that this estimate implies
+thatTt is rectiﬁable for a.e. t. W e chooses to be such a rectiﬁable value.
+Now , each component τ of Ts is a limit of components τi of Sti∩ ∂N s(p) for
+largei. By 2–incompressibility of the Sti , each τi is a loop bounding a subdisk Di
+ofSti for largei.
+Now ,∂N s(p) is convex in the hyperbolic metric, though not necessarily i n the
+gt metric. By cutting out the disks ∂N s(p)∩ Nr(1− t)(Γ) and replacing them with
+the disks D± orthogonal to Γ which are totally geodesic in both the gt and the
+hyperbolic metrics, we can approximate ∂N s(p) by a surface ∂B bounding a ball
+B⊂ Ns(p) which is convex in the gs metric for all s≥ t. The ball B is illustrated
+in ﬁgure 1.
+Ns(p)
+D±Γ
+B
+FIGURE 1. The ball B has boundary which is convex in both the
+hyperbolic and the gs metrics for all s≥ t
+Note that after liftingB to the universal cover, there is a retraction ontoB which
+is length non-increasing, in both the gt and the hyperbolic metric. This retraction
+projects along the ﬁbers of the product structure on Nr(1− t)(Γ) toD± , and outside
+Nr(1− t)(Γ), it is the nearest point projection to ∂B\D± .
+Letτ′
+i be the component ofSti∩∂B approximatingτi, and letD′
+i be the subdisk
+ofSti which it bounds.
+Then the disk D′
+i must be contained in B, or else we could decrease its gt and
+hyperbolic area by the retraction described above. The disk sD′
+i converge to the
+componentD⊂ T ′ bounded by τ, and the hyperbolic areas of the D′
+i converge to
+the hyperbolic area of D.
+Note that B as above is really shorthand for Bt, since it depends on a choice of
+t. Similarly we have τt andDt. Since the component Dt⊂ T ′ bounded by τt is
+contained inBt for allt, the component D⊂ T ′ bounded byτ⊂ ∂N s is contained
+16 DANNY CALEGARI AND DA VID GABAI
+inNs, since Bt→ Ns ast→ 1. So we can, and do, work with Ns(p) instead of B
+in the sequel.
+Now , letD′ be the cone on τ to the point p. D′ can be perturbed an arbitrarily
+small amount to an embedded disk D′′, and therefore by comparing D′′with the
+D′
+i, we see that the hyperbolic area ofD′ must be at least as large as that ofD. Note
+that this perturbation can be taken to move D′ off Γ, and can be approximated by
+perturbations which miss Γ. Similar facts are true for all the perturbations we
+consider in the sequel.
+Since this is true for each componentτ ofTs, by abuse of notation we can replace
+T by the component of T∩ Ns(p) bounded by a single mapped in circle τ. This
+will be the local “branch” of the topologically immersed sur face T . W e use this
+notational convention for the remainder of the proof of the l emma. Note that the
+inequality above still holds. It follows that we must have
+area(T∩ Ns(p))≤
+∫ s
+0
+length(Ts) sinh(t)
+sinh(s)dt = area(cone onTs)
+Now , for each sphere∂N s(p), we letφ be the projection, along hyperbolic geodesics,
+to the unit sphere S2 in the tangent space at p. For each t∈ (0, 1], deﬁne
+∥Tt∥ = length(φ(Tt)) = length(Tt)
+sinh(t)
+It follows from the inequalities above that for some interme diate s′ we must
+have
+∥Ts′∥≤∥ Ts∥
+with equality iff T∩ Ns(p) is equal to the cone on Ts.
+Now , the cone onTs is not locally least area for the hyperbolic metric inNs(p)\Γ
+unlessTs is a great circle or geodesic bigon in ∂N s(p) (with endpoints on∂N s(p)∩
+Γ), in which case the lemma is proved. T o see this, just observe that a cone has vanishing principal curvature in the radial direction, so its m ean curvature vanishes
+iff it is totally geodesic away from Γ.
+So we may suppose that for any s there is some s′< ssuch that∥Ts′∥ <∥Ts∥.
+Therefore we choose a sequence of valuessi withsi→ 0 such that∥Tsi∥>∥Tsi+1∥,
+such that∥Tsi∥ converges to the inﬁmal value of∥Tt∥ witht∈ (0,s ], and such that
+∥Tsi∥ is the minimal value of∥Tt∥ on the intervalt∈ [si, 1]. Note that for any small
+t, the cone on Tt has area
+area(cone onTt) = t
+2 length(Tt) +O(t3) = t2
+2∥Tt∥ +O(t3)
+The set of loops in the sphere with length bounded above by som e constant,
+parameterized by arclength, is compact, by the Arzela–Ascoli theorem, and so we
+can suppose that the φ(Tsi ) converge in the Hausdorff sense to a loop C⊂ S2.
+Claim. C is a geodesic bigon.
+Proof. W e suppose not, and will obtain a contradiction.
+W e ﬁx notation: for each i, let Ci denote the inverse image φ − 1(C) under φ :
+∂N si(p)→ S2. So Ci is a curve in ∂N si(p). By the cone on Ci we mean the union
+of the hyperbolic geodesic segments in Nsi(p) fromCi top. By the cone on C we
+mean the union of the geodesic segments in the unit ball in Euc lidean 3-space from
+SHRINKWRAPPING AND THE TAMING OF HYPERBOLIC 3–MANIFOLDS 17
+C⊂ S2 to the origin. For each i, we have an estimate
+area(cone onCi) = s2
+i area(cone onC) +O(s3
+i )
+For eachi, letT i denote the surface obtained from T∩ Nsi(p) by rescaling metrically by 1/s i. Then T i is a surface with boundary contained in a ball of radius
+1 in a space of constant curvature −s2
+i . Moreover, it enjoys the same least area
+properties asT∩ Nsi (p).
+By the monotonicity property of the ∥Tsi∥ and the coarea formula, we have an
+inequality
+lim
+i→∞
+area(T i)≥ area(cone onC)
+On the other hand, since each T i is least area, we have an estimate
+1
+2∥Tsi∥ +O(si) = area(cone onTsi)
+s2
+i
+≥ area(T i)
+It follows that the limit of the area of the T i is actually equal to the area of the cone
+onC.
+On the other hand, since the φ(Tsi ) converge to C, for sufﬁciently large i we
+can ﬁnd an immersed annulus Ai inS2 with area≤ κ for any positive κ, which
+is the track of a homotopy (in S2) from φ(Tsi ) to C. W e let φ − 1(Ai) denote the
+corresponding annulus in∂N si(p)
+W e can build a new immersed surface bounded byTsi which is the union of this
+annulusφ − 1(Ai) with the cone on Ci. This surface can be perturbed an arbitrarily
+small amount, away from Γ, to an embedded surface F i. After rescaling F i by
+1/s i, we get a surface Gi with the same boundary as T i of area equal to
+area(Gi) = area( cone onC) +κ +O(si)
+SinceT i is locally least area, it follows that for any κ > 0, for sufﬁciently large i
+(depending onκ),
+area(cone onC) + 2κ≥ area(Gi)≥ area(T i)≥ area(cone onC)− κ
+The surfaceF i contains a subsurface which is the cone on Ci. Since by hypothesis, C is not a geodesic bigon, the cone on C can be perturbed by a compactly
+supported perturbation to a surface whose area is smaller th an that of the cone
+onC by some deﬁnite amount ǫ. Similarly , the cone on Ci can be perturbed by a
+compactly supported perturbation to a surface whose area is smaller than the cone
+onCi byǫ(si)2 whereǫ is independent of i. After rescaling by 1/s i, It follows that
+Gi can be perturbed by a compactly supported perturbation to H i with the same
+boundary asGi andT i, for which
+area(H i)≤ area(Gi)− ǫ
+whereǫ is independent ofi. Since κ may be chosen as small as we like, we choose
+3κ<ǫ . Then for sufﬁciently large i we get
+area(H i)< area(T i)
+which contradicts the least area property of T i. This contradiction shows that C is
+actually a geodesic bigon, and completes the proof of the cla im. □
+18 DANNY CALEGARI AND DA VID GABAI
+W e now complete the proof of Lemma 1.27.
+LetC⊂ S2 be this geodesic bigon. Then inside an ǫ neighborhood of C inS2,
+we can ﬁnd a pair of curves C± , whereC+ is convex, and C− is convex except for
+two acute angles on T Γ∩ S2. For each i, letC±
+i ⊂ ∂N si(p) be the inverse image of
+C± underφ.
+The cone on C±
+i is a pair of barrier surfaces in Ns(p). In particular, once φ(Tsi )
+andφ(Tsi+1 ) are both trapped between C+ andC− , the same is true of φ(Ts′) for
+alls′∈ [si+1,s i]. This is enough to establish the existence of the tangent con e. □
+Notice that Lemma 1.27 actually implies that T is a rectiﬁable surface in M ,
+which is a local (topological) embedding. In particular, th is shows that the isotopy
+F :S× [0, 1)→ M constructed in Lemma 1.25 can be chosen to limit to a homotopy
+F :S× [0, 1]→ M such thatF (S, 1) = T .
+1.7. The thin obstacle problem. From the proof of Lemma 1.27, we see that T
+exists as a C0 map which by abuse of notation we denote u : T → M . One may
+immediately improve the regularity ofu. From the construction ofT , it is standard
+to show that u is actually in the Sobolev space H 1, 2 — that is, the derivative du is
+deﬁned, and is L2, in the sense of distribution; see [Mor] for a rigorous deﬁni tion
+of Sobolev spaces, and basic properties.
+T o see this, observe thatu is a limit of maps F (·,t i) : S→ M which are minimal
+for the gt metric, and therefore are L2 energy minimizers for the conformal structure onS pulled back by F (·,t i). If the set of conformal structures obtained in this
+way is precompact, one may extract a limit and therefore boun d theL2 norm ofdu
+in terms of the L2 norms of the derivatives of any F (·,t i). How can the sequence
+of conformal structures fail to be precompact? If and only if the conformal structures degenerate by a neck pinch. But the 2–incompressibility of S rel. Γ implies
+that there is a lower bound on the length of the image of any ess ential curve in S.
+It follows that the L2 norm of the derivative blows up along such a pinching neck,
+contrary to the energy minimizing property . So no such degen eration can occur,
+andu is inH 1, 2 as claimed. This argument is essentially contained in [SY] ( see e.g.
+Lemma 3.1, page 134), and one may consult this paper for detai ls.
+W e need to establish further regularity of du along Γ in the following sense.
+Recall that we are calling L := T∩ Γ the coincidence set. For each local sheet of T ,
+we want u to be C1 along the interior of L from either side, and at a non–interior
+point ofL, we want u to beC1 on the nose.
+Now , ifI⊂ L is an interval, then the reﬂection principle (see [Oss]) imp lies that
+each local sheet T + ofT with∂T + =I can be analytically continued to a minimal
+surface across I, by taking another copy of T +, rotating it through angle π along
+the axisI and gluing it to the original T + alongI. It follows that du is real analytic
+from either side along the interior of L. Note that if the tangent cone at a point p
+is not literally a tangent plane, then an easy comparison argument implies that p is
+an interior point of the coincidence set. See [N] page 90 for a fuller discussion.
+Non–interior points of L are more difﬁcult to deal with, and we actually want
+to conclude thatdu is continuous at such points. Fortunately , this is a well–known
+problem in the theory of variational problems, known as the Signorini problem, or
+the (two dimensional) thin obstacle problem.
+In the literature, this problem is usually formulated in the following terms:
+SHRINKWRAPPING AND THE TAMING OF HYPERBOLIC 3–MANIFOLDS 19
+Thin Obstacle Problem. Let Ω be a bounded open subset of R2, andA an oriented
+line contained in Ω. Letψ :A→ R andg :∂Ω→ R be given, withg≥ ψ on∂Ω∩A.
+Deﬁne
+K ={v∈ g +H 1,p
+0 |v≥ ψ onA}
+Minimize
+J(u) =
+∫
+F (x,u, ∇ u)dx
+overu∈ K.
+HereH 1,p denotes the usual Sobolev space over Ω for the Lp norm, with zero
+boundary conditions.
+The main conditions typically imposed on F are sufﬁcient regularity of F and
+its partial derivatives (Lipschitz is usually enough) and ellipticity, meaning that
+the matrix (Fik)i,k =1, 2 of the second partial derivatives of F (x,u,η ) with respect
+toη∈ R2 is uniformly positive deﬁnite on compact subsets of Ω× R2+1 (see [Fre]
+page 281 for details). Roughly speaking, F is elliptic if the critical functions of
+the functional J satisfy a “mean value property” — the value at each point is a
+weighted average of the value at nearby points.
+For example, if we want the graph of u to be a (Euclidean) minimal surface
+away from ψ (A), then the formula for F isF = (1 +|∇u|2)1/ 2 which is certainly
+real analytic and elliptic. The deﬁnition of F for a nonparametric minimal surface
+in exponential co–ordinates on hyperbolic space is more complicated, but certainly
+F is real analytic and elliptic in the sense of Frehse.
+See Figure 2 for an example of the graph of a function solving t he Dirichlet thin
+obstacle problem, whereψ|A is constant. This surface is visually indistinguishable
+from the graph of the function solving the unparameterized m inimal surface thin
+obstacle problem with the same boundary and obstacle data, b ut for computer
+implementation, the Dirichlet problem is less computation ally costly .
+The next theorem establishes not only the desired continuit y of∂u, but actually
+gives an estimate for the modulus of continuity . The followi ng is a restatement of
+Theorem 1.3 on page 26 of [Ri] in our context:
+Theorem 1.28 (Richardson [Ri] Regularity of thin obstacle). Letu be a solution to the
+thin obstacle problem for F elliptic in the sense of Frehse and p∈ [1,∞ ], and suppose that
+∂Ω,ψ,g are smooth. Then ∂u is continuous along A in the tangent direction, one–sided
+continuous in the normal direction on either side, and conti nuous in the normal direction
+at a non–interior point. Furthermore, ∂u is H¨ older continuous, with exponent 1/ 2; i.e.
+the modulus of continuity of ∂u isO(t1/ 2).
+Remark 1.29. Note that C1+1/ 2 is actually best possible. Consider the function
+u : z→ Im(z3/ 2) for u∈ C slit along the positive real axis, where we take the
+branch which is negative sufﬁciently close to the slit. This solves a thin obstacle
+problem for the Dirichlet integral, and is only C1+1/ 2 atz = 0.
+Remark 1.30. For our applications, the fact thatu isC1+1/ 2 is more than necessary .
+In fact, all we use is that u isC1. This is proved (with a logarithmic modulus of
+continuity for du) by [Fre], and (with a H ¨ older modulus of continuity for du) in
+arbitrary dimension by [K].
+W e apply this theorem to our context:
+20 DANNY CALEGARI AND DA VID GABAI
+FIGURE 2. The graph of a function solving the thin obstacle problem
+Lemma 1.31 (Regularity along coincidence set) . Foru :T→ M deﬁned as above, the
+derivativedu along local sheets ofT is continuous from each side along the coincidence set
+L, and continuous at non–interior points.
+Proof. Ifp is an interior point of L, this follows by the reﬂection principle. Otherwise, by Lemma 1.27 and the discussion above, the tangent con e is a planeπ in the
+tangent space at p.
+W e show how to choose local co–ordinates in a ballB near each pointp∈ L such
+thatB∩ Γ is thex–axis, each local sheet of T is the graph of a function u : Ω→ R,
+and u is non–negative along the x–axis. Let γ = B∩ Γ, and let γ ′ be another
+geodesic throughp orthogonal to γ and tangent to π . LetF andG be foliations of
+B by totally geodesic planes orthogonal to γ andγ ′ respectively . Then each leaf of
+F is totally geodesic for both the hyperbolic and the gt metric for all t, and each
+leaf ofG is totally geodesic for the gt metric for sufﬁciently large t. It follows that
+T has no source or sink singularities with respect to either fo liation. Since T∩ B
+is a (topological) disk, by reasons of Euler characteristic it can have no saddle
+singularities either, and therefore no singularities at al l. W e letF andG be level
+sets of two co–ordinate functions on B. Deﬁne a third co–ordinate function to be
+(signed) hyperbolic distance to the plane containing γ andγ ′, and observe that u
+is a graph in these co–ordinates.
+It follows that u solves an instance of the thin obstacle problem, and by Theorem 1.28 or by [Fre] or [K] the desired regularity of du follows. □
+SHRINKWRAPPING AND THE TAMING OF HYPERBOLIC 3–MANIFOLDS 21
+Remark 1.32. The structure of the coincidence set is important to underst and, and
+it has been studied by various authors. Hans Lewy [Lew] showe d that for J the
+Dirichlet integral andψ analytic, the coincidence set is a ﬁnite union of points and
+intervals. Athanasopoulos [Ath] proved the same result for the minimal surface
+question, for symmetric domain Ω and obstacleA, but his (very short and elegant)
+proof relies fundamentally on the symmetry of the problem, a nd we do not see
+how it applies in our context.
+Note that if the Hausdorff dimension of the coincidence set i s strictly< 1, then
+sinceT isC1+1/ 2 (and therefore Lipschitz) along this coincidence set, the t heory of
+removable singularities implies that T is actually real analytic along Γ. It follows
+in this case that the coincidence set consists of a ﬁnite unio n of isolated points, and
+thatT is actually a minimal surface. See e.g. [Car] for details.
+Remark 1.33. Existence results for the thin obstacle problem for minimal surfaces
+with analytic obstacles (see e.g. [Ri], [K], [N]) gives an al ternative proof of the
+existence of the limit T . Given S, we can shrinkwrap S near Γ in small balls by
+using existence for the thin obstacle problem, and away from Γ by replacing small
+disks with least area embedded disks with the same boundary . The argument of
+[HS] implies that for S 2–incompressible, this converges to a surface T .
+1.8. CAT(− 1) property . W e have shown that T satisﬁes all the properties of the
+conclusion of Theorem 1.10, except that we have not yet shown that it is intrinsically CAT(− 1). In this subsection we show that after possibly replacing T by a
+new surface with the same properties, we can insist thatT is CAT(− 1) with respect
+to the path metric induced from M .
+Lemma 1.34 (CAT(-1) property). After possibly replacingT by a new immersed surface
+with the same properties, T is CAT(− 1) with respect to the path metric induced from M .
+Proof. T o show thatT is CAT(− 1) we will show that there is no distributional positive curvature concentrated along the coincidence set L. Since T\Γ is a minimal
+surface, the curvature of T is bounded above by − 1 on this subset. It will follow
+by Gauss–Bonnet that T is CAT(− 1).
+W e ﬁrst treat a simpler problem in Euclidean 3–space, which we denote by R3.
+Let Σ be an embedded surface in R3 which is C3 outside a subset X which is
+contained in a geodesic γ in R3, and which is C1 alongX from either side along
+the interior of X, and C1 at non–interior points of X. Then we claim, for each
+subsurfaceR⊂ Σ withC3 boundary∂R⊂ Σ\X, that
+∫
+R\ X
+KΣ = 2πχ (R)−
+∫
+∂R
+κdl
+Compare Lemma 1.3.
+In other words, we want to show that X is a “removable singularity” for R, at
+least with respect to the Gauss–Bonnet formula.
+Letφ : R\X→ S2 denote the Gauss map, which takes each point p∈ R to its
+unit normal, in the unit sphere of S2. Then KΣ is the pullback of the area form by
+φ. Let R denote the completion of R\X with respect to the path metric. Then R
+is obtained from R by cutting it open along each interval in R∩ X, and sewing in
+two copies of the interval thereby removed. Notice that ther e is a natural forgetful
+mapR→ R.
+22 DANNY CALEGARI AND DA VID GABAI
+By the assumptions about the regularity ofR, the Gauss mapφ actually extends
+to a continuous mapφ :R→ S2. Moreover, since X is contained in a geodesic γ of
+R3, the image φ(R\R) is contained in a great circle C inS2.
+For each boundary component τ ofR, we claim that the map φ : τ→ C has
+degree zero. For, otherwise, by a degree argument, there are pointsp± ∈ R which
+map to the same point in p, for which φ(p+) = −φ(p− ), and the graphs of φ(p+)
+and−φ(p− ) locally have a nonzero algebraic intersection number. It fo llows that
+the local sheets of R from either side must actually intersect along p, contrary to
+the fact that Σ is embedded. It follows that we can sew in a disk to R along each
+boundary component to get a surface R
+′
+homeomorphic toR, with∂R
+′
+=∂R , and
+extendφ toφ :R
+′
+→ S2 by mapping each such disk into C.
+Now , the surfaceR
+′
+can be perturbed slightly in a neighborhood of X to a new
+surfaceR
+′′
+which isC3 in R3, in such a way that the Gauss map of R
+′′
+is a perturbation ofφ. So the usual Gauss–Bonnet formula (Lemma 1.3) shows that
+∫
+R′′
+K = 2πχ (R)−
+∫
+∂R
+κdl
+But
+∫
+R
+′′K is just the integral of the area form on S2 pulled back by the Gauss map;
+it follows that
+∫
+R
+′′
+K =
+∫
+S2
+degree(φ(R
+′
+))
+and ∫
+S2
+degree(φ(R
+′′
+)) =
+∫
+S2
+degree(φ(R
+′
+))
+since one map is obtained from the other by a small perturbati on supported away
+from the boundary . Since the measure ofC is zero, this last integral is just equal to
+∫
+S2\ C
+degree(φ(R
+′
+)) =
+∫
+R\ X
+K
+and the claim is proved.
+Now we show how to apply this to our shrinkwrapped surface T . W e use the
+following trick. Let jt with t∈ [0, 1) be a family of metrics on M , conformally
+equivalent to the hyperbolic metric, which agree with the hy perbolic metric outsideNr(1− t), which are Euclidean onNr(1− t)/ 2, and which have curvature pinched
+between− 1 and 0, and are rotationally and translationally symmetric along the
+core geodesic. Then we let Tt be the surface obtained by shrinkwrapping S with
+respect to the jt metric. I.e. we let gs,t be a family of metrics as in Deﬁnition 1.17
+which agree with thejt metric outsideNr(1− t)(1− s), construct minimal surfacesSs,t
+as in Lemma 1.20, and so on, limiting to the immersed surface Tt which is minimal for the jt metric on M\Γ, and C1+1/ 2 alongTt∩ Γ. Arguing locally as above,
+we see that small subsurfaces of Tt contained in the Euclidean tubes Nr(1− t)/ 2 satisfy Gauss–Bonnet in the complement of the coincidence set. By Lemma 1.2, the
+surfacesTt all have curvature bounded above by 0, and bounded above by− 1 outsideNr(1− t). By Gauss–Bonnet for geodesic triangles, Tt is CAT(0), and actually
+CAT(− 1) outsideNr(1− t).
+Now take the limit as t→ 1. Some subsequence of the surfaces Tt converges to
+a limit which by abuse of notation we denote T . Note that this is not necessarily
+SHRINKWRAPPING AND THE TAMING OF HYPERBOLIC 3–MANIFOLDS 23
+the same as the surface T constructed in previous sections, but it enjoys the same
+properties. Again, by Gauss–Bonnet for geodesic triangles , the limit is actually
+CAT(− 1), and the lemma is proved. □
+This completes the proof of Theorem 1.10.
+Problem 1.35. Develop a simplicial or PL theory of shrinkwrapping.
+Remark 1.36. Since this paper appeared in preprint form, Soma has develop ed
+some elements of a PL theory of shrinkwrapping; see [Som]. Th is theory proves a
+PL analogue of Theorem 1.10.
+2. T HE MAIN CONSTRUCTION LEMMA
+The purpose of this section is to state the main construction Lemma 2.3 and
+show how it follows easily from Theorem 1.10.
+2.1. Shrinkwrapping in covers. Let N be a complete, orientable, parabolic free
+hyperbolic 3–manifold, and let Γ be a ﬁnite collection of pairwise disjoint simple
+closed geodesics in N , just as in the statement of Theorem 1.10. For the purposes
+of introducing the Main Construction Lemma, we will assume t hatN has a single
+endE. W e consider the family of gt and gs,t metrics, as in Deﬁnition 1.17 and
+Lemma 1.34.
+Suppose there is an embedded surface ∂W inN\Γ which separates off the end
+ofN from a compact submanifold W⊂ N . Let X be a covering space of W (possibly inﬁnite). The preimage of the geodesics Γ are a collection of locally ﬁnite
+geodesics ˆΓ⊂ X, some of which might be ﬁnite, and some inﬁnite. Let ∆⊂ ˆΓ
+be some nonempty collection, consisting entirely of simple closed geodesics. Then
+we can consider a second surface S⊂ X\∆ and can ask whether it is possible to
+shrinkwrapS rel. ∆. Notice that we cannot directly apply Theorem 1.10 because
+the hyperbolic manifold X is not complete, and therefore a shrinkwrap representative of S might not exist. However, we note that for each metric gt onN , we get
+agt locally least area representative ∂W t isotopic to ∂W . The submanifold Wt of
+N bounded by∂W t lifts to a covering space Xt which is homeomorphic to X. The
+metricgt pulls back to a metric on Xt which by abuse of notation we also refer to
+asgt. Then ∂X t which is a lift of ∂W t isgt locally least area, and therefore acts as
+a barrier surface. It follows that we can ﬁnd, for each t, a surface St in the isotopy
+class of S inXt\Nf (t)(∆), which is globally gt-least area among all such surfaces
+(compare with the statement of Lemma 1.20).
+The theory of shrinkwrapping developed in§1 goes through almost identically
+for the surfaces St with one important exception: the metric gt on Xt does not
+agree with the hyperbolic metric away from ∆ and ∂X t, but rather is deformed
+along the other geodesics ˆΓ\∆. It follows that we should take care to analyze the
+quality of the surfaces St and their limit S′ near components of ˆΓ\∆.
+Fortunately the situation is as simple as it could be:
+Lemma 2.1 (Superﬂuous geodesics invisible). With notation and deﬁnitions as above,
+in a neighborhood of a point p on ˆΓ\∆, the surface S′ is a locally least area surface for the
+hyperbolic metric.
+24 DANNY CALEGARI AND DA VID GABAI
+Proof. Suppose not. Then there is a compactly supported perturbati on F of S′
+which agrees with S′ outside a ﬁxed neighborhood of p, and which has strictly
+less hyperbolic area thanS′, so that
+area(S′)− area(F )≥ ǫ
+for some positive constant ǫ. After another small perturbation of F toF ′, which
+can be taken to increase the hyperbolic area as little as requ ired, we can assume
+thatF ′ is transverse to Γ nearp, intersecting it in n points for some ﬁnite n, and
+satisfying
+area(S′)− area(F ′)≥ ǫ/ 2
+By property (3) of the gt metric (see Lemma 1.18) the gt area ofF ′ is at most equal
+to the hyperbolic area plus nC(1− t)2, for some constant C independent of t. For
+sufﬁciently smallt,
+nC(1− t)2<ǫ/ 2
+and therefore the gt area of F ′ is less than the hyperbolic area of S′, which is less
+than the gt area of S′, thereby contradicting the global gt minimality of S′ in its
+isotopy class in Xt\Nf (t)(∆).
+This contradiction proves the lemma. □
+A similar argument holds for the gt,s metric in place of the gt metric, and therefore by means of Lemma 2.1 we can shrinkwrap in covers, obtain ing CAT (− 1)
+surfaces in the limit.
+Remark 2.2. One should think of Lemma 2.1 as a kind of “removable singular ity”
+theorem for transverse obstacles. Compare with the followi ng physical experiment: one knows from experience that very thin needles can be pushed through
+soap bubbles without popping them or distorting their geome try . (Try it!)
+2.2. The main construction lemma. W e now state and prove the main construction lemma. The context of this Lemma is the same as that of §2.1: we want to
+shrinkwrap a certain surface in a cover, using the boundary o f that cover as a barrier surface. See Figure 3 for an idealized depiction of T ′ andS inW andX in the
+case thatW is a handlebody .
+Lemma 2.3 (Main construction lemma). LetE be an end of the complete open orientable
+parabolic free hyperbolic 3–manifold N with ﬁnitely generated fundamental group. Let
+W⊂ N be a submanifold such that ∂W∩ int(N ) separatesW fromE. Let ∆1⊂ N\∂W
+be a ﬁnite collection of simple closed geodesics with ∆ = int(W )∩ ∆1 a non–empty proper
+subset of ∆1. Suppose further that ∂W is 2–incompressible rel. ∆.
+LetG be a ﬁnitely generated subgroup of π1(W ), and let X be the covering space of W
+corresponding to G. Let Σ be the preimage of ∆ inX, and ˆ∆⊂ Σ a subset which maps
+homeomorphically onto ∆ under the covering projection, and let B⊂ ˆ∆ be a nonempty
+union of geodesics. Suppose there exists an embedded closed surface S ⊂ X\B that is
+2–incompressible rel.B inX, which separates every component of B from∂X .
+Then∂W can be homotoped to a ∆1–minimal surface which, by abuse of notation, we
+call∂W ′, and the map of S intoN given by the covering projection is homotopic to a map
+whose image T ′ is ∆1–minimal. Also, ∂W ′ (resp. T ′) can be perturbed by an arbitrarily
+small perturbation to be an embedded (resp. smoothly immers ed) surface ∂W t (resp. Tt)
+boundingWt with the following properties:
+SHRINKWRAPPING AND THE TAMING OF HYPERBOLIC 3–MANIFOLDS 25
+(1) There exists an isotopy from ∂W to ∂W t which never crosses ∆1, and which
+induces an isotopy from W toWt, and a corresponding deformation of hyperbolic
+manifoldsX toXt which ﬁxes Σ pointwise.
+(2) There exists an isotopy from S toSt⊂ Xt which never crosses B, such that Tt is
+the projection of St toN .
+W T ′ ⊂ W
+S ⊂ X
+FIGURE 3. The surfaces T ′ andS inW andX respectively
+Proof. The proof is reasonably straightforward, given the work in §1 and §2.1.
+First, we obtain∂W ′ from∂W by shrinkwrapping rel. ∆1. Since ∆ = int(W )∩ ∆1
+is a nonempty and proper subset of ∆1, ∂W satisﬁes the hypotheses of Theorem 1.10, and therefore ∂W ′ exists, and satisﬁes the desired properties.
+26 DANNY CALEGARI AND DA VID GABAI
+For each t = ti in our approximating sequence, the metric gt on Wt lifts to a
+metric onXt which, by abuse of notation, we also call gt.
+Then with respect to thegt metric,∂X t acts as a barrier surface, and we can ﬁnd
+a gt locally least area surface St ⊂ int(Xt) which is gt globally least area in the
+isotopy class of S inXt\Nf (t)(B), by [MSY], just as in the proof of Lemma 1.20.
+Note thatS is necessarily homologically essential inXt\Nf (t)(B), since it separates
+each component of B from∂X t by hypothesis, and therefore any surface isotopic
+toS inXt\Nf (t)(B) must intersect a ﬁxed compact arc α fromB to∂X t.
+The immersed surfaces Tt⊂ N are obtained by mapping St toWt by the covering projection. After passing to a further subsequence of valuest =ti, the limit
+of the Tt surfaces exists as a map from S toN , with image T ′, by the argument of
+Lemma 1.24 applied locally . The regularity ofT ′ locally along ∆1 follows from the
+argument of Lemma 1.31, since that argument is completely lo cal.
+As in Lemma 1.34, we can repeat the construction above with th egs,t metrics
+and obtain a limit T ′ with the desired regularity .
+It follows that T ′ is ∆1–minimal. Notice that some local sheets of T ′ are actually minimal (in the hyperbolic metric) near geodesics in ∆1, corresponding to
+subsets ofSt inXt crossing components of Σ\B, by Lemma 2.1. In any case, T ′ is
+intrinsically CAT(− 1), and the theorem is proved. □
+2.3. Nonsimple geodesics. When we come to consider hyperbolic manifolds with
+parabolics, we need to treat the case that the geodesics ∆1 might not be simple. But
+there is a standard trick to reduce this case to the simple cas e, at the cost of slightly
+perturbing the hyperbolic metric.
+Explicitly , suppose Γ⊂ M is as in the statement of Theorem 1.10 except that
+some of the components are possibly not simple. Then for ever yǫ> 0 there exists
+a perturbation g of the hyperbolic metric on M in a neighborhood of Γ with the
+following properties:
+(1) The new metric g agrees with the hyperbolic metric outside Nǫ(Γ)
+(2) With respect to the metric g, the curves in Γ are homotopic to a collection
+of simple geodesics Γ′
+(3) The metric g is hyperbolic (i.e. has constant curvature − 1) onNǫ/ 2(Γ′)
+(4) The metric g is 1+ǫ–bilipschitz equivalent to the hyperbolic metric, and the
+sectional curvature of the g metric is pinched between− 1− ǫ and− 1 +ǫ.
+The existence of such a metric g follows from Lemma 5.5 of [Ca]. T o make an
+orthopedic comparison: think of the nonsimple geodesics Γ as a collection of unnaturally fused bones in Nǫ(Γ); the bones are broken, reset, and heal as simple
+geodesics in the new metric.
+It is clear that the methods of§1 apply equally well to the metricg, and therefore
+shrinkwrapping can be done with respect to the metric g, producing a surface
+which is intrinsically CAT(− 1 +ǫ).
+In fact, since such a metric exists for each ǫ, we can take a sequence of such metricsgǫ for each small ǫ >0, produce a shrinkwrapped surface Tǫ for each such ǫ,
+and take a limit T asǫ→ 0 which is intrinsically CAT (− 1), and which can be approximated by embedded surfaces, isotopic toS, in the complement of Γ\C where
+C is a ﬁnite subset of geodesics whose cardinality can be a priori bounded above in
+terms of the genus of S. W e will not be using this stronger fact in the sequel, since
+the existence of a CAT (− 1 +ǫ) surface is quite enough for our purposes.
+SHRINKWRAPPING AND THE TAMING OF HYPERBOLIC 3–MANIFOLDS 27
+3. A SYMPTOTIC TUBE RADIUS AND LENGTH
+By [Bo] an end of a complete hyperbolic 3–manifoldN is geometrically inﬁnite
+if and only if there exists an exiting sequence of closed geod esics. In this chapter
+we show that if π1(N ) is parabolic free, then the geodesics can be chosen to be
+η–separated for some η; in particular, all are simple.
+Deﬁnition 3.1. Let N be a complete hyperbolic 3-manifold with geometrically
+inﬁnite end E. Deﬁne the E-asymptotic tube radius to be the supremum over all
+sequences{γi} of closed geodesics exitingE, of
+lim sup
+i→∞
+tube radius(γi)
+Similarly deﬁne the E-asymptotic length to be inﬁmum over all sequences {γi} as
+before of
+lim inf
+i→∞
+length(γi)
+W e will drop the preﬁxE when the end in question is understood.
+Proposition 3.2. IfE is a geometrically inﬁnite end of the complete hyperbolic 3- manifold
+N without parabolics, then asymptotic tube radius> 1/ 4 asymptotic length. If asymptotic
+length = 0, then asymptotic tube radius = ∞ . There exists a uniform lower bound η =
+0. 025 to the asymptotic tube radius of a geometrically inﬁnite end of a complete parabolic
+free hyperbolic 3–manifold.
+Proof. Meyerhoff [Me] deﬁnes a monotonically decreasing function r : (0, 0. 1]→
+[0. 3,∞ ) such that if γ is a closed geodesic in N and length(γ) ≤ t, then tube
+radius(γ)≥ r(t). Furthermore lim t→ 0r(t) = ∞ . Therefore, the second statement
+of Proposition 3.2 follows from [Me] and the third follows fr om the ﬁrst statement
+and [Me]. (Actually , Proposition 3.3 will show that log(3)/ 2 is a lower bound.)
+Now suppose that asymptotic length = L∈ [0. 1,∞ ). Then there exists a sequence{γi} exitingE such that length (γi) → L. As in §5 [G2], if tube radius
+(γt)≤ 1
+4 length(γi), then there exists a geodesic βi homotopic to a curve which
+is a union of a segment of γi and an orthogonal arc from γi to itself, and each
+of these segments has length ≤ length(γi)/ 2. By straightening these segments
+and using the law of cosines, we see that if length (γi)≥ 0. 099, then length(βi) <
+length(γi)− 0. 02. Thus if lim sup tube radius (γi) < L/ 4, there exists a sequence
+{βi} such that lim inf length(βi)≤ L− 0. 02 whereβi is as above. Since∞ >L ,{βi}
+must exit the same end as{γi}, which is a contradiction.
+Now suppose that asymptotic length is inﬁnite and {γi} is an exiting sequence
+such that length(γi)→∞ . Given R≥ 10 we produce a new exiting sequence{σi}
+with tube radius (σi) > Rfor all i. If possible let α i be a smallest segment of γi
+such that there is a geodesic path βi connecting ∂α i, length(βi)≤ 10R and βi is
+not homotopic to α i rel endpoints. If α i does not exist, then tube radius (γi)≥ 5R.
+So let us assume that for all i, α i exists. Note that length(α i)→ ∞ or else the
+concatenations{α i∗βi} are homotopic to an exiting sequence of bounded length
+geodesics. Also, asymptotic length inﬁnite implies that as i→ ∞ , the injectivity radius of points of γi (and hence α i∪ βi)→ ∞ . Therefore for i sufﬁciently
+large we can assume that length(α i)> 10R, length(β ) = 10R, and both of the angles between βi andα i are at least π/ 2. The geodesic σi homotopic to the curve
+obtained by concatenating α i andβi lies within distance 2 of α i∪ βi and for the
+most part lies extremely close. Indeed, if A is an immersed least area annulus in
+28 DANNY CALEGARI AND DA VID GABAI
+N with ∂A = α i∗βi∪ σi, then the Gauss–Bonnet formula (Lemma 1.4) implies
+that area (A)≤ π . Since the intrinsic curvature of A is≤− 1, it follows that for i
+sufﬁciently large, no point a ofA can be at distance 1 fromα i∪ βi and distance at
+least 1 fromσi, for the area of the disc of radius 1 about a∈ A would be≥ π .
+If tube radius (σi)≤ R, then there would be an arc τi connecting points of σi
+such that length(τi)≤ 2R andτi cannot be homotoped rel endpoints into σi. Thus,
+fori sufﬁciently large one ﬁnds new essential geodesic paths β ′
+i of length≤ 10R
+with endpoints in α i− ∂α i. This contradicts the minimality property of α i. □
+Proposition 3.3. IfE is an end of the complete, orientible, hyperbolic 3-manifol dN and
+π1(N ) has no parabolic elements, then the E-asymptotic tube radius> log(3)/ 2.
+Remark 3.4. W e will not be using Proposition 3.3 in this paper.
+Proof. Let{γi} be a sequence of geodesics exitingE such that
+lim
+i
+length(γi) = l =E–asymptotic length.
+Ifl is small, i.e.l≤ 0. 978, then fori sufﬁciently large, tube radius (γi)≥ log(3)/ 2
+by [Me] as explained in Proposition 1.11[GMT]. If l is large, then for i sufﬁciently
+large tube radius (γi)≥ log(3)/ 2 by Proposition 3.2. A hyperbolic geometry argument, slightly more sophisticated than the one cited above shows thatl≥ 1. 289785
+sufﬁces. Indeed, the proof of Proposition 1.11 [GMT] shows t hat there exists
+ǫ > 0 such that if length(γi)≥ 1. 289785, then either tube radius (γi)≥ log(3)/ 2
+or there exists an essential closed curve κ i such that length (κ i)≤ length(γi)− ǫ
+andd(γi,κ i)≤ l. If κ ∗
+i denotes the geodesic homotopic to κ i, then{κ ∗
+i} exitsE and
+lim inf length(κ ∗
+i )≤ l− ǫ which contradicts the fact that l is asymptotic length.
+It follows from [GMT], [GMT], [JR], [Li] and [CLLM] that if δ is a shortest geodesic in a complete hyperbolic 3-manifold N , then either tube radius δ≥ log(3)/ 2
+orN is a closed hyperbolic 3-manifold. (See Conjecture 1.31 [GM T].) Therefore, if
+eachγi is a shortest length geodesic inN , then the proof of Proposition 3.3 follows.
+Assuming that asymptotic tube radius < log(3)/ 2, we will derive a contradiction using techniques which require an understanding of§1 [GMT]. Nevertheless,
+the punchline follows exactly as in two paragraphs above. He re is the idea. Associated to each γi there is a 2–generator subgroup of π1(N ) deﬁned as follows.
+When viewed as acting on H3, one generatorfi is a shortest translation along a lift
+ofγi and the other generator wi takes that lift to a nearest translate. After passing
+to a subsequence, there exists ǫ > 0, K <∞ such that for each i, there exists a
+closed curve κ i such that d(κ i,γ i)≤ K and length (κ i) < lengthγi− ǫ. Here κ i
+represents an element in the group generated by fi andwi.
+Here are the details. Given {γi} there exist sequences{Ai},{A′
+i} whereAi is a
+lift ofγi to H3 andA′
+i =wi(A) is a nearestπ1(N ) translate ofA, wherewi∈ π1(N ).
+By Deﬁnition 1.8 [GMT] associated to fi andwi there is a triple of complex numbers (Li,D i,R i) where length(fi) = Re(Li) and Re (Di) = d(A,A ′). By compactness, after passing to a subsequence, {(Li,D i,R i)} converges to (L,D,R ), where
+Re(L) = l. Again by Deﬁnition 1.8, (L,D,R ) gives rise to a marked 2–generator
+group⟨f,w ⟩ wherefi→ f andwi→ w. By Lemma 1.13 [GMT] we can assume
+that (L,D,R ) and the various (Li,D i,R i) lie in the parameter space P deﬁned in
+1.11 [GMT]. It cannot lie in one of the 7 exceptional regions g iven in T able 1.2
+[GMT], or else by Chapter 3 [GMT], [JR], [Li] and [CLLM], it an d (Li,D i,R i) correspond to a closed hyperbolic 3-manifold for i sufﬁciently large, for it is shown
+SHRINKWRAPPING AND THE TAMING OF HYPERBOLIC 3–MANIFOLDS 29
+in these papers that a neighborhood of each exceptional regi on corresponds to a
+unique closed hyperbolic 3-manifold as conjectured in 1.31 [GMT]. This implies
+thatN is covered by a closed 3-manifold, which is a contradiction.
+The proof of Proposition 1.28 [GMT] shows that if (L,D,R ) does not lie in an
+exceptional region, then there exists a killer word u(f,w ) inf andw as deﬁned in
+1.18 [GMT]. This means that length(u(f,w )) < length(f ) or if A = axis(f ), then
+d(A,u (f,w )A) < Re(D) = d(A,w (A)). Therefore, for i sufﬁciently large either
+length(u(fi,w i)) < length(fi) or d(Ai,u (fi,w i)Ai) < Re(Di). The latter cannot
+happen sincewi was chosen to take Ai to a nearest translate.
+Since the nonexceptional points of P are covered by ﬁnitely many compact regions and each region has a killer word, it follows that for co rrect choice of killer
+word, reduction of length is uniformly bounded below by some constantǫ.
+Since π1(N ) has no parabolics, u(fi,w i) corresponds to a hyperbolic element
+and hence a geodesic σi ⊂ N . If u(f,w ) is loxodromic, then the corresponding
+geodesic ˜σ ⊂ H3 is of bounded distance from A. Therefore, for all i, d(σi,A i) is
+uniformly bounded and hence{σi} exitsE. Thus, asymptotic length≤ l− ǫ which
+is a contradiction. If u(f,w ) is parabolic, then length(σi)→ 0,{σi} exits the same
+end as {γi} and hence asymptotic length equals zero. T o see that {σi} exitsE,
+note that in H3,u (f,w ) takes a point x to y where d(x,y ) < l/ 4 and hence for i
+sufﬁciently large there are essential closed curves of leng th< l/ 4 passing within
+2d(x,A ) fromγi. □
+Question 3.5. What is the maximal lower bound for the asymptotic tube radiu s of a
+geometrically inﬁnite end E of a complete, orientable, hyperbolic manifold with ﬁnitel y
+generated fundamental group, both in the cases that E is parabolic free or not?
+Question 3.6. What is the upper bound for asymptotic length of a geometrica lly inﬁnite
+endE? It follows from Theorem 0.9 that there is an upper bound whic h is a function of
+rank(π1(E)).
+4. C ANARY ’ S THEOREM
+In this section we give a proof of Canary’s theorem (Theorem 4 .1) when N is
+parabolic free. Our proof of Theorem 0.9 will closely parall el this argument.
+Theorem 4.1 (Canary). IfE is a topologically tame end of the complete, orientable, hyperbolic 3-manifold N = H3/ Γ, where Γ has no parabolic elements, then either E is geometrically ﬁnite or there exists a sequence of CAT (− 1) surfaces exiting the end. If E is
+parametrized byS× [0,∞ ), then these surfaces are homotopic to surfaces of the form S× t,
+via a homotopy supported in S× [0,∞ ).
+Proof. It sufﬁces to consider the case that E is geometrically inﬁnite. By Proposition 3.2 there exists a sequence of pairwise disjoint η-separated simple closed
+geodesics ∆ = {δi} exitingE. Assume that ∆ and the parametrization of E are
+chosen so that for all i∈ N, δ i⊂ S× (i− 1,i ). Let g=genus(S), ∆i ={δ1,···,δ i}
+and let{α i} be a locally ﬁnite collection of embedded proper rays in E such that
+∂α i∈ δi.
+An idea used repeatedly , in various guises, throughout this paper is the following. If R is a closed oriented surface and T is obtained by shrinkwrapping R rel
+the geodesics ∆R, then R is homotopic to T via a homotopy which does not meet
+∆R, except possibly at the last instant. Therefore, if δi ⊂ ∆R and⟨R,α i⟩ = 1 ,
+30 DANNY CALEGARI AND DA VID GABAI
+thenT∩ α i̸=∅ and if T∩ δi =∅, then⟨T,α i⟩ = 1 . Here ⟨·,·⟩denotes algebraic
+intersection number.
+Warm up Case. EachS× i is 2-incompressible in N\∆. (E.g. N =S× R)
+Proof. Apply Theorem 0.8 to shrinkwrap S× i rel. ∆i+1 to a CAT (− 1) surface
+Si. Since⟨S× i,α i⟩ = 1 ,Si∩ α i̸=∅. Since{α i} is locally ﬁnite, the Bounded Diameter Lemma implies that the Si’s must exit E. Therefore for i sufﬁciently large
+Si⊂E and⟨Si,α 1⟩ = 1 ; and hence the projection of Si intoS× 0, (given by the
+product structure on E) is a degree-1 map between surfaces of the same genus.
+Since such maps are homotopic to homeomorphisms, we see that Si can be homotoped withinE to a homeomorphism onto S× 0. See Figure 4 for a schematic
+view . □
+N
+N
+E
+E
+S × 0 S × 1 S × 2 S × n
+S1
+S2
+Sn
+Q: how can one ﬁnd an exiting sequence of CAT (−1) surfaces?
+A: shrinkwrap!
+FIGURE 4. A schematic depiction of shrinkwrapping in action
+General Case. (E.g.N is an open handlebody .)
+Proof. Without loss of generality we can assume that every closed or ientable surface separates N , (see Lemma 5.1 and Lemma 5.6). W e use a purely combinatorial/topological argument to ﬁnd a particular sequence of s mooth surfaces exiting
+E. W e then shrinkwrap these surfaces and show that they have th e desired escaping and homological properties.
+Fixi. If possible, compress S× i, via a compression which either misses ∆ or
+crosses ∆ once say atδi1⊂ ∆i. If possible, compress again via a compression meeting ∆\δi1 at most once say atδi2⊂ ∆i. After at mostn≤ 2g− 2 such operations and
+deleting 2-spheres we obtain embedded connected surfaces Si
+1,···,S i
+ir , none of
+which is a 2–sphere and each of which is 2–incompressible rel ∆i+1\{δi1∪···∪δin}.
+For each ﬁxed i, eachδj (j≤ i) with at most 2g− 2 exceptions is separated fromE
+by exactly one surface Si
+k. Call Bagi
+k the region separated fromE bySi
+k. Note that
+all compressions in the passage of Si to{Si
+1,···,S i
+ir} are on the nonE-side.
+SHRINKWRAPPING AND THE TAMING OF HYPERBOLIC 3–MANIFOLDS 31
+Since each ir ≤ g, we can ﬁnd a p ∈ N and for each i, a reordering of the
+Si
+j’s (and their bags) so that for inﬁnitely many i≥ p,δp∈ Bagi
+1; furthermore, if
+for each i such that δp ∈ Bagi
+1, we denote by p(i) the maximal index such that
+δp(i) ∈ Bagi
+1, then the set {p(i)} is unbounded. By Theorem 0.8, Si
+1 is homotopic rel ∆i+1\{δi1,···,δ in} to a CAT (− 1) surfaceSi. Since the collection {α p(i)}
+is inﬁnite and locally ﬁnite, the Bounded Diameter Lemma imp lies that a subsequence of these Si
+1’s must exit E. Call this subsequence T1,T 2,···, whereTi is the
+shrinkwrappedSni
+1 . Therefore, fori sufﬁciently large,Ti must lie inS× (p,∞ ) and
+⟨Ti,α p⟩ =⟨Sni
+1 ,α p,⟩ = 1 . Therefore, projection of Ti toS× p is degree 1. This in
+turn implies that genus Ti =g andTi can be homotoped withinE to a homeomorphism ontoS× 0. See Figure 5 for another schematic view . □
+Remark 4.2. This argument shows that for i sufﬁciently large,S× i is already 2–
+incompressible inN\∆i. Also, given anyη-separated collection of exiting geodesics
+a sufﬁciently large ﬁnite subset is 2-disc busting. Actuall y using the technology of
+the last chapter, this statement holds for any sequence of ex iting closed geodesics.
+The proof of Theorem 0.9 follows a similar strategy . Here is t he outline in the
+case thatN has a single endE and no parabolics. Given a sequence of η-separated
+exiting simple closed geodesics ∆ = {δi} we pass to subsequence (and possibly
+choose δ1 to have ﬁnitely many components) and ﬁnd a sequence of connec ted
+embedded surfaces denoted{∂W i} such that for each i, ∂W i separates ∆i =δ1∪
+δ2∪···∪ δi from ∆− ∆i and is 2-incompressible rel ∆i. It is a priori possible that
+the∂W i’s do not exit E. If Wi denotes the compact region split off by ∂W i, then
+after possibly deleting an initial ﬁnite set of Wi’s (and adding the associated δi’s to
+δ1) we ﬁnd a compact 3-manifold D⊂ W1 which is a core forW =∪Wi.
+W e next ﬁnd an immersed genus≤ g surfaceTi, which homologically separates
+off a subset Bi of ∆i fromE. For inﬁnitely many i,Bi includes a ﬁxed δp and for
+thesei’s the set {p(i)} is unbounded, where p(i) is the largest index of a δk⊂ Bi.
+The surface Ti separatesBi from the rest in the sense that Ti lifts to an embedded
+surface ˆTi in the π1(D)-cover ˆWi of Wi and in that cover ˆTi separates a lift ˆBi
+from∂ ˆWi, the preimage of ∂W i. The argument to this point is purely topological
+and applies to any 3-manifold with ﬁnitely generated fundam ental group. In the
+general case,{∂W i} will not be an exiting sequence.
+Next we shrinkwrap ∂W i rel ∆i+1 to a CAT(− 1) surface which we continue to
+call ∂W i. Then we homotop ˆTi rel ˆ∆i to a CAT (− 1) surface in the induced ˆWi
+and let Ti denote the projection of Ti to N . The point of shrinkwrapping ∂W i
+is that ∂ ˆWi is now a barrier which prevents ˆTi from popping out of ˆWi during
+the subsequent shrinkwrapping (compare with §2). W e use the δp(i)’s to show
+that, after passing to a subsequence, the Ti’s exit E. W e use δp to show that for i
+sufﬁciently large,Ti homologically separatesE from a Scott core of N .
+W e have outlined the strategy . For purposes of exposition, t he construction of
+theTi’s in §6 is slightly different from the sketch above.
+In§7 we make the necessary embellishments to handle the parabol ic case.
+The next chapter develops the theory of end reductions which enables us to
+deﬁne the submanifolds Wi.
+32 DANNY CALEGARI AND DA VID GABAI
+Core of N
+S × 0 S × i
+δp δp(i)
+δi+1
+αp
+αp(i)
+0 and 1 compress S × i to get the Si
+j
+Si
+1
+Si
+2
+Si
+3
+Bagi
+1
+Bagi
+2
+Bagi
+3
+Ti
+Ti
+Shrinkwrap Si
+1 to get T i
+Actual picture
+FIGURE 5. The Bounded Diameter Lemma and the intersection
+number argument show that S× i undergoes no compression,
+andTi actually separates all of ∆i fromE.
+5. E ND MANIFOLDS AND END REDUCTIONS
+In this section, we prove a structure theorem for the topolog y of an end of a
+3–manifold with ﬁnitely generated fundamental group. A refe rence for basic 3–
+manifold topology is [He].
+SHRINKWRAPPING AND THE TAMING OF HYPERBOLIC 3–MANIFOLDS 33
+The ﬁrst step is to replace our original manifold with a 1–ended manifold M
+with the homotopy type of a bouquet of circles and closed orie ntable surfaces. W e
+then prove Theorem 5.21, the inﬁnite end engulﬁng theorem, which says that given an
+exiting seqence of homotopically non trivial simple closed curves we can pass to
+a subsequence Γ and ﬁnd a submanifold W, with ﬁnitely generated fundamental
+group, containing Γ which has the following properties:
+(1)W can be exhausted by codimension 0 compact submanifolds Wi whose
+boundaries are 2–incompressible rel Γ∩ Wi.
+(2)W has a core which lies in W1.
+This completes the preliminary step in the proof of Theorem 0 .9, as explained
+at the end of§4. The proof of Theorem 0.9 itself is in §6.
+In what follows we will assume that all 3-manifolds are orien table and irreducible.
+Lemma 5.1. IfE is an end of an open Riemannian 3-manifold M ′ with ﬁnitely generated fundamental group, thenE is isometric to the end of a 1-ended 3-manifold M whose
+(possibly empty) boundary is a ﬁnite union of closed orienta ble surfaces. A core of M is
+obtained by attaching 1-handles to the components of ∂M , unless∂M =∅, in which case
+a core is a 1-complex and M =M ′.
+Proof. A thickened Scott coreC [Sc] ofM ′ is a union of 1-handles (possibly empty)
+attached to a compact 3-manifoldX with incompressible boundary . SplitM ′ along
+all the boundary components of X and let M be the component which contains
+E. □
+Remark 5.2. M is a submanifold of M ′.M is isometric to a submanifold ˆM of the
+covering ofM ′ corresponding to the inclusionπ1(M )→ π1(M ′), and the inclusion
+M→ ˆM is a homotopy equivalence.
+Deﬁnition 5.3. Call a ﬁnitely generated group a free/surface group if it is a free product of orientable surface groups and a free group. Call a 1-en ded, irreducible, orientable, 3-manifoldM an end–manifold if it has a compact (possibly empty) boundary and a compact core of the form ∂M× I∪ 1-handles if∂M̸=∅ or a handlebody
+if∂M =∅.
+Note thatπ1(M ) is a free/surface group for M an end–manifold.
+Lemma 5.4. If G is a subgroup of a free/surface group, then its π1-rank equals its H1rank, both in Z and Z/ 2Z-coeﬁcients. □
+Proof. A ﬁnitely generated subgroup of a free/surface group is a fre e/surface
+group, and equality holds in that case. An inﬁnitely generat ed subgroup of a
+free/surface group contains an inﬁnitely generated free su mmand. Consequently ,
+bothπ1 andH1 rank are inﬁnite for such subgroups. □
+Lemma 5.5. AnH1-injective subgroupG of a free/surface group K is ﬁnitely generated.
+Proof. Rankπ1(G) = rank(G/ [G,G ])≤ rank(K/ [K,K ]) = rankπ1(K)<∞ . □
+Lemma 5.6. A 1-ended, orientable, irreducible 3-manifold M with compact boundary is
+an end-manifold if and only if π1(M ) is a free/surface group, H2(M,∂M ) = 0 and∂M
+isπ1-injective.
+Every closed embedded π1-injective surface in an end-manifold is boundary parallel .
+34 DANNY CALEGARI AND DA VID GABAI
+Proof. LetM be an end-manifold with core C of the form ∂M× I∪ 1-handles or
+handlebody if ∂M =∅. Since the inclusion C→ M is a homotopy equivalence,
+∂M is incompressible and π1(M ) is a free/surface group. If T⊂ M is a compact
+properly embedded π1-injective surface, then T can be homotoped rel ∂T intoC.
+The cocores Di of the 1-handles are properly embedded disks whose boundary
+misses ∂T . Since T is homotopically essential, it follows that each intersect ion
+T∩ Di is homotopically inessential in T , and therefore T can be homotoped off
+the cocores of the 1–handles. Once this is done, T can be further homotoped rel.
+boundary into ∂M , since C deformation retracts to ∂M in the complement of the
+cocores of the 1–handles. This implies that H2(M,∂M ) = 0 .
+IfH2(M,∂M ) = 0 andM has incompressible boundary , a connected, closed orientable incompressible surface R must separate off a connected, compact Haken
+manifoldX with incompressible boundary . Ifπ1(M ) is also a free/surface group,
+then π1(X) is a closed orientable surface group and using [St] we conclu de that
+X =N (T ) for some component T of∂M , so R is boundary parallel. Therefore, if
+∂M =∅, then any core is a handlebody . If ∂M ̸=∅, then M has a core C which
+contains∂M [Mc]. If C′ is obtained by maximally compressing C, then each component of∂C ′ is boundary parallel and hence C =∂M× I∪ 1-handles. □
+Corollary 5.7. IfW is a 1-ended, π1-injective submanifold of the end-manifold M such
+thatπ1(W) is ﬁnitely generated and ∂W is a union of components of ∂M , thenW is an
+end-manifold.
+Deﬁnition 5.8. Given a connected compact subset J of an open irreducible 3manifoldM , the end reductionWJ of J to M is to ﬁrst approximation the smallest open submanifold of M which can engulf, up to isotopy , any closed surface in
+M\J which is incompressible in M\J. End reductions were introduced by BrinThickstun [BT1, BT2]. Their basic properties were develope d by Brin-Thickstun
+[BT1, BT2] and Myers [My]. In particular [BT1] show that WJ can be created
+via the following procedure. If V1 ⊂ V2 ⊂ ···is an exhaustion of M by compact connected codimension-0 submanifolds such that J ⊂ V1, then one inductively obtains an exhaustion W1 ⊂ W2 ⊂ ··· ofWJ by compact sets as follows. Transform V1 to W1 through a maximal series of intermediate manifolds
+U1 =V1,U 2,···,U n =W1 whereUk+1 is obtained fromUk by one of the following
+3 operations.
+(1) Compress along a disc disjoint from J.
+(2) Attach a 2-handle to Uk which lies inM\int(Uk), and whose attaching core
+circle is essential in ∂U k.
+(3) Delete a component of Uk disjoint fromJ.
+Having constructed Wi, pass to a subsequence of the Vj ’s and reorder so that
+Wi ⊂ int(Vi+1). Finally pass from Vi+1 to Wi+1 via a maximal sequence of the
+above operations. Since ∂W i is incompressible inM− J, an essential compression
+ofUk can be isotoped rel boundary to one missing Wi. Therefore, we will assume
+such operations miss Wi and hence Wi ⊂ int(Wi+1). Brin and Thickstun [BT1]
+show thatWJ is up to isotopy independent of all choices.
+W e say that{Wi} is a standard exhaustion ofWJ ifW1⊂ W2⊂··· andWJ =
+∪ iWi, where for eachi,Wi arises fromVi via a sequence of the three end-reduction
+operations andV1⊂ V2⊂··· is an exhaustion of M by compact submanifolds.
+SHRINKWRAPPING AND THE TAMING OF HYPERBOLIC 3–MANIFOLDS 35
+Remark 5.9. Note that operations (1) and (2) reduce the sum of the ranks of π1 of
+the boundary components. It follows that the transition fro mVi toWi is obtained
+by a ﬁnite sequence of operations.
+Remark 5.10. (Historical Note) Brin and Thickstun [BT1], [BT2] study end reductions to develop a necessary and a sufﬁcient condition, end 1-movability, for taming
+an end of a 3-manifold. More recently , Myers [My] has promote d the use of end
+reductions to address both the R3-covering space conjecture and the Marden conjecture.
+Lemma 5.11. The inclusion iJ :WJ→ N inducesπ1 andH1-injections. The latter in
+both Z and Z/ 2Z homology.
+Proof. Theπ1-injectivity was ﬁrst proven in [BT2] and rediscovered in [M y]. Our
+proof ofH1-injectivity mimics the proof of π1-injectivity in [My]. Suppose C⊂ Wi
+is a union of oriented simple closed curves bounding the surf aceS⊂ M . Note
+that by elementary 3–manifold topology , we can assumeS is embedded.
+By choosing n sufﬁciently large we can assume that Wi∪ S⊂ Vn. If V 1
+n is obtained by adding a 2-handle to Vn, thenS⊂ V 1
+n . If V 1
+n is obtained by compressing
+V1, via a compression missing J, then by modifying S near the compressing disc
+we obtain a surface S1 spanningC (orientably , if need be) withS1⊂ V 1
+n . If V 1
+n is
+obtained by deleting components of V1 which missC, thenS1 =S∩ V 1
+n still spans
+C. Since Wn is obtained from Vn by a ﬁnite sequence of such operations it follows
+thatC bounds inWn and hence inWJ . □
+H1-injectivity ofWJ inN gives us the following crucial corollary:
+Corollary 5.12. An end-reduction in an end-manifold has ﬁnitely generated f undamental
+group.
+Proof. Combine Lemma 5.11 with Lemma 5.5. □
+Deﬁnition 5.13. IfWJ is an end reduction of the codimension-0 submanifold J in
+N , then we say thatWJ is trivial ifWJ is isotopic to an open regular neighborhood
+of J or equivalentlyWJ is isotopic to int (J). WJ is eventually trivial if it has an
+exhaustionW1⊂ W2⊂··· such that∂W i is parallel to ∂W j for alli,j .
+W e now study end reductions of disconnected spaces J. While the following
+technology and deﬁnitions can be given for more general obje cts we restrict our
+attention to a ﬁnite unions of pairwise disjoint closed (pos sibly non simple) curves
+none of which lie in a 3-cell. Ultimately we will address end r eductions of inﬁnite
+sequences of exiting curves.
+Deﬁnition 5.14. IfJ is a ﬁnite union of pairwise disjoint closed curves in an open
+irreducible 3-manifold M , we say that J is end nonseparable if there is a compact
+connected submanifoldH such thatJ⊂ int(H) and∂H is incompressible inM\J.
+Such anH is called a house ofJ. If J is end nonseparable, then deﬁneWJ to be an
+end-reduction ofH, and callWJ the end reduction of J.
+Lemma 5.15. The end-reductionWJ of an end nonseparable union J of closed curves is
+well deﬁned up to isotopy.
+Proof. Let H and H ′ be two houses for J. W e want to show that if WH is an
+end reduction of H, then there is an isotopy of H ′ toH ′
+1 ﬁxingJ, so that the end
+36 DANNY CALEGARI AND DA VID GABAI
+reductionWH′
+1 ofH ′
+1 is equal to WH . By the deﬁnition of a house for J, both H
+and H ′
+1 satisfy the property that they are connected submanifolds o f M whose
+boundaries are incompressible in M\J.
+Let{Wi} be a standard exhaustion of WH arising from the exhaustion {Vi} of
+M . By passing to a subsequence we can assume that H ′∪ H⊂ V2. By considering
+the passage of V2 to W2, we observe that H ′ can be isotoped to H ′
+1 rel J to lie
+in int (W2) and that ∂W 2 is incompressible in M\H ′
+1. Thus WH is also an endreduction ofH ′. Since end reductions are unique up to isotopy the result fol lows,
+and we may unambiguously denoteWH byWJ . □
+Lemma 5.16. Let A be a ﬁnite union of pairwise disjoint closed curves in the ope n irreducible 3-manifold M . Then A canonically decomposes into ﬁnitely many maximal
+pairwise disjoint end nonseparable subsets A1,···,A n. Indeed, if B is a maximal end
+nonseparable subset of A, thenB =Ai for somei.
+Proof. Since each element of A is end nonseparable, it sufﬁces to show that if B
+andC are end nonseparable subsets of A, then either C∪ B is end nonseparable
+orC∩ B =∅. Let HB andHC be houses for B andC respectively . LetV ⊂ N be a
+compact submanifold containingHB∪ HC . By considering the passage of V toW
+by a maximal sequence of compressions, 2-handle additions, and deletions which
+are taken with respect to B∪ C, one sees that HB (resp. HC ) can be isotoped to
+lie in W via an isotopy ﬁxing B (resp. C). If B∩ C̸=∅, then W is connected and
+hence is a house for B∪ C. □
+Lemma 5.17. IfA1,···An are the maximal end nonseparable components of a ﬁnite set
+A of pairwise disjoint closed curves in an open irreducible 3- manifoldM , then they have
+pairwise disjoint end reductions. In particular they have p airwise disjoint houses.
+Proof. LetA1,A 2,···,A n be the maximal end nonseparable subsets of A. Let{Vk}
+be an exhaustion of M withA⊂ V1. Consider a sequence V1 = U1,···,U n = W1
+where the passage from one to the next is isotopy , compression, 2-handle addition
+or deletion, where the compressions or deletions are taken w ith respect to A. By
+passing to a subsequence of the exhaustion we can assume that W1⊂ V2, and in
+the above manner pass from V2 toW2. In like manner construct W3,W 4,···. By
+deleting ﬁnitely many of the ﬁrst Wi’s from the sequence and reindexing, we can
+assume that all the Wi’s have the same number of components.
+It sufﬁces to show that if W is a component of Wk, then W contains a unique
+Ai and that ∂W is incompressible in M\Ai. Indeed, it sufﬁces to prove incompressibility of ∂W in M\(W∩ A), for then W is a house and can only contain
+oneAi by maximality . If ∂W is compressible in M\(W∩ A) it must compress to
+the outside via some compressing disc D. Consider a term Vn in the exhausting
+sequence with Wk∪ D⊂ Vn. By considering the passage of Vn toWn we can rechoose the disc spanning ∂D to obtain a new compressing disc E ⊂ Wn. Since
+∂W is incompressible inM\int(Wk), it follows thatE must hit a component of Wk
+distinct fromW . This imples that Wn contains fewer components than Wk, which
+is a contradiction. □
+Lemma 5.18. IfA1,A 2,···,A n are as in Lemma 5.17, with pairwise disjoint end reductionsWA1,WA2,···,WAn, thenWA1∪W A2∪···∪W An isH1-injective inM , in both
+Z and Z/ 2Z coefﬁcients.
+Proof. Repeat the proof of Lemma 5.11. □
+SHRINKWRAPPING AND THE TAMING OF HYPERBOLIC 3–MANIFOLDS 37
+Corollary 5.19. LetA be a union of ﬁnitely many pairwise disjoint closed curves in the
+end-manifoldM . If each component of A is homotopically nontrivial, then A breaks up
+into at most rank (π1(M )) maximal non separable subsets.
+Proof. IfA partitions into maximal non separable subsets A1,···,A n, then theH1rank ofWAi is non trivial, sinceπ1(WAi ) is a nontrivial subgroup of a free/surface
+group. Now apply the previous lemma. □
+Lemma 5.20. Letγ1,γ 2,··· be a sequence of homotopically nontrivial, pairwise disjoi nt
+closed curves in the end-manifold M . Then we can group together ﬁnitely many of the
+curves intoγ1, and pass to a subsequence so that
+(1) Any ﬁnite subset of{γ1,γ 2,···}which containsγ1 is end nonseparable.
+(2) Each component ofγ1, and eachγi,i≥ 2 represent the same element ofH1(M, Z/ 2Z).
+Proof. By passing to a subsequence we can assume that eachγi represents the same
+element ofH1(M, Z/ 2Z). By Lemma 5.16, if T is a ﬁnite subset of Γ, thenT canonically partitions into ﬁnitely many end nonseparable subse tsS1,···,S n with corresponding pairwise disjoint end reductionsW1,···,Wn. Deﬁne
+C(T ) =
+n∑
+i=1
+rank(H1(Wi, Z/ 2Z)) = rank(H1(∪ n
+i=1Wi, Z/ 2Z))≤ rank(H1(M, Z/ 2Z))
+where the last inequality follows from Lemma 5.18. Deﬁne
+C(Γ) = max{C(T )|T is a ﬁnite subset of Γ}
+Now pass to an inﬁnite subset of Γ withC(Γ) minimal. By Lemma 5.18, if T⊂ Γ
+withC(T ) = C(Γ), then adding a new element to the T does not increase the number of end nonseparable subsets in its canonical partition. SinceC(Γ) is minimal,
+we can enlarge T by adding ﬁnitely many elements so that the enlarged T , which
+by abuse of notation we still call T , is end nonseparable. Again by maximality
+of C(T ), T together with any ﬁnite subset of Γ is still end non separable. Now
+express Γ as∪γi withγ1 =T . □
+Theorem 5.21 (Inﬁnite end engulﬁng theorem) . If γ1,γ 2,··· is a locally ﬁnite sequence of pairwise disjoint, homotopically non trivial, cl osed curves in the end-manifold
+M , then after passing to a subsequence, allowing γ1 to have multiple components and ﬁxing a base point x∈ γ1, there exist compact submanifolds D⊂ W1⊂ W2⊂··· ofM
+such that
+(1) ∂W i∩ ∂M is a union of components of ∂M and∂W i− ∂M is connected.
+(2) If Γi =∪ i
+j=1γj, then Γi⊂ Wi, and Γi can be homotoped into D via a homotopy
+supported inWi.
+(3) ∂W i is 2-incompressible rel Γi.
+(4) IfW =∪Wi, thenW isπ1 andH1–injective in both Z and Z/ 2Z coeﬁcients.
+(5) D is a core ofW and is of the form ∂W× I∪ 1-handles.
+The conclusion of this theorem is schematically depicted in Figure 6.
+Proof. By passing to a subsequence and allowing γ1 to have multiple components
+we can assume that Γ ={γi} satisﬁes the conclusions of Lemma 5.20. Assume that
+γ1 has at least two elements.
+LetW1 be an end reduction to γ1 with standard exhaustion W1, 1 ⊂ W1, 2 ⊂
+···. Let D1 be a core for W1 with x ∈ D1. Since W1 is π1-injective in M , by
+38 DANNY CALEGARI AND DA VID GABAI
+M
+∂M
+∂M
+E
+γ1
+γ2
+γn
+W1
+W2
+Wn
+FIGURE 6. A schematic view of {Wi},{γi} andM .
+passing to a subsequence we can choose W1, 1 so that each component of γ1 can
+be homotoped into D via a homotopy in W1, 1. Furthermore, H1-injectivity allows
+us to assume that within W1, 1 each γ∈ γ1 is Z2-homologous to a component γ ′
+of γ1 with γ ′̸= γ. If γ represents the trivial class, it should be homologically
+trivial inW1, 1. Finally W1, 1 should be sufﬁciently large so that ∂W 1, 1 is a union of
+components of ∂M and a single component disjoint from ∂M . Note that ∂W 1, 1 is
+2-incompressible relγ1. Indeed, by construction ∂W 1, 1 is incompressible in M/γ 1,
+hence∂W 1, 1 is incompressible to the outside and any essential compress ing disc
+D forW1, 1 must intersect γ1 at least once. If D meets the component γ ofγ1, then
+sinceγ is either Z2-homologically trivial in W1, 1 or Z2-homologous to a γ ′̸= γ it
+follows that|D∩ γ1|≥ 2.
+By passing to a subsequence of {γi} we can assume that γ2∩ W1, 1 =∅. By
+Lemma 5.20, Γ2 ={γ1,γ 2} is end nonseparable. LetW2 be an end reduction for Γ2
+with standard exhaustion W2, 2⊂ W2, 3⊂ W2, 4⊂··· whereW1, 1⊂ int(W2, 2). As
+above letD2 be a core forW2 withx∈ D2 and by choosing W2, 2 sufﬁciently large
+we can assume that it supports a homotopy of Γ2 intoD2 as well as homologies
+between elements of Γ2. Finally , ∂W2, 2 is a union of components of ∂M and a
+single component disjoint from ∂M . As above, ∂W2, 2 is 2-incompressible rel Γ2.
+Having inductively constructed Γi− 1,W i− 1,i − 1 andDi− 1 pass to a subsequence
+of{γj} so that Γi− 1 ⊂ Γi ={γ1,···,γ i} with γi∩ Wi− 1,i − 1 =∅. Let Wi be an
+end reduction of Γi with standard exhaustionWi,i ⊂ Wi,i +1⊂ Wi,i +2⊂··· where
+Wi− 1,i − 1⊂ int(Wi,i ). Let Di be a core of Wi, but if possible let Di = Di− 1. Finally Wi,i should be chosen sufﬁciently large to support homotopies of Γi into
+SHRINKWRAPPING AND THE TAMING OF HYPERBOLIC 3–MANIFOLDS 39
+Di and homologies as described in the previous paragraphs and s o that ∂W i,i is
+a union of components of ∂M and a single other component. As above ∂W i,i is
+2-incompressible rel Γi.
+LetW =∪ iWi,i . The proof of Lemma 5.11 shows that W isπ1 andH1-injective
+in M in Z and Z2 coeﬁcients. By Lemma 5.5W has ﬁnitely generated fundamental
+group and hence for some n, the inclusion Wn,n →W isπ1-surjective. Since Dn
+andWn,n have the same π1-image in π1(Wn) and hence in π1(M ), they have the
+same image in π1(W) and hence Dn→W is π1-surjective. Since the inclusions
+Dn→W n→ M areπ1-injective it follows that Dn is also π1-injective inW and
+hence is a core of W. Therefore, if m≥ n, then Dn andWm,m have the same π1image inπ1(W) and hence in π1(M ). Since theWm isπ1-injective inM , it follows
+thatDm andDn have the same image in π1(Wm) and henceDn is a core ofWm for
+allm≥ n.
+T o complete the proof of the Theorem reorganize{γi} so thatγ1 is now the old
+{γ1,γ 2,···,γ n}, and for all i∈ N, γ1+i = oldγn+i. Let D =Dn. Finally , fori∈ N,
+letWi =Wn+i− 1,n +i− 1.
+By Corollary 5.6 each Wi is an end-manifold and hence D could have been
+taken to be of the form N (∂W)× I∪ 1-handles, if ∂W ̸=∅ and a handlebody
+otherwise. □
+Deﬁnition 5.22. Call theW constructed in Theorem 5.21 an end-engulﬁng of Γ.
+The material in the rest of this chapter will not be used elsew here in this paper;
+in particular, it is not used to prove any of the results of §0.
+Lemma 5.23. IfJ ⊂ J ′ are ﬁnite, end nonseparable unions of homotopically essent ial,
+pairwise disjoint, closed curves with end-reductions W andW ′, thenW is isotopic rel J
+toW1, whereW1⊂W ′.
+Proof. LetW1⊂ W2⊂··· be a standard exhaustion of W. Let Z1⊂ Z2⊂··· be
+a standard exhaustion of W ′ arising from the exhaustion {Vi} of M . By passing
+to subsequence we can assume that W1⊂ V1. By considering the passage of V1 to
+Z1 we can isotope W1 relJ to lie in Z1. Proceeding by induction and passing to
+subsequence, we can assume that Wk⊂ Vk andWk− 1⊂ Zk− 1. By considering the
+passage of Vk toZk (which ﬁxes Zk− 1) we can isotope Wk relWk− 1 to lie in Zk.
+The isotopedWi’s give rise to an isotopy of W toW1 withW1⊂W ′. □
+Remark 5.24. Given J ⊂ J ′ with end-reductions W andW ′ one can isotope
+W relJ toW1 so that W1 ⊂ W′ (Lemma 5.23). On the other hand one cannot
+in general isotopeW ′ to containW. One need only look at the case of J⊂ J ′ being nested balls in the Whitehead manifold to ﬁnd examples. S uch considerations
+make it challenging to ﬁnd nested end–reductions W1⊂W 2⊂W 3⊂··· .
+Theorem 5.25 (Finite end reduction theorem). LetM be an end-manifold. If Γ ={γi}
+is an end nonseparable union of ﬁnitely many homotopically e ssential, pairwise disjoint,
+closed curves, then an end reduction WΓ of Γ has ﬁnitely generated fundamental group
+and given a standard exhaustion{Wi}, by passing to a subsequence, for all i,j <k,
+in∗ (π1(Wi)) = in∗ (π1(Wj ))⊂ π1(Wk)
+and the map in ∗ :π1(Wk)→ π1(WΓ) restricted to in ∗ (π1(Wi)) induces an isomorphism
+ontoπ1(WΓ). Here in ∗ denotes the map induced by inclusion.
+W e ﬁrst prove a topological lemma.
+40 DANNY CALEGARI AND DA VID GABAI
+Lemma 5.26. IfM is an end-manifold, then M has an exhaustion by compact manifolds
+V1⊂ V2⊂··· , such that for each i> 1 eitherVi is a handlebody, in which case ∂M =∅,
+orVi is obtained by attaching 1-handles to a N (∂M ).
+Proof. If∂M =∅, then π1(M ) is free and this result follows directly from [FF]. If
+∂M̸=∅, it sufﬁces to show that ifX is any compact submanifold ofM , thenX⊂ V
+whereV is obtained by thickening ∂M and attaching 1-handles. W e use the standard argument, e.g. see [BF], [BT2] or [FF]. Using the loop th eorem we can pass
+fromX to a submanifoldY , with incompressible boundary via a sequence of compressions and external 2-handle additions. By appropriate ly enlarging X to X1,
+so as to contain these 2-handles, we can pass from X1 toY by only compressions.
+By enlargingY , and hence X1, we can assume that ∂M⊂ Y and no component of
+M\int(Y ) is compact. By Lemma 5.6 each component of ∂Y is boundary parallel
+and henceY is of the form N (∂M )∪ 1-handles. □
+Proof of Theorem 5.25 . Let V1⊂ V2⊂··· be an exhaustion of M as in Lemma 5.26
+so that Γ⊂ V1. Let W1⊂ W2⊂··· be a standard exhaustion of WΓ arising from
+the exhaustion{Vi} ofM .
+By Deﬁnition 5.14 and Lemma 5.12, π1(WΓ) is ﬁnitely generated, so we can
+pass to a subsequence and assume that the induced map π1(W1) → π1(WΓ) is
+surjective.
+LetHi = in∗ (π1(W1)) where in :W1→ Wi is inclusion. W e now show that after
+passing to a subsequence of the W ′
+is,i ≥ 2, the induced maps
+H2→ H3→···→ π1(WΓ)
+are all isomorphisms.
+Forj≥ 1, let Gj = α j
+∗ (π1(W1)), where α j : W1→ Vj is inclusion. Each Gj is a
+ﬁnitely generated subgroup of π1(Vj ) and hence is a free product of ﬁnitely many
+closed orientable surface groups and a ﬁnitely generated fr ee group. Since for all
+j, rank(Gj )≤ rank(G1), there are only ﬁnitely many possibilities for such groups
+and hence by passing to a subsequence we can assume that for j,k > 1, the groups
+Gj and Gk are abstractly isomorphic. Free/surface groups are obviou sly linear,
+hence residually ﬁnite by Malcev [Mv]. Further, Malcev [Mv] went on to show that
+ﬁnitely generated residually ﬁnite groups are Hopﬁan, i.e. surjective self maps are
+isomorphisms. This implies that the induced maps G2→ G3→ G4→··· are all
+isomorphisms. If
+K = ker(in∗ :π1(W1)→ π1(WΓ))
+then
+K = ker(π1(W1)→ π1(M )) = ker(π1(W1)→ G2)
+W e now show that K = ker( π1(W1) → π1(W2)). One readily checks that if
+W1 ⊂ V and K = ker(π1(W1) → π1(V )), and V ′ is obtained from V by compression, 2-handle addition or deletion where these operat ions are performed in
+the complement of W1, then K ⊂ ker(π1(W1) → π1(V ′)). This implies that if
+K2 = ker(π1(W1)→ π1(W2)), then K ⊂ K2. On the other hand K2⊂ K since
+K = ker(π1(W1)→ π1(WΓ)). Therefore, the induced maps H2→ H3→ π1(WΓ)
+are isomorphisms.
+Apply the argument of the previous paragraph to obtain a subsequence of{Wi}
+which starts withW1 andW2 such that the π1-image ofW2 inWj,j > 2, maps isomorphically toπ1(WΓ), via the map induced by inclusion. Continue in this manner
+SHRINKWRAPPING AND THE TAMING OF HYPERBOLIC 3–MANIFOLDS 41
+to constructW3,W 4,···. □
+Addendum to Theorem 5.21 We can obtain the following additional property. If i,j <
+k, then
+in∗ (π1(Wi)) = in∗ (π1(Wj))⊂ π1(Wk)
+where in denotes inclusion. The map in∗ : π1(Wk)→ π1(W) restricted to in∗ (π1(Wi))
+induces an isomorphism onto π1(W).
+Proof. Apply Theorem 5.21 to produce the space D as well as the sets {γi},{Γi},
+{Wi} which we now relabel as {γ ′
+i},{Γ′
+i},{W ′
+i}. Deﬁne γ1 = Γ 1 = γ ′
+1,W1 = W ′
+1,
+γ2 = γ ′
+2 and Γ2 = Γ ′
+2. Let W ′
+2 = W 1
+2 ⊂ W 2
+2 ⊂ W 3
+2 ⊂··· be a standard exhaustion
+of an end reduction W2 of Γ2, which we can assume satisﬁes the conclusions of
+Theorem 5.25. Deﬁning W2 = W 2
+2 , we see that the restriction of in ∗ : π1(W2)→
+π1(W2) = π1(D) to in ∗ (π1(W1))⊂ π1(W2) is an isomorphism. Choose γ3 = γ ′
+i3∈
+{γ ′
+i} so that γ3∩ W2 = ∅ and deﬁne Γ3 = Γ 2∪ γ3. Let W 1
+3 ⊂ W 2
+3 ⊂ W 3
+3 ⊂
+··· be a standard exhaustion of an end-reduction W3 of Γ3 which satisﬁes the
+conclusions of Theorem 5.25 and has W2⊂ W 1
+3 . Deﬁning W3 = W 2
+3 , we see that
+the restriction of in ∗ : π1(W3)→ π1(W3) = π1(D) to in ∗ (π1(W2))⊂ π1(W3) is
+an isomorphism. Now deﬁne γ3 = γ ′
+i3 and Γ2 = Γ 1∪ γi3 . In a similar manner
+constructγ4,γ 5···, Γ4, Γ5,···, W4,W 5,···and ﬁnally deﬁneW =∪Wi. □
+Remarks 5.27. If one allows each γi to be a ﬁnite set of elements, then we can
+obtain the conclusion (in Theorem 5.21 and its addendum) tha t each γi is Z/ 2Zhomologically trivial.
+Question 5.28. LetM be a connected, compact, orientable, irreducible 3-manifo ld such
+that χ (M )̸= 0 and let G be a subgroup of π1(M ). If the induced map G/ [G,G ]→
+H1(M ) is injective, is G ﬁnitely generated?
+Question 5.29. Let Γ be a locally ﬁnite collection of pairwise disjoint homotopi cally essential closed curves such that C(Γ) = C(Γ′) for any inﬁnite subset Γ′ of Γ. Is it true,
+that given n∈ N, there exists an end-engulﬁng of W =∪Wi of Γ such that for all i,
+|E∩ Γi|≥ n for all essential compressing discs E ofWi?
+6. P ROOF OF THEOREMS 0.9, 0.4 AND 0.2: P ARABOLIC FREE CASE
+Proof of Theorem 0.9. By Lemma 5.1 and Remark 5.2 it sufﬁces to consider the
+case thatE is the end of an end-manifold M⊂ N such that the inclusion M→ N
+is a homotopy equivalence. By Lemma 3.2 there exists an η-separated collection
+∆ ={δi} of closed geodesics which exitE. W e let∆i denote the union ∆i =∪ j≤ iδj.
+Apply Theorem 5.21 to ∆ and M to pass to a subsequence also called ∆ where
+we allow δ1 to have ﬁnitely many components. Theorem 5.21 also produces a
+manifoldW open in M and exhausted by compact manifolds {Wi} having the
+following properties.
+(1)W isπ1 andH1 injective (in Z and Z/ 2Z coeﬁcients) inM and henceπ1(W)
+is a free/surface group.
+(2) ∂W i\∂M is a closed connected surface which separates ∆i fromE and is
+2-incompressible inN rel. ∆i.
+(3) There exists a compact submanifold core D⊂ W1 ofW such that for each
+i, δi can be homotoped intoD via a homotopy supported inWi.D is either
+42 DANNY CALEGARI AND DA VID GABAI
+of the form ∂W× I with 1-handles attached to the 1-side, if ∂W̸ =∅ or a
+handlebody , otherwise.
+Let Gi denote in ∗ (π1(D))⊂ π1(Wi). Let ∂eD denote D∩ ∂M = ∂W. Let Xi
+denote the covering space of Wi with groupGi and let ˆD denote the lift of D. Pick
+a homotopy of ∆i into D supported in Wi. This homotopy lifts to a homotopy
+of ˆ∆i into ˆD, thereby picking out the closed preimages ˆ∆i of ∆i which are in 1-1
+correspondence with ∆i. Let{ˆδ1,···, ˆδi} denote these elements.
+Claim. EachWi is a compact atoroidal Haken manifold and ∂W i contains a surface
+of genus≥ 2.
+Proof of Claim. Each embedded torus in N is compressible, since N is parabolic
+free. A compressible torus in an irreducible 3-manifold is e ither a tube, i.e. bounds
+a solid torus or a convolutube, i.e. bounds a cube with knotted hole X, which is a
+3-ball with an open regular neighborhood of a properly embed ded arc removed.
+Furthermore,X lies in a 3-ball. Therefore, if some component of ∂W i is a torus,
+Wi is either a solid torus or a cube with knotted hole. The former can contain at
+most one closed geodesic and the latter none. Since Wi contains at least two closed
+geodesics∂W i cannot contain a torus.
+IfWi contained an embedded incompressible torus T , then the compact region
+bounded by T would lie in Wi. This implies that T is a convolutube. In H3, the
+universal covering of N , let ˜∆i denote the preimage of ∆i and ˜Wi the preimage of
+Wi. Since T lies in a 3-cell in N ,T lifts to a torus ˜T isometric to T . Using the loop
+theorem, it follows that ˜∂W i is incompressible in H3\˜∆i and ˜T is incompressible
+in ˜Wi. W e will show that after an isotopy of ˜T supported in ˜Wi, there exists an
+embedded 3-ball F ⊂ H3 such that T ⊂ F and F∩ ˜∆i =∅. This implies that
+T is compressible in F , via a compressing disc D disjoint from ˜∆i. Since ˜Wi is
+incompressible in H3\˜∆i it follows that D can be isotoped rel ∂D so thatD⊂ ˜Wi.
+This contradicts the fact that ˜T is incompressible in ˜Wi.
+Here is how to ﬁnd F . Let E⊂ H3 be a large round ball transverse to ˜∆i which
+contains ˜T in its interior. ˜∆i∩E ={α 1,···,α n} is a ﬁnite union of unknotted arcs,
+i.e. there exists pairwise disjoint embedded discs {D1,···,D n} such that for each
+k,D k⊂ E and∂D k consists of α k together with an arc lying in ∂E . For each k,
+eitherα k∩ ˜Wi =∅ orα k⊂ ˜Wi. Since ∂ ˜Wi is incompressible in H3\˜∆i,E and the
+Dk’s can be isotoped, via an isotopy which ﬁxes ˜∆i pointwise, to E′ andD′
+k’s so
+thatE′ is a 3-ball containing ˜T , the D′
+k’s are unknotting discs for the α k’s and for
+eachk, eitherD′
+k∩ ˜Wi =∅ orD′
+k⊂ ˜Wi. After an isotopy of ˜T supported inE′∩ ˜Wi,
+for each k, ˜T∩ D′
+k =∅. Finally let F equalE′−∪ n
+j=1int(N (D′
+k)), where N (D′
+k) is
+a very small regular neighborhood of D′
+k. □
+It now follows from Thurston (see Proposition 3.2 [Ca] or [Mo ]) that int (Xi)
+is topologically tame. Let ¯Xi denote its manifold compactiﬁcation. Since ∂eD
+is a union of components of ∂W i and Xi is the π1(D) cover, there is a canonical
+identiﬁcation of ∂eD with some set of components of ∂ ¯Xi. Let ∂e ˆD denote these
+components. Having the same homotopy type as D, it follows by the usual group
+SHRINKWRAPPING AND THE TAMING OF HYPERBOLIC 3–MANIFOLDS 43
+theoretic reasons that ¯Xi either compresses down to a 3-ball, or to a possibly disconnected (closed orientable surface)×I. In the former case ¯Xi is a handlebody
+which, for reasons of Euler characteristic, is of the same ge nus as D. In the latter
+case, since ∂e ˆD is an incompressible surface, ¯Xi is topologically ∂e ˆD× I with 1handles attached to the 1-side. Let ¯Si denote∂ ¯Xi− ∂e ˆD. Again by reason of Euler
+characteristic, genus( ¯Si) = genus(∂ED), where∂ED =∂D− ∂eD.
+Deﬁneg′ = genus( ¯Si) = genus(∂ED). W e show thatg′≤ g = genus(∂EC), where
+C is the original core of M . By construction D∩ ∂M is a union of components of
+C∩ ∂M , therefore it sufﬁces to show that the number of 1-handles at tached to
+N (D∩ ∂M ) is not more than the number of 1-handles attached to N (C∩ ∂M ) in
+the constructions of D andC respectively . IfD∩ ∂M =C∩ ∂M , then this follows
+immediately from the fact thatD andC are cores respectively ofW andM and the
+H1-injectivity ofW inM . Let E = (C∩ ∂M )\(D∩ ∂M ). The H1-injectivity ofC in
+M implies that the inclusionH1(C∩∂M )→ H1(M ) is injective. The H1-injectivity
+ofD inW and theH1-injectivity ofW inM implies thatD isH1-injective inM . If
+the kernel of in ∗ :H1(D∪ E)→ H1(M ) is nontrivial, then a non trivial homology
+between D and E would lie in some Vj, where j > 1 and Vj is a term in the
+exhausting sequence of M used for constructing {Wi}. Arguing as in the proof
+of Lemma 5.11, Wj contains a non trivial homology between D andE and hence,
+E∩ Wj̸=∅. This contradicts the fact that Wj∩ ∂M =D∩ ∂M . Therefore
+(∗) number of 1-handles of D≤ rankH1(M )− (rankH1(D∩ ∂M ) + rankH1(E))
+= rankH1(M )− rank(H1(∂C∩ M ))
+= number of 1-handles of C
+Isotope ¯Si⊂ ¯Xi to an embedded surface ˆSi⊂ Xi via an isotopy which does
+not cross ˆ∆i. Next, if possible, compress ˆSi via a compression either disjoint from
+ˆ∆i or crossing ˆ∆i once, say at ˆδi1 . If possible, compress the resulting surface via a
+compression crossing ˆ∆i\ˆδi1 at most once and so on. Since genus( ˆSi) = g′, there
+is an a priori upper bound on the number of compressions we need to do. In the
+end we obtain connected surfaces ˆSi
+1,···, ˆSi
+n inXi which are 2-incompressible rel
+ˆ∆\{ˆδi1,···, ˆδim} where m < 2g′− 1, and both n and genus( ˆSi
+j) are≤ g′. Since
+Xi\ˆ∆i is irreducible, we can assume that no ˆSi
+j is a 2-sphere. These ˆSi
+j’s create a
+partitionBi
+1,···Bi
+n of ˆ∆i\{ˆδi1,···, ˆδim}, whereBi
+j is the subset of ˆ∆i\{ˆδi1,···, ˆδim}
+separated from ¯Si by ˆSi
+j. Each ˆSi
+j is incompressible to the ¯Si side, since the component of ¯Xi split along ˆSi
+1∪···∪ ˆSi
+n which contains ¯Si is homeomorphic to
+N ( ˆSi
+1∪···∪ ˆSi
+n)∪ 1-handles. Therefore, each ˆSi
+j is 2-incompressible relBi
+j.
+As in the proof of Canary’s theorem, after appropriately reo rdering theBi
+j’s we
+can ﬁnd a p∈ N and a sequence k1 < k2 <··· such that ˆδp ⊂ Bki
+1 and if p(i)
+denotes the largest index of a ˆδj∈ Bki
+1 , then limi→∞ p(i) =∞ . In general reorder
+the ˆSi
+j’s so that, if possible, ˆδp⊂ Bi
+1.
+44 DANNY CALEGARI AND DA VID GABAI
+Fix i. Let W ′
+i be the union of Wi together with the components of N\int(M )
+which non trivially intersect ∂W 1. Let Yi denote the covering of W ′
+i with fundamental groupGi. ViewXi, ˆ∆i, and the ˆSi
+j’s etc. as sitting naturally in Yi. Let δ∈ ∆
+be disjoint from Wi. Apply Lemma 2.3 to Wi, δ∪ ∆i andSi
+1.
+W e have the following dictionary between terms appearing inour current setup
+(on the left) and the terms appearing in the hypothesis of Lem ma 2.3 (on the right):
+the geodesicsδ∪ ∆i ←→ the geodesics ∆1
+the manifoldW ′
+i ←→ the manifoldW
+W ′
+i∩ (δ∪ ∆i) = ∆ i ←→ W∩ ∆1 = ∆
+the subgroupGi ofπ1(W ′
+i ) ←→ the subgroupG ofπ1(W )
+the coverYi withπ1(Yi) = Gi ←→ the coverX withπ1(X) = G
+the lifted geodesics Bi
+1 ←→ the lifted geodesics B
+the surface ˆSi
+1 ←→ the surfaceS
+Then Lemma 2.3 constructs surfaces T i andP i where the correspondence is
+the shrinkwrapped surface T i ←→ the shrinkwrapped surface T
+the approximating surfaceP i ←→ the approximating surface Tt
+In more detail: W ′
+i is isotopic to a manifold W new
+i , via an isotopy ﬁxing ∆i∪ δ
+pointwise. This isotopy induces a homotopy of the covering p rojectionπ : Yi→
+W ′
+i ⊂ N to a covering projection π new : Yi→ W new
+i ⊂ N . Our ˆSi
+1 is isotopic to a
+surface ˆP i via an isotopy avoiding Bi
+1 and the projection of ˆP i intoN is a surface
+P i which is homotopic to a CAT (− 1) surface T i. Furthermore, P i and T i are at
+Hausdorff distance≤ 1 and the homotopy from P i toT i is supported within the
+1-neighborhood ofP i.
+W e relabel superscripts, and by abuse of notation we let the sequence{T i} stand
+for the old subsequence {T ki}, with δp(ki) being denoted by δp(i), etc. W e also
+drop the superscript new so in particular the projection π :Yi→ W ′
+i now refers to
+π new :Yi→ W new
+i .
+W e use theδp(i)’s to show that {T i} exitsE. Let{α i} be a locally ﬁnite collection
+of properly embedded rays from {δi} toE. For each i, ˆSi
+1 intersects some componentω ofπ − 1(α p(i)) with algebraic intersection number 1, so ˆP i∩ π − 1(α p(i))̸=∅.
+Therefore for all i, we have an inequality dist (T i,α p(i))≤ 1. Our assertion now
+follows from the Bounded Diameter Lemma.
+Lemma 6.1. LetE be an end of M an orientable, irreducible 3-manifold with ﬁnitely
+generated fundamental group. If C is a 3-manifold compact core of M andZ is the component of M\C which contains E, then [∂EC] generates H2(Z) and is Thurston norm
+minimizing. Here ∂EC is the component of ∂C which facesE.
+Proof. First,∂EC is connected, or else there exists a closed curveκ inM intersecting
+a component of∂EC once, henceκ is not homologous to a cycle inC, contradicting
+the fact thatC is a core. That [∂EC] generatesH2(Z) follows from the fact that any
+2-cyclew inZ is homologous to one in C, so the restriction of that homology to
+SHRINKWRAPPING AND THE TAMING OF HYPERBOLIC 3–MANIFOLDS 45
+E
+∂M
+∂M
+C D
+Wi
+W ′
+i
+N
+δp
+δp(i)
+δ
+αp(i) αp
+FIGURE 7.
+Z gives a homology of w to n[∂EC] for some n. Equivalently , observe that the
+inclusionC→ M is a homotopy equivalence, and use excision for homology .
+LetQ⊂ int(Z) be a Thurston norm minimizing surface representing [∂EC]. W e
+can choose Q to be connected since H2(Z) = Z. Let V ⊂ Z be the submanifold
+between∂EC andQ. If genus(∂EC) > genus(Q), then there exists a nonzero z in
+the kernel of in∗ : H1(∂EC) → H1(V ). This follows from the well known fact
+that for any compact orientable 3-manifold V , the rank of the kernel of the map
+in∗ : H1(∂V )→ H1(V ) is 1
+2 rank(H1(∂V )). Since C is a core, z is in the kernel of
+the map in∗ : H1(∂EC)→ H1(C). This gives rise to a class w′∈ H2(M ) and dual
+classz′∈ H1(∂EC) with⟨z′,w ′⟩̸ = 0, which is again a contradiction. □
+Using this lemma, we now complete the proof of Theorem 0.9.
+LetZ denote the component of N split open along ∂EC which containsE. By
+Lemma 6.1,∂EC generatesH2(Z). Next, observe that if β is any ray inZ from∂EC
+46 DANNY CALEGARI AND DA VID GABAI
+toE andR is any immersed closed orientable surface in Z, then [R] = n[∂EC]∈
+H2(Z) where⟨R,β ⟩ = n. T o see this, note that ⟨n[∂EC],β ⟩ = n by considering n
+copies of ∂EC slightly pushed into Z and algebraic intersection number is independent of representative of homology class.
+W e now useδp to show that for i sufﬁciently large [T i] is homologous in Z to
+[∂EC]∈ H2(Z)∼
+= Z; see Figure 7. Let β be the ray σ∗α p whereσ⊂ Z is a path
+from∂EC to∂α p. For what follows assume that i is sufﬁciently large so that
+N2(P i)∩ (σ∪ δp∪ C) =∅
+whereN2(P i) denotes the 2–neighborhood ofP i, and hence
+⟨T i,β ⟩ =⟨P i,α p⟩
+W e now compute this value. By perturbingP i, if necessary , we can assume that
+P i is transverse to α p and no intersections occur at double points of P i. There is a
+1–1 correspondence of sets
+{α p∩ P i}←→{ π − 1(α p)∩ ˆP i}
+Let Bagi denote the component ofYi split along ˆP i which is disjoint from ¯Si. Note
+thatπ − 1(δp)∩ ∂ Bagi =∅. If κ is a component of π − 1(α p), then⟨κ, ˆP i⟩ = 0 if no
+endpoints lie in Bagi while⟨κ, ˆP i⟩ = 1 if exactly one endpoint lies in Bagi. T o see
+this, orient α p so that the positive end escapes to E. Then the positive end of each
+liftκ is in∂Y i, which is outside Bag i. It follows that if p is an endpoint ofκ in Bagi,
+thenp is the negative end of κ, and⟨κ, ˆP i⟩ = 1 . Since ˆδp lies in Bagi, there is at
+least 1 componentκ ofπ − 1(α p) with such an endpoint in Bagi, and therefore
+⟨π − 1(α p), ˆP i⟩≥ 1
+and hence
+[T i] = n[∂EC]∈ H2(Z)
+for somen≥ 1.
+Therefore
+|χ (∂EC)|≥| χ (Ti)|≥ xs(n[∂EC]) = x(n[∂EC]) = nx([∂EC]) = n|χ (∂EC)|
+and hence n = 1 and genus(T i) = genus( ∂EC). Here x (resp. xs) denotes the
+Thurston (resp. singular Thurston) norm on H2(Z). The ﬁrst inequality follows
+by construction, the second by deﬁnition, the third since xs =x ([G1]), the fourth
+sincex is linear on rays [T2] and the ﬁfth by Lemma 6.1. This complete s the proof
+of Theorem 0.9. □
+Remark 6.2. Since for i sufﬁciently large, genus(T i) = g, it follows that for such
+i, no compressions occur in the passage from ¯Si to ˆSi
+1. This mirrors the similar
+phenomenon seen in the proof of Canary’s theorem. If the shri nkwrapped∂W ′
+i is
+actually a ∆i-minimal surface disjoint from ∆i, then ∂X i is a least area minimal
+surface for the hyperbolic metric, and we can pass directly from ˆSi
+1 to a ˆ∆i-minimal
+surface ˆT i by shrinkwrapping in Xi. Our T i is then the projection of ˆT i toN .
+If the shrinkwrapped∂W ′
+i touches ∆i, then we can still shrinkwrap ˆSi
+1 inXi. In
+this caseXi is bent and possibly squeezed along parts of ˆ∆i and it is cumbersome
+to discuss the geometry and topology of Xi. Therefore we chose for the purposes
+of exposition to express T i as a limit of surfaces. These surfaces are projections of
+gtk –minimal surfaces in the smooth Riemannian manifolds Xi with Riemannian
+SHRINKWRAPPING AND THE TAMING OF HYPERBOLIC 3–MANIFOLDS 47
+metrics gtk . As metric spaces, the (Xi,g tk ) converge to the bent and squeezed
+hyperbolic “metric” on Xi.
+T ameness CriteriaLetE be an end of the complete hyperbolic 3-manifold N with
+ﬁnitely generated fundamental group and compact core C. Let Z be the component ofN\int(C) containingE with∂EC denoting∂Z . LetT1,T 2,···be a sequence
+of surfaces mapped into N . Consider the following properties.
+(1) genus(Ti) = genus(∂EC).
+(2) Ti⊂ Z and exitE.
+(3) Each Ti homologically separatesC fromE (i.e. [Ti] = [∂EC]∈ H2(Z)).
+(4) Each Ti is CAT(-1).
+Theorem 6.3 (Souto [So]). IfT1,T 2,···is a sequence of mapped surfaces in the complete
+hyperbolic 3-manifold N with core C and endE which satisﬁes Criteria (1), (2) and (3),
+thenE is topologically tame. □
+Theorem 6.3 follows directly from the proof of Theorem 2, [So ]. That proof
+makes essential use of the work of Bonahon [Bo] and Canary [Ca ]. W e now show
+how Criterion (4) enables us to establish tameness without i nvoking the impressive technology of [Bo] and [Ca]. Our argument, inspired in p art by Souto’s work,
+requires only elementary hyperbolic geometry and basic 3-m anifold topology .
+A topological argument that criteria (1) - (4) imply tamenes s. It sufﬁces to consider the case thatE is the end of an end-manifold M which includes by a homotopy equivalence intoN , and thatC⊂ M is of the form∂M× I∪ 1-handles, where
+the 1-handles attach to ∂M× 1 and∂M =∂M× 0.
+Using standard arguments, we can replace the Ti’s by simplicial hyperbolic surfaces as deﬁned in [Ca]. The idea of how to do this is simple: the CAT (− 1) property
+implies that each Ti has an essential simple closed curve κ i of length uniformly
+bounded above. Ifκ ∗
+i denotes the geodesic inN homotopic toκ i, then either theκ ∗
+i
+have length bounded below by some constant, and are therefor e contained within
+a bounded neighborhood of κ i, or else the lengths of the κ ∗
+i get arbitrarily short,
+and therefore they escape to inﬁnity . In either case, the seq uenceκ ∗
+1,κ ∗
+2,··· exits
+E. Then we can triangulate Ti by a 1–vertex triangulation with a vertex on κ ∗
+i , and
+pull the simplices tight to geodesic triangles. This produc es a simplicial hyperbolic surface, homotopic to Ti, which is contained in a bounded neighborhood of
+κ ∗
+i rel. the thin part of N , and therefore these surfaces also exit E. From now on
+we assume that each Ti is a simplicial hyperbolic surface.
+Note that either ∂EC is incompressible in N and hence M is homotopy equivalent to ∂EC× [0,∞ ) or each Ti is compressible in N , i.e. there exists an essential
+simple closed curve in Ti that is homotopically trivial in N . Indeed, using the
+π1-surjectivity of C and the irreducibility of N, T i can be homotoped into C. If
+Ti is incompressible in N , then Ti can be homotoped off the 1-handles and then
+homotoped into a component of∂M . Using Criterion (3), the degree of this map is
+one, which implies that Ti is homotopic to a homeomorphism onto a component
+of∂M . Since genus(Ti) = genus(∂EC), it follows that C =∂M× I and hence∂EC
+is incompressible in N .
+Since eitherM is homotopy equivalent to∂M× [0,∞ ) or eachTi is compressible,
+it follows by Canary [Ca] and Canary–Minsky [CaM] (see also P roposition 3 [So])
+48 DANNY CALEGARI AND DA VID GABAI
+that there exists a compact setK⊂ Z such that eachTi can be homotoped withinZ
+to a simplicial hyperbolic surfaceT 0
+i which nontrivially intersectsK. HereZ is the
+closure of M− int(C). By the Bounded Diameter Lemma, there exists a compact
+setK1⊂ Z such that for each i,T 0
+i ⊂ K1.
+Sincex =xs [G1], there exists a sequence of embedded genus-g surfacesA1,A 2,···
+such that for eachi,Ai lies in a small neighborhood ofTi and [Ai] = [Ti] = [∂EC]∈
+H2(Z). By passing to subsequence we can assume that the Ai’s are pairwise disjoint and each Ai is disjoint from K1 and separatesE fromK1. Let A[p,q ] denote
+the compact region between Ap andAq. Since genus(Ap) = genus(∂EC), it follows
+by Lemma 6.1 that Ap is Thurston norm minimizing in Z and hence isπ1-injective
+inZ andA[p,p +1].
+T o establish tameness it sufﬁces to show that each A[p,p +1] is a product. Fix p∈
+N. Let j be sufﬁciently large so thatTj separatesA[p,p +1] fromE. Let T be a surface
+of genus g = genus(∂EC). Using [Ca], [CaM], let F : T× I→ Z be a homotopy
+such thatF|T× 1 = Tj andF (T× 0)⊂ K1. By Stallings and W aldhausen, after a
+homotopy ofF rel∂F we can assume thatF − 1(Ap∪Ap+1) areπ1-injective surfaces
+inT× (0, 1). See p. 60 [W a]. Since F (T× ∂I )∩ A[p,p +1] =∅, these surfaces are
+disjoint from T× ∂I , and by arguing as in §3 [W a], they are isotopic to surfaces
+of the form T× t,t∈ (0, 1). Therefore, after a further homotopy we can assume
+that F − 1(Ap∪ Ap+1) = T× B, where B ⊂ (0, 1) is a ﬁnite set of points. Since
+eachF|T× t homologically separatesE from∂EC, eachF|T× b is a degree-1 map
+onto eitherAp orAp+1 and hence after another homotopy we can assume that for
+eachb∈ B, F|T× b is a homeomorphism onto its image. Therefore there exists
+b,b ′∈ B such that F|T× [b,b ′] maps degree-1 onto A[p,p +1] and the restriction of
+F toT× ∂[b,b ′] is a homeomorphism. Therefore F :T× [b,b ′]→ A[p,p +1] is a π1injective, degree-1 map whose restriction to∂(T× [b,b ′]) is a homeomorphism onto
+∂A [p,p +1]. Since both domain and range are irreducible, such a map is ho motopic
+rel boundary to a homeomorphism, by W aldhausen [W a]. □
+Remarks 6.4. (1) In the presence of an escaping sequence of CAT(-1) surfac es,
+hyperbolic surface interpolation and the bounded diameter lemma is all the hyperbolic geometry needed to establish tameness.
+(2) This argument makes crucial use of the fact that the homot opy F is supported inZ and eachAi is incompressible in Z.
+Proof of Theorem 0.4 It sufﬁces to consider the case that N is orientable, since it
+readily follows using [Tu], thatN is tame if and only if its orientable cover is tame.
+IfE is geometrically ﬁnite, then by [EM] E is tame. Now assume that E is geometrically inﬁnite. Theorem 0.9 provides us with a collecti on{Ti} which satisﬁes
+T ameness Criteria (1)-(4). Now apply Theorem 6.3. □
+Proof of Theorem 0.2 . It sufﬁces to prove Theorem 0.2 for the geometrically inﬁnite ends of orientable manifolds. It follows from Theorem s 0.9 and 0.4 that E
+is topologically of the form T× [0,∞ ), where T is a surface of genus g. Theorem
+0.9 provides for us a sequence{Ti} of surfaces satisfying T ameness Criteria (1)-(4).
+Since for i sufﬁciently large Ti⊂ T× [0,∞ ) and homologically separates T× 0
+fromE, it follows that the projection Ti to T× 0 is a degree 1 map of a genus g
+surface to itself and hence is homotopic to a homeomorphism. □
+SHRINKWRAPPING AND THE TAMING OF HYPERBOLIC 3–MANIFOLDS 49
+7. T HE PARABOLIC CASE
+Thanks to the careful expositions in [Bo], [Ca] and [So] it is now routine to obtain general theorems in the presence of parabolics from the corresponding results
+in the parabolic free case.
+W e now give the basic deﬁnitions and provide statements of ou r results in the
+parabolic setting.
+The following is well known, e.g. see [Ca] for an expanded ver sion of more or
+less the following discussion. Let N be a complete hyperbolic 3-manifold, then
+for sufﬁciently small ǫ, the ǫ-thin part, N≤ ǫ ofN is a union of solid tori (Margulis
+tubes), rank-1 cusps and rank-2 cusps. Let N≥ ǫ denote N\int(N≤ ǫ). The space
+N ǫ
+0 =N≥ ǫ∪ Margulis tubes is called the neutered space ofN , though we often drop
+theǫ. The parabolic locus ∂N ǫ
+0 = P ǫ (usually just denoted P ) is a ﬁnite union of
+toriT1,···,T m and open annuli A1,···An. Each annulus Ai is of the form S1× R
+such that for t∈ R, each S1× t bounds a standard 2-dimensional cusp in N≤ ǫ.
+Let N 0
+≤ ǫ denote the cusp components of N≤ ǫ. By [Mc], N has a compact core
+C⊂ N0 which is also a core of N0 and the restriction to each component P ′ ofP
+is a core of P ′. Such a core for N0 is called a relative core. In particular if P ′ is an
+annulus, then we can assume that C∩ P ′ =S1× [t,s ]. By Bonahon [Bo], the ends
+ofN0 are in 1-1 correspondence with components of ∂C/P . If N = H3/ Γ, then an
+end of N0 is geometrically ﬁnite if it has a neighborhood disjoint from C(Γ)/ Γ, the
+convex core of N . Such an end has an exponentially ﬂaring geometry similar to
+that of a geometrically ﬁnite end of a parabolic free manifol d. The end E ofN0 is
+topologically tame if it is a relative product, i.e. there is a compact surface S and an
+embeddingS× [0,∞ )→ N0 which parametrizesE. If U is a neighborhood of E,
+then by passing to a smaller neighborhood we can assume that U∩ Ai is either∅
+or of the form S1× (t,∞ ) orS1× ((−∞ ,s )∪ (t,∞ )). Adding the corresponding
+2-dimensional cusps to S1× pts. we obtain UP the parabolic extension ofU . So if E
+is topologically tame, UP is topologically SP× [0,∞ ), where SP is topologically
+int(S) and geometricallyS with cusps added.
+Following [Bo] and [Ca] we say that the end E ofN0 is simply degenerate if it is
+topologically tame, has a neighborhoodU with a sequencefi :SP→ UP such that
+fi induces a CAT(− 1) structure onSP , thefi’s eventually miss given compact sets
+and eachfi is properly homotopic in UP to a homeomorphism of SP ontoSP× 0.
+W e say thatE is geometrically tame if it is simply degenerate or geometrically ﬁnite.
+The manifoldN is geometrically tame if each end of N0 is geometrically tame.
+Francis Bonahon showed that if ǫ is sufﬁciently small, then an end E of N ǫ
+0 is
+geometrically inﬁnite if and only if there exists a sequence ∆ = {δi} of closed
+geodesics lying in N ǫ
+0 and exitingE.
+W e can now state the general version of the results stated in t he introduction.
+Theorem 7.1. LetN be a complete hyperbolic 3-manifold with ﬁnitely generated fundamental group with neutered space N0. The endE ofN0 is simply degenerate if there exists
+a sequence of closed geodesics exiting the end.
+Theorem 7.2. A complete hyperbolic 3-manifold with ﬁnitely generated fu ndamental
+group is geometrically tame.
+Theorem 7.3. If N is a complete hyperbolic 3-manifold with ﬁnitely generated fundamental group, then each end of N0 is topologically tame. In particular, each end of N is
+topologically tame.
+50 DANNY CALEGARI AND DA VID GABAI
+Theorem 7.4. IfN = H3/ Γ is a complete hyperbolic 3-manifold with ﬁnitely generated
+fundamental group, then the limit set LΓ of Γ is either S2
+∞ or has Lebesgue measure zero.
+IfLΓ =S2
+∞ , then Γ acts ergodically on S2
+∞ .
+Theorem 7.5 (Classiﬁcation Theorem). IfN is a complete hyperbolic 3-manifold with
+ﬁnitely generated fundamental group, then N is determined up to isometry by its topological type, its parabolic structure, the conformal boundary ofN0’s geometrically ﬁnite ends
+and the ending laminations of N0’s geometrically inﬁnite ends.
+Theorem 7.6 (Density Theorem) . If N = H3/ Γ is a complete ﬁnitely generated 3manifold with ﬁnitely generated fundamental group, then Γ is the algebraic limit of geometrically ﬁnite Kleinian groups.
+Theorem 7.7. LetN be a complete hyperbolic 3-manifold with ﬁnitely generated fundamental group and with associated neutered space N0. LetE be an end of N0 with relative
+compact core C. Let S be a compact surface with the topological type of δEC, the component of the frontier of C which facesE. Let UE denote a parabolic extension of a neighborhood ofE. If there exists a sequence of closed geodesics exiting E, then there exists a
+sequence{Si} of proper CAT(− 1) surfaces inUP homeomorphic to int (S) which eventually miss every compact set and such that each Si∩ N0 homologically separatesC fromE.
+Furthermore, ifSi∩ N0 lies to theE side of C, then no accidental parabolic α⊂ Si∩ N0
+can be homotoped into a cusp via a homotopy disjoint from C.
+Remarks 7.8. (1) Theorem 7.7 is the main technical result of this section a nd
+at the end of this section we will deduce from it Theorems 7.1 a nd 7.3.
+(2) Theorem 7.3 has been independently proven by Agol [Ag].
+(3) Theorem 7.1 implies Theorem 7.2 as follows. A complete hy perbolic 3manifold is geometrically tame if each end of N0 is either geometrically
+ﬁnite or simply degenerate. By deﬁnition, ends of N0 are either geometrically ﬁnite or geometrically inﬁnite. Using Bonahon’s char acterization of
+geometrically inﬁnite ends and Theorem 7.1 it follows that g eometrically
+inﬁnite ends are simply degenerate.
+(4) Theorem 7.4 immediately follows from Theorem 7.2 by the w ork of Thurston
+[T] and Canary [Ca]. It also follows from [Ca] that the variou s results of§9
+[Ca] hold for N .
+(5) Theorem 7.3 is the last step needed to prove the monumenta l classiﬁcation theorem, the other parts being established by Alhfors, Bers, Kra, Marden, Maskit, Mostow , Prasad, Sullivan, Thurston, Minsky , Masur–Minsky ,
+Brock–Canary–Minsky , Ohshika, Kelineidam–Souto, Lecuire, Kim–Lecuire–
+Ohshika, Hossein–Souto and Rees. See [Mi] and [BCM].
+(6) The Density Theorem was conjectured by Bers, Sullivan an d Thurston.
+Theorem 7.3 is one of very many results, many of them recent, n eeded to
+build a proof. Major contributions were made by Alhfors, Ber s, Kra, Marden, Maskit, Mostow , Prasad, Sullivan, Thurston, Minsky , Masur–Minsky ,
+Brock–Canary–Minsky , Ohshika, Kelineidam–Souto, Lecuire, Kim–Lecuire–
+Ohshika, Hossein–Souto, Rees, Bromberg and Brock–Bromber g.
+(7) The rest of this section is devoted to proving Theorems 7. 7, 7.1 and 7.3.
+Given the manifold N with neutering N0 and endE ofN0 we explain how to
+ﬁnd a relative end-manifoldM containingE.
+Deﬁnition 7.9. If A is a cod-0 submanifold of a manifold with boundary , then
+the frontierδA ofA is the closure of ∂A− ∂M . If (R,∂R )⊂ (N0,P ) is a mapped
+SHRINKWRAPPING AND THE TAMING OF HYPERBOLIC 3–MANIFOLDS 51
+surface (resp. R is a properly mapped surface in N whose ends exit the cusps),
+then a P -essential annulus forR is annulus (resp. half open annulus) A with one
+component mapped to an essential simple curve of R which cannot be homotoped
+within R into ∂R (resp. an end of R) and another component (resp. the end of
+A) mapped into P (resp. properly mapped into a cusp). Let C0 be a 3-manifold
+relative core ofN0. Using [Mc] we can assume thatC0 is of the formH0∪ 1-handles
+where P0 = C0∩ P = H0∩ P is a core of P consisting of annuli and tori and
+H0 is a compact 3-manifold with incompressible frontier. Furt hermore δH0 has
+noP -essential annuli disjoint from int (H0). Deﬁne δEC0 to be the component of
+δC0 which facesE and δEH0 to be the components of δH0 which faceE. Deﬁne
+M to be the closure of the component of N0 split along δEH0 which containsE.
+Deﬁne ∂pM = P∩ M and ∂hM = δEH0. W e call M a relative end-manifold . By
+construction ∂hM has no P -essential annuli lying in M . By slightly thickening
+∂hM and retaining the 1-handles of C0∩ M we obtain a core C of M . If W is a
+codimension-0 submanifold of M , then∂pW (resp.∂hW ) denotesW∩ ∂pM (resp.
+W∩ ∂hM ).
+By passing to the π1(M ) cover ofN we reduce to the case that in :M→ N0 is a
+homotopy equivalence; furthermore, for each component R of∂hM , the inclusion
+ofR into the corresponding component of N0\int(M ) is a homotopy equivalence.
+By passing to a subsequence we can assume that ∆ = {δi} is a collection of
+geodesics escapingE and is weakly 1000-separating. As in Lemma 5.5 [Ca] we
+slightly perturb the hyperbolic metric in the 1-neighborhood of ∆ to a metric µ
+such that for each i,δi isǫ-homotopic to a simple geodesic γi andµ has pinched
+negative curvature in (− 1. 01,−. 99) and is 1. 01-bilipshitz equivalent to the hyperbolic metric. Let Γ be the resulting collection of simple closed curves.
+Lemma 7.10. Let M be a relative end-manifold in the complete hyperbolic 3–manifold
+N . Given a sequence Γ of homotopically essential closed curves we can pass to an in ﬁnite
+subsequence also called Γ which is the disjoint union γ1∪ γ2∪ γ3∪··· where γ1 has
+ﬁnitely many components and the other γi’s have one component. If Γi denotes∪ i
+j=1γj,
+then there exists a manifoldW open inM , exhausted by a sequence of compact manifolds
+{Wi} with the following properties,
+(1)W isπ1 andH1 injective (in Z and Z/ 2Z coeﬁcients) inM and henceN .
+(2) For all i,∂ hW1 = ∂hWi and is a union of components of ∂hM . At most one
+component of ∂pW1 can lie in a component of ∂pM . For all i,∂ pWi is a union of
+essential annuli, each of which contains a component of ∂pW1. The frontier δWi
+is connected, separates Γi fromE and is 2-incompressible rel Γi.
+(3) There exists a compact submanifold core F⊂ W1 ofW such that each Γi can be
+homotoped intoF via a homotopy supported inWi.F is of the form (W1∩∂M )×I
+with 1-handles attached to the 1-side. Finally |χ (δF )|≤| χ (δC)|.
+Proof. Except for the last inequality , this lemma is just the relative form of that part
+of Theorem 5.21 which was used to prove Theorem 0.9. Let J be a connected compact set and V1⊂ V2⊂ V3··· an exhaustion of M such that ∂hM⊂ ∂V 1 and the
+∂pVi are the tori ofM and essential annuli which meet each annular component of
+∂pM in exactly one component. Deﬁne the relative end reductionWJ ofJ to be the
+52 DANNY CALEGARI AND DA VID GABAI
+manifold exhausted by submanifolds {Wi} whereVi passes to Wi via the operations of compression, 2-handle addition, deletion and isot opy , where the compressions and 2-handle additions are done only to δVi and its successors. The same
+arguments as before show that WJ is both π1 andH1-injective and as before we
+can deﬁne relative notions of end non separable and end-engu lﬁng respectively
+for ﬁnite and locally ﬁnite inﬁnite collections of homotopy essential pairwise disjoint closed curves. Similarly , since W is a relative end manifold its core can be
+taken to be of the form stated in 3. The last inequality is the r elative version of
+inequality (∗) from the proof of Theorem 0.9. □
+W e now show that each Wi is an atoroidal Haken manifold with negative Euler characteristic by showing that every embedded torus inc ompressible in Wi is
+boundary parallel and some component of∂W i is not a 2-sphere. If T is an embedded torus inN , then eitherT cuts off a rank-2 cusp orT is compressible. Therefore,
+if each component of∂W i is a torus incompressible inN , thenN has ﬁnite volume
+and Theorem 7.7 holds. The proof of the Claim of §6 shows that no component of
+∂W is a torus compressible in N . Therefore, some component of ∂W i has genus
+≥ 2. Since tori incompressible in N cut off rank-2 cusps, any nonboundary parallel torus T in Wi must be compressible in N . T o show that T is compressible
+inWi, it sufﬁces to show that it is compressible in W P
+i the parabolic extension of
+Wi inN . Now ∂W P
+i is a ﬁnite union of properly embedded surfaces in N which
+are incompressible in N\Γi andN has pinched negative sectional curvature. The
+proof of the Claim now applies to show that every embedded tor us in W P
+i which
+is compressible in N is also compressible in W P
+i .
+Lemma 7.11. If (E,∂E )⊂ (N0,P ) is a compact Γ-minimal surface (possibly non embedded), thenE cannot be homotoped rel ∂E intoP .
+Supposef : R→ N is a properly mapped Γ-minimal surface such that for each ǫ >
+0, f − 1(N ǫ
+0) is compact andR has noP -essential annuli disjoint from Γ. Iff is transverse
+to N ǫ
+0, then each component of R\int(f − 1(N ǫ
+0)) is either a compact disc or a half open
+annulus.
+Proof. If such a homotopy exists, then the lift ˜E ofE to H3 has the property that
+there exists a closed horoball H with∂ ˜E⊂ int(H) andE∩ ∂H̸=∅. This violates
+the maximum principle.
+Therefore if σ is a component of f − 1(P ) which bounds a disc D in R, then
+f (D)∩ N0⊂ P . If σ is essential in R, then σ can be homotoped into an end of R,
+since there are no P -essential annuli for R disjoint from Γ. Again the maximum
+principle implies that the entire annular region bounded by σ is mapped into a
+component ofN\int(N0). □
+If W ⊂ N is a codimension 0 submanifold, we say that W has standardly embedded cusps if the restriction of W to each Margulis tube neighborhood of a cusp
+ofN is either the entire cusp, or is a ﬁnite union of products annu lus× R+ where
+the product structure is compatible with the product struct ure on the cusp. If N is
+obtained from a complete hyperbolic manifold by neutering, then this neutering
+should restrict to a neutering of W .
+Here is the parabolic version of Lemma 2.3. The reader may wan t to refresh
+their memory by ﬁrst rereading Lemma 2.3:
+SHRINKWRAPPING AND THE TAMING OF HYPERBOLIC 3–MANIFOLDS 53
+Lemma 7.12 (Parabolic construction lemma) . LetE be an end of the complete open
+orientable irreducible Riemannian 3–manifold N with metric µ , with ﬁnitely generated
+fundamental group, and neutering N0 with parabolic locus P . Let W ⊂ N be a submanifold such that ∂W ∩ int(N ) separates W fromE, and whose ends are standardly
+embedded cusps in the cusps of N . Let ∆1⊂ N0\∂W be a ﬁnite collection of simple closed
+geodesics with ∆ = W∩ ∆1 a non–empty proper subset of ∆1. Suppose futher that ∂W
+is 2–incompressible rel. ∆ and has no P –essential annuli disjoint from ∆1.
+Let the Riemannian metric µ on N agree with a hyperbolic metric outside tubular
+neighborhoodsNǫ(∆1) and inside tubular neighborhoods Nǫ/ 2(∆1), having ∆1 as core
+geodesics, and such thatµ is a metric with sectional curvature pinched between− 1. 01 and
+− 0. 99.
+LetG be a ﬁnitely generated subgroup of π1(W ), and let X be the covering space of W
+corresponding to G. Let Σ be the preimage of ∆ inX with ˆ∆⊂ Σ a subset which maps
+homeomorphically onto ∆ under the covering projection, and let B⊂ ˆ∆ be a nonempty
+union of geodesics. Suppose there exists a properly embedde d surface S ⊂ X\B of ﬁnite topological type, whose ends are standard cusps in the c usps of X such that S is
+2–incompressible rel. B inX and has no P -essential annuli disjoint from B, and which
+separates every component of B from∂X .
+Then∂W can be properly homotoped to a ∆1–minimal surface which, by abuse of notation, we call ∂W ′, and the map of S intoN given by the covering projection is properly
+homotopic to a map whose image T ′ is ∆1–minimal and whose ends exit the cusps of N .
+Also,∂W ′ (resp.T ′) can be perturbed by an arbitrarily small perturbation to be an embedded (resp. smoothly immersed) surface ∂W t (resp.Tt) boundingWt with the following
+properties:
+(1) There exists a proper isotopy from ∂W to ∂W t which never crosses ∆1, and
+which induces a proper isotopy from W toWt, and a corresponding deformation
+of pinched negatively curved manifolds X toXt which ﬁxes Σ pointwise.
+(2) There exists a proper isotopy from S toSt⊂ Xt which never crossesB, such that
+Tt is the projection of St toN .
+(3) Each of the limit surfaces F ∈{ ∂W ′,T ′} relatively exits the manifold as its
+restriction exits the neutered part. That is, if C is a rank 1 cusp foliated by
+totally geodesic 2 dimensional cuspsC× R perpendicular to the boundary annulus
+S1× R, then if the intersection ofF with∂C is contained in the regionS1× [t,∞ ),
+the intersection of F withC is contained in the region C× [t,∞ ), and similarly
+if the intersection is contained in S1× (−∞ ,t ].
+Proof. The essential differences between the statements of Lemma 2.3 and Lemma 7.12
+are ﬁrstly that the metric in the parabolic case is pinched, s o that the geodesics can
+be chosen to be simple; secondly that the surfaces in questio n are all properly embedded, and the isotopies and homotopies are all proper; and thirdly that the limit
+surfaces relatively exit the manifold as their restriction exits the neutered part.
+These issues are all minor, and do not introduce any real comp lications in the
+proof. The only question whose answer might not be immediatl y apparent is how
+to perturb the metricµ to thegt metrics near cusps; it turns out that this is straightforward to do, and technically easier than deformations alo ng geodesics, since the
+perturbed metrics actually have curvature bounded above by 0.
+W e will ﬁnd an exhaustion ofN by increasingly larger neutered spacesN t
+0, each
+endowed with a metric gt, which is obtained from the µ -metric by deforming it
+along the geodesics ∆1 and along∂N t
+0. Our∂W t will restrict togt-area minimizing
+54 DANNY CALEGARI AND DA VID GABAI
+representatives of the isotopy class of ∂W∩ N t
+0. The convergence and regularity
+of the limit surface ∂W ′ near the geodesics will proceed exactly as in §1 and§2.
+The convegence and regularity in the cusps will follow from §1 using the absence
+ofP -essential annuli disjoint from ∆1.
+T o describe the deformed geometry along the cusps, we ﬁrst re call the usual
+hyperbolic geometry of the (rank 1) cusps. W e parameterize a rank 1 cuspC as
+S1× [1,∞ )× R, where the initial S1× [1,∞ ) factor is a 2–dimensional cusp C.
+With the hyperbolic metric, the three co–ordinate vector ﬁe lds are orthogonal; we
+denote these by ∂
+∂θ, ∂
+∂z and ∂
+∂y respectively , so thatθ∈ S1,z∈ [1,∞ ) andy∈ R.
+An orthonormal basis in the hyperbolic metric is z ∂
+∂θ,z ∂
+∂z,z ∂
+∂y . Let h : R+→ R+
+be a monotone increasing function with h(z) = z forz <1, andh(z) = 2 forz≥ 3.
+Then let
+ht(z) = 1
+1− th((1− t)z)
+and deﬁnegt onC to be the metric with orthonormal basisht(z) ∂
+∂θ,h t(z) ∂
+∂z,h t(z) ∂
+∂y .
+Notice that the group of Euclidean symmetries of the boundar y∂C extends to an
+isometry ofC for thegt metric, for all t. In particular, the surface
+Hs =S1× [1,∞ )× s
+is totally geodesic for the gt metric, and therefore acts as a barrier surface for allt.
+Moreover, ast→ 1, the gt metrics converge to the hyperbolic metrics on compact subsets, and in fact for every compact K⊂C , there is an s >0 such that the
+gt and the hyperbolic metrics agree for t≤ s. Finally , for each t > 0, the subset
+S1× [3/ (1− t),∞ )× R⊂C is isometric to a Euclidean product, for the gt metric,
+and therefore the surface
+Ft =S1× 3
+1− t× R
+is totally geodesic for the gt metric, and also acts as a barrier surface.
+Finally , notice that thegt metrics lift to a family of isometric metrics on H3, and
+by the symmetries above, therefore have uniformly pinched s ectional curvatures,
+and are uniformly bilipschitz to the hyperbolic metric in th e region bounded away
+from the cusps by Ft.
+LetN t
+0 be the neutered space whose boundary consists of the surfaces of typeFt
+constructed above. Endow N t
+0 with thegt metric. Now apply [MSY], as in Lemma
+2.3, to the surface ∂W∩N t
+0 to obtain the surface∂W 1
+t which isgt-least area among
+all surfaces properly isotopic to ∂W∩ N t
+0. By extending ∂W 1
+t vertically we obtain
+the surface ∂W t⊂ N which is properly isotopic to ∂W . As in Lemma 2.3 these
+surfaces weakly converge geometrically to a surface ∂W ′. W e will show that there
+is a proper isotopy of ∂W to∂W ′.
+Let N ǫ
+0 denote a ﬁxed neutered space transverse to ∂W ′ and countably many
+∂W t’s which converge to ∂W ′. Deﬁne ∂W ǫ
+t to be ∂W t∩ N ǫ
+0 together with the
+disc components of ∂W t\N ǫ
+0. Since areagt (∂W ǫ
+t ) is uniformly bounded, and the
+hyperbolic area form is dominated on all 2–planes by gt, the hyperbolic area of
+∂W ǫ
+t is uniformly bounded. W e show that a disc D of ∂W t\N ǫ
+0 cannot stray too
+far into the cusp and hence for all t, ∂W ǫ
+t ⊂ N η
+0 for some sufﬁciently small η.
+Indeed, the lift ˜D to the universal cover ˜N ofN is an embedded disc of uniformly
+bounded area. If t is very close to 1, then dρ (∂N ǫ
+0,∂N t
+0) = dt > 0. If x∈ ˜D and
+SHRINKWRAPPING AND THE TAMING OF HYPERBOLIC 3–MANIFOLDS 55
+dρ (x,∂N ǫ
+0∪ N t
+0) = dt/ 2, then areaρ ( ˜D∩ (N ǫ
+0− N t
+0)) > πd2
+t/ 4. Therefore, for t
+sufﬁciently large, ˜D and henceD has uniformly bounded ρ-diameter.
+Therefore, if ǫ < η, then the ∂W ǫ
+t ’s converge weakly to the surface N ǫ
+0∩ W ′
+which we deﬁne to be ∂W ′
+ǫ. For t sufﬁciently large∂W ǫ
+t and∂W ′
+ǫ are of the same
+topological type and very close geometrically . By Lemma 7.1 1,∂W ′
+ǫ∩ N ǫ
+0 has no
+components which can be homotoped rel boundary into ∂N ǫ
+0, hence ∂W ǫ
+t shares
+the similar property . Since ∂W has no P -essential annuli disjoint from ∆1 it follows that each component of ∂W ǫ
+t\intN0 can be properly homotoped in ∂W ǫ
+t into
+an end of that surface. Therefore, if some non disc component of ∂W t− intN ǫ
+0
+was not a half open annulus, then one can ﬁnd a component E of∂W t∩ N ǫ
+0 which
+can be homotoped rel ∂E into∂N ǫ
+0, which is a contradiction. Note that ∂W ′
+ǫ is of
+the same topological type as ∂W ∩ N0 and and that the ∂W ′
+ǫ’s form an exhaustion of ∂W ′. By arguing as in the proof of Lemma 1.25, there exists a homot opy
+F : ∂W× I→ N with the property that F (∂W × 0) = ∂W , for inﬁnitely many
+t< 1,F (∂W× t) = ∂W t andF (∂W× 1) = ∂W ′.
+If∂W ′ intersects∂C in the subset S1× [s,∞ ) for some s, then for t sufﬁciently
+large∂W t must intersect ∂C in the subset S1× [s− ǫ,∞ ). Since projection to the
+barrier surface Hs− ǫ along horoannuli and horotori is area reducing, this implie s
+that∂W t∩C is contained in S1× [1,∞ )× [s− ǫ,∞ ), which in turn implies that
+W ′∩C⊂ S1× [1,∞ )× [s,∞ ). As in Lemma 2.3, the surfaces ∂W t converge on
+compact subsets to ∂W ′. The main results of§1 imply that ∂W ′ is ∆1–minimal.
+A similar argument proves similar facts about St,Tt andT ′. □
+Let Gi denote in ∗ (π1(F )) ⊂ π1(Wi). Fix a basepoint f ∈ F . Let Xi denote
+the covering space of Wi (based at f ) with group Gi. The homotopy of Γi intoF
+supported inWi lifts toXi, hence provides us with a canonical ˆΓi of closed lifts of
+Γi in 1-1 correspondence with Γi. Since Wi is an atoroidal Haken manifold with
+nonzero Euler characteristic, it follows by Thurston that i nt(Xi) is topologically
+tame (see Proposition 3.2 [Ca]). By [Tu2] a compactiﬁcation ¯Xi of int(Xi) extends
+int(Xi)∪ ∂h ˆF∪ ∂p ˆF , where ˆF is the lift of F to Xi. Since ˆF is a core of ¯Xi it
+follows that ¯Xi is a union of a closed (possibly disconnected or empty) orien table
+surface× I with 1-handles attached to the surface× 1 side. Let ¯Si denote the unique
+boundary component of ¯Xi which is not a closed component of ˆF . Push ¯Si\int( ˆF∩
+∂ ¯Xi) slightly to obtain a properly embedded surface ˆSi⊂ Xi with∂ ˆSi =∂δ ˆF via
+a homotopy disjoint from ˆΓi. Being connected with the same Euler characteristic
+and same number of boundary components, ˆSi is of the same topological type as
+δF . Let ˆZ ′′
+i ⊂ ¯Xi be the compact region with frontier ˆSi. Letχ :=|χ ( ˆSi)|=|χ (δF )|.
+Deﬁne∂pXi and∂hXi the respective preimages of ∂pWi and∂hWi.
+LetW ′
+i denoteWi together with the components of N0\int(M ) which hit ∂W 1.
+Let Yi be the cover of W ′
+i with π1(Yi) = Gi. As in the parabolic free case, Xi
+naturally embeds in Yi and the inclusion is a homotopy equivalence. Deﬁne ∂pYi
+to be the preimage of∂pW ′
+i . Note that δWi, the frontier ofWi⊂ M equalsδW ′
+i , the
+frontier ofW ′
+i inN0.
+If possible compress ˆZ ′′
+i along δ ˆZ ′′
+i = ˆSi via compressions that hit ˆΓi at most
+once. Continue in this manner to obtain the region ˆZ ′
+i whose frontier is 2-incompressible
+rel ˆBi := ˆΓi\{γi1,···,γ im} where both m and|χ (δ ˆZ ′
+i)|≤ χ . Since Xi\ˆΓi is irreducible, we can assume that no component of ∂ ˆZ ′
+i is a 2-sphere.
+56 DANNY CALEGARI AND DA VID GABAI
+Before we shrinkwrap δW ′
+i and δ ˆZ ′
+i we need to annulate them, i.e. compress
+them along essential annuli into P and ∂pYi. Geometrically we are eliminating
+accidental parabolics so that we can invoke Lemma 7.12.
+LetL1,···,L k be a maximal collection of pairwise disjoint, embedded, ess ential annuli in N0 disjoint from Γi such that for each j, ∂L j has one component
+onδW ′
+i and one component on P . Furthermore assume that int (Li)∩ δW ′
+i =∅.
+Now annulate δW ′
+i along each Li to obtain the surface δW L
+i . So if Li lies to the
+outside of W ′
+i , then the effect on Wi is to add N (Li). If Li⊂ W ′
+i andLi× I is a
+product neighborhood, then this annulation deletesLi× int(I) fromW ′
+i . There are
+no P -essential annuli for δW L
+i disjoint from Γi and ∂W L
+i is 2-incompressible rel
+Γi. Indeed, since δW L
+i is embedded and 2-incompressible, we need only consider
+embeddedP -essential annuli, by the generalized Loop theorem. The mod iﬁcation
+W ′
+i→ W L
+i induces a modiﬁcation of Yi as follows. If Lj annulatesW ′
+i to the outside, then enlarge Yi in the natural way . This will enlarge the parabolic boundary
+∂pYi. If δW ′
+i gets annulated to the inside, then do not change Yi. By abuse of notation, we relabel the space obtained from Yi as Yi. Let W l
+i denote Wi modiﬁed
+only along outer P -essential annuli. Note that Yi is a covering space of W l
+i . In like
+manner, annulateδ ˆZ ′
+i along a maximal collection of pairwise disjoint annuli which
+are disjoint from ˆBi. Let ˆZi⊂ Yi denote the result of annulating ˆZ ′
+i. Note that ˆZi
+can be constructed so that there are no ∂pYi-essential annuli for δ ˆZi disjoint from
+ˆBi.
+Now ﬁx i. Let γ∈ Γ\W L
+i . Apply Lemma 7.12 using the following dictionary
+between our setting and the setting of Lemma 7.12: δ ˆZi corresponds to the surfaceS,W L
+i corresponds to W, Yi corresponds to X,γ∪ Γi corresponds to ∆1, Γi
+corresponds to ∆, and ˆBi corresponds to B. W e conclude that if Si denotes the
+projection of δ ˆZi intoN , then Si is homotopic to a CAT (− 1) surfaceT i with the
+following properties. The surface T i is homotopic to a surface P i⊂ W new
+i where
+W new
+i is isotopic toW l
+i andP i lifts to an embedded surface ˆP i⊂ Y new
+i , whereY new
+i
+is the corresponding cover of W new
+i . The isotopy of W new
+i toW l
+i induces a deformation of spacesY new
+i toYi which ﬁxes ˆBi pointwise. Futhermore, ˆP i is isotopic to
+the correspondingδ ˆZi via an isotopy disjoint from ˆBi. Given ǫ> 0, the P i can be
+chosen so that the homotopy of T i toP i restricted toN ǫ
+0 lies in anǫ-neighborhood
+ofP i∩N ǫ
+0. By abuse of notation we will view ˆP i as bounding the region ˆZi⊂ Y new
+i
+and we will drop the superscripts new , etc.
+Let{α i} be a locally ﬁnite collection of embedded proper rays in N0 toE emanating from{γi}.
+Letπ : Yi→ N be the composition of the covering map to W l
+i and inclusion.
+Let Bi = π ( ˆBi). If b∈ Bi and is disjoint from N (P i, 1), then some component
+ofT i homologically separates b fromE. Indeed if α b is the ray from b toE, then
+π − 1(α b)∩ ˆZi is a ﬁnite union of compact segments. If both endpoints lie in∂Y i, then
+it contributes nothing to the algebraic intersection numbe r⟨α b,P i⟩. Otherwise it
+has one endpoint in π − 1(α b) and one in ∂Y i and hence contributes +1. Therefore
+⟨α b,T i⟩ =⟨α b,P i⟩> 0.
+Since|Bi|→∞ , the Bi’s are weakly 1000 separating and the T i’s have uniformly
+bounded area, it follows that for i sufﬁciently large, some b∈ Bi\Bji is disjoint
+SHRINKWRAPPING AND THE TAMING OF HYPERBOLIC 3–MANIFOLDS 57
+fromN (P i, 1), where ji < iand lim i→∞ ji =∞ . Therefore some subsequence of
+components of{T i} exitsE.
+By reducingǫ, if necessary , we can assume that∂N ǫ
+0 is transverse to all the T i’s.
+By Lemma 7.11, for each i, each component of T i∩ (N\int(N0)) is either a disc or
+a half open annulus. Therefore, the restriction of each comp onent of T i toN0 is a
+connected surface.
+Lemma 7.13. LetM be a relative end-manifold with core C of the form ∂hM× I∪ 1−
+handles. Let Z denote the closure of M− C with∂pZ =∂pM∩ Z and∂EZ =∂EC.
+(1) Z is Thurston norm minimizing in H2(Z,∂ pZ) = Z.
+(2) IfR is a Thurston norm minimizing surface (in either the singula r or embedded
+norms), representing [∂EZ]∈ H2(Z,∂ pZ), then for each component Q of∂pZ we
+have|R∩ Q|= 1. In particular, R has noP -essential annuli in Z.
+Corollary 7.14. LetN be a complete hyperbolic 3-manifold with neutering N0 and relative core C forN0. Let R⊂ N0− C be a primitive Thurston norm minimizing surface
+representing an element of H2(N0− C,∂ pN0). Then every homotopy of an accidental
+parabolic ofR into∂pN0 must crossC. □
+Proof of Lemma. The proof of 1 is similar to that of Lemma 6.1. Recall that sinc eC
+is a core, the inclusion (∂EZ,∂∂ EZ)→ (Z,∂ p(Z)) is an isomorphism.
+Now let R be a possibly singular Thurston norm minimizing surface rep resenting [∂EZ]. By [G1], χ (R) = χ (∂EZ), so if R hits ∂p(Z) in extra components,
+then genus(R) < genus(∂EZ). Let S ⊂ Z be an embedded surface representing [∂EZ] such that R lies in int (Z ′) where Z ′ is the compact submanifold cut
+off by S. If {a1,···,a 2g} is a basis of cycles in H1(∂EZ,∂∂ EZ) which are disjoint from ∂∂ EZ, then there exists surfaces A1,···,A 2g with∂A i⊂ ∂EZ∪ S and
+[Ai∩ ∂EZ] = ni[ai]∈ H1(∂EZ,∂∂ EZ) where ni ̸= 0 . For each i, let [Ai∩ S] =
+bi∈ H1(S,∂S ). Since the subgroup of H1(S,∂S ) which restricts trivially to ∂S is
+of rank < 2g, it follows that b1,···,b 2g are linearly dependent. This implies that
+inclusion (∂EZ,∂∂ EZ)→ (Z,∂ p(Z)) is not H1-injective, a contradiction. If R had
+aP -essential annulus, then we can construct a norm minimizing surfaceR′ with
+|∂R ′|=|∂R|+ 2. □
+W e next show that if some component T of T i has the property that T∩ N0
+homologically separatesC fromE, thenT =T i is homeomorphic to ∂EC and represents the class [∂EC]∈ H2(N0,P ). Suppose that [T∩ N0] = n[∂EC]∈ H2(N0,P ).
+By Lemma 7.11, after a homotopy supported in a small neighbor hood of the cusps
+we can push the disc components of T∩ N\int(N0) intoN0 and get|χ (F )|≥ χ≥
+|χ (T )|=|χ (T∩ N0)|. By Lemma 7.10,|χ (∂EC|≥| χ (F )|. On the other hand
+|χ (T )|≥ xs(n[∂EC]) = x(n[∂EC]) = nx(n[∂EC]) = n|χ (∂EC)|,
+where thex andxs respectively denote the Thurston and singular Thurston norms
+and the inequality is by deﬁnition, the ﬁrst equality by [G1] , the second by [T2]
+and the third by Lemma 7.13. The only possibility is that n = 1 and|χ (T )| =
+|χ (∂EC)| = χ and hence T = T i. By Lemma 7.13, T and ∂EC have the same
+number of boundary components and hence T =T i is homeomorphic to ∂EC. In
+particular no compressions or annulations occurred to ˆSi.
+W e claim that the sequence{T i∩N0} exitsN0. Otherwise, there exists anm with
+1≤ m≤ χ , a subsequence T i1,T i2,··· and a compact connected submanifold
+58 DANNY CALEGARI AND DA VID GABAI
+K1⊂ N0 such that C ⊂ K1 and for each j, m components of T ij non trivially
+intersectK1 and if Rij are the components of T ij which miss K1, then Rij∩ N0
+is an exiting sequence. Since each component T of T ij hasT∩ N0 connected, it
+follows from the bounded diameter lemma that there exists a c ompact setK2 such
+that for all j, if T is a component of T ij with T∩ K1 ̸=∅, then T∩ N0 ⊂ K2.
+LetN be so large that γN∩ α N∩ N2(K2) = ∅ andγN ⊂ Bij for inﬁnitely many
+values ofj. Let βN be a path from γN toK2. Since Rij exitsN0 it follows that for j
+sufﬁciently large (γN∪βN )∩N2(T ij ) =∅. This implies that some component T of
+T ij homologically separates γN and hence C fromE. Therefore|χ (T )|=χ . Since
+T∩ α N̸=∅, this implies that T⊂ Rij and hencem = 0, which is a contradiction.
+Since the sequence{T i∩ N0} exitsN0 it follows from the previous paragraphs
+that for i sufﬁciently large,T i is homeomorphic to ˆSi, and T i∩ N0 represents the
+class [∂EC]∈ H2(N0,P ). Since {T i} exitsE, if B is a cusp of N parametrized by
+S1× [0,∞ )× R, then by Proposition 7.12, given n∈ R, T i∩ B⊂ S1× [0,∞ )×
+(n,∞ ) □
+Remark 7.15. Since for i sufﬁciently large,T i is of topological type of ∂EC, it follows a posteriori that no compressions or annulations occurred in the passage from
+¯Si to∂ ˆZi. This mirrors the similar phenomena seen in the proofs of Can ary’s theorem and Theorem 0.9.
+Proof of Theorem 7.3. T ameness of the ends ofN0 follows as in the proof of Theorem 0.4. In particular if the end E ofN0 is not geometrically ﬁnite, then by applying the proof of Theorem 2 [So] to {T i} (with the disc components of {T i}∩
+(cusps) pushed intoN0) it follows thatE is tame. Alternatively , as in the proof that
+Criteria (1)-(4) implies tameness, we can use the hyperboli c surface interpolation
+technique and basic 3-manifold topology to prove thatE is tame. Finally tameness
+ofN0 implies tameness of N . □
+Proof of Theorem 7.1. It sufﬁces to prove Theorem 7.1 for orientable manifolds
+which have the homotopy type of a relative end-manifold. It f ollows from Theorems 7.7 and 7.3 that a parabolic extension UP of a neighborhood U ofE is topologically of the form int(T )× [0,∞ ), where T is a surface homeomorphic to ∂EC
+andC is a core of N0. By Proposition 7.12, if (T i∩ ∂N 0)⊂ int(T )× [t,∞ ), then
+T i\intN0⊂ int(T )× [t,∞ ). Therefore{T i} exits compact sets in int(T )× [0,∞ ).
+Since fori sufﬁciently large,T i is properly immersed in int(T )× [0,∞ ) and homologically separates int(T )× 0 fromE, it follows that the projection Ti to int(T )× 0
+is a proper degree-1 map of a surface of ﬁnite type to itself an d hence is properly
+homotopic to a homeomorphism. □
+REFERENCES
+[Ag] I. Agol, T ameness of hyperbolic3–manifolds, eprint math.GT/0405568
+[A1] L. Ahlfors, Finitely generated Kleinian groups , Amer. J. Math. 86 (1964), 413–429.
+[A2]
+, Fundamental polygons and limit point sets of Kleinian group s, Proc. Nat. Acad. Sci. 55
+(1966), 251–254.
+[Ath] I. Athanasopoulos, Coincidence set of minimal surfaces for the thin obstacle , Manuscripta Math. 42
+(1983), no. 2-3, 199–209
+[B] W . Ballmann, Lectures on spaces of nonpositive curvature , Birkhauser, DMV seminar 25 (1995)
+[Be] L. Bers, Local behavior of solutions of general elliptic equations, Comm. Pure. Appl. Math. 8 (1955),
+473–496.
+[Bo] F. Bonahon, bouts des varietes de dimension 3 , Annals of Math. 124 (1986), 71–158.
+SHRINKWRAPPING AND THE TAMING OF HYPERBOLIC 3–MANIFOLDS 59
+[BH] M. Bridson & A. Haeﬂiger, Metric spaces of non-positive curvature , Springer-V erlag, Grundlehr.
+der Math. Wiss. 319 (1999)
+[BT1] M. Brin & T. L. Thickstun, Open, irreducible 3-manifolds which are end 1-movable , Topology ,26,
+211–233.
+[BT2] , 3-Manifolds which are end 1-movable , Memoirs Amer. Math. Soc. 81 (1989), No. 411.
+[BB] J. Brock & K. Bromberg, On the density of geometrically ﬁnite Kleinian groups , Acta Math. 192
+(2004), no. 1, 33–93
+[BBES] J. Brock, K. Bromberg, R. Evans & J. Souto, T ameness on the boundary and Ahlfors’ measure conjecture, Publ. Math. Inst. Hautes ´Etudes Sci. No. 98 (2003), 145–166
+[BCM] J. Brock, R. Canary & Y . Minsky , The classiﬁcation of Kleinian surface groups II: The ending lamination conjecture, eprint math.GT/0412006
+[BS] J. Brock & J. Souto Algebraic limits of geometrically ﬁnite manifolds are tame , preprint.
+[BF] E. Brown & C. D. Feustel, On properly embedding planes in arbitrary 3-manifolds , Proc. Amer.
+Math. Soc., 94, 173–178.
+[Caf] L. Caffarelli, Further regularity in the Signorini problem , Comm. in PDE 4 (1979), 1067–1076
+[Ca] R. Canary , Ends of hyperbolic 3-manifolds , J. Amer. Math. Soc. 6 (1993), 1–35.
+[Ca2] , A covering theorem for hyperbolic 3-manifolds and its appli cations, T opology, 35 (1996),
+751–778.
+[CaM] R. Canary & Y . N. Minsky , On limits of tame hyperbolic 3-manifolds and deformation th eory of
+Kleinian groups, J. Diff. Geom. 43 (1996), 1–41.
+[Car] L. Carleson, Selected problems on exceptional sets , Van Nostrand Mathematical Studies, 13
+Princeton, (1967)
+[CLLM] A. Champanerkar, J. Lewis, M Lipyanskiy & S. Meltzer, Exceptional regions and associated exceptional hyperbolic 3-manifolds, preprint.
+[CiSc] H. Choi & R. Schoen, The space of minimal embeddings of a surface into a three-dimensional manifold
+of positive Ricci curvature , Invent. Math. 81 (1985), 387–394
+[CM] T. Colding & W . Minicozzi II, Minimal Surfaces, CIMS Lecture Notes 4 (1999).
+[EM] D. Epstein & A. Marden, Convex hulls in hyperbolic space, a theorem of Sullivan, and measured
+pleated surfaces, London Math. Soc. Lecture Notes, 111 (1986), 113–254.
+[Ev] R. Evans, T ameness persists in weakly type-preserving limits , Amer. J. Math. 126 (2004), no. 4,
+713–737
+[Fed] H. Federer, Geometric measure theory , Springer–V erlag, Die Grundlehr. der math. Wiss. 153,
+(1969).
+[FF] B. Freedman & M. Freedman, Kneser-Haken ﬁniteness for bounded 3-manifolds locally fr ee groups,
+and cyclic covers, Topology 37, (1998), 133–147.
+[FHS] M. Freedman, J. Hass & P . Scott, Least area incompressible surfaces in 3-manifolds , Invent. Math.
+71 (1983), no. 3, 609–642.
+[Fre] J. Frehse, Two dimensional variational problems with thin obstacles , Math. Z. 143 (1975), 279–288
+[G1] D. Gabai, Foliations and the topology of 3-manifolds , J. Diff. Geom. 18 (1983), 445–503.
+[G2] D. Gabai, On the geometric and topological rigidity of hyperbolic 3-m anifolds, J. Amer. Math. Soc.
+10 (1997), 37–74.
+[GMT] D. Gabai, R. Meyerhoff & N. Thurston, Homotopy hyperbolic 3-manifolds are hyperbolic , Annals
+of Math. 157 (2003), 335–431.
+[Gr] M. Gromov , Metric structures for Riemannian and non–Riemannian space s, Birkhauser, Progress
+in Mathematics 152 (1999)
+[HS] J. Hass & P . Scott, The existence of least area surfaces in 3–manifolds , Trans. Amer. Math. Soc. 310
+(1988), 87–114
+[Ha1] A. Hatcher, Homeomorphisms of sufﬁciently large P 2-irreducible 3-manifolds, Topology 15 (1976),
+343–347.
+[He] J. Hempel, 3–Manifolds Ann. of Math. Studies, 86 Princeton University Press, Princeton, N. J.
+[Jo] K. Johannson, Homotopy equivalences of 3-manifolds with boundaries, Springer LNM 761 (1979).
+[JR] K. N. Jones & A. Reid, Vol3 and other exceptional hyperbolic 3-manifolds , Proc. Amer. Math. Soc.
+129 (2001), 2175-2185.
+[Js] J. Jost, Riemannian Geometry and Geometric Analysis , Springer–V erlag, Berlin; 3rd edition (2002)
+[K] D. Kinderlehrer, The smoothness of the solution of the boundary obstacle prob lem, J. Math. Pures et
+Appl. 60 (1981), 193–212
+[KS] G. Kleineidam & J. Souto, Ending laminations in the Masur domain , Kleinian Groups and Hyperbolic Manifolds, Proceedings, Cambridge University Pr ess, 2003.
+60 DANNY CALEGARI AND DA VID GABAI
+[Lew] H. Lewy , On the coincidence set in variational inequalities , J. Diff. Geom. 6 (1972) 497–501
+[Li] M. Lipyanskiy , A computer assisted application of Poincare’s fundamental polyhedron theorem ,
+preprint.
+[Ma] A. Marden, The geometry of ﬁnitely generated Kleinian groups , Annals of Math. 99 (1974), 383–
+462.
+[Mv] A.I. Malcev , On isomorphic matrix representations of inﬁnite groups, Mat. Sb. (N. S.), 8 (50), (1940),
+405–421.
+[Mc] D. McCullough, Compact submanifolds of 3-manifolds with boundary , Quart. J. Math. Oxford Ser.
+(2), 37 (1986), 299–307.
+[MMS] D. McCullough, A. Miller & G. A. Swarup, Uniqueness of cores of noncompact 3-manifolds , J.
+London. Math. Soc., 52 (1985), 548–556.
+[MSY] W . Meeks, L Simon & S.–T. Yau, Embedded minimal surfaces, exotic spheres, and manifolds w ith
+positive Ricci curvature, Annals of Math. (2) 116 (1982), no. 3, 621–659
+[MY] W . Meeks & S.–T. Yau, The classical Plateau problem and the topology of three-dimensional manifolds,
+Topology 21 (1982), 409–442.
+[Me] G. R. Meyerhoff, A lower bound for the volume of hyperbolic 3-manifolds , Canadian J. of Math. , 39
+(1987), 1038–1056.
+[Mi] Y . Minsky , The classiﬁcation of Kleinian surface groups I: Models and b ounds, eprint
+math.GT/0302208
+[Mo] J. Morgan, On Thurston’s uniformization for three-dimensional manif olds, The Smith Conjecture
+(New York 1979), Academic Press, Mathematics 112, 37–138. page 71.
+[Mor] C. B. Morrey Jr., Multiple integrals in the calculus of variations , Springer, (1966)
+[Mw] G. Mostow , Quasiconformal mappings in n-space and the rigidity of hyperbolic space , Pubs. IHES
+34 (1968), 53–104.
+[My] R. Myers, End reductions, fundamental groups, and covering spaces of irreducible open 3-manifolds,
+Geom. Topol. 9 (2005), 971–990
+[N] J. Nitsche, Variational problems with inequalities as boundary condit ions or How to Fashion a Cheap
+Hat for Giacometti’s Brother , Arch. Rational Mech. Anal. 35 (1969), 83–113
+[Oss] R. Osserman, A survey of minimal surfaces , Second edition. Dover Publications (1986)
+[Re] Yu. Reshetnyak, Two-dimensional manifolds of bounded curvature, in Geometry IV, Encyclopaedia
+of Mathematical Sciences, vol. 70, Springer-V erlag (1989), 3–165
+[Ri] D. Richardson, Variational problems with thin obstacles, Thesis, UBC (1978)
+[S] R. Schoen, Estimates for stable minimal surfaces in three dimensional manifolds, Annals of Math.
+Stud. 103, (1983), 111–126.
+[SY] R. Schoen and S.-T. Yau, Existence of incompressible minimal surfaces and the topol ogy of threedimensional manifolds with nonnegative scalar curvature , Ann. of Math. (2) 110, no. 1, (1979),
+127–142
+[Sc] G. P . Scott, Compact submanifolds of 3-manifolds , J. London. Math. Soc. 7 (1973), 246–250.
+[Som] T. Soma, Existence of polygonal wrappings in hyperbolic 3–manifolds, preprint
+[So] J. Souto, A note on the tameness of hyperbolic 3-manifolds , Topology ,44 (2005), no. 2, 459–474
+[St] J. Stallings, On ﬁbering certain 3-manifolds , Topology of 3-manifolds and related topics,
+Prentice-Hall, (1962), 95–100.
+[T] W . P . Thurston, Geometry and topology of 3-manifolds, 1978 Princeton Math. Dept. Lecture Notes.
+[T2]
+, A norm for the homology of 3-manifolds , Mem. Amer. Math. Soc., 59 (1986), no. 339,
+99–130.
+[Tu] T. Tucker, Non-compact 3-manifolds and the missing boundary problem , Topology ,13 (1974), 267–
+273.
+[Tu2] , On the Fox-Artin sphere and surfaces in noncompact 3-manifo lds, Quart. J. Math. Oxford
+Ser. (2), 28 (1977), 243–253.
+[V e] I. N. V ekua, Systems of differential equations of the ﬁrst order of ellip tic type and boundary value
+problems, with an application to the theory of shells (Russi an) Mat. Sbornik N. S. 31 (73) (1952),
+217–314.
+[W a] F. W aldhausen, On irreducible 3-manifolds which are sufﬁciently large , Annals of Math. (2) 103
+(1968), 56–88.
+DEPARTMENT OF MATHEMATICS , CALTECH , PASADENA , CA 91125
+DEPARTMENT OF MATHEMATICS , PRINCETON UNIVERSITY , PRINCETON , NJ 08544

@@ -1,0 +1,10 @@
+This proof is ascribed to Leonardo da Vinci (1452-1519) [ Eves ]. Quadrilaterals
+ABHI, JHBC, ADGC, and EDGF are all equal. (This follows from the observation that the angle ABH
+is 45°. This is so because ABC is right-angled, thus center O of the square ACJI lies
+on the circle circumscribing triangle ABC. Obviously, angle ABO is 45°.) Now,
+Area(ABHI) + Area(JHBC) = Area(ADGC) + Area(EDGF). Each sum contains two areas of triangles equal to ABC
+(IJH or BEF) removing which one obtains the Pythagorean Theorem.
+
+David King modifies the argument somewhat
+
+The side lengths of the hexagons are identical. The angles at P (right angle + angle between a & c) are identical. The angles at Q (right angle + angle between b & c) are identical. Therefore all four quadrilaterals are identical, and, therefore, the hexagons have the same area.

@@ -1,0 +1,23 @@
+By Larry Hoehn [ Pritchard , p. 229, and Math Gazette ].
+
+Apply the Power of a Point theorem to the diagram above where the side a serves as a tangent to a circle of radius b: (c - b)(c + b) = a². The result follows immediately.
+
+(The configuration here is essentially the same as in proof #39 . The invocation of the Power of a Point theorem may be regarded as a shortcut to the argument in proof #39 . Also, this is exactly proof XVI by B. F. Yanney and J. A. Calderhead, Am Math Monthly , v.3, n. 12 (1896), 299-300.)
+
+John Molokach suggested a modification based on the following diagram:
+
+From the similarity of triangles, a/b = (b + c)/d, so that d = b(b + c)/a. The quadrilateral on the left is a kite with sides b and d and area 2bd/2 = bd. Adding to this the area of the small triangle (ab/2) we obtain the area of the big triangle - (b + c)d/2:
+
+bd + ab/2 = (b + c)d/2
+
+which simplifies to
+
+ab/2 = (c - b)d/2, or ab = (c - b)d.
+
+Now using the formula for d:
+
+ab = (c - b)d = (c - b)(c + b)b/a.
+
+Dividing by b and multiplying by a gives a² = c² - b². This variant comes very close to Proof #82 , but with a different motivation.
+
+Finally, the argument shows that the area of an annulus (ring) bounded by circles of radii b and c > b; is exactly πa² where a² = c² - b². a is a half length of the tangent to the inner circle enclosed within the outer circle.

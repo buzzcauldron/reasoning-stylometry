@@ -1,0 +1,6 @@
+This proof, discovered by President J. A. Garfield in 1876 [ Pappas ], is a variation on the previous one. But this time we draw no squares at all. The key now is the formula for the area of a trapezoid - half sum of the bases times the altitude - ( a + b )/2·( a + b ). Looking at the picture another way, this also can be computed as the sum of areas of the three triangles -
+ab /2 + ab /2 + c · c /2. As before, simplifications yield a² + b² = c² . (There is more to that story .)
+
+Two copies of the same trapezoid can be combined in two ways by attaching them along the slanted side of the trapezoid. One leads to the proof #4 , the other to proof #52 .
+
+Another development is due to Tony Foster : it also invokes an image of trapezoid but under in a different light.

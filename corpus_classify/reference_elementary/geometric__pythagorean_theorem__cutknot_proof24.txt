@@ -1,0 +1,20 @@
+[ Swetz ] ascribes this proof to abu' l'Hasan Thâbit ibn Qurra Marwân al'Harrani (826-901). It's the second of the proofs given by Thâbit ibn Qurra. The first one is essentially the #2 above.
+The proof resembles part 3 from proof #12.
+ΔABC =
+ΔFLC =
+ΔFMC =
+ΔBED =
+ΔAGH =
+ΔFGE.
+On one hand, the area of the shape ABDFH equals AC² + BC² + Area(ΔABC + ΔFMC + ΔFLC). On the other hand, Area(ABDFH) = AB² + Area(ΔBED + ΔFGE + ΔAGH).
+
+Thâbit ibn Qurra's admits a natural generalization to a proof of the Law of Cosines .
+
+A dynamic illustration of ibn Qurra's proof is also available.
+
+This is an "unfolded" variant of the above proof. Two pentagonal regions - the red and the blue - are obviously equal and leave the same area upon removal of three equal triangles from each.
+The proof is popularized by Monty Phister , author of the inimitable Gnarly Math CD-ROM.
+
+Floor van Lamoen has gracefully pointed me to an earlier source. Eduard Douwes Dekker, one of the most famous Dutch authors, published in 1888 under the pseudonym of Multatuli a proof accompanied by the following diagram.
+
+Scott Brodie pointed to the obvious relation of this proof to # 9 . It is the same configuration but short of one triangle.

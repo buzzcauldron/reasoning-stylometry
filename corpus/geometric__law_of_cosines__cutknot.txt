@@ -1,0 +1,5 @@
+The proof is a direct generalization of Thâbit ibn Qurra's proof of the Pythagorean proposition. The proof works for both obtuse and acute angles. The result is in accordance with Euclid's statements for the two cases.
+
+The construction is this: squares are formed outwardly on sides AC and BC of triangle ABC, and the diagram is complemented by three parallelograms - CTPR, STPM, and QRPN. The resulting heptagon ABQNPMS can be cut in two ways.
+
+The proof follows from an observation that CP is equal and perpendicular to AB. Indeed, triangles ABC and CTR are friendly, which implies that the median of the latter through the vertex C is the altitude of the former. But, since CTPR is a parallelogram, its diagonals divide each other into equal halves, so CP is indeed the median of triangle CTR.

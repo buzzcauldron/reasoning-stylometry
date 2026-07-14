@@ -1,0 +1,36 @@
+Heron's formula gives an expression for the area \(A\) of a triangle in terms of its side lengths \(a\), \(b\), \(c\):
+
+\(A = (1/4)\sqrt{(a + b + c)(a + b - c)(a - b + c)(-a + b + c)}.\)
+
+Have you ever tried to differentiate the right hand side? To give my goal out, I declare this at the outset that we'll be looking for the zeros of the derivative. If so, it would be easier to differentiate the square of the expression on the right, as the two have the same zeros. The derivative we are concerned with is with respect to c (an explanation will be given shortly.)
+
+So consider the function
+
+\(
+\begin{align}
+f(c) &= (a + b + c)(a + b - c)(a - b + c)(-a + b + c) \\ &= ((a + b)^{2} - c^{2})(c^{2} - (a - b)^{2}).
+\end{align}
+\)
+
+Compute its derivative \(((gh)' = g'h + gh')\):
+
+\(f'(c) = -2c(c^{2} - (a - b)^{2}) + 2c((a + b)^{2} - c^{2}) = 4c(a^{2} + b^{2} - c^{2})\),
+
+such that when it is zero we get \(a^{2} + b^{2} - c^{2} = 0\), i.e., the Pythagorean theorem. What is the meaning of it? A coincidence, pure luck? Or is there an explanation?
+
+A mechanical explanation has been offered by Aleksey Kuzmenko from Moscow who kindly drew my attention to his 2009 post at a Russian forum.
+
+Imagine two rods of lengths a and b hinged at endpoints, with their free ends joined by an elastic tube capable of varying its length but rigid otherwise. Imagine further filling such a triangle with a (2-dimensional) gas. Such a configuration will be stable when the area of the (variable) triangle is at its maximum. This happens when the two rods are perpendicular; and the rest follows.
+
+Now, several questions can legitimately be asked as to the validity of this argument.
+
+Can a derivative be used in a proof of the Pythagorean Theorem?
+We had a chance to establish that at least a good chunk of Calculus - including derivatives - can be derived without a recourse to the Pythagorean theorem.
+
+How do we know that the configuration of the three rods has maximum area when the angle between the hinged two is right?
+
+This follows from the Law of Sines . From a previous discussion we know that some aspects of trigonometry can also be obtained without the Pythagorean theorem. The Law of Sines is based merely on the definition of the sine and the formula for the area of a triangle as half the product of a base times altitude.
+
+Note that by answering the two question we actually supply a basis for the proof that eschews the mechanical introduction.
+
+John Molokach additionally observed that, from the area formula \(\displaystyle f(C)=\frac{ab\text{ sin}(C)}{2}\), the area - as a function of angle \(C\) - attains its maximum exactly at \(\displaystyle C = \frac{π}{2}\).

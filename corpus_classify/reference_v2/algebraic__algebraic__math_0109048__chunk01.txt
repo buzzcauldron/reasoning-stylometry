@@ -1,0 +1,2017 @@
+arXiv:math/0109048v2  [math.GT]  23 Jan 2003
+JOURNAL OF THE
+AMERICAN MATHEMATICAL SOCIETY
+Volume 00, Number 0, Pages 000–000
+S 0894-0347(XX)0000-0
+THE WEIL-PETERSSON METRIC AND VOLUMES OF
+3-DIMENSIONAL HYPERBOLIC CONVEX CORES
+JEFFREY F. BROCK
+Figure 1. The lift to H3 of a quasi-Fuchsian convex core boundary component.
+1. Introduction
+Recent insights into the combinatorial geometry of Teichm¨ uller space have shed
+new light on fundamental questions in hyperbolic geometry in 2 and 3 d imensions.
+Paradoxically, a coarse perspective on Teichm¨ uller space appearsto reﬁne the analogy of Teichm¨ uller geometry with the internal geometry of hyperb olic 3-manifolds
+ﬁrst introduced and pursued by W. Thurston.
+In this paper we develop such a coarse perspective on the Weil-Pete rsson metric on Teichm¨ uller space by relating it to a graph of pair-of-pants de compositions
+of surfaces introduced by Hatcher and Thurston. This viewpoint g enerates a new
+connection between the Weil-Petersson geometry of Teichm¨ uller space and the geometry of the convex core of a hyperbolic 3-manifold.
+For simplicity, letS be a closed oriented surface of negative Euler characteristic.
+A pants decomposition of S is a maximal collection of distinct isotopy classes of
+pairwise disjoint essential simple closed curves on S. We say two distinct pants
+Received by the editors October 30, 2001.
+2000 Mathematics Subject Classiﬁcation. Primary 30F40; Secondary 30F60, 37F30.
+Key words and phrases. hyperbolic manifold, Kleinian group, pants decomposition , Teichm¨ uller space, W eil-Petersson metric, limit set.
+Research partially supported by NSF grant DMS-0072133 and a n NSF postdoctoral fellowship.
+c⃝1997 American Mathematical Society1
+2 JEFFREY F. BROCK
+decompositions P and P ′ are related by an elementary move ifP ′ can be obtained
+from P by replacing a curve α ∈ P by a curve β intersecting α minimally (see
+Figure 3).
+One obtains the pants graph P(S) by making each pants decomposition a vertex
+and joining two pants decompositions diﬀering by an elementary move by an edge.
+Setting the length of each edge to 1, P(S) becomes a metric space. We ﬁnd the
+graph P(S) provides a combinatorial model for the coarse geometry of the W eilPetersson metric:
+Theorem 1.1. The graph P(S) is naturally quasi-isometric to Teichm¨ uller space
+with the Weil-Petersson metric.
+The connection to hyperbolic 3-manifolds is simple to describe. By a th eorem of
+Bers, a pair of points ( X,Y ) ∈ Teich(S) × Teich(S) naturally determines a quasiFuchsian hyperbolic 3-manifold Q(X,Y ) ∼
+= S × R with X and Y in its conformal
+boundary at inﬁnity. Its convex core, denoted core( Q(X,Y )), is the smallest convex subset of Q(X,Y ) carrying its fundamental group. The convex core is itself
+homeomorphic to S × I and carries all the essential geometric information about
+the manifold Q(X,Y ).
+BecauseQ(X,Y ) is obtained from the pair ( X,Y ) by an analytic process (Bers’s
+simultaneous uniformization), it is a central challenge in the study of hyperbolic 3manifolds to understand the geometry of Q(X,Y ) purely in terms of the geometry
+ofX andY . Our main theorem proves a conjecture of Thurston that the follo wing
+fundamental connection exists between convex core volume and the Weil-Petersson
+distance.
+Theorem 1.2. The volume of the convex core of Q(X,Y ) is comparable to the
+Weil-Petersson distance dWP(X,Y ).
+Here, comparability means that two quantities are equal up to uniform additive
+and multiplicative error: i.e. there are constants K1 > 1 and K2 > 0 depending
+only on S so that for any ( X,Y ) ∈ Teich(S) × Teich(S) we have
+dWP(X,Y )
+K1
+− K2 ≤ vol(core(Q(X,Y ))) ≤ K1dWP(X,Y ) +K2.
+Throughout the paper we will use the contraction vol( X,Y ) = vol(core(Q(X,Y )))
+and the notation ≍ to denote the comparability of two quantities; then Theorem 1.2
+becomes
+dWP(X,Y ) ≍ vol(X,Y ).
+The volume of the convex core of a complete hyperbolic 3-manifold M = H3/ Γ
+is directly related to the lowest eigenvalue of the Laplacian on M as well as the
+Hausdorﬀ dimension of the limit set Λ(Γ) ⊂ ˆC, namely the complement of the
+invariant domain of discontinuity Ω(Γ) ⊂ ˆC where the action of Kleinian covering
+group Γ ⊂ PSL2(C) for M is properly discontinuous (see Figure 2 for two examples
+of limit sets 1).
+As an immediate application, Theorem 1.2 implies the following new relation ship
+between these analytic invariants and the Weil-Petersson distance . Let λ 0(X,Y )
+denote the lowest eigenvalue of the Laplacian on the quasi-Fuchsian hyperbolic 3manifold Q(X,Y ) = H3/ Γ(X,Y ) and let D(X,Y ) denote the Hausdorﬀ dimension
+of the limit set of Γ( X,Y ).
+1W e have employed computer programs of Curt McMullen in our ge neration of Figures 1 and 2.
+THE WEIL-PETERSSON METRIC AND VOLUMES OF CONVEX CORES 3
+Figure 2. Limit sets for two quasi-Fuchsian groups.
+Theorem 1.3. Given S there are constants K > 0, C1, C2, C3, and C4 > 1 so
+that if dWP(X,Y )>K then
+C1
+dWP(X,Y )2 ≤ λ 0(X,Y ) ≤ C2
+dWP(X,Y ),
+and
+2 − C3
+dWP(X,Y ) ≤ D(X,Y ) ≤ 2 − C4
+dWP(X,Y )2.
+Proof: The relation λ 0(X,Y ) = D(X,Y )(2 − D(X,Y )) follows from a general
+result by D. Sullivan (see [Sul2, Thm. 2.17]), after applying Bowen’s The orem
+[Bow] that D(X,Y ) ≥ 1 with equality if and only if X =Y .
+Theorem 1.2 may be rephrased to claim the existence of K, K ′ so that for
+dWP(X,Y )>K we have
+dWP(X,Y )
+K ′ ≤ vol(X,Y ) ≤ K ′dWP(X,Y ).
+The theorem then follows from the double inequality
+c1
+vol(X,Y )2 ≤ λ 0(X,Y ) ≤ c2
+vol(X,Y )
+(see [BC, Main Thm.] and [Can1, Thm. A]) after collecting constants.
+The pants graph. Since Theorem 1.2 relies directly on Theorem 1.1 we detail
+our coarse perspective on the Weil-Petersson metric.
+To describe the nature of the quasi-isometry between the graph P(S) and the
+Weil-Petersson metric, we recall that by a theorem of Bers, there is a constantL> 0
+depending only on S so that for each X ∈ Teich(S) there is a pants decomposition
+P so that
+ℓX(α )<L for each α ∈ P,
+4 JEFFREY F. BROCK
+α
+α
+β
+β
+Figure 3. Elementary moves on pants decompositions.
+whereℓX (α ) denotes the length of the geodesic representative of α in the hyperbolic
+metric on X.
+If P is a pants decomposition, we denote by Vℓ(P ) the sub level set
+Vℓ(P ) =
+{
+X | max
+α ∈P
+(ℓX(α ))<ℓ
+}
+.
+Then Bers’s theorem guarantees that the sub level sets V (P ) = VL(P ) cover Teichm¨ uller space.
+Coarsely, the Weil-Petersson distance records the conﬁguration of the sub level
+setsV (P ) with P(S) as its model. Indeed, if PX andPY are pants decompositions
+for which X ∈ V (PX ) and Y ∈ V (PY ), then the quasi-isometry of Theorem 1.1
+arises from the comparability
+dP(PX,P Y ) ≍ dWP(X,Y )
+where dP(PX,P Y ) is the minimal number of elementary moves required to travel
+from PX to PY in P(S).
+We brieﬂy outline our proof of Theorem 1.1 and its application to Theor em 1.2.
+Outline of the proof of Theorem 1.1. Let P0(S) denote the vertex set of
+P(S), and let Q : P0(S) → Teich(S) be any map so that Q(P ) ∈ V (P ). Applying
+work of S. Wolpert and H. Masur there is a uniform constant D > 0 so that the
+Weil-Petersson diameter of V (P ) satisﬁes
+diamWP(V (P ))<D
+for all P ∈ P0(S). A simple argument shows that for any two pants decompositions
+P1 andP2 diﬀering by an elementary move there is a single Riemann surface X on
+which all curves in Pi have length less than L. Thus V (P1) ∩ V (P2) is non-empty,
+and Q is 2D-Lipschitz.
+Given two pants decompositions P1 and P2 for which V2L(P1) ∩ V2L(P2) ̸= ∅,
+there is an X ∈ V2L(P1) ∩ V2L(P2): i.e. a single Riemann surface on which each
+curve in P1 ∪P2 has length at most 2 L. It follows that there is a uniform C so that
+the total intersection number satisﬁes
+i(P1,P 2) ≤ C,
+which in turn provides a uniform bound to the distance dP(P1,P 2) in P(S).
+THE WEIL-PETERSSON METRIC AND VOLUMES OF CONVEX CORES 5
+A compactness argument shows that each X ∈ V (P ) = VL(P ) lies a uniformly
+deﬁnite distance from ∂V 2L(P ). Thus, a unit-length Weil-Petersson geodesic can
+always be covered by a uniform number of sub level sets V2L(P ). It follows that
+any pair of pants decompositions P and P ′ for which V (P ) and V (P ′) contain
+the endpoints of a unit length Weil-Petersson geodesic, P and P ′ have uniformly
+bounded distance in P(S), and the theorem follows.
+Outline of the proof of Theorem 1.2. The proof has two parts.
+Bounding volume from below: The bound below of core volume in terms of the
+Weil-Petersson distance begins with an interpolation through the co nvex core
+ht : Zt → core(Q(X,Y ))
+of 1-Lipschitz maps of hyperbolic surfaces. It follows that for eac h essential simple
+closed curve α we have
+inf
+t
+ℓZt (α ) ≥ ℓQ(X,Y )(α ).
+The path Zt, then, only passes through sets V (P ) for which each element in P
+has length less than L in Q(X,Y ). Applying recent work of Masur and Minsky,
+we show if a sequence {P1,...,P n} of pants decompositions is built from N curves
+and makes bounded jumps, i.e.
+dP(Pj,P j+1)<k,
+then its ends satisfy the bound dP(P1,P n) < K0N , where K0 depends only on k
+and S.
+The Margulis lemma forces closed geodesics with length less than L inQ(X,Y )
+that represent diﬀerent isotopy classes to be uniformly equidistrib uted through the
+convex core. Since each such representative makes a deﬁnite con tribution to core
+volume, the lower bound follows.
+Bounding volume from above. Given pants decompositions PX and PY so that
+X ∈ V (PX ) and Y ∈ V (PY ), and a geodesic G ⊂ P(S) joining PX to PY , we
+consider the closed geodesics
+spin(G) = {α ∗ |α ∈ P for P ∈ G}
+whereα ∗ denotes the geodesic representative of α inQ(X,Y ). We build a straight
+triangulation T of all but a uniformly bounded volume portion of core( Q(X,Y ))
+so that vertices of T lie on α ∗ ∈ spin(G), the so-called spinning geodesics.
+Our triangulation has the property that all but constant times dP(PX,P Y ) of
+the tetrahedra in T have at least one edge in a spinning geodesic α ∗ . We then use a
+spinning trick: by homotoping the vertices around the geodesics in s pin(G) keeping
+the triangulation straight, all tetrahedra with an edge in any α ∗ can be made to
+have arbitrarily small volume.
+Since there is an a priori bound to the volume of a tetrahedron in H3, the
+remaining tetrahedra have uniformly bounded volume. The theorem then follows
+from the comparability dWP(X,Y ) ≍ dP(PX,P Y ).
+Geometrically ﬁnite hyperbolic 3-manifolds. We remark that simple generalizations of these techniques may be employed to obtain estimates f or core volume
+of hyperbolic 3-manifolds that are not quasi-Fuchsian once the app ropriate version
+of Weil-Petersson distance is deﬁned. For example, given a hyperbo lic 3-manifold
+Mψ that ﬁbers over the circle with monodromy ψ , the volume of Mψ is comparable
+6 JEFFREY F. BROCK
+to the Weil-Petersson translation distance of ψ (with constants depending only on
+the topology of the ﬁber). We take up these generalizations in [Br3 ].
+Algebraic and geometric limits. As an application of Theorem 1.2, boundedness of the Weil-Petersson distance dWP(Xk,Y k) for sequences predicts the geometric ﬁniteness of the geometric limit of Q(Xk,Y k).
+The space QF (S) of all quasi-Fuchsian hyperbolic 3-manifolds lies in the space
+AH(S) of all complete hyperbolic 3-manifolds M marked by homotopy equivalences
+(h : S → M ) so that h∗ sends peripheral elements of π1(S) to parabolic elements
+of π1(M ). The space AH(S) carries the algebraic topology or the compact-open
+topology on the induced representations h∗ : π1(S) → Isom+(H3) up to conjugacy.
+In an algebraically convergent sequence {(hk : S → Mk)} inAH(S), normalizing
+the induced representations ρk = (hk)∗ to converge on generators one may always
+extract a subsequence so that the groups ρk(π1(S)) = Γk converge in the GromovHausdorﬀ topology on discrete subgroups of Isom +(H3), or geometrically, to a limit
+ΓG. A central issue in the deformation theory of hyperbolic 3-manifold s is to
+understand the geometric limit NG = H3/ ΓG.
+Applying Theorem 1.2, we obtain the following criterion:
+Theorem 1.4. Let Q(Xk,Y k) → Q∞ be an algebraically convergent sequence in
+AH(S) with geometric limit NG. Then NG is geometrically ﬁnite if and only if
+there is a K >0 for which
+dWP(Xk,Y k)<K
+for all k.
+Note that geometric ﬁniteness of NG implies geometric ﬁniteness of Q∞ but not
+conversely.
+History and references. The fundamental properties of the Weil-Petersson metric we use are discussed in [Wol1], [Wol3], [Wol4] and [Mas]. The pants graph is the
+1-skeleton of the pants complex, introduced in [HT] (see also [HLS]) which is there
+proven to be connected. The relation of the pants graph to the We il-Petersson metric is similar in spirit to the relative hyperbolicity theorem for Teichm¨ ulle r space of
+[MM1] where the (related) complex of curves is shown to be quasi-isometric to the
+electric Teichm¨ uller space, and to be Gromov-hyperbolic (the pants comple x and
+the Weil-Petersson metric are not in general Gromov-hyperbolic [BF]). For more
+on quasi-Fuchsian manifolds and their algebraic and geometric limits, s ee [Th1],
+[Brs1], [Mc2], [Mc1], [Br2], and [Ot].
+Plan of the paper. After discussing the fundamental work of S. Wolpert and
+H. Masur on the Weil-Petersson metric that will serve as our jumping oﬀ point in
+section 2, we prove the comparability of Weil-Petersson distance an d pants distance
+(Theorem 1.1) in section 3. We then establish the lower bound on vol( X,Y ) in
+terms of the distance dP(PX,P Y ) in section 4. Section 5 applies the combinatorics
+of pants decompositions along a geodesic G ⊂ P(S) joining PX to PY to bound
+volume from above in terms of pants distance. Theorem 1.2 then follo ws from
+the comparability of Theorem 1.1. We conclude with applications to the study of
+geometric limits, proving Theorem 1.4.
+Acknowledgements. I would like to thank Yair Minsky, in particular, for introducing me to Thurston’s conjecture and for suggesting the use of curve hierarchies
+to improve the volume lower bound. Thanks also to Bill Thurston, Ste ve Kerckhoﬀ,
+THE WEIL-PETERSSON METRIC AND VOLUMES OF CONVEX CORES 7
+and Curt McMullen for useful conversations, and to Lewis Bowen an d the referee
+for corrections and suggestions.
+2. The extended Weil-Petersson metric
+LetS be a compact oriented surface of negative Euler characteristic. W e allow S
+to have boundary and let int( S) denote its interior. Let S denote the set of isotopy
+classes of essential, non-peripheral, simple closed curves on S.
+A pants decomposition P ⊂ S is a maximal collection of isotopy classes with
+pairwise disjoint representatives on S. The usual geometric intersection number
+i(α,β ) of a pair ( α,β ) ∈ S × S generalizes to a total intersection number i(P,P ′) of
+pants decompositions by summing the geometric intersections of th eir components.
+The Teichm¨ uller spaceTeich(S) of S parameterizes ﬁnite area hyperbolic structures onS up to isotopy. Points in Teich(S) are pairs (f,X ) whereX is a ﬁnite area
+hyperbolic surface X equipped with a homeomorphism f : int(S) → X, up to the
+equivalence (f,X ) ∼ (g,Y ) if there is an isometry φ : X → Y for which φ ◦f ≃ g.
+A pants decomposition P =α 1 ∪ ... ∪ α |P | determines Fenchel-Nielsen coordinates
+(ℓX (α 1),...,ℓ X(α |P |),θ X (α 1),...,θ X (α |P |)) ∈ R|P |
++ × R|P |
+for each X ∈ Teich(S), indicating X is assembled from hyperbolic pairs of pants
+with boundary lengths prescribed by ℓX (αi) glued together twisted by θX (αi). (For
+more on Teichm¨ uller space and Fenchel-Nielsen coordinates see [IT] or [Gard]).
+The Weil-Petersson metric. Each X ∈ Teich(S) is naturally a complex 1manifold via its uniformization X = H2/ Γ as the quotient of the upper half plane
+by a Fuchsian group. The Teichm¨ uller space has a complex manifold st ructure of
+dimension 3g − 3 +n where S has genus g and n boundary components.
+The space of holomorphic quadratic diﬀerentials Q(X) on X ∈ Teich(S) (holomorphic forms of type φ(z)dz2 onX) is naturally the cotangent space T ∗
+XTeich(S)
+to Teich(S) at X. The Weil-Petersson metric on Teich(S) uniﬁes the hyperbolic
+and holomorphic perspectives on X: it arises from the L2 inner product on Q(X),
+namely
+⟨ϕ,ψ ⟩WP =
+∫
+X
+ϕ ¯ψ
+ρ2
+where ρ(z)|dz| is the hyperbolic metric on X, by the usual pairing
+(µ,ϕ )X =
+∫
+X
+µϕ
+betweenTX Teich(S) and T ∗
+XTeich(S) (see, e.g. [Wol3, Sec. 1]). In what follows, we
+will be interested only in the Riemannian part gWP of the Weil-Petersson metric,
+and its associated distance function dWP(.,. ) on Teich(S).
+The Weil-Petersson metric has negative sectional curvature [Tro] [Wol2], and
+the modular group Mod(S) (the group of isotopy classes of orientation preserving
+homeomorphisms of S) acts by isometries of gWP. Thus, gWP descends to a metric
+on the Moduli space M(S) = Teich(S)/ Mod(S).
+Work of S. Wolpert shows two important properties of the Weil-Pete rsson metric
+we will use:
+WPI The Weil-Petersson metric is not complete: “pinching geodesics” in the
+Teichm¨ uller metric (which leave every compact set of Teich( S)) have ﬁnite WeilPetersson length [Wol1].
+8 JEFFREY F. BROCK
+WPII The Weil-Petersson metric is geodesically convex: in fact, for α ∈ S the
+length function ℓ(. )(α ) is strictly convex along Weil-Petersson geodesics [Wol3].
+The augmented T eichm¨ uller space. In [Mas], H. Masur shows the WeilPetersson metric extends to the augmented Teichm¨ uller spaceTeich(S) obtained
+by adding boundary Teichm¨ uller spaces consisting of marked noded Riemann surfaces, which we now describe (see [Brs3] for a detailed discussion).
+A Riemann surface with nodes W is a connected complex space so that each
+point p ∈ W has a neighborhood isomorphic to {z ∈ C | |z|< 1} or isomorphic
+to {(z,w ) ∈ C2 | |z|< 1, |w|< 1, and zw = 0 } by an isomorphism sending p to
+(0, 0) ∈ C2. In the latter case, p is called a node ofX. The complement of the nodes
+is a union of Riemann surfaces called the pieces of W . We say W is hyperbolic if
+each piece of W admits a complete ﬁnite-area hyperbolic structure.
+Given curves ν1,...,ν j in a pants decomposition P = {α 1,...,α |P |} of S, a
+marked noded hyperbolic surface pinched along ν1,...,ν j is a noded hyperbolic
+Riemann surface W together with a continuous map
+f : int(S) → W
+so that f |S− ν1∪... ∪νj is a homeomorphism on to the union of the pieces of W . Let
+S − N (ν1) ∪ ... ∪ N (νj ) = S1 ∪ ... ∪ Sk where N (νi) are pairwise disjoint open
+collars about each νi. Then the pair ( f,W ) determines a point
+Teich(S1) × ... × Teich(Sk)
+in the product Teichm¨ uller space by taking the restriction of f to each component
+of int(S) − ν1 ∪ ... ∪ νj as a marking on each piece of W . A marked piece of
+Wl ∈ Teich(Sl), 1 ≤ l ≤ k, has Fenchel-Nielsen coordinates with respect to the
+elements of the pants decomposition P that lie in Sl.
+Two marked hyperbolic noded surfaces ( f1,W 1) and ( f2,W 2) are equivalent, if
+there is continuous map φ : W1 → W2 that is isometric on each piece of W1 for
+whichφ ◦f1 =f2 after precomposition with an isotopy of S.
+The augmented Teichm¨ uller spaceTeich(S) is obtained by adjoining equivalence
+classes of marked noded hyperbolic surfaces to Teich( S). The topology on Teich(S)
+is given as follows. Given a pants decomposition P , and a point W ∈ Teich(S)
+with curves ν1 ∪ ... ∪ νj in P pinched to nodes, we extend the Fenchel-Nielsen
+coordinates to W by deﬁning the coordinates ℓW (νi) = 0. Then a neighborhood of
+W in Teich(S) consists of (possibly noded) hyperbolic Riemann surfaces X whose
+length coordinates ℓX (αp) are close to those of W for p = 1,..., 3g − 3 +n, and
+whose twist coordinates θX (αp) are close to those of X for eachp such thatαp ̸=νi.
+(see [IT, App. B]).
+The Weil-Petersson metric extends to the augmented Teichm¨ uller s pace as its
+completion (see [Mas]), giving a Mod(S) invariant metric on Teich(S). The quotient
+Teich(S)/ Mod(S) = M(S),
+the familiar Mayer-Mumford-Deligne compactiﬁcation of the moduli s pace (see
+[Brs3]), inherits a complete extension of the Weil-Petersson metric o n M(S). We
+denote the corresponding distance by
+dWP : Teich(S) × Teich(S) → R≥ 0.
+THE WEIL-PETERSSON METRIC AND VOLUMES OF CONVEX CORES 9
+Evidently, the failure of completeness of the Weil-Petersson metric occurs at
+limits of pinching sequences Xt for which the length coordinates ℓXt (νi) tend to
+zero for some collection of curves in a pants decomposition P .
+Given a pants decomposition P and a collection α 1,...,α k of curves in P , the
+minimal distance from a point X ∈ Teich(S) to a noded Riemann surface Z with
+nodes along α 1,...,α k is estimated in terms of the geodesic length sum
+ℓ =ℓX (α 1) +... +ℓX(αk)
+of the lengths of αi on X by
+(2.1) dWP(X,Z ) =
+√
+2πℓ +O(ℓ2)
+(see [Wol5, Cor. 21]).
+Remark: This estimate is a recent improvement of similar estimates originally
+obtained in [Wol4, Ex. 4.3] and cited in earlier versions of this manuscrip t.
+Sub level sets. We recall the following theorem of Bers.
+Theorem 2.1 (Bers). There is a constant L >0 depending only on S such that
+for any X ∈ Teich(S) there is a pants decomposition P such that ℓX(α ) < L for
+eachα ∈ P .
+We call this L the Bers constant for S.
+Given a pants decomposition P , and a positive real number ℓ ∈ R+, we consider
+the sub level set
+Vℓ(P ) =
+{
+X ∈ Teich(S) | max
+α ∈P
+{ℓX (α )}<ℓ
+}
+.
+Then by Bers’s theorem, the union of the sets VL(P ) over all pants decompositions
+gives an open cover of Teich( S). Because L depends only on S, we abbreviate
+V (P ) = VL(P ).
+Then we have the following:
+Proposition 2.2. The sub level sets V (P ) have the following properties.
+(1) Each V (P ) is convex in the Weil-Petersson metric, and
+(2) there is a constant D > 0, depending only on S, for which the WeilPetersson diameter diamWP(V (P ))<D.
+Proof: Geodesic convexity ofV (P ) follows immediately from WPII, the convexity
+of the geodesic length functions ℓX (. )(α ) for each α ∈ P .
+To see each V (P ) has bounded Weil-Petersson diameter, let WP be the (unique)
+maximally noded Riemann surface where each curve in P is pinched. By equation (2.1) there is a constant C(L) so that for each X ∈ V (P ) we have
+d
+WP(X,W P )<C (L).
+By the triangle inequality for dWP, if X and Y lie in V (P ) then the distance
+dWP(X,Y ) is bounded by 2 C(L). By geodesic convexity of V (P ) the geodesic
+joining X to Y lies in V (P ), so we have the bound
+dWP(X,Y )< 2C(L)
+on dWP(X,Y ) which we set equal to D.
+10 JEFFREY F. BROCK
+3. A combinatorial Weil-Petersson distance
+In this section, we relate the coarse geometry of the Weil-Peterss on metric to
+the pants graph P(S) deﬁned in the introduction. We do this by exhibiting a
+quasi-isometry between the two spaces with their respective distances.
+Deﬁnition 3.1. Given k1 > 1 and k2 > 0, a map f : (X,d ) → (Y,d ′) of metric
+spaces is a (k1,k 2)-quasi-isometric embedding if for each pair of points x and y in
+X we have
+d(x,y )
+k1
+− k2 ≤ d′(f (x),f (y)) ≤ k1d(x,y ) +k2.
+The spaces (X,d ) and (Y,d ′) are quasi-isometric if for some k1 > 1 and k2 > 0
+there are (k1,k 2)-quasi-isometric embeddings from (X,d ) to (Y,d ′) and from (Y,d ′)
+to (X,d ). In practice, it suﬃces to exhibit a quasi-isometry from (X,d ) to (Y,d ′),
+namely, a quasi-isometric embedding with uniformly dense image. Given such a
+quasi-isometry from ( X,d ) to ( Y,d ′), a quasi-isometric embedding from ( Y,d ′) to
+(X,d ) is readily constructed, so the spaces are quasi-isometric.
+Let
+Q : P0(S) → Teich(S)
+be any embedding of the vertices P0(S) of P(S) into Teich(S) so that Q(P ) lies in
+V (P ). The main theorem of this section is the following:
+Theorem 3.2. The map Q is a quasi-isometry of the 0-skeleton P0(S) of P(S)
+with Teich(S) with its Weil-Petersson distance.
+Proof: By the uniform bound
+diamWP(V (P ))<D
+on the diameter of V (P ), the image Q(P(S)) is D-dense in Teich(S). It suﬃces,
+then, to show that there are uniform constants A1 ≥ 1 and A2 ≥ 0 so that
+1
+A1
+dP(P0,P 1) − A2 ≤ dWP(Q(P0),Q (P1)) ≤ A1dP(P0,P 1) +A2.
+We ﬁrst show that the map Q is 2D-Lipschitz. Given P0 and P1 such that
+dP(P0,P 1) = 1,
+P0 and P1 diﬀer by a single elementary move. Let α ∈ P0 and β ∈ P1 be the
+curves involved in this elementary move, i.e. P0 − α = P1 − β and i(α,β ) = 1
+or 2 depending on whether the component Sα ⊂ S − (P0 − α ) containing α is a
+punctured torus or four-times punctured sphere.
+Let Z ∈ Teich(Sα ) be the “square” punctured torus: i.e. Z is obtained by identifying opposite sides of an ideal square in H2 with order-4 rotational symmetry
+about the origin in the disk model of H2. Marking Z so that the common perpendiculars to the opposite sides descend to closed geodesics α and β on Z (see
+Figure 4), we have by symmetry that the length ℓZ(α ) equals the length ℓZ(β ),
+which is the shortest length of any non-peripheral simple closed cur ve on Z. In
+particular, we have
+ℓZ(α )<L (Sα )
+where L(Sα ) is the Bers constant for Sα .
+Let (f,W ) ∈ Teich(S) be the noded Riemann surface with nodes at each γ ∈
+P − α , and one non-rigid piece f |Sα → Z. For any Z ′ ∈ Teich(S) suﬃciently close to
+THE WEIL-PETERSSON METRIC AND VOLUMES OF CONVEX CORES 11
+˜α
+˜β˜Z
+Figure 4. The cover ˜Z with lifts of α and β passing through the origin.
+Z, if Z ′ ∈ V (P ′) then P ′ contains an essential non-peripheral curve in Sα . Taking
+Z ′ arbitrarily close to Z, we may conclude that L(Sα ) ≤ L(S) = L. Then for any
+Riemann surface Z ′ ∈ Teich(S) suﬃciently close to W ∈ Teich(S) we have
+ℓZ′(γ)<L
+for each γ ∈ P0 ∪ P1. In other words, Z ′ lies in the intersection V (P0) ∩ V (P1).
+Letting Z be the double of the symmetric ideal square described above, a simila r
+argument handles the genus-0 case.
+Therefore we may conclude that
+dWP(Q(P0),Q (P1))< 2D when dP(P0,P 1) = 1,
+so by the triangle inequality, Q is 2D-Lipschitz. To show that for some A1 and A2
+the inequality
+1
+A1
+dP(P0,P 1) − A2 ≤ dWP(Q(P0),Q (P1))
+holds is somewhat more delicate. We break this into a series of lemmas.
+Lemma 3.3. Given L′>L , there is an integer B >0 so that given P and P ′ in
+P(S) for which VL′(P ) ∩ VL′(P ′) ̸= ∅, we have dP(P,P ′) ≤ B.
+Proof: The hypotheses imply that there is some X ∈ Teich(S) so that ℓX (α )<L ′
+for each α ∈ P ∪P ′. By an application of the collar lemma [Bus, Thm. 4.4.6] there
+is a constant C depending only L′ and S so that the total geometric intersection
+numberi(P,P ′) satisﬁes
+i(P,P ′) ≤ C.
+Let Tw(P ) ∼
+= Z|P | denote the subgroup of Mod( S) generated by Dehn twists
+about the curves in P . Then the function i(P,. ) : P0(S) → Z descends to a function
+i(P,. ) : P0(S)/ Tw(P ) → Z
+12 JEFFREY F. BROCK
+whose sub level sets are bounded: in other words there are only ﬁn itely many
+equivalence classes
+{[P1],..., [Pc]} ⊂ P0(S)/ Tw(P )
+for which i(P, [Pj ]) ≤ C.
+Since dP(P,. ) also descends to a function
+dP(P,. ) : P0(S)/ Tw(P ) → Z
+on P0(S)/ Tw(P ), we have
+dP(P,P ′) ≤ B
+where
+B = max
+j=1,...,c
+{dP(P, [Pj ])}.
+Lemma 3.4. Given L′> L, there is an integer J > 0, so that if Xt, t ∈ [0, 1],
+is a unit-length Weil-Petersson geodesic joining X0 and X1, then there exist pants
+decompositionsP1,...,P J so that {Xt}1
+t=0 lies in the union
+VL′(P1) ∪ ... ∪ VL′(PJ ).
+Proof: Recall from Theorem 2.1 that the sets V (P ) ⊂ VL′(P ) cover Teich(S). Let
+P1,...,P m determine sets V (P1),...,V (Pm) so that for each t ∈ [0, 1] we have
+Xt ∈ V (P1) ∪ ... ∪ V (Pm).
+Let
+dL′,P : ∂V (P ) → R+
+be the function
+dL′,P (X) = inf
+Y ∈∂V L′(P )
+dWP(X,Y ).
+We claim that there is an ǫ0 depending only on L, and L′ so that
+dL′,P (X)>ǫ 0.
+The functiondL′,P (X) naturally extends to the metric completion
+∂V (P ) of∂V (P ),
+and dL′,P (X) is invariant under the action of Tw(P ).
+Let {(ℓi,θ i) ∈ R|P |
++ × R|P |} denote Fenchel-Nielsen coordinates for Teich( S)
+adapted to the pants decomposition P . To extend these Fenchel Nielsen coordinates to the completion, we denote by
+R≥ 0 × R/ ∼
+the quotient of R≥ 0 × R by the equivalence relation (0 ,θ ) ∼ (0,θ ′). Then the completion VL′(P ) of VL′(P ) in Teich(S) admits extended Fenchel-Nielsen coordinates
+VL′(P ) = {(ℓi,θ i) ∈ R+ × R/ ∼ | ℓi ≤ L′, i = 1,..., |P |}
+where each point with ℓj = 0 for some j lies in the completion. The extended
+isometric action of Tw(P ) on Teich(S) is cocompact on VL′(P ), since Tw(P ) preserves each length coordinate and acts by translations on each tw ist coordinate.
+THE WEIL-PETERSSON METRIC AND VOLUMES OF CONVEX CORES 13
+In these extended Fenchel-Nielsen coordinates, the completion ∂VL′(P ) of the
+boundary ∂VL′(P ) is the locus of coordinates for which ℓj = L′ for some j ∈
+1,..., |P |. Thus
+∂VL′(S)/ Tw(P )
+is a closed subset of the compact set VL′(P )/ Tw(P ) and is thus compact.
+Since the quotients
+∂VL′(P )/ Tw(P ) and ∂V (P )/ Tw(P )
+are disjoint compact subsets of VL′(P )/ Tw(P ), it follows that the function
+IL′ : P0(S) → R+
+given by
+IL′(P ) = inf
+X∈∂V (P )
+dL′,P (X)
+is positive. But IL′ is Mod(S)-invariant, so it descends to a function
+IL′ : P0(S)/ Mod(S) → R+.
+Since P0(S)/ Mod(S) is ﬁnite, we may set ǫ0 equal to the inﬁmum of IL′([P ]) over
+the ﬁnite number of equivalence classes [ P ] ∈ P0(S)/ Mod(S).
+If Xt0 lies in V (P ), then, Xt lies in VL′(P ), provided t lies in (t0 − ǫ0,t 0 +ǫ0).
+It follows that after setting J equal to the least integer greater than 2 /ǫ 0, we may
+select from the pants decompositions P1,...,P m pants decompositions P1,...,P J
+(possibly with repetition) so that
+Xt ∈ VL′(P1) ∪ ... ∪ VL′(PJ )
+for each t ∈ [0, 1].
+To complete the proof of Theorem 3.2, let Xt be the Weil-Petersson geodesic
+joining arbitrary distinct Riemann surfaces X and Y in Teich(S). Let PX and
+PY be pants decompositions for which X lies in V (PX ) and Y lies in V (PY ). Let
+I(P ) ⊂ [0, 1] denote the values of t for which Xt ∈ V2L(P ). By convexity of V (P )
+(Proposition 2.2) each I(P ) is an interval.
+TakingL′ = 2L, Lemma 3.4 provides a J > 0 and a sequence {Pj}N
+j=0 ∈ P(S)
+so that
+• X(t) is covered by the union ∪jI(Pj ),
+• the least upper bound of I(Pj) lies in I(Pj+1), and
+• N ≤ J(dWP(X,Y ) + 1).
+Thus, we have
+(3.2) N
+J − 1 ≤ dWP(X,Y ).
+Moreover, for successive pants decompositions Pj,P j+1, we have
+V2L(Pj) ∩ V2L(Pj+1) ̸= ∅,
+so applying Lemma 3.3 with L′ = 2L, we have a B >0 for which
+(3.3) dP(PX,P Y ) ≤ BN.
+Combining equations 3.2 and 3.3, we have
+(3.4) dP(PX,P Y )
+BJ − 1 ≤ dWP(Q(PX ),Q (PY )),
+14 JEFFREY F. BROCK
+whereB and J depend only on L which depends only on S. Setting A1 =BJ and
+A2 = 1 concludes the proof of Theorem 3.2.
+4. Bounding the core volume from below
+To simplify notation, let
+C(X,Y ) = core(Q(X,Y ))
+and recall that vol( X,Y ) denotes the convex core volume vol(core( Q(X,Y ))). In
+this section we prove
+Theorem 4.1. Given S, there are constants K1> 1 and K2> 0 so that
+1
+K1
+dWP(X,Y ) − K2 ≤ vol(X,Y ).
+The proof is given as a series of lemmas.
+Fix attention on a given quasi-Fuchsian manifold Q(X,Y ). Given a constant
+L0> 0, let S<L0 ⊂ S denote the set of isotopy classes
+S<L0 = {α ∈ S |ℓQ(X,Y )(α )<L 0}.
+Theorem 4.1 will follow from a linear lower bound on vol( X,Y ) given in terms of
+the size of S<L (Lemma 4.8) and the following lemma.
+Lemma 4.2. Let PX and PY be pants decompositions so that X ∈ V (PX ) and
+Y ∈ V (PY ). Then there is a constant K depending only on S so that
+dP(PX,P Y ) ≤ K|S<L|.
+The lemma will follow from the following general result on paths in P(S) that
+are built out of a given collection of curves in S. For reference, let
+πS : P0(S) → S
+denote the projection that assigns to each P the collection of curves used to build
+it.
+Lemma 4.3. Letk ∈ N and let g = {PI =P0,...,P N =PT } ⊂ P(S) be a sequence
+of pants decompositions with the property that dP(Pj,P j+1)<k . Let Sg ⊂ S denote
+the image of g under the projection πS. There is a constant K0 > 0 depending on
+k and S so that
+dP(PI,P T )<K 0|Sg|.
+The complex of curves. The graph P(S) is related to the complex of curves
+C(S), introduced by W. Harvey [Har]. To prove Lemma 4.3 we describe rec ent
+work of Masur and Minksy on C(S). The main result of [MM1] shows that C(S)
+is in fact a Gromov hyperbolic metric space with the metric obtained by making
+each simplex a standard Euclidean simplex. Its sequel [MM2] introduc es a theory
+of hierarchies of so-called “tight geodesics” in C(S) and in sub-complexes C(Y ) for
+essential subsurfaces Y ⊂ S. Such hierarchies and their hyperbolicity properties
+play an integral role in our control of volume.
+THE WEIL-PETERSSON METRIC AND VOLUMES OF CONVEX CORES 15
+To describe the topological type of S, we let
+d(S) = dim C(Teich(S)) = 3g − 3 +n
+whereS has genusg withn boundary components. We consider only those surfaces
+S for which int(S) admits a hyperbolic structure (so d(S)> 0).
+The complex of curves C(S) is a simplicial complex with 0-skeleton S, and higher
+dimensional simplices described as follows:
+• for d(S)> 1 and k ≥ 1,k-simplices of C(S) span k + 1-tuples α 1,...,α k+1
+of vertices for which i(αi,α j) = 0, and
+• ifd(S) = 1, C(S) is a 1-complex whose edges join vertices α andα ′ in C(S)
+that intersect minimally; i.e. C(S) = P(S).
+Given an essential subsurface Y ⊂ S with d(Y ) ≥ 2, the curve complex C(Y ) is
+naturally a subcomplex of C(S). Given a set W let P(W ) denote its power set, i.e.
+the set of all subsets of W . Masur and Minsky deﬁne a projection
+πY : C(S) → P (C(Y )),
+by setting π (α ) = α if α ∈ C (Y ), and taking
+πY (α ) =
+⋃
+α ′⊂ α ∩Y
+∂N (α ′ ∪ ∂α ′Y )
+whereα ′ is an arc of essential intersection ofα withY ,∂α ′Y ⊂ ∂Y is the components
+of ∂Y that α ′ meets in its endpoints, and N (. ) denotes a regular neighborhood of
+their union (see [MM2, Sec. 2]).
+WhenA andB are two subsets of C(Y ), [MM2] deﬁnes a coarse distance dY (A,B )
+by taking the diameter
+dY (A,B ) = diam C(Y )(A ∪ B),
+in C(Y ) of A and B. Note that while dY (.,. ) is more a diameter than a distance
+whenA andB are close, it gives a useful notion of distance between sets of boun ded
+diameter and does satisfy the triangle inequality.
+By [MM2, Lem. 2.3] the projection πY has a Lipschitz property: if ∆ is a simplex
+in C(S) so that ∆ intersects Y , then we have diam C(Y )(πY (∆)) ≤ 2. If PI and PT
+are two subsets of C(S), letting πY (PI ) = ∪α ∈PIπY (α ), and likewise for PT , then
+the projection distancedY (PI,P T ) between PI andPT (or distance in Y ) is deﬁned
+by
+dY (PI,P T ) = dY (πY (PI ),π Y (PT )).
+In particular, ifP andP ′ are pants decompositions that diﬀer by a single elementary
+move, then we have dY (P,P ′) ≤ 4 (see [MM2, Lem. 2.5]).
+A central theorem we will use is the following:
+Theorem 4.4 (Thm. 6.12 of [MM2]) . There is a constant M0(S) so that given
+M > M0 there exist c0 and c1 so that if PI and PT are pants decompositions in
+P(S) then we have
+1
+c0
+dP(PI,P T ) − c1 ≤
+∑
+Y ⊆ S
+dY (PI,P T )>M
+dY (PI,P T ) ≤ c0dP(PI,P T ) +c1
+where the sum is taken over all non-annular essential subsur facesY ⊆ S satisfying
+dY (PI,P T )>M .
+16 JEFFREY F. BROCK
+We apply this result to prove Lemma 4.3. Our argument is quite similar to that
+of [MM2, Thm. 6.10], where it is shown that a given pants decomposition along
+an elementary move sequence can contribute to progress in only bo undedly many
+projections to subsurfaces simultaneously. We seek the analogou s statement for a
+single curve occuring in pants decompositions joining PI to PT .
+Proof: (of Lemma 4.3) . To prove the lemma, we will relate the sum of the projections to the size of Sg. To do this, we note that when the projection distance
+dY (PI,P T ) is large, there must be a deﬁnite portion of the projection of g to Y
+that is far from both πY (PI ) and πY (PT ) in dY (.,. ); this follows from the triangle inequality for dY and the fact that elementary moves in P(S) make Lipschitz
+progress as measured by dY .
+We argue that a given curve α can contribute only to a bounded amount of
+progress in boundedly many diﬀerent subsurfaces. Precisely, let Y and Z be two
+essential, intersecting, non-annular subsurfaces of S, neither of which is contained
+in the other. A lemma of Masur and Minsky [MM2, Lem. 6.11] enforces a partial
+ordering “ ≺ ” on such subsurfaces with respect to the pants decompositions P and
+P ′, provided the projection distances dY (P,P ′) and dZ(P,P ′) are greater than a
+constant M2 depending only on S. Taking M2 to be the constant of [MM2, Lem.
+6.2] with the same name, we say the subsurfaces Y andZ are (P,P ′)-ordered if we
+have
+dY (P,P ′)>M 2 and dZ (P,P ′)>M 2.
+We rephrase [MM2, Lem. 6.11] as follows.
+Lemma 4.5. There is a constant M3 depending only on S so that if Y and Z are
+(P,P ′)-ordered then one of two cases obtains. Either Y ≺ Z, and we have
+dY (∂Z,P ′)<M 3 and dZ(P,∂Y )<M 3,
+or Z ≺ Y , and we have
+dZ (∂Y,P ′)<M 3 and dY (P,∂Z )<M 3.
+Proof: If Y and Z are (P,P ′)-ordered in the above sense, then by [MM2, Lem.
+6.2] they appear as domains Y = D(h) and Z = D(k) supporting tight geodesics
+h ⊂ C (Y ) and k ⊂ C (Z) in any hierarchyH (without annuli [MM2, Sec. 8]) joining
+P =I(H) to P ′ =T (H). The condition that Y andZ intersect and are non-nested
+guarantees that h andk are time-ordered [MM2, Lem. 4.18] (in the sense of [MM2,
+Defn. 4.16]). The lemma then follows from an application of [MM2, Lem. 6 .11]
+where Y ≺ Z represents the case h ≺ tk and Z ≺ Y represents the case k ≺ th.
+Let M4 = M2 + 2M3 + 4, and let M = max {4M4,M 0}. Consider an essential
+subsurface Y ⊆ S for which dY (PI,P T ) > M. As in the proof of [MM2, Lem.
+6.10] let JY denote the subset of [1 ,N ] for which if i ∈ JY thenPi is “deep” in the
+projection to Y : i.e.
+dY (PI,P i)>M 4 and dY (Pi,P T )>M 4.
+Given a subset A ⊂ [1,N ], we denote by
+∥A∥Y = diam C(Y )({πY (Pi) |i ∈ A})
+THE WEIL-PETERSSON METRIC AND VOLUMES OF CONVEX CORES 17
+the diameter of the projection of the pants decompositions with ind ices in A to the
+curve complex C(Y ).
+Given α ∈ Sg for which πY (α ) ̸= ∅, we denote by JY (α ) ⊂ JY the subset for
+which if i ∈ JY (α ) then α lies in Pi. We make three observations for later reference:
+I. By the Lipschitz property for πY , we have ∥JY (α )∥Y ≤ 4.
+II. If i lies in JY then there is some α ∈ Sg so that i ∈ JY (α ).
+III. Since dP(Pj,P j+1)<k , we have dY (Pj,P j+1)< 4k.
+Let Y ⊆ S and Z ⊆ S be two non-annular intersecting subsurfaces neither of
+which is contained in the other so that each contributes to the sum o f Theorem 4.4:
+i.e. we have
+dY (PI,P T )>M and dZ(PI,P T )>M.
+This assumption guarantees, in particular, that Y andZ are (PI,P T )-ordered. We
+make the following claim:
+(∗) If JY (α ) is non-empty, then JZ (α ) must be empty.
+Arguing by contradiction, assume
+JY (α ) ̸= ∅ ̸=JZ (α ).
+We have
+πY (α ) ̸= ∅ ̸=πZ (α )
+so if i ∈ JY (α ) and j ∈ JZ (α ) then diam Y (πY (Pi)) ≤ 2, diamY (πY (Pj)) ≤ 2 so it
+follows that dY (Pi,P j) ≤ 4, since α lies in Pi and in Pj . The same conclusion holds
+with Z in place of Y .
+Sincei lies inJY (α ) we havedY (PI,P i)>M 4 anddY (Pi,P T )>M 4, so it follows
+that
+dY (PI,P j) ≥ M4 − 4 and dY (Pj,P T ) ≥ M4 − 4.
+Asj lies in JZ (α ) we have
+dZ (PI,P j) ≥ M4,
+and since M4 − 4>M 2, it follows that Y and Z are also (PI,P j)-ordered. Let ≺ j
+denote the ( PI,P j )-ordering and assume without loss of generality that Y ≺ j Z.
+Then applying Lemma 4.5 we have
+dY (∂Z,P j )<M 3.
+SinceY andZ are also (PI,P T )-ordered, we may ﬁrst assume that Y ≺ Z. Then
+Lemma 4.5 gives dY (∂Z,P T )<M 3 which implies that
+dY (Pj,P T )< 2M3,
+contradicting the assumption that j ∈ JZ(α ). If on the other hand we have Z ≺ Y ,
+then Lemma 4.5 gives dY (PI,∂Z )<M 3 from which we conclude
+dY (PI,P j)< 2M3,
+which contradicts the same assumption. Thus, either JY (α ) or JZ (α ) must be
+empty, and the claim ( ∗) is proven.
+Applying observations (I) and (II) above, if SY = {α ∈ Sg |JY (α ) ̸= ∅}, then
+we have
+∥JY ∥Y ≤ 4|SY |.
+There is a uniform bound s depending only on S to the size of any collection of
+subsurfaces any pair of which is disjoint or nested (see [MM2, Lem. 6 .10, proof]) so
+18 JEFFREY F. BROCK
+by our claim ( ∗), the number of Y for which JY (α ) can be non-empty is bounded
+bys. Thus we have ∑
+Y ⊆ S,J Y ̸=∅
+∥JY ∥Y ≤ 4s|Sg|.
+Applying observation (III), we have dY (Pj,P j+1) < 4k. Thus, for each Y
+satisfying
+dY (PI,P T )>M
+the set JY is in particular non-empty, and we have
+dY (PI,P T ) − 2M4 ≤ 4k∥JY ∥Y.
+But since 4M4<M we have 2M4 ≤ 4k∥JY ∥Y and thus
+dY (PI,P T ) ≤ 8k∥JY ∥Y.
+Since M = max{M0, 4M4}, applying Theorem 4.4 there are constants c0 andc1
+so that we have
+1
+c0
+dP(PI,P T ) − c1 ≤
+∑
+Y ⊆ S
+dY (PI,P T )>M
+dY (PI,P T ) ≤ 32sk|Sg|.
+Since |Sg| is always at least d(S), we may combine all of the above constants into
+a single K0 for which
+dP(PI,P T ) ≤ K0|Sg|.
+To prove Lemma 4.2, we will apply Lemma 4.3 to a sequence of pants dec ompositions {PX = P0,...,P N = PY } so that πS(Pj ) ⊂ S<L for each j, and so that
+dP(Pj,P j+1) is bounded by an a priori constant. The existence of such a seque nce
+is provided by an interpolation of 1-Lipschitz homotopy equivalences of hyperbolic
+surfaces into Q(X,Y ) that pass from one side of the convex core to the other. The
+existence of such an interpolation follows from work of R. Canary on simplicial
+hyperbolic surfaces which we now describe.
+Simplicial hyperbolic surfaces. Let Singk(S) denote the ﬁnite-area marked singular hyperbolic structures on S: complete ﬁnite area hyperbolic surfaces Z with
+at most k cone singularities, each with cone-angle at least 2 π , equipped with marking homeomorphisms h : int(S) → Z up to marking-preserving isometry. Roughly
+speaking, a simplicial hyperbolic surface is a path-isometric mapping from a singular hyperbolic surface to a hyperbolic 3-manifold that is totally geo desic in the
+complement of a “triangulation.” We now make this notion precise.
+LetV = {v1,...,v p} be a ﬁnite subset of S. Following Hatcher [Hat], an essential
+arcα in (S,V ) is an embedded arc meeting ∂S ∪V only in its endpoints, which lie in
+V . A collection {α 0,...,α k} of essential arcs in ( S,V ) that are pairwise embedded
+and non-isotopic rel-endpoints is called a curve system . Let A(S,V ) denote the
+simplicial complex whose k-simplices [α 0,...,α k] are curve systems with curves
+{α 0,...,α k} with faces given by k-tuples of curves in {α 0,...,α k}.
+If V contains a point in each boundary component of the compact surfa ce S,
+then a triangulation of S is a maximal curve system in A(S,V ). Likewise, we may
+view the interior int(S) of S as a “punctured surface” by collapsing each boundary
+component γ ⊂ ∂S to a point vγ to obtain a surface R. Then we have
+int(S) = R − {vγ |γ ⊂ ∂S }.
+THE WEIL-PETERSSON METRIC AND VOLUMES OF CONVEX CORES 19
+IfV is a subset of R containing ∪γvγ , then a triangulation of int(S) is the restriction
+of a maximal curve system in A(R,V ) restricted to R − { vγ |γ ⊂ ∂S } = int(S).
+Note that in each deﬁnition, an edge may have its boundary vertices identiﬁed and
+a face may have boundary edges identiﬁed.
+The main result of [Hat] guarantees that any two triangulations in A(S,V ) are
+related by a ﬁnite sequence of elementary moves (see Figure 5).
+/0/0/1/1
+/0/1 /0/0
+/0/0
+/1/1
+/1/1
+/0
+/0
+/1
+/1
+/0
+/0
+/1
+/1
+/0/1
+/0
+/0
+/1
+/1
+/0
+/0
+/1
+/1
+Figure 5. Elementary moves on triangulations.
+Let T be a triangulation of int( S) in the above sense, and let h : int(S) → Z be
+a singular hyperbolic surface for which h is isotopic to a map with the property
+that each cone singularity of Z lies in the image of a vertex of T . Isotope h to
+send each edge of T to its geodesic representative rel-endpoints on Z (if an edge
+e terminates at a puncture, h should send e to a geodesic arc asymptotic to the
+corresponding cusp of Z). Then if N is a hyperbolic 3-manifold and there is a
+path-isometry g : Z → N that is a local isometry on Z − T , then we call the pair
+(g,Z ) a simplicial hyperbolic surface in N with associated triangulation T .
+Often the construction goes in the other direction: given a triangu lation T of
+int(S) with one vertex v ∈ int(S) and at least one edge e so that e ∪v forms a closed
+loop γ, we can straighten any smooth, proper, incompressible map g′ of int(S) to
+N to a simplicial hyperbolic surface with associated triangulation T . First we
+straighteng′ so it maps γ to its geodesic representative. Then, straightening g′ on
+the edges of T rel-endpoints (possibly ideal endpoints) and then on faces of T , we
+obtain a map g : int(S) → N . The pull-back metric from N determines a singular
+hyperbolic surface Z with a cone singularity at v; since v lies on a closed geodesic
+that is mapped to a closed geodesic in N , the cone angle at v is at least 2 π . The
+result is a simplicial hyperbolic surface ( g,Z ) in N with associated triangulation
+T . In this case we say that ( g,Z ) is adapted to γ.
+Let (f : S → N ) ∈ AH(S). Then we denote by SHk(N ) the marking preserving simplicial hyperbolic surfaces in N with at most k cone-singularities, namely,
+simplicial hyperbolic surfaces ( g,Z ), with ( h : int(S) → Z) ∈ Singk(S), so that
+g ◦h is homotopic to f . If σ is a simplex in C(S) with vertices α 1,...,α p, then we
+say a simplicial hyperbolic surface ( g,Z ) ∈ SH k(N ) realizesσ if g maps each αi
+isometrically to its geodesic representative in N .
+Recall that a manifold ( f : S → N ) ∈ AH(S) has an accidental parabolic if
+there is a non-peripheral element γ ∈ π1(S) so that f∗(γ) is a parabolic element
+of Isom +(H3). Applying Hatcher’s theorem [Hat] allowing one to connect triangulations by elementary moves, Canary proves the following (see [Ca n3, §5, §6];
+compare [Br1, §3] and [Min, §4]):
+20 JEFFREY F. BROCK
+Theorem 4.6 (Canary). Let N ∈ AH(S) have no accidental parabolics, and let
+(g1,Z 1) and (g2,Z 2) lie in SH1(N ) where (g1,Z 1) is adapted to α and (g2,Z 2) is
+adapted toβ . Then there is a continuous family (gt : Zt → N ) ⊂ SH 2(N ),t ∈ [1, 2].
+Using such an interpolation, we now give the proof of Lemma 4.2.
+Proof: (of Lemma 4.2). Given the quasi-Fuchsian manifold Q(X,Y ), let PX and
+PY denote pants decompositions for which X lies in V (PX ) and Y lies in V (PY ).
+Then by a theorem of Bers ([Brs2, Thm. 3], [Mc1, Prop. 6.4]), we have
+ℓQ(X,Y )(α )< 2L
+for each curve α in PX ∪ PY .
+Let ZX and ZY denote simplicial hyperbolic surfaces realizing PX and PY in
+Q(X,Y ) and let TX and TY denote their associated triangulations. Let Z h
+X ∈
+Teich(S) be the hyperbolic surface conformally equivalent to ZX , and let Z h
+Y be
+the hyperbolic surface conformally equivalent to ZY . Finally, let PI and PT be
+pants decompositions so that Z h
+X ∈ V (PI ) and Z h
+Y ∈ V (PT ).
+The next step will be to interpolate simplicial hyperbolic surfaces bet ween ZX
+and ZY and estimate the minimum number of sets V (Pj) the corresponding conformally equivalent hyperbolic representatives in Teich( S) intersect. To show we
+have not sacriﬁced too much distance in the pants graph, we prove the following:
+Lemma 4.7. There is a constant B′> 0 depending only on S so that
+max {dP(PX,P I ),d P(PY,P T )}<B ′.
+Proof: We have
+ℓZX (γ)< 2L
+for each γ ∈ PX . By a lemma of Ahlfors [Ah] we have
+ℓZh
+X
+(β ) ≥ ℓZX (β )
+for each β ∈ S. Thus, we have
+ℓZX (α )< 2L
+for each α ∈ PX ∪PI . Since curves in PX ∪PI are realized with bounded length on
+the simplicial hyperbolic surface ZX ∈ SH k(Q(X,Y )), we may apply [Br1, Lem.
+3.3] to ﬁnd a C′> 0 depending only on L so that
+i(PX,P I )<C ′.
+Arguing similarly for ZY , we have
+i(PY,P T )<C ′.
+Applying the proof of Theorem 3.3, we have a B′> 0 depending only on C′ for
+which
+max{dP(PX,P I ),d P(PY,P T )}<B ′.
+THE WEIL-PETERSSON METRIC AND VOLUMES OF CONVEX CORES 21
+To complete the proof of Lemma 4.2, we seek a continuous family
+(ht : Zt → Q(X,Y )) ⊂ SH k(Q(X,Y ))
+of simplicial hyperbolic surfaces in Q(X,Y ) interpolating between ( hX,Z X ) and
+(hY,Z Y ). We ﬁrst connect ( hX,Z X ) and (hY,Z Y ) to simplicial hyperbolic surfaces
+(h′
+X,Z ′
+X ) and (h′
+Y,Z ′
+Y ) adapted to single curves α ∈ PX andβ ∈ PY by continuous
+families, and then apply the interpolation arguments of Canary.
+This is easily done by collapsing edges of TX that join distinct vertices of TX
+down to a single vertex: if e is such an edge adjacent to a vertex v on α , then
+we may eﬀect such a collapsing by ‘dragging hX along hX (e)’ (see [Can3, §5]).
+Precisely, if v′ is the other vertex in ∂e, we construct a homotopy of ( hX,Z X) to
+a new simplicial hyperbolic surface by pulling the image hX (v′) along the geodesic
+segmenthX (e) to hX (v) and pulling the edges and faces adjacent to v along with
+it while keeping the triangulation straight: the image of each triangle is required
+to lift to the convex hull of its vertices throughout the homotopy.
+It is easy to check that under such a collapsing the cone angles at th e vertices remain at least 2 π , and the number of vertices in T is reduced by 1. We
+successively collapse edges joining v to diﬀerent vertices until we are left with a triangulation with the single vertex v, and a simplicial hyperbolic surface ( h′
+X,Z ′
+X ) ∈
+SH1(Q(X,Y )) adapted to α .
+We perform analogous collapsings on the associated triangulation fo r (hY,Z Y )
+to obtain the simplicial hyperbolic surface ( h′
+Y,Z ′
+Y ) ∈ SH 1(Q(X,Y )) adapted to
+β . By Theorem 4.6, we may interpolate between ( h′
+X,Z ′
+X ) and (h′
+Y,Z ′
+Y ) by a continuous family of simplicial hyperbolic surfaces, so we have the desire d continuous
+family
+(ht : Zt → C(X,Y )) ⊂ SH k(Q(X,Y )), t ∈ [0, 1]
+so that (h0,Z 0) = (hX,Z X ) and (h1,Z 1) = (hY,Z Y ).
+The singular hyperbolic structures Zt determine a continuous path
+(hh
+t : int(S) → Z h
+t ) ⊂ Teich(S),
+where as beforeZ h
+t is the ﬁnite-area hyperbolic structure on S in the same conformal
+class as Zt. Since Zt and Z h
+t represent metrics on the same underlying surface
+int(S), we have a natural continuous family of 1-Lipschitz mappings
+ˆht : Z h
+t → C(X,Y )
+of hyperbolic surfaces Z h
+t ∈ Teich(S) into Q(X,Y ) so that for each t, ˆht factors
+through the simplicial hyperbolic surface ht : Zt → C(X,Y ).
+There are pants decompositions P1,...,P N (possibly with repetition) that determine an open cover {Uj}N
+j=0 of [0, 1] so that if t ∈ Uj then Z h
+t lies in V (Pj ),
+and so that Uj ∩ Uj+1 ̸= ∅ for each j = 0,...,N − 1. Applying Lemma 3.3, the
+sequence of pants decompositions
+g = {PI =P0,...,P N =PT }
+satisﬁes the hypotheses of Lemma 4.3 with k =B. Applying Lemma 4.3, we have
+a K0 so that
+dP(PI,P T ) ≤ K0|Sg|.
+Since the non-empty set Sg is a subset of S<L, and Lemma 4.7 guarantees
+dP(PI,P T ) ≥ dP(PX,P Y ) − 2B′,
+22 JEFFREY F. BROCK
+we may combine constants to obtain a K for which
+dP(PX,P Y ) ≤ K|S<L|
+proving the lemma.
+Given a hyperbolic 3-manifold M , we let G<L(M ) denote the set of homotopy
+classes of closed geodesics in M with length bounded above by a constant L >0.
+We use the contraction G<L = G<L(M ) when the manifold M is understood. The
+next lemma shows that the size |G<L|of G<L provides a lower bound for the convex
+core volume of a hyperbolic 3-manifold in a general context.
+Lemma 4.8. LetM be a geometrically ﬁnite hyperbolic 3-manifold with ∂M incompressible, and let vol(M ) denote its convex core volume. Then there is a constant
+C1> 1 depending only on L and C2> 0 depending only on χ (∂M ) for which
+|G<L|
+C1
+− C2 < vol(M ).
+Proof: Letǫ> 0 be less than the minimum of L/ 2 and the 3-dimensional Margulis
+constant. Let V be any maximal set of points in the ǫ-thick part core(M )≥ ǫ of the
+convex core core(M ) for which points in V are separated by a distance at least ǫ/ 2.
+LettingB(x,R ) denote the ball of radius R about x inM , it follows that B(x,ǫ/ 4)
+is embedded in the ǫ-neighborhood Nǫ(core(M )≥ ǫ) of the ǫ-thick part of M , and
+B(x,ǫ/ 4) ∩ B(x′,ǫ/ 4) = ∅
+for x ̸=x′ in V. By maximality, however, we have
+core(M )≥ ǫ ⊂
+⋃
+x∈V
+B(x,ǫ/ 2).
+Each isotopy class β ∈ G<L has a representative β⋆ ⊂ core(M )≥ ǫ with arclength
+less than L. Since the ǫ/ 2-balls about points in V cover core(M )≥ ǫ, each β⋆ intersects B(x,ǫ/ 2) for some x ∈ V . Given x ∈ V , let Ax ⊂ G<L denote the set
+Ax = {β ∈ G<L |β⋆ ∩ B(x,ǫ/ 2) ̸= ∅}.
+Lifting to the universal cover so that x lifts to the origin 0 ∈ H3, the elements
+β ∈ A x determine pairwise disjoint translates of the ball B(0,ǫ/ 2) ⊂ H3 lying
+within the ball B(0,L + 2ǫ) ∈ H3. It follows that the number of elements in each
+Ax satisﬁes
+|Ax|< vol(B(0,L + 2ǫ))
+vol(B(0,ǫ/ 2))
+which we set equal to C0.
+Since every β ∈ G<L lies in some Ax, we have
+|G<L|
+C0
+≤ |V|.
+Since the balls of radius ǫ/ 4 about points x ∈ V are embedded and pairwise disjoint
+in Nǫ(core(M )≥ ǫ), we have the lower bound
+|G<L|
+C0
+·vol(B(0,ǫ/ 4)) ≤ volǫ(M )
+THE WEIL-PETERSSON METRIC AND VOLUMES OF CONVEX CORES 23
+where volǫ(M ) = vol( Nǫ(core(M ))). There is a constant Kǫ> 0 depending only on
+ǫ and M so that
+volǫ(M ) − vol(M )<K ǫ
+(see e.g. [Can2, Lem. 8.2], [Th1, 8.12.1]). The lemma follows by setting C1 =
+C0/ vol(B(0,ǫ/ 4)) and C2 =Kǫ.
+Proof: (of Theorem 4.1) . Since S<L is a subset of G<L(Q(X,Y )), we may combine
+Lemma 4.2 with Lemma 4.8 to obtain
+(4.5) dP(PX,P Y )
+K ·C1
+− C2 ≤ vol(X,Y ).
+Applying Theorem 3.2 we have
+(4.6) dWP(X,Y )
+A1 ·K ·C1
+− A2
+K ·C1
+− C2 ≤ vol(X,Y ).
+Letting
+K1 =A1 ·K ·C1 and K2 = A2
+K ·C1
++C2
+the theorem follows.
+5. Bounding the core volume from above
+Our goal in this section will be to prove the following theorem.
+Theorem 5.1. Given S, there are constants K3 and K4 so that if Q(X,Y ) ∈
+QF (S) is a quasi-Fuchsian manifold and PX and PY are pants decompositions for
+which X ∈ V (PX ) and Y ∈ V (PY ) then we have
+vol(X,Y ) ≤ K3dP(PX,P Y ) +K4.
+Given Theorem 4.1 and Theorem 3.2, Theorem 5.1 represents the ﬁna l step in
+the proof of Theorem 1.2.
+Let G ⊂ P(S) be a shortest path joining PX and PY so that the length of G is
+simply dP(PX,P Y ). Let
+spin(G) = {α ∗ |α ∈ P, P ∈ G}
+denote the geodesic representatives in Q(X,Y ) of elements of the pants decompositions along G. We call these geodesics the spinning geodesics forG; they will serve
+to anchor various tetrahedra in Q(X,Y ) at their vertices; we will then “spin” these
+tetrahedra by pulling their vertices around the geodesics.
+Our upper bound for vol( X,Y ) will come from a model manifold N = S × I
+comprised of blocks that are adapted to spin( G), together with a piecewise C1
+surjective homotopy equivalence f : N → N ǫ(C(X,Y )) so that the image of each
+block under f has uniformly bounded volume. The model will decompose into two
+parts.
+24 JEFFREY F. BROCK
+(1) The Caps: At each end of N are caps, namely products S × I on which f
+restricts to homotopies of simplicial hyperbolic surfaces
+hX :ZX → C(X,Y ) and hY : ZY → C(X,Y )
+realizing PX and PY to the boundary components Xǫ
+h and Yǫ
+h of the ǫneighborhood Nǫ(C(X,Y )) of the convex core.
+(2) The T riangulated Part: The caps sit at either end of the triangulated
+part N∆, a union of tetrahedra on which f is simplicial: f lifts to a map
+sending each simplex to the convex hull of its vertices. It follows tha t
+the image of each tetrahedron ∆ ∈ N∆ under f has uniformly bounded
+volume. We use the geodesics α ∗ , where α ∈ P ∈ G, as a scaﬀolding to
+build N∆, a glueing of tetrahedra whose image interpolates between the
+simplicial hyperbolic surfaces ZX and ZY . After “spinning” f suﬃciently
+far about the spinning geodesics, all but a constant times dP(PX,P Y ) of
+the tetrahedra in N∆ have images with small volume.
+These two arguments give the desired bound after collecting const ants.
+Remark: The above spinning trick is inspired by the ideal simplicial maps of
+[Th2] which are in eﬀect a limit of the spinning process we perform here . The
+result in our context of passing to such a limit is an ideal triangulation of all but
+a bounded volume portion of C(X,Y ), with a uniformly bounded number of ideal
+tetrahedra necessary to accomplish each individual elementary mo ve (the small
+volume tetrahedra collapse to lower dimensional ideal edges and fac es). We have
+chosen to work with ﬁnite triangulations in the interest of demonstr ating how the
+combinatorics of P(S) may be used to produce triangulations of 3-manifolds an
+semi-algorithmic manner, independent of any geometric structure .
+5.1. T riangulations of surfaces. We specify a type of triangulation of S that is
+suited to a pants decomposition P . By a pair of pants we will mean a connected
+component ˆS of S − N (P ), the complement of the union of pairwise disjoint open
+annular neighborhoods N (P ) of the curves in P on S.
+Deﬁnition 5.2. A standard triangulation T ( ˆS) for a pair of pants ˆS is a triangulation with the following properties:
+(1) T ( ˆS) has two vertices on each boundary component.
+(2) T ( ˆS) has two disjoint spanning triangles with no vertices in common, and
+a vertex on each component of ∂ ˆS.
+(3) The remaining 3 quadrilaterals are diagonally subdivided b y an arc that
+travels “left to right” with respect to the inward pointing n ormal to ∂ ˆS (see
+Figure 6).
+We construct a standard triangulation suited to a pants decompos itionP ∈ P(S)
+by gluing together standard triangulations on pairs of pants ˆS as follows.
+Deﬁnition 5.3. Given a pants decomposition P ∈ P(S), a standard triangulation
+suited to P is a triangulation T of S obtained as follows (see Figure 6):
+(1) T has two vertices pα and ¯pα on each component α of P , and two edges eα
+and ¯eα in the complement α − pα ∪ ¯pα .
+THE WEIL-PETERSSON METRIC AND VOLUMES OF CONVEX CORES 25
+/0
+/0
+/1
+/1
+/0/0/1/1/0
+/0
+/1
+/1
+/0 /1
+/0
+/0
+/1
+/1
+/0/0
+/0/0
+/1/1
+/1/1
+/0
+/0
+/1
+/1
+/0/0
+/0/0
+/1/1
+/1/1
+/0/0/1/1
+/0 /1
+Figure 6. Standard triangulations suited to a pants decompo sition.
+(2) If S0 is a complementary open pair of pants in S − P , then the restriction
+of T to S0 is the restriction to S0 of a standard triangulation of S0 ∪ ∂S 0
+(in the sense of Deﬁnition 5.2).
+(3) If two boundary components α 1 and α 2 of S0 are identiﬁed in S, then the
+edge of each spanning triangle that runs from α 1 to α 2 forms a closed loop.
+Moves on triangulations. Given an elementary move on pants decompositions
+(P,P ′), i.e. dP(P,P ′) = 1, we now describe simple moves on triangulations that
+allow us to move from a standard triangulation suited to P to a standard triangulation suited to P ′. To distinguish moves on triangulations from moves on pants
+decompositions, we refer to the latter as pants moves .
+To ﬁx notation, given a pants move ( P,P ′) let α ∈ P and β ∈ P ′ be the
+curves for which i(α,β ) ̸= 0. We call α and β the curves involved in the pants
+move (P,P ′). Let N (P − α ) denote the union of pairwise disjoint open annular
+neighborhoods about the curves in P − α , and let Sα denote the essential subsurface
+of S − N (P − α ) containing α . If Sα has genus 1 then ( P,P ′) is called a genus 1
+pants move. Likewise, Sα has genus 0 then ( P,P ′) is called a genus 0 pants move.
+We say the pants move ( P,P ′) occurs on Sα .
+A standard triangulation T suited to P naturally identiﬁes candidate elementary
+moves for each α ∈ P : there is a natural choice of isotopy class of simple closed
+curves β ⊂ Sα for which i(α,β ) = 1 or i(α,β ) = 2 depending on whether Sα has
+genus 1 or genus 0. If Sα has genus 1, then each spanning triangle for T in Sα has
+one edge with its endpoints identiﬁed. These edges are in the same iso topy class
+which we call β (α,T ). Likewise, if Sα has genus 0, then removing the edges of T
+that do not have endpoints lying on α produces two hexagons in the complement
+of the remaining edges. Concatenating edges in these hexagons jo ining the two
+vertices in each that lie on α we obtain an isotopy class of simple closed curves,
+which we again call β (α,T ).
+For each α ∈ P , the pants decomposition P ′ = ( P − α ) ∪ β (α,T ) satisﬁes
+dP(P,P ′) = 1.
+There are three basic types of moves on these triangulations:
+MVI. The Dehn twist move. One standard move on triangulations we will use
+eﬀects a Dehn twist of a standard triangulation suited to P about a curve α ∈ P .
+Given a triangulation T suited to P , let TWα (T ) denote the standard triangulation
+suited to P obtained by shifting each edge with a vertex on α to the right along
+26 JEFFREY F. BROCK
+α until it hits the next vertex. Then TWα (T ) is isotopic to the image of T under
+a right-α Dehn twist. We deﬁne TW − 1
+α (T ) similarly, by shifting edges to the left
+rather than to the right.
+Note that for any triangulation T suited to P and any α ∈ P we have
+β (α,TW α (T )) = τα (β (α,T ))
+where τα is a right α -Dehn twist.
+The other elementary moves on triangulations will be speciﬁc to a give n type of
+pants move. Given a triangulation T suited to P and α ∈ P , we describe blowdown and blow-up moves that allow us to pass from a triangulation suit ed to P to
+a triangulation suited to the pants decomposition ( P − α ) ∪ β (α,T ).
+/0/0
+/0/0
+/1/1
+/1/1
+/0/0 /1/1
+/0 /1
+/0
+/0
+/1
+/1 /0
+/0
+/1
+/1
+/0/0 /1/1 /0
+/0
+/1
+/1
+/0 /1/0/0 /1/1/0
+/0
+/1
+/1
+/0
+/0
+/1
+/1Figure 7. The genus 1 blow-down and blow-up moves.
+MVII. Genus 1 moves. Given a standard triangulation T suited to P the edges
+of T that close to form loops in the isotopy class of β (α,T ) bound an annulus on
+S. We call this annulus Aα the α compressing annulus for T . The genus 1 α -blow
+down BD 1
+α (T ) of T is the triangulation of S obtained by collapsing the arc e of
+α ∩ Aα to a point and collapsing the two triangles in T containing e to a single
+edge.
+Let β = β (α,T ). Then given T ′ =BD 1
+α (T ) the genus 1 β -blow-up BU 1
+β (T ′) of
+T ′, is obtained by grafting a compressing annulus Aβ in along the curve α to obtain
+a standard triangulation suited to ( P − α ) ∪ β as in Figure 7.
+MVIII. Genus 0 moves. Let T be a standard triangulation suited to P . Let eα
+and ¯eα denote the two edges of T that constitute the curve α . Call these curves the
+α -edges of T . As described above there are two hexagons H and ¯H obtained by
+removing all edges of T that do not have endpoints on α . The genus 0 α -blow-down
+BD 0
+α (T ) = T ′ (Figure 9) is obtained by performing 3 “diagonal switches” on each
+hexagon (Figure 8) to yield a new triangulation with edges eβ and ¯eβ as edges
+whose concatenation gives the curve β =β (α,T ).
+Likewise, the genus 0 β -blow-upBU 1
+β (T ′) is obtained by modifying the hexagons
+containing the α -edges by the inverses of the 3-diagonal switches. Note that BU 0
+β ◦
+BD 0
+α (T ) is a standard triangulation suited to the pants decomposition ( P − α ) ∪β .
+THE WEIL-PETERSSON METRIC AND VOLUMES OF CONVEX CORES 27
+/0/0
+/0/0
+/1/1
+/1/1
+/0
+/0
+/1
+/1/0/0
+/0/0
+/1/1
+/1/1
+/0
+/0
+/1
+/1
+/0/0/1/1
+/0/0
+/0/0
+/1/1
+/1/1
+/0
+/0
+/1
+/1
+/0
+/0
+/1
+/1
+/0
+/0
+/1
+/1/0/0
+/0/0
+/1/1
+/1/1
+/0
+/0
+/1
+/1
+/0/0
+/0/0
+/1/1
+/1/1
+/0
+/0
+/1
+/1
+/0
+/0
+/1
+/1
+/0
+/0
+/1
+/1/0/0/1/1 /0
+/0
+/1
+/1
+/0
+/0
+/1
+/1
+Figure 8. Diagonal switches on hexagons.
+/0
+/0
+/1
+/1
+/0/0
+/0/0
+/1/1
+/1/1
+/0 /1
+/0/0
+/0/0
+/1/1
+/1/1
+/0
+/0
+/1
+/1
+/0 /1
+/0/0
+/0/0
+/1/1
+/1/1
+/0/0 /1/1
+/0/0 /1/1
+/0/0 /1/1
+/0 /1
+/0/0 /1/1
+/0/0
+/0/0
+/1/1
+/1/1
+/0/0 /1/1 /0 /1
+/0/0 /1/1
+/0 /1
+/0/0 /1/1
+/0 /1
+/0 /1
+/0/0
+/0/0
+/1/1
+/1/1
+/0 /1
+/0/0
+/0/0
+/1/1
+/1/1
+/0 /1
+/0
+/0
+/1
+/1
+/0/0
+/0/0
+/1/1
+/1/1
+/0/0 /1/1
+/0 /1 /0/0 /1/1
+/0/0
+/0/0
+/1/1
+/1/1
+Figure 9. The genus 0 blow-down and blow-up moves.
+We summarize properties of these moves as a lemma.
+Lemma 5.4. Let (P,P ′) be a pants move involving α ∈ P and α ′ ∈ P ′. Let T be
+a standard triangulation suited to P . Then there is an n ∈ Z so that
+BUα ′ ◦BDα ◦TW n
+α (T )
+is a standard triangulation suited to P ′.
+5.2. Realizing moves by blocks. As before let Q(X,Y ) be a quasi-Fuchsian
+manifold, and let PX and PY be pants decompositions for which X ∈ V (PX ) and
+Y ∈ V (PY ). Let G ⊂ P(S) be a geodesic joining PX and PY . Recall we denote by
+spin(G) = {α ∗ |α ∈ P, P ∈ G} the spinning geodesics associated to G.
+Equip each spinning geodesic α ∗ with a pair of antipodal vertices pα and ¯pα : i.e.
+points on α ∗ so that the distance from pα to ¯pα alongα ∗ is maximal. For reference,
+we equip each α and thence each α ∗ with an orientation.
+Let Pi, i = 0,...,m , denote the pants decompositions along the geodesic G, so
+thatP0 =PX andPm =PY . Making an initial choice of standard triangulation TX
+suited to PX , Lemma 5.4 provides a sequence of moves on triangulations allowing
+us to process from the triangulation TX to a standard triangulation TY suited to
+Y via standard triangulations Ti suited to Pi. We begin with a model manifold
+N0 ∼
+=S × I
+and triangulate ∂ +N0 = S × { 0} by TX . Our aim is to build models Ni ∼
+= S × I
+by gluing triangulated I-bundles to ∂ +Ni− 1 so that the resulting triangulation on
+28 JEFFREY F. BROCK
+∂ +Ni =Ti. We do this by building a triangulated subsurface block correspondin g
+to each elementary move and successively gluing the blocks to ∂ +Ni− 1.
+Deﬁnition 5.5. Given a curve α in a pants decomposition P , we deﬁne the subsurface block by the quotient
+Bα =Sα × [0, 1]/ (x,t ) ∼ (x, 0) for x ∈ ∂Sα, t ∈ [0, 1].
+We denote the upper and lower boundary of Bα by
+∂ +Bα =S × { 0} and ∂ −Bα =S × { 1}.
+We now describe block triangulations associated to each elementary move on
+triangulations. We will say a triangulation T of a subsurface block Bα realizes an
+elementary move T → M (T ) if we have
+T ∩ ∂ −Bα =T and T ∩ ∂ +Bα = M(T ).
+Block triangulations. LetT be a standard triangulation on Sα suited toα . Then
+the standard block triangulation Tα is obtained from
+T × [0, 1]/ ∼
+in the following way. Initially, T × [0, 1]/ ∼ is a cell decomposition of Bα . For
+any edge e of T with ∂e ∩ ∂Sα = ∅, e × [0, 1] is a quadrilateral to which we add a
+diagonal depending on the genus of Sα .
+• When Sα has genus 0, the α -edges eα and ¯eα determine quadrilaterals
+eα × [0, 1] and ¯eα × [0, 1] in T . We triangulate these quadrilaterals with two
+new edges that run in the same direction along the annulus
+eα × [0, 1] ∪ ¯eα × [0, 1]
+and cone oﬀ the new edges down to the vertices opposite the quadr ilaterals
+(see Figure 10).
+¯eα
+Aα × [0, 1]
+eα
+genus 0 genus 1
+Figure 10. Extending T × [0, 1]/ ∼ to a triangulation.
+• When Sα has genus 1 in addition to the two edges eα and ¯eα that concatenated give α there are 3 other edges e1, e2 and e3 that triangulate
+the α -compressing annulus Aα for which ∂ej ∩ ∂Sα = ∅, j = 1, 2, 3. We
+triangulate the annulus
+eα × [0, 1] ∪ ¯eα × [0, 1]
+as before, and extend this to a triangulation of Aα × [0, 1] with no new
+vertices as in Figure 10.
+THE WEIL-PETERSSON METRIC AND VOLUMES OF CONVEX CORES 29
+From the standard block triangulation, we build four types of blocks :
+BLI. The Dehn twist block. Given Sα , the block triangulation T (TW α ) realizing
+the move TWα is obtained form the standard block triangulation Tα as follows.
+Consider the annulus A =α × [0, 1] in Bα with the triangulation TA on A induced
+by Tα . The reference orientation for α locally determines a left and right side of
+α in Sα , and hence a left and right side of A in Bα . Cut Bα along A to obtain
+two annuli AL and AR that bound the local left and right side of Bα − A. Re-glue
+the α × { 0} boundary components of AL and AR by the identity, and re-glue the
+α × { 1} boundary components of AL and AR shifted by a right Dehn twist.
+The triangulations induced by TA on AL and AR determine a triangulation
+of the torus AL ∪ AR after re-gluing. This triangulation naturally extends to a
+triangulation of a solid torus V with boundary AL ∪ AR by ﬁlling in tetrahedra
+(the triangulations on AL and AR diﬀer by two pairs of diagonal switches. See
+Figure 11). After ﬁlling in by V , the result is a standard block Bα with triangulation
+T tw+
+α realizing the move TWα . We call the standard block Bα equipped with the
+triangulation T tw+
+α the right Dehn twist block Btw+
+α . The left Dehn twist block
+TA tw(TA)
+V
+Figure 11. Triangulating the Dehn twist block.
+The dotted edges indicate diagonal switches for TA and tw(TA) that produce a common
+triangulation of the annulus, which results in the pictured triangulation of a solid torus V .
+Btw−
+α is obtained analogously, by re-gluing with a left Dehn twist instead of a right
+Dehn twist. The left Dehn twist block Btw−
+α carries the triangulation T tw−
+α and
+realizes the move TW − 1
+α .
+Blocks realizing the other moves are triangulated as follows.
+BLII. Blow-up and blow-down blocks. We modify the standard block triangulation
+to obtain triangulated blocks that realize blow-up and blow-down mov es as follows.
+To realize a genus 1 α -blow-down by a block triangulation, we modify the standard
+block triangulation Tα on Bα by collapsing the compression annulus on ∂ +Bα as
+in the description of the move BD 1
+α. The only diﬀerence is that here in addition to
+collapsing triangles to edges we also collapse tetrahedra to triangles .
+30 JEFFREY F. BROCK
+Similarly, if β = β (α,T ), we obtain a block triangulation realizing the genus 1
+β -blow-upBU 1
+β by collapsing the β compression annulus on ∂ −Bβ .
+The genus 0 α -blow-down (and blow-up) moves come from diagonal switches on
+hexagons. We realize the move BD 0
+α by gluing tetrahedra realizing each of the
+diagonal switches to ∂ +Bα . Likewise, the block triangulation realizing the genus 0
+β -blow-up can be obtained by gluing tetrahedra in this way to the β -hexagons on
+∂ −Bα .
+We denote the α -blow-up block by Bbu
+α and the α -blow-down block by Bbd
+α .
+BLIII. Straightening blocks. There are two other types of block triangulations we
+will need that realize the identity move on a blown-down triangulation. We call
+these triangulated blocks straightening blocks. Given the triangulation BD 1
+α (T ) or
+BD 0
+α (T ) for a standard triangulation T suited to a pants decomposition P containing α , the genus g straightening triangulation, g = 0, 1 is obtained by completing
+the cell decomposition
+(BDg
+α (T ) ∩ Sα ) × [0, 1]/ ∼
+of Bα , and extending this decomposition to a triangulation of Bα with no new
+vertices. It is easy to check that this can be done. We denote the s traightening
+blocks by Bst
+α,β where β =β (α,T ).
+5.3. Mapping in blocks and building the model. We now use our block triangulations to build a model manifold N ∼
+= S × I. We build N in stages corresponding to standard triangulations Tj suited to pants decompositions Pj that
+intervene between PX and PY respectively. At each stage there is a model Nj also
+homeomorphic to S × I so that the top boundary component ∂ +Nj = S × { 1} is
+triangulated by the jth triangulation Tj in the sequence of triangulations. Each
+Nj will be obtained from Nj− 1 by attaching a triangulated block to ∂ +Nj− 1 that
+realizes the elementary move needed to move from Tj− 1 to Tj.
+The model N will come equipped with a map f : N → C(X,Y ) that is simplicial
+on each block:
+Deﬁnition 5.6. An incompressible mapping f : N → M from a triangulated 3manifold to a hyperbolic 3-manifold is simplicial if the lift ˜f : ˜N → H3 sends each
+k-simplex to the convex hull of its vertices.
+The following theorem describes the properties of our model and its mapping to
+the quasi-Fuchsian manifoldQ(X,Y ). For simplicity we assume for the remainder of
+this section that S is closed, and detail the necessary modiﬁcations to the argument
+at the end.
+Theorem 5.7. Given Q(X,Y ), there is a model manifold N ∼
+= S × I, equipped
+with a surjective homotopy equivalence
+f : N → N ǫ(C(X,Y ))
+to the ǫ-neighborhood of the convex core C(X,Y ) with the following properties:
+(1) N is the union
+N = capX ∪ N∆ ∪ capY
+of the caps capX ∼
+=S × I and capY ∼
+=S × I and the triangulated part N∆,
+a union of blocks of the above type glued top boundary to botto m boundary,
+all but 3dP(PX,P Y ) of which are Dehn twist blocks.
+(2) The map f is piecewise C1 and is simplicial on N∆.
+THE WEIL-PETERSSON METRIC AND VOLUMES OF CONVEX CORES 31
+(3) For each tetrahedron ∆ inN∆ that lies in a Dehn twist block, f maps some
+edge of ∆ to a spinning geodesic.
+(4) The restriction f |capX is a homotopy from ∂ − Nǫ(C(X,Y )) to a simplicial
+hyperbolic surface realizing PX , and the restriction f |capY is a homotopy
+from a simplicial hyperbolic surface realizing PY to ∂ +Nǫ(C(X,Y )).
+Proof: To motivate the construction of N we build the map f in stages as well.
+Mapping in capX . Let TX and TY be standard triangulations suited to PX and
+PY . Let
+fX : S × [0, 1] → C(X,Y )
+determine a homotopy of the convex core boundary gX : Xh → ∂ −C(X,Y ) to a
+simplicial hyperbolic surface hX :ZX → C(X,Y ) with associated triangulation TX
+so that if v and ¯v are the vertices of TX on α ∈ PX , fX (v) = pα and fX (¯v) = ¯pα .
+Notice that this implies that hX realizes each curve α ∈ PX . Let N0 =S × [0, 1],
+denote the domain for fX; we will refer to N0 = capX as the X-cap of N . The top
+boundary component ∂ +N0 carries the triangulation TX .
+Working inductively, we assume given a model Nj at the jth stage: i.e.
+(1) the model Nj ∼
+= S × I, consists of the X-cap and a triangulated part so
+that the upper boundary ∂ +Nj is triangulated by a standard triangulation
+Tj suited to Pj,
+(2) Nj comes equipped with a map fj : Nj → C(X,Y ) that is simplicial on the
+triangulated part of Nj,
+(3) fj|∂ +Nj factors through a simplicial hyperbolic surface hj : Zj → C(X,Y )
+with associated triangulation Tj so that hj sends vertices vγ and ¯vγ on
+γ ∈ Pj to pγ and ¯pγ on γ ∗.
+Let α ∈ Pj and α ′ ∈ Pj+1 be the curves involved in the genus g elementary move
+(Pj,P j+1), and let n be the integer guaranteed by Lemma 5.4 for which
+BUg
+α ′ ◦BDg
+α ◦TW n
+α (Tj) = Tj+1
+is a standard triangulation suited to Pj+1.
+We now specify how to add triangulated blocks to Nj and extend fj simplicially
+over each additional block to obtain the next stage of the model Nj+1.
+Mapping in Dehn twist blocks. Ifn is positive, we attach n right Dehn twist blocks
+to the model and extend fj over them in sequence, while if n is negative we do
+likewise with left Dehn twist blocks.
+We assume n is positive; the negative case is identical with left Dehn twist
+blocks replacing right Dehn twist blocks. We attach a right Dehn twist blockBtw+
+α
+to∂ +Nj so that the triangulation on ∂ −Btw+
+α agrees with Tj ∩ Sα to obtain a new
+modelNj, 1. We extend fj overBtw+
+α to obtain a map fj, 1 as follows. Recalling that
+Btw+
+α has the form Sα × [0, 1]/ ∼ , we set fj(x,t ) = fj(x, 0). We then straighten fj
+onα × { 1} to its geodesic representative so that the vertices v and ¯v onα × { 1} to
+pα and ¯pα , and ﬁnally we straighten fj, 1 by a homotopy to make it simplicial on
+Btw+
+α . We note that every tetrahedron in the Dehn twist block has an edg e that
+maps to a geodesic arc of α ∗ , verifying part (3).
+The map fj, 1 factors through a simplicial hyperbolic surface still realizing Pj
+with associated triangulation TWα (Tj) which we denote by Tj, 1. Repeating this
+32 JEFFREY F. BROCK
+procedure to add n Dehn twist blocks we arrive at a model Nj,n equipped with a
+map fj,n : Nj,n → C(X,Y ) so that
+(1) ∂ +Nj,n carries the triangulation
+Tj,n =TW n
+α (Tj),
+(2) fj,n factors through a simplicial hyperbolic surface realizing Pj with associated triangulation Tj,n , and
+(3) the vertices of Tj,n map to pγ and ¯pγ on γ ∗ for each γ ∈ Pj.
+Mapping in blow-down blocks. Our discussion of how to attach a blow-down block
+to Nj,n and how to extend fj,n over this block breaks into cases as usual.
+Genus 0. The genus 0 blow-down block Bbd
+α is attached to ∂ +Nj,n alongSα so that
+the triangulations agree as before. This gives a new model Nj, bd. We extend fj,n
+overBbd
+α to give a map fj, bd : Nj, bd → C(X,Y ) by ﬁrst mapping Bbd
+α to ∂ +Nj,n ,
+as with the Dehn twist block, and then straightening fj, bd to a simplicial map.
+Genus 1. In the genus 1 case is the same, except that as there is only one ver texv
+onα in∂ +Bbd
+α , we simply send v to pα and straighten fj, bd to a simplicial map as
+before.
+In each case the resulting map fj, bd|∂ +Nj, bd factors through a simplicial hyperbolic surface that realizes Pj and has associated triangulation BD 0
+α (Tj,n ) which we
+denote by Tj, bd.
+Mapping in straightening blocks. Straightening blocks allow us to pass from simplicial hyperbolic surfaces realizing Pj to simplicial hyperbolic surfaces realizing
+Pj+1. We attach the straightening block Bst
+α,α ′ to Nj, bd to obtain a model Nj, st.
+We extend fj, bd over Bst
+α,α ′ to a map fj, st by deﬁning fj, st(x,t ) = fj, st(x, 0), and
+then straightening fj, st on α ′ × { 1} ⊂ ∂ +Bst
+α,α ′. We send the α ′ vertex to pα ′ or
+vertices to pα ′ and ¯pα ′ and straighten the map to a simplicial map on Bst
+α,α ′. Now
+fj, st|∂ +Nj, st
+factors through a simplicial hyperbolic surface realizing Pj+1 with associated triangulation Tj, bd once again.
+Mapping in blow-up blocks. This procedure is essentially the inverse of the attaching
+and mapping in the blow-down blocks.
+Genus 0. Attach Bbu
+α ′ to ∂ +Nj, st along Sα ′ (which equals Sα ), and extend fj, st
+to fj, bu over Bbu
+α ′ by setting fj, bu(x,t ) = fj, bu(x, 0) and then straightening fj, bu
+rel-α ′ × { 1} to a simplicial map.
+Genus 1. Set fj, bu(x,t ) = fj, bu(x, 0) and then homotope fj, bu so that it still sends
+α ′ ⊂ ∂ +Bbu
+α ′ to its geodesic representative but also sends the α ′ verticesvα ′ and ¯vα ′
+to pα ′ and ¯pα ′.
+The map fj, bu|∂ +Nj, bu factors through a simplicial hyperbolic surface realizing
+P ′ with associated triangulation
+Tj+1 =BUα ′ ◦BDα ◦TW n
+α (Tj)
+which is a standard triangulation suited to Pj+1. This completes the inductive step.
+THE WEIL-PETERSSON METRIC AND VOLUMES OF CONVEX CORES 33
+Mapping in capY . Let |G|=dP(PX,P Y ) denote the length of a geodesic G ⊂ P(S).
+Then the above inductive procedure results ﬁnally in a map
+f|G|:N|G| → C(X,Y )
+so that the restriction f|G|, 0|∂ +N|G| factors through a simplicial hyperbolic surface
+realizing PY with associated triangulation TY (a standard triangulation suited to
+PY ), and so that the vertices vγ and ¯vγ map to the vertices pγ and ¯pγ on the closed
+geodesic γ ∗ for each γ ∈ PY . We complete our model N by adding a Y -cap: this is
+a homotopy
+fY :S × I → C(X,Y )
+from f|G||∂ +N|G| to the convex core boundary gY : Yh → ∂ +C(X,Y ). Gluing this
+homotopy S × I, to ∂ +N|G| and extending f|G| over the Y -cap by fY , we obtain
+the ﬁnal piece of our model N and the resulting map
+f : N → C(X,Y ),
+a homotopy equivalence whose restrictions
+f |∂ +N → ∂ +C(X,Y ) and f |∂ − N → ∂ −C(X,Y )
+are homeomorphisms.
+Though the boundary ∂C (X,Y ) is not generically smooth, by taking the boundary ∂Nǫ(C(X,Y )) of the ǫ-neighborhood of the convex core we obtain a pair of
+C1 surfaces ∂ +Nǫ(C(X,Y )) and ∂ − Nǫ(C(X,Y )) with C1 path metrics [EM, Lem.
+1.3.6]. In the interest of computing volume, we perturb f to a piecewise smooth
+map
+fǫ : N → N ǫ(C(X,Y ))
+by adjusting f by a homotopy that changes f only on cap X and capY , so that
+fǫ|∂ +N : ∂ +N → ∂ +Nǫ(C(X,Y )) and fǫ|∂ − N :∂ −N → ∂ − Nǫ(C(X,Y ))
+are homeomorphisms, and fǫ is C1 on the interiors of the caps of N . The map f
+is already simplicial on the triangulated part of N so fǫ is piecewise C1. A degree
+argument shows fǫ is surjectve, proving the theorem.
+5.4. Bounding the volume. Given a piecewise diﬀerentiable 3-chain C in a hyperbolic 3-manifold M , the function deg C : M → Z which measures the degree of
+C in M is well deﬁned at almost every point of M . We deﬁne the mass mass(C)
+of C to be the integral
+mass(C) =
+∫
+M
+|degC |dV
+where dV is the hyperbolic volume form on M (cf. [Th2, §4]).
+Moreover, if F : P → M is a map of a piecewise diﬀerentiable 3-manifold P to
+M , and C is a piecewise diﬀerentiable 3-chain in P , then we deﬁne the F -mass of
+C by the integral
+massF (C) =
+∫
+M
+|degF (C) |dV.
+The F -mass of C bounds the volume vol( F (C)) of the image of C in M . Hence,
+given our piecewise diﬀerentiable surjective map
+fǫ : N → N ǫ(C(X,Y ))
+34 JEFFREY F. BROCK
+the volume vol( Nǫ(C(X,Y )), which bounds vol( X,Y ), is bounded by the sums of
+thefǫ-masses of the chains that make up N . In other words, if N decomposes into
+3-chainsCk, we have
+vol(X,Y ) ≤
+∑
+Ck⊂ N
+massf ǫ (Ck) =: massf ǫ (N ).
+Thus, Theorem 5.1 will follow from the following proposition.
+Proposition 5.8. Given S there are constants K3 > 1 and K4 > 0 so that the
+map fǫ is properly homotopic to a map fǫ
+θ : N → N ǫ(C(X,Y )) for which
+massf ǫ
+θ (N ) ≤ K3dP(PX,P Y ) +K4.
+Let V3 denote the maximal volume of a tetrahedron in hyperbolic 3-space ( see
+[Th1, ch. 7], [BP]). We begin our approach to Proposition 5.8 with the fo llowing
+lemma.
+Lemma 5.9. There is a constant K∆ so that the map fǫ is properly homotopic to
+a map fǫ
+θ that also satisﬁes the conclusions of Theorem 5.7 so that
+massf ǫ
+θ (N∆)<K ∆ · V3 ·dP(PX,P Y ) + 1.
+Proof: Because of the possibility of a large number of Dehn twist blocks in N∆,
+there is not in general a uniform constant K for which the number of tetrahedra
+used to triangulate N∆ is less than Kd P(PX,P Y ). We will show, however, that by
+modifying fǫ by a homotopy, we can force the tetrahedra that lie in Dehn twist
+blocks to have mass as small as we like.
+By Theorem 5.7, the number of blocks in N∆ that are not Dehn twist blocks is
+bounded by 3dP(PX,P Y ). Since there is a uniform bound to the number of tetrahedra in any block, there is a constant K∆ so that all but at most K∆dP(PX,P Y )
+tetrahedra of N∆ lie in Dehn twist blocks.
+Let α ∗ ∈ spin(G) be a spinning geodesic. Let fǫ
+θ be deﬁned by the following
+homotopy of fǫ through maps that are simplicial on N∆: for each α ∈ ∪ jPj, slide
+the vertices pα and ¯pα along the geodesic α ∗ a distance
+θ
+2πℓQ(X,Y )(α ∗ )
+in the direction of the reference orientation chosen for α . (See [Th2] for another
+example of this spinning of triangulations). The following lemma shows that tetrahedra that lie in a Dehn twist block, which we will call Dehn twist tetrahedra , can
+be made to have small fǫ
+θ -mass by spinning to suﬃciently high values of θ.
+Lemma 5.10. If ∆ ⊂ N∆ is a Dehn twist tetrahedron, then
+massf ǫ
+θ (∆) → 0 as θ → ∞ .
+Proof: Recall from Theorem 5.7, each Dehn twist tetrahedron ∆ has at leas t one
+edge e for which fǫ(e) ⊂ α ∗ for some spinning geodesic α ∗ .
+THE WEIL-PETERSSON METRIC AND VOLUMES OF CONVEX CORES 35
+Lift fǫ
+θ to ˜fǫ
+θ : ˜N → ˜H3 and choose a lift ˜∆ to ˜N . Let ˜α ∗ denote the lift of α ∗ to
+H3 for which ˜fǫ
+θ sends the lifted edge ˜e ⊂ ˜∆ to ˜α ∗ . Let e′ be the opposite edge of
+∆ (e and e′ have no endpoints in common).
+Let Iθ be the ideal tetrahedron in H3 for which
+(1) ˜fǫ
+θ (˜e′) lies in one edge e′
+∞ of Iθ ,
+(2) the two other edges e1
+∞ and e2
+∞ of Iθ emanating from one endpoint of e′
+∞
+pass through endpoints p1 and p2 of ˜fǫ
+θ (˜e).
+The image ˜fǫ
+θ ( ˜∆) lies in Iθ (see Figure 12).
+˜α ∗
+Iθ
+˜fǫ
+θ ( ˜∆)
+θ
+e′
+∞
+p2p1
+10
+H3
+Figure 12. Spinning tetrahedra in H3.
+Normalize by an isometry of H3 so that the edge e′
+∞ ofIθ has its ideal endpoints
+at 0 and ∞ , and so that the terminal ﬁxed point of ˜α ∗ (with respect to the reference
+orientation for α ) lies at 1 ∈ C.
+Then for any r >0 there exists a θ so that the two ideal vertices of Iθ that do
+not lie at 0 and ∞ lie within a small disk |1 − z|< r. It follows that the dihedral
+angle of Iθ at e′
+∞ tends to 0 as θ → ∞ . But the volume of an ideal tetrahedron
+tends to 0 as any of its dihedral angles tends to 0, so we have
+massf ǫ
+θ (∆)< vol(Iθ ) → 0 as θ → ∞ .
+Continuation of the proof of Lemma 5.9: By Lemma 5.10, for any Dehn twist
+block B, the quantity mass f ǫ
+θ (B) is as small as we like for θ suﬃciently large. If
+Btw denotes the union of all Dehn twist blocks in N∆, then, we may choose θ
+suﬃciently large so that
+massf ǫ
+θ (Btw)< 1.
+Since fǫ
+θ is simplicial on N∆, we have
+massf ǫ
+θ (∆)< V3
+36 JEFFREY F. BROCK
+for any tetrahedron ∆ ⊂ N∆, and since all but at most K∆dP(PX,P Y ) tetrahedra
+inN∆ lie in Btw, we have
+massf ǫ
+θ (N∆)<K ∆ · V3 ·dP(PX,P Y ) + 1.
+Bounding the volume of the caps. The bound on the fǫ
+θ -mass of the triangulated part N∆ in terms of the distance dP(PX,P Y ) will be suﬃcient for Proposition 5.8 once we show the following uniform bound on the fǫ
+θ -mass of the caps of
+N .
+Lemma 5.11. There is a uniform constant Kcap, depending only on S so that after
+modifyingfǫ
+θ by a homotopy on capX we have
+massf ǫ
+θ (capX )<K cap
+and similarly for capY .
+Proof: Our goal will be to modify the homotopy fǫ
+θ |capX from ∂ − Nǫ(C(X,Y ))
+to the simplicial hyperbolic surface ZX by cutting the surface S into annuli and
+controlling the trace of the homotopy on each annulus (a solid torus ). To obtain such
+control, we choose this decomposition compatibly with the pants dec ompositionPX .
+We ﬁx attention on a single pair of pants ˆS ⊂ S − PX . By a ﬁgure-8 curve on ˆS
+we will mean a closed curve that intersects itself once on ˆS and divides ˆS into three
+annuli, one parallel to each boundary component of ˆS (see Figure 13). To prove
+Lemma 5.11 we establish the following basic lemma in hyperbolic surface g eometry.
+(We continue to treat the closed case; the case when S has boundary is similar).
+Lemma 5.12. Let S a closed surface with negative Euler characteristic, and le t
+L′ ≥ L be a constant greater than or equal to the Bers constant L forS. Then there
+is a constant L8(L′)> 0 so that the following holds: if P is a pants decomposition
+of S, Z ∈ Singk(S) is a possibly singular hyperbolic surface, and the length bo und
+ℓZ(α ) < L′ holds for each α ∈ P , then any ﬁgure- 8 curve γ in any component
+ˆS ⊂ S − P satisﬁes
+ℓZ(γ)<L 8(L′).
+Figure 13. A ﬁgure eight curve.
+THE WEIL-PETERSSON METRIC AND VOLUMES OF CONVEX CORES 37
+Proof: Note that any bound on the geodesic length of a given ﬁgure-8 curv e
+γ guarantees a bound on the geodesic length of any other, by taking twice the
+original bound.
+Assume ﬁrst that Z ∈ Teich(S), so Z is a non-singular hyperbolic surface. From
+the thick-thin decomposition for hyperbolic surfaces, given any δ > 0, there is a
+uniform bound Dδ to the diameter diam( Z≥ δ) of the δ-thick part of Z, where Dδ
+depends only on δ and the surface S. Let ∂ ˆS = α 1 ⊔ α 2 ⊔ α 3. Since ℓZ(αi) < L′,
+there is a δ so that α ∗
+i can only intersect Z<δ in a component of Z<δ for which it is
+the core curve. Choosing δ smaller if necessary, we can ensure that the boundary
+of any component of Z<δ is a curve of length less than L′.
+Let ˆZ be the realization of ˆS as a subsurface of Z bounded by the curves ∪α ∗
+i .
+Either two of the α ∗
+i lie entirely in Z≥ δ or two of the αi are homotopic into Z<δ.
+Without loss of generality, assume α ∗
+1 and α ∗
+2 lie in Z≥ δ. Then they can be joined
+by an arc b in ˆZ of length less than Dδ. Either α 1 ·b ·α 2 ·b− 1 or α 1 ·b ·α − 1
+2 ·b− 1
+is a ﬁgure-8 curve of length less than 2 L′ + 2Dδ. Otherwise, if A1 and A2 are
+components of Z<δ representing the homotopy classes of α 1 andα 2, then there are
+componentsa1 of∂A 1 anda2 of∂A 2 with length less than L′, and an arc b joining
+a1 to a2 in ˆZ of length less than Dδ. By the same reasoning, there is a ﬁgure-8
+curveγ of length
+ℓZ(γ)< 2L′ + 2Dδ.
+To treat the potentially singular case, let Z ∈ Singk(S) satisfy ℓZ(αi) < L′ for
+each αi ∈ P . Let Z h ∈ Teich(S) represent the hyperbolic surface in the same
+conformal class as Z. If each αi ∈ P satisﬁes
+ℓZh (αi)<L ′
+then there is a ﬁgure-8 curve γ ⊂ ˆS withℓZh (γ)< 2L′+2Dδ by the above reasoning.
+By Ahlfors’ lemma, [Ah] we have
+ℓZ(γ)<ℓZh(γ)< 2L′ + 2Dδ
+proving the lemma in this case.
+If, however, some αi ⊂ ∂ ˆS satisﬁesℓZh (αi) ≥ L′ ≥ L, then by Theorem 2.1 there
+is a simple closed curve β , with i(αi,β ) ̸= 0, for which ℓZh(β )<L . Again applying
+Ahlfors’ lemma, the curve β has length
+ℓZ(β )<L
+on Z, so its geodesic representative β ∗ furnishes an arc b in ˆS that joins α ∗
+i to
+α ∗
+j , or joins α ∗
+i to itself. In either case, two copies of b together with arcs in the
+geodesics at its endpoints can be assembled to form a ﬁgure-8 curv e β ⊂ ˆS with
+length bounded by
+ℓZ(β )< 2L′ + 2L ≤ 4L′.
+By setting
+L8(L′) = 4L′ + 2Dδ
+the lemma follows.
+38 JEFFREY F. BROCK
+Remark: Though we continue to work in the setting where S is closed, the proof
+of the Lemma for the case when ∂S ̸= ∅ goes through simply.
+Continuation of the proof of Lemma 5.11: Again consider the subsurface ˆS and its
+realization as a subsurface ˆZX ⊂ ZX bounded by geodesics ˆα 1, ˆα 2 and ˆα 3 on ZX.
+Let
+Xǫ
+h =∂ +Nǫ(C(X,Y ))
+denote the boundary component of Nǫ(C(X,Y )) facing X, and let ˆXǫ
+h denote the
+realization of ˆS as a subsurface Xǫ
+h bounded by geodesics ¯α 1, ¯α 2 and ¯α 3 in the path
+metric on Xǫ
+h. Let γ be a ﬁgure-8 curve on ˆS with geodesic representatives ˆγ and
+¯γ on ˆZX and ˆXǫ
+h respectively.
+Let A1, A2 and A3 denote the three annuli in ˆS − γ for which αi ⊂ ∂Ai, where
+i = 1, 2, 3, and let γi ⊂ γ be the loop on γ so that γi ⊂ ∂Ai for i = 1, 2, 3. Let ˆAi
+be the realization of Ai on ˆZX with ∂ ˆAi ⊂ ˆαi ∪ ˆγ, and let ¯Ai be the realization of
+Ai on ˆXǫ
+h with ∂ ¯Ai ⊂ ¯αi ∪ ¯γ.
+By a theorem of D. Sullivan [Sul1] elaborated upon by D. Epstein and A . Marden
+[EM, Thm. 2.3.1] the path metric on the surface Xǫ
+h has bounded distortion from
+the hyperbolic metric on X: the nearest point retraction map (see [EM]) is 4 cosh(ǫ)Lipschitz, in particular. It follows that there is a constant C5 > 4 so that choosing
+ǫ suﬃciently small we have
+ℓX ǫ
+h( ¯αi)<C 5L
+and
+area( ˆXǫ
+h)< area(Xǫ
+h)<C 52π |χ (S)|
+where i = 1, 2, 3. Since ˆZX is triangulated by 8 hyperbolic triangles, we have
+area( ˆAi)< 8π
+for i = 1, 2, 3.
+Returning to the map fǫ
+θ : N → N ǫ(C(X,Y )), we may deﬁne the fǫ
+θ -mass of a
+piecewise diﬀerentiable 2-cycle in N similarly to that of a 3-chain, by integrating
+the absolute value of the degree with respect to two dimensional Le besgue-measure
+on M (cf. [Th2, Prop. 4.1] and the preceding discussion).
+We modify the map fǫ
+θ on capX ∼
+=S × I as follows. By Theorem 5.7, the map
+fǫ
+θ already sends αi × 0 to the geodesic ˆαi for each αi ∈ PX . Straighten fǫ
+θ without
+changing its values on ∂ +capX so that fǫ
+θ sends each αi × { 0} to the geodesic
+¯αi ⊂ Xǫ
+h, and so that fǫ
+θ sends each track x × [0, 1], where x lies in αi to a geodesic.
+The image fǫ
+θ (αi × [0, 1]) is a ruled annulus, and any ruled annulus has area less
+than the sum of the lengths of its boundary components (see e.g. [ Th1, Ch. 9]
+[Bon, §3.2]). Since ℓX ǫ
+h( ¯αi)<C 5L, and since ˆαi is the geodesic representative of αi
+inQ(X,Y ), we have
+massf ǫ
+θ (αi × [0, 1])< 2C5L.
+Applying Lemma 5.12 to X with L′ =L, we have an L8 =L8(L) so that
+ℓX (γ)<L 8.
+It follows that
+ℓX ǫ
+h (γ)<C 5L8.
+Applying Lemma 5.12 to ZX with L′ =C5L, we have a L′
+8 =L8(C5L) for which
+ℓZX (γ)<L ′
+8
+THE WEIL-PETERSSON METRIC AND VOLUMES OF CONVEX CORES 39
+Letting
+K8 = max{L8,L ′
+8},
+we may straighten fǫ
+θ to send γ × { 0} to its geodesic representative ¯γ ⊂ Xǫ
+h in Xǫ
+h
+and straighten further as before so that for x ∈ γ the map fǫ
+θ sends x × [0, 1] to a
+geodesic. Arguing as for αi, each annulus γi × [0, 1] has mass
+massf ǫ
+θ (γi × [0, 1])< 2K8.
+It follows that the union of the four annuli
+Ti = (Ai × { 1}) ∪ (αi × [0, 1]) ∪ (Ai × { 0}) ∪ (γi × [0, 1])
+along their boundaries is a torus with mass
+massf ǫ
+θ (Ti)< 2K8 + (8 + 2|χ (S)|)π =K ′
+8.
+Applying [Th2, Prop. 4.1], we have that the solid torus Vi ⊂ N bounded by Ti
+has mass
+massf ǫ
+θ (Vi) ≤ massf ǫ
+θ (Ti)<K ′
+8.
+It follows that the total fǫ
+θ -mass of ˆS × I is less than 3 K ′
+8, and since the number of
+pieces of the complement S − PX depends only on S, it follows that
+massf ǫ
+θ (capX )<K cap
+for an a priori constant Kcap.Conclusion. The proof of Proposition 5.8 is now an application of the preceding
+lemmas.
+Proof: (of Proposition 5.8). Applying lemmas 5.9 and 5.11, we have
+massf ǫ
+θ (N ) = mass f ǫ
+θ (N∆) + massf ǫ
+θ (capX ) + massf ǫ
+θ (capY )
+< K ∆ · V3 ·dP(PX,P Y ) + 1 + 2Kcap.
+Setting K∆ · V3 =K3 and 1 + 2Kcap =K4, the result follows.
+The case when ∂S ̸= ∅. Minor modiﬁcations to the above arguments are required
+when ∂S ̸= ∅, and Q(X,Y ) has peripheral rank-1 cusps. The primary diﬀerence
+in our model N in this case arises from the fact that boundary curves of S are not
+elements of the pants decompositions Pj interpolating betweenPX andPY . For the
+purposes of the construction, triangulations suited to Pj are then triangulations of
+S with two vertices on each boundary component so that on each pair of pants in
+S − Pj the triangulation has the structure of Deﬁnition 5.3. The blocks req uired to
+accomplish each elementary move are then identical; to map them in to C(X,Y )
+we need only specify the behavior of the maps fj, ∗ on the boundary curves.
+Indeed, if γ ⊂ ∂S , there is no geodesic in the free homotopy class of γ. Choosing
+a horocycle h in the homotopy class of γ on the boundary ∂(C(X,Y )≥ ǫ0) and a
+pair of antipodal vertices ph and ¯ph on h, we let γ ∗ denote the piecewise geodesic
+obtained from straightening h rel-ph ∪ ¯ph. The behavior of fj, ∗ is then determined
+by requiring that fj, ∗ send each γ ⊂ ∂S to the corresponding γ ∗ and that fj, ∗ be
+simplicial as before.
+If f∆ : N∆ → C(X,Y ) denotes the simplicial map of N∆ intoC(X,Y ) given by
+the above instructions, we modify f∆ by sending ǫ0 to 0: the edges and vertices
+of N∆ incident on γ ⊂ ∂S are mapped by f∆ deeper and deeper into the γ-cusp
+so that the limiting map f∆, 0 sends each such tetrahedron to a tetrahedron or
+40 JEFFREY F. BROCK
+triangle with one vertex at inﬁnity. The restriction of f∆, 0 to the interiors of ∂ +N∆
+and ∂ −N∆ factor through simplicial hyperbolic surfaces hX : ZX → C(X,Y ) and
+hY : ZY → C(X,Y ) realizing PX and PY , and the restriction of f∆, 0 to N∆ with
+the γ curves removed is a proper homotopy from hX to hY .
+The caps, now proper homotopies from ZX to Xǫ
+h and ZY to Yǫ
+h may then be
+added to the triangulated part. The total mass is again bounded by Kcap, since the
+caps still decompose into solid tori with boundary of bounded area ( some are now
+bounded by properly embedded annuli asymptotic to cusps). The r esulting map,
+a proper homotopy between the two components Xǫ
+h to Yǫ
+h of ∂Nǫ(C(X,Y )) may
+be spun about the spinning geodesics as before to force the Dehn t wist tetrahedra
+to have arbitrarily small mass. Spinning suﬃciently far, then, we aga in have the
+conclusion of Proposition 5.8.
+6. Geometric limits
+We conclude with the following application of our results to the study o f algebraic
+and geometric limits of hyperbolic 3-manifolds.
+Theorem 6.1. Let {Q(Xk,Y k)}∞
+k=1 ⊂ AH(S) be an algebraically and geometrically
+convergent sequence with geometric limit NG. Then NG is geometrically ﬁnite if
+and only if there is a K >0 for which
+dWP(Xk,Y k)<K
+for all k.
+Proof: If the geometric limit NG is geometrically inﬁnite, the volumes of the
+convex cores of the approximates Q(Xk,Y k) grow without bound (see [CM, Lem.
+7.1]), which, applying Theorem 1.2, implies that dWP(Xk,Y k) grows without bound.
+Likewise, applying [Ta] or [Mc3, Thm. 3.1], when NG is geometrically ﬁnite the
+ǫ-thick parts of the convex cores of Q(Xk,Y k) converge geometrically to that of NG
+for ǫ suﬃciently small. It follows that the volume of core( Q(Xk,Y k))≥ ǫ converges
+to the volume of core( NG)≥ ǫ for each suﬃciently small ǫ and thus that
+vol(core(Q(Xk,Y k))) → vol(core(NG))
+as k tends to ∞ . The theorem follows.
+References
+[Ah] L. Ahlfors. An extension of Schwarz’s lemma. Trans. Amer. Math. Soc. 43(1938), 359–364.
+[BP] R. Benedetti and C. Petronio. Lectures on Hyperbolic Geometry . Springer-Verlag, 1992.
+[Brs1] L. Bers. Simultaneous uniformization. Bull. AMS 66(1960), 94–97.
+[Brs2] L. Bers. On boundaries of Teichm¨ uller spaces and on k leinian groups: I. Annals of Math.
+91(1970), 570–600.
+[Brs3] L. Bers. Spaces of degenerating Riemann surfaces. In Discontinuous groups and Riemann
+surfaces, pages 43–55. Annals of Math Studies 76, Princeton Universi ty Press, 1974.
+[Bon] F. Bonahon. Bouts des vari´ et´ es hyperboliques de dimension 3. Annals of Math. 124(1986),
+71–158.
+[Bow] R. Bowen. Hausdorﬀ dimension of quasi-circles. Publ. Math. IHES 50(1979), 11–25.
+[Br1] J. Brock. Continuity of Thurston’s length function. Geom. & Funct. Anal. 10(2000), 741–
+797.
+THE WEIL-PETERSSON METRIC AND VOLUMES OF CONVEX CORES 41
+[Br2] J. Brock. Iteration of mapping classes and limits of hy perbolic 3-manifolds. Invent. Math.
+143(2001), 523–570.
+[Br3] J. Brock. W eil-Petersson translation distance and vo lumes of mapping tori. To appear,
+Comm. Anal. Geom.
+[BF] J. Brock and B. Farb. Rank and curvature of Teichm¨ uller space. Preprint (2001). Submitted for publication.
+[BC] M. Burger and R. Canary. A lower bound on λ0 for geometrically ﬁnite hyperbolic nmanifolds. J. Reine Angew. Math. 454(1994), 37–57.
+[Bus] P. Buser. Geometry and Spectra of Compact Riemann Surfaces . Birkhauser Boston, 1992.
+[Can1] R. D. Canary. On The Laplacian and the geometry of hype rbolic 3-manifolds. J. Diﬀ.
+Geom. 36(1992), 349–367.
+[Can2] R. D. Canary. Ends of hyperbolic 3-manifolds. J. Amer. Math. Soc. 6(1993), 1–35.
+[Can3] R. D. Canary. A covering theorem for hyperbolic 3-man ifolds and its applications. Topology
+35(1996), 751–778.
+[CM] R. D. Canary and Y. N. Minsky. On limits of tame hyperboli c 3-manifolds. J. Diﬀ. Geom.
+43(1996), 1–41.
+[EM] D. B. A. Epstein and A. Marden. Convex hulls in hyperboli c space, a theorem of Sullivan,
+and measured pleated surfaces. In Analytical and Geometric Aspects of Hyperbolic Space ,
+pages 113–254. Cambridge University Press, 1987.
+[Gard] F. Gardiner. Teichm¨ uller Theory and Quadratic Diﬀerentials. Wiley Interscience, 1987.
+[Har] W. J. Harvey. Boundary structure of the modular group. In Riemann Surfaces and Related
+Topics: Proceedings of the 1978 Stony Brook Conference . Annals of Math Studies 97,
+Princeton University Press, 1981.
+[Hat] A. Hatcher. On triangulations of surfaces. Topology Appl. 40(1991), 189–194.
+[HLS] A. Hatcher, P. Lochak, and L. Schneps. On the Teichm¨ ul ler tower of mapping class groups.
+J. Reine Angew. Math. 521(2000), 1–24.
+[HT] A. Hatcher and W. Thurston. A presentation for the mappi ng class group. Topology
+19(1980), 221–237.
+[IT] Y. Imayoshi and M. Taniguchi. An Introduction to Teichm¨ uller Spaces. Springer-Verlag,
+1992.
+[Mas] H. Masur. The extension of the W eil-Petersson metric t o the boundary of Teichm¨ uller
+space. Duke Math. J. 43(1976), 623–635.
+[MM1] H. Masur and Y. Minsky. Geometry of the complex of curve s I: hyperbolicity. Invent.
+Math. 138(1999), 103–149.
+[MM2] H. Masur and Y. Minsky. Geometry of the complex of curve s II: hierarchical structure.
+Geom. & Funct. Anal. 10(2000), 902–974.
+[Mc1] C. McMullen. Iteration on Teichm¨ uller space. Invent. math. 99(1990), 425–454.
+[Mc2] C. McMullen. Renormalization and 3-Manifolds Which Fiber Over the Circl e. Annals of
+Math. Studies 142, Princeton University Press, 1996.
+[Mc3] C. McMullen. Hausdorﬀ dimension and conformal dynami cs I: Strong convergence of
+Kleinian groups. J. Diﬀ. Geom. 51(1999), 471–515.
+[Min] Y. Minsky. The classiﬁcation of punctured torus group s. Annals of Math. 149(1999), 559–
+626.
+[Ot] J. P. Otal. Le th´ eor` eme d’hyperbolisation pour les vari´ et´ es ﬁbr´ ees de dimension trois .
+Ast´ erisque, 1996.
+[Sul1] D. Sullivan. Travaux de Thurston sur les groupes quas i-fuchsiens et sur les vari´ et´ es hyperboliques de dimension 3 ﬁbr´ ees sur S1. Sem. Bourbaki 554(1979/80).
+[Sul2] D. Sullivan. Aspects of positivity in Riemannian geo metry. J. Diﬀ. Geom. 25(1987), 327–
+351.
+[Ta] E. Taylor. Geometric ﬁniteness and the convergence of K leinian groups. Comm. Anal.
+Geom. 5(1997), 497–533.
+[Th1] W. P. Thurston. Geometry and Topology of Three-Manifolds . Princeton lecture notes,
+1979.
+[Th2] W. P. Thurston. Hyperbolic structures on 3-manifolds I: Deformations of acylindrical
+manifolds. Annals of Math. 124(1986), 203–246.
+[Tro] A. J. Tromba. On a natural algebraic aﬃne connection on the space of almost complex
+structures and the curvature of Teichm¨ uller space with respect to its W eil-Petersson metric.
+Manuscripta Math. 56(1986), 475–497.
+42 JEFFREY F. BROCK
+[W ol1] S. W olpert. Noncompleteness of the W eil-Petersson m etric for Teichm¨ uller space.Paciﬁc
+J. Math. 61(1975), 573–577.
+[W ol2] S. W olpert. Chern forms and the Riemann tensor for the moduli space of curves. Invent.
+Math. 85(1986), 119–145.
+[W ol3] S. W olpert. Geodesic length functions and the Nielse n problem. J. Diﬀ. Geom. 25(1987),
+275–296.
+[W ol4] S. W olpert. The hyperbolic metric and the geometry of the universal curve. J. Diﬀ. Geom.
+31(1990), 417–472.
+[W ol5] S. W olpert. The geometry of the W eil-Petersson compl etion of Teichm¨ uller space.Preprint
+(2002).
+Abstract. W e present a coarse interpretation of the W eil-Petersson di stance
+dWP(X, Y ) between two ﬁnite area hyperbolic Riemann surfaces X and Y
+using a graph of pants decompositions introduced by Hatcher and Thurston.
+The combinatorics of the pants graph reveal a connection bet ween Riemann
+surfaces and hyperbolic 3-manifolds conjectured by Thurst on: the volume of
+the convex core of the quasi-Fuchsian manifold Q(X, Y ) with X and Y in its
+conformal boundary is comparable to the W eil-Petersson dis tance dWP(X, Y ).
+In applications, we relate the W eil-Petersson distance to t he Hausdorﬀ dimension of the limit set and the lowest eigenvalue of the Laplaci an for Q(X, Y ),
+and give a new ﬁniteness criterion for geometric limits.
+Mathematics Department, University of Chicago, 5734 S. Uni versity A ve., Chicago, IL 60637
+E-mail address : brock@math.uchicago.edu

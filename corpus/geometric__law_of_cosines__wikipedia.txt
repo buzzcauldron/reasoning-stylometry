@@ -1,0 +1,21 @@
+Euclid proved this theorem by applying the Pythagorean theorem to each of the two right triangles formed by dropping a perpendicular from one vertex onto the line containing the opposite side. Using a to denote the line segment CB, b to denote the line segment AC, c to denote the line segment AB, d to denote the line segment CH, and h for the height BH, triangle AHB gives us
+
+c² = (b + d)² + h²,
+
+and triangle CHB gives
+
+d² + h² = a².
+
+Expanding the first equation gives
+
+c² = b² + 2bd + d² + h².
+
+Substituting the second equation into this, the following can be obtained:
+
+c² = a² + b² + 2bd.
+
+This is Euclid's Proposition 12 from Book 2 of the Elements. To transform it into the modern form of the law of cosines, note that
+
+d = a cos(π − γ) = −a cos γ.
+
+Euclid's proof of the corresponding proposition for an acute angle proceeds along the same lines: he applies the Pythagorean theorem to both right triangles formed by dropping the perpendicular onto one of the sides enclosing the angle γ, and uses the square of a difference to simplify.

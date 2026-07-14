@@ -1,0 +1,19 @@
+In the previous proof we may proceed a little differently. Complete a square on sides AB and AD of the two triangles. Its area is, on one hand, b² and, on the other,
+
+b² = Area(ABMD)
+  = Area(AECD) + Area(CMD) + Area(BCE)
+  = c²/2 + b(b - a)/2 + a(b - a)/2
+  = c²/2 + b²/2 - a²/2,
+
+which amounts to the same identity as before.
+
+Douglas Rogers who observed the relationship between the proofs 46-49 also remarked that a square could have been drawn on the smaller legs of the two triangles if the second triangle is drawn in the "bottom" position as in proofs 46 and 47 . In this case, we will again evaluate the area of the quadrilateral ABCD in two ways. With a reference to the second of the diagrams above,
+
+c²/2 = Area(ABCD)
+  = Area(EBCG) + Area(CDG) + Area(AED)
+  = a² + a(b - a)/2 + b(b - a)/2
+  = a²/2 + b²/2,
+
+as was desired.
+
+He also pointed out that it is possible to think of one of the right triangles as sliding from its position in proof #46 to its position in proof #48 so that its short leg glides along the long leg of the other triangle. At any intermediate position there is present a quadrilateral with equal and perpendicular diagonals, so that for all positions it is possible to construct proofs analogous to the above. The triangle always remains inside a square of side b - the length of the long leg of the two triangles. Now, we can also imagine the triangle ABC slide inside that square. Which leads to a proof that directly generalizes #49 and includes configurations of proofs 46-48. See below.

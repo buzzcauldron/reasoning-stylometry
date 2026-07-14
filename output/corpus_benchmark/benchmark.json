@@ -1,0 +1,82 @@
+{
+  "v1_cutknot": {
+    "label": "v1 elementary CutKnot",
+    "train_dir": "corpus_classify/reference_set",
+    "n_train": 54,
+    "predicted": {
+      "algebraic__algebraic_style__hrushovski_approx_subgroups": "algebraic",
+      "algebraic__geometric_style__dritschel_mccullough_rational_dilation": "geometric",
+      "geometric__algebraic_style__bateman_katz_cap_sets": "algebraic",
+      "geometric__geometric_style__masur_schleimer_disk_complex": "algebraic"
+    },
+    "expected_prefix": [
+      "algebraic",
+      "algebraic",
+      "geometric",
+      "geometric"
+    ],
+    "test_files": ["algebraic__algebraic_style__hrushovski_approx_subgroups", "algebraic__geometric_style__dritschel_mccullough_rational_dilation", "geometric__algebraic_style__bateman_katz_cap_sets", "geometric__geometric_style__masur_schleimer_disk_complex"],
+    "style_accuracy": 3,
+    "success_rate_filename": 25
+  },
+  "v2_mixed": {
+    "label": "v2 research + elementary",
+    "train_dir": "corpus_classify/reference_v2",
+    "n_train": 263,
+    "predicted": {
+      "algebraic__algebraic_style__hrushovski_approx_subgroups": "algebraic",
+      "algebraic__geometric_style__dritschel_mccullough_rational_dilation": "algebraic",
+      "geometric__algebraic_style__bateman_katz_cap_sets": "algebraic",
+      "geometric__geometric_style__masur_schleimer_disk_complex": "geometric"
+    },
+    "expected_prefix": [
+      "algebraic",
+      "algebraic",
+      "geometric",
+      "geometric"
+    ],
+    "test_files": ["algebraic__algebraic_style__hrushovski_approx_subgroups", "algebraic__geometric_style__dritschel_mccullough_rational_dilation", "geometric__algebraic_style__bateman_katz_cap_sets", "geometric__geometric_style__masur_schleimer_disk_complex"],
+    "style_accuracy": 3,
+    "success_rate_filename": 75
+  },
+  "v3_research_all": {
+    "label": "v3 research all chunks",
+    "train_dir": "corpus_classify/reference_research/chunks",
+    "n_train": 19058,
+    "predicted": {
+      "algebraic__algebraic_style__hrushovski_approx_subgroups": "geometric",
+      "algebraic__geometric_style__dritschel_mccullough_rational_dilation": "geometric",
+      "geometric__algebraic_style__bateman_katz_cap_sets": "algebraic",
+      "geometric__geometric_style__masur_schleimer_disk_complex": "geometric"
+    },
+    "expected_prefix": [
+      "algebraic",
+      "algebraic",
+      "geometric",
+      "geometric"
+    ],
+    "test_files": ["algebraic__algebraic_style__hrushovski_approx_subgroups", "algebraic__geometric_style__dritschel_mccullough_rational_dilation", "geometric__algebraic_style__bateman_katz_cap_sets", "geometric__geometric_style__masur_schleimer_disk_complex"],
+    "style_accuracy": 3,
+    "success_rate_filename": 25
+  },
+  "v3_research_balanced": {
+    "label": "v3 research balanced",
+    "train_dir": "corpus_classify/reference_research/balanced",
+    "n_train": 17948,
+    "predicted": {
+      "algebraic__algebraic_style__hrushovski_approx_subgroups": "geometric",
+      "algebraic__geometric_style__dritschel_mccullough_rational_dilation": "geometric",
+      "geometric__algebraic_style__bateman_katz_cap_sets": "algebraic",
+      "geometric__geometric_style__masur_schleimer_disk_complex": "geometric"
+    },
+    "expected_prefix": [
+      "algebraic",
+      "algebraic",
+      "geometric",
+      "geometric"
+    ],
+    "test_files": ["algebraic__algebraic_style__hrushovski_approx_subgroups", "algebraic__geometric_style__dritschel_mccullough_rational_dilation", "geometric__algebraic_style__bateman_katz_cap_sets", "geometric__geometric_style__masur_schleimer_disk_complex"],
+    "style_accuracy": 3,
+    "success_rate_filename": 25
+  }
+}

@@ -1,0 +1,7 @@
+Now we start with four copies of the same triangle. Three of these have been rotated 90°, 180°, and 270°, respectively. Each has area ab /2. Let's put them together without additional rotations so that they form a square with side c .
+
+The square has a square hole with the side ( a - b ). Summing up its area ( a - b )² and 2 ab , the area of the four triangles (4· ab /2), we get
+
+c² = (a - b)² + 2ab
+  = a² - 2ab + b² + 2ab
+  = a² + b²

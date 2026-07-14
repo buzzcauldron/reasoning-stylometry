@@ -1,0 +1,16 @@
+By the Pythagorean theorem we have b² = h² + d² and a² = h² + (c − d)², where h is the altitude to side c and d is the distance from one endpoint of that side to the foot of the altitude. Subtracting these yields a² − b² = c² − 2cd. This equation allows us to express d in terms of the sides of the triangle:
+
+d = (−a² + b² + c²) / (2c).
+
+For the height of the triangle we have that h² = b² − d². By replacing d with the formula given above and applying the difference of squares identity we get
+
+h² = b² − ((−a² + b² + c²) / (2c))²
+   = (2bc − a² + b² + c²)(2bc + a² − b² − c²) / (4c²)
+   = ((b + c)² − a²)(a² − (b − c)²) / (4c²)
+   = (b + c − a)(b + c + a)(a + b − c)(a − b + c) / (4c²)
+   = 2(s − a) · 2s · 2(s − c) · 2(s − b) / (4c²)
+   = 4s(s − a)(s − b)(s − c) / c².
+
+We now apply this result to the formula that calculates the area of a triangle from its height:
+
+A = ch/2 = √((c²/4) · (4s(s − a)(s − b)(s − c)/c²)) = √(s(s − a)(s − b)(s − c)).

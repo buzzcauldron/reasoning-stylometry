@@ -1,0 +1,28 @@
+We start with the original right triangle, now denoted ABC, and need only one additional construct - the altitude AD. The triangles ABC, DBA, and DAC are similar which leads to two ratios:
+
+AB/BC = BD/AB and AC/BC = DC/AC.
+
+Written another way these become
+
+AB·AB = BD·BC and AC·AC = DC·BC
+
+Summing up we get
+
+AB·AB + AC·AC = BD·BC + DC·BC
+  = (BD+DC)·BC = BC·BC.
+
+In a little different form, this proof appeared in the Mathematics Magazine , 33 (March, 1950), p. 210, in the Mathematical Quickies section, see Mathematical Quickies , by C. W. Trigg.
+
+Taking AB = a, AC = b, BC = c and denoting BD = x, we obtain as above
+
+a² = cx and b² = c(c - x),
+
+which perhaps more transparently leads to the same identity.
+
+In a private correspondence, Dr. France Dacar, Ljubljana, Slovenia, has suggested that the diagram on the right may serve two purposes. First, it gives an additional graphical representation to the present proof #6. In addition, it highlights the relation of the latter to proof #1 .
+
+R. M. Mentock has observed that a little trick makes the proof more succinct. In the common notations, c = b cos A + a cos B. But, from the original triangle, it's easy to see that cos A = b/c and cos B = a/c so c = b (b/c) + a (a/c). This variant immediately brings up a question: are we getting in this manner a trigonometric proof? I do not think so, although a trigonometric function (cosine) makes here a prominent appearance. The ratio of two lengths in a figure is a shape property meaning that it remains fixed in passing between similar figures, i.e., figures of the same shape. That a particular ratio used in the proof happened to play a sufficiently important role in trigonometry and, more generally, in mathematics, so as to deserve a special notation of its own, does not cause the proof to depend on that notation. (However, check Proof 84 where trigonometric identities are used in a significant way.)
+
+Michael Brozinsky came up with a variant of the proof that I believe could be properly referred to as lipogrammatic .
+
+Finally, it must be mentioned that the configuration exploited in this proof is just a specific case of the one from the next proof - Euclid's second and less known proof of the Pythagorean proposition. A separate page is devoted to a proof by the similarity argument .

@@ -1,0 +1,1391 @@
+arXiv:math/0701334v1  [math.GR]  11 Jan 2007
+WORD MAPS AND W ARING TYPE PROBLEMS
+MICHAEL LARSEN AND ANER SHALEV
+Abstract. Waring’s classical problem deals with expressing every nat ural number as a sum of g(k) kth powers. Recently there has been
+considerable interest in similar questions for nonabelian groups, and
+simple groups in particular. Here the kth power word is replaced by an
+arbitrary group word w ̸= 1, and the goal is to express group elements
+as short products of values of w.
+We give a best possible and somewhat surprising solution for this
+Waring type problem for various ﬁnite simple groups, showin g that a
+product of length two suﬃces to express all elements. We also show that
+the set of values of w is very large, improving various results obtained
+so far.
+Along the way we also obtain new results of independent inter est on
+character values and class squares in symmetric groups.
+Our methods involve algebraic geometry, representation th eory, probabilistic arguments, as well as three prime theorems from ad ditive number theory (approximating Goldbach’s Conjecture).
+Contents:
+1. Introduction
+2. Word values in groups of Lie type
+3. Waring’s problem in bounded dimension
+4. Special word values in SL 2(Fp)
+5. Alternating groups, I: three primes theorems
+6. Alternating groups, II: a combinatorial construction
+7. Alternating groups, III: characters and probability
+8. Intersection theorems
+Michael Larsen was partially supported by NSF grant DMS-035 4772. Aner Shalev was
+partially supported by an Israel Science Foundation Grant. Both authors were partially
+supported by a Bi-National Science Foundation United State s-Israel Grant.
+1
+2 MICHAEL LARSEN AND ANER SHALEV
+1. Introduction
+Waring’s problem asks whether every natural number is a sum o f g(k)
+kth powers (where g is a suitable function). This was solved aﬃrmatively
+by Hilbert in 1909. Optimizing g(k) has been a central problem in additive
+number theory ever since (see [Na] for more detail and backgr ound).
+Recently there has been considerable interest in group theo retic analogues
+of this phenomenon, where the aim is to present group element s as short
+products of certain “special” elements. These special elem ents can be powers, or commutators, or values of a general word w, or elements of a special
+conjugacy class in the group.
+The motivation for this is sometimes topological. Let G be a (topologically) ﬁnitely generated pro- p group. Using expressions of elements of the
+commutator subgroupG′ as bounded products of commutators Serre showed
+thatG′ is closed, and deduced that every ﬁnite index subgroup of G is open.
+A recent deep result of Nikolov and Segal [NS1, NS2] shows tha t this holds
+for every ﬁnitely generated proﬁnite group. Again the core o f the proof is
+presenting group elements as short products of values of cer tain words.
+In the realm of ﬁnite simple groups such Waring type problems have been
+studied in even greater detail. We need some notation.
+Letw =w(x1,...,x d) be a non-trivial group word, namely a non-identity
+element of the free group Fd on x1,...,x d. Then we may write w =
+xn1
+i1xn2
+i2 · · ·xnk
+ik where ij ∈ { 1,...,d }, nj are integers, and we may assume
+further that w is reduced. Let G be a group. For g1,...,g d ∈ G we write
+w(g1,...,g d) = gn1
+i1 gn2
+i2 · · ·gnk
+ik ∈ G.
+Let
+w(G) = {w(g1,...,g d) : g1,...,g d ∈ G}
+be the set of values of w in G. For subsets A,B ⊆ G let AB = {ab|a ∈
+A,b ∈ B} and Ak = {a1 · · ·ak|ai ∈ G}.
+Fix a non-trivial group word w and let G be a ﬁnite simple group. If G
+is large enough then it follows from Jones [J] that w(G) ̸= {1} (namely w
+is not an identity in G). Can we then ﬁnd a constant c (which may depend
+on w but not on G) such that w(G)c =G?
+Various instances of this problem have been solved aﬃrmativ ely in the
+past decade or two. See Wilson [W] for the commutator word w(x1,x 2) =
+[x1,x 2] = x− 1
+1 x− 1
+2 x1x2, and Martinez and Zelmanov [MZ] and Saxl and
+Wilson [SW] for power words w = xk
+1. It follows from their result that
+every element of a large enough ﬁnite simple group is a produc t of f (k)kth
+powers.
+In [LiSh] this is generalized to arbitrary words w. It is proved there that
+if w(G) ̸= {1} then w(G)c = G, where the exponent c = c(w) depends on
+w (but is not given explicitly). A somewhat surprising new res ult from [Sh]
+is that the exponent c can be chosen independent of the word w and may
+be, in fact, a very small number. More speciﬁcally for every word w ̸= 1
+WORD MAPS 3
+there is a positive integer N =N (w) such that for every ﬁnite simple group
+G with |G| ≥ N (w) we have
+w(G)3 =G.
+The main purpose of this paper is to prove an even stronger res ult for
+certain families of ﬁnite simple groups, where the exponent 3 is replaced by
+2 (see Theorems 1.5 and 1.6 below). Along the way we prove seve ral results
+of independent interest, related to the size of w(G), and to powers of certain
+conjugacy classes C in G.
+Given a conjugacy class C ̸= 1 in a ﬁnite simple group G there exists
+a number k such that Ck = G. Substantial work has been devoted to the
+study of these numbers k, and related so-called covering numbers (see e.g.
+[AH, EGH, LL, LiSh]).
+A particular challenge is to show that C 2 =G in certain cases. Indeed a
+conjecture of Thompson states that every ﬁnite simple group G has a class
+C with this property. In spite of considerable progress this i s still open in
+general.
+Now let C = σSn be a conjugacy class in Sn. When can we say that
+C 2 = An? This problem has quite a long history. Gleason [Hu] seems to
+have been the ﬁrst to observe that C 2 = An if σ is an n-cycle. See also
+Bertram [Be]. Later this was generalized by Brenner [Br] to t he case where
+σ consists of two cycles (or more generally two non-trivial cy cles with some
+additional ﬁxed points). The case of permutations with more general cycle
+structure remained wide open.
+Our ﬁrst result deals with permutations with any given numbe r of cycles,
+provided n is suﬃciently large. We denote the number of cycles (includi ng
+1-cycles) of a permutation σ by cyc(σ ).
+Theorem 1.1. For every positive integer k there is a number f (k) such that
+ifn ≥ f (k) andσ is a permutation in Sn with cyc(σ ) ≤ k then (σSn)2 =An.
+Moreover, there is an absolute constant c such that, if n ≥ c and σ is a
+permutation in Sn with cyc(σ ) ≤ n1/ 128, then (σSn)2 =An.
+By the Erd˝ os-Tur´ an theory (see [ET]), a randomly chosen pe rmutation
+in Sn has O(logn) cycles. This gives rise to the following result.
+Corollary 1.2. (i) The probability that a randomly chosen permutation
+σ ∈ Sn satisﬁes (σSn)2 =An tends to 1 as n → ∞ .
+(ii) The probability that a randomly chosen permutation σ ∈ An satisﬁes
+(σAn)2 =An tends to 1 as n → ∞ .
+Indeed, part (i) follows immediately, and part (ii) follows from (i) using
+the fact that for almost all σ ∈ An we have σAn =σSn (see [Sh], 3.3).
+Corollary 1.2 sharpens a previous result showing that for al most all σ ∈
+An we have (σAn )3 =An (see Theorem 2.6 in [Sh]).
+It is intriguing that the proof of Theorem 1.1 is non-element ary in the
+sense that it involves probabilistic arguments and new char acter-theoretic
+4 MICHAEL LARSEN AND ANER SHALEV
+estimates. In particular we show that all character values χ (σ ) of a permutation σ ∈ Sn can be bounded in terms of cyc( σ ) alone (see Theorem 7.2).
+In order to apply Theorem 1.1 to Waring type problems we need t o show
+that the image w(An) of a word map w ̸= 1 contains conjugacy classes C
+with few cycles.
+Theorem 1.3. For every positive integer n there exists a permutation σn ∈
+An with the following properties:
+(i) cyc(σn) ≤ 23;
+(ii) For each non-trivial word w there existsN =N (w) such that if n ≥ N
+then σn ∈ w(An).
+We can also arrange that, for n suﬃciently large, the permutation σn has
+at least six ﬁxed points.
+Our proof of Theorem 1.3 is highly non-elementary, involvin g algebraic
+geometry and results from analytic number theory (such as we ak versions of
+the Goldbach Conjecture). The idea is to embed groups of the f orm SL 2(Fp)
+and their products in An, and then focus on the properties of word maps on
+SL2(Fp).
+It would be interesting to try to ﬁnd an elementary proof of Th eorem 1.3,
+as well as to improve it. In this context we pose the following :
+Problem 1.4. What is the minimal number k such that (for w ̸= 1 and
+n ≥ N (w)) w(An) always contains permutations with at most k cycles?
+Does w(An) necessarily contain a cycle of length n − k for some k which
+may depend on w but not on n?
+Equipped with the tools above, we can now improve earlier War ing type
+results for alternating groups, showing that w(An)2 =An if n ≫ 0. In fact
+we prove a bit more.
+Theorem 1.5. For each pair of non-trivial words w1,w 2 there exists N =
+N (w1,w 2) such that for all integers n ≥ N we have
+w1(An)w2(An) = An.
+The idea of the proof is to combine Theorems 1.1 and 1.3, notin g that
+σSn
+n ⊂ wi(An) for i = 1, 2 and (σSn
+n )2 =An.
+We next establish a similar result for certain ﬁnite simple g roups of Lie
+type. Indeed, if we limit our attention to groups of Lie type o f bounded
+dimension, we can prove the following result:
+Theorem 1.6. Given an integer d and two non-trivial words w1 and w2
+there exists an integer N =N (d,w 1,w 2) such that if G is a simply connected
+almost simple algebraic group of dimension d over a ﬁnite ﬁeld F, Γ =
+G(F)/Z (G(F)) is the ﬁnite simple group associated to G over F, and |Γ| ≥ N ,
+then we have
+w1(Γ)w2(Γ) = Γ.
+WORD MAPS 5
+The method of the proof is to obtain a suitable surjectivity t heorem at
+the level of algebraic groups, and then to use the Riemann hyp othesis for
+varieties over ﬁnite ﬁelds to show that the relevant ﬁbers ac tually have points
+over F.
+As a consequence we obtain the following.
+Corollary 1.7. For each triple of non-trivial words w1,w 2,w 3 there exists
+N = N (w1,w 2,w 3) such that if G is a ﬁnite simple group of order at least
+N , then
+w1(G)w2(G)w3(G) = G.
+Indeed, the case of groups of Lie type appears in [Sh], and The orem 1.5
+above completes the proof by dealing with alternating group s.
+We conjecture this can be strengthened as follows.
+Conjecture 1.8. For each pair of non-trivial words w1,w 2 there exists N =
+N (w1,w 2) such that if G is a ﬁnite simple group of order at least N , then
+w1(G)w2(G) = G.
+In view of our results above it remains to prove this for class ical groups
+of unbounded rank. This seems quite challenging even in the p articular case
+w1 =w2 =x2
+1.
+Let us now discuss the size of the subset w(G). A related useful result
+of Borel [Bo] shows that the word map induced by w on simple algebraic
+groups is a dominant map. In [L] this is used to show that if G is a ﬁnite
+simple group and ǫ> 0 then
+|w(G)| ≥ |G|1−ǫ
+provided |G| ≥ f (w,ǫ). In this paper we improve this bound for various
+families of ﬁnite simple groups.
+We start with alternating groups. Often the key to estimatin g the size of
+w(G) is ﬁnding special elements in it.
+Indeed, using Theorem 1.3 and the remark following it one can easily
+deduce that, for n ≥ N (w),
+|w(An)| ≥ cn− 17|An|
+for some absolute constant c > 0. In fact, we can provide a much better
+estimate:
+Theorem 1.9. For each non-trivial word w and every ǫ >0, there exists
+N =N (w,ǫ) such that if n ≥ N then
+|w(An)| ≥ n− 4−ǫ|An|.
+We can show that this bound is tight up to the value of the expon ent.
+Indeed, consider a power word w(x1) = xk
+1. Then by [L2] we have
+|w(An)| ≤ |w(Sn)| ≤ an−bn!,
+6 MICHAEL LARSEN AND ANER SHALEV
+where b = 1 − φ(k)/k and a is some constant (depending on k). Note that,
+choosing k suitably (e.g. as the product of the ﬁrst m primes) we may
+arrange that b ≥ 1 − ǫ for any ﬁxed ǫ> 0. This shows that the exponent in
+Theorem 1.9 must be at most − 1.
+It would be interesting to ﬁnd out whether Theorem 1.9 can be i mproved
+as follows.
+Problem 1.10. Is it true that |w(An)| ≥ n− 1|An| provided w ̸= 1 and
+n ≥ N (w)?
+While we are unable to settle this for alternating groups, we obtain an
+analogous result for certain simple groups of Lie type.
+Theorem 1.11. Let G be a ﬁnite simple group of Lie type and of rank r.
+Letw ̸= 1 be a word. Then if G is not of type Ar or 2Ar, we have
+|w(G)| ≥ cr− 1|G|
+for some absolute constant c> 0, provided |G| ≥ N (w).
+It is interesting that our methods allow us to generalize var ious results on
+w(G) to intersections of the form ∩k
+i=1wi(G), where w1,...,w k ̸= 1 are any
+given words. These generalizations are formulated in the la st section of this
+paper.
+Some words on the structure of this paper. Section 2 is devote d to groups
+of Lie type and the proof of Theorem 1.11. In Section 3 we focus on Lie type
+groups of bounded dimension and prove Theorem 1.6. In Sectio n 4 we make a
+closer analysis of groups of the type SL 2(Fp). Combined with a certain three
+primes theorem this leads to the proofs of Theorem 1.3 and The orem 1.9 in
+Section 5. Section 6 contains the elementary part of the proo f of Theorem
+1.1. In Section 7 we study character values of Sn on permutations with few
+cycles and squares of conjugacy classes of such permutation s. In this way
+we obtain a probabilistic proof of Theorem 1.1. Finally, in S ection 8 we
+formulate results on the intersection of the images of diﬀere nt word maps,
+and show how to derive them using our methods.
+The ﬁrst-named author would like to thank Nicholas Katz for s ome useful
+correspondence.
+2. Word values in groups of Lie type
+In this section, we use algebraic geometry and group-theore tic arguments
+to give lower bounds on |w(Γ)|for certain groups Γ of Lie type, thus proving
+Theorem 1.11. Note that the bounds obtained are actually str onger than
+those we give for alternating groups. Although in the rest of the paper, G
+denotes a ﬁnite simple group, in this section and §3,G will always denote a
+simply connected, almost simple algebraic group deﬁned ove r a ﬁnite ﬁeld.
+To get a ﬁnite simple group Γ, we divide G(Fq) by its center. All simple
+groups of Lie type arise in this way, excepting the Suzuki and Ree groups.
+WORD MAPS 7
+The Suzuki and Ree groups can also be treated by the methods of this
+section, but we exclude them to avoid unpleasant technicali ties.
+Proposition 2.1. Let w be a non-trivial word and G a simply connected
+almost simple algebraic group over a ﬁnite ﬁeld Fq. Then there is a positive
+constantc depending only on w and dimG such that
+|w(G(Fq))|>c |G(Fq)|.
+This proposition is proved as [L, Prop. 7] in a form that also i ncludes the
+case of Ree and Suzuki groups. Here we give an alternative pro of that uses
+standard techniques from algebraic geometry instead of res ults from [LP].
+We use the following more or less standard result:
+Lemma 2.2. Letπ : X → Y denote a dominant morphism between reduced
+schemes of ﬁnite type over Z. Then there exist constants c1 andc2 such that
+for every prime p and every point y ∈ Y (Fp), we have
+|{x ∈ X (Fp) :π (x) = y}| ≤ c1pdimπ − 1x
+and if π − 1y is non-empty and geometrically irreducible, then
+|{x ∈ X (Fp) :π (x) = y}| ≥ pdimπ − 1y(1 − c2p− 1/ 2).
+Proof. By the Lefschetz trace formula, these results are immediate consequences of standard facts about ´ etale cohomology groups: t he boundedness
+of the compactly supported cohomology groups of the ﬁbers of π , the trace
+map on the top-dimensional cohomology of (geometrically ir reducible) varieties, and the weight estimates for the eigenvalues of Fro benius on these
+cohomology groups (see [SGA 4 3, XVIII 2.9] and [De, 3.3.1].) □
+We now prove the proposition.
+Proof. An algebraic group G of this kind is speciﬁed by a connected Dynkin
+diagram ∆, an automorphism of this diagram (which is determi ned up to
+inner automorphism by its order g ≤ 3), and a ﬁnite ﬁeld Fq. It suﬃces to
+prove this proposition for each ﬁxed choice of ∆ and g.
+First we treat the split case, g = 1. In this case, ∆ determines a simply
+connected Chevalley scheme G over Spec Z of which G is the Fq-ﬁber, and
+w determines a morphism of schemes Gd → G which we denote πw. If πw
+has all ﬁbers of dimension ≤ (d − 1) dimG, then we are done by Lemma 2.2,
+since |G(Fq)| ≥ c1qdimG and each ﬁber has at most c2q(d− 1) dimG points of
+G(Fq)d for some positive constants c1 andc2 independent ofq. The diﬃculty
+is that it might happen, a priori, that most points in G(Fq)d lie in ﬁbers of
+πw of dimension greater than ( d − 1) dimG.
+To show that this does not in fact happen for large q we note ﬁrst that
+πw is dominant; moreover, it is dominant for every ﬁber of Gd over Spec Z
+[Bo]. Fiber dimension is a constructible function [EGA IV 3, 9.5.5], so the
+Zariski closure of the set of geometric points s for which
+dimπ − 1
+w (s)> (d − 1) dimG
+8 MICHAEL LARSEN AND ANER SHALEV
+is a proper closed subset of G. Let X denote its inverse image in Gd. By
+[Bo], X is a proper closed subvariety of Gd for all p which does not contain
+the generic point of any ﬁber of Gd over Spec Z. By Lemma 2.2, for all
+q ≫ 0, at least half of the points of G(Fq)d do not lie in X (Fq), and the
+proposition follows.
+Finally, we treat the case g ≥ 2. Instead of deﬁning a split group scheme
+G over Spec Z, we deﬁne a non-split group scheme π : G → S for some
+higher-dimensional base S such that G splits over a ﬁnite ´ etale Galois cover
+S ′ over S of degree g. For example, we may take
+S = Spec Z[1/g ][xg,x −g]
+∐
+Spec Fg[xg − x]
+and
+S ′ = Spec Z[1/g ][x,x − 1]
+∐
+Spec Fg[x].
+The crucial point is that the base is large enough that for eve ry Fq there
+exists an Fq-valued point s of S whose preimage in S ′ is Fqg , since this
+guarantees that every G/ Fq with the given Dynkin diagram and diagram
+automorphism can be obtained as the ﬁber of G for some Fq point of S.
+□
+We can now prove Theorem 1.11.
+Proof. The case of groups of type E, F, and G and of classical groups of
+any ﬁxed dimension follows from Proposition 2.1. We need the refore consider only orthogonal groups and symplectic groups. We begi n with the
+symplectic case.
+Let V be a 2-dimensional vector space over the ﬁeld Fqr . We endow V
+with an area form A. We deﬁne a bilinear form on V , regarded as a vector
+space over Fq, as follows:
+⟨v1,v 2⟩ = tr Fqr/ FqA(v1 ∧ v2).
+This form is obviously antisymmetric and non-degenerate. I t therefore determines an inclusion
+i : SL 2(Fqr ) → Sp2r(Fq).
+If x ∈ SL2(Fqr ) has eigenvalues λ ± 1, then i(x) has eigenvalues λ ±qk
+, k =
+0, 1, 2,...,r − 1. As long as these eigenvalues are pairwise distinct, i(x) is a
+regular semisimple symplectic matrix. This can be achieved by insisting for
+every proper subﬁeld Fqd, λ belongs neither to F×
+qd nor to the norm-1 subgroup of Fq2d over Fqd. The subset of SL 2(Fqr ) consisting of elements which
+violate either condition has cardinality O(q3r/ 2), so by Proposition 2.1, we
+can ﬁnd at least c1q3r elements of w(SL2(Fqr )) which are regular semisimple
+in Sp 2r(Fq). If semisimple elements a,b ∈ SL2(Fqr ) have eigenvalues α ± 1,
+β ± 1 respectively, then i(a) and i(b) have the same eigenvalues if and only
+if α = βqi
+or α − 1 = βqi
+for some i ∈ { 0, 1,...,r − 1}. Thus there are at
+least c2r− 1qr distinct conjugacy classes of regular semisimple elements in
+WORD MAPS 9
+i(w(SL2(Fqr ))) ⊂ w(Sp2r(Fq)). The centralizer of any regular semisimple
+element i(a) in Sp 2r(Fq) coincides with the image of the centralizer of a in
+SL2(Fqr ); it is therefore of order qr ± 1. Thus,
+|i(w(SL2(Fqr )))| ≥ c2r− 1 qr
+qr + 1 |Sp2r(Fq)|.
+This proves the theorem for groups of type C.
+For the cases B and D, we begin by observing that given a vector space
+V over Fqk and a non-degenerate quadratic form Q0 : V → Fqk deﬁned over
+Fqk, we can deﬁne a non-degenerate quadratic form on V regarded as an
+Fq-vector space as follows:
+Q(v) = tr Fqk/ FqQ0(v).
+This gives an inclusion Spin(V,Q 0)< Spin(V,Q ). Composing this map with
+an isomorphism SL 2(Fq2k ) ∼
+= Spin−
+4 (Fqk ), we obtain an inclusion
+(2.1) SL 2(Fq2k ) → Spin±
+4k(Fq)
+for some choice of signs. By the classiﬁcation of quadratic f orms over ﬁnite
+ﬁelds, every spaceW of dimension ≥ 4 with a non-degenerate quadratic form
+over Fq can be decomposed as W1 ⊥ W2, where W1 is isomorphic to a space
+V obtained as above and dim W2 ≤ 6. We choose such a decomposition,
+and let i denote the map
+SL2(Fq2k ) × Spin(W2) → Spin(W )
+obtained by combining (2.1) with the natural map Spin( W1) × Spin(W2) →
+Spin(W ). Note that i is at most two-to-one since SO( W1) × SO(W2) →
+SO(W ) is injective. If k ≥ 4, b ∈ Spin(W2) is regular semisimple, and the
+eigenvalues of a semisimple element a ∈ SL2(Fq2k ) are not contained in a
+proper subﬁeld of Fq2k , then the image of i(a,b ) in SO(W ) has all eigenvalues
+distinct and is therefore regular semisimple. By Propositi on 2.1, the number
+of such pairs ( a,b ) with a ∈ w(SL2(Fq2k )) is at least
+c3q2kq
+dim W2
+2 =c3q
+dim W
+2 ,
+and the number of semisimple conjugacy classes in w(Spin(W )) determined
+by such pairs is at least c4r− 1q
+dim W
+2 . For q greater than some constant c5
+(independent of k), we can further specify that b ∈ w(Spin(W2)) at the cost
+of replacing c4 by c6. The centralizer of i(a,b ) in Spin( W ) is a maximal
+torus of Spin(W ) containing a maximal torus of Spin( W1); it therefore has
+at most
+(q2k + 1)(q + 1)
+dim W2
+2 ≤ c7q
+dim W
+2
+elements. We conclude that the total number of elements of Sp in(W ) conjugate to elements of i(SL2(Fq2k ) × Spin(W2)) is at least c6
+c7
+r− 1|Spin(W )|.
+Finally, we consider the case that q ≤ c5. In this case, we take b = 1, so
+i(a,b ) is not regular; its centralizer is Spin( W2) times a maximal torus of
+10 MICHAEL LARSEN AND ANER SHALEV
+Spin(W1). The order of the centralizer is therefore less than c(dimW2)2
+5 q
+dim W
+2 ,
+and the argument goes through as before.
+□
+3. W aring’s problem in bounded dimension
+In this section we focus on simple groups of Lie type G in bounded dimension. Using geometric methods and establishing the irre ducibility of
+certain ﬁbers (see Theorem 3.3 below), we obtain a best possi ble solution
+of Waring’s problem for such groups, namely w(G)2 = G provided |G| is
+large enough. Moreover, we prove a somewhat stronger result , namely Theorem 1.6 dealing with two diﬀerent words.
+We begin with a basic geometric lemma:
+Proposition 3.1. Consider the diagram
+X
+f
+↙↙↙↙↙↙↙↙↙↙ g
+↘↘↗↗↗↗↗↗↗
+Y →→↖ ↖ ↖ ↖ ↖ ↖ ↖Z
+of aﬃne varieties over an algebraically closed ﬁeld k. If Y is normal, f is
+generically smooth and surjective, and g factors through f at the level of
+closed points, then g factors through f as a morphism of algebraic varieties.
+Proof. Let A, B, and C denote the coordinate rings of X, Y , and Z respectively. They are Jacobson rings [EGA IV 3, 10.4.6], so that every nonempty locally closed subset of X, Y , or Z contains at least one closed point
+[EGA IV 3, 10.1.2]. Let K and L denote the function ﬁelds of X and Y
+respectively. We have the diagram
+L A ↗ ↖←←
+K
+→↓
+↗↗↙↙↙↙↙↙↙↙
+B
+φ f
+↗↗↙↙↙↙↙↙↙↗ ↖←← C←←↖ ↖ ↖ ↖ ↖ ↖ ↖
+φ g
+↖↖↗↗↗↗↗↗↗
+Surjectivity of f implies that every prime ideal of B contains kerφf , and as
+B is an integral domain, this means that φf is injective. We regard B as a
+subring of A via φf . Our goal is to prove that φg(C) ⊂ B. Suppose not.
+Leth ∈ A denote an element of φg(C) \B. Thus f factors through
+fh : Spec B[h] → SpecB.
+We consider four cases:
+(1) L(h) = L.
+(2) L(h) is an inseparable extension of L.
+(3) L(h) is a non-trivial separable extension of L.
+(4) L(h) is a transcendental extension of L.
+WORD MAPS 11
+In case (1), as B is normal and h ∈ L \B, there exists a prime ideal p of
+B of height 1 such that h ̸∈ Bp [Ma, Th. 38]. In other words, p does not lie
+in the image of fh, contrary to the surjectivity hypothesis on f .
+In case (2), the extension L → K is inseparable, contrary to the hypothesis
+that f is generically smooth.
+In case (3), the morphism X → SpecB[h] is dominant (since B[h] ⊂ A).
+By [EGA IV 4, 17.6.1], there exists a dense open set U1 ⊂ SpecB[h] for which
+the morphism fh is ´ etale and by [EGA IV 1, 1.8.4], a dense open set U2 ⊂
+Spec B[h] contained in the image of X in Spec B[h]. Thus fh(Uc
+1 ∪ Uc
+2)
+c
+is a non-empty open set in Spec B over which fh is ´ etale and every point
+in Spec B[h] lies in the image of X. By [EGA IV 3, 15.5.9], by passing to
+a smaller open set if necessary, the cardinality of every ﬁbe r of fh equals
+[L(h) : L]. It follows that there exist closed points x1,x 2 ∈ X with the
+same image in Spec B but distinct images in Spec B[h]. If m1 and m2 are
+the corresponding maximal ideals of A, then h maps to diﬀerent elements
+in A/ m1 = k and A/ m2 = k. Adding a suitable element of k to h, we
+may assume that h maps to 0 in A/ m1 but not in A/ m2 and therefore some
+element of C maps to m1 but not to m2. It follows that x1 and x2 have
+distinct images in Spec C, contrary to hypothesis.
+The argument is the same in case (4), except that Spec B[h] → Spec B
+has the property that the inverse image of every point in Spec B is inﬁnite.
+□
+Proposition 3.2. Let G be a simply connected, almost simple algebraic
+group over an algebraically closed ﬁeld k. If X ⊂ G is a conjugacy class of
+positive dimension, then for all suﬃciently large integers n, the morphism
+πn : Xn → G obtained by multiplying coordinates in G is generically smooth
+and surjective.
+Proof. Let Xi denote the Zariski closure of πi(Xi). As Xi is irreducible,
+Xi is the closure of a single point and therefore irreducible. T he sequence
+dimX1, dimX2,... is non-decreasing and must therefore stabilize, so we may
+assume dimXn = dimXn+1 = · · ·. If x1,x 2 ∈ X(k), then
+x1Xn ∪ x2Xn ⊂ Xn+1,
+so x1Xn =x2Xn, and
+(3.1) x− 1
+1 x2Xn =Xn.
+Let Yi denote the Zariski-closure of φi(X 2i) (or, equivalently, the closure
+of φi(X(k)2i), where
+φi(x1,...,x 2i) = x− 1
+1 x2x− 1
+3 x4 · · ·x− 1
+2i− 1x2i.
+If n is suﬃciently large, dim Ym = dimYm+1, so
+x− 1
+1 x2Ym =x− 1
+1 x′
+2Ym,
+or
+x− 1
+2 x′
+2Ym =Ym
+12 MICHAEL LARSEN AND ANER SHALEV
+for all x2,x ′
+2 ∈ X(k). This implies that YmYm =Ym and therefore Ym is a
+connected algebraic subgroup of G. As X is conjugation-invariant, Ym is a
+normal subgroup, and it follows that Ym =G. By (3.1),
+Xn =YmXn =GXn =G.
+LetZi denote the Zariski closure of the complement of πi(Xi). For i ≥ n,
+Zi is a proper closed subvariety of G. If x1,x 2 ∈ X(k), then
+Zn+1 ⊂ x1Zn ∩ x2Zn.
+Ifx1Zn =x2Zn for all x1,x 2 ∈ X(k), then Zn is invariant under translation
+by Ym = G, which is impossible. Thus x1Zn ̸= x2Zn for some x1,x 2 ∈
+X(k). If we form the vector of dimensions of irreducible compone nts of Zn,
+arranged from largest to smallest, then the vector of Zn majorizes that of
+Zn+1. We conclude that Zn = ∅ for n ≫ 0, and this gives surjectivity.
+For generic smoothness, it suﬃces to ﬁnd points x1,...,x n ∈ X(k) such
+that the map Gn → G given by
+(g1,...,g n) ↦→ g1x1g− 1
+1 g2x2g− 1
+2 · · ·gnxng− 1
+n
+is smooth at the identity in Gn. Equivalently, we must prove that the space
+L(x1,...,x n) := (1 − ad(x1))(g) + ad(x1)(1 − ad(x2))(g) + · · ·
++ ad(x1 · · ·xn− 1)(1 − ad(xn))(g)
+equals g for suitable x1,...,x n. As
+L(x1,...,x n) = (1 − ad(x1))(g) + ad(x1)(L(x2,...,x n)),
+we have
+dimL(x1,...,x n) ≥ dimL(x2,...,x n)
+with equality if and only if
+(ad(x− 1
+1 ) − 1)(g) ⊂ L(x2,...,x n).
+Now,
+SX := Spanx∈X(ad(x− 1) − 1)(g)
+is invariant under the adjoint action of G. As x is not in the center of G,
+SX ̸= 0. If the adjoint representation of g is irreducible, which is usually
+the case since G is almost simple, it follows that SX = g. To see that this
+is true in general, we observe that since every element of G is a product of
+elements of X,
+SX = Spang∈G(ad(g) − 1)(g),
+and G acts trivially on g/S X . As G is simply connected, there is no nontrivial quotient of g on which G acts trivially (see, e.g., [Pi, 1.11]).
+Therefore, the dimension determined by a sequence in X can always be
+increased by prepending a suitable element of X unless it already equals
+dim g. The proposition follows. □
+We can now prove our basic irreducibility theorem:
+WORD MAPS 13
+Theorem 3.3. Letw1 andw2 denote non-trivial words in n1 andn2 letters
+respectively, and letw ∈ Fn1+n2 denote their juxtaposition. Let G be a simply
+connected almost simple algebraic group over an algebraica lly closed ﬁeld k.
+Then for all non-central elements g ∈ G(k), the ﬁber π − 1
+w (g) is irreducible.
+We remark that the hypothesis that G is simply connected is really
+needed. Otherwise, we can take w1 = x1x2x− 1
+1 x− 1
+2 and w2 = x3x4x− 1
+3 x− 1
+4
+and the resulting morphism πw factors through the universal cover of G.
+Proof. We can express the ﬁberπ − 1
+w (g) as the ﬁber product over G ofπw1 and
+a second morphism, namely the composition of πw2 with the “reﬂection” map
+x ↦→ gx− 1. We will prove that this ﬁber product is geometrically irred ucible.
+Let A denote the coordinate ring of G and K the ﬁeld of fractions of A.
+LetKi denote the separable closure of K in the fraction ﬁeld of A⊗ni, where
+the morphism A → A⊗ni is that associated to πwi. Let Li be the splitting
+ﬁeld of Ki overK and λi : K → Li the natural inclusion map.
+For anyg ∈ G(k), we deﬁne reﬂection, conjugation, and translation maps
+G → G as follows:
+ρg(x) = gx− 1, χg(x) = gxg− 1, τg(x) = gx.
+The induced automorphisms of A and K are also denoted ρg, χg, and τg
+respectively. Let
+χg,i (x1,...,x ni) = (gx1g− 1,...,gx nig− 1).
+We claim that if g does not lie in the center of G(k), then λ 1 andλ 2◦ρg give
+linearly disjoint ﬁnite extensions of K. As A⊗ni is geometrically irreducible
+over Ki [EGA IV 2, 4.5.10] and ﬁber products of geometrically irreducible
+schemes over a ﬁeld are again geometrically irreducible [EG A IV 2, 4.5.8], this
+claim implies the theorem. As L1 andL2 are Galois over K, it is equivalent
+to prove that there do not exist subﬁelds ˜K1 and ˜K2 ofL1 andL2, properly
+containingK, such that ˜K1 and ˜K2 are isomorphic as K-extensions.
+Suppose, on the contrary, that such an isomorphism ι: ˜K1 → ˜K2 exists.
+The injective homomorphisms λi factor through ˜Ki, and we write κi for
+the corresponding homomorphisms֒→˜Ki. Then we have the following
+diagram, in which the horizontal maps are isomorphisms and t he vertical
+maps are ﬁnite ﬁeld extensions:
+˜K1
+χ h,1 →→ ˜K1
+ι →→ ˜K2
+χ − 1
+h,2 →→ ˜K2
+ι− 1
+→→ ˜K1
+K
+κ 1
+↑↑
+χ h →→K
+κ 1
+↑↑
+ρg →→K
+κ 2
+↑↑
+χ − 1
+h →→K
+κ 2
+↑↑
+ρ− 1
+g →→K.
+κ 1
+↑↑
+14 MICHAEL LARSEN AND ANER SHALEV
+The composition of horizontal arrows gives a diagram
+˜K1
+σ g,h →→
+˜K1
+K
+κ 1
+↑↑
+τhgh− 1 g− 1
+→→K,
+κ 1
+↑↑
+where σg,h is an isomorphism depending on g and h.
+Let ˜A denote the integral closure of A in ˜K1. As A is ﬁnitely generated
+over the ﬁeld K, it is a Japanese ring [EGA IV 2, 7.7.4], so ˜A is a ﬁnitely generatedA-module. The map κ1 restricts to an injective ring homomorphism
+A → ˜A; by a slight abuse of notation, we denote by κ1 also the corresponding homomorphism of aﬃne varieties ˜G → G, where ˜G = Spec ˜A. We ﬁx
+e ∈ ˜G(k) lying over the identity in G. For every h1,h 2 ∈ G, σg,h 1 and χh2, 1
+induce automorphisms of ˜G. Fix h1 which does not commute with g and
+let h2 vary over G. By taking the commutator of σg,h 1 and χh2, 1 we obtain
+a morphism Σ : X × ˜G → ˜G, where X is the conjugacy class of h1gh− 1
+1 g− 1,
+and each point of X gives an automorphism of ˜G which covers the corresponding translation of G. We write Σ n for the morphism Xn × ˜G → ˜G
+deﬁned recursively by
+Σn(x1,...,x n,y ) = Σ(x1, Σn− 1(x2,...,x n,y )),
+for n ≥ 2 and Σ 1 = Σ. Let Σ n,e : Xn → ˜G be deﬁned by
+Σn,e (x1,...,x n) = Σn(x1,...,x n,e ).
+The composition Σ n,e ◦κ1 gives the restriction to Xn of the usual n-fold
+multiplication morphism Gn → G.
+By Proposition 3.2, the composition of Σ n,e : Xn → ˜G and ˜G → G is
+surjective and generically smooth for all suﬃciently large integers n. It
+follows that Σ n,e itself is generically smooth and dominant. If the Zariskiclosure ˜Zn of the complement of the image of Σ n,e is non-empty, then there
+existx1,x 2 ∈ X(k) such that Σ( x1, ˜Zn) ̸= Σ(x2, ˜Zn) (because the images of
+these two subvarieties of ˜G in G are distinct). As
+˜Zn+1 ⊂ Σ(x1, ˜Zn) ∩ Σ(x1, ˜Zn),
+we see the vector of component dimensions of ˜Zn majorizes that of ˜Zn. For
+n suﬃciently large, therefore, ˜Zn is empty, i.e., Σ n,e is surjective.
+WORD MAPS 15
+We would like to apply Proposition 3.1 to the upper triangle o f the diagram
+(3.2) Xn × ˜G
+Σn,e× id
+↙↙←←←←←←←←← Σn
+↘↘↗↗↗↗↗↗↗↗↗
+˜G × ˜G
+˜µ →→↖ ↖ ↖ ↖ ↖ ↖ ↖ ↖ ↖ ↖
+κ 1×κ 1
+↓↓
+˜G
+κ 1
+↓↓
+G × G →→G.
+We observe ﬁrst that the pentagon of solid arrows in (3.2) com mutes because
+the diagram
+X × ˜G
+Σ →→
+id×κ 1
+↓↓
+˜G
+κ 1
+↓↓
+X × G →→G
+commutes. The variety ˜G × ˜G is normal since ˜G is so by construction. To
+check that there exists a morphism ˜ µ at the level of closed points, we note
+that if x1,...,x n belong to X(k), the resulting map Σ n(x1,...,x n, ·) is an
+automorphism of ˜G which covers translation by x1 · · ·xn. Our claim asserts
+that, at least at the level of closed points, this automorphi sm depends only
+on Σn,e (x1,...,x n) and not on the actual n-tuple (x1,...,x n). Indeed, if we
+ﬁx ˜g ∈ ˜G and let g = κ1(˜g) there is a unique automorphism of ˜G covering
+τg and sending e to ˜g. Thus, we may apply Proposition 3.1 to deﬁne ˜ µ .
+The resulting diagram commutes (i.e., the lower rectangle d oes so) because
+it commutes at the level of closed points.
+We claim that the arrow ˜µ in (3.2) is a multiplication morphism making
+( ˜G,e ) into an algebraic group and ˜G → G into a central isogeny. As G is
+simply connected, this implies that κ1 is an isomorphism [Ti, 1.5.4], and
+therefore that K = ˜K1, which proves the theorem.
+To prove that ˜µ satisﬁes the associativity axiom, we compare the two
+maps ˜G3 → ˜G given by ˜µ (˜µ (x,y ),z ) and ˜µ (x, ˜µ (y,z )). We have a diagram
+˜G3 →→→→
+κ 3
+1
+↓↓
+˜G
+κ 1
+↓↓
+G3 →→G.
+The closed subvariety of ˜G3 on which the two arrows agree is also open since
+the ﬁbers of ˜G → G are ﬁnite. It is non-empty since it contains ( e,e,e ). As
+˜G3 is connected, ˜µ is associative.
+Next we construct the inverse on ˜G. We choose an automorphism of ˜G
+which covers the composition τh− 1 ◦ρh (which maps x ↦→ x− 1). This automorphism sends e to some element of ˜G lying over the identity of G. By
+16 MICHAEL LARSEN AND ANER SHALEV
+composing with a deck transformation, we can ﬁnd a new automo rphism of
+˜G which sends e to itself and covers the inverse map on G. Again we use
+connectedness to show that this morphism satisﬁes the diagr am for inverse
+maps with respect to ˜µ. Thus ( ˜G, ˜µ,e ) is an algebraic group and the covering map ˜G → G is a surjective homomorphism, i.e., an isogeny. As it is
+separable, it is central. The theorem follows.
+□
+We can now deduce Theorem 1.6
+Proof. As in the proof of Proposition 2.1, it suﬃces to consider a ﬁxe d
+Dynkin diagram ∆ and a group scheme π : G → S such that every simply
+connected, almost simple algebraic group G/ Fq with Dynkin diagram ∆ is
+isomorphic to Gs for some s ∈ S (Fq). Next we consider the morphism
+πw : Gn1+n2 → G
+(where the ﬁber power is taken relative to S) given by a word w which
+is a juxtaposition of the words w1 and w2 taken in disjoint variables. If
+s ∈ S (Fq) and x ∈ G s(Fq) is a non-central element, then by Theorem 3.3,
+the ﬁber of πw overs is geometrically connected, so by Lemma 2.2, if q ≫ 0,
+x ∈ w(Gs(Fq)). If Γ denotes the quotient of Gs(Fq) by its center, it follows
+that the image of x in Γ lies in w(Γ). This accounts for all elements of Γ
+except the identity, which trivially lies in w(Γ).
+□
+4. Special word values in SL2(Fp)
+In this section we take a closer look at 2-dimensional specia l linear groups,
+which play a key role in our results for alternating groups. O ur main result
+below proves the existence of elements of very high order in w(SL2(Fp)),
+under certain conditions on p.
+Theorem 4.1. For every non-trivial word w there exist constants Mw and
+Nw such that for every prime p > Nw such that p − 1 is not divisible by
+4 nor by any prime 3 ≤ ℓ ≤ Mw, there exists an element of order p− 1
+2 in
+w(SL2(Fp)).
+Proof. Our main goal is to ﬁnd s ∈ SL2(Fp) satisfying the following conditions:
+• There exists t ∈ SL2(Fp)d such that πw(t) = s.
+• The centralizer of s is a split torus.
+• There are two square roots of s in SL 2(Fp)
+• If k > 1 is not divisible by any prime ≤ Mw, then s has at most
+k − 1kth roots in SL 2(Fp).
+Let Pk denote the kth Chebychev polynomial, normalized so that
+Pk(x +x− 1) = xk +x−k.
+WORD MAPS 17
+Note that Pk(x) ∈ Z[x]. If λ ∈ Fp \ {0} and k is an integer such that
+λk ̸= λ −k, then the conditions {λk,λ +λ − 1} ⊂ Fp and λ ∈ Fp are equivalent. Therefore, the speciﬁed conditions on s are equivalent to the following
+conditions on the trace u = tr(s):
+• The equation tr(πw(t)) = u has at least one solution t ∈ SL2(Fp)d.
+• The equation x +x− 1 =u has two solutions in Fp.
+• The equation P2(x) = u has two solutions in Fp.
+• If k > 1 is not divisible by any prime ≤ Mw, then the equation
+Pk(x) = u has at most k − 1 solutions x ∈ Fp.
+Let
+SL2 = Spec Z[a11,a 12,a 21,a 22]/ (a11a22 − a12a21 − 1)
+and A1 = Spec Z[x]. Let X1 denote the integral closure of A1 in SL d
+2,
+and write ψ : SLd
+2 → X 1 and φ 1 : X1 → A1 for the natural maps whose
+composition τ : SLd
+2 → A1 gives the trace of the morphism πw associated to
+w:
+SLd
+2
+ψ
+↙↙↙↙↙↙↙↙↙↙
+τ
+↓↓
+π w
+↘↘↗↗↗↗↗↗↗↗
+X1
+φ 1 ↘↘↗↗↗↗↗↗↗↗ SL2
+tr↙↙↙↙↙↙↙↙↙↙
+A1.
+The generic ﬁber of ψ is geometrically connected. By the openness of geometric connectivity [EGA IV 3, 9.7.7], there exists a non-empty subscheme
+U ⊂ A1 such that ψ |τ − 1(U ) → φ − 1
+1 (U ) has geometrically connected ﬁbers.
+Let
+X2 = Spec Z[x,y ]/ (y2 − x2 + 4),
+and let φ 2 : X2 → A1 denote the map ( x,y ) ↦→ x. Let X (k)
+3 = A1 for all
+positive integers k, and φ (k)
+3 : X (k)
+3 → A1 be the Chebychev morphism given
+by Pk. The schemes X1, X2, and X (k)
+3 are generically ﬁnite over A1, so
+shrinking U if necessary we may assume that over U , all three are ﬁnite
+´ etale. LetMw denote the degree of φ 1. If Nw is suﬃciently large, for every
+primep>N w, the Fp-ﬁber of U is non-empty. For some Lw independent of
+p, for every p>N w, Fp \ U(Fp) has at most Lw points.
+We now ﬁx p suﬃciently large and let U1,U2, and U (k)
+3 denote the inverse
+images of the Fp-ﬁber UFp in X1Fp, X2Fp, and X (k)
+3Fp respectively.
+18 MICHAEL LARSEN AND ANER SHALEV
+We deﬁne the various ﬁber products of these curves as follows :
+U (k)
+123
+↙↙↙↙↙↙↙↙↙↙
+↓↓ ↘↘↗↗↗↗↗↗↗↗
+U12
+↓↓ ↘↘↗↗↗↗↗↗↗↗↗ U (k)
+13
+↙↙↙
+↙↙↙↙↙↙
+↗↗↗
+↘↘↗↗↗
+U (k)
+23
+↙↙↙↙↙↙↙↙↙↙↙
+↓↓
+U1
+φ 1 ↘↘↗↗↗↗↗↗↗↗↗ U2
+φ 2
+↓↓
+U (k)
+3
+φ (k)
+3↙↙↙↙↙↙↙↙↙↙
+UFp.
+We now rewrite our original set of conditions on u ∈ Fp (which we now
+assume lies in the subset U (Fp)):
+• There exists u1 ∈ U1(Fp) mapping to u.
+• There exists u2 ∈ U2(Fp) mapping to u.
+• There exists u(2)
+3 ∈ U (2)
+3 (Fp) mapping to u.
+• If k >1 is not divisible by any prime ≤ Mw, the number of points
+u(k)
+3 ∈ U (k)
+3 (Fp) mapping to u is less than k.
+The ﬁrst condition may appear to be weaker than ﬁrst of the pre vious
+set of conditions on u, but for p ≫ 0, they are equivalent. This is because
+the ﬁbers of ψ over all points in U1(Fp) are geometrically connected, so by
+Lemma 2.2 they all have Fp-points when p ≫ 0. The second and third
+conditions mention only one preimage instead of two, but for two-to-one
+ﬁnite ´ etale maps, there is no diﬀerence.
+We now suppose that k is odd and 2 k divides p − 1. By the RiemannHurwitz theorem, U (2k)
+123 is an open subset (the complement of at most 8 kLw
+points) of a curve whose genus is O(k). (Here we use the fact that the
+´ etale morphismU (2k)
+123 → U12 must extend to a tamely ramiﬁed cover of nonsingular projective curves because its degree is less than p.) By the Weil
+bound for curves, U (2k)
+123 (Fp) has p +O(k√
+p) points. As 2 k divides p − 1, a
+regular semisimple element in a split maximal torus of SL 2(Fp) which admits
+one 2kth root admits 2k. (In terms of our diagram, U (2k)
+123 is Galois over U12.)
+Therefore, the image Ik of U (2k)
+123 (Fp) in U (2)
+123(Fp) has p
+k +O(√ p) points.
+The total number of points in U (2)
+123(Fp) is p +O(√ p). Each maps to
+u ∈ U (Fp) which is the trace of an element of the form x2 in a split torus of
+SL2(Fp). This element is the rth power of a generator of the split torus for
+somer dividing p − 1. We assume p ≡ 3 (mod 4), so the highest power of 2
+dividing r is 2. We would like to show that x can be chosen so that r = 2.
+It suﬃces to show that for every odd divisor k ofp − 1,x is not a kth power.
+By hypothesis, k has no prime divisors ≤ Mw, so every point on U (2)
+123(Fp)
+WORD MAPS 19
+for which the claim is false belongs to Ik. Now,
+∑
+k|p− 1
+2
+µ (k)|Ik|= 2φ
+( p − 1
+2
+)
++O
+(
+τ
+( p − 1
+2
+) √p
+)
+,
+where µ , φ, and τ denote the M¨ obius, Euler, and number of divisors functions. As τ(n) = o(nǫ) for all ǫ >0, and φ(n) ≥ n1−ǫ for all large n, this
+implies that points of the desired form exist. Let u(2)
+123 be one such, and
+let u be its image in U (Fp). Then u satisﬁes all the conditions needed to
+guarantee that it is the trace of an element of w(SL2(Fp)) of order p− 1
+2 .
+□
+5. Alternating groups, I: three prime theorems
+In this section we prove Theorems 1.3 and 1.9. The proof combi nes our
+result on SL 2(Fp) from the previous section, with a certain approximation
+to the Goldbach conjecture in the form of a three prime theore m.
+To explain the idea, note that SL 2(Fp) embeds in Ap+1, and an element
+of order (p − 1)/ 2 in SL 2(Fp) has two non-trivial cycles and two ﬁxed points
+in this embedding. Thus, if n = p + 1 and p satisﬁes the conditions of
+Theorem 4.1, then we can produce σ ∈ w(An) with cyc( σ ) = 4 (and with
+two ﬁxed points).
+To extend this idea for arbitraryn we need to ﬁnd suitable primes p1,p 2,p 3
+such that n = (p1 + 1) + (p2 + 1) + (p3 + 1) +c where c is a small constant,
+and then to embed SL 2(Fp1) × SL2(Fp2) × SL2(Fp3) in An, which produces
+a permutation with a bounded number of cycles. Moreover, res ults from
+Additive Number Theory on the number of ways to write n in the form
+above will provide us with information on the size of w(An).
+We now give the detailed proof of Theorems 1.3 and 1.9.
+Proof. We are given a non-identity word w. By Theorem 4.1, for every
+prime p>N w such that p ≡ 3 (mod 4) and p − 1 not divisible by any odd
+prime ≤ Mw, there exist zp, 1,...,z p,d ∈ SL2(Fp) such that w(zp, 1,...,z p,d )
+is of order p− 1
+2 . The action of SL 2(Fp) on P1(Fp) determines an injective
+homomorphism SL 2(Fp) → Ap+1. Let ζp,i denote the image of zp,i . Thus
+w(ζp, 1,...,ζ p,d ) consists of two p− 1
+2 -cycles and two ﬁxed points.
+Next we claim that for every integer N suﬃciently large in terms of M =
+Mw, there exists an integer N ′ in the interval [N − 11,N ] such that N ′− 3 is
+the sum of three primes pi such that pi >N w, pi ≡ 3 (mod 4), and pi − 1 is
+not divisible by any prime in ≤ Mw. We do this by applying Ayoub’s version
+of Vinogradov’s three prime theorem [Ay], asserting that ev ery suﬃciently
+large integer N can be written in at least cN 2 log− 3N ways as a sum of
+three primes lying in any speciﬁed residue classes a1, a2, a3 (mod m) as
+long as N is congruent to a1 +a2 +a3 (mod m). For N suﬃciently large,
+this is enough to ensure that p1, p2,p3 can be chosen to be larger than Nw.
+20 MICHAEL LARSEN AND ANER SHALEV
+We choose N ′ = 12⌊N/ 12⌋ so that N ′− 3 is the sum of three primes each
+congruent to 11 (mod 12). If pi is such a prime, pi − 1 is not divisible by 3.
+For every prime ℓ greater than 3, every residue class (mod ℓ) can be written
+as the sum of three residue classes from 2 to ℓ− 1, so we can impose (mod ℓ)
+conditions on p1, p2, p3 consistent with ℓ ∤pi − 1 and p1 +p2 +p3 + 3 ≡ N ′
+(modℓ). By the Chinese remainder theorem and Ayoub’s result, the e lement
+w((ζp1, 1,ζp2, 1,ζp3, 1),... (ζp1,d,ζp2,d,ζp3,d )) ∈ Ap1+1 × Ap2+1 × Ap3+1 ⊂ AN ′
+has at most 12 cycles including 6 ﬁxed points, so by the inclus ionAN ′ ⊂ AN ,
+there is an element in w(AN ) with at most 23 cycles, of which at most 6 are
+non-trivial. We can construct a sequence of elements σN ∈ AN in this way
+for which the bound M tends to ∞ as N goes to ∞ .
+This concludes the proof of Theorem 1.3.
+For Theorem 1.9, we construct elements as above. The central izer of such
+an element in An has order at most
+17!(p1 + 1)2(p2 + 1)2(p3 + 1)2
+16 =O(n6)
+Therefore, the conjugacy class of such an element has O(n− 6|An|) elements.
+As we have O(n2−ǫ) ways of choosing triples ( p1,p 2,p 3), in all there are at
+least O(n− 4−ǫ|An|) elements in w(An).
+□
+6. Alternating groups, II: a combinatorial construction
+In general it is diﬃcult to say when a given conjugacy class in a symmetric group appears in the product of two other conjugacy cl asses. In this
+section we present an explicit construction that can be used to show that
+certain conjugacy classes are contained in the squares of ot her classes. This
+constitutes the elementary part of the proof of Theorem 1.1.
+We denote the number of ﬁxed points of a permutation σ ∈ Sn by ﬁx(σ ).
+Proposition 6.1. Let n be a positive integer and α,β ∈ Sn permutations
+belonging to conjugacy classes A and B respectively. If
+ﬁx(β ) ≥ 7cyc(α ),
+and β is even, then B ⊂ A2.
+Proof. Let [a,b ] denote the sequence of consecutive integers a ≤ x ≤ b; such
+a sequence will be called an interval of length 1 + b − a. Given sequences
+S1,...,S r, let j(S1,...,S r) denote their concatenation. If S is a sequence
+and k is an integer, Tk(S) is the sequence obtained by adding k to each
+element of S. If S is a k-term sequence of distinct integers in [1 ,n ], let (S)
+denote the corresponding k-cycle in Sn. Let 0 = a0 <a 1 <...<a m =n be
+deﬁned so that
+γ = ([a0 + 1,a 1])([a1 + 1,a 2]) · · ·([am− 1 + 1,am]) ∈ A.
+WORD MAPS 21
+We want to ﬁnd δ ∈ A such that γδ ∈ B.
+Let bk denote the number of k-cycles in β . Let
+c1 =b1 = ﬁx(β ) ≥ 7cyc(α ) = 7m,
+c2 =b2,
+c3 =b3 +b5 +b7 + · · ·,
+c4 =b4 +b6 +b8 + · · ·,
+d3 =c3,
+d4 = ⌊c2/ 2⌋,
+d6 =c2 − 2d4,
+d8 = ⌊c4/ 2⌋.
+Asb2 +b4 +b6 + · · ·is even, so is c2 +c4, so c2 andc4 are both even or both
+odd and c4 = 2d8 +d6.
+Our ﬁrst task is a packing problem: to ﬁnd a set Σ consisting of di intervals
+of length i for i = 3, 4, 6, 8, each contained in some [ ak + 1,ak+1], such that
+the resulting intervals are mutually disjoint. To show that such a packing
+is possible, we iterate, starting from k = 0 and packing as many intervals
+of length i ∈ { 3, 4, 6, 8} as possible (up to a limit of di intervals of length
+i) into each interval [ ak + 1,ak+1] in turn, starting from the right endpoint
+and working toward the left, so the union of intervals at any p oint in the
+construction is “right-justiﬁed.” For each k, we denote by Ik, 1,Ik, 2,...,I k,p k
+the successive elements of Σ in [ ak + 1,ak+1]
+If the packing process terminates before all the upper limit sdi have been
+achieved, then the number of free spaces in all the [ ak + 1,ak+1] combined
+is ≤ 7m. Since b1 = ﬁx(β ) ≥ 7m, we have
+3d3 + 4d4 + 6d6 + 8d8 = 2c2 + 3c3 + 4c4 ≤ b2 +b3 +b4 + · · · ≤n − 7m,
+so
+|{(k,l ) : |Ik,l |=i}|=di
+for i = 3, 4, 6, 8.
+We deﬁnelk so that for each k from 0 to m − 1, the union of the intervals
+Ik, 1,Ik, 2,...,I k,p k is [lk + 1,ak+1]. We write ek,i for the left endpoint of Ik,i
+and deﬁne
+(6.1) Sk,i =
+
+
+
+
+
+
+
+
+
+Tek,i(2, 0, 1) |Ik,i |= 3
+Tek,i(3, 0, 1, 2) |Ik,i |= 4
+Tek,i(5, 2, 0, 3, 4, 1) |Ik,i |= 6
+Tek,i(7, 5, 2, 0, 3, 6, 4, 1) |Ik,i |= 8
+Note in particular that the ﬁrst term of Sk,i is the last term of Ik,i . If
+|Ik,i | = 3 (resp. |Ik,i | = 6), we say that ek,i + 1 is a special point of odd
+type (resp. even type ). Intervals of length 4 in Σ have no special points. If
+|Ik,i |= 8, there are two special points of even type in the interval: ek,i + 1
+and ek,i + 6. We assign each special point a label, i.e., a positive int eger λ,
+22 MICHAEL LARSEN AND ANER SHALEV
+in such a way that there are b2λ +1 special points of odd type with label λ
+and b2λ +2 special points of even type with label λ.
+LetXk denote the interval [ak + 1,lk] and Yk the subset of Xk consisting
+of ak +x such that x is odd and ak +x + 1 ≤ lk. Thus |Xk| ≤ 2|Yk|+ 1.
+Setting
+X =X0 ∪ X1 ∪ · · · ∪Xm− 1, Y =Y0 ∪ Y1 ∪ · · · ∪Ym− 1,
+we have |X| ≤ 2|Y |+m. Thus,
+|Y | ≥ n − 3d3 − 4d4 − 6d6 − 8d8 − m
+2 = n − 2c2 − 3c3 − 4c4 − m
+2
+= −m +b1
+2 +
+∞∑
+i=5
+⌊i − 3
+2 ⌋bi ≥ 3m +
+∞∑
+i=5
+⌊i − 3
+2 ⌋bi
+(6.2)
+There exists a permutation ǫ ∈ Sn with the following properties:
+• Every cycle of length ≥ 2 contains exactly one element of [1 ,n ] \Y ,
+and this element is special.
+• The length of a cycle containing a special point of label λ is λ.
+The existence of ǫ follows from (6.2).
+For 0 ≤ k<m , we deﬁne a cycle
+δk = (j(Sk, 1,...,S k,p k,Rk)),
+where Rk is the reverse of the sequence [ ak + 1,lk]. Thus, δ0δ1 · · ·δm− 1
+belongs to A. We deﬁne
+δ =ǫδ0 · · ·δm− 1ǫ− 1 ∈ A.
+We claim γδ belongs to B, i.e., that it has exactly bj j-cycles for each j. As∑
+jjbj =n, it suﬃces to prove that there are at least bj j-cycles for each j.
+There are four cases to check: j = 1, j = 2, j ≥ 3 odd, and j ≥ 4 even.
+Forj = 1, we note that every element of x ∈ Rk such that x and x − 1
+are ﬁxed by ǫ satisﬁes γδ(x) = γ(x − 1) = x. Thus,
+ﬁx(γδ) ≥ n −
+∑
+k,i
+|Ik,i | − 2|Y \ﬁx(ǫ)|
+=n − 3d3 − 4d4 − 6d6 − 8d8 − 2|Y \ﬁx(ǫ)|
+=n − 2c2 − 3c3 − 4c4 − 2|Y \ﬁx(ǫ)|
+=n − 2b2 − 3b3 − 4b4 − 3b5 − 4b6 − · · · −2|Y \ﬁx(ǫ)|
+=n − 2b2 − 3b3 − 4b4 − 5b5 − 6b6 − · · ·
+=b1.
+WORD MAPS 23
+Forj = 2 we consider all Ik,i ∈ Σ which are of length 4. For each such
+interval,γδ maps
+ek,i ↦→ γδk(ek,i ) = γ(ek,i + 1) = ek,i + 2
+ek,i + 1 ↦→ γδk(ek,i + 1) = γ(ek,i + 2) = ek,i + 3
+ek,i + 2 ↦→ γδk(ek,i + 2) = γ(ek,i − 1) = ek,i
+ek,i + 3 ↦→ γδk(ek,i + 3) = γ(ek,i ) = ek,i + 1.
+This produces a total of 2 d4 2-cycles. If there is an interval Ik,i of length 6,
+then γδ maps
+ek,i + 5 ↦→ γδk(ek,i + 5) = γ(ek,i + 2) = ek,i + 3
+ek,i + 3 ↦→ γδk(ek,i + 3) = γ(ek,i + 4) = ek,i + 5.
+Thus,γδ has at least 2 d4 +d6 =c2 =b2 cycles of length 2.
+Ifj ≥ 3 is odd, let λ = (j − 1)/ 2. There are bj special points of odd type
+with label λ. Each belongs to an interval Ik,i of length 3. The special point
+in such an interval is ek,i + 1. Thus γδ maps
+ek,i ↦→ ǫ(ek,i + 1) + 1
+ǫr(ek,i + 1) + 1 ↦→ ǫr+1(ek,i + 1) + 1, 1 ≤ r<λ
+ek,i + 2 ↦→ ek,i + 1
+ǫr+1(ek,i + 1) ↦→ ǫr(ek,i + 1), 1 ≤ r<λ
+ǫ(ek,i + 1) ↦→ ek,i
+producing a j-cycle. It follows that γδ has at least bj j-cycles.
+If j ≥ 4 is even, let λ =j/ 2 − 1. There are bj special points of even type
+with label λ. Each special point with label λ in an interval Ik,i of length 8
+contributes a j-cycle because γδ maps
+ek,i ↦→ ek,i + 4
+ek,i + 4 ↦→ ǫ(ek,i + 1) + 1
+ǫr(ek,i + 1) + 1 ↦→ ǫr+1(ek,i + 1) + 1, 1 ≤ r<λ
+ek,i + 2 ↦→ ek,i + 1
+ǫr+1(ek,i + 1) ↦→ ǫr(ek,i + 1), 1 ≤ r<λ
+ǫ(ek,i + 1) ↦→ ek,i
+24 MICHAEL LARSEN AND ANER SHALEV
+and
+ek,i + 3 ↦→ ǫ(ek,i + 6) + 1
+ǫr(ek,i + 6) + 1 ↦→ ǫr+1(ek,i + 6) + 1, 1 ≤ r<λ
+ek,i + 7 ↦→ ek,i + 6
+ǫr+1(ek,i + 6) ↦→ ǫr(ek,i + 6), 1 ≤ r<λ
+ǫ(ek,i + 6) ↦→ ek,i + 5
+ek,i + 5 ↦→ ek,i + 3.
+Likewise, if Ik,i , of length 6, has a special point with label λ, then γδ maps
+ek,i ↦→ ek,i + 4
+ek,i + 4 ↦→ ǫ(ek,i + 1) + 1
+ǫr(ek,i + 1) + 1 ↦→ ǫr+1(ek,i + 1) + 1, 1 ≤ r<λ
+ek,i + 2 ↦→ ek,i + 1
+ǫr+1(ek,i + 1) ↦→ ǫr(ek,i + 1), 1 ≤ r<λ
+ǫ(ek,i + 1) ↦→ ek,i.
+Thus, again we have at least bj j-cycles, and this ﬁnishes the proof. □
+7. Alternating groups, III: characters and probability
+Here we prove a character bound for symmetric groups which ma y have
+some independent interest, and combine it with Proposition 6.1 and a probabilistic argument to prove that conjugacy classes of permu tations which
+contain a small number of cycles have the property that their squares cover
+all of An.
+This proves Theorem 1.1 and answers an old question of J. L. Br enner
+(but falls short of his strong conjecture [Br]). For our purp oses, however,
+it is more than enough; combining it with Theorem 1.3, we dedu ce Theorem 1.5, giving a best possible solution for Waring’s proble m for An. This
+will complete the proof of all results stated in the Introduc tion.
+Recall that the irreducible characters χ ∈ Irr (Sn) are parameterized by
+partitions λ of n, which correspond to Young diagram. Let χλ be the character corresponding to a diagram λ.
+We deﬁne layers of a diagram λ as follows. The ﬁrst layer consists of
+the ﬁrst row and column of λ. Once we remove the ﬁrst layer we obtain a
+smaller diagram λ ′. The layers of λ are deﬁned recursively as the layers of
+λ ′ together with the ﬁrst layer of λ.
+We shall use the Murnaghan-Nakayama Rule [Ja, 21.1]. By a rim rhook ν in a λ-diagram, we mean a connected part of the rim containing r
+WORD MAPS 25
+nodes, which can be removed to leave a proper diagram, denote d by λ\ν.
+If, moving from right to left, the rim hook ν starts in row i and ﬁnishes
+in column j, then the leg-length l(ν) is deﬁned to be the number of nodes
+below the ij-node in the λ-diagram.
+Proposition 7.1. (Murnaghan-Nakayama Rule) Let ρπ ∈ Sn, where ρ is
+an r-cycle and π is a permutation of the remaining n − r points. Then
+χλ (ρπ ) =
+∑
+ν
+(− 1)l(ν)χλ \ ν (π ),
+where the sum is over all rim r-hooksν in a λ-diagram.
+We shall now bound the character values of a permutation as a f unction
+of its number of cycles alone.
+Theorem 7.2. Let σ ∈ Sn be a permutation with k cycles (including 1cycles). Then
+|χ (σ )| ≤ 2k− 1k!
+for all irreducible characters χ of Sn.
+Proof. We argue by induction on k. For k = 1 our permutation σ is an ncycle, and it is a well known consequence of Proposition 7.1 t hat |χ (σ )| ≤ 1,
+and moreover, if χ (σ ) ̸= 0 then the Young diagram of χ consists of a single
+layer.
+Suppose now that k ≥ 2 and let χ = χλ . Write σ = ρπ where ρ is an
+r-cycle and π is a permutation on the remaining n − r points. We now apply
+the Murnaghan-Nakayama Rule above. Since π decomposes into k − 1 cycles
+induction yields
+|χλ \ ν (π )| ≤ 2k− 2(k − 1)!
+for all rim r-hooks ν in the diagram λ.
+To complete the proof we may assume χλ (σ ) ̸= 0.
+Claim: The number rim r-hooks in λ is at most 2 k.
+To show this ﬁrst note that, by repeatedly applying the Murna ghanNakayama Rule, we see that λ has at most k layers (otherwise χλ (σ ) = 0).
+Now, each rim r-hook ν of λ has a starting point, its rightmost upmost
+point, and an end point, its leftmost downmost point. Each of these points
+determines the rim r-hook uniquely (by going r steps on the boundary in
+the suitable direction). We deﬁne the starting point and the end point of
+each layer of the diagram λ in a similar manner.
+Since the remaining part λ\ν of the diagram should be connected, either
+the starting point of ν is the starting point of some layer of λ, or the end
+point of ν is the end point of some layer of λ. Since there are at most k
+layers, it now follows that the number of rim r-hooks in λ is at most 2 k,
+proving the claim.
+26 MICHAEL LARSEN AND ANER SHALEV
+The Murnaghan-Nakayama Rule now expresses χλ (σ ) as a sum of at most
+2k terms, each of absolute value at most 2 k− 2(k − 1)!. This yields
+|χλ (σ )| ≤ 2k ·2k− 2(k − 1)! = 2k− 1k!,
+completing the proof of the theorem.
+□
+Note that |χ (σ )|may be close to (k!)1/ 2, for instance take σ = 1 (so k =n)
+and χ a character of highest degree. This shows that the upper boun d in
+Theorem 7.2 cannot be signiﬁcantly improved, at least for la rge k.
+Given conjugacy classes Ci =xG
+i (i = 1, 2) in a ﬁnite group G, let PC1,C 2
+denote the distribution of the random variable y = y1y2, where yi ∈ Ci is
+randomly chosen with uniform distribution on Ci. The following is standard.
+Lemma 7.3. With the above notation we have, for g ∈ G,
+PC1,C 2(g) = |G|− 1 ∑
+χ ∈Irr (G)
+χ (x1)χ (x2)χ (g− 1)
+χ (1) .
+For a ﬁnite group G deﬁne
+ζG(s) =
+∑
+χ ∈Irr (G)
+χ (1)−s
+where s is a real number.
+We need the following two results from [LiSh2], related to ch aracter degrees.
+Lemma 7.4. Fors> 0 we have ζSn(s) = 2 + O(n−s).
+Lemma 7.5. Letλ =λ 1,...,λ m be a partition of n such that λ 1 ≥ m. Let
+t =n − λ 1. Then
+(i) χλ (1) ≥
+( n−t
+t
+)
+.
+(ii) If t ≥ ǫn for some ǫ> 0 then χλ (1) ≥ cn wherec> 1 depends on ǫ.
+We can now prove Theorem 1.1.
+Proof. Throughout this proof, we assume without further comment th at n
+is suﬃciently large. Let σ be a permutation in Sn with
+cyc(σ ) ≤ n1/ 128.
+We have to show that ( σSn)2 =An.
+We ﬁrst claim that
+(7.1) |χ (σ )| ≤ χ (1)1/ 63,
+for all irreducible characters χ of Sn.
+This is clear if χ (1) = 1 so suppose χ = χλ is a non-linear character,
+whereλ =λ 1,...,λ m is a partition. Since we are only interested in absolute
+values, we may replace a partition by its transpose and assum e that λ 1 ≥ m
+(so Lemma 7.5 is applicable).
+WORD MAPS 27
+Writeλ 1 =n − t andk =cyc(σ ). Then Theorem 7.2 and our assumption
+on k yield
+(7.2) |χλ (σ )| ≤ 2k− 1k! ≤ (n1/ 128)n1/128
+.
+If t ≥ n/ 3, Lemma 7.5(ii) gives an exponential lower bound on χλ (1), so
+(7.1) follows.
+If n1/ 127 ≤ t<n/ 3, then Lemma 7.5(i) yields
+χ (1) ≥
+( n − t
+t
+)
+≥ 2t ≥ 2n1/127
+.
+Combining this with (7.2) we obtain (7.1).
+Finally, suppose 1 ≤ t<n 1/ 127. Let f denote the number of ﬁxed points
+of σ . We use [MS, (14)] to show that
+|χ (σ )| ≤ t!
+∑
+a,b ≥ 0,a +2b≤t
+( f
+a
+)( k − f
+b
+)
+≤ t!
+∑
+0≤i≤t
+( k
+i
+)
+≤ t! ·(t + 1) ·kt.
+Using the bounds k ≤ k0 :=n1/ 128 and t ≤ t0 :=n1/ 127 this gives
+|χ (σ )| ≤ (t0k0)t ≤ n(1/ 128+1/ 127)t.
+It is easy to see that for t ≤ n1/ 127 and ﬁxed δ >0 we have
+n(1− 1/ 127−δ)t ≤
+( n − t
+t
+)
+.
+Choosingδ such that 1/ 128 + 1/ 127 = (1 − 1/ 127 − δ) ·1/ 63 and noting that
+δ >0 it follows that
+|χ (σ )| ≤
+( n − t
+t
+) 1/ 63
+≤ χ (1)1/ 63.
+This completes the proof of (7.1).
+Now, let C =σSn and let π denote an even permutation.
+Ifπ has more than 7n1/ 128 ﬁxed points, then we have π ∈ C 2 by Proposition 6.1. We therefore assume from now on that ﬁx( π )< 7n1/ 128. By [MS,
+Theorem B], this implies
+|χ (π − 1)| ≤ |χ (1)|30/ 31.
+By Lemma 7.3 we have
+PC,C (π ) = 1
+n!
+∑
+χ ∈Irr (Sn)
+χ (σ )2χ (π − 1)
+χ (1) .
+The condition on the sign of π shows that the contribution of the linear
+characters of Sn to PC,C (π ) is 2/n !. On the other hand,
+⏐
+⏐
+⏐
+∑
+{χ : χ (1)>1}
+χ (σ )2χ (π − 1)
+χ (1)
+⏐
+⏐
+⏐≤
+∑
+{χ : χ (1)>1}
+(χ (1)1/ 63)2χ (1)30/ 31
+χ (1) =
+∑
+{χ : χ (1)>1}
+χ (1)−s,
+28 MICHAEL LARSEN AND ANER SHALEV
+where s = 1/ 31 − 2/ 63 > 0. Combining this with Lemma 7.4 we conclude
+that
+|PC,C (π ) − 2/n !| ≤ 1
+n!(ζSn(s) − 2) = O(n−s/n !).
+This implies PC,C (π )> 0, so π ∈ C 2.
+The theorem is proved.
+□
+Combining various tools above, we can ﬁnally prove Theorem 1 .5.
+Proof. We have to show, given words w1,w 2 ̸= 1, that w1(An)w2(An) = An
+for all n ≥ N (w1,w 2).
+We use Theorem 1.3 and its notation. Let N =N (w1,w 2) := maxi=1, 2N (wi),
+and let n ≥ N . Then Theorem 1.3 shows that there exists a permutation
+σn ∈ w1(An)∩w2(An) consisting of at most 23 cycles (of which at least 6 are
+of length 1. so the An-conjugacy class of σn is the same as its Sn-conjugacy
+class). Clearly σSn
+n ⊆ w1(An) ∩ w2(An) and by Theorem ?? we have
+w1(An)w2(An) ⊇ (w1(An) ∩ w2(An))2 ⊇ (σSn
+n )2 =An.
+The theorem is proved.
+□
+8. Intersection theorems
+Our methods enable us to deduce somewhat surprising results concerning
+intersections of the form ∩k
+i=1wi(G), where w1,...,w k are given words. Note
+that in free groups such intersection may well be trivial. Ho wever, we can
+prove that in the groups considered in this paper such inters ections are very
+large. More precisley, we have
+Theorem 8.1. Letk ≥ 1 and let w1,...,w k be non-trivial words.
+(i) There exists N =N (w1,...,w k) such that for all n ≥ N we have
+(w1(An) ∩ ... ∩ wk(An))2 =An;
+(ii) For every ǫ> 0 there exists N =N (w1,...,w k,ǫ) such that
+|w1(An) ∩ ... ∩ wk(An)| ≥ n− 4−ǫ|An|.
+Indeed, part (i) follows from Theorems 1.1 and 1.3, using the fact that,
+for n ≫ 0, σSn
+n ⊆ ∩ k
+i=1wi(An).
+The proof of part (ii) is similar to that of Theorem 1.9.
+Our next result is an intersection theorem for groups of Lie t ype.
+Theorem 8.2. Letk ≥ 1 and let w1,...,w k be non-trivial words. Let G a
+simply connected almost simple algebraic group over a ﬁnite ﬁeld Fq.
+(i) There is a positive constant c depending only on w1,...,w k and dimG
+such that
+|w1(G(Fq)) ∩ ... ∩ wk(G(Fq))| ≥ c|G(Fq)|.
+WORD MAPS 29
+(ii) There is a number N depending only on w1,...,w k such that, if G
+has rank r and is not of type Ar or 2Ar, and |G(Fq)| ≥ N , then
+|w1(G(Fq)) ∩ ... ∩ wk(G(Fq))| ≥ cr− 1|G(Fq)|,
+wherec> 0 is an absolute constant.
+(iii) There is a number N depending only on w1,...,w k and dimG such
+that, if Γ = G(Fq)/Z (G(Fq)) is a ﬁnite simple group associated with G, and
+|Γ| ≥ N , then
+(w1(Γ) ∩ ... ∩ wk(Γ))2 = Γ.
+The proofs of all three statements are modelled on the k = 1 case, replacing the morphism w : Gn → G (or in the case of (ii), w : SLn
+2 → SL2) with
+the ﬁber product, relative to G, of the morphisms wi : Gni → G (respectively
+wi : SLni
+2 → SL2).
+References
+[AH] Z. Arad and M. Herzog (Eds), Products of Conjugacy Classes in Groups ,
+Springer Lecture Notes 1112, Springer-Verlag, Berlin, 1985.
+[SGA 4 3] M. Artin, A. Grothendieck and J.L. Verdier, Avec la collabo ration de P.
+Deligne et B. Saint-Donat, Th´ eorie des topos et cohomologie ´ etale des sch´ emas.
+Tome 3. S´ eminaire de G´ eom´ etrie Alg´ ebrique du Bois-Marie 1963–1964 , Lecture Notes in Mathematics, Vol. 305. Springer-Verlag, Berl in-New York, 1973.
+[Ay] R. Ayoub, On Rademacher’s extension of the Goldbach-Vi nogradoﬀ theorem,
+Trans. Amer. Math. Soc. 74 (1953), 482–491.
+[Be] E. Bertram, Even permutations as a product of two conjug ate cycles, J. Comb.
+Th. Ser. A 12 (1972), 368–380.
+[Bo] A. Borel, On free subgroups of semisimple groups, Enseign. Math. 29 (1983),
+151–164.
+[Br] J.L. Brenner, Covering theorems for ﬁnite nonabelian s imple groups. IX. How
+the square of a class with two nontrivial orbits in Sn covers An, Ars Combinatoria 4 (1977), 151–176.
+[De] P. Deligne, La conjecture de Weil. II. Inst. Hautes ´Etudes Sci. Publ. Math. 52
+(1980), 137–252.
+[EGH] E.W. Ellers, N. Gordeev and M. Herzog, Covering number s for Chevalley
+groups, Israel J. Math. 111 (1999), 339-372.
+[EGA IV 1] A. Grothendieck, ´El´ ements de g´ eom´ etrie alg´ ebrique. IV.´Etude locale des
+sch´ emas et des morphismes de sch´ emas I,Inst. Hautes ´Etudes Sci. Publ. Math.
+20 (1964), 259 pp.
+[EGA IV 2] A. Grothendieck, ´El´ ements de g´ eom´ etrie alg´ ebrique. IV.´Etude locale des
+sch´ emas et des morphismes de sch´ emas II, Inst. Hautes ´Etudes Sci. Publ.
+Math. 24 (1965), 231 pp.
+[EGA IV 3] A. Grothendieck, ´El´ ements de g´ eom´ etrie alg´ ebrique. IV.´Etude locale des
+sch´ emas et des morphismes de sch´ emas III, Inst. Hautes ´Etudes Sci. Publ.
+Math. 28 (1966), 255 pp.
+[EGA IV 4] A. Grothendieck, ´El´ ements de g´ eom´ etrie alg´ ebrique. IV.´Etude locale des
+sch´ emas et des morphismes de sch´ emas IV, Inst. Hautes ´Etudes Sci. Publ.
+Math. 32 (1967), 361 pp.
+[ET] P. Erd˝ os and P. Tur´ an, On some problems of a statistica l group theory. I, Z.
+Wahrscheinlichkeitstheorie Verw. Gabiete 4 (1965), 175-186.
+30 MICHAEL LARSEN AND ANER SHALEV
+[Hu] D. Husemoller, Ramiﬁed coverings of Riemann surfaces. Duke Math. J. 29
+(1962), 167–174.
+[Ja] G.D. James, The representation theory of the symmetric groups , Lecture Notes
+in Math. 682, Springer-Verlag, Berlin, 1978.
+[J] G.A. Jones, Varieties and simple groups, J. Austr. Math. Soc. 17 (1974), 163173.
+[L] M. Larsen, Word maps have large image, Israel J. Math. 139 (2004), 149–156.
+[L2] M. Larsen, How often is a partition an n’th power?, arXiv: math.CO/9712223.
+[LP] M. Larsen and R. Pink, Finite subgroups of algebraic gro ups. Preprint, 1999.
+[LL] R. Lawther and M.W. Liebeck, On the diameter of a Cayley g raph of a simple
+group of Lie type based on a conjugacy class, J. Comb. Theory, Ser. A 83
+(1998), 118-137.
+[LiSh] M.W. Liebeck and A. Shalev, Diameter of simple groups : sharp bounds and
+applications, Annals of Math. 154 (2001), 383–406.
+[LiSh2] M.W. Liebeck and A. Shalev, Fuchsian groups, coveri ngs of Riemann surfaces,
+subgroup growth, random quotients and random walks, J. Algebra 276 (2004),
+552–601.
+[Lish3] M.W. Liebeck and A. Shalev, Fuchsian groups, ﬁnite s imple groups, and representation varieties, Invent. Math. 159 (2005), 317–367.
+[MZ] C. Martinez and E.I. Zelmanov, Products of powers in ﬁni te simple groups,
+Israel J. Math. 96 (1996), 469–479.
+[Ma] H. Matsumura, Commutative Algebra, W. A. Benjamin Co., New York, 1970.
+[MS] T.W. M¨ uller and J-C. Schlage-Puchta, Character Theor y of Symmetric
+Groups, Subgroup Growth of Fuchsian Groups, and Random Walk s, preprint,
+arXiv: math.GR/0305260.
+[Na] M.B. Nathanson, Additive Number Theory: the classical bases , Graduate Texts
+in Mathematics 164, Springer, 1996.
+[NS1] N. Nikolov and D. Segal, On ﬁnitely generated proﬁnite groups, I: strong
+completeness and uniform bounds, to appear in Annals of Math.
+[NS2] N. Nikolov and D. Segal, On ﬁnitely generated proﬁnite groups, II: product
+decompositions of quasisimple groups, to appear in Annals of Math.
+[Pi] R. Pink, Compact subgroups of linear algebraic groups J. Algebra 206 (1998),
+no. 2, 438–504.
+[SW] J. Saxl and J.S. Wilson, A note on powers in simple groups , Math. Proc. Camb.
+Phil. Soc. 122 (1997), 91–94.
+[Sh] A. Shalev, Word maps, conjugacy classes, and a non-comm utative Waringtype theorem, to appear in Annals of Math.
+[Ti] J. Tits, Classiﬁcation of algebraic semisimple groups , in Algebaic Groups and
+Discontinuous Subgroups (Proc. Sympos. Pure Math., Boulder, Colo., 1965),
+Amer. Math. Soc., Providence, R.I., 1966, pp. 33–62.
+[W] J.S. Wilson, First-order group theory, in Inﬁnite Groups 1994 , de Gruyter,
+Berlin, 1996, pp. 301–314.
+E-mail address : larsen@math.indiana.edu
+Department of Mathematics, Indiana University, Bloomingt on, IN 47405,
+U.S.A.
+E-mail address : shalev@math.huji.ac.il
+Einstein Institute of Mathematics, Hebrew University, Giv at Ram, Jerusalem
+91904, Israel

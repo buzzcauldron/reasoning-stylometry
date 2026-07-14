@@ -1,0 +1,17 @@
+Heron's formula is named after Hero of Alexandria. The formula is a specialization of Brahmagupta's formula for cyclic quadrilaterals, since, after all, every triangle is a cyclic quadrilateral with two coalesced vertices. The proof below exploits the dissection of a triangle induced by the presence of the incircle.
+
+In triangle ABC, the lengths of the segments from the vertices to the points of tangency of the incircle are found to be
+
+x = s − a, y = s − b, z = s − c,
+
+so that Heron's formula can also be written as S² = sxyz.
+
+Let r be the inradius of triangle ABC. The rearrangement of the six triangles formed by this dissection shows immediately that
+
+S = rs.
+
+Let I be the incenter and denote w = AI. From the resulting diagram,
+
+xyz = r²(x + y + z) = r²s.
+
+It then follows that sxyz = r²s² = S², which completes the proof.

@@ -1,0 +1,5367 @@
+arXiv:math/0310398v1  [math.FA]  24 Oct 2003
+
+THE FAILURE OF RATIONAL DILATION ON A TRIPLY CONNECTED DOMAI N
+
+MICHAEL A. DRITSCHEL1 AND SCOTT MCCULLOUGH2
+
+ABSTRACT . For R a bounded triply connected domain with boundary consisting of disjoint Jordan
+
+loops there exists an operator T on a complex Hilbert space H so that the closure of R is a spectral
+
+set for T , but T does not dilate to a normal operator with spectrum in B, the boundary of R. There is
+
+considerable overlap with the construction of an example on such a domain recently obtained by Agler,
+
+Harland and Rafael [5] using numerical computations and work of Agler and Harland [4].
+
+1. I NTRODUCTION
+
+LetR denote a domain in C with boundaryB. LetX denote the closure ofR.
+
+An operatorT on a complex Hilbert space H hasX as a spectral set ifσ (T ) ⊂ X and
+
+∥f (T )∥ ≤ ∥ f ∥R = sup{|f (z)|:z ∈ R}
+
+for every rational functionf with poles offX. The expressionf (T ) may be interpreted either in terms
+
+of the Riesz functional calculus, or simply by writing the rational functionf aspq− 1 for polynomials
+
+p andq, in which casef (T ) = p(T )q(T )− 1.
+
+The operatorT has a normalB-dilation if there exists a Hilbert spaceK containing H and a normal
+
+operatorN on K so that
+
+f (T ) = PHf (N )|H, (1.1)
+
+for every rational functionf with poles off the closure ofR. Here PH is the orthogonal projection of
+
+K onto H.
+
+It is evident that if T has a normal B-dilation, then T has X as a spectral set. The Sz.-Nagy
+
+Dilation Theorem implies that the closed unit disk is a spectral set forT if and only ifT has a unitary
+
+dilation. A deep result of Agler says that if the closure of an annulus A is a spectral set forT , thenT
+
+has a normal boundary of A-dilation [2]. Despite a great deal of effort, there has unti l recently been
+
+little progress in determining whether or not these example s are typical or exceptional for ﬁnitely
+
+connected spectral sets. The problem may be formulated in te rms of contractive representations of
+
+the algebra of rational functions on the spectral set. Arves on showed [8] that rational dilation holds
+
+precisely when such representations are automatically com pletely contractive. Hence the problem
+
+bears some resemblance to the famous problem of Halmos on sim ilarity to a contraction solved by
+
+Pisier [30], where the question hinged on deciding whether bounded representations of the disc algebra
+
+are completely bounded.
+
+Agler, Harland and Rafael [5] have recently given an example of a triply connected domain R
+
+and a 4 × 4 matrix withX as a spectral set such that this matrix does not have a normal B-dilation.
+
+In this paper we give a proof that for any bounded triply conne cted domain with rectiﬁable disjoint
+
+Date: October 30, 2018.
+
+2000 Mathematics Subject Classiﬁcation. 47A25 (Primary), 30C40, 30E05, 30F10, 46E22, 47A20, 47A48 (Secondary).
+
+Key words and phrases. dilations, spectral sets, multiply connected domains, inner functions, Herglotz representations,
+
+Fay reproducing kernels, Riemann surfaces, theta functions, transfer functions, Nevanlinna-Pick interpolation.
+
+1Research supported by the EPSRC. 2Research supported by the NSF.
+
+boundary components, there is an operator T withX as a spectral set which does not have a normal
+
+B-dilation. It can be shown that T can be taken to be a matrix [27], but the argument does not give
+
+a bound on the size. Our proof, in contrast to that of Agler, Ha rland and Raphael, does not use
+
+numerical computations. Nevertheless it borrows freely from and overlaps considerably with [4], [3],
+
+[5]; see also [6], [11], [12]. We implicitly employ the rank o ne bundle shifts over R [1], [31], the
+
+representation for the corresponding reproducing kernels in terms of theta functions due to Fay [20]
+
+and Ball and Clancey [10] (see also [15], [16], [13], [32]), a nd some elementary compact Riemann
+
+surface theory.
+
+For the remainder of the paper we assume− 1<c 1 < 0, 0<c 2 < 1 are two points on the real axis,
+
+0 < rk < min |ck|, |1 − ck|, and that R is a region obtained by removing disks with centers ck and
+
+radiirk from the unit disk. By [14], any bounded triply connected region with boundary components
+
+consisting of disjoint Jordan loops is conformally equival ent to an annulus with a disk removed. By
+
+scaling and rotating if necessary, we assume that the outer b oundary of the annulus is the unit circle
+
+and that the center of the removed disk is on the real axis. By c hoosing a point between the removed
+
+disk and the central disk of the annulus and applying a M¨ obius transformation mapping the unit disk to
+
+itself and the chosen point to the origin, we get a regionR of the sort described initially. Hence there
+
+is no loss of generality in restricting ourselves to such regions. Note that in this case, the boundaryB
+
+ofR consists of three components,B0 = {|z|= 1},B1 = {|z − c1|=r1} andB2 = {|z +c2|=r2}.
+
+We setX =R ∪ B.
+
+As it happens, only three parameters are really needed to dis tinguish conformally distinct triply
+
+connected domains, so there is some redundancy in using the four parametersc1,c 2,r 1,r 2. However,
+
+we will later require that no minimal inner function on our do main have a zero of multiplicity three
+
+at 0 (all such functions are normalized to have 0 as a zero). We will show that in choosing the point
+
+to move to the origin in going from the annulus with the disk re moved to unit disk with disks on
+
+either side of the imaginary axis removed in the previous par agraph, there is a choice that enforces
+
+this condition on the zeros of these inner functions (Corollary 2.13).
+
+The main theorem of the paper is the following (see also Agler, Harland and Rafael [5]).
+
+Theorem 1.1. ForR a bounded triply connected subset of C the boundary B of which consists of
+
+disjoint Jordan curves, there exists a Hilbert space H and a bounded operatorT on H so thatR is a
+
+spectral set forT , butT does not have a normalB-dilation.
+
+Here is the idea of the proof. We assume without loss of generality thatR is the unit disk with two
+
+smaller disks removed, each centered on the real axis and on opposite sides of the imaginary axis. Let
+
+C denote the cone generated by
+
+{H(z)(1 − ψ (z)ψ (w)∗ )H(w)∗ :ψ ∈ BH(X),H ∈ M2(H(X))},
+
+whereBH(X) is the unit ball in the supremum norm of the space of functions analytic in a neigh-
+
+borhood of X, M2(H(X)) the 2 × 2 matrices of functions analytic in a neighborhood of X. For
+
+F ∈ M2(H(X)), we set
+
+ρF = sup{ρ> 0 : I − ρ2F (z)F (w)∗ ∈ C}.
+
+It happens that ρF > 0 and that if F is analytic in a neighborhood of X and unitary-valued on
+
+B such that ρF < 1, then there exists a Hilbert space H and an operator T such that T has X
+
+as a spectral set, but T does not have a normal B-dilation (Theorem 5.2). We also show that if
+
+F ∈ M2(H(X)) is as above and ρF = 1, then under suitable assumptions regarding zeros, F has a
+
+Herglotz representation (Theorem 5.10). The kernel of the adjoint of multiplication byF in this case
+
+has its kernel spanned by a ﬁnite collection of reproducing kernels due to Fay (a variant on the Szeg˝ o
+
+kernel for harmonic measure—Lemma 5.11), and this results i n F being diagonalizable (Theorem
+
+5.13). Our counterexample is obtained by constructing a fun ction satisfying the boundary conditions
+
+and hypotheses concerning zeros mentioned above which is no t diagonalizable. For such a function,
+
+ρF < 1, and hence rational dilation fails.
+
+The organization of the paper differs somewhat from the outl ine of the proof mentioned above.
+
+Minimal inner functions play a key role throughout, so we begin by detailing the results on harmonic
+
+functions and analytic functions with positive real parts which are related to these inner functions via a
+
+Cayley transform. Much of this material can be found in Grunsky’s monograph [22] for more general
+
+planar domains. These inner functions are used to give a “sca lar” Herglotz representation theorem
+
+for functions analytic in a neighborhood of R with unimodular boundary values (Proposition 2.14).
+
+The reader is also referred to [5], where the importance of He rglotz representations in characterizing
+
+spectral sets is cogently presented.
+
+We then seemingly digress into some basic results on Riemannsurfaces and theta functions, which
+
+are useful in constructing meromorphic functions on a compact Riemann surface with a given zero/pole
+
+structure. The compact surfaceY we consider is very special: it is the double of our two holed region
+
+R, obtained topologically by gluing a second copy ofR to itself alongB. Our minimal inner functions
+
+extend to meromorphic functions on the double via reﬂection , and indeed the same goes for matrix
+
+valued inner functions.
+
+Using fairly elementary tools, we are able to say quite a bit about the zero structure of the minimal
+
+inner functions onR based on the parametrization of these functions. We then extend results on scalar
+
+inner functions to some 2 × 2 matrix valued inner functions, constructing a family of suc h functions
+
+which will ultimately give rise to our example of such a function with a particular zero structure which
+
+is not diagonalizable.
+
+We then turn to considering Szeg˝ o kernelsK a(ζ,z ) on R with respect to harmonic measure for
+
+the point a ∈ R. The truly remarkable fact discovered by Fay [20] is that the se kernels extend to
+
+meromorphic functions on the double Y . Indeed, Fay gives a representation for K a(ζ,z ) in terms of
+
+theta functions and the prime form. Ball and Clancey [10] giv e a similar representation, which is
+
+actually a bit more explicit as it only involves theta functi ons, for the n-torus family of Abrahamse
+
+kernels associated to a multiply connected domain of connec tivityn + 1. The explicit nature of the
+
+theta function representation of the meromorphic kernels K a(ζ,z ) allows the determination of their
+
+zero/pole structure. Next we consider certain ﬁnite linear combinations ofK a(ζ,z ) with coefﬁcients
+
+in C2, and show that if an analytic function is in the span of certain kernels, then it must be constant.
+
+This is used later to prove the diagonalisation result mentioned above.
+
+We next turn to representing nice 2 × 2 matrix valued inner functions—these are functions which
+
+are unitary valued on the boundary with what we term a “standa rd” zero set—see section 3.2 for the
+
+deﬁnition. First we show the connection between the failure of rational dilation andρF being strictly
+
+less than one for some contractive analytic function F with unitary boundary values. We make a
+
+brief foray into matrix measures, and then prove that when ρF = 1 for such functions, we have a
+
+nice representation for 1 − F (z)F (w)∗. Part of this relies on a Agler-Nevanlinna-Pick interpolat ion
+
+result (Proposition 5.8), proved using a transfer functionrepresentation, as well as a uniqueness result
+
+(Proposition 5.9). First we show that a Herglotz type representation holds over ﬁnite subsets of points
+
+inR for such an F . This is then extended to all of R via the interpolation theorem, and if the ﬁnite
+
+set of points was chosen in just the right way, this extension is unique. The result is what we term a
+
+“tight” representation.
+
+In the next section we return to Fay’s kernel, and use it to pro ve our diagonalization result. We
+
+show that some of the matrix inner functions constructed ear lier are not diagonalizable, proving our
+
+main result.
+
+The last section shows why, once we know that rational dilati on fails, that there is a ﬁnite dimen-
+
+sional example. This part is based on work of Paulsen [27].
+
+2. S PECTRAL SETS AND SOME FUNCTION THEORY ON R
+
+We begin with some standard material on spectral sets. Then w e review harmonic functions, ana-
+
+lytic functions of positive real part, and inner functions onR, the unit disk with two disks removed as
+
+described above.
+
+2.1. Spectral sets. Let H(X) denote complex valued functions which are analytic in a neighborhood
+
+ofX, andM2(H(X)) the 2 × 2 matrices of such functions. We likewise let R(X) denote the rational
+
+functions with poles off ofX, withM2(R(X)) deﬁned in the obvious manner. Forf in either H(X)
+
+orM2(H(X)) deﬁne,
+
+∥f ∥ = ∥f ∥R = sup{∥f (z)∥ :z ∈ R},
+
+where ∥f (z)∥ is the modulus of the scalarf (z) or the operator norm of the 2 × 2 matrixf (z) respec-
+
+tively.
+
+Throughout the rest of this sectionT is a bounded operator on the complex Hilbert space H which
+
+hasX as a spectral set.
+
+To the operatorT associate the homomorphism,φ T : R(X) → B (H) byφ T (p/q ) = p(T )q(T )− 1,
+
+p and q polynomials. When T has a normal B-dilation, equation (1.1) can then be expressed as
+
+φ T (f ) = PHf (N )|Hforf ∈ R (X). Using the Riesz functional calculus and Runge’s theorem, t he
+
+mapφ T extends continuously to φ T : H(X) → B (H). Conversely, a contractive unital homomor-
+
+phismπ : H(X) → B (H), that is a unital homomorphism satisfying
+
+∥π (f )∥ ≤ ∥ f ∥R
+
+forf ∈ H(X), determines an operator withX as a spectral set.
+
+IfT has a normalB-dilation as in (1.1) and ifG is inM2(R(X)), then
+
+G(T ) = PH⊕HG(N )|H ⊕ H.
+
+Since, by the maximum principle, ∥G(N )∥ = ∥G∥R, it follows that
+
+∥G(T )∥ ≤ ∥ G∥R. (2.1)
+
+Indeed, the same reasoning implies this for any G ∈ Mn(R(X)), or equivalently, that φ T is com-
+
+pletely contractive.
+
+If F ∈ M2(H(X)) (so that the entries Fj,ℓ of F are analytic in a neighborhood of X), but not
+
+necessarily rational, it then still makes sense to consider, on H ⊕ H , the operator
+
+F (T ) =
+
+(
+
+Fj,ℓ (T )
+
+)
+
+where theFj,ℓ (T ) are deﬁned using the Riesz functional calculus.
+
+Lemma 2.1. If T has X as a spectral set and a normal B-dilation, and if F ∈ H(X) is unitary
+
+valued onB, then
+
+∥F (T )∥ ≤ 1.
+
+Proof. Choose a compact setK so that the interior ofK containsX andK is a subset of the domain
+
+of analyticity ofF .
+
+Using Runge’s Theorem (entrywise), there exists a sequence Gn of rational 2 × 2 matrix valued
+
+functions with poles off K which converges uniformly to F onK. From standard results about the
+
+functional calculus, {Gn(T )} converges toF (T ) in operator norm. Since ∥F ∥R = 1 , the sequence
+
+{∥Gn∥R} converges to 1. An application of equation (2.1) and a limit argument completes the proof.
+
+□
+
+Remark 2.2. The set X is a complete spectral set for an operator T ∈ B (H) if ∥F (T )∥ ≤ ∥ F ∥R
+
+for everyn × n (no bound onn) matrix-valued rational function with poles off ofR (the norm ∥F ∥R
+
+deﬁned in the expected way). It is a result of Arveson that if X is a complete spectral set for T , then
+
+T has a normalB-dilation [9], [8], see also [29], [28]. (Arveson’s result is actually stated and proved
+
+for a commutingn-tuple of operators with a domain in Cn.)
+
+The following may be found in Conway [18].
+
+Lemma 2.3. Ifπ : H(X) → B (H) is a contractive unital homomorphism, then X is a spectral set
+
+forT =π (ζ). Hereζ(z) = z. Moreover, iff ∈ H(X), thenπ (f ) = f (T ).
+
+Proof. Givenλ /∈ X, the functionfλ (z) = (z − λ)− 1 ∈ H(X). Thus, asπ is a unital homomorphism,
+
+I =π (1) = π (fλ ·(ζ − λ)) = π (fλ )π (ζ − λ) = π (fλ )(T − λ).
+
+It follows that the spectrum ofT is inX.
+
+Iff = p/q ∈ R (X),p,q polynomials, then π (f ) = f (T ) sinceπ is a homomorphism and f (T )
+
+can be deﬁned asp(T )q(T )− 1. Since ∥π (f )∥ ≤ ∥ f ∥R, it follows thatX is a spectral set forT .
+
+Finally, iff ∈ H(X), then by Runge’s Theorem, there exists a sequence {fn} from R(X) which
+
+converges uniformly tof on a compact setK containingX. By continuity, both {fn(T )} converges
+
+tof (T ) and {π (fn)} converges to π (f ) (in operator norm). Since fn(T ) = π (fn), it follows that
+
+f (T ) = π (f ). □
+
+ForF ∈ M2(H(X)), deﬁne
+
+π (F ) =
+
+(
+
+π (Fj,ℓ )
+
+)
+
+.
+
+Thus,π is deﬁned entry-wise.
+
+Proposition 2.4. Supposeπ : H(X) → B (H) is a contractive unital homomorphism and let T =
+
+π (ζ). If T has a normalB-dilation and ifF is an analytic 2 × 2 matrix valued function analytic in a
+
+neighborhood ofR and unitary valued onB, then ∥π (F )∥ ≤ 1.
+
+Proof. By Lemma 2.1, ∥F (T )∥ ≤ 1. On the other hand, by Proposition 2.3,F (T ) = π (F ). □
+
+2.2. Harmonic functions. Most of the results and discussion in this section come from F isher’s
+
+book [21].
+
+For each pointz ∈ R there exists a measureω z onB such that ifh is continuous onX and harmonic
+
+inR, then
+
+h(z) =
+
+∫
+
+B
+
+h(ζ)dω z(ζ).
+
+The measureω z is a Borel probability measure onB and is known as harmonic measure for the point
+
+z.
+
+For z ∈ R, dω z and Lebesgue measure ds are mutually absolutely continuous. Thus there is a
+
+Radon-Nikodym derivative,
+
+P(·,z ) = dω z
+
+ds .
+
+This is also the Poisson kernel forR; that is,
+
+P(·,z ) = − 1
+
+2π
+
+∂
+
+∂ng(·,z ),
+
+whereg(·,z ) is the Green’s function for the pointz,n the outward normal.
+
+Ifh is a positive harmonic function inR, then there exists a positive measureµ such that
+
+h(z) =
+
+∫
+
+B
+
+P(ζ,z )dµ (ζ). (2.2)
+
+Conversely, given a positive measureµ, the formula (2.2) deﬁnes a positive harmonic function in R.
+
+Note that
+
+h(0) =
+
+∫
+
+B
+
+dµ =µ (B).
+
+Let hj denote harmonic measure for Bj. Thus, hj is the solution to the Dirichlet problem with
+
+boundary values 1 onBj and 0 onBℓ,ℓ ̸=j. Alternatively,
+
+hj(z) =
+
+∫
+
+Bj
+
+P(ζ,z )ds(ζ),
+
+whereds is normalized arc length measure forB (Nehari [26], section VII.3).
+
+The symmetry in the domainR yields a simple but useful symmetry for thehj.
+
+Lemma 2.5. Forz ∈ R,hj(z) = hj(z∗).
+
+Proof. This is obvious from the deﬁnition ofhj(z). □
+
+2.3. Analytic functions with positive real part. As in the last section, some of the results can be
+
+found in the book of Fisher [21]. The material on extreme poin ts of the set of normalized analytic
+
+functions with positive real part is a special case of that found in Grunsky [22].
+
+Ifµ andh are as in the formula (2.2), then the periodsPj(h) of the harmonic conjugate ofh around
+
+Bj,j = 0, 1, 2, are given by
+
+Pj(h) =
+
+∫
+
+B
+
+Qjdµ,
+
+whereQj is the normal derivative ofhj. Of courseh is the real part of an analytic function if and only
+
+ifPj(h) = 0 ,j = 0, 1, 2.
+
+Lemma 2.6. The functionsQj have no zeros onB. Moreover,Qj > 0 onBj andQj < 0 onBℓ for
+
+ℓ ̸=j.
+
+Before proving Lemma 2.6 we note the following consequence.
+
+Lemma 2.7. Ifh is a nonzero positive harmonic function on R which is the real part of an analytic
+
+function and ifh is represented in terms of a positive measureµ as in equation (2.2), thenµ (Bj)> 0
+
+for eachj.
+
+Proof. Ifµ (B1) = 0 , then, as Q1 < 0 onB0 ∪ B2, P1(h) < 0. Thus, µ (B1) > 0. Likewise for
+
+µ (B2).
+
+Leth0 denote harmonic measure for B0. Then ∑2
+
+0hj = 1 . Consequently, ∑2
+
+0Qj = 0. On the
+
+other hand, from the proof of Lemma 2.6,Q0> 0. Thus, ifµ (B0) = 0 , then
+
+2∑
+
+j=1
+
+∫
+
+B
+
+Qjdµ =
+
+2∑
+
+j,ℓ =1
+
+∫
+
+Bℓ
+
+Qjdµ
+
+= −
+
+2∑
+
+ℓ=1
+
+∫
+
+Bℓ
+
+Q0dµ< 0,
+
+implying that not bothPj(h) = 0 . So we must haveµ (B0)> 0. □
+
+Proof of Lemma 2.6. Lethj denote harmonic measure forBj. Thus,hj is the solution to the Dirichlet
+
+problem with boundary values 1 onBj and 0 onBℓ,ℓ ̸=j. Alternatively,
+
+hj(z) =
+
+∫
+
+Bj
+
+P(ζ,z )ds(ζ),
+
+whereds is normalized arc length measure forB.
+
+The functionsQj are related to thehj by
+
+Qj = ∂h j
+
+∂n ,
+
+where the derivative is with respect to the outward normal to the boundary. Note that, forj = 0, 1, 2,
+
+the partial derivatives ∂h j
+
+∂n are evidently nonnegative on Bj and nonpositive on Bℓ, for ℓ ̸= j, from
+
+which it follows thatQj ≥ 0 onBj andQj ≤ 0 onBℓ forℓ ̸=j.
+
+Let R′ denote the reﬂection of R about B0 byz ↦→ 1/z ∗. The functions hj naturally extend to
+
+harmonic functions onX ∪ R′ by
+
+hj(1/z ∗) = −hj(z).
+
+Thus,Qj extends toR′.
+
+IfQj were to have inﬁnitely many zeros in B, then Qj would be zero. By the Cauchy-Riemann
+
+equations, ˜hj, a harmonic conjugate of hj exists onB0 forj = 1, 2. Moreover, since Qj ≤ 0 onB0
+
+and has only ﬁnitely many zeros onB0, ˜hj is strictly decreasing (in the positive orientation onB0). In
+
+particular, ˜hj is one-one onB0. Observe, ifQj is zero at a pointζ ∈ B0, then, as the derivative ofhj
+
+tangential toB atζ is also 0, the function f =hj +i ˜hj is analytic near ζ and has zero derivative at
+
+ζ, It follows thatf is at least two to one in a sufﬁciently small neighborhoods ofζ. But then ˜hj could
+
+not be one to one onB0 nearζ, a contradiction. HenceQj < 0 onB0 (j = 1, 2).
+
+Similar arguments showQj > 0 onBj andQj < 0 onBℓ forℓ ̸=j. □
+
+Let Π = B0 × B1 × B2.
+
+Lemma 2.8. For eachp ∈ Π, the kernel of
+
+M (p) =
+
+(
+
+Q1(p0) Q1(p1) Q1(p2)
+
+Q2(p0) Q2(p1) Q2(p2)
+
+)
+
+is one-dimensional and spanned by a vector with all entries s trictly positive. In particular, there is a
+
+continuous functionτ : Π → R3 such thatτ(p) is entry-wise positive, the sum of the entries is one,
+
+andτ(p) is in the kernel ofM (p).
+
+Moreover,τ reﬂects the symmetry in the domain. Namely,
+
+τ(p0,p 1,p 2) = τ(p∗
+
+0,p 1,p 2) = τ(p0,p ∗
+
+1,p 2) = τ(p0,p 1,p ∗
+
+2).
+
+Proof. Computing the cross product of the rows ofM (p), we get the vector with entries
+
+Q1(p1)Q2(p2)−Q1(p2)Q2(p1),
+
+Q1(p2)Q2(p0)−Q1(p0)Q2(p2),
+
+Q1(p0)Q2(p1)−Q1(p1)Q2(p0).
+
+This vector is in the kernel of M (p) and by considering the signs of the Qj on the boundary compo-
+
+nentsBℓ, one easily checks that the sign of the last two entries are po sitive. It is also clear from the
+
+signs of the entries that the rows of M (p) are linearly independent. Hence M (p) is rank two and its
+
+kernel is one dimensional. To ﬁnish the proof of the ﬁrst part of the lemma, it remains to show that
+
+the sign of the ﬁrst entry is positive. Since ∑2
+
+j=0hj(P ) = 1 forP ∈ X, it follows that for P ∈ B1
+
+orP ∈ B2, that
+
+Q1(P ) +Q2(P ) = −Q0(P )> 0.
+
+Thus,
+
+Q1(p1)Q2(p2)−Q1(p2)Q2(p1)
+
+=Q1(p1)Q2(p2) +Q1(p1)Q1(p2) − Q1(p1)Q1(p2) − Q1(p2)Q2(p1)
+
+=Q1(p1)(Q2(p2) +Q1(p2)) − Q1(p2)(Q1(p1) +Q2(p1))
+
+= − Q1(p1)Q0(p2) +Q1(p2)Q0(p1).
+
+Examination of the signs of the terms on the right hand side ab ove shows that the ﬁrst term is indeed
+
+positive.
+
+To prove the last part of the lemma, simply note that the symme try in the domain implies each hj
+
+is symmetric,hj(z∗) = hj(z) and thus,Qj(z∗) = Qj(z). □
+
+The lemma allows the construction of canonical analytic functions of positive real part onR, since,
+
+by construction,
+
+hp =
+
+∑
+
+τj(p) P(·,p j) (2.3)
+
+is a positive harmonic function with no periods. Indeed, hp corresponds to the measure ∑τj(p)δpj
+
+in equation (2.2). In particular, by our normalization ofτ,
+
+hp(0) = 1.
+
+Letfp denote the analytic function such thatf (p) = 1 and with real parthp.
+
+LetH(R) be the locally convex metrizable topological space of holomorphic functions onR with
+
+the topology of uniform convergence on compact subsets ofR. The spaceH(R) has the Heine-Borel
+
+property; i.e., closed bounded subsets ofH(R) are compact. Let
+
+K = {f ∈ H(R) : f (0) = 1,f +f ∗ > 0}.
+
+The set K is easily seen to be closed.
+
+Lemma 2.9. The set K is compact.
+
+What needs to be shown is thatK is bounded—in other words that for each compact subsetK ⊂ R
+
+there exists anMK so that |f (z)| ≤ MK for allf ∈ K andz ∈ K.
+
+That K is bounded is straightforward in the case thatR is replaced by the unit disk, and we consider
+
+this case to begin with.
+
+LetPr(θ) denote the Poisson kernel andQr(θ) the conjugate Poisson kernel,
+
+Pr(θ) = 1 − r2
+
+1 +r2 − 2r cos(θ)
+
+Qr(θ) = 2r sin(θ)
+
+1 +r2 − 2r cos(θ).
+
+IfU is a positive harmonic in the unit disk D withU (0) = 1 , then there is a probability measureµ so
+
+that
+
+U (r exp(iθ)) =
+
+∫ π
+
+− π
+
+Pr(θ − t)dµ (t).
+
+The harmonic conjugateV ofU normalized byV (0) = 0 is given by
+
+V (r exp(iθ)) =
+
+∫ π
+
+− π
+
+Qr(θ − t)dµ (t).
+
+Thus, asµ is a probability measure, for each 0<r< 1 there is a constantMr so that if |z| ≤ r, then
+
+|U (z)|, |V (z)| ≤ Mr/ 2. By conformal mapping, the result is seen to hold for any boun ded simply
+
+connected domain.
+
+The proof of the lemma is based upon the above result for simpl y connected domains, using the
+
+fact thatR can be written as the union of two simply connected domains.
+
+Proof of Lemma 2.9. It sufﬁces to show that for each compact setK there is a constantMK so that if
+
+f ∈ K andz ∈ K so that |f (z)| ≤ MK. In fact, it is enough to work with the compact sets of the
+
+form
+
+Kǫ = {|z| ≤ 1 − ǫ} ∩ {|z +c1| ≥ r1 +ǫ} ∩ {|z +c2| ≥ r2 +ǫ},
+
+forǫ> 0 sufﬁciently small.
+
+First, observe that if f is holomorphic with positive real part on R and f (0) = 1 , then for each
+
+ǫ> 0 there is a constantNǫ so that for allz ∈ Kǫ,h(z) ≤ Nǫ, by virtue of the representation (2.2).
+
+Givenǫ> 0, the open simply connected sets
+
+R±
+
+ǫ =
+
+{
+
+z =a +bi ∈ K ǫ
+
+: ±b ≥ − min(r1,r 2)
+
+}
+
+contain 0 and their union isK ǫ
+
+. After conformal mapping from the disk taking 0 to 0, it follows that
+
+there existsM ±
+
+ǫ so that iff is analytic onR withf (0) = 1 , then for allz ∈ R±
+
+ǫ |f (z)| ≤ M ±
+
+ǫ . □
+
+Lemma 2.10 ([22]). The extreme points of K are precisely {fp :p ∈ Π}.
+
+Proof. It is evident that eachfp is an extreme point of K. So consider the converse.
+
+Letf ∈ K. The real part of f is a positive harmonic functionh withh(0) = 1 . Hence there exists
+
+a probability measureµ such that
+
+h(z) =
+
+∫
+
+B
+
+P(ζ,z )dµ (ζ).
+
+Suppose the support ofµ onB0 contains more than one point and so can be written as the unionof
+
+disjoint setsA1,A 2 ⊂ B0 withµ (Aj)> 0.
+
+Let
+
+α j,ℓ =
+
+∫
+
+Aℓ
+
+Qjdµ, ℓ = 1, 2.
+
+and
+
+κj,m =
+
+∫
+
+Bm
+
+Qjdµ, m = 1, 2.
+
+Sinceh is the real part of an analytic function
+
+0 =
+
+∫
+
+B
+
+Qjdµ.
+
+Thus,κj, 1 +κj, 2 + (α j, 1 +α j, 2) = 0 . Since alsoQj < 0 onB0 forj = 1, 2,
+
+κj, 1 +κj, 2 = − (α j, 1 +α j, 2)> 0.
+
+This gives,κ1, 1 ≥ |κ1, 2|= −κ1, 2. Hence the the determinant ofκ = (κi,j ) is positive.
+
+Since the determinant ofκ = (κi,j ) is positive the solution of
+
+(
+
+κ1, 1 κ1, 2
+
+κ2, 1 κ2, 2
+
+) (
+
+β1,ℓ
+
+β2,ℓ
+
+)
+
+= −
+
+(
+
+α 1,ℓ
+
+α 2,ℓ
+
+)
+
+is given by
+
+detk
+
+(
+
+κ2, 2 −κ1, 2
+
+−κ2, 1 κ1, 1
+
+) (
+
+−α 1,ℓ
+
+−α 2,ℓ
+
+)
+
+=
+
+(
+
+β1,ℓ
+
+β2,ℓ
+
+)
+
+.
+
+In view of the signs of theκj,m andα j,ℓ < 0, it followsβ1,ℓ,β 2,ℓ ≥ 0.
+
+Deﬁne positive measuresνℓ by
+
+νℓ(A) = µ (A ∩ Aℓ) +β1,ℓ µ (A ∩ B1) +β2,ℓ µ (A ∩ B2).
+
+Then ∫
+
+B
+
+Qjdνℓ =α j,ℓ +κj, 1β1,ℓ +κj, 2β2,ℓ = 0
+
+and therefore each
+
+hℓ =
+
+∫
+
+B
+
+P(·,ζ )dνℓ(ζ)
+
+is the real part of an analytic function gℓ with gℓ(0) = ν(B). Since also ν1 +ν2 = µ, we have
+
+h1 +h2 =h. Thus, gℓ
+
+gℓ(0) ∈ K and
+
+f =g1(0)
+
+( g1
+
+g1(0)
+
+)
+
++g2(0)
+
+( g2
+
+g2(0)
+
+)
+
+.
+
+We conclude thatf is not an extreme point.
+
+Next supposeB1 is a disjoint union of setsA1,A 2 withµ (Aj)> 0. Let
+
+α j,ℓ =
+
+∫
+
+Aℓ
+
+Qjdµ, ℓ = 1, 2,
+
+and
+
+κj,m =
+
+∫
+
+Bm
+
+Qjdµ, m = 0, 1.
+
+This time the signs areα 1,ℓ ≥ 0,α 2,ℓ ≤ 0,κj, 0 ≤ 0,κ1, 2 < 0, andκ2, 2 > 0. So, with
+
+κ =
+
+(
+
+κ1, 0 κ1, 2
+
+κ2, 0 κ2, 2
+
+)
+
+the determinant ofκ is negative. Thus, the solution of
+
+κ
+
+(
+
+β0,ℓ
+
+β2,ℓ
+
+)
+
+= −
+
+(
+
+α 1,ℓ
+
+α 2,ℓ
+
+)
+
+is given by
+
+detk
+
+(
+
+κ2, 2 −κ1, 2
+
+−κ2, 0 κ1, 0
+
+) (
+
+−α 1,ℓ
+
+−α 2,ℓ
+
+)
+
+=
+
+(
+
+β1,ℓ
+
+β2,ℓ.
+
+)
+
+In view of the signs of the entries and of det(κ), theβj,ℓ are all nonnegative.
+
+Deﬁne positive measuresνℓ by
+
+νℓ(A) = µ (A ∩ Aℓ) +β0,ℓ µ (A ∩ B0) +β2,ℓ µ (A ∩ B2).
+
+Then ∫
+
+B
+
+Qjdνℓ =α j,ℓ +κj, 0β0,ℓ +κj, 2β2,ℓ = 0
+
+and therefore each
+
+hℓ =
+
+∫
+
+B
+
+P(·,ζ )dνℓ(ζ)
+
+is the real part of an analytic function gℓ with gℓ(0) = ν(B). Since also ν1 +ν2 = µ, we have
+
+h1 +h2 =h. The argument proceeds as before, with gℓ
+
+gℓ(0) ∈ K and
+
+f =g1(0)
+
+( g1
+
+g1(0)
+
+)
+
++g2(0)
+
+( g2
+
+g2(0)
+
+)
+
+.
+
+We concludef is not an extreme point. □
+
+Lemma 2.11. The set of extreme points ofK is a closed set and the function taking Π to K byp ↦→ fp
+
+is a homeomorphism.
+
+Proof. It sufﬁces to show, if p(n) ∈ Π converges to p(0) in Π, then fp(n) converges uniformly on
+
+compact subsets ofR tofp(0). Since K is compact and {fp(n)} is a sequence in K, some subsequence,
+
+still denoted {fp(n)}, converges to some f ∈ K. Let hp(n) denote the real part of fp(n) and let µ n
+
+denote the measure which representshp(n) so that
+
+hp(n)(z) =
+
+∫
+
+B
+
+P(ζ,z )dµ n
+
+andµ n = ∑τj(p(n))δp(n)j , whereτ is deﬁned in Lemma 2.8. See also equation (2.3).
+
+The measuresµ n converge to the measureµ 0 weakly so thathp(n)(z) converges tohp(0)(z) point-
+
+wise inR. It follows thathp(0) is the real part off. Thus, {fp(n)} converges, inH(R), tofp(0). Since
+
+every subsequence of our original subsequence has a subsequence which converges tofp(0), the whole
+
+subsequence converges to fp(0). This shows that the mapping is continuous. Since Π is compact, it
+
+follows that our mapping is a homeomorphism and its range is compact. □
+
+2.4. Scalar inner functions on R. Up to post composition by a M¨ obius transformation, the inne r
+
+functions on R with precisely three zeros are canonically parameterized b y the 2-torus, T2. Details
+
+may be found in the book by Fay [20]. This section contains an a lternate description of this family
+
+using results from the previous sections. The following is w ell known (see, for example, Fisher [21],
+
+Ch. 4, ex. 6,7).
+
+Proposition 2.12. A nonconstant inner functionψ onR has at least three zeros counting with multi-
+
+plicity. Moreover, ifψ has exactly three zeros,z0,z 1,z 2, then forj = 1, 2
+
+2∑
+
+ℓ=0
+
+hj(zℓ) = 1.
+
+As a ﬁrst application, the last proposition allows us to show that we may assume that our region
+
+supports no inner function with a zero of multiplicity three at 0, and so consequently we will take it
+
+thatR has this property throughout the remainder of the paper.
+
+Corollary 2.13. We may assume without loss of generality that there is no inner function onR with a
+
+zero of multiplicity three at 0.
+
+Proof. Supposef is an inner function on R with exactly three zeros counting multiplicity. Then if f
+
+takes the valuef (x) with multiplicity three wherex ∈ (c1 +r1,c 2 − r2) (ie,f (z) − f (x) has a zero
+
+of multiplicity three at x), then there is a M¨ obius transformationm of the disk to itself ﬁxing 1 and
+
+movingf (x) to 0. Thusm ◦f is an inner function with zero of multiplicity three at the origin. Hence
+
+by Proposition 2.12,hj(x) = 1/ 3. Since h1 is continuous and equal to 1 onB1, if we choosex close
+
+enough toc1 +r1 ∈ B1, it will be the case that h1(x)> 1/ 3, and so f does not take the value f (x)
+
+with multiplicity three for any inner function with three ze ros. Now take a M¨ obius transformation
+
+mappingx to the origin. This takes R to a new region which again has the property that it is a region
+
+which is the unit disk with two smaller disks removed on either side of the imaginary axis and centers
+
+on the real axis. □
+
+Forp ∈ Π, let
+
+φ p = fp − 1
+
+fp + 1,
+
+wherefp is the extreme point of K corresponding to the pointp = (p0,p 1,p 2) in Π as in the previous
+
+subsection. The real part, hp, of fp is harmonic across B \ {p0,p 1,p 2} and therefore fp is (at least
+
+locally) analytic acrossB \ {p0,p 1,p 2}. Further, nearpj,fp has the form gj(z)
+
+z− pj
+
+for somegj analytic in
+
+a neighborhood ofsj and nonvanishing atpj ([21], Ch. 4). From these properties offp, it follows that
+
+φ p is continuous ontoB and |φ p|= 1 onB. By the reﬂection principle,φ p extends to be analytic in a
+
+neighborhood ofB. Sinceφ p is inner and extends analytically acrossB, andφ − 1
+
+p ({1}) = {p0,p 1,p 2},
+
+it follows that preimage of each point z ∈ D is exactly three points, counted with multiplicity. In
+
+particular,φ p has precisely three zeros.
+
+On the other hand, supposeφ is analytic in a neighborhood ofR, has modulus one onB, and three
+
+zeros inR. As above, it follows thatφ − 1(1) consists of three points. Moreover, the real part of
+
+f = 1 +φ
+
+1 − φ
+
+is a positive harmonic function which is zero on B except at those points z where φ(z) = 1 . By
+
+Lemma 2.7 we must haveφ − 1({1}) = {p0,p 1,p 2} wherepj ∈ Bj. So if we also assume φ(0) = 0 ,
+
+thenφ =φ p for somep ∈ Π.
+
+Proposition 2.14. Ifψ is analytic in analytic in R and if |ψ | ≤ 1 onR, then there exists a positive
+
+measureµ on Π and a measurable functionh deﬁned on Π whose values are functionsh(·,p ) analytic
+
+inR so that
+
+1 − ψ (z)ψ (w)∗ =
+
+∫
+
+h(z,p )[1 − φ p(z)φ p(w)∗]h(w,p )∗dµ (p).
+
+Proof. First supposeψ (0) = 0 .
+
+Let
+
+f = 1 +ψ
+
+1 − ψ.
+
+Verify
+
+ψ = f − 1
+
+f + 1
+
+and hence,
+
+1 − ψ (z)ψ (w)∗ = 2 f (z) +f (w)∗
+
+(f (z) + 1)(f (w)∗ + 1). (2.4)
+
+Sinceh, the real part of f, is positive andf (0) = 1 , the functionf is in K deﬁned in the previous
+
+subsection.
+
+Since K is a compact subset of the topological vector spaceH(R) and the extreme points {fp :p ∈
+
+Π} of K is a compact set by Lemma 2.11, there exists a (regular Borel) probability measureν on Π
+
+so that
+
+f =
+
+∫
+
+Π
+
+fpdν(p).
+
+Using the deﬁnition ofφ p and equation (2.4), verify,
+
+1 − ψ (z)ψ (w)∗ =
+
+∫
+
+Π
+
+1 − φ p(z)φ p(w)∗
+
+(f (z) + 1)(1 − φ p(z))(1 − φ p(w)∗)(f (w)∗ + 1)dν(p).
+
+Ifψ (0) = a, then one has a representation as above since
+
+1 −
+
+( ψ (z) − a
+
+1 − a∗ψ (z)
+
+) ( ψ (w) − a
+
+1 − a∗ψ (w)
+
+) ∗
+
+= (1 − aa∗)(1 − ψ (z)ψ (w)∗)
+
+(1 − a∗ψ (z))(1 − aψ (w)∗).
+
+□
+
+While we have used the three parameters in Π to parameterize the inner functions with exactly
+
+three zeros, after rotation, really only two are needed. Indeed,
+
+φ p(1)∗φ p =φ q,
+
+whereq = (1,q 1,q 2) andqj ∈ Bj forj = 1, 2, are the unique points such thatφ p(qj) = φ p(1).
+
+3. S OME RIEMANN SURFACES AND THETA FUNCTIONS
+
+We review some of the results from the theory of Riemann surfa ces which we will need subse-
+
+quently. In particular, we look at theta functions, the use o f which in operator theory was pioneered
+
+by Clancey [15], [16]. The presentation here borrows heavil y from Ball and Clancey [10] as well as
+
+Mumford [24], [25], and Farkas and Kra [19].
+
+Let Y denote the double of the bordered Riemann surface X = R ∪ B. Recall Y is obtained
+
+topologically by gluing a second copy R′ ofR along B. The complex atlas is then found by anti-
+
+holomorphically reﬂecting the complex structure from X toR′. Since B0 is the unit circle, the anti-
+
+copyR′ ofR may be thought of as the reﬂection of R inB0 given byz ↦→ z∗− 1. In particular, there
+
+is an anti-holomorphic involutionJ :Y → Y which ﬁxesB. Forζ ∈ R,Jζ is its twin inR′.
+
+Note thatY is a compact Riemann surface. We are interested in it since we can sometimes extend
+
+analytic functions deﬁned on R to meromorphic functions on Y . In particular this is true for inner
+
+functions, which extend by reﬂection.
+
+We get a lot of mileage out of a few basic tools for analyzing me romorphic functions on compact
+
+Riemann surfaces. To begin with, if such a function is noncon stant and takes a given value n times,
+
+it takes all of its values n times (counting multiplicity). Furthermore, and as a conse quence, such a
+
+function has equal numbers of zeros and poles. And ﬁnally, a m eromorphic function on a compact
+
+Riemann surface without zeros or poles is constant.
+
+The material in subsections 3.3–3.5 is solely for describing the zeros of the Fay kernel in Section 4.
+
+The reader who is willing to accept the statement of Theorem 4.2 may skip these parts.
+
+3.1. Minimal Meromorphic Functions onR. Our Riemann surfaceY also comes naturally equipped
+
+with the a conformal involution which ﬁxes 6 points, namely
+
+ι(ζ) = J(ζ∗).
+
+Geometrically, ι is rotation by π in the axis through ± 1. The ﬁxed points of the involution, are
+
+precisely the Weierstrass points ofY , namely ± 1,c 1 ± r1,c 2 ± r2 ([19], Cor. 1, p. 108).
+
+Iff is a meromorphic function on a compact Riemann surface, thenthere is a numbern, the degree
+
+off, so that f takes each value n times, counting multiplicity. In particular, if f has just one pole,
+
+thenf is one to one and the Riemann surface is conformally equivalent to the Riemann sphere. Thus,
+
+a nonconstant meromorphic function onY must have at least two poles (and zeros).
+
+Up to post composition by a M¨ obius transformation, there isa unique meromorphic functionφ on
+
+Y with precisely two poles. Moreover,φ is ramiﬁed with branching one at the Weierstrass points.
+
+The construction of a meromorphic function with two poles an d zeros found in Farkas and Kra
+
+(Theorem III.7.3) is the following. The Riemann surface ˜Y , obtained as the quotient of Y by the
+
+mapζ ↦→ ι− 1(ζ), is a Riemann surface of genus zero by the Riemann-Hurwitz fo rmula. Thus, ˜Y is
+
+conformally equivalent to the Riemann sphere and the canonical quotient map
+
+Y ↦→ ˜Y
+
+followed by a conformal map from ˜Y to the Riemann sphere generates the desired meromorphic
+
+function. From this construction it is evident that if φ is any meromorphic function with two poles
+
+and two zeros, then φι = φ. Another way to see this is that φ − φι has zeros at the six Weierstrass
+
+points, while it has at most four poles, and so must be constantly zero.
+
+Proposition 3.1. If f is a meromorphic function on Y with precisely two poles Q1 and Q2, then
+
+Q2 = ι(Q1). In particular, f cannot have a pole in R and the other in X = R ∪ B. The same
+
+statement holds if we consider zeros rather than poles.
+
+Proof. From the discussion above,f ◦ι =f. The conclusion for the poles of f follows. By consid-
+
+ering 1/f the conclusion for zeros off is also seen to hold. □
+
+Using the proposition it is possible to show that a unimodular function onR which takes the value1
+
+at exactly one point on each boundary componentBj and is 0 at 0 is uniquely determined. Of course,
+
+this is also evident by construction and has already been used.
+
+Corollary 3.2. Supposepj ∈ Bj, for j = 0, 1, 2. If f,g : X → C are analytic in a neighborhood
+
+ofX, are unimodular onB,f − 1({1}) ∩ X =g− 1({1}) ∩ X = {p0,p 1,p 2}, andf (0) = g(0) = 0 .
+
+Thenf =g.
+
+Proof. By the maximum modulus principle, f andg are strictly less than one in modulus in R. The
+
+functions f and g reﬂect to meromorphic functions on Y , which can take the value 1 only on the
+
+boundary ofB. Thus, the functions are globally three to one and so have thr ee zeros in R and three
+
+poles, at the reﬂected points, inR′. In particular,f andg share the zero 0 and poleJ0.
+
+Consider the function
+
+ψ = 1 − f
+
+1 − g.
+
+The zeros of 1 − f and those of 1 − g agree, so thatψ can only have poles at the poles off. Since one
+
+of these poles matches a pole of g,ψ has only two poles (and two zeros). However, these poles are
+
+poles off which both are inR′, contradicting the proposition. Hence, it must be thatψ is constant so
+
+that 1 − f =c(1 − g). Sincef (0) = g(0) = 0 ,c = 1. □
+
+We can also describe minimal inner functions which agree at two of their zeros.
+
+Lemma 3.3. Ifφ p andφ ˜p have two zeros in common (0 and one other) andφ p(1) = ˜φ p(1) = 1 , then
+
+either they are equal or the remaining zeros form a conjugate pair. In case that p = (1,p 1,p 2) and
+
+˜p = (1,p 1, ˜p2), then ˜p2 =p2 and soφ ˜p =φ p.
+
+Proof. Ifφ p andφ ˜p have all three zeros in common, then they are equal, and thereis nothing to prove.
+
+So assume instead that they have two common zeros ( 0 andz1) and unequal zeros z2, ˜z2 forφ p and
+
+φ ˜p, respectively. Then φ p/φ ˜p has two simple zeros and poles, z2,J ˜z2 and ˜z2,Jz 2, respectively. By
+
+Proposition 3.1,Jz 2 =ι˜z2 =J(˜z∗
+
+2), or ˜z2 =z∗
+
+2.
+
+Now suppose that φ p and φ ˜p have common zeros 0 and z1, and that p = (1,p 1,p 2) and ˜p =
+
+(1,p 1, ˜p2). Then unlessφ p/φ ˜p is constant,φ p/φ ˜p − 1 has the same two poles asφ p/φ ˜p. It would then
+
+have exactly two zeros, namely 1 andp1. Now apply Proposition 3.1 and note that ι(1) = 1 ̸= p1.
+
+The result then follows. □
+
+Lemma 3.4. Letp = (1,p 1,p 2). If the zeros ofφ p are all real, thenp1,p 2 ∈ R.
+
+Conversely, forp = (1,c 1 − r1,c 2 − r2), the zeros ofφ p are are all real. In fact, φ p has a zero at
+
+zero and one zero in each of the intervals (− 1,c 1 − r1) and (c2 +r2, 1) on the real axis inR.
+
+It turns out that for p = (1,c 1 +r1,c 2 − r2) orp = (1,c 1 − r1,c 2 +r2), the zeros of φ p are also
+
+real.
+
+Proof. Suppose that the zeros ofφ p are real, and deﬁne ˜φ p =φ p(ζ∗)∗. Then ˜φ p has the same zeros as
+
+φ p. Hence the ratio of these two functions has no zeros and so mus t be constant. Since both equal 1
+
+at 1, it follows that they are equal everywhere. In particular,
+
+φ p(cj ± rj)∗ =φ p((cj ± rj)∗)∗ =φ p(cj ± rj)
+
+so that φ p(cj ± rj) is real (in each of the four cases). Since φ p maps each Bj one-one onto the unit
+
+circle, it follows that that φ p takes the value 1 at one of the points cj ± rj onBj,j = 1, 2 and this
+
+gives the conclusion of the lemma.
+
+For the converse, deﬁne ˜φ p as above. Since the entries ofp are real, Corollary 3.2 impliesφ p(ζ) =
+
+˜φ p(ζ∗)∗ so thatφ p is real on the real axis. Since alsoφ p takes the value 1 atcj − rj and by assumption
+
+there is only one point on Bj where φ p equals 1, it takes the value − 1 at the points cj +rj. The
+
+intermediate value theorem now implies thatφ p has at least one zero in each of the intervals,(− 1,c 1 −
+
+r1), (c1 +r1,c 2 − r2), and (c2 +r2, 1). Sinceφ p has exactly three zeros the result follows. □
+
+Fort = (t1,t 2),t1,t 2 ∈ [0, 2π ), let p1(t) = c1 − r1 exp(it1) andp2 = c2 − r2 exp(it2). These
+
+points are on the two inner components of the boundary. On theouter boundary we just use1. Accord-
+
+ingly, letp(t) = (1,p 1(t),p 2(t)) ∈ Π and, for notational ease, letψ t =φ p(t). Thenψ − t =φ p(− t).
+
+Lemma 3.5. There existst1,t 2 nonzero such thatψ t has three distinct zeros 0,z 1,z 2 withz1,z 2 both
+
+nonreal.
+
+Proof. Write 0 for (0, 0). From the second part of Lemma 3.4,ψ 0 has distinct real zeros.
+
+Now suppose that t = (t1, 0). If π > t1 > 0 is small enough, the zeros 0,z 1,z 2 ofψ t are still
+
+distinct. By the ﬁrst part of Lemma 3.4, if these zeros are all real, then t1 is a multiple of π. On
+
+the other hand suppose that one of the nonzero zeros of ψ t, say z1, is real. Then ψ t andψ − t share
+
+0 andz1 as zeros, as well as both being equal to 1 at 1 andc2 − r2. Hence by Lemma 3.3 they are
+
+equal, implying that p1(t) is real, or equivalently, that t1 is a multiple of π. Since we have chosen
+
+0<t 1<π , this cannot happen. Thus we must have both zeros ofψ t are nonreal for small enought1.
+
+Finally, if we chooset1 such thatψ (t1, 0) has nonreal roots, then by continuity, for small enought2,
+
+ψ t will still have nonreal roots with t = (t1,t 2). And again, for t small enough, these zeros will still
+
+be distinct. □
+
+3.2. Some Matrix Inner Functions. We now construct a family of 2 × 2 matrix valued analytic
+
+functions which are unimodular on the boundary B and have precisely 6 zeros in R starting from
+
+certain positive 2 × 2 matrix valued harmonic functions onR. This will later provide the basis for our
+
+counterexample.
+
+For our purposes, a matrix-valuedF :R → M2(C) has simple zeros inR ifZ = {a1,...,a n} are
+
+the zeros of det(F ), the zeros of det(F ) have multiplicity either one or two and if the zeroz ∈ Z has
+
+multiplicity two, thenF (z) = 0 .
+
+Deﬁnition 3.6. We say thatF has a standard zero setifF has distinct simple zeros 0,a 1,...,a 4 ∈ R,
+
+with the ﬁrst having multiplicity two and the others multipl icity one. And if furthermore, δj ̸= 0 are
+
+such thatF (aj)∗δj = 0,j = 1,..., 4, then no three of the δj’s are collinear. While it is not required
+
+immediately, we also ask thatJa j ̸=Pk,k = 1, 2, whereP1,P 2 are poles of the Fay kernelK 0(·,z )
+
+(deﬁned in Section 4). This last assumption plays an importa nt role in the diagonalization arguments
+
+in Section 5.8. In this regard it is also useful to know that th e pointsP1,P 2 are real and distinct (see
+
+Lemma 4.1). Also not required right away but ultimately usef ul is the assumption that the δj’s are
+
+sufﬁciently close to theek’s—how close being determined by Theorem 4.3. Here{e1,e 2} denotes the
+
+standard basis for C2, as usual.
+
+We taket andp(t) as at the end of the last section.
+
+RecallM (p) andτ(p) from Lemma 2.8. For notational purposes, write p(t) = (1 ,q 1,q 2). Let τ
+
+denote the common value ofτ(1,q 1,q 2),τ(1,q ∗
+
+1,q 2),τ(1,q 1,q ∗
+
+2), andτ(1,q ∗
+
+1,q ∗
+
+2).
+
+For 0 ≤ η ≤ 1, letP η
+
++ denote the projection onto the span ofηe1 + (1 − η2)
+
+2e2 andP η
+
+− denote the
+
+projection onto (1 − η2)
+
+2e1 − ηe2 (soQη
+
++ +Qη
+
+− =I). DeﬁneHη,t by
+
+Hη,t =τ0P(·, 1)I+τ1P(·,c 1 − r1 exp(it1))P 1
+
++ +τ1P(·,c 1 − r1 exp(−it1))P 1
+
+−
+
++τ2P(·, −c2 − r2 exp(it2))P η
+
++ +τ2P(·, −c2 − r2 exp(it2))P η
+
+−.
+
+That is, givenx ∈ C2 a unit vector, ⟨Hη,t (ζ)x,x ⟩ is the positive harmonic function onB correspond-
+
+ing to the measure
+
+µ x,x =τ0δ1+τ1
+
+(
+
+δq1|x1|2 +δq∗
+
+1 |x2|2)
+
++τ2
+
+(
+
+δq2|ηx1 + (1 − η2)
+
+2x2|2 +δq∗
+
+2 |(1 − η2)
+
+2x1 − ηx2|2
+
+)
+
+.
+
+Then ∫
+
+B
+
+Qjdµ x,x =τ0Qj(1) +τ1
+
+(
+
+Qj(q1)|x1|2 +Qj(q∗
+
+1)|x2|2)
+
++τ2
+
+(
+
+Qj(q2)|ηx1 + (1 − η2)
+
+2x2|2 +Qj(q∗
+
+2)|(1 − η2)
+
+2x1 − ηx2|2
+
+)
+
+.
+
+UsingQj(q∗
+
+k) = Qj(qk) and the choice ofτ, gives
+
+∫
+
+B
+
+Qjdµ x,x =τ0Qj(1) +τ1Qj(q1)
+
+(
+
+|x1|2 + |x2|2)
+
++τ2Qj(q2)
+
+(
+
+|ηx1 + (1 − η2)
+
+2x2|2 + |(1 − η2)
+
+2x1 − ηx2|2
+
+)
+
+=τ0Qj(1) +τ1Qj(q1) +τ2Qj(q2)
+
+= 0.
+
+Hence ⟨Hη,t (ζ)x,x ⟩ is the real part of an analytic function. It follows that Hη,t is the real part of an
+
+analytic 2 × 2 matrix-valued functionGη,t (ζ) normalized byGη,t (0) = I.
+
+Our desired functions are
+
+Ψη,t = (Gη,t − I)(Gη,t +I)− 1. (3.1)
+
+Lemma 3.7. For eachη,
+
+(1) Ψη,t is analytic in a neighborhood ofX and unitary-valued onB;
+
+(2) Ψη,t (0) = 0 ;
+
+(3) Ψη,t (1) = I;
+
+(4) Ψη,t (q1)e1 =e1 and Ψη,t (q∗
+
+1)e2 =e2;
+
+(5) Ψη,t (q2)(ηe1 + (1 − η2)
+
+2e2) = ( ηe1 + (1 − η2)
+
+2e2) and Ψη,t (q∗
+
+2)((1 − η2)
+
+2e1 − ηe2) =
+
+(1 − η2)
+
+2e1 − ηe2;
+
+(6) Ψ0,t =
+
+(
+
+ψ t 0
+
+0 ψ − t
+
+)
+
+.
+
+Proof. In the neighborhood of a point p ∈ B, the Poisson kernel P(ζ,p ) is the real part of a function
+
+of the formgp(ζ)(ζ − p)− 1 wheregp is analytic in a neighborhood ofp and does not vanish atp. Near
+
+any other pointq ∈ B, P(ζ,p ) extends to a harmonic function in a neighborhood ofq (see Fisher [21],
+
+chapter 4, proposition 6.4). Thus P(ζ,p ) is, nearq, the real part of an analytic function, the real part
+
+of which is 0 atq.
+
+From the above discussion, ifp ∈ B is different from 1,q 1,q ∗
+
+1,q 2,q ∗
+
+2, thenGη,t is, at least locally,
+
+analytic in a neighborhood ofp. Further,Gη,t +I is invertible nearp, sinceGη,t (ζ) = Hη,t (ζ)+iA(ζ),
+
+for some self-adjoint matrix valued function A(ζ) and Hη,t (p) = 0 for such p. Thus, Gη,t +I is
+
+invertible atp and by continuity, also invertible nearp. The relation,
+
+I − Ψη,t (ζ)Ψη,t (ζ)∗ = 2(Gη,t (ζ) +I)− 1(Gη,t (ζ) +Gη,t (ζ)∗)(Gη,t (ζ) +I)∗− 1
+
+now shows that Ψη,t is unitary atp.
+
+From the deﬁnition of Gη,t , in a neighborhood of 1, there exists analytic functions g1,g2,h1, and
+
+h2 so that the real parts ofhj are 0 at 1, eachgj is different from 0 at 1, and
+
+Gη,t (ζ) =
+
+( g1
+
+ζ− 1 h1
+
+h2
+
+g2
+
+ζ− 1
+
+)
+
+Thus,
+
+(Gη,t (ζ) +I)− 1 = 1
+
+g1+ζ− 1
+
+ζ− 1
+
+g2+ζ− 1
+
+ζ− 1 − h1h2
+
+( g2+ζ− 1
+
+ζ− 1 −h1
+
+−h2
+
+g1+ζ− 1
+
+ζ− 1
+
+)
+
+= 1
+
+(g1 +ζ − 1)(g2 +ζ − 1) − h1h2(ζ − 1)2
+
+(
+
+(g2 +ζ − 1)(ζ − 1) −h1(ζ − 1)2
+
+−h2(ζ − 1)2 (g1 +ζ − 1)(ζ − 1)
+
+)
+
+.
+
+Note that the determinant in the denominator is indeed different from 0 near 1, and asζ → 1, it goes
+
+tog1(1)g2(1) ̸= 0. HenceGη,t +I is in fact invertible. Next, by directly computing(Gη,t − I)(Gη,t +
+
+I)− 1 = Ψ η,t we see Ψη,t is analytic in a neighborhood of 1 and Ψη,t (1) = I.
+
+Now move on toq1. Near this point there exists analytic functionsg,h2,h3, andh4 so that the real
+
+parts of thehj are 0 atq1, the functiong does not vanish atq1 and
+
+Gη,t =
+
+( g
+
+ζ− q1
+
+h2
+
+h3 h4
+
+)
+
+Sinceh4 + 1 has real part 1 atq1, whereasg(ζ − q1)− 1 has a pole andh2,h 3 are analytic atq1, we see
+
+Gη,t +I is invertible nearq1. Further, by direct computation of Ψη,t = (Gη,t − I)(Gη,t +I)− 1 we
+
+see that Ψη,t is analytic in a neighborhood ofq1 and
+
+Ψη,t (q1) =
+
+(
+
+1 0
+
+0 h4(q1)− 1
+
+h4(q1)+1
+
+)
+
+The analogous result holds for the point q∗
+
+1. For the points q2, q∗
+
+2, the same argument prevails by
+
+writing all matrices with respect to the orthonormal basis {ηe1 + (1 − η2)
+
+2e2,ηe 2 + (1 − η2)
+
+2e1} of
+
+C2.
+
+Finally, (6) is easily seen from the deﬁnition ofH0,t and the functionsG0,t , Ψ0,t . □
+
+We are able to obtain some information on the zeros of Ψη,t , at least for someη
+
+Lemma 3.8. There exists an ǫ >0 such that for all η nonzero but less than ǫ, Ψη,t has a standard
+
+zero set.
+
+Proof. Recall from our choice of t, the zeros of ψ t are distinct and, aside from 0, are not real. Of
+
+course the zeros ofψ − t are just the complex conjugates of those ofψ t. Thus
+
+Ψ0 =
+
+(
+
+ψ t 0
+
+0 ψ − t
+
+)
+
+,
+
+Ψ0 has a standard zero set.
+
+By choosing a sequenceηn converging to0 and considering the uniformly bounded sequenceΨn =
+
+Ψηn,t , there is some subsequence, still written as Ψn, which converges uniformly on compact subsets
+
+ofR to some Ψ. Consequently,
+
+Gn = (I + Ψn)(I − Ψn)− 1
+
+converges uniformly on compact subsets ofR to
+
+G = (I + Ψ)(I − Ψ)− 1.
+
+NowHn, the real part ofGn, is harmonic and
+
+Hn − H0 = P(·,q 2)(τ2(ηn)P ηn
+
++ − τ2(0)P 0
+
++) + P(·,q ∗
+
+2)(τ2(ηn)P ηn
+
+− − τ2(0)P 0
+
+− ).
+
+Thus, as both (P ηn
+
+± − P 0
+
+± ) and (τ2(ηn) − τ2(0)) converge to 0 withn (τ is continuous by Lemma 2.8),
+
+theHn converge toH0 uniformly on compact sets. Since also G(0) = I =G0(0), it follows that the
+
+Gn converge toG0 and hence the Ψn converge uniformly to Ψ0 on compact sets.
+
+Let dn(ζ) = det(Ψ n(ζ)). This is analytic and unimodular on the boundary and dn converges
+
+uniformly tod0 on compact sets. From Rouche’s theorem (or else Hurwitz’s th eorem—see Conway
+
+[17]), the number of zeros of dn is constant, equaling 6. Indeed, these zeros vary continuously with
+
+n anddn has a double zero at 0. If we let 0,w 1,w 2 denote the zeros of ψ t, then the zeros of ψ − t are
+
+0,w ∗
+
+1,w ∗
+
+2. Hence the zeros of Ψ0 are exactly given byΨ0(0) = 0 , Ψ0(wj)e1 = 0, and Ψ0(w∗
+
+j )e2 = 0,
+
+ℓ = 1, 2, and, listed as0,w 1,w 2,w ∗
+
+1,w ∗
+
+2, they are distinct. Thus, for largen, the zeros 0,a n
+
+1,a n
+
+2,a n
+
+3,a n
+
+of Ψn satisfy this assumption too.
+
+Finally, if Ψn(an
+
+1 )∗δn
+
+1 = 0 anda1 is close tow1, then
+
+Ψ0(w1)∗δn
+
+1 = (Ψ 0(w1) − Ψ0(an
+
+1 ))δn
+
+1 + (Ψ0(an
+
+1 ) − Ψn(an
+
+1 ))δn
+
+1.
+
+For n large both terms on the right hand side are small and thus for n largeδ is close to (a scalar
+
+multiple of) e1. Thus, for n large enough the δn
+
+j satisfy the assumption that no three are collinear.
+
+Finally, since the zeros vary continuously with and η and for η = 0 the zeros, aside from 0, are not
+
+real, whereasP1,P 2 are real (and not zero—see Lemma 4.1), for small enough η, neither P1 norP2
+
+will be a zero of Ψη,t and the nonzero zeros of Ψη,t will be distinct.
+
+This completes the proof. □
+
+3.3. The Period Matrix and Abel-Jacobi Map. Since the harmonic measureshj vanish onB0, for
+
+j = 1, 2, they reﬂect acrossB0 by
+
+hj(1/z ∗) = − hj(z)
+
+hj(Jz ) = − hj(z)
+
+to a harmonic function onY \Bj. Note, whenR′ is viewed as the reﬂection ofR acrossB0,hj is − 1
+
+on the reﬂection ofBj.
+
+While a harmonic conjugate ˜hj ofhj is only locally deﬁned, the differential
+
+d(hj + ˜hj)
+
+dz dz
+
+is uniquely determined and globally deﬁned. Ifζ is a point ofY , then
+
+χ (ζ) = 1
+
+( ∫ ζ
+
+− 1
+
+d(h1+ ˜h1)
+
+dz dz∫ ζ
+
+− 1
+
+d(h2+ ˜h2)
+
+dz dz
+
+)
+
+depends upon the path of integration from − 1 toζ, but only up to the number of windings of the path
+
+around the boundary components B1,B 2 and the number of crossings of B1,B 2 (in passing from R
+
+toR′). The choice of − 1 for the base point is fairly canonical as it is a Weierstrass p oint for Y (see
+
+subsection 3.1).
+
+The multiple valued nature ofχ :Y → C2 is concisely described by the period matrix and period
+
+lattice forY . Let
+
+Pj,ℓ = 1
+
+i
+
+∫
+
+Bℓ
+
+d(hj + ˜hj)
+
+dz dz =
+
+∫
+
+Bℓ
+
+∂h j
+
+∂n ds.
+
+Thus, Pj,ℓ is the period of the harmonic conjugate ofhj aroundBℓ. The 2 × 2 matrix P has positive
+
+deﬁnite real part and is called the period matrix for R. (Our period matrix differs by a factor of 1/i
+
+from what most call the period matrix.)
+
+LetL denote the lattice Z2 +iPZ2. The Jacobi variety of Y is the quotient Jac(Y ) = C2/L . Let
+
+[z] denote the class ofz ∈ C2 in Jac(Y ). The mappingχ 0 :Y → Jac(Y ),
+
+χ 0(ζ) = [χ (ζ)]
+
+is well deﬁned and known as the Abel-Jacobi map. However, it will often be convenient to work with
+
+χ , the multiple valued version ofχ 0.
+
+Lete1,e 2 be the usual basis for C2.
+
+Proposition 3.9 ([19], p. 92). The Abel-Jacobi map has the following properties.
+
+(1) χ 0 is a one to one conformal map ofY onto its image in Jac(Y );
+
+(2) χ 0(Jζ ) = −χ 0(ζ)∗;
+
+(3) Ifζ ∈ B, then −χ (ζ)∗ =χ (ζ) +n for somen ∈ Z2.
+
+Property (2) depends upon the choice of basepoint − 1 ∈ B0. Property (3) follows from the obser-
+
+vation that forζ ∈ B,hj(ζ) is either 0 or 1.
+
+3.4. The Theta Function and its Zeros. Details for most of what follows in this subsection can be
+
+found in Ch. IV of [19] and Ch. 2 of [24].
+
+LetL be the lattice deﬁned in the last subsection. The Riemann the ta function associated to L is
+
+the entire function on C2 deﬁned by
+
+θ(z) =
+
+∑
+
+n∈ Z2
+
+exp(−π ⟨Pn,n ⟩ + 2πi ⟨z,n ⟩).
+
+where ⟨·, ·⟩is the usual inner product on C2.
+
+Straightforward manipulations showθ(z∗) = θ(z)∗ andθ(−z) = θ(z).
+
+The quasi-periodic behavior ofθ with respect toL is given by
+
+θ(z +ℓ) =θ(z)
+
+θ(z +iPm) = exp(π ⟨Pm,m ⟩ − 2πi ⟨z,m ⟩)θ(z), (3.2)
+
+whereℓ,m ∈ Z2.
+
+Givene ∈ C2 writee =u +iPv, deﬁne the theta function with characteristic [e] by
+
+θ[e](z) = θ
+
+[
+
+u
+
+v
+
+]
+
+(z) = exp(πi (⟨Pv,v ⟩ + 2⟨u − z,v ⟩)θ(z − e)).
+
+The functionθ[e] : C2 → C obeys the period laws
+
+θ[e](z +ℓ) = exp(− 2π ⟨ℓ,v ⟩)θ[e](z)
+
+θ[e](z +iPm) = exp(2π ⟨m,v ⟩) exp(π ⟨Pm,m ⟩ − 2πi ⟨z,m ⟩)θ[e](z) (3.3)
+
+It turns out that almost all meromorphic functions and diffe rentials on Y can be represented in
+
+terms of translatesθ[e](χ (ζ)) : Y → C2, which despite being multiple valued has a well-deﬁned zero
+
+set, the description of which is due to Riemann.
+
+Theorem 3.10. There exists a constant vector ∆ (depending upon the choice of basepoint) so that for
+
+eache ∈ C2, eitherθ[e](χ (ζ)) is identically zero, orθ[e](χ (ζ)) has exactly 2 zerosP1,P 2, and
+
+χ (P1) +χ (P2) = e − ∆ moduloL.
+
+Here ∆ is known as the vector of Riemann constants.
+
+The set
+
+N = {e ∈ Jac(Y ) : θ(χ (ζ) − e) is identically zero}
+
+is a proper closed subset of Jac(Y ).
+
+3.5. The Prime Form. The following fact plays an important role in construction of the prime form
+
+and thus multiple valued meromorphic functions onY with prescribed poles and zeros. Givene ∈ C2
+
+such thatθ(e) = 0 , deﬁne
+
+Ee(ζ,ξ ) = θ(χ (ζ) − χ (ξ) − e).
+
+Theorem 3.11 ([24], Ch. 2, Lemma 3.4) . Ife ∈ C2, θ(e) = 0 , and Ee is not identically zero, then
+
+there existsP ∈ Y so that for each ξ ∈ Y ,ξ ̸= P , the zeros of θ[e +χ (ξ)](χ (ζ)), which coincide
+
+with the zeros of Ee(ζ,ξ ), are preciselyξ andP .
+
+The following can be found in Mumford [25] (Lemma 1, p. 3.208—but see also [20] and [10]).
+
+Theorem 3.12. There existse∗ = 1
+
+2 (u +iPv) ∈ C2 such that 2e∗ = 0 moduloL, ⟨u,v ⟩ is odd (equal
+
+to 1 modulo 2Z), and Ee∗ is not identically zero.
+
+An e∗ as in this theorem is called a non-singular odd half period an d for the remainder we take
+
+e∗ = 1
+
+2 (u∗ +iPv∗) as ﬁxed. Note that θ(e∗) = 0 , as the fact that ⟨u∗,v ∗⟩ is an odd integer implies
+
+θ(e∗) = −θ(−e∗). In fact,e∗ +e∗
+
+∗ = 2u∗ ∈ Z2 so that, using the periodicity ofθ, forz ∈ C2,
+
+θ(z +e∗
+
+∗) = θ(z +e∗
+
+∗ + 2u∗) = θ(z − e∗),
+
+and soθ(e∗) = θ(−e∗) as well, meaning thatθ(e∗) = 0 .
+
+Lemma 3.13. There exists aP ∈ B so that for each ξ ∈ R, the multiple valued function Ee∗ (ζ,ξ ) :
+
+Y → C, Ee∗ (ζ,ξ ) = θ(χ (ζ) − χ (ξ) − e∗) is not identically zero and has zeros at preciselyP andξ.
+
+Proof. From Theorem 3.11, there is a P so that either Ee∗ (ζ,ξ ) is identically zero, or has zeros P
+
+andξ. Accordingly, consider the multiple valued function g : Y → C deﬁned by g(ζ) = θ(χ (ζ) −
+
+χ (− 1) − e∗). Since [χ (− 1)] = 0 , we may assume χ (− 1) = 0 . Thus g(ζ) = θ(χ (ζ) − e∗) and the
+
+fact thate∗ is non-singular meansg is not identically zero. Henceg has zerosP and − 1.
+
+Observe, ase∗ +e∗
+
+∗ ∈ Z2, there exists ann ∈ Z2 such thate∗
+
+∗ = −e∗ +n. Similarly, asχ (JP ) =
+
+−χ (P )∗ moduloL, there existsa,b ∈ Z2 so thatχ (JP ) = −χ (P )∗ +a +iPb. Hence,
+
+g(JP )∗ =θ(χ (JP ) − e∗)∗
+
+=θ(−χ (P )∗ +a +iPb − e∗)∗
+
+= (κθ(−χ (P )∗ − e∗))∗
+
+=κ∗θ(−χ (P ) − e∗
+
+∗)
+
+=κ∗θ(−χ (P ) +e∗ − n)
+
+=κ∗θ(−χ (P ) +e∗)
+
+=κ∗θ(χ (P ) − e∗)
+
+=κ∗g(P ),
+
+where κ = exp[π ⟨Pa,a ⟩ − 2πi ⟨−χ (P )∗ − e∗,n ⟩] is nonzero. Thus, g(JP ) = 0 . It follows that
+
+JP =P orJP = − 1, in which caseP = − 1. Thus,JP =P and soP is inB.
+
+SinceP is inB, Ee∗ (·,ξ ) is not identically zero and the result follows from Theorem 3.11. □
+
+Let
+
+θ∗(z) = θ[e∗](z) = exp[ 1
+
+2πi (⟨Pv∗,v ∗⟩ + ⟨u∗ − z,v ∗⟩)]θ(z − e∗).
+
+Ifz,w ∈ Y are different from theP of Lemma 3.13, then
+
+θ∗(χ (ζ) − χ (z))
+
+θ∗(χ (ζ) − χ (w)) =eπi [χ (z)− χ (w)]θ(χ (ζ) − χ (z) − e∗)
+
+θ(χ (ζ) − χ (w) − e∗) (3.4)
+
+is multiple valued, but its zero/pole structure is well deﬁn ed: it has a zero at z and a pole at w. As
+
+we shall see, this will play an important role in deﬁning repr oducing kernels on R with respect to
+
+harmonic measure.
+
+4. T HE FAY KERNEL FUNCTIONS OF R
+
+We now introduce the reproducing kernelK a as found in Fay [20]. The description of these kernels
+
+involves the critical points for the Green’s function g(·,a ) forR at the point a ∈ R. A point w is a
+
+critical point if the gradient ofg(ζ,a ) is 0 atw. It is well known that in a region of connectivityn + 1
+
+there aren of these critical points ([26], p. 133). Thus, in R there are two. In the sequel we will have
+
+use of the following fact about the location of these critical points for the choicea = 0.
+
+Lemma 4.1. The critical points of the Green’s functiong(ζ, 0) are on the real axis, one in each of the
+
+intervals, (− 1,c 1 − r1) and (c2 +r2, 1).
+
+Proof. For notational ease, let g(ζ) = g(ζ, 0). From the symmetry of the domain, ∂g
+
+∂y = 0 on the
+
+x-axis in R. Since g is 0 at the points − 1 and c1 − r1, Rolle’s Theorem implies there is a point
+
+− 1 < w1 < c1 − r1 so that ∂g
+
+∂x (w1) = 0 . Thus, the gradient of g is zero at w1. Similarly, there is a
+
+pointc2 +r2<w 2 < 1 such that the gradient ofg atw2 is also zero. □
+
+For the remainder of the paper, we let P1 = Jw 1 and P2 = Jw 2, where w1,w 2 are the critical
+
+points for the Green’s function for R at 0. Thus, P1,P 2 ∈ R′. These are the points P1,P 2 which
+
+appear in the deﬁnition of a standard zero set, Deﬁnition 3.6.
+
+Theorem 4.2. There is a reproducing kernelK a for the Hardy space H2(R,ω a) of functions analytic
+
+in R with boundary values in L2(ω a), where ω a is harmonic measure for the point a. If z = a,
+
+thenK a(ζ,z ) = 1. Otherwise,K a(ζ,z ) has precisely the polesP1(a),P 2(a),Jz , whereJP 1(a) and
+
+JP 2(a) are the critical points for the Green’s function forR ata, and three zeros inY , one of which
+
+is atJa.
+
+Incidentally, the Hardy space in the theorem corresponds to just one of the two torus parameter
+
+family of rank one bundle shifts over R [1]. Indeed, Ball and Clancey [10] give a theta function
+
+representation for all of the corresponding reproducing ke rnels, avoiding the use of the Klein prime
+
+form which Fay uses in his formula for the kernel.
+
+The reader who has skipped sections 3.3–3.5 may wish to skip t he proof and proceed directly to
+
+subsection 4.1.
+
+Proof of Theorem 4.2. There is ane ∈ Jac(Y ) so that
+
+K a(ζ,z )
+
+= θ(χ (ζ) +χ (z)∗ +e)θ(χ (a) +χ (a)∗ +e)θ∗(χ (a) +χ (z)∗)θ∗(χ (ζ) +χ (a)∗)
+
+θ(χ (a) +χ (z)∗ +e)θ(χ (ζ) +χ (a)∗ +e)θ∗(χ (ζ) +χ (z)∗)θ∗(χ (a) +χ (a)∗). (4.1)
+
+(See Fay [20], Proposition 6.15 and Ball and Clancey, [10].) Straightforward computation using the
+
+periodic nature of θ checks that the right hand side is invariant under χ (ζ) ↦→ χ (ζ) +n +iPm for
+
+m,n ∈ C2 so thatK a(ζ,z ) is in fact single valued and meromorphic inY . Further, according to Fay,
+
+forz ∈ X,K a(ζ,z ) is analytic as a function ofζ ∈ R.
+
+One readily veriﬁes from (4.1) that K a(ζ,a ) = 1 , so assume z ̸= a. Now examine the zero/pole
+
+structure of the portion of the right side of (4.1) depending onζ:
+
+θ(χ (ζ) +χ (z)∗ +e)θ∗(χ (ζ) +χ (a)∗)
+
+θ(χ (ζ) +χ (a)∗ +e)θ∗(χ (ζ) +χ (z)∗). (4.2)
+
+From the comments following (3.4), θ∗(χ (ζ) +χ (a)∗)/θ ∗(χ (ζ) +χ (z)∗) has a zero at Ja and pole
+
+atJz . Each of the remaining theta functions has two zeros, which w e labelZ1(z),Z 2(z) for the top
+
+term andP1(a),P 2(a) for the bottom term. Hence (4.2) (and so (4.1)) has zeros at P1(z),P 2(z),Ja
+
+and poles atP1(a),P 2(a),Jz , the latter which are all inR′ ∪ B, sinceK a is analytic.
+
+If any of the poles and zeros were to cancel, either K a(ζ,z ) is constant or has two poles and two
+
+zeros. Since these kernels are linearly independent and K a(ζ,a ) = 1 , the ﬁrst possibility cannot
+
+occur. In the second case we would be left with two poles in R′ ∪ B, which by Proposition 3.1, is
+
+also impossible unless Jz cancels with Ja and the other two poles are in B. But then z = a and
+
+K a(ζ,a ) = 1 , which we have already ruled out. Hence K a(ζ,a ) has order three, with zeros and
+
+poles as claimed. □
+
+4.1. Application of the Theta Function Representation of K a. We assume throughout that for
+
+j = 1,..., 4,aj ∈ B are distinct and 0 ̸=δj ∈ C2 have the property that no three are collinear (the
+
+properties of a standard zero set). As usual e1,e 2 are the standard basis for C2. We write P1,P 2 for
+
+P1(0),P 2(0), the poles ofK 0(ζ,z ).
+
+Let M0
+
+δ denote the span of
+
+{K 0(ζ, 0)e1,K 0(ζ, 0)e2,K 0(ζ,a 1)δ1,...,K (ζ,a 4)δ4}
+
+={e1,e 2,K 0(ζ,a 1)δ1,...,K (ζ,a 4)δ4}.
+
+Recall that given p ∈ Π there exists an s ∈ B1 × B2 = T2 so that, identifying s with (1,s ),
+
+φ s =φ p(1)∗φ p. In particular, the zeros ofφ p,zs
+
+0 = 0,z s
+
+1,z s
+
+2, depend only upons.
+
+Theorem 4.3. Leta0
+
+1,...,a 0
+
+4 be points in R so that P1,P 2,J 0,Ja 0
+
+1,Ja 0
+
+2,Ja 0
+
+3,Ja 0
+
+4 are all distinct.
+
+Let {e1,e 2} denote the standard basis for C2 and letδ0
+
+1 =δ0
+
+2 =e1, andδ0
+
+3 =δ0
+
+4 =e2. There exists
+
+anǫ> 0 so that if |a0
+
+j − aj|, ∥δ0
+
+j − δj∥<ǫ , and if
+
+h(ζ) =
+
+∑
+
+cjK 0(ζ,a j)δj +v (4.3)
+
+does not have poles atP1,P 2, thenh is constant; i.e., eachcj = 0.
+
+Further, if h ̸= 0 , has a representation as in equation (4.3), and if there exis ts z1,z 2 ∈ B (not
+
+assumed to be distinct but not both zero) such that
+
+h(ζ)K 0(ζ,z k) =
+
+∑
+
+ck
+
+jK 0(ζ,a j)δj +vk,
+
+thenh is constant, z1 = aj1, and z2 = aj2, the corresponding δjk’s may be taken to be equal to h,
+
+and all the other terms are zero.
+
+Note that the theorem is really a statement about the meromor phic functions K 0(ζ,a j) on the
+
+doubleY and so we viewζ as a local coordinate onY . Indeed, by restrictingζ to be near eitherP1 or
+
+P2 it may be assumed that all the pointsζ,P 1,P 2,Ja 1,...,Ja 4 are in a single chartU ⊂ R′ (U is an
+
+open simply connected subset ofY ).
+
+With ﬁxeda ∈ R distinct from 0,JP 1,JP 2, whereP1,P 2, are the poles of the kernelK 0(ζ,a ), the
+
+residue of the pole ofK 0(ζ,a ) atPj is given by the value of the analytic function ofζ
+
+(ζ − Pj)K 0(ζ,a )
+
+at the pointζ =Pj. LetRj(a) denote this residue.
+
+Lemma 4.4. The residueRj(a) varies continuously witha.
+
+Proof. Consider the theta function representation forK 0(ζ,a ) from Theorem 4.2. The function
+
+f (ζ) = θ(χ (ζ) +χ (0)∗ +e)
+
+is analytic and single valued in U. Further, f (ζ) vanishes to order one at Pj and thus can be written
+
+as
+
+f (ζ) = (ζ − Pj)fj(ζ),
+
+wherefj is analytic in U andfj(Pj ) ̸= 0 . Given a set W ⊂ U, let W ∗ = {z∗ : z ∈ W }. Choose
+
+neighborhoodsVj andW ofU so thatF :Vj × W ∗ → C by
+
+F (ζ,a ∗) =f (ζ)K 0(ζ,a )
+
+=θ(χ (ζ) +χ (z)∗ +e)θ(χ (0) +χ (0)∗ +e)θ∗(χ (0) +χ (z)∗)θ∗(χ (ζ) +χ (0)∗)
+
+θ(χ (0) +χ (z)∗ +e)θ∗(χ (ζ) +χ (z)∗)θ∗(χ (0) +χ (0)∗)
+
+is analytic. Rewriting gives,
+
+(ζ − Pj)K 0(ζ,a ) = F (ζ,a )
+
+fj(ζ) .
+
+The lemma now follows from the fact that the right hand side is analytic in (ζ,a ∗) ∈ Vj × W . □
+
+Proof of Theorem 4.3. Without loss of generality, we can assumeǫ> 0 is small enough that the points
+
+P1,P 2,Ja 1,...,Ja 4 are all distinct. Deﬁne
+
+R(a1,a 2) =
+
+(
+
+R1(a1) R1(a2)
+
+R2(a1) R2(a2)
+
+)
+
+and
+
+R(a3,a 4) =
+
+(
+
+R1(a3) R1(a4)
+
+R2(a3) R2(a4)
+
+)
+
+whereRj(a) is the residue ofK 0(ζ,a ) atPj as in the Lemma 4.4.
+
+To prove thatR(a1,a 2) is invertible, let
+
+c =
+
+(
+
+c1
+
+c2
+
+)
+
+andfc =c1K 0(ζ,a 1) +c2K 0(ζ,a 2). Note that R(a1,a 2)c = 0 if and only iffc does not have poles
+
+at eitherP1 orP2. In this case, if fc is not constant, then the poles of fc are precisely the points Ja 1
+
+andJa 2 which gives the usual contradiction, since both of these points are inR′. Thus,fc is constant.
+
+The kernelK 0(ζ, 0) = 1 , so we can express this as
+
+0 = c0K 0(ζ, 0) +c1K 0(ζ,a 1) +c2K 0(ζ,a 2)
+
+Since 0,a 1,a 2 are distinct, the functionsK 0(ζ, 0),K 0(ζ,a 1),K 0(ζ,a 2) are linearly independent and
+
+hence c1 = c2 = 0 . Summarizing, if R(a1,a 2)c = 0 , then c = 0 . It follows that R(a1,a 2) is
+
+invertible and by an identical argument,R(a3,a 4) is invertible.
+
+Consider the functionF deﬁned forδj nearδ0
+
+j by
+
+F =
+
+(
+
+R1(a1)δ1 R1(a2)δ2 R1(a3)δ3 R1(a4)δ4
+
+R2(a1)δ1 R2(a2)δ2 R2(a3)δ3 R2(a4)δ4
+
+)
+
+.
+
+Thus,F takes values inM4, the 4× 4 matrices, viewed as 2× 4 matrices with entries from C2. Clearly
+
+F is continuous inδj. By Lemma 4.4 it is also continuous in a1,...,a 4. Indeed, from the form of F
+
+it is jointly continuous inaj,δ j. SinceF is invertible ata0
+
+j,δ 0
+
+j , it follows that there is anǫ> 0 so that
+
+if |a0
+
+j − aj|, ∥δ0
+
+j − δj∥<ǫ , thenF is invertible.
+
+Ifaj andδj are chosen such thatF is invertible and
+
+h(ζ) =
+
+∑
+
+cjK 0(ζ,a j)δj +v
+
+does not have poles atPj, then
+
+0 =
+
+( ∑cjR1(aj)δj∑cjR2(aj)δj
+
+)
+
+=F
+
+
+
+
+
+
+
+
+
+c1
+
+c2
+
+c3
+
+c4
+
+
+
+
+
+
+
+ .
+
+Hencec = 0 andh is constant.
+
+Now supposeh ̸= 0 and there existz1,z 2 ∈ B (not assumed distinct but not both zero) such that
+
+h(ζ)K 0(ζ,z k) =
+
+∑
+
+ck
+
+jK 0(ζ,a j)δj +vk, k = 0, 1, 2, (4.4)
+
+wherez0 = 0 (and soK 0(ζ,z 0) = 1 . Usingk = 1 we see thatP1,P 2 are not poles ofh, since by the
+
+assumptions on the distinctness of the Pk’s andaj’s, the right side has a pole of order at most one at
+
+eachPk, while the left side has a pole of order at least one at these points. Using k = 0 we see thath
+
+satisﬁes the hypothesis of the part of the Theorem which has already been proved. Thush is constant.
+
+The rest of the result now easily follows using the linear independence of the kernels. □
+
+5. R EPRESENTING NICE MATRIX VALUED INNER FUNCTIONS
+
+5.1. Hahn-Banach Separation. Recall that H(X) denotes the set of functions analytic in a neigh-
+
+borhood of X and R(X) the rational functions with poles off X. Of particular interest is the set
+
+BH(X) consisting of thosef ∈ H(X) with ∥f ∥R ≤ 1.
+
+LetM2(H(X)) denote the 2× 2 matrices with entries from H(X) and similarly deﬁneM2(R(X)).
+
+Forf ∈ H(X), f ∗ denotes its pointwise complex conjugate while for F ∈ M2(H(X)), F ∗ is the
+
+pointwise adjoint.
+
+Forf,g ∈ H(X) orM2(H(X)), andh(z,w ) = ∑f (z)g(w)∗ (with only ﬁnitely many terms) we
+
+use the convention, ∑f (z)g(w)∗(T ) = ∑f (T )g(T )∗ to deﬁneh(T ) = h(T,T ∗).
+
+Let C be the cone generated by
+
+{H(z)(1 − ψ (z)ψ (w)∗ )H(w)∗ :ψ ∈ BH(X),H ∈ M2(H(X))}.
+
+Obviously we would get the same set if we were to instead assume theH is a C2-valued function.
+
+Lemma 5.1. IfF ∈ M2(H(X)), then there existsρ> 0 such thatI − ρ2F (z)F (w)∗ ∈ C .
+
+Proof. First, suppose
+
+F =
+
+(
+
+f
+
+g
+
+)
+
+.
+
+Choose 0<τ so big that f
+
+τ and g
+
+τ are inBH(X). Then,
+
+2τ2I − F (z)F (w)∗ = 2
+
+(
+
+)
+
+(τ2 − f (z)f (w)∗)
+
+( 1 0 )
+
++ 2
+
+(
+
+)
+
+(τ2
+
+g − g(z)g(w)∗ )
+
+(
+
+0 1
+
+)
+
++
+
+(
+
+f (z)
+
+−g(z)
+
+)
+
+(1 − 0)
+
+(
+
+f (w)∗ g(w)∗)
+
+.
+
+Thusρ = 1
+
+√
+
+2τ satisﬁes the conclusion of the lemma.
+
+For generalF writeF (z)F (w)∗ = G(z)G(w)∗ +H(z)H(w)∗, where G andH are the ﬁrst and
+
+second columns of F respectively. There exists ρG and ρH so that both I − ρ2
+
+GG(z)G(w)∗ and
+
+I − ρ2
+
+HH(z)H(w)∗ are in C. Withρ2 = 1
+
+2 min{ρ2
+
+G,ρ 2
+
+H },
+
+I − ρ2F (z)F (w)∗ =I − ρ2G(z)G(w)∗ − ρ2H(z)H(w)∗
+
+= 1
+
+2 (I − ρ2
+
+GG(z)G(w)∗) + 1
+
+2 (I − ρ2
+
+HH(z)H(w)∗)
+
++
+
+( 1
+
+2ρ2
+
+G + 1
+
+2ρ2
+
+H − ρ2
+
+)
+
+.
+
+Each term on the right hand side is evidently in C. This completes the proof. □
+
+Henceforth, forF ∈ M2(H(X)), we set
+
+ρF = sup{ρ> 0 : I − ρ2F (z)F (w)∗ ∈ C}.
+
+The following Proposition is an application of the Hahn-Ban ach theorem. It is central to our con-
+
+struction.
+
+Theorem 5.2. If there exists a function F : R → M2(C) which is analytic in a neighborhood of X
+
+and unitary-valued on B such that ρF < 1, then there exists a Hilbert space H and an operator T
+
+such thatT hasX as a spectral set, butT does not have a normalB-dilation.
+
+Proof. The proof features a familiar Hahn-Banach separation argument and GNS construction.
+
+From the hypothesis, there exists aρ< 1 so thatI − ρ2F (z)F (w)∗ /∈ C .
+
+Let P be the vector space of ﬁnite sums
+
+∑
+
+hj(z)gj (w)∗
+
+whereHj,G j are C2-valued functions analytic in a neighborhood ofX. Note,h(z)g(w)∗ is pointwise
+
+a 2 × 2 matrix.
+
+The cone C is a convex subset of P not containingI − ρ2F (z)F (w)∗ and, by Lemma 5.1, I is an
+
+internal point of C. Hence, there exists a nonconstant linear functionalλ : P → C so thatλ ≥ 0 on C
+
+andλ(I −ρ2F (z)F (w)∗) ≤ 0 we haveλ(I)> 0, as otherwise, from Lemma 5.1,λ(H(z)H(w)∗) = 0
+
+for allH and henceλ = 0 (see, for example, Holmes [23], § 11.E).
+
+Let H2(X) denote the C2-valued functions analytic in a neighborhood of X. For h,g ∈ H2(X),
+
+deﬁne
+
+[h,g ] = λ(h(z)g(w)∗ ).
+
+Since the cone C containsh(z)h(w)∗, the form [·, ·] is positive semideﬁnite on H2(X).
+
+Givenf analytic in a neighborhood of X, consider the mapping Mf : H2(X) → H2(X) deﬁned
+
+by multiplication byf so thatMfg =fg . LetCf be the inﬁmum over all positive numbers such that
+
+f
+
+Cf
+
+takes values in the closed unit disk. Obviously,Cf = ∥f ∥R. For anyg ∈ C2,
+
+(C 2
+
+fg(z))
+
+(
+
+1 − f (z)
+
+Cf
+
+f (w)∗
+
+Cf
+
+)
+
+(Cfg(w))∗ =g(z)(C 2
+
+f − f (z)f (w)∗)g(w)∗ ∈ C.
+
+Thus,
+
+C 2
+
+f [g,g ] − [Mfg,M fg] = C 2
+
+fλ(g(z)g(w)∗ ) − λ(f (z)g(z)g(w)∗f (w))
+
+=λ(g(z)
+
+(
+
+C 2
+
+f − f (z)f (w)∗)
+
+g(w)∗) ≥ 0,
+
+asλ is nonnegative on C. It follows that each Mf deﬁnes a bounded operator, still denoted by Mf,
+
+on the Hilbert space H obtained from H2(X) by modding out [·, ·] null vectors and completing.
+
+Furthermore, ∥Mf ∥ =Cf. In particular, with T = Mζ, whereζ(z) = z is the identity function, the
+
+setX is a spectral set forT . Here we are usingf (T ) = Mf .
+
+To see thatT does not have a dilation to a normal operator with spectrum inX, it sufﬁces to show
+
+thatF (T ) is not a contraction for theF in the statement of the theorem. To this end, write
+
+F =
+
+(
+
+F11 F12
+
+F21 F22
+
+)
+
+so that
+
+F t(T ) =
+
+(
+
+MF11 MF21
+
+MF12 MF22
+
+)
+
+,
+
+whereF t denotes the pointwise transpose of F . Let e1,e 2 denote the (class of) constant functions,
+
+ej(z) = ej, as elements of H. Compute,
+
+⟨
+
+F t(T )
+
+(
+
+e1
+
+e2
+
+)
+
+,F t(T )
+
+(
+
+e1
+
+e2
+
+)⟩
+
+=
+
+⟨
+
+
+
+
+
+
+
+
+
+(
+
+F11
+
+F21
+
+)
+
+(
+
+F12
+
+F22
+
+)
+
+
+
+
+
+
+
+ ,
+
+
+
+
+
+
+
+
+
+(
+
+F11
+
+F21
+
+)
+
+(
+
+F12
+
+F22
+
+)
+
+
+
+
+
+
+
+
+
+⟩
+
+=λ
+
+((
+
+F11(z)
+
+F21(z)
+
+) (
+
+F11(w)∗ F21(w)∗)
+
++
+
+(
+
+F12(z)
+
+F22(z)
+
+) (
+
+F12(w)∗ F22(w)∗) )
+
+=λ(F (z)F (w)∗ ).
+
+On the other hand, ⟨(
+
+e1
+
+e2
+
+)
+
+,
+
+(
+
+e1
+
+e2
+
+)⟩
+
+=λ(e1e∗
+
+1) +λ(e2e∗
+
+2) = λ(I).
+
+Combining the last two equalities gives,⟨
+
+(I − F t(T )∗F t(T ))
+
+(
+
+e1
+
+e2
+
+)
+
+,
+
+(
+
+e1
+
+e2
+
+)⟩
+
+=λ(I − F (z)F (w)∗)
+
+=λ
+
+( 1
+
+ρ2 − F (z)F (w)∗
+
+)
+
+−
+
+( 1
+
+ρ2 − 1
+
+)
+
+λ(I)< 0.
+
+Therefore, ∥F t(T )∥> 1. On the other hand, ∥F t∥∞ = sup{∥F t(z)∥ :z ∈ X} is the same as ∥F ∥∞ ,
+
+since the norms of a matrix and its transpose are the same. In f act, asF is unitary valued onB, so is
+
+F t and thus ∥F t∥∞ = 1. It now follows from Lemma 2.1 that T does not dilate to a normal operator
+
+with spectrum inX. □
+
+5.2. Matrix Measures. This subsection is a brief digression from the main line of de velopment to
+
+collect some needed facts about matrix-valued measures.
+
+Given a compact Hausdorff spaceX, anm × m matrix-valued measure
+
+µ =
+
+(
+
+µ j,ℓ
+
+) m
+
+j,ℓ =1
+
+onX is anm × m matrix whose entriesµ j,ℓ are complex-valued regular Borel measures on X. The
+
+measureµ is positive, writtenµ ≥ 0, if, for each continuous functionf :X → Cm,
+
+f =
+
+
+
+
+
+
+
+f1
+
+.
+
+.
+
+.
+
+fm
+
+
+
+
+
+
+
+we have
+
+0 ≤
+
+∫
+
+X
+
+f ∗dµf =
+
+∑
+
+j,ℓ
+
+∫
+
+X
+
+f ∗
+
+jfℓdµ j,ℓ.
+
+The positive measureµ is bounded byC >0 if
+
+CI m −
+
+( µ j,ℓ (X))
+
+≥ 0
+
+is positive semideﬁnite, whereIm is the identitym × m matrix.
+
+Lemma 5.3. Them × m matrix-valued measureµ is positive if and only if for each Borel set ω the
+
+m × m matrix ( µ j,ℓ (ω ))
+
+is positive semi-deﬁnite.
+
+Further, if there is aκ so that each diagonal entryµ j,j (X) ≤ κ, then each entryµ j,ℓ ofµ has total
+
+variation at mostκ. In particular, ifµ is bounded byC, then each entry has variation at mostC.
+
+Proof. First supposeµ is positive. LetC(X) denote the continuous complex-valued functions onX.
+
+Fix a vector c ∈ Cm. Given f ∈ C(X), the function cf is a continuous Cm-valued function. Thus,
+
+Φc :C(X) → C given by
+
+Φc(f ) =
+
+∑ ∫
+
+X
+
+c∗
+
+jcℓfdµ j,ℓ
+
+is a positive linear functional. Hence ∑c∗
+
+jcℓµ j,ℓ is a positive measure onX. Ifω is a Borel set, then
+
+⟨(
+
+µ jℓ(ω )
+
+)
+
+c,c
+
+⟩
+
+=
+
+∑
+
+c∗
+
+jcℓµ j,ℓ (ω )> 0.
+
+Sincec was arbitrary, the matrix in the lemma is positive semideﬁnite for eachω .
+
+Conversely, suppose the matrix in the lemma is positive semi deﬁnite for each Borel set ω . If
+
+f :X → Cm is a measurable simple functions,f = ∑vjχ ω j , then
+
+∫
+
+X
+
+f ∗dµf =
+
+∑
+
+j
+
+⟨µ (ω j)vj,v j⟩ ≥ 0.
+
+For more general f : X → Cm, choose a sequence of measurable simple functions convergi ng to f
+
+pointwise. Then,
+
+0 ≤
+
+∫
+
+X
+
+f ∗
+
+ndµf n →
+
+∫
+
+X
+
+f ∗dµf.
+
+Now suppose that for each diagonal entry µ j,j (X) ≤ κ. For g ∈ C(X), let µ j,ℓ (g) denote the
+
+integral ofg with respect todµ j,ℓ and forj ̸=ℓ, let
+
+λ = − µ j,ℓ (g)∗
+
+|µ j,ℓ (g)∗|∥g∥∞ .
+
+Observe
+
+0 ≤
+
+⟨(
+
+µ j,j µ j,ℓ
+
+µ ℓ,j µ ℓ,ℓ
+
+) (
+
+λ
+
+g
+
+)
+
+,
+
+(
+
+λ
+
+g
+
+)⟩
+
+=∥g∥2
+
+∞ µ j,j (X) +µ ℓ,ℓ (|g|2) − 2|µ j,ℓ (g)|∥g∥∞
+
+≤ 2(∥g∥2
+
+∞ κ − |µ j,ℓ (g)|∥g∥∞ ).
+
+It follows thatµ j,ℓ is a continuous linear functional on C(X) with norm at most κ. In particular, the
+
+variation ofµ j,ℓ is at mostκ.
+
+Finally note that by choosing c =ej, whereej is thej-th standard basis vector for Cm, it follows
+
+that eachµ j,j is a positive measure. Further, if we now suppose µ is bounded by C, thenµ j,j (X) ≤
+
+C. □
+
+Lemma 5.4. If µ n is a sequence of positive m × m matrix-valued measures on X which are all
+
+bounded above byC, then there is a a positivem × m matrix-valued measureµ onX also bounded
+
+above by C. Hence there is a subsequence µ nk ofµ n converging toµ weak-∗; i.e., for each pair of
+
+continuous functionsf,g :X → Cm,
+
+∑
+
+j,ℓ
+
+∫
+
+X
+
+fℓg∗
+
+jdµ n
+
+j,ℓ →
+
+∑
+
+j,ℓ
+
+∫
+
+X
+
+fℓg∗
+
+jdµ j,ℓ.
+
+Proof. By the previous lemma, for eachj,ℓ the measuresµ n
+
+j,ℓ are bounded in variation byC. Hence,
+
+we can ﬁnd a subsequence, which for convenience, we will stil l denote by µ n so that each µ n
+
+j,ℓ con-
+
+verges weak-∗ to someµ j,ℓ with variation at mostC.
+
+Supposef :X → Cm is continuous. We have
+
+0 ≤
+
+∫
+
+X
+
+f ∗dµ nf =
+
+∑
+
+j,ℓ
+
+∫
+
+X
+
+f ∗
+
+jfℓdµ n
+
+j,ℓ →
+
+∑
+
+j,ℓ
+
+∫
+
+X
+
+f ∗
+
+jfℓdµ j,ℓ =
+
+∫
+
+X
+
+f ∗dµf.
+
+Henceµ is a positive measure. Further, for a vectorc ∈ Cm thought of as a constant function,
+
+0 ≤ C∥c∥2 −
+
+⟨(
+
+µ n
+
+j,ℓ (X)
+
+)
+
+c,c
+
+⟩
+
+→ C∥c∥2 − ⟨ (µ j,ℓ (X))c,c ⟩.
+
+Thus,µ is bounded above byC. □
+
+Lemma 5.5. Ifµ is a positive m × m matrix-valued measure on X, then the diagonal entries, µ j,j
+
+are positive measures. Further, with ν = ∑m
+
+j=1µ j,j , there exists an m × m matrix-valued function
+
+∆ : X → Mm(C) so that ∆(x) is positive semideﬁnite for eachx ∈ X anddµ = ∆dν; i.e., for each
+
+pair of continuous functionsf,g :X → Cm,
+
+∑
+
+j,ℓ
+
+∫
+
+X
+
+g∗
+
+jfℓdµ j,ℓ =
+
+∑
+
+j,ℓ
+
+∫
+
+X
+
+g∗
+
+j ∆j,ℓ fℓdν.
+
+Proof. From Lemma 5.3, ifω is a Borel set andµ j,j (ω ) = 0 , thenµ j,ℓ (ω ) = 0 for eachj. Thus, each
+
+j,ℓ the measure µ j,ℓ is absolutely continuous with respect to ν. By the Radon-Nikodym Theorem,
+
+there existsν integrable functions ∆j,ℓ so thatdµ j,ℓ = ∆ j,ℓ dν.
+
+Once again ﬁx a vectorc ∈ Cm. By Lemma 5.3, for each Borel setω ,
+
+0 ≤ ⟨ (µ j,ℓ (ω ))c,c ⟩ =
+
+⟨( ∫
+
+ω
+
+∆j,ℓ dν
+
+)
+
+c,c
+
+⟩
+
+=
+
+∫
+
+ω
+
+∑
+
+j,ℓ
+
+c∗
+
+jcℓ∆j,ℓ dν.
+
+Thus, ∑
+
+j,ℓ c∗
+
+jcℓ∆j,ℓ ≥ 0 almost everywhere with respect toν.
+
+Choose a countable dense subset {cn} of Cm. For each n there is a set En of ν-measure zero
+
+such that off of En the function ∑
+
+j,ℓ (cn
+
+j )∗cn
+
+ℓ ∆j,ℓ is non-negative. For x ∈ X \ (∪En), we have∑
+
+j,ℓ (cn
+
+j )∗cn
+
+ℓ ∆j,ℓ (x) ≥ 0 for each n. By continuity of the inner product in Cm, it follows that∑
+
+j,ℓ c∗
+
+jcℓ∆j,ℓ (x) ≥ 0 for all c ∈ Cm for almost all x; that is, the matrices ∆(x) = (∆ j,ℓ (x)),
+
+forx ∈ X \(∪En), are positive semideﬁnite. □
+
+5.3. Representations in terms of theφ p. The following is a companion to Proposition 5.2. Given a
+
+subsetS ⊂ R, a function Γ : S × S × Π → C is a positive kernel if for eachp ∈ Π, the matrix
+
+(Γ(z,w ;p))z,w ∈ S′, (5.1)
+
+S′a ﬁnite subset ofS. IfS =R, then Γ is analytic if Γ(z,w ;p) is analytic inz and conjugate analytic
+
+inw for allp.
+
+The point of the next result is that we do not know a priori that 1 − FF ∗ ∈ C even ifρF = 1.
+
+Proposition 5.6. SupposeF is a 2 × 2 matrix-valued function analytic in a neighborhood of R,F
+
+is unitary-valued on B, and F (0) = 0 . If ρF = 1 and if S ⊂ R is a ﬁnite set, then there exists a
+
+probability measureµ on Π and a positive kernel Γ : S × S × Π → C so that
+
+1 − F (z)F (w)∗ =
+
+∫
+
+Π
+
+(1 − φ p(z)φ p(w)∗)Γ(z,w ;p)dµ (p)
+
+for allz,w ∈ S.
+
+Proof. Choose a sequence 0 < ρn < 1 such that ρn converges to 1. For each n, there exists vector
+
+functionsHn,j and functionsψ n,j analytic in a neighborhood ofR such thatψ n,j ∈ BH(X) and
+
+1 − ρ2
+
+nF (z)F (w)∗ =
+
+Nn∑
+
+j=1
+
+Hn,j (z)(1 − ψ n,j (z)ψ n,j (w)∗)Hn,j (w)∗.
+
+By post composition with a M¨ obius transformation if necessary, it may be assumed without loss of
+
+generality thatψ n,j (0) = 0 for eachn,j .
+
+For each n,j , there exists hn,j (z,p ), analytic as a function of z in a neighborhood of R, and a
+
+probability measureνn,j on Π so that by Proposition 2.4,
+
+1 − ψ n,j (z)ψ n,j (w)∗ =
+
+∫
+
+Π
+
+hn,j (z,p )(1 − φ p(z)φ p(w)∗)hn,j (w,p )∗dνn,j (p).
+
+Observe, as all theψ andφ vanish at 0,
+
+1 =
+
+∫
+
+hn,j (0,p )hn,j (0,p )∗dνn,j (p).
+
+Let
+
+νn =
+
+Nn∑
+
+j=1
+
+νn,j.
+
+By the Radon-Nikodym theorem, there exists a nonnegative functionun,j (p) such that
+
+dνj,n =un,j (p)2dνn.
+
+Thus
+
+1 − ψ n,j (z)ψ n,j (w)∗
+
+=
+
+∫
+
+Π
+
+un,j (p)hn,j (z,p )[1 − φ p(z)φ p(w)∗]hn,j (w,p )∗un,j (p)dνn(p).
+
+Let
+
+Γn(z,w ;p) =
+
+∑
+
+j
+
+Hj,n (z)un,j (p)hn,j (z,p )hn,j (w,p )∗un,j (p)∗Hn,j (w)∗.
+
+By construction, Γn is analytic in z conjugate analytic in w in a neighborhood of R, is positive
+
+semideﬁnite as a kernel, and
+
+I − ρ2
+
+nF (z)F (w)∗ =
+
+∫
+
+Π
+
+[1 − φ p(z)φ p(w)∗]Γn(z,w ;p)dνn(p). (5.2)
+
+For ﬁxedz,I − ρ2
+
+nF (z)F (z)∗ ≤ I and there exists aǫz such that 1 − |φ p(z)|2 ≥ ǫz. Thus,
+
+I ≥ ǫz
+
+∫
+
+Π
+
+Γn(z,z ;p)dνn(p).
+
+LetC denote the maximum of the set {ǫ− 1
+
+z :z ∈ S} andm the cardinality ofS. The sequence of
+
+m × m measures with 2 × 2 entries
+
+dµ n = (Γ n(z,w ;p)dνn(p))z,w ∈ S
+
+are positive and the diagonal entries are bounded byC. A positivek × k matrix whose diagonal entries
+
+are at mostC is bounded above bykCI k. Thus, it follows from the results of the previous section that
+
+there exists a positive measureν and a pointwise positive deﬁnite matrix valued function
+
+Γ(p) = (Γ(z,w ;p))z,w ∈ S
+
+so that some subsequence of µ n converges to Γdν weak-∗, where ν can be taken to be a probability
+
+measure by scaling Γ if necessary. For notational ease, we continue to denote the subsequence byµ n.
+
+Forz,w ∈ S ﬁxed, the expression (1 − φ p(z)φ p(w)∗) is continuous in p by Lemma 2.11. Thus,
+
+lettingn tend to inﬁnity in equation (5.2) gives
+
+I − F (z)F (w)∗ =
+
+∫
+
+Π
+
+[(1 − φ p(z)φ p(w)∗]Γ(z,w ;p)dν(p).
+
+□
+
+5.4. Transfer Function Representations. For present purposes, a unitary colligationΣ = (U,K,µ )
+
+consists of a probability measureµ on Π, a Hilbert spaceK, and a unitary a unitary operatorU on the
+
+direct sum (L2(µ ) ⊗ K) ⊕ C2, written as
+
+U =
+
+(
+
+A B
+
+C D
+
+)
+
+(5.3)
+
+with respect to the direct sum decomposition. HereL2(µ ) ⊗ K signiﬁesK-valuedL2(µ ).
+
+Deﬁne Φ : R → B(L2(µ ) ⊗ K) by (Φ(z)f )(p) = φ p(z)f (p). Of course Φ depends uponµ and
+
+K, but this dependence is suppressed. The transfer function associated to Σ is
+
+W =WΣ(z) = D +CΦ(z)(I − AΦ(z))− 1B. (5.4)
+
+Note that as A must be a contraction and Φ(z) is a strict contraction, the inverse in (5.4) exists for
+
+z ∈ R. Moreover, since Φ(z)(I − AΦ(z))− 1 = (I − Φ(z)A)− 1Φ(z), the transfer function of Σ may
+
+also be expressed as
+
+W =D +C(I − Φ(z)A)− 1Φ(z)B. (5.5)
+
+Proposition 5.7. The transfer function is contractive-valued, ∥WΣ(z)∥ ≤ 1 for all z ∈ R. Indeed,
+
+forz,w ∈ R,
+
+I − WΣ(z)WΣ(w)∗ =C(I − Φ(z)A)− 1(I − Φ(z)Φ(w)∗)(I − Φ(w)A)∗− 1C ∗.
+
+By now the proof is entirely standard. Simply use the equation (5.4), andDB ∗ = −CA ∗,BB ∗ =
+
+I − AA∗, andDD∗ =I − CC ∗ to verify:
+
+I − W (z)W (w)∗ = 1 − [D +CΦ(z)(I − AΦ(z))− 1B][D∗ +B∗(I − Φ∗(w)A)− 1Φ∗(w)C]
+
+= 1 − DD∗ − [CΦ(z)(I − AΦ(z))− 1B][B∗(I − Φ∗(w)A∗)− 1Φ∗(w)C]
+
+−DB ∗(I − Φ∗(w)A∗)− 1Φ∗(w)C ∗ − CΦ(z)(I − AΦ(z))− 1BD ∗
+
+= C [1 − Φ(z)(I − AΦ(z))− 1(1 − AA∗)(I − Φ∗(w)A∗)− 1Φ∗(w)
+
++A∗(I − Φ∗(w)A∗)− 1Φ∗(w) + Φ(z)(I − AΦ(z))− 1A]C ∗
+
+= C [1 − (I − Φ(z)A)− 1Φ(z)(1 − AA∗)Φ∗(w)(I − A∗Φ∗(w))− 1
+
++A∗Φ∗(w)(I − A∗Φ∗(w))− 1 + (I − Φ(z)A)− 1Φ(z)A]C ∗
+
+= C(I − Φ(z)A)− 1 [(I − Φ(z)A)(I − A∗Φ∗(w)) − Φ(z)(1 − AA∗)Φ∗(w)
+
++(I − Φ(z)A)A∗Φ∗(w) + Φ(z)A(I − A∗Φ∗(w))] (I − A∗Φ∗(w))− 1C ∗
+
+= C(I − Φ(z)A)− 1[1 − Φ(z)Φ∗(w)](I − A∗Φ∗(w))− 1C ∗.
+
+Note that pointwise onR, we can deﬁneH(w) = (I − A∗Φ(w)∗)− 1C ∗ : C2 → L2(µ ) ⊗ K. Thus,
+
+forw ﬁxed,H(w)∗ is a function on Π, which we emphasize by writing as Hp(w)∗. Interpreting the
+
+representation in Proposition 5.7 in terms of the spaceL2(µ ) ⊗ K gives,
+
+I − W (z)W (w)∗ =
+
+∫
+
+(1 − φ p(z)φ p(w)∗)Hp(z)Hp(w)∗dµ (p).
+
+5.5. Nevanlinna-Pick Interpolation. The following proposition is an Agler-Pick type interpolation
+
+theorem for some matrix-valued functions onR. The proof proceeds via a transfer function realization
+
+for a solution. This is a rip-off of methods pioneered by Agle r, followed by Ball and others, and now
+
+standard. We eventually show that, roughly speaking, this t heorem only applies to 2 × 2 matrix
+
+functions which are, up to a ﬁxed unitary, the direct sum of scalar contractive functions.
+
+Proposition 5.8. If S ⊂ R is a ﬁnite set, W : S → M2(C), and if there is a positive kernel Γ :
+
+S × S × Π → M2(C) such that
+
+I − W (z)W (w)∗ =
+
+∫
+
+Π
+
+(1 − φ p(z)φ p(w)∗)Γ(z,w ;p)dµ (p)
+
+for all z,w ∈ S, then there exists G : R → M2(C) such that ∥G(z)∥ ≤ 1 and G(z) = W (z)
+
+for z ∈ S. Indeed, there exists a ﬁnite dimensional Hilbert space K (dimension at most twice the
+
+cardinality ofS) and a unitary colligation Σ = (U,K,µ ) so that
+
+G =WΣ,
+
+and hence there exists ∆ : R × R × Π → M2(C) a positive analytic kernel such that
+
+I − G(z)G(w)∗ =
+
+∫
+
+Π
+
+[1 − φ p(z)φ p(w)∗]∆(z,w ;p)dµ (p)
+
+for allz,w ∈ R.
+
+Proof. Once again, this is by now standard. Forp ∈ Π, the rank of the block matrix with 2 × 2 matrix
+
+entries
+
+(Γ(z,w ;p))z,w ∈ S
+
+is at most 2N, where N is the cardinality of S. Thus, by Kolmogorov’s theorem (see, for example,
+
+[7], Theorem 2.53, especially the second proof), there exists a Hilbert spaceK of dimension 2N and
+
+a function H : S → L2(µ ) ⊗ B(C2,K ), denoted Hp(z), such that Γ(z,w ;p) = Hp(z)Hp(w)∗ (µ
+
+almost everywhere).
+
+Let E and F denote the subspaces of (L2(µ ) ⊗ K) ⊕ C2 spanned by
+
+{(
+
+Hs(w)∗x
+
+W (w)∗x
+
+)
+
+:x ∈ C2,w ∈ S
+
+}
+
+,
+
+and {(
+
+φ s(w)∗Hs(w)∗x
+
+x
+
+)
+
+:x ∈ C2,w ∈ S
+
+}
+
+respectively. The mappingV from E to F determined by
+
+V
+
+(
+
+Hs(w)∗x
+
+W (w)∗x
+
+)
+
+=
+
+(
+
+φ s(w)∗Hs(w)∗x
+
+x
+
+)
+
+is an isometry since
+
+⟨(
+
+Hs(w)∗x
+
+W (w)∗x
+
+)
+
+,
+
+(
+
+Hs(z)∗y
+
+W (z)∗y
+
+)⟩
+
+=
+
+⟨∫
+
+Hs(z)Hs(w)∗dµ (s)x,y
+
+⟩
+
++ ⟨W (z)W (w)∗x,y ⟩
+
+and ⟨(
+
+φ s(w)∗Hs(w)∗x
+
+x
+
+)
+
+,
+
+(
+
+φ s(z)∗Hs(z)∗y
+
+y
+
+)⟩
+
+=
+
+⟨∫
+
+φ s(z)φ s(w)∗Hs(z)Hs(w)∗dµ (s)x,y
+
+⟩
+
++ ⟨x,y ⟩.
+
+Both E and F are ﬁnite dimensional, so there exists a unitary U on (L2(µ ) ⊗ K) ⊕ C2 such thatU ∗
+
+extendsV . Let Σ = (U,K,µ ) denote the resulting unitary colligation.
+
+WriteU as in equation (5.3). SinceU ∗ restricted to E isV ,(
+
+A∗ C ∗
+
+B∗ D∗
+
+) (
+
+φ s(w)∗Hs(w)∗x
+
+x
+
+)
+
+=
+
+(
+
+Hs(w)∗x
+
+W (w)∗x
+
+)
+
+.
+
+Expressing this as a system of equations
+
+A∗φ s(w)∗Hs(w)∗x +C ∗x =Hs(w)∗x
+
+B∗φ s(w)∗Hs(w)∗x +D∗x =W (w)∗x.
+
+Solving the ﬁrst equation forHs(w)∗x gives,
+
+Hs(w)∗x = (I − A∗Φ(w)∗)− 1C ∗x.
+
+Substituting into this the second equation now gives,
+
+B∗Φ(w)∗(I − A∗Φ(w)∗)− 1C ∗x =W (w)∗x.
+
+It follows that for eachz ∈ S,
+
+WΣ(z) = W (z).
+
+□
+
+Next is a uniqueness result for Nevanlinna-Pick interpolation onR.
+
+Proposition 5.9. SupposeF : R → M2(C) is analytic in a neighborhood of X, unitary on B, and
+
+with a standard zero set. Then there exists S ⊂ R a set with seven elements such that, if Z : R →
+
+M2(C) is contractive-valued andZ(z) = F (z) forz ∈ S, thenZ =F .
+
+Proof. Let K 0 denote the Fay kernel for R deﬁend in Section 4. That is, K 0 is the reproducing
+
+kernel for the Hilbert space H2(R) of functions analytic in R withL2 boundary values with respect
+
+to harmonic measure onB with respect to the point 0. Let H2
+
+2(R) denote C2-valued H2(R). SinceF
+
+is unitary-valued onB, the mappingV on H2
+
+2(R) deﬁned byVG (z) = F (z)G(z) is an isometry. As
+
+is shown below, the kernel ofV ∗ is the span of {K 0(·,a j)γj :j = 1, 2,..., 6} whereF (aj)∗γj = 0
+
+and, of course,γj ̸= 0; that is, the pair (aj,γ j) is a zero ofF ∗.
+
+Before proceeding, we note that if ϕ is scalar valued and analytic in a neighborhood of R, has
+
+no zeros on B, and has distinct zeros w1,...,w n ∈ R of multiplicity one, and if f ∈ H2(R) with
+
+f (wj) = 0 , thenf =ϕg for ag ∈ H2(R).
+
+Now suppose ψ ∈ H2(R) and for all h ∈ H2(R), we have ⟨ψ,ϕh ⟩ = 0 . Then there is a linear
+
+combination f = ψ − ∑n
+
+1cjK 0(·,w j ) so that f (wj) = 0 as the set {K 0(·,w j ) : 1 ≤ j ≤ n}
+
+is linearly independent, and thus by the above remark, f = ϕg for some g ∈ H2(R). Since⟨
+
+K 0(·,w j ),ϕh
+
+⟩
+
+= ϕ (wj )∗h(wj)∗ = 0 for each j and h, it follows that ⟨f,ϕh ⟩ = 0 for all h.
+
+Choosing h = g gives, ⟨ϕg,ϕg ⟩ = 0 from which it follows that g = 0 . Hence ψ is in the span
+
+of {K 0(·,w j ) : 1 ≤ j ≤ n}. This shows {K 0(·,w j) : 1 ≤ j ≤ n} is a basis for the orthogonal
+
+complement of {ϕh :h ∈ H2(R)}.
+
+We next determine the kernel of V ∗. Write a5 = a6 = 0 . Since F (0) = 0 , there is a function H
+
+analytic in a neighborhood ofX so thatF =zH. The functionϕ =z det(H) satisﬁes the hypothesis
+
+of the preceding paragraph.
+
+Let
+
+G =
+
+(
+
+h22 −h12
+
+−h21 h11
+
+)
+
+,
+
+whereH = (hj,ℓ ). VerifyFG =zHG =z det(H)I, whereI is the 2 × 2 identity matrix.
+
+Now suppose x ∈ H2
+
+2(R) and V ∗x = 0 . Let x1,x 2 denote the coordinates of x. For each g ∈
+
+H2
+
+2(R),
+
+0 = ⟨Gg,V ∗x⟩ = ⟨VGg,x ⟩ = ⟨z det(H)g,x ⟩ = ⟨z det(H)g1,x 1⟩ + ⟨z det(H)g2,x 2⟩.
+
+It follows from the discussion above that each xj is in the span of {K 0(ζ,a j) : 1 ≤ j ≤ 6} and
+
+thereforex is in the span of {K 0(ζ,a j)v : 1 ≤ j ≤ 6,v ∈ C2}. In particular, there exists vectors
+
+vj ∈ C2 such that
+
+x =
+
+6∑
+
+vjK 0(·,a j ).
+
+Since, as is readily veriﬁed,V ∗vK 0(·,a ) = F (a)∗vK 0(·,a ) andF (0)∗ = 0,
+
+0 = V ∗x =
+
+4∑
+
+F (aj)∗vjK 0(·,a j).
+
+ButK 0(·,a j),j = 1... 4 are linearly independent, and so F (aj)∗vj = 0 for each j. Conversely, if
+
+F (aj)∗vj = 0 , then V ∗vjK 0(·,a j) = 0 so that {K 0(ζ,a j)vj : 1 ≤ j ≤ 6} is a basis for the kernel
+
+ofV ∗.
+
+The projection onto the kernel of V ∗ isI − VV ∗ and since the kernel of V ∗ has dimension six,
+
+I − VV ∗ has rank six. Thus, for any ﬁnite setA ⊂ R, the block matrix with 2 × 2 matrix entries
+
+MA =
+
+( (⟨
+
+(I − VV ∗)K 0(·,w )ej,K 0(·,z )eℓ
+
+⟩)
+
+j,ℓ =1, 2
+
+)
+
+z,w ∈ A
+
+= ((I − F (z)F (w)∗)K 0(z,w ))z,w ∈ A
+
+has rank at most six. (Here{e1,e 2} is the usual basis forC2.) In particular, ifA = {a1,...,a 6} where
+
+the aj are the zeros of det(F ) (with a5 = a6 = 0 ), then MA has exactly rank six. Choose points
+
+a7,a 8 distinct from a1,...,a 6 so that the set S = {a1,...,a 6,a 7,a 8} has exactly seven distinct
+
+points. SinceS containsA, the rank ofMS is at least six. On the other hand, by what is proved above,
+
+it has rank at most six. Thus the rank ofMS is six.
+
+Since the matrix MS is 14 × 14 (viewed as a 7 × 7 block matrix with 2 × 2 matrix entries), and
+
+MS has rank six, the kernel of MS has dimension eight. Further, as the dimension of the subspa ce
+
+L1 = {γ ⊗ e1 :γ ∈ C7},
+
+L1 =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(
+
+γ1
+
+)
+
+(
+
+γ2
+
+)
+
+.
+
+.
+
+.(
+
+γ7
+
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:γ =
+
+
+
+
+
+
+
+
+
+
+
+γ1
+
+γ2
+
+.
+
+.
+
+.
+
+γ7
+
+
+
+
+
+
+
+
+
+ ∈ C7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+
+of C7 ⊗ C2 has dimension seven, it follows that the there exists a nonze rox1 =y1 ⊗ e1 in L and in
+
+the kernel ofMS. Similarly, by considering L2 = {γ ⊗ e2 :γ ∈ C7}, there exists a nonzerox2 in the
+
+kernel ofMS of the formx2 =y2 ⊗ e2.
+
+LetX =
+
+(
+
+x1 x2
+
+)
+
+. Thus,X is a 14 × 2 matrix,
+
+X =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(
+
+(y1)1 0
+
+0 ( y2)1
+
+)
+
+(
+
+(y1)2 0
+
+0 ( y2)2
+
+)
+
+.
+
+.
+
+.(
+
+(y1)7 0
+
+0 ( y2)7
+
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+
+It is convenient to useS to index itself, so that we have
+
+X(w) =
+
+( x1(w) x2(w))
+
+=
+
+(
+
+y1(w) 0
+
+0 y2(w)
+
+)
+
+for thew ∈ S coordinate ofX. The identityMSX = 0 becomes,
+
+∑
+
+w∈ S
+
+K 0(z,w )X(w) = F (z)
+
+∑
+
+w∈ S
+
+K 0(z,w )F (w)∗X(w)
+
+for eachz ∈ S.
+
+Now supposeZ : R → M2(C) is analytic, contractive valued, and Z(z) = F (z) forz ∈ S. The
+
+operatorW of multiplication byZ on H2
+
+2(R) is a contraction and
+
+W ∗K 0(·,w )x =Z(w)∗xK 0(·,w ).
+
+Givenζ ∈ R,ζ /∈ S, letS′ =S ∪ {ζ} and consider the decomposition of
+
+Nζ =
+
+( (⟨
+
+(I − Z(z)Z(w)∗)K 0(·,w )ej,K 0(·,z )eℓ
+
+⟩)
+
+j,ℓ
+
+)
+
+z,w ∈ S′
+
+into blocks according toS and {ζ}. Thus, Nζ is an 8 × 8 matrix with 2 × 2 block entries. The upper
+
+left 7 × 7 block matrix, the block determined byS, isMS sinceZ(z) = F (z) forz ∈ S. Let
+
+Y =
+
+
+
+
+
+X(
+
+0 0
+
+0 0
+
+)
+
+
+
+ .
+
+SinceNζ is positive semi-deﬁnite and MSX = 0 , it follows that NζY = 0 . An examination of the
+
+last two entries (the last 2 × 2 block) of the productNζY = 0 gives,
+
+∑
+
+w∈ S
+
+K 0(ζ,w )X(w) = Z(ζ)
+
+∑
+
+w∈ S
+
+Z(w)∗K 0(ζ,w )X(w). (5.6)
+
+From the form ofX and since the kernel functions{K 0(·,w ) : w ∈ S} form a linearly independent
+
+set in H2(R,ω 0), it follows that the right hand side in (5.6) has rank two for all but at most countably
+
+manyζ. Hence, ∑
+
+w∈ S
+
+K 0(z,w )F (w)∗X(w)
+
+also has rank two and Z is completely determined by the identity (5.6). Since F is also determined
+
+by this identity,Z =F . □
+
+The fact that we used K 0 in the last proof is not signiﬁcant: any reproducing kernel w ould have
+
+worked. However, certain facts that came to light in the proof will play a role in the proof of Lemma
+
+5.11, where Fay kernels are needed.
+
+5.6. A tight representation for some F . The results in the previous sections now combine to pro-
+
+duce a tight representation forF :R → M2(C) which is analytic across the boundary, unitary on the
+
+boundary, has at most six simple zeros inR, and hasρF = 1.
+
+Theorem 5.10. Suppose F is a 2 × 2 matrix-valued function analytic in a neighborhood of R, F
+
+is unitary-valued on B, with a standard zero set. If ρF = 1 , then there exists a unitary colligation
+
+Σ = (U,K,µ ) such thatF =WΣ and so that the dimension ofK is at most 14. In particular,µ is a
+
+probability measureµ on Π, and there is an analytic functionH :R → L2(µ ) ⊗ M14, 2(C), denoted
+
+Hp(z) so that
+
+1 − F (z)F (w)∗ =
+
+∫
+
+Π
+
+(1 − φ p(z)φ p(w)∗)Hp(z)Hp(w)∗dµ (p)
+
+for allz,w ∈ R.
+
+Proof. Choose, using Proposition 5.9, a ﬁnite set S ofR with the property: if G : R → M2(C) is
+
+analytic, contractive-valued, andG(z) = F (z) forz ∈ S, thenG =F .
+
+Using thisS, Proposition 5.6 produces a probability measureµ and positive kernelΓ : S × S × Π →
+
+M2(C) such that
+
+1 − F (z)F (w)∗ =
+
+∫
+
+Π
+
+(1 − φ p(z)φ p(w)∗)Γ(z,w ;p)dµ (p)
+
+for allz,w ∈ S.
+
+By Proposition 5.8 there exists a unitary colligation Σ = ( U,K,µ ) so that WΣ(z) = F (z) for
+
+z ∈ S. From our choice ofS, we see thatF =WΣ. The integral representation follows. □
+
+5.7. Fay Kernels Reprise. SupposeF satisﬁes the hypothesis of Theorem 5.10 and letµ denote the
+
+measure which appears in the conclusion.
+
+Recall Fay’s variant of the Szeg˝ o kernel forR,K 0(ζ,z ). Also recall, for each p ∈ Π there is an
+
+s ∈ { 1} × B1 × B2 so thatφ s(z)φ s(w)∗ =φ p(z)φ p(w)∗. In this case we label the zeros ofφ p (which
+
+of course are the same as those ofφ s)zs
+
+0(= 0),z s
+
+1,z s
+
+2.
+
+Lemma 5.11. SupposeF satisﬁes the hypothesis of Theorem 5.10:F is a 2× 2 matrix-valued function
+
+analytic in a neighborhood of R,F is unitary-valued on B, with a standard zero set, and ρF = 1 .
+
+Assume furthermore that it is represented as in the conclusi on of Theorem 5.10. Let a5 = a6 = 0
+
+andδ5 =e1 andδ6 =e2. Then there exists a set E ofµ measure zero such that forp /∈ E, for each
+
+v ∈ C14 and for ℓ = 0, 1, 2, the vector function Hp(ζ)vK 0(ζ,z ℓ) is in the span of {K 0(ζ,a j)δj},
+
+wherez0(= 0),z 1,z 2 are the zeros of φ p. As a consequence, Hp is analytic on R and extends to a
+
+meromorphic function onY .
+
+Proof. Given a ﬁnite setQ ⊂ R,
+
+MQ =
+
+(
+
+(I − F (z)F (w)∗)K 0(z,w )
+
+)
+
+z,w ∈ Q
+
+has rank at most six. Moreover, as interpreted in the proof of Proposition 5.9, the range ofMQ lies in
+
+the span of {(K 0(z,a j)δj)z∈ Q : j = 1,..., 6}. Here (K 0(z,a j)δj )z∈ Q is a column vector indexed
+
+byQ.
+
+From the representation forF from Theorem 5.10,
+
+MQ =
+
+( ∫
+
+Hp(z)(1 − φ p(z)φ p(w)∗)K 0(z,w )Hp(w)∗dµ (p)
+
+)
+
+z,w ∈ Q
+
+.
+
+For each p, multiplication by φ p, denoted Mp, is isometric on H2(R,ω 0), the Hilbert space of
+
+analytic functions onR. Hence 1 − MpM ∗
+
+p ≥ 0, as is (I − MpM ∗
+
+p ) ⊗ E, whereE is then × n matrix
+
+consisting of all ones. From the reproducing property of K 0(·,z ), M ∗
+
+pK 0(·,z ) = φ p(z)∗K 0(·,z ).
+
+Thus, ifQ is a set ofn points inR andx is the vector (K 0(·,w ))w∈ Q, then
+
+PQ(p) = ⟨(Mp ⊗ E)x,x ⟩ =
+
+(
+
+(1 − φ p(z)φ p(w)∗)K 0(z,w )
+
+)
+
+z,w ∈ Q ≥ 0.
+
+If we set ˜Q =Q ∪ {zj (s)}, for anyj = 0, 1, or 2, thenP ˜Q(p) ≥ 0 as well. Furthermore, the upper
+
+leftn × n block equals PQ(p) and the right n × 1 column is (K0(z,z j (s)))z∈ Q. Hence as a vector
+
+(K0(z,z j (s)))z∈ Q ∈ ranPQ(p)1/ 2 = ranPQ(p) forj = 0, 1, 2.
+
+SincePQ(p) ≥ 0,
+
+NQ(p) =
+
+(
+
+Hp(z)(1 − φ p(z)φ p(w)∗)K 0(z,w )Hp(w)∗)
+
+z,w ∈ Q
+
+is also positive semideﬁnite for eachp. IfMQx = 0, then
+
+0 =
+
+∫
+
+⟨NQ(p)x,x ⟩ dµ (p),
+
+so that ⟨NQ(p)x,x ⟩ = 0 for almost everyp. SinceNQ(p) is positive semideﬁnite,NQ(p)x = 0 almost
+
+everywhere. Choosing a basis for the kernel of MQ, it follows that there is a set EQ of measure zero
+
+so that forp /∈ EQ, the kernel ofMQ is a subspace of the kernel ofNQ(p). Thus, for suchp, the range
+
+ofNQ(p) is a subspace of the range ofMQ. In particular, the rank ofNQ(p) is at most 6.
+
+Moreover, if we let DQ(p) denote the ( 2 × 14 block) diagonal matrix with (z,z ) entry Hp(z)
+
+(z ∈ Q), thenNQ(p) = DQ(p)PQ(p)DQ(p)∗. SincePQ(p) is positive semideﬁnite, we conclude that
+
+the range ofDQ(p)PQ(p) is a subspace ofMQ. Thus, as (K 0(z,z j (s)))z∈ Q is in the range ofPQ(p),
+
+(Hp(z)vK 0(z,z j (s)))z∈ Q is in the range ofMQ for everyv ∈ C14 andj = 0, 1, 2.
+
+Now suppose Qn ⊂ R is a ﬁnite set with Qn ⊂ Qn+1, Q0 = {a1,...,a 4,a 5(= 0) }, and D =⋃
+
+nQn a determining set. Then since
+
+(Hp(z)vK 0(z,z j (s)))z∈ Qn ∈ ranMQn ⊆
+
+⋁
+
+j
+
+(K 0(z,a j )δj)z∈ Q, (5.7)
+
+there are constantscn
+
+j (p) such that
+
+Hp(z)vK 0(z,z j (s)) =
+
+5∑
+
+j=1
+
+cn
+
+j (p)K 0(z,a j )δj, z ∈ Qn. (5.8)
+
+By linear independence of theK 0(·,a j)’s, thecn
+
+j (p)’s are uniquely determined whenn = 0, 1,... by
+
+(5.8). Since Qn+1 ⊃ Qn, we must in this case have cn+1
+
+j (p) = cn
+
+j (p) for all n, and thus there are
+
+unique constantscj(p) such that
+
+Hp(z)vK 0(z,z j (s)) =
+
+5∑
+
+j=1
+
+cj(p)K 0(z,a j)δj, z ∈ D, p = 0, 1, 2. (5.9)
+
+By considering this equation withj = 5, and using the fact thatK 0(z, 0) = 1 , we see thatHp agrees
+
+with an analytic function on the determining set D. It follows that we can assume that Hp(z) is
+
+analytic for eachp /∈ E and that the relation of equation (5.8) holds throughoutR. Furthermore, since
+
+theK 0(·,a j )’s extend to meromorphic functions onY ,Hp does as well. □
+
+5.8. Diagonalization. In this subsection we show that when ρF = 1 , a contractive matrix valued
+
+function with unitary boundary values and a standard zero set is diagonalizable.
+
+Lemma 5.12. SupposeF is a 2 × 2 matrix valued function onR whose determinant is not identically
+
+zero. If there exists a 2 × 2 unitary matrixU and scalar valued functions ψ 1,ψ 2 : R → C such that
+
+F (z)F (w)∗ =UD (z)D(w)∗U ∗, where
+
+D =
+
+(
+
+ψ 1 0
+
+0 ψ 2
+
+)
+
+,
+
+then there exists a unitary matrixV so thatF =UDV .
+
+Proof. The hypothesis imply D(z)− 1U ∗F (z) = D(w)∗U ∗F (w)∗− 1 wheneverF (z) and F (w) are
+
+invertible. Hence,D(z)− 1U ∗F (z) = V is constant. One readily veriﬁes thatV ∗V =I. □
+
+Theorem 5.13. SupposeF is a 2 × 2 matrix valued function which is analytic in a neighborhood o f
+
+R, unitary valued onB and has a standard zero set,δj,a j with the following property. Ifh satisﬁes
+
+h(ζ) =
+
+4∑
+
+cjK 0(ζ,a j)δj +v
+
+for somec1,...,c 4 ∈ C andv ∈ C2 and ifh does not have pole at eitherP1 orP2, thenh is constant.
+
+IfρF = 1, thenF is diagonalizable; i.e., there exists a2× 2 unitary matricesU andV and analytic
+
+functionsϕ j :R → C such that, with
+
+D =
+
+(
+
+ϕ 1 0
+
+0 ϕ 2
+
+)
+
+,
+
+F =VDU .
+
+Proof. By Lemma 5.11, we may assume that, except perhaps on a set∆0 of measure 0, ifh is a column
+
+of someHp, thenh(ζ)K 0(ζ,z ℓ(s)) is in the span of {K 0(ζ,a j)δj : 1 ≤ j ≤ 6} forℓ = 0, 1, 2. Here
+
+z0(p) = 0,z 1(p),z 2(p) are the zeros ofφ p. By hypothesis, h (and soHp) is constant as a function of
+
+ζ. From our normalization of the domain (see Corollary 2.13), one of the zeros of φ p, say z1(p), is
+
+not zero. Thus, Theorem 4.3 (or rather the argument there) also implies, ifh is not zero, then there is
+
+a 1 ≤ j1(p) ≤ 4 so thatz1(p) = aj1(p) andh is a multiple of δj1(p). Thus, every column of Hp is a
+
+multiple ofδj1(p).
+
+Theorem 5.10 gives us the representation
+
+1 − F (z)F (w)∗ =
+
+∫
+
+Π
+
+(1 − φ p(z)φ p(w)∗)HpH ∗
+
+pdµ (p). (5.10)
+
+Substitutingw = 0 we ﬁnd
+
+I =
+
+∫
+
+HpH ∗
+
+pdµ (p). (5.11)
+
+In view of equation (5.11), rearranging equation (5.10) gives,
+
+F (z)F (w)∗ =
+
+∫
+
+Π
+
+φ p(z)φ p(w)∗HpH ∗
+
+pdµ (p). (5.12)
+
+Since the columns of Hp are all multiples of the single vector δj1(p),HpH ∗
+
+p is rank one and thus
+
+may be written asG(p)G(p)∗, for a vectorG(p) ∈ C2. (Indeed,G(p) is the square root of the sum of
+
+the squares of the norms of the columns ofHp timesδj1(p).) Consequently,
+
+F (z)F (w)∗ =
+
+∫
+
+Π
+
+φ p(z)φ p(w)∗G(p)G(p)∗dµ (p). (5.13)
+
+SinceF (aj)∗δj = 0 for allj, equation (5.13) gives,
+
+0 = δ∗
+
+jF (aj)F (a∗
+
+j )δj =
+
+∫
+
+|φ p(aj)|2∥G(p)∗δj∥2dµ (p).
+
+Consequently, for each j, φ p(aj)∗G(p)∗δj = 0 for almost every p, and so off of a set Z0 ⊂ Π of
+
+measure zero,φ p(aj)∗G(p)∗δj = 0 for allp and eachj. Thus, by deﬁning G(p) = 0 onZ0, we may
+
+assume that equation (5.13) holds and
+
+φ p(aj)∗G(p)∗δj = 0
+
+for allp,j .
+
+Let ∆0 = {p ∈ Π : G(p) = 0 }. If p /∈ ∆0, then for each j, either φ p(aj) = 0 orG∗
+
+pδj = 0 .
+
+Since Gp is a multiple of δj1(p) and no three of the δj are collinear, it follows that φ p has zeros
+
+at two of the aj, say aj1(p),a j2(p), and the δj3(p) and δj4(p) are collinear (and orthogonal to δj(p),
+
+where {a1,...,a 4} = {aj1(p),...,a j4(p)}. We can now return to Theorem 4.3 and conclude that
+
+z1(p) = aj1(p),z 2(p) = aj2(p). In particular, φ p has distinct zeros and δj1(p) andδj2(p) are collinear
+
+(and orthogonal toδj3(p) andδj4(p)). Let J1 = {aj1(p),a j2(p)} andJ2 = {aj3(p),a j4(p)}. In addition,
+
+let ∆1 denote the one dimensional subspace of C2 spanned byδj1(p) and ∆2 the the one dimensional
+
+subspace of C2 spanned byδj3(p).
+
+Ifp′ /∈ Π0, then by arguing as above, either G(p′) ∈ ∆1 orG(p′) ∈ ∆2. In the former case, the
+
+zeros ofφ p′ are inJ2 and in the later inJ1. Hence, for eachp, either
+
+(0) G(p) = 0 ; or
+
+(1) G(p) ∈ ∆1 and the nonzero zerosz1(p),z 2(p) are inJ2; or
+
+(2) G(p) ∈ ∆2 and the nonzero zerosz1(p),z 2(p) are inJ1.
+
+Let
+
+Π0 ={p ∈ Π : (0) holds },
+
+Π1 ={p ∈ Π : (1) holds },
+
+Π2 ={p ∈ Π : (2) holds }.
+
+Ifp,q ∈ Π1, then φ p andφ q have the same zeros, and are therefore equal up to a rotation. Hence,
+
+for p,q ∈ Π1, φ p(z)φ p(w)∗ = φ q(z)φ q(w)∗. Choose p1 ∈ Π1 and let Let ψ 1 = φ p1 denote a
+
+representative. If Π2 is not empty, choose p2 ∈ Π2 and let ψ 2 = φ p2. Otherwise, let ψ 2 = 0 .
+
+Substituting into equation (5.12) and writing the integral as the sum of the integrals over Π1 and Π2
+
+gives,
+
+F (z)F (w)∗ =h1ψ 1(z)ψ 1(w)∗h1 +h2ψ 2(z)ψ 2(w)∗h∗
+
+for somehj ∈ ∆j. Substitutingz =w = 1 and using the fact thatF (1)F (1)∗ =I shows {h1,h 2} is
+
+an orthonormal basis for C2 (andψ 2 ̸= 0). Thus, we can apply the previous lemma and conclude that
+
+F is diagonalizable. □
+
+6. T HE OBSTRUCTION
+
+We now demonstrate a2 × 2 matrix functionF unitary on the boundary, analytic across the bound-
+
+ary, and with a standard zero set which cannot be diagonalized. Since by Theorem 5.13, any function
+
+satisfying these conditions which hasρF = 1 is diagonalizable,ρF must be less than 1 for thisF and
+
+so by Theorem 5.2, rational dilation does not hold.
+
+Recall the matrix inner functions Ψη,t introduced in subsection 3.2. The t was ﬁxed at the outset
+
+of that section. By Lemma 3.8 for small η, Ψ = Ψ η,t has a standard zero set. Let a0
+
+j,δ 0
+
+j denote the
+
+standard zero set for Ψ0,t . (In particular, we can assumeδ0
+
+1 =δ0
+
+2 =e1 andδ0
+
+3 =δ0
+
+4 =e2.) Letǫ0 > 0
+
+denote theǫ >0 in Theorem 4.3 corresponding to this zero set. Thus, for a sma llη >0 the function
+
+Ψ = Ψ η,t has a standard zero set and this zero set satisﬁes the conditi ons in Theorem 4.3. This Ψ is
+
+our funny function.
+
+Lemma 6.1. Ψ has the following properties:
+
+(1) Ψ is unitary valued onB;
+
+(2) Ψ has a standard zero set;
+
+(3) the zero seta1,...,a 4,δ1,...,δ 4 has the property: Ifh satisﬁes
+
+h(ζ) =
+
+4∑
+
+cjK 0(ζ,a j)δj +v
+
+for somec1,...,c 4 ∈ C andv ∈ C2 and ifh does not have pole at eitherP1 orP2, thenh is
+
+constant.
+
+(4) Ψ is not diagonalizable; i.e., there does not exist ﬁxed unita ries U andV so that U ΨV ∗ is
+
+pointwise diagonal.
+
+Proof. The only thing that remains to be proved is that Ψ is not diagonalizable. We argue by con-
+
+tradiction. Suppose there is a diagonal function D and ﬁxed unitaries U,V so thatD = U ΨV ∗. Of
+
+courseD must be unitary valued onB. In particular,D(1) is unitary and so by multiplying on the left
+
+(or right) byD(1)∗, it may be assumed thatD(1) = I. Since Ψ(1) = I,V =U.
+
+Letϕ 1,ϕ 2 denote the diagonal entries of D. Since D is unitary valued on B, bothϕ 1 andϕ 2 are
+
+unimodular on B. Further, as det(Ψ) has 6 zeros and a function unimodular on B has at least three
+
+zeros or is constant, we conclude, either both ϕ 1 andϕ 2 have three zeros and thus take each value in
+
+{|z| ≤ 1} exactly three times inX, or one has six zeros and the other is a unimodular constantγ. This
+
+later case cannot occur, since then
+
+0 = Ψ(0) = U ∗
+
+(
+
+γ 0
+
+0 0
+
+)
+
+U.
+
+From Lemma 3.7, Ψ(q1)e1 = e1. Thus Ue 1 is an eigenvector for D(q1) corresponding to eigen-
+
+value 1, whence at least one ofϕ j(q1) is 1. Similarly,Ue 2 is an eigenvector forD(q∗
+
+1) with eigenvalue
+
+1, and at least one of ϕ j(q∗
+
+1) is 1. Now,D(q1) cannot be a multiple of the identity, as otherwise both
+
+ϕ j(q1) = 1 , in which case at least one of these two functions takes the va lue 1 at both q1 and q∗
+
+1.
+
+Therefore, without loss of generality,Ue 1 =λ 1e1 andUe 2 =λ 2e2, for unimodularλ 1 andλ 2. Since
+
+D is also diagonal, we can assumeλ j = 1. Hence, Ψ = D.
+
+From Lemma 3.7, Ψ(q2)(ηe1 + (1 − η2)
+
+2e2) = ηe1 + (1 − η2)
+
+2e2 so that
+
+D(q2)(ηe1 + (1 − η2)
+
+2e2) = ηϕ 1(q2)e1 + (1 − η2)
+
+2ϕ 2(q2)e2.
+
+Sinceη ̸= 0, it follows thatϕ j(q2) = 1 . Similarly,ϕ j(q∗
+
+2) = 1 . Asq2 ̸=q∗
+
+2, the functionϕ j takes the
+
+value 1 twice onB2, a contradiction. □
+
+To prove our main theorem, simply note that the ﬁrst three conditions of Lemma 6.1 imply, in view
+
+of Theorem 5.13, that ifρΨ = 1, then Ψ is diagonal. Hence, it follows thatρΨ< 1 and this completes
+
+the proof.
+
+7. E XISTENCE OF A FINITE DIMENSIONAL EXAMPLE
+
+Let A denote the closure of R(X), the rational functions with poles off of X as a subspace of
+
+C(X). That is A = R(X) ⊂ C(X). The algebra A is an (abstract) operator algebra with the family
+
+of matrix norms,
+
+∥F ∥ = sup{∥F (z)∥ :z ∈ X},
+
+forF = (fj,ℓ ) ∈ Mn(A) and where ∥F (z)∥ is the matrix norm of then × n matrixF (z).
+
+Given a ﬁnite subset Λ ⊂ R, letIΛ denote the ideal {f ∈ A :f (λ) = 0 for allλ ∈ Λ} of A. The
+
+quotient
+
+AΛ = A/I Λ,
+
+inherits, in a canonical way, an operator algebra structure from A. Namely,
+
+∥πΛ(F )∥ = inf {∥G∥ :G ∈ Mn(A) andπΛ(G) = πΛ(F )}.
+
+HereπΛ denote the quotient map.
+
+The following is a special case of a version of a theorem of Ver n Paulsen [27]. A representation
+
+ν of A is a unital homomorphism ν : A → B(H), where H is a Hilbert space. The representation
+
+ν is contractive if ∥ν(f )∥ ≤ ∥ f ∥ for allf ∈ F and is completely contractive if for each n and each
+
+F = (fj,ℓ ) ∈ Mn(A), ∥ν(F )∥ = ∥(ν(fj,ℓ ))∥ ≤ ∥ F ∥. Make similar deﬁnitions for representations,
+
+contractive representations, and completely contractive representations of AE.
+
+Theorem 7.1 (Paulsen). Every contractive representation of A is completely contractive if and only
+
+if every contractive representation of every AΛ is completely contractive.
+
+The following observation of Paulsen is also useful. We givethe proof.
+
+Proposition 7.2. Ifν : AΛ → B(H) is contractive, but not completely contractive, then ν ◦πΛ :
+
+A → B(H) is contractive, but not completely contractive.
+
+Proof. Sinceν andπΛ are contractive, the composition ν ◦πΛ is contractive. On the other hand, if
+
+ν ◦πΛ is completely contractive, then it follows from the deﬁniti on of the norm on Mn(AE) as the
+
+quotient norm, thatν is completely contractive. To see this, givenπΛ(F ) = (πΛ(fj,ℓ )) is inMn(AE)
+
+we can assume, by the deﬁnition of the quotient norm, that ∥F ∥ is only a little larger than ∥πΛ(F )∥.
+
+Sinceν ◦πΛ is completely contractive, the norm of ν ◦πΛ(F ) is no larger than ∥F ∥ and the result
+
+follows. □
+
+We use Paulsen’s results, together with our own, to argue tha t there is a matrix X with R as a
+
+spectral set, but which does not dilate to a normal operator w ith spectrum in B. It is enough to
+
+prove that there is a ﬁnite subset Λ ⊂ R, a ﬁnite dimensional Hilbert space H, and a representation
+
+ν : AE → B(H) which is contractive, but not completely contractive. We begin with a lemma.
+
+Lemma 7.3. Fix Λ a ﬁnite subset of R. If γ : AΛ → B(K) is a representation, then there exists
+
+subspaces Eλ ,λ ∈ Λ, ofK so that
+
+(1) each Eλ is closed;
+
+(2) K is the algebraic direct sum ˆ⊕E λ ; and
+
+(3) iff ∈ A andk ∈ Eλ , then
+
+γ(πΛ(f ))k =λk.
+
+Proof. For eachλ ∈ Λ, choose a functioneλ ∈ A such thateλ (µ ) is 0 ifµ ∈ Λ, butµ ̸=λ and such
+
+thateλ (λ) = 1 . It follows that the operatorsEλ =γ(πΛ(eλ )) are idempotents such thatEλEµ = 0 if
+
+µ ̸=λ and ∑Eλ is the identity onK. Let Eλ =EλK. Properties (1) and (2) are readily veriﬁed. As
+
+for (3),
+
+(γ(πΛ(f )) − f (λ))Eλ =γ(πΛ(f − f (λ))eλ )
+
+=γ(πΛ(0)) = 0.
+
+□
+
+From our result, there is a representation of A which is contractive, but not completely contrac-
+
+tive. From Paulsen’s theorem, there exists a Λ and Hilbert space K (possibly inﬁnite dimensional)
+
+and a representation γ : AΛ → B(K) which is contractive, but completely contractive. Since th is
+
+representation is not completely contractive, there exists ann andF ∈ Mn(A) such that
+
+1 = ∥πΛ(F )∥< ∥γ(πΛ(F ))∥.
+
+Thus, there exists a vector
+
+x =
+
+
+
+
+
+
+
+
+
+
+
+x1
+
+x2
+
+.
+
+.
+
+.
+
+xn
+
+
+
+
+
+
+
+
+
+ ∈ ⊕ n
+
+1K = Cn ⊗ K
+
+such that ∥x∥ = 1 and
+
+∥γ(πΛ(F ))x∥> 1.
+
+Write, xj = ∑xj(λ) with respect to the algebraic direct sum ˆ⊕E λ and let H denote the span of
+
+{xj(λ) : 1 ≤ j ≤ n, λ ∈ Λ}. Thus, H is ﬁnite dimensional (the dimension is cardinality of Λ times
+
+n). From condition (3) of our lemma, H is invariant for γ. Deﬁne ν : AE → B(H) by restriction:
+
+ν(f ) = γ(f )|H. Since alsox ∈ Cn ⊗ H we have,γ(πΛ(F ))x =ν(πΛ(F ))x and thus
+
+∥ν(πΛ(F ))x∥> 1 = ∥πΛ(F )∥.
+
+REFERENCES
+
+[1] M. B. Abrahamse and R. G. Douglas. A class of subnormal operators related to multiply-connected domains.Advances
+
+in Math., 19(1):106–148, 1976.
+
+[2] Jim Agler. Rational dilation on an annulus. Ann. of Math. (2), 121(3):537–563, 1985.
+
+[3] Jim Agler. On the representation of certain holomorphic functions deﬁned on a polydisc. In Topics in operator theory:
+
+Ernst D. Hellinger memorial volume, volume 48 of Oper. Theory Adv. Appl., pages 47–66. Birkh¨ auser, Basel, 1990.
+
+[4] Jim Agler and John Harland. A monograph on function theory and Herglotz formulas for multiply connected domains.
+
+[5] Jim Agler, John Harland, and Benjamin Raphael. Classica l function theory, operator dilation theory, and machine
+
+computations on multiply-connected domains.
+
+[6] Jim Agler and John E. McCarthy. Nevanlinna-Pick interpo lation on the bidisk. J. Reine Angew. Math., 506:191–204,
+
+1999.
+
+[7] Jim Agler and John E. McCarthy. Pick interpolation and Hilbert function spaces , volume 44 of Graduate Studies in
+
+Mathematics. American Mathematical Society, Providence, RI, 2002.
+
+[8] William Arveson. Subalgebras of C ∗ -algebras. II. Acta Math., 128(3-4):271–308, 1972.
+
+[9] William B. Arveson. Subalgebras of C ∗ -algebras. Acta Math., 123:141–224, 1969.
+
+[10] Joseph A. Ball and Kevin F. Clancey. Reproducing kernels for Hardy spaces on multiply connected domains. Integral
+
+Equations Operator Theory, 25(1):35–57, 1996.
+
+[11] Joseph A. Ball and Tavan T. Trent. Unitary colligations , reproducing kernel Hilbert spaces, and Nevanlinna-Pick
+
+interpolation in several variables. J. Funct. Anal., 157(1):1–61, 1998.
+
+[12] Joseph A. Ball, Tavan T. Trent, and Victor Vinnikov. Interpolation and commutant lifting for multipliers on reproducing
+
+kernel Hilbert spaces. In Operator theory and analysis (Amsterdam, 1997) , volume 122 of Oper. Theory Adv. Appl.,
+
+pages 89–138. Birkh¨ auser, Basel, 2001.
+
+[13] Joseph A. Ball and Victor Vinnikov. Hardy spaces on a ﬁnite bordered Riemann surface, multivariable operator model
+
+theory and Fourier analysis along a unimodular curve. In Systems, approximation, singular integral operators, and
+
+related topics (Bordeaux, 2000), volume 129 of Oper. Theory Adv. Appl., pages 37–56. Birkh¨ auser, Basel, 2001.
+
+[14] Stefan Bergman and Bruce Chalmers. A procedure for conformal mapping of triply-connected domains. Math. Comp.,
+
+21:527–542, 1967.
+
+[15] Kevin F. Clancey. Toeplitz operators on multiply connected domains and theta functions. In Contributions to operator
+
+theory and its applications (Mesa, AZ, 1987) , volume 35 of Oper. Theory Adv. Appl. , pages 311–355. Birkh¨ auser,
+
+Basel, 1988.
+
+[16] Kevin F. Clancey. Representing measures on multiply co nnected planar domains. Illinois J. Math. , 35(2):286–311,
+
+1991.
+
+[17] John B. Conway. Functions of one complex variable, volume 11 of Graduate Texts in Mathematics. Springer-Verlag,
+
+New York, second edition, 1978.
+
+[18] John B. Conway. The theory of subnormal operators, volume 36 ofMathematical Surveys and Monographs. American
+
+Mathematical Society, Providence, RI, 1991.
+
+[19] H. M. Farkas and I. Kra. Riemann surfaces, volume 71 of Graduate Texts in Mathematics. Springer-Verlag, New York,
+
+second edition, 1992.
+
+[20] John D. Fay. Theta functions on Riemann surfaces. Springer-Verlag, Berlin, 1973. Lecture Notes in Mathematics, V ol.
+
+352.
+
+[21] Stephen D. Fisher. Function theory on planar domains. Pure and Applied Mathematics. John Wiley & Sons Inc., New
+
+York, 1983. A second course in complex analysis, A Wiley-Interscience Publication.
+
+[22] Helmut Grunsky. Lectures on theory of functions in multiply connected domains. Vandenhoeck & Ruprecht, G¨ ottingen,
+
+1978. Studia Mathematica, Skript 4.
+
+[23] Richard B. Holmes. Geometric functional analysis and its applications . Springer-Verlag, New York, 1975. Graduate
+
+Texts in Mathematics, No. 24.
+
+[24] David Mumford. Tata lectures on theta. I , volume 28 of Progress in Mathematics. Birkh¨ auser Boston Inc., Boston,
+
+MA, 1983. With the assistance of C. Musili, M. Nori, E. Previato and M. Stillman.
+
+[25] David Mumford. Tata lectures on theta. II, volume 43 of Progress in Mathematics. Birkh¨ auser Boston Inc., Boston,
+
+MA, 1984. Jacobian theta functions and differential equations, With the collaboration of C. Musili, M. Nori, E. Previ-
+
+ato, M. Stillman and H. Umemura.
+
+[26] Zeev Nehari. Conformal mapping. Dover Publications Inc., New York, 1975. Reprinting of the1952 edition.
+
+[27] Vern Paulsen. Private communication.
+
+[28] Vern Paulsen. Completely bounded maps and operator algebras, volume 78 of Cambridge Studies in Advanced Math-
+
+ematics. Cambridge University Press, Cambridge, 2002.
+
+[29] Vern I. Paulsen. Completely bounded maps and dilations , volume 146 of Pitman Research Notes in Mathematics
+
+Series. Longman Scientiﬁc & Technical, Harlow, 1986.
+
+[30] Gilles Pisier. A polynomially bounded operator on Hilb ert space which is not similar to a contraction. J. Amer. Math.
+
+Soc., 10(2):351–369, 1997.
+
+[31] Donald Sarason. The H p spaces of an annulus. Mem. Amer. Math. Soc. No., 56:78, 1965.
+
+[32] V . L. Vinnikov and S. I. Fedorov. On the Nevanlinna-Pickinterpolation in multiply connected domains. Zap. Nauchn.
+
+Sem. S.-Peterburg. Otdel. Mat. Inst. Steklov. (POMI), 254(Anal. Teor. Chisel i Teor. Funkts. 15):5–27, 244, 1998.
+
+SCHOOL OF MATHEMATICS AND STATISTICS , M ERZ COURT,, U NIVERSITY OF NEWCASTLE UPON TYNE , N EW-
+
+CASTLE UPON TYNE , NE1 7RU, UK
+
+E-mail address: M.A.Dritschel@newcastle.ac.uk
+
+DEPARTMENT OF MATHEMATICS , UNIVERSITY OF FLORIDA , BOX 118105, G AINESVILLE , FL 32611-8105, USA
+
+E-mail address: sam@math.ufl.edu

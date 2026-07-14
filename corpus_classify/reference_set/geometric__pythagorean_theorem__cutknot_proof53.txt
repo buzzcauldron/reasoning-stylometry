@@ -1,0 +1,23 @@
+Larry Hoehn also published the following proof ( The Mathematics Teacher , 88 (1995), p. 168.):
+
+Extend the leg AC of the right triangle ABC to D so that AD = AB = c, as in the diagram. At D draw a perpendicular to CD. At A draw a bisector of the angle BAD. Let the two lines meet in E. Finally, let EF be perpendicular to CF.
+
+By this construction, triangles ABE and ADE share side AE, have other two sides equal: AD = AB, as well as the angles formed by those sides: ∠BAE = ∠DAE. Therefore, triangles ABE and ADE are congruent by SAS . From here, angle ABE is right.
+
+It then follows that in right triangles ABC and BEF angles ABC and EBF add up to 90°. Thus
+
+∠ABC = ∠BEF and ∠BAC = ∠EBF.
+
+The two triangles are similar, so that
+
+x/a = u/b = y/c.
+
+But, EF = CD, or x = b + c, which in combination with the above proportion gives
+
+u = b(b + c)/a and y = c(b + c)/a.
+
+On the other hand, y = u + a, which leads to
+
+c(b + c)/a = b(b + c)/a + a,
+
+which is easily simplified to c² = a² + b².

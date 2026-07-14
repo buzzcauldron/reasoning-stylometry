@@ -1,0 +1,91 @@
+{
+  "corpus_dir": "/Users/halxiii/Projects/reasoning-stylometry/corpus_classify/reference_set",
+  "n_texts": 54,
+  "n_geometric": 31,
+  "n_algebraic": 23,
+  "geo_word_stats": {
+    "n": 31,
+    "median": 182,
+    "min": 77,
+    "max": 406,
+    "under_200": 17,
+    "under_400": 30
+  },
+  "alg_word_stats": {
+    "n": 23,
+    "median": 219,
+    "min": 76,
+    "max": 493,
+    "under_200": 11,
+    "under_400": 19
+  },
+  "class_separability_l1": 0.002119,
+  "leave_one_out_accuracy": "35/54",
+  "leave_one_out_pct": 64.8,
+  "top_discriminators": [
+    {
+      "word": "a",
+      "geo_minus_alg": -0.04172
+    },
+    {
+      "word": "in",
+      "geo_minus_alg": 0.01604
+    },
+    {
+      "word": "on",
+      "geo_minus_alg": 0.01491
+    },
+    {
+      "word": "we",
+      "geo_minus_alg": -0.01312
+    },
+    {
+      "word": "for",
+      "geo_minus_alg": -0.01232
+    },
+    {
+      "word": "are",
+      "geo_minus_alg": 0.0094
+    },
+    {
+      "word": "then",
+      "geo_minus_alg": -0.00893
+    },
+    {
+      "word": "each",
+      "geo_minus_alg": 0.0061
+    },
+    {
+      "word": "by",
+      "geo_minus_alg": 0.00557
+    },
+    {
+      "word": "both",
+      "geo_minus_alg": -0.00474
+    }
+  ],
+  "test_predictions_vs_centroid": [
+    {
+      "file": "algebraic__algebraic_style__hrushovski_approx_subgroups.txt",
+      "predicted": "algebraic"
+    },
+    {
+      "file": "algebraic__geometric_style__dritschel_mccullough_rational_dilation.txt",
+      "predicted": "algebraic"
+    },
+    {
+      "file": "geometric__algebraic_style__bateman_katz_cap_sets.txt",
+      "predicted": "algebraic"
+    },
+    {
+      "file": "geometric__geometric_style__masur_schleimer_disk_complex.txt",
+      "predicted": "algebraic"
+    }
+  ],
+  "verdict": [
+    "CRITICAL: geometric/algebraic stopword centroids nearly identical (L1=0.0021). Function words do not separate classes in this corpus.",
+    "WEAK: leave-one-out accuracy only 65% on the reference set itself.",
+    "LENGTH: 49/54 texts under 400 words \u2014 too short for stable Delta.",
+    "REGISTER: median length 193 words suggests expository vignettes, not research theorem-proof prose (JAMS targets ~15k+ words)."
+  ]
+}

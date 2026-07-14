@@ -1,0 +1,30 @@
+Let ABC and DEF be two congruent right triangles such that B lies on DE and A, F, C, E are collinear. BC = EF = a , AC = DF = b , AB = DE = c . Obviously, AB   DE. Compute the area of ΔADE in two different ways.
+
+Area(ΔADE) = AB·DE/2 = c²/2 and also Area(ΔADE) = DF·AE/2 = b·AE/2. AE = AC + CE = b + CE. CE can be found from similar triangles BCE and DFE: CE = BC·FE/DF = a·a/b. Putting things together we obtain
+
+c²/2 = b(b + a²/b)/2
+
+(This proof is a simplification of one of the proofs by Michelle Watkins, a student at the University of North Florida, that appeared in Math Spectrum 1997/98, v30, n3, 53-54.)
+
+Douglas Rogers observed that the same diagram can be treated differently:
+
+Proof 32 can be tidied up a bit further, along the lines of the later proofs added more recently, and so avoiding similar triangles.
+
+Of course, ADE is a triangle on base DE with height AB, so of area cc/2.
+
+But it can be dissected into the triangle FEB and the quadrilateral ADBF. The former has base FE and height BC, so area aa/2. The latter in turn consists of two triangles back to back on base DF with combined heights AC, so area bb/2. An alternative dissection sees triangle ADE as consisting of triangle ADC and triangle CDE, which, in turn, consists of two triangles back to back on base BC, with combined heights EF.
+
+The next two proofs have accompanied the following message from Shai Simonson, Professor at Stonehill College in Cambridge, MA:
+
+Greetings,
+
+I was enjoying looking through your site, and stumbled on the long list of Pyth Theorem Proofs.
+
+In my course "The History of Mathematical Ingenuity" I use two proofs that use an inscribed circle in a right triangle. Each proof uses two diagrams, and each is a different geometric view of a single algebraic
+proof that I discovered many years ago and published in a letter to Mathematics Teacher.
+
+The two geometric proofs require no words, but do require a little thought.
+
+Best wishes,
+
+Shai

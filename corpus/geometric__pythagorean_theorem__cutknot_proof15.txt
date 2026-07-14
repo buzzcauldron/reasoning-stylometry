@@ -1,0 +1,3 @@
+This remarkable proof by K. O. Friedrichs is a generalization of the previous one by Dudeney (or by Perigal, as above). It's indeed general. It's general in the sense that an infinite variety of specific geometric proofs may be derived from it. (Roger Nelsen ascribes [ PWWII , p 3] this proof to Annairizi of Arabia (ca. 900 A.D.)) An especially nice variant by Olof Hanner appears on a separate page .
+
+A variant of the basic proof has been sent to me by Miquel Plens, a high school student from Catalonia. Miquel considers the overlap of eight squares on the three sides of a right triangle and the leftover pieces. I placed his submission on a separate page .

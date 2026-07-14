@@ -1,0 +1,200 @@
+[
+  {
+    "label": "baseline stopwords175",
+    "accuracy": 3,
+    "per_paper": {
+      "geometric__geometric_style__masur_schleimer_disk_complex": "geometric",
+      "geometric__algebraic_style__bateman_katz_cap_sets": "algebraic",
+      "algebraic__geometric_style__dritschel_mccullough_rational_dilation": "algebraic",
+      "algebraic__algebraic_style__hrushovski_approx_subgroups": "algebraic"
+    },
+    "separation": 0.0095,
+    "n_features": 100,
+    "top_features": {
+      "we": 0.1827,
+      "i": 0.179,
+      "are": 0.099,
+      "is": 0.0756,
+      "has": 0.0544,
+      "have": 0.048,
+      "this": 0.0398,
+      "be": 0.0384
+    }
+  },
+  {
+    "label": "word ngram2 mfw300 c20",
+    "accuracy": 1,
+    "per_paper": {
+      "geometric__geometric_style__masur_schleimer_disk_complex": "algebraic",
+      "geometric__algebraic_style__bateman_katz_cap_sets": "geometric",
+      "algebraic__geometric_style__dritschel_mccullough_rational_dilation": "geometric",
+      "algebraic__algebraic_style__hrushovski_approx_subgroups": "geometric"
+    },
+    "separation": 0.0189,
+    "n_features": 100,
+    "top_features": {
+      "n n": 0.1459,
+      "p p": 0.086,
+      "a b": 0.0798,
+      "we have": 0.0753,
+      "of the": 0.0714,
+      "p q": 0.064,
+      "c c": 0.0519,
+      "k k": 0.0518
+    }
+  },
+  {
+    "label": "word ngram3 mfw300 c20",
+    "accuracy": 1,
+    "per_paper": {
+      "geometric__geometric_style__masur_schleimer_disk_complex": "algebraic",
+      "geometric__algebraic_style__bateman_katz_cap_sets": "algebraic",
+      "algebraic__geometric_style__dritschel_mccullough_rational_dilation": "algebraic",
+      "algebraic__algebraic_style__hrushovski_approx_subgroups": "geometric"
+    },
+    "separation": 0.006,
+    "n_features": 100,
+    "top_features": {
+      "n n n": 0.0375,
+      "su ces to": 0.0206,
+      "it su ces": 0.0199,
+      "we may assume": 0.0196,
+      "a b a": 0.0176,
+      "e e e": 0.0175,
+      "the image of": 0.0142,
+      "proof of lemma": 0.0138
+    }
+  },
+  {
+    "label": "word ngram4 mfw300 c20",
+    "accuracy": 0,
+    "per_paper": {
+      "geometric__geometric_style__masur_schleimer_disk_complex": "algebraic",
+      "geometric__algebraic_style__bateman_katz_cap_sets": "geometric",
+      "algebraic__geometric_style__dritschel_mccullough_rational_dilation": "algebraic",
+      "algebraic__algebraic_style__hrushovski_approx_subgroups": "geometric"
+    },
+    "separation": 0.0036,
+    "n_features": 100,
+    "top_features": {
+      "it su ces to": 0.0196,
+      "higher order fourier analysis": 0.0111,
+      "analysis of multiplicative functions": 0.0111,
+      "fourier analysis of multiplicative": 0.0111,
+      "order fourier analysis of": 0.0109,
+      "e e e e": 0.0109,
+      "y y y y": 0.0103,
+      "su ces to show": 0.0102
+    }
+  },
+  {
+    "label": "word ngram2 mfw500 c20",
+    "accuracy": 1,
+    "per_paper": {
+      "geometric__geometric_style__masur_schleimer_disk_complex": "algebraic",
+      "geometric__algebraic_style__bateman_katz_cap_sets": "geometric",
+      "algebraic__geometric_style__dritschel_mccullough_rational_dilation": "geometric",
+      "algebraic__algebraic_style__hrushovski_approx_subgroups": "geometric"
+    },
+    "separation": 0.0189,
+    "n_features": 100,
+    "top_features": {
+      "n n": 0.1459,
+      "p p": 0.086,
+      "a b": 0.0798,
+      "we have": 0.0753,
+      "of the": 0.0714,
+      "p q": 0.064,
+      "c c": 0.0519,
+      "k k": 0.0518
+    }
+  },
+  {
+    "label": "char ngram3 mfw300 c20",
+    "accuracy": 2,
+    "per_paper": {
+      "geometric__geometric_style__masur_schleimer_disk_complex": "geometric",
+      "geometric__algebraic_style__bateman_katz_cap_sets": "algebraic",
+      "algebraic__geometric_style__dritschel_mccullough_rational_dilation": "algebraic",
+      "algebraic__algebraic_style__hrushovski_approx_subgroups": "geometric"
+    },
+    "separation": 0.0217,
+    "n_features": 100,
+    "top_features": {
+      "  p  ": 0.1486,
+      "  n  ": 0.1124,
+      "  k  ": 0.0787,
+      "  f  ": 0.0686,
+      "  r  ": 0.0636,
+      "  w e": 0.0568,
+      "  i n": 0.0549,
+      "  x  ": 0.0483
+    }
+  },
+  {
+    "label": "char ngram4 mfw300 c20",
+    "accuracy": 3,
+    "per_paper": {
+      "geometric__geometric_style__masur_schleimer_disk_complex": "geometric",
+      "geometric__algebraic_style__bateman_katz_cap_sets": "algebraic",
+      "algebraic__geometric_style__dritschel_mccullough_rational_dilation": "geometric",
+      "algebraic__algebraic_style__hrushovski_approx_subgroups": "geometric"
+    },
+    "separation": 0.0106,
+    "n_features": 100,
+    "top_features": {
+      "  w e  ": 0.0473,
+      "a n d  ": 0.0352,
+      "  b y  ": 0.0349,
+      "  o f  ": 0.0336,
+      "  i n  ": 0.029,
+      "s   o f": 0.0267,
+      "  i s  ": 0.0264,
+      "  a n d": 0.0258
+    }
+  },
+  {
+    "label": "char ngram5 mfw300 c20",
+    "accuracy": 2,
+    "per_paper": {
+      "geometric__geometric_style__masur_schleimer_disk_complex": "algebraic",
+      "geometric__algebraic_style__bateman_katz_cap_sets": "algebraic",
+      "algebraic__geometric_style__dritschel_mccullough_rational_dilation": "geometric",
+      "algebraic__algebraic_style__hrushovski_approx_subgroups": "geometric"
+    },
+    "separation": 0.0084,
+    "n_features": 100,
+    "top_features": {
+      "  a n d  ": 0.0362,
+      "m o r p h": 0.0313,
+      "o r p h i": 0.0308,
+      "s   o f  ": 0.0281,
+      "  o f   t": 0.0254,
+      "e m m a  ": 0.0227,
+      "l e m m a": 0.0219,
+      "  l e m m": 0.0217
+    }
+  },
+  {
+    "label": "char ngram6 mfw300 c20",
+    "accuracy": 1,
+    "per_paper": {
+      "geometric__geometric_style__masur_schleimer_disk_complex": "geometric",
+      "geometric__algebraic_style__bateman_katz_cap_sets": "geometric",
+      "algebraic__geometric_style__dritschel_mccullough_rational_dilation": "algebraic",
+      "algebraic__algebraic_style__hrushovski_approx_subgroups": "geometric"
+    },
+    "separation": 0.0066,
+    "n_features": 100,
+    "top_features": {
+      "m o r p h i": 0.031,
+      "o r p h i s": 0.0277,
+      "r p h i s m": 0.0276,
+      "l e m m a  ": 0.0225,
+      "  l e m m a": 0.0216,
+      "e   h a v e": 0.019,
+      "  w e   h a": 0.019,
+      "  o f   t h": 0.0178
+    }
+  }
+]

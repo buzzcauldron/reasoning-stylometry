@@ -1,0 +1,1687 @@
+arXiv:1103.5619v3  [math.NT]  12 Jun 2011
+BRAUER-SIEGEL FOR ARITHMETIC TORI AND LOWER
+BOUNDS FOR GALOIS ORBITS OF SPECIAL POINTS
+JACOB TSIMERMAN
+Abstract. In [14], Shyr derived an analogue of Dirichlet’s class number formula for arithmetic Tori. We use this formula to deriv e a BrauerSiegel formula for Tori, relating the Discriminant of a toru s to the product of its regulator and class number. We apply this formula t o derive
+asymptotics and lower bounds for Galois orbits of CM points i n the
+Siegel modular variety Ag,1. Speciﬁcally, we ask that the sizes of these
+orbits grows like a power of Discriminant of the underlying e ndomorphism algebra. We prove this unconditionally in the case g ≤ 6, and for
+all g under the Generalized Riemann Hypothesis for CM ﬁelds. Alon g
+the way we derive a general transfer principle for torsion in ideal class
+groups of number ﬁelds.
+1. Introduction
+Let Ag, 1 be the coarse moduli space of principally polarized Abelian varieties. Recall that an Abelian variety B of dimension g is said to be CM
+if its endomorphism algebra End(B) ⊗ Z Q contains a semi-simple, commutative algebra R over Q with [R : Q] = 2g. This paper is motivated by the
+following conjecture, ﬁrst suggested by Edixhoven in [4]:
+Conjecture 1.1. Fix an integer g. Let B be ag-dimensional CM principally
+polarized Abelian variety, and let x be the corresponding point in Ag, 1(
+Q).
+Finally, let Z(End(B)) denote the center of the endomorphism ring of B.
+Then there exists a constant δg > 0 so that
+|Gal(Q/ Q) ·x| ≫ g Disc(Z(End(B)))δg.
+Edixhoven established the desired lower bound for hilbert m odular surfaces in [3].
+Recently, Pila[11] gave an unconditional proof of the Andre -Oort conjecture for an arbitrary product of modular curves. A positi ve answer to
+question 1.1 would be one of the main ingredients in generali zing Pila’s
+recent work to arbitrary Shimura varieties. Our main theore m is as follows:
+Theorem 1.1. For g ≤ 6, conjecture 1.1 holds. If one assumes the Generalized Riemann Hypothesis for CM ﬁelds, then conjecture 1. 1 holds for all
+g ∈ N.
+We mention that using similar methods, Ullmo and Yafev indep endently
+settled the case of g = 2, 3 [16]. Following Chai and Oort, we deﬁne a Weyl
+1
+2 JACOB TSIMERMAN
+CM point to be a CM point x corresponding to an abelian variety B whose
+endomorphism ring End(B) is an order in a Weyl CM ﬁeld. Since for g = 1
+all CM points are Weyl CM points, the following theorem can be seen as a
+generalization of Brauer-Siegel’s theorem to all g:
+Theorem 1.2. Conjecture 1.1 holds for all g ∈ N if one restricts to Weyl
+CM points x. Moreover, suppose x corresponds to an abelian variety B
+whose endomorphism ring End(B) is the ring of integers in a Weyl CM
+ﬁeld K with totally real subﬁeld F . Then
+|Gal(Q/ Q) ·x|=
+(DiscK
+DiscF
+) 1
+2 +og(1)
+.
+For g = 1, conjecture 1.1 is answered by the Brauer-Siegel theorem for
+Class groups of imaginary quadratic ﬁelds. For higher g, however, the question isn’t just about understanding the sizes of class group s, but more about
+the sizes of images of morphisms between class groups . Thus, for higher g
+instead of class groups of number ﬁelds, it turns out we are fo rced to deal
+with class groups of arithmetic tori over Q. To understand the size of the
+class groups of Tori, we prove the following theorem in secti on 4:
+Theorem 1.3. (Brauer-Siegel Theorem for Tori)
+LetT be a torus of dimension d with minimal splitting ﬁeld K, and [K :
+Q] = n. Let hT,RT be the class number and regulator of T respectively.
+Also, let ρ be the associated integral representation of Gal (Q/ Q) and ρQ the
+induced rational representation. Let fρ be the norm of the Artin conductor
+corresponding to ρQ. Then we have
+1
+2 ln(hTRT ) = 1
+2 lnfρ +on,d (lnDK)
+= ( 1
+2 +on,d (1)) lnfρ
+Note that all the relevant tori for the study of CM points are c ompact
+at inﬁnity, and thus have no regulator. In this case, theorem 4.7 tells us
+precisely how large the class group is.
+The general setting we study in section 5 is the following: We are given
+tori T and S over Q, and a map
+φ :T → S
+between them. This induces a map of class groups
+˜φ :ClT → CLS
+and our goal is to understand the size of the image of ˜φ , or more precisely to
+get a lower bound for it. One way to do this is to try and bound to rsion in
+class groups of Tori: suppose we knew that φ had an inverse up to isogeny,
+so that there is some map ψ : S → T with φ ◦ψ is the ×n map on T .
+BRAUER-SIEGEL FOR TORI AND LOWER BOUNDS FOR CM GALOIS ORBITS 3
+Then it follows from this that the image of ˜φ is at least the image of ×n
+map on ClS, and so it has size at least |ClS|/ |ClS [n]|. Now if we could just
+give a good bound for |ClS[n]| we would be done. Unfortunately, bounding
+torsion in class groups is a very hard problem in general. We t ake a more
+precise approach in section 5, which describes the size of th e cokernel of ˜φ in
+terms of the cokernel of the map on characters X(S) → X(T ) viewed as a
+Galois representation. A nice corollary of this approach is that it allows us
+to derive new transfer principles between torsion in class g roups of number
+ﬁelds, as is explained in section 6.
+The structure of this paper is as follows. In sections 2 and 3 w e give
+background about arithmetic tori, and recall Shyr’s formul a, which is the
+analogue for arithmetic Tori of Dirichlet’s class number fo rmula for number
+ﬁelds. In section 4 we use Shyr’s formula to prove the Brauer- Siegel Theorem
+for tori 4.7. Section 5 is the core of the paper, and it proves a structure
+theorem for maps between class groups of Tori. In section 6 we explain how
+one can use the results in Section 5 to derive transfer princi ples for torsion
+in ideal class groups of number ﬁelds, and give a new applicat ion relating 2torsion in quartic ﬁelds to 2-torsion in their cubic resolve nts. Finally, section
+7 gives the promised applications to lower bounds of Galois o rbits of CM
+abelian varieties.
+2. Preliminaries
+A Torus of dimension d over a ﬁeld k is an algebraic group T overk such
+thatT¯k is isomorphic to a power of the multiplicative algebraic gro up Gm,so
+that T¯k ≈ Gd
+m/ ¯k.
+Given a torus T of dimension d, we deﬁne its character group X(T ) to
+be Hom ¯k(T, Gm). Note that X(T ) is a free abelian group on d generators.
+X(T ) also acquires an action of the absolute Galois group Gk := Gal( ¯k/k )
+via χσ (t) = χ (tσ − 1
+)σ . The functor sending T to X(T ) is a contravariant
+category equivalence between Tori and torsion-free,ﬁnite ly generated Gkmodules.
+We say that a torus T splits over K if it is isomorphic to a power of
+Gm overK, or equivalently that X(T ) is a trivial module for the subgroup
+Gal(¯k/K ). We deﬁne C(K/k ) to be the set of all Tori over k which are
+split over K. Note that there is a minimal extension K of k over which T
+becomes split, and K is Galois over k. For each extension L of k, we deﬁne
+X(T )L to be the subgroup of X(T ) ﬁxed by Gal( ¯k/ (L ∩ ¯k)). If v is a place
+of k, we sometimes write X(T )v for X(T )kv .
+We shall require the following basic statement from the theo ry of integral
+representations of ﬁnite groups:
+Theorem 2.1. Let G be a ﬁnite group and ﬁx a positive integer d. Then
+there are only Od(1) integral representations of G of dimensions d up to
+isomorphism.
+4 JACOB TSIMERMAN
+Proof. Suppose L is a d-dimensional integral representation of G. We wish
+to ﬁnd a G-invariant positive-deﬁnite inner product on L such that the nonzero vectors in L of smallest norm generate L. To show this is possible,
+ﬁx a G-invariant positive-deﬁnite inner product ⟨, ⟩1 onL, and consider the
+span M ⊂ L of the vectors of smallest norm. If M is not all of L, then
+we can consider the dual N of M with respect to ⟨, ⟩1. Both M and N
+are G-invariant, so we can ﬁnd a G-invariant inner product ⟨, ⟩2 which is
+trivial on M and positive-deﬁnite on N . By considering x⟨, ⟩1 + ⟨, ⟩2 for an
+appropriatex> 0, we can modify our inner product so as to strictly increase
+the set of non-zero vectors of smallest norm and also their sp an.
+Thus we can ﬁnd an inner product ⟨, ⟩ on L which is G-invariant and a
+basis v1,...,v n consisting of elements of L, such that
+(1) ∀i, ⟨vi,vi⟩ =y
+for some y >0 and the norm of any other non-zero vector in L is at least y.
+Let ˜L be the span of the vi (note that ˜L might not be G-invariant).
+By (1) the sphere of radius y/ 2 is contained in a fundamental domain for
+L, and the covolume of ˜L is at most yd. We thus have that the index [ L : ˜L],
+which is equal to the ratio of the covolumes, is at most 2d
+Vol (Sd) . Setting
+N = (2d)! we see that N ·L ⊂ ˜L. Now consider the matrix representation
+for an element g ∈ G w.r.t the basis for v1, · · ·vn.
+Set gvj = ∑
+iaijvi. Since N ·L ⊂ ˜L we have aij ∈ Z[ 1
+N ]. Since the
+norm of gv is also y, by considering the basis v1,...,v i− 1,gv,v i+1,...,v n
+and considering covolumes we conclude as above that |aij| ≤ N . Thus there
+are only Od(1) options for the representation of G on ˜L. Since there are
+only Od(1) options for L given ˜L, this completes the proof.
+□
+In what follows, we write A for the Adele group, and Af for the ﬁnite
+Adeles. likewise, for a number ﬁeld K we write AK and AK
+f for the Adeles
+(resp. ﬁnite Adeles) over K.
+3. Invariants of Arithmetic Tori
+In this section we deﬁne several invariants of arithmetic to ri and state
+Shyrs analogue of the class number formula. From now on we res trict to
+tori deﬁned over Q. A useful example to keep in mind is the following: Given
+a number ﬁeld L, the multiplicative group L× can be thought of as a torus
+over Q given by restricting the multiplicative group Gm from L to Q. The
+corresponding character group X(T ) is the free Z-module generated by the
+complex embeddings ψi :L → C with the natural Galois action. We denote
+this torus by ResL/ QGm.
+3.1. Class number hT :
+BRAUER-SIEGEL FOR TORI AND LOWER BOUNDS FOR CM GALOIS ORBITS 5
+Deﬁne T (Zp) to be the maximal compact subgroup of T (Qp), and deﬁne
+T (R)c to be the maximal compact subgroup of T (R). It follows that
+T (ˆZ) :=
+∏
+p
+T (Zp)
+is the maximal compact subgroup of T (Af ), and T (A)c :=T (ˆZ) × T (R)c is
+the maximal compact subgroup of T (A).
+Deﬁne the class group of T to be
+CLT :=T (Q)\T (Af )/T (ˆZ).
+The class number of T is deﬁned to be
+hT := |CLT |.
+Note that for T = ResL/ QGm, the class number hT is the ordinary class
+number of L.
+3.2. Units wT and Regulator RT :
+Consider a basis of X(T )∞ given by ξ1,...,ξ r∞ such that ξ1,...,ξ r is
+a basis of X(T )Q. That such a basis can be chosen follows from the fact
+thatX(T )Q is a primitive sublattice of X(T ), being the ﬁxed set of a group
+action. Now, the unit group T (Q) ∩ T (ˆZ) has the decomposition
+T (Q)tor × E,
+whereE is a free abelian group of rank r∞ − r andT (Q)tor =T (Q) ∩ T (A)c
+is ﬁnite, since its both compact and discrete in T (A). Pick a basis ei forE.
+Deﬁne the number wT and the regulator RT as follows:
+wT = |T (Q) ∩ T (A)c|,
+and
+RT = |det(log |ξr+i(ej)|)|, 1 ≤ i,j ≤ r∞ − r.
+Note that for T = ResL/ QGm, wT is the number of roots of unity in L,
+while RT is the regulator of L.
+3.3. Quasi-residue ρT :
+Let ρ : Gal( Q/ Q) → Gld(Z) be the representation corresponding to T ,
+and let ρQ be the induced rational representation. We can then conside r the
+Artin L-function L(s,ρ Q). Recall that r is the rank of X(T )Q and deﬁne
+the quasi-residue ρT of T to be
+ρT := lim
+s→ 1
+(s − 1)rL(s,ρ Q).
+Note that for T =ResL/ QGm,ρT is the residue at s = 1 of the DedekindZeta function ζL(s).
+6 JACOB TSIMERMAN
+3.4. T amagawa numberτT :
+Fix an invariant gauge formω onT deﬁned over Q. Then ω induces canonically a Haar measure ωv onT (Qv) for each v. Moreover, for almost all ﬁnite
+primesp we haveLp(1,ρ Q)ωp(T (Zp)) = 1, and so ω ∞
+∏
+pLp(1,ρ Q)ωp(T (Zp))
+deﬁnes a Haar measure ωT on T (A), which is moreover independent of the
+original choice of ω by the product formula.
+Deﬁne T (A)1 to be the kernel of the map Λ : T (A) → (R×
++)r given by
+Λ(x) = ( ||ξi(x)||Q)1≤i≤r
+where || · ||Q denotes the Idelle volume of Q. Pulling back the measure
+Λr
+i=1t− 1
+i dti gives us a measure d˜t on T (A)/T (A)1. Let m be the measure
+on T (A)1 such that m and d˜t glue together to give ρ− 1
+T ωT . We deﬁne the
+Tamagawa numberτT to be the measure of T (A)1/T (Q) under m.
+ForT =ResL/ QGm, the Tamagawa number is 1.
+3.5. Quasi-Discriminant DT :
+Assigning T (R)c measure 1 and gluing it with the measure Λ r∞
+i=1dξi on
+T (R)/T (R)c we get a measure on T (R) which we also denote by d˜t. Now,
+deﬁne
+cT = w∞
+d˜t
+∏
+p
+Lp(1,ρ Q)ωp(T (Zp)).
+The quasi-discriminant DT is deﬁned to be DT = 1/c 2
+T .
+ForT = ResL/ QGm the quasi-discriminant DT is the ordinary discriminantDL.
+3.6. Analytic Class number F ormula for T ori:
+We have the following result of Shyr [14]:
+Theorem 3.1. (Shyr)
+The following equality holds:
+hT ·RT =ρT ·wT ·τT · |DT |1/ 2.
+ForT =ResL/ QGm, this reduces to Dirichlet’s class number formula for
+L.
+4. Brauer-Siegel formula for Tori
+Deﬁne K to be the splitting ﬁeld of T , and let DK be its discriminant.
+Set d to be the dimension of T and n to be [ K : Q]. In this section we
+use Shyr’s class number formula to derive a Brauer-Siegel th eorem for Tori
+by estimating the sizes of the invariants wT,ρT,τT and DT with respect to
+DK. We show that except for DT , the invariants are all small. To make this
+BRAUER-SIEGEL FOR TORI AND LOWER BOUNDS FOR CM GALOIS ORBITS 7
+precise, we ﬁnd it useful also to introduce the following not ation: A function
+F (T,K ) is said to be discriminant negligible if ∀ǫ> 0, we have
+D−ǫ
+K ≪ n,d,ǫ |F (K,T )| ≪ n,d,ǫ Dǫ
+K.
+Lemma 4.1. ρT is Discriminant negligible.
+Remark. This is the only part of the paper which is ineﬀective. That is,
+we cannot write down a Cǫ,n,d > 0 such that
+1
+Cǫ,n,d
+·D−ǫ
+K ≤ |F (K,T )| ≤ Cǫ,n,d ·Dǫ
+K.
+This stems from Siegel’s ineﬀective lower bound for L(1,χ ) whereχ is a quadratic dirichlet character, and is the reason why the Bruaer -Siegel theorem
+4.7 and our lower bounds for Galois orbits of CM points are all i neﬀective.
+Proof. Let L be a subﬁeld of K such that Gal(K/L ) is Galois, and χ be a
+character of Gal(L/ Q). Then the estimate
+D−ǫ
+K ≪ ǫL(χ, 1) ≪ ǫDǫ
+K
+is known by Siegel’s work. By Brauer’s induction theorem L(ρQ, 1) can
+be expressed as a quotient of products of such L-functions, a nd the result
+follows.
+□
+Lemma 4.2. τT =On,d (1), and 1/τ T =On,d (1). Therefore τT is Discriminant negligible.
+Proof. The Tate-Shafarevich group
+/CG
+T is deﬁned to be the kernel of the
+map
+H 1(Gal(Q/ Q),T (Q)) →
+∏
+p
+H 1(Gal(Qp/ Qp,T (Qp)).
+A result of Ono [9] says that
+τT = |/CG
+T |
+|H 1(Gal(K/ Q),X (T ))|.
+Now, since we are ﬁxing d and n , the group Gal( K/ Q) is in one of a
+ﬁnite number of isomorphism classes of groups and by lemma 2. 1 the pair
+(Gal(K, Q),X (T )) goes over a ﬁnite set of isomorphism types of ( G,M )
+where G is a group and M is a representation of G.
+Therefore |H 1(Gal(K/ Q),X (T ))| is On,d (1). Likewise, as stated in the
+proof of ([12],Prop 6.9) the group /CG
+T is a quotient of H 2(Gal(K/ Q),X (T ))
+and so its order is On,d (1) by the same argument.
+□
+Lemma 4.3. The order of the group of units satisﬁes wT = On,d (1), and
+so wT is Discriminant negligible.
+8 JACOB TSIMERMAN
+Note T (Q)tor is a subgroup of T (K)tor ≈ ((K × )tor)n. The degree of a
+primitiveq′th root of unity over Q is φ(q). Since φ(q) goes to inﬁnity with
+q and the degree of K is d, the order of the unit group of K is Od(1). The
+result follows.
+Lemma 4.4. LetT and T ′ be isogenous Tori in C(K/ Q), of dimension d.
+Then DT =DT ′ ·Oǫ,d,n (Dǫ
+K ).
+Proof. By Lemma 2.1 there exists an isogeny λ :T → T ′ betweenT and T ′
+of degree m, where m =Od,n (1). For each ﬁnite prime p this induces a map
+λc
+p :T (Zp) → T ′(Zp). Deﬁne q(λc
+p) =
+|Coker(λ c
+p)|
+|Ker(λ c
+p)| . Then by the discussion at
+the beginning of section 4 of [14], we have
+DT/D T ′ =
+∏
+p
+q(λc
+p).
+Now, as Shyr points out at the end of section 2 of [14], q(λc
+p) = 1 for all
+primes p that are unramiﬁed in K and satisfy ( p,m ) = 1. Since λ is an
+isogeny of degree m, it factors through the ×m map, and so we have
+|Coker(λc
+p)| ≤ |T ′(Zp)[m]| ≤ |T ′(
+Qp)[m]|=md.
+Setting S to be the set of all primes ramiﬁed in K, we thus have
+DT =DT ′ × Od,n (md|S|)
+from which the result follows.
+□
+Corollary 4.5. Let T be a torus in C(K/ Q) of dimension d. Let ρ be
+the associated integral Galois representation, and ρQ the induced rational
+representation. Let fρ be the norm of the Artin conductor corresponding to
+ρQ. Then fρ
+DT
+is Discriminant negligible.
+Proof. For tori of the formRL/ Q(Gm), whereL is a subﬁeld of K, we actually
+have equality since the Artin conductor and the quasi-discr iminant are both
+equal to the discriminant of L. By Theorem 1.5.1 in [10] there are integers
+m,mi,ni of size On,d (1) such that Tm × ∏
+i(RLi/ Q(Gm))mi is isogenous to∏
+i(RLi/ Q(Gm))ni whereLi goes over all subﬁelds ofK. Since both the quasidiscriminant and the Artin conductor are multiplicative un der products, the
+corollary now follows from Lemma 4.4.
+□
+The following lemma is essential in showing that the class nu mber of Tori
+is large in terms of the Discriminant of the splitting ﬁeld.
+Lemma 4.6. IfK is a Galois extension of Q of degreen andρ : Gal(K/Q ) →
+GL(V ) is a representation of Gal (K/ Q) on a complex vector space V with
+trivial kernel, then
+fρ ≫ nD
+1
+n− 1
+K .
+BRAUER-SIEGEL FOR TORI AND LOWER BOUNDS FOR CM GALOIS ORBITS 9
+Proof. Letρ : Gal(K/ Q) → GL(V ). Since ρ has trivial kernel, its non-trivial
+on all non-trivial inertia groups. Let Ip denote the inertia group of a prime
+over p. Since vp(fρ) ≥ dimC(V/V Ip), each ramiﬁed prime p of K divides
+fρ. Now, each prime which is tamely ramiﬁed divides DK with exponent at
+most n − 1. Since the contribution of the wildly ramiﬁed primes is a pr iori
+bounded by the dimension, we have
+DK ≪ n
+∏
+p
+pn− 1
+where the product is over ramiﬁed primes in K. This implies the lemma.
+□
+Putting together all the above we arrive at
+Theorem 4.7. (Brauer-Siegel Theorem for Tori)
+LetT be a torus of dimension d inC(K/ Q) with [K : Q] = n, with K being
+the minimal splitting ﬁeld of T . Let hT,RT be the class number and regulator
+of T respectively. Also, let ρ be the associated integral representation of
+Gal(Q/ Q) and ρQ the induced rational representation. Let fρ be the norm
+of the Artin conductor corresponding to ρQ. Then we have
+1
+2 ln(hTRT ) = 1
+2 lnfρ +on,d (lnDK)
+= ( 1
+2 +on,d (1)) lnfρ
+Proof. The ﬁrst equality is an immediate consequence of the previou s lemmas and Theorem 3.1. The second equality follows from Lemma 4 .6 and the
+fact that K is the minimal splitting ﬁeld for T . □
+5. Structure theorems for Class groups of Tori
+We focus in this section on the following setup: Suppose we ha ve a map
+φ :S → T of tori deﬁned over Q. This then induces a map of class groups
+φ 0 : ClS → ClT , and we wish to understand how large the image of φ 0 is.
+This question can be very diﬃcult. For instance, suppose tha tS ∼
+=T andφ
+is the map sending t totn. Then the question reduces to understanding the
+size of the group ClT [n], and bounding torsion for class groups of number
+ﬁelds is notoriously diﬃcult. We show, however, that this is essentially the
+only hard case. More precisely, we prove the following theor em:
+Theorem 5.1. Let
+1 →→
+S
+f →→T
+g →→U →→ 1
+10 JACOB TSIMERMAN
+be an exact sequence of Tori, where S,T,U are in C(K/ Q), [K : Q] = n and
+the dimension of T is d. Then the homology groups of the induced sequence
+1 →→
+ClS
+f0 →→ClT
+g0 →→ClU →→ 1
+are Discriminant negligible.
+Proof. For a torus T deﬁne Cl(T ) to be T (Q)\T (Af ). By considering the
+cohomology sequence associated to the exact sequence
+(2) 1 →→
+T (K) →→T (AK) →→T (K)\T (AK ) →→ 1
+we see that there is an injection
+ψT :Cl(T )֒→H 0(Gal(K/ Q),T (K)\T (AK )).
+Moreover, the image contains the image of the norm map on T (K)\T (AK )
+and thus the size of the cokernel of ψT is at most the size of the Tate cohomology group ˆH 0(Gal(K/ Q),T (K)\T (AK )). By Nakayama-Tate duality
+this is isomorphic to H 2(Gal(K/ Q),X (T )) which is On,d (1) by Lemma 2.1
+as has already been discussed.
+Now, suppose we have an exact sequence of Tori
+1 →→S
+f →→T
+g →→U →→ 1
+as in the statement. We ﬁrst prove that g0 has a small cokernel, and then
+that f0 has a small kernel. The theorem then follows since hT (hShU )− 1 is
+Discriminant negligible by lemma 4.7.
+• g0 has small cokernel:
+Since all our tori become split over K, we have an exact sequence
+1 →→S(K)\S(AK )
+f1 →→T (K)\T (AK )
+g1 →→U (K)\U (AK ) →→ 1.
+Taking Cohomology, we get an exact sequence
+H 0(Gal(K/ Q),T (K)\T (AK )) → H 0(Gal(K/ Q),U (K)\U (AK )) → H 1(Gal(K/ Q),S (K)\S(AK )).
+By Nakayama Tate duality,
+H 1(Gal(K/ Q),S (K)\S(AK )) ∼
+=H 1(Gal(K/ Q),X (S))
+and is thus of size On,d (1). Consider the commutative diagram
+Cl(T ) →→
+ψ T
+↓↓
+Cl(U )
+ψ U
+↓↓
+H 0(Gal(K/ Q),T (K)\T (AK )) →→H 0(Gal(K/ Q),U (K)\U (AK ))
+.
+The downward maps are injective with cokernels of size On,d (1)
+and the bottom map has cokernel of size On,d (1), so the mapCl(T ) →
+BRAUER-SIEGEL FOR TORI AND LOWER BOUNDS FOR CM GALOIS ORBITS 11
+Cl(U ) must also have cokernel of size On,d (1). Finally, consider the
+commutative diagram
+Cl(T ) →→
+↓↓
+Cl(U )
+↓↓
+ClT
+g0 →→ClU
+.
+The top map has cokernel of size On,d (1) and the downwards maps
+are surjective, so we see that g0 also has cokernel of size On,d (1).
+• f0 has small kernel:
+For a ring R, we consider S(R) as a subgroup of T (R). We have
+ker(f0) ≈ T (ˆZ)T (Q) ∩ S(Af )
+S(ˆZ)S(Q)
+.
+By group theory we have:
+⏐
+⏐
+⏐
+⏐
+⏐
+T (ˆZ)T (Q) ∩ S(Af )
+S(ˆZ)S(Q)
+⏐
+⏐
+⏐
+⏐
+⏐ ≤
+⏐
+⏐
+⏐
+⏐
+⏐
+T (ˆZ) ∩ S(Af )
+S(ˆZ)
+⏐
+⏐
+⏐
+⏐
+⏐ ·
+⏐
+⏐
+⏐
+⏐
+⏐
+T (ˆZ)S(Af ) ∩ T (Q)
+S(Q)(T (ˆZ) ∩ T (Q))
+⏐
+⏐
+⏐
+⏐
+⏐
+The ﬁrst term on the right hand side is 1 since S(ˆZ) is the maximal
+compact subgroup of S(Af ). For the second part, consider the map
+g from T (Af ) to U (Af ). Since the kernel of g is S(Af ) and
+T (Q) ∩ S(Af ) = S(Q),
+this induces an injective map ˜g on
+T (ˆZ)S(Af ) ∩ T (Q)
+S(Q)(T (ˆZ) ∩ T (Q))
+.
+The image of g on T (ˆZ)S(Af ) ∩ T (Q) lies inside U (Q) ∩ U (ˆZ).
+Now,
+U (Q) ∩ U (ˆZ) = U (Q)tor × EU
+whereEU is a ﬁnitely generated free abelian group of rank at most d.
+Also, corresponding to the map g :T → U there is a map h :U → T
+such that g ◦h is the multiplication by m map on U , where m =
+On,d (1). This implies that the image of g onS(Q)(T (ˆZ) ∩T (Q) is at
+least the image of the multiplication by m map on EU . Therefore,
+the size of the image of ˜g is bounded by |EU [m]|·|U (Q)tor| ≤ md ·wU ,
+which means ker(f0) = Od(1) as desired.
+□
+As a byproduct of the above, we get the following important co rollary,
+which can be considered as a very general transfer principle for torsion in
+class groups.
+12 JACOB TSIMERMAN
+Corollary 5.2. Let M be a ﬁxed ﬁnite abelian group on which Gal (K/ Q)
+acts, where [K : Q] is bounded by n. Let T1,T 2,S 1,S 2 be Tori which split
+over K whose dimensions are bounded by d. Let φi : Ti → Si,i = 1, 2 be
+maps which are surjective as maps of Tori, and such that the co kernel of
+X(Ti)∗ → X(Si)∗ is isomorphic to M as a Gal (K/ Q) module. Finally, let
+Ci be the size of the cokernel of the induced map ˜φi :ClTi → ClSi. Then C1
+C2
+is discriminant negligible.
+Proof. We shall work with cocharacters for the purpose of this proof . We
+have maps ψi :X(Si)∗ → M whose kernels are φi(X(Ti)∗). Let
+LS ⊂ X(S1)∗ ⊕ X(S2)∗
+be the kernel of the map
+Φ : X(S1)∗ ⊕ X(S2)∗ → M
+deﬁned by Φ(a,b ) = ψ 1(a) +ψ 2(b), and let U be the torus whose cocharacter
+module is LS. We then have the following commutative diagram:
+0 →→
+X(T1)∗ φ 1 →→X(S1)∗ ψ 1 →→M →→ 0
+0 →→X(T1 ⊕ T2)∗ →→
+↑↑
+LS
+ψ 1 →→
+↑↑
+M
+↑↑
+→→ 0
+0 →→X(T2)∗ φ 2 →→
+↑↑
+φ 2(X(T2)∗)
+↑↑
+ψ 2 →→ 0
+↑↑
+.
+The vertical and horizontal sequences are exact. Now consid er the induced
+diagram on Class groups. Since φ 2 is surjective, it follows from theorem 5.1
+that the induced map on class groups is surjective up to discr iminant negligible factors. Also, the induced vertical sequences are exact up to discriminant
+negligible factors. Let C be the size of the cokernel of ClT1 ⊕ ClT2 → ClU .
+An application of the snake lemma shows that C1
+C is discriminant negligible.
+Likewise, C2
+C is discriminant negligible. The result follows.
+□
+We denote the size of the above cokernels by CL(M ). This quantity is
+well deﬁned only up to a discriminant negligible factor. We f ormulate below
+a simple lemma that we will use in the subsequent sections:
+Lemma 5.3. Let 0 → M1 → M → M2 → 0 be an exact sequence of
+Gal(K/ Q) modules. Then
+max(CL(M1),CL (M2)) ≤ CL(M ) ≤ CL(M1) ·CL(M2).
+Proof. Consider Gal(K/ Q)-latticesL1,L 2 such that L1/L 2 ≈ M . by pulling
+backM1 we can ﬁnd a lattice L3 containingL2 and contained inL1 such that
+L3/L 2 ≈ M1 and L1/L 2 ≈ M2. Let S,T,U be the Tori whose cocharacter
+modules areL1,L 2,L 3 respectively. We have mapsf :T → U andg :U → S
+BRAUER-SIEGEL FOR TORI AND LOWER BOUNDS FOR CM GALOIS ORBITS 13
+corresponding to the inclusion of the cocharacter modules. This induces
+maps on class groups:
+CLT
+f →→ClU
+g →→CLS .
+By corollary 5.2 we have ker(f ◦ g) ≈ CL(M ),ker (f ) ≈ CL(M1), and
+ker(g) ≈ CL(M2) up to discriminant negligible factors. Moreover, since th e
+Tori are all isogenous their class groups have the same size u p to discriminant
+negligible factors by theorem 4.7. The result follows. □
+As an important special case, suppose M is a ﬁnite Galois module with a
+trivial Galois action. Then M can be expressed as a quotient of Zn for some
+integer n, where we consider Zn as a Galois module with a trivial Galois
+action. Zn is the cocharacter module of ( Gm)n, and since the class number
+of Q is 1, we conclude the following
+Corollary 5.4. LetM be a ﬁnite module with a trivial action of the Galois
+group. Then CL(M ) is discriminant negligible.
+We now give a further interpertation of the class groups of To ri, and of
+the groupsCL(M ). Though not necessary for the main results of this paper,
+we feel that the next theorem and its corollary shed light on t he nature of
+these objects.
+Suppose T is a torus of dimension d in C(L/ Q), [L : Q] = n. Denote the
+Galois group of L over Q byG. We then have natural isomorphisms :
+T (Q) ∼
+=HomG(X(T ),T (L))
+T (Af ) ∼
+=HomG(X(T ),T (AL,f ))
+T (ˆZ) ∼
+=HomG(X(T ),T ( ˆOL)
+We thus have a natural map from CLT to HomG(X(T ),CL (L)).
+Theorem 5.5. LetT be a torus of dimension d inC(L/ Q). Denote the Galois group ofL over Q byG. The natural map from CLT toHomG(X(T ),CL (L))
+has discriminant negligible kernel and cokernel.
+Proof. Let UL denote the unit group of L. We have the following exact
+sequence
+1 → Hom(X(T ), ˆOL/U L) → Hom(X(T ), AL,f /L × ) → Hom(X(T ),CL (L)) → 1
+or equivalently
+1 → Hom(X(T ), ˆOL/U L) → T (AL,f )/T (L) → Hom(X(T ),CL (L)) → 1
+TakingG-invariants gives the associated exact sequence
+1 → HomG(X(T ), ˆOL/U L) → (T (AL,f )/T (L))G → HomG(X(T ),CL (L)) → H 1( ˆOL/U L)) → 1
+14 JACOB TSIMERMAN
+Now, there is an embedding of T (Af )/T (Q) into T (AL,f )/T (L))G and
+Nakayama-tate duality implies that the cokernel is discrim inant negligible ,
+as in shown in the proof of theorem 5.1. We now analyze the seco nd term
+ˆOL/U L. Consider the exact sequence
+1 → Hom(X(T ),UL) → T (AL,f )c → Hom(X(T ), ˆOL/U L) → 1.
+TakingG-invariants gives us the exact sequences
+1 → T (Q)∩T (ˆZ) → T (ˆZ) → HomG(X(T ), ˆOL/U L) → H 1(Hom(X(T ),UL))
+and
+H 1(Hom(X(T ),UL)) → H 1(T (AL,f )c) → H 1(Hom(X(T ), ˆOL/U L)) → H 2(Hom(X(T ),U (L))).
+AsUL is a ﬁnitely generated abelian group of rank bounded by the de gree
+ofL, all its cohomology groups are of bounded cardinality. The t heorem thus
+follows from the following lemma:
+Lemma 5.6. The cohomology group H 1(T ( ˆOL)) is ﬁnite and discriminant
+negligible.
+Proof. Note that we have the decomposition
+H 1(T ( ˆOL)) ∼
+= ⊕ vH 1(T (OL,v )).
+Let v be a place lying over a ﬁnite prime p such that it is unramiﬁed.
+Then by local class ﬁeld theory, OL,v is a cohomologically trivial module,
+and thus by Nakayama ([8], Th. 2) H 1(T (OL,v )) is trivial.
+If v is ramiﬁed, consider the exact sequence
+1 → T (OL,v ) → T (Lv) → X(T )∗ → 1.
+By Nakayama-Tate duality, the cohomology groups of T (Lv) are bounded in
+terms of the degree of L. By looking at the associated long exact sequence,
+It thus follows that the same holds for T (OLv ). Let S be the set of primes
+ramiﬁed in L. The lemma now follows from the fact that 2 |S| is discriminant
+negligible.
+□
+□
+We have the following corollary to the groups CL(M ):
+Corollary 5.7. Let M be a ﬁnite module of the galois group Gal (
+Q/ Q),
+which factors through the galois group G of a number ﬁeld L. Let M ∗ denote
+the dual module Hom(M, Q/ Z). Then up to discriminant negligible factors,
+we have the equality
+CL(M ) = |HomG(M ∗,CL (L))|.
+BRAUER-SIEGEL FOR TORI AND LOWER BOUNDS FOR CM GALOIS ORBITS 15
+Proof. Letφ :T → S be a map of isogenous tori that split over L such that
+the cokernel of the induced map X(T ∗) → X(S∗) is M . This implies that
+the cokernel of the map X(S) → X(T ) is M ∗.
+By theorem 5.5, up to discriminant negligible factors CL(M ) is the size
+of the kernel of the map
+HomG(X(T ),CL (L)) → HomG(X(S),CL (L)), which is exactlyHomG(M ∗,CL (L)).
+□
+6. General Transfer Principles for Class Groups
+We can apply corollary 5.2 to derive transfer principles for torsion in class
+groups of number ﬁelds in the following way: Take K to be an algebraic
+number ﬁeld and consider the multiplication by n map on T =ResK/ QGm.
+The cokernel of the induced map on class groups is precisely CL(K)[n], so
+if we let M be the ﬁnite module X(T )∗/nX (T )∗ thenCL(M ) = CL(K)[n].
+As an example, consider a cubic ﬁeld K thats not normal. Let L be its
+Galois closure, and k the quadratic subﬁeld of L. This is called the quadratic
+resolvent ofK. Then a result of Gerth [6] says that the 3 torsion in CL(K)
+and CL(k) are the same up to a factor of Oǫ(Dǫ
+K ). We can recover this
+result as follows:
+Identify the Galois groupG = Gal(L/ Q) withS3. The 3-torsion in CL(K)
+corresponds to the G-module M generated by a1,a 2,a 3 over F3 with the
+natural permutation action by S3, while the 3-torsion in CL(k) corresponds
+to a G-module N , which is isomorphic to the submodule of M generated by
+a1 − a2 anda2 − a3. Moreover, M/N is a trivial G-module. By corollary 5.4
+we have that CL(M/N ) is discriminant negligible and so the result follows
+by lemma 5.3.
+Similarly, suppose K is a quartic ﬁeld whose normal closure ˜K has S4
+Galois group over Q. There are 3 subgroups of S4 of order 8, all conjugate
+and isomorphic to dihedral group with 8 elements D4. Pick one of these,
+and let F be its ﬁxed ﬁeld. F is called the cubic resolvent ﬁeld of K. We
+have the following result relating 2-torsion in quartic ﬁel ds to 2-torsion in
+the corresponding cubic resolvents. This result is new as fa r as the author
+knows:
+Lemma 6.1. Let K be a quartic ﬁeld, and F be its cubic resolvent. Then
+the 2-torsion in CL(K) and in CL(F ) are the same up to a factor of size
+Oǫ(Dǫ
+K ).
+Proof. Let L be the Galois closure of K and assume for simplicity that
+G = Gal(L/ Q) ≈ S4. Let M and N be the G-module corresponding to
+CL(K)[2] and CL(F )[2] respectively. As before, M corresponds to the F2
+vector space generated by a1,a 2,a 3,a 4 with the natural permutation action
+of S4. We have a 1-dimensional trivial submodule M0 of M generated by
+a1 +a2 +a3 +a4. Set M1 to be M/M 0. Now, let M2 be the submodule of
+M1 generated by a1 +a2,a 1 +a3, so that M1/M 2 is a trivial G-module. A
+basis for N as a module over F2 is given by b1,b 2,b 3 where the S4 action is
+16 JACOB TSIMERMAN
+given by identifying the bi with the right cosets S4/D 4. We have a trivial
+1-dim submodule N0 given by b1 +b2 +b3, and N/N 0 ≈ M2 asS4-modules.
+Now, by applying corollaries 5.3 and 5.4 we get
+Cl(M ) = Cl(M1) = Cl(M2) = Cl(N/N 0) = Cl(N )
+as desired.
+□
+We end this section with some general remarks on torsion in cl ass groups.
+One expects that all torsion is discriminant negligible. Fo r positive integers
+n,d , Zhang[18] conjectures the bound
+(3) Cl(K)[n] ≪ ǫDǫ
+K
+asK varies over number ﬁelds of degreed. We can phrase Zhang’s conjecture
+in our language in the following way: Fix a group G and a ﬁnite G-module
+M . Now, suppose K is a Galois number ﬁeld with Gal( K/ Q) ≈ G. We can
+then consider M as a ﬁnite Gal( K/ Q) module. It then makes sense to talk
+about Cl(M ), leaving K out by abuse of notation.
+Conjecture 6.1. For all ﬁnite modules M , the function Cl(M ) is discriminant negligible.
+It is not hard to see that 6.1 is equivalent to Zhang’s conject ure. Zhang’s
+conjecture is the special case where the module M is the regular representation of G over Z/n Z for some positive integer n. However, since all modules
+are quotients of direct sums of such regular representation s, the equivalence
+follows from corollary 5.3.
+• In light of conjecture 6.1 the result of Gerth and lemma 6.1 mi ght
+not seem that interesting, since all torsion is supposed to b e Discriminant negligible! In fact, Gerth[6] proves a much more p recise
+relationship between the 3-torsion group of a cubic ﬁeld and its quadratic resolvent, in terms of ramiﬁcation. By following the proof of
+theorem 5.1 more closely one can prove that Cl(M ) is well deﬁned
+up to, roughly speaking, the contribution from the ramiﬁed p rimes
+in K. Thus, the statement of lemma 6.1 could likely be reﬁned to
+say that the 2-ranks of a quartic ﬁeld and its cubic resolvent are the
+same up to ramiﬁed primes. As our main interest is in Galois or bits
+of CM points, we do not pursue this.
+• In fact, Brumer and Silverman[1] asked whether the right han d side
+of (3) can be replaced with D
+C
+ln ln DK
+K . The value D
+C
+ln ln DK
+K can be
+best understood in terms of the ramiﬁed primes in K. These are
+precisely the primes dividing DK . Now, for SK denoting the number
+of distinct primes dividing DK , one can verify
+nSK ≪ D
+C
+ln ln DK
+K ,
+BRAUER-SIEGEL FOR TORI AND LOWER BOUNDS FOR CM GALOIS ORBITS 17
+with equality for DK equaling the product of the ﬁrst X primes
+(X ≈ lnDK
+ln lnDK
+). Thus, for 2-torsion of certain quadratic ﬁelds the
+bound is tight.
+• The above methods cannot recover some transfer principles, such as
+the Scholtz reﬂection principle which relates 3-torsion in the quadratic ﬁelds Q(
+√
+D) and Q(
+√
+− 3D), or the work of Ellenberg and
+Venkatesh[5]. This is because these principles use heavily class ﬁeld
+theory, which has not been an input in our work thus far. Nonet heless, one can rephrase and generalize these reﬂection princ iples in
+this language.
+7. Applications to Lower bounds for Galois orbits
+In this section we apply results of section 5 to the study Galo is orbits
+of special points in higher rank. Let Ag, 1(C) denote the moduli space for
+principally polarized complex abelian varieties of dimens ion g. We also let
+Hg denote the Siegel-Upper half space, so that
+Ag, 1(C) ≈ GSp2g(Q)\Hg × GSp2g(Af )/GSp 2g(ˆZ).
+From now on, given a ﬁeld F we refer to the torus ResF/ QGm simply as F ×.
+Let x be a CM point in Ag, 1 corresponding to a principally polarized
+Abelian varietyAx. We set Rx to be the center of the ring of endomorphisms
+End(Ax) of Ax. All of the CM points in Ag, 1(C) are known to be deﬁned
+over ¯Q, and so admit a natural action of the Galois group Gal( Q/ Q). We
+recall conjecture 1.1 for the convenience of the reader:
+Conjecture 7.1. There exists a positive constant δg such that the inequality
+|Gal(
+Q/ Q) ·x| ≫ g Disc(Rx)δg holds for all ǫ >0 as x varies over all CM
+points in Ag, 1.
+We begin by reviewing the description of the Galois action on A in terms
+of the CM theory.
+7.1. Background on CM theory . Let A be a principally polarized complex CM abelian variety, which we shall take to be simple for t he moment.
+Then there is a CM ﬁeld K such that
+End(A) ⊗ Z Q ∼
+=K.
+We let F denote the maximal totally real subﬁeld of K. Moreover, there
+is a set S = {φ 1,φ 2,...,φ g} of complex embeddings of K such that the
+representation of K on the complex tangent space of A is given as the direct
+sum of the 1-dimensional representations induced by S. Moreover, S ∪ ¯S
+give all embeddings of K into C. Let L denote the normal closure of K and
+S0 be all the embeddings of L into C which induce an element of S on K.
+The pair (K,S ) is referred to as the CM type of A. Since A is simple, (K,S )
+must be a primitive CM-type, which means that the right stabilizer of S0
+in Gal(L/ Q) is Gal(K/ Q).
+18 JACOB TSIMERMAN
+Now, let MT 0
+x denote the torus which is the pre-image of the torus Q×
+under the norm map on K, so that
+MT 0
+x :=ker(K × → F ×/ Q×,a → a¯a).
+Then corresponding to A there is an embedding of algebraic groups:
+φx :MT 0
+x֒→GSp2g,
+and moreover we have the equality
+φx(MT 0
+x (Q)) ∩ GSp2g(ˆZ) ≈ End(A)0,
+where
+End(A)0 := {a ∈ End(A) |a¯a ∈ Z}.
+Now, there is a reciprocity morphism rx :L× → MT 0
+x given by
+rx(a) =
+∏
+τ∈S0
+τ− 1(a).
+Since the morphism rx depends only on the CM type ( K,S ) we denote it
+also byrK,S . In the future, if there is no confusion we drop the S and simply
+write rK . We can consider the map
+sx : (AL
+f )× → GSp2g(Q)\Hg × GSp2g(Af )/GSp 2g(ˆZ)
+given by
+sx(a) → (x,φ x ◦rx(a)).
+The image of sx is equal to the Galois orbit of the CM point representing
+A. Moreover, there is a unique arithmetic subtorus MTx֒→MT 0
+x such
+that rx is surjective onto MTx as a morphism of tori, and we call this the
+Mumford-Tate group of A.
+We now review the general theory where A is not necessarily simple. In
+this case A is isogenous to a product Ani
+i where each Ai is a simple Abelian
+variety with CM such the Ai are mutually non-isogenous. Let ( Ki,Si) be
+theCM type of Ai (Note that it does NOT follow that the Ki are mutually
+non-isomorphic!). Let L denote the compositum of the normal closures Li
+of the Ki, and S0
+i be the set of embeddings of L into C which induce one of
+the Si on Ki. Let Fi denote the maximal totally real subﬁeld of Ki and set
+MT 0
+x to be the preimage of Q× under the norm map on ∏
+iKi so that
+MT 0
+x :=ker(
+∏
+i
+K ×
+i → (
+∏
+i
+F ×
+i )/ Q×,a → a¯a).
+As before, there is an embedding
+φx :MT 0
+x֒→GSp2g
+and moreover we have the identity
+φx(MT 0
+x (Q)) ∩ GSp2g(ˆZ) ≈ Z(End(A))0,
+where Z(End(A)) is the center of End(A) and
+Z(End(A))0 := {a ∈ Z(End(A)) |a¯a ∈ Z}.
+BRAUER-SIEGEL FOR TORI AND LOWER BOUNDS FOR CM GALOIS ORBITS 19
+The reciprocity morphism rx :L× → MT 0
+x is now deﬁned to be
+rx(a) = (
+∏
+τ∈Si
+0
+τ− 1(a))i,
+where we consider MT 0
+x as a subtorus of ∏
+iK ×
+i . Again, there is a unique
+arithmetic subtorus MTx֒→MT 0
+x such that rx is surjective onto MTx as a
+morphism of tori, and we call this the Mumford-Tate group ofA. As before,
+the image of the composition
+sx : (AL
+f )× → GSp2g(Q)\Hg × GSp2g(Af )/GSp 2g(ˆZ)
+is the Galois orbit of the CM point representing A.
+7.2. Reducing to ﬁelds. Consider for a moment conjecture 7.1 in the case
+where A is a simple CM abelian variety with CM by a ﬁeld K such that
+the endomorphism ring of A is the full ring of integers in OK . Then the
+map φx ◦rx factors through
+˜rK :ClL → ClK.
+A positive answer to conjecture 7.1 would thus require a posi tive answer to
+the following conjecture, which is purely a conjecture abou t ﬁelds:
+Conjecture 7.2. LetK be a CM ﬁeld of degree 2g, and let S be a primitive
+CM type for K. Let L be the normal closure of K, and let rK denote the
+reciprocity morphism from L× to K × corresponding toS. Then there exists
+δ(g)> 0 such that
+|im(˜rK :CL(L)| → CL(K)) ≫ g.ǫ Disc(K)δ(g)−ǫ.
+Our aim in this section is to show that conjecture 7.2 implies conjecture
+7.1. We then devote the remaining sections to the study of con jecture 7.2
+using the results of sections 4 and 5.
+Theorem 7.1. If conjecture 7.2 holds for all ﬁelds of degree 2h, with h ≤ g,
+then conjecture 7.1 holds for Ag, 1.
+Letx be a CM point representing a principally polarized abelian variet y
+A. We use the notation of section 7.1, so that A is isogenous to ∏
+iAni
+i ,
+(Ki,Si) is the CM type of Ai, and we set Rx to be the center of End(A).
+Note that R is in a natural way a subring of ⊕ iOKi. For ease of notation,
+we deﬁne Ox = ⊕ iOKi.
+Now, let
+Kx =MTx(Af ) ∩ GSp2g(ˆZ)
+so that Kx is a ﬁnite-index subgroup of the maximal compact subgroup
+MTx(ˆZ) of MTx(Af ).
+By Yafaev ([17], proposition 2.8), there is a ﬁnite index com pact subgroup
+Kg of GSp2g(ˆZ) such that if K ′
+x =Kx ∩ Kg, then the map
+MTx(Q)\MTx(Af )/K ′
+x →→
+GSp2g(Q)\Hg × GSp2g(Af )/K g
+20 JACOB TSIMERMAN
+is injective. It follows that
+(4) |Gal(
+Q/ Q) ·x| ≫ g |im[(AL
+f )× → MTx(Q)\MTx(Af )/K x]|
+Now,Rx is naturally a subring of Ox, and
+Disc(Rx) = [MTx(ˆZ) : Kx]2 ·
+m∏
+i=1
+DKi.
+Let ix denote the set of primes p where p divides [Ox : Rx]. By UllmoYafaev ([15], lemma 2.13), there is a positive constant B depending only on
+g such that
+(5)
+|im[(Af
+L)× → MTx(Q)\MTx(Af )/K x]| ≫ g B|ix|·[MTx(ˆZ) : Kx]·|im :Cl(L) → ClMT x|
+Let us ﬁrst deal with the second term. There is a surjection
+πi :MTx → MTAi,
+and we have the equality
+πi ◦rx =rAi ◦NL/L i
+where NL/L i is the norm map from L to Li. By class ﬁeld theory the norm
+map on class groups has cokernel bonded by the dimension of th e ﬁelds.
+Since we are also assuming conjecture 7.2, it follows that
+∀i, |im :CL(L) → ClMT x| ≫ g Dδ(gi)
+Ki
+where gi is the dimension of Ai.
+In particular, this proves the theorem unless the index [ Ox : Rx] grows
+faster than any power of the discriminants DKi. Thus, the theorem will
+follow once we prove the following
+Lemma 7.2. There are constants cg > 0,dg such that
+[Ox :Rx] ≤ [MTx(ˆZ) : Kx]cg ·
+( m∏
+i=1
+DKi
+) dg
+.
+Proof. We must ﬁrst show that is impossible for Rx to decrease without Kx
+also decreasing. To that end, we have the following elementa ry lemma:
+Lemma 7.3. MTx(Q) generates ⊕ iKi as a ring.
+Proof. First, it follows from Si being a primitive CM type that the only
+elements of Gal( Li/ Q) which ﬁx rAi(a) for all a ∈ Li are in Gal( Li/K i).
+ThusMTx(Q) generates a Q-algebra E in ⊕ iKi which surjects onto Ki for
+each i. Likewise, since the Si are pairwise inequivalent, the only elements
+of the Galois group of the Galois algebra ⊕ iLi which ﬁx E are those in the
+group ⊕ iGal(Li/K i). The lemma follows. □
+BRAUER-SIEGEL FOR TORI AND LOWER BOUNDS FOR CM GALOIS ORBITS 21
+Forα ∈ L(Zp), deﬁne
+S(α ) :=
+∑
+τ∈S
+τ− 1(α ).
+Note that we have the identity
+rx(epα ) = epS(α ).
+We shall need the following more reﬁned version of lemma 7.3:
+Lemma 7.4. There is a constant C depending only on g such that we can
+pick α ∈ L(Zp) with Zp[S(α )] having index at most pC in Ox.
+Proof. Letψi denote all the ring homomorphisms from ( Ox)p to
+Qp over Qp.
+Then the index of Zp[S(α )] in Ox is given by vp(i(α ) where
+i(α ) =
+∏
+i̸=j
+(ψi(S(α )) − ψj(S(α )).
+Now, we consider
+ψij =ψi ◦S − ψj ◦S
+as a linear map from L to L. The lemma will follow once we show that
+there is uniform constant C and an element α ∈ L(Zp) such that vp(ψij) ≤
+pC. To prove this, recall that if we take a Zp basis βi for L(Zp) and let
+(σ1,...,σ m) be the elements of the Galois group of Lp then the p-valuation
+of the determinant of the matrix ( σj(βi)) is the discriminant of Lp and
+therefore bounded by pC for some absolute constant C. If we replace σ1 in
+the matrix by ψij then the determinant scales at most by the p-power of the
+coeﬃcient of σ1 inψij, which is uniformly bounded. This ﬁnishes the proof.
+□
+Since
+[MTx(ˆZ) : Kx] =
+∏
+p
+[MTx(Zp) : (Kx)p]
+and
+[Ox :Rx] =
+∏
+p
+[
+∏
+OKi ⊗ Z Zp :Rx ⊗ Z Zp]
+the question is essentially reduced to a local one.
+By the proof of lemma 3.12 in [15], if p is unramiﬁed in L andp|[Ox :Rx]
+then
+[MTx(Zp) : (Kx)p] ≫ p.
+To ﬁnish the proof, we therefore need only to consider the cas e where
+[Ox :Rx]
+is divisible by a very large power of some prime p. The lemma 7.2 and
+theorem 7.1 thus follows from the following lemma:
+Lemma 7.5. There is an integerm depending only ong such that if pn||[MTx(Zp) :
+(Kx)p], then pm(n+1) does not divide [Ox :Rx].
+22 JACOB TSIMERMAN
+Proof. Pickα as in lemma 7.4 so that the index if Zp[S(α )] in Ox is bounded
+by pC. Now set h be the dimension of Ox and deﬁne βi := eipNS(α ) for
+0 ≤ i ≤ h − 1. Note that βi ∈ Kx.
+βi = 1 +ipNS(α ) +i2p2NS(α )2
+2! + · · ·+ih− 1pN (h− 1)S(α )h− 1
+(h − 1)! +pNh −h ·(Ox)p.
+The matrix
+Mh = (ij
+j! )0≤i,h ≤h− 1
+is invertible with some determinant mh. Thus, if N > n +C +mh we
+see that the span of the βi contains pNh −h− 1 ·((Ox)p/p ·(Ox)p) and thus
+pNh −g− 1(Ox)p by Nakayamas lemma. But this means that
+[Ox :Rx] ≤ pNh 2−h2−h,
+which ﬁnishes the proof.
+□
+□
+7.3. General Lower bounds under the Generalized Riemann Hypothesis.
+Assuming the Generalized Riemann Hypothesis for CM ﬁelds, Y afaev[17]
+proved a lower bound for Galois orbits of special points of th e formcNlog(DK )N
+for any N >0. The idea of his proof was to use small split primes to generate a large number of distinct elements of CL(K). We present here a slight
+reﬁnement of his method which allows us to get a polynomial lo wer bound
+in DK , thus showing that GRH implies a positive answer to question 1.1
+in general. Yafaev worked over a general Shimura variety. Fo r simplicity
+of exposition, we shall only present our method for the case o f Siegel space
+Ag, 1, as this allows us to work classically, although the method a pplies just
+as well for any Shimura variety. The idea is that while Yafaev used very
+small split primes to generate a large amount of class group elements, we
+use much larger split primes (a small power of the discrimina nt) to represent
+lots of distinct elements in the class group.
+Theorem 7.6. Assume GRH for CM ﬁelds. Then
+|im(˜rK )| ≫ g,ǫ D
+1
+2g2 −ǫ
+K .
+Proof. Let δ denote the element of Gal( L/ Q) representing complex conjugation. Consider unramiﬁed primes p,q which splits completely in K, and
+therefore also in L. Choose prime ideals P,Q in OL above p,q respectively, and suppose that rK (P ) = rK(Q) as elements of the ideal class group
+BRAUER-SIEGEL FOR TORI AND LOWER BOUNDS FOR CM GALOIS ORBITS 23
+CL(K). Then there is an element x ∈ K such that
+(x) = rK(P )
+rK (Q),
+and hence
+(x/x δ) = rK (P )rK (Qδ)
+rK (Q)rK(Pδ)
+Since K is a primitive CM type and P and Q are totally split, x
+xδ must
+generate K over Q. Now, consider the element
+y = pqx
+xδ .
+Then y is an algebraic integer which generates K over Q. Moreover, all
+conjugates of y are of absolute value pq. Since Disc( Z[y]) ≥ DK we arrive
+at the inequality
+pq ≫ g D
+1
+g2
+K .
+It follows that |im(rK )|> {#p | p splits completely in K and p ≪ g D
+1
+2g2
+K }.
+Since GRH implies the existence of at least D
+1
+2g2 −ǫ
+K such primes, we are done.
+□
+7.4. Setting up the combinatorics.
+For eachg, deﬁne Wg to be the Weyl group of order g, which we will view as
+a group of signed permutations. That is, an element of Wg is a permutation
+σ inSg together with a choice, for each i, of sign σi. If σ (i) = j, then we see
+say that σ takes i to j with sign σi ∈ { +1, − 1}. We deﬁne composition by
+multiplying signs. That is, ( σ ◦τ)(i) = σ (τ(i)) and (σ ◦τ)i =στ(i) ·τi. It is
+convenient to use the following notation for an element of Wg: the element
+σ = (1+3− )(2− ) is used to denote the permutation (13)(2) which takes 1 to
+3 with positive sign, 3 to 1 with negative sign and 2 to itself w ith negative
+sign. So for instance, σ 2 = (1− )(3− )(2+). Note that there is a map Wg → Sg
+taking a signed permutation to the underlying permutation, and this map is
+a surjective homomorphism. The kernel of this map will be den ote by W 0
+g .
+ThusW 0
+g is a normal subgroup of Wg isomorphic to ( Z/ 2Z)g.
+As before, Let (K, ΣK ) denote a CM ﬁeld of degree g together with a CM
+type (ΣK = (φ 1,...,φ g). Let L be the Galois closure of K, and G be the
+Galois group Gal(L/ Q). Let S ∈ Gal(L/ Q) denote all elements inducing an
+element of ΣK onK. We also let δ ∈ G be complex conjugation. Then G of
+L can canonically be viewed as a subgroup of Wg in the following way: For
+eachg ∈ G and 1 ≤ i ≤ g, we have that g(φi) is either φj for some j, or φj
+for some j. Thus, we can deﬁne σg to be the signed permutation mapping
+i to j with sign 1 if g(φi) = φj and sign -1 if g(φi) = φj. It is easy to see
+that this is an injective homomorphisms Gal( L/ Q)֒→Wg. It is worthwhile
+noting under this map complex conjugation always maps to the element
+24 JACOB TSIMERMAN
+(1− )(2− )... (g− ). We assume wlog that φ 1 is the identity embedding on K.
+It is follows under this identiﬁcation that S consists of the set of all elements
+of G that send the element 1 to some j with sign 1, and thus S− 1 is the
+set of all elements which send some i to 1 with sign 1. Moreover, H is the
+subgroup of G which sends 1 to itself with sign 1. Since we assumed that
+the abelian variety A is simple, the right stabilizer of S in G must be H.
+7.5. Understanding the map rK on Characters and cocharacters.
+Let us being by understanding the relevant G modules. A basis for X(K × )
+is the set of all embeddings ψi : K → C, where the Galois action is given
+by composition: g(ψj) = g ◦ψj. Likewise, A basis for X(L× ) is the set
+of all embeddings ξj : L → C, where the Galois action is again given by
+composition. By ﬁxing an identity embedding֒→C we can consider the
+elementsg of G as a basis for X(L× ). The map ˆrK sends ψi to
+ˆrK (ψi) = ψi ◦
+
+ ∑
+g∈S− 1
+g
+
+
+where we consider g now as an element of X(L× ). It will be more natural
+to consider the map on cocharacters for us. We take the dual ba ses g∗ for
+X(L× )∗ and ψ ∗
+i for X(K × )∗. The dual map ˆrK
+∗ takes an element g∗ to
+ˆrK
+∗(g∗) =
+∑
+1≤i≤g
+δ
+(1− σi)
+2 (φ ∗
+i )
+where σ is the element of Wg corresponding to g− 1. That is, φ ∗
+i appears in
+the sum if and only if g takes some element j to i with sign 1.
+Denote by L0 the kernel of the norm map NmL : L× → Q× and deﬁne
+K0 to be the kernel of the Norm map from K to its totally real subﬁeld F
+given by
+NmK/F (k) = k¯k.
+X(L0) is the quotient of X(L× ) by the primitive vector ∑
+g∈Gg and
+X(L0)∗ is the submodule of X(L× )∗ consisting of all elements ∑
+g∈Gag ·g∗
+such that ∑
+gag = 0. Similarly, X(K0) is the quotient of X(K × ) by the relationsφi = − ¯φi andX(K0)∗ is spanned by the elements π ∗
+i :=φ ∗
+i − ¯φ ∗
+i, 1 ≤
+i ≤ g. Note that rK takesL0 to K0.
+Deﬁne M to be the image of X(K0) in X(L0) by ˆrK and let TM be the
+torus whose character lattice is M .
+Lemma 7.7. We have DTM ≫ g D
+1
+2g− 1
+K .
+Proof. Sincex corresponds to a simple abelian variety, the CM type (K, ΣK )
+must be primitive and so the stabilizer of the element ∑
+g∈S− 1(g − ¯g) in G
+is H. Note that this element lies in M . Since L is the Galois closure of
+K we know that H contains no non-trivial normal subgroup of G, so we
+see that the action of G on M has trivial kernel. The result then follows
+BRAUER-SIEGEL FOR TORI AND LOWER BOUNDS FOR CM GALOIS ORBITS 25
+by considering the Artin conductor of the associated repres entation and
+applying Theorem 4.7 and Lemma 4.6.
+□
+Note that TM (R) is compact, so TM has trivial regulator. In particular,
+by theorem 5.1 we can conclude that the Galois orbit of x is large as long
+as M is a primitive sublattice of X(L0). This is equivalent to the image of
+X(L0)∗ in X(K0)∗ being primitive. This is the description we shall work
+with.
+7.6. Lower bounds for Galois orbits of W eyl CM-ﬁelds.
+Following Chai and Oort [2], we say that K is a Weyl CM ﬁeld if the Galois
+group Gal(L/ Q) is isomorphic to Wg. Weyl CM ﬁelds can be thought of as
+the generic CM ﬁelds, much like a generic ﬁeld of degree g has Galois group
+Sg. The following lemma combined with theorem 7.1 proves theor em 1.2.
+Lemma 7.8. IF K is a Weyl CM ﬁeld , then we have
+|im(˜rK )| ≫ g,ǫ D
+1
+4 −ǫ
+K .
+Proof. Since K0 ﬁts into an exact sequence of Tori
+F × → K × → K0
+and the Artin conductor is multiplicative, it follows from c orollary 4.5 that
+DK0 ≫ ǫ
+D1−ǫ
+K
+DF
+≥ D1/ 2
+K ,
+so the lemma will follow once we show that ˆrK
+∗ maps X(L0)∗ surjectively
+ontoX(K0)∗.
+For 1 ≤ i ≤ g, let gi ∈ Gal(L/ Q) be the element such that
+gi(φj ) =
+{
+φj i ̸=j
+¯φi i =j
+Note that we know gi exists precisely because K is a Weyl CM ﬁeld.
+Now, 1 ∗ − g∗
+i is in X(L0)∗ and maps onto π ∗
+i in X(K0)∗. Since the π ∗
+i span
+X(K0)∗, this completes the proof.
+□
+7.7. Proofs for g=2,3,4,5, and 6.
+In this subsection we prove that Galois orbits are large for g = 2, 3, 4, 5, 6.
+We record one ﬁnal combinatorial fact before proceeding:
+Lemma 7.9. For each i ̸= 1 and ǫ ∈ { +1, − 1} there exist an element g in
+S which takes i somewhere with sign ǫ.
+26 JACOB TSIMERMAN
+Proof. Suppose for the sake of contradiction that there is an i ̸= 1 and an
+ǫ ∈ { +1, − 1} such that ∀g ∈ S, g takes i to g(i) with sign ǫ. Since G
+acts transitively on the set {1, 2,...,g } there is a g ∈ G with g(1) = i.
+Multiplying g byδ if necessary, we can also ensure that g takes 1 to i with
+sign ǫ. But then g is in the right stabilizer of S and g /∈ H, contradicting
+the fact that S induces a primitive CM type on K.
+□
+The following theorem combined with theorem 7.1 proves theo rem 1.1.
+Theorem 7.10. Conjecture 7.2 holds for g = 2, 3, 4, 5 with
+δ(2) = δ(3) = 1
+4,
+δ(4) = 1
+7,
+δ(5) = 1
+9,
+and
+δ(6) = 1
+12.
+Remark. While δ(2) and δ(3) are optimal, we have made no attempts
+to optimize δ(4),δ (5) or δ(6). Since the proof reduces ’ δ(4) to a discriminant calculation, optimizing δ(4) is a straightforward exercise in representation theory, while optimizing δ(5) would involve bounding 3-torsion in class
+groups of quadratic ﬁelds. Of course, optimizing the values δg for conjecture
+7.1 would require more work, and in particular a better way to handle the
+case of non-maximal endomorphism ring.
+Proof. The theorem follows from lemmas 7.11, 7.12, 7.13, 7.14, 7.15 and the
+previous lemma 7.7.
+Lemma 7.11. Forg = 2, the image of ˆrK
+∗ is all of X(K0)∗.
+Proof. X(K0)∗ is generated by π ∗
+1 and π ∗
+2. We write ( a,b ) to denote the
+elementaπ ∗
+1 +bπ ∗
+2. Recall that X(L0)∗ is generated by the elements g∗ − 1∗.
+Now, we have
+ˆrK
+∗(δ∗ − 1∗) = ( − 1, − 1).
+Moreover, by lemma 7.9 there is an element in S which sends 1 somewhere
+with sign 1 while sending 2 somewhere with sign − 1. This must either be
+(1+2− ) or (1 +)(2− ). So either (0 , − 1) or ( − 1, 0) is in the image of ˆrK
+∗. This
+together with ( − 1, − 1) already generates so we’re done. □
+Lemma 7.12. Forg = 3, the image of ˆrK
+∗ is all of X(K0)∗.
+Proof. Similarly to the case g = 2, we write (a,b,c ) to denote aπ ∗
+1 +bπ ∗
+2 +cπ ∗
+3.
+We have
+ˆrK
+∗(δ∗ − 1∗) = ( − 1, − 1, − 1).
+BRAUER-SIEGEL FOR TORI AND LOWER BOUNDS FOR CM GALOIS ORBITS 27
+Since G acts transitively on the embeddings φ 1,φ 2,φ 3 it must contain a
+3-cycle. Suppose G has a 3-cycle σ where not all the signs are the same.
+By multiplying σ with complex conjugation δ we can ensure that two of the
+signs are positive. Assume σ = (1+2+3− ). Then
+ˆrK
+∗(1∗ − σ ∗) = (1, 0, 0)
+and
+ˆrK
+∗(1∗ − (σ 2)∗) = ˆrK
+∗(1∗ − (1+3− 2− )∗) = (1, 1, 0)
+and these 2 vectors combined with ( − 1, − 1, − 1) generate X(K0)∗.
+The same logic holds for the other such cycles. Thus, we are re duced to
+the case where G only contains 3-cycles where all signs are the same. Since
+G containsδ we see that G must contain all 3 cycles where all signs are the
+same, in particular the element σ = (1+2+3+).
+Recall that the image of ˆrK
+∗ is closed under the action of G. By lemma
+7.9 G contains an element τ which takes something to 1 with a positive
+sign and something to 2 with a negative sign. Hence, ˆrK
+∗(1∗ − τ∗) is either
+(0, 1, 0) or (0, 1, 1). Now, acting by σ we see that the image of ˆrK
+∗ contains
+either all of (0, 1, 0), (0, 0, 1), (1, 0, 0) or (0, 1, 1), (1, 0, 1), (1, 1, 0). Either way,
+together with (1, 1, 1) we see that this generates X(K0)∗.
+□
+Lemma 7.13. Forg = 4, the size of the image of ˜rK is at least cǫD
+1
+7 −ǫ
+K .
+Proof. Again, we use the notation ( a,b,c,d ) to denote aπ ∗
+1 +bπ ∗
+2 +cπ ∗
+3 +dπ ∗
+4.
+Let
+NK := {(a,b,c,d ) |a +b +c +d ≡ 0 mod 2 }.
+Now, as X(L0)∗ is generated by the elements 1 ∗ − g∗, we see that the image
+of ˆrK
+∗ is the span of some subset W of the vectors
+{(a1,a 2,a 3,a 4) |ai ∈ { 0, 1}, 1 ≤ i ≤ 4}
+which includes the vector v = (1, 1, 1, 1). We claim that the image of ˆrK
+∗ is
+either primitive, or the sublattice NK .
+To see this, note ﬁrst that by replacing w by v − w we can assume all
+vectors in W with 1 or 2 entries being 1, and the remaining entries being
+0. Now, if W contains a vector with a single entry being 1, then since the
+image of ˆrK
+∗ is G-invariant it must contain all the basis vectors and thus
+be the whole thing. We can thus assume that W only contains vectors with
+exactly 2 entries being 1. These come in pairs
+{(1, 1, 0, 0), (0, 0, 1, 1)}, {(1, 0, 1, 0), (0, 1, 0, 1)}, {(1, 0, 0, 1), (0, 1, 1, 0)}.
+If S contains 1 or 2 such pairs than the span can easily be checked t o be
+primitive. Hence the only case where the image is not a primit ive sublattice
+is if S contains all 3 such pairs, and the image is thus NK.
+Now, if the image is primitive the lemma follows by lemma 7.7. We thus
+restrict to the case where the image is NK . Let TK be the torus whose
+cocharacter module is NK , and consider the induced map TM → K0. It
+28 JACOB TSIMERMAN
+is suﬃcient to show that the cokernel of the induced map on Cla ss groups
+is Discriminant negligible. But X(L0)∗/N K ≈ Z/ 2Z, and so it must be a
+trivial Galois module. The result therefore follows from co rollary 5.2.
+□
+Lemma 7.14. Forg = 5, the size of the image of ˜rK is at least cǫD
+1
+9 −ǫ
+K .
+Proof. We use the notation (a,b,c,d,e ) to denote aπ ∗
+1 +bπ ∗
+2 +cπ ∗
+3 +dπ ∗
+4 +eπ ∗
+5.
+Now, if the span of ˆrK
+∗ is primitive, we’re done by lemma 7.7, so we assume
+from now on that this is not the case. As X(L0)∗ is generated by the
+elements 1 ∗ − g∗, we see that the image of ˆrK
+∗ is the span of some subset
+W of the vectors
+{(a1,a 2,a 3,a 4,a 5) |ai ∈ { 0, 1}, 1 ≤ i ≤ 5}
+which includes the vector v = (1, 1, 1, 1, 1). By replacing w by v − w we
+can assume all vectors in W except v have 1 or 2 entries being 1, and at
+least 3 entries being 0. If any vectors in W have exactly 1 component being
+1 then this eliminates a variable and reduces us to the g = 4 case above,
+so we can assume all vectors in W have exactly 2 entries being 1. Thus
+the image contains a vector π ∗
+z +π ∗
+w for some z ̸= w. Now, note that the
+image of ˆrK
+∗ is closed under the action of G. Moreover, since G contains an
+element of order 5, it must contain a 5-cycle. Taking a power o f this 5 cycle
+we can conclude that G contains a 5-cycle σ which takes z to w (and has
+some signs). Acting on the vector π ∗
+i +π ∗
+j by powers of σ we see that the
+cokernelB is generated by π ∗
+z with each π ∗
+k equaling ±π ∗
+z . We also have the
+relationπ ∗
+1 +π ∗
+2 +π ∗
+3 +π ∗
+4 +π ∗
+5 = 0 in B. Since π ∗
+w = −π ∗
+z , we can conclude
+that either B is trivial or B ≈ Z/ 3Z. Since we assumed that B isn’t trivial,
+we must have B ≈ Z/ 3Z.
+Our goal is now to bound CL(B). The automorphism group of B as
+an abelian group is Z/ 2Z, so we get a map from Gal( L/ Q) to Z/ 2Z. The
+kernel G1 must be of index 2. Now consider the quadratic ﬁeld k ﬁxed by
+G1. Notice that k ⊂ K since Gal(L/K ) ﬁxes π ∗
+1 and thus acts trivially on
+B. Now, the module X(k× )∗/ 2X(k× )∗ is an extension of B by a trivial
+Galois module, so by corollary 5.2 we have that CL(B) = CL(k)[2] up to
+discriminant negligible factors. In particular,
+CL(B) ≤ |CL(k)| ≤ D
+1
+2
+k.
+The rest is easy: since k ⊂ K, we haveD5
+k ≤ DK. Also, DK0 ≫ ǫD1−ǫ
+K /D F
+where F is the maximal totally real subﬁeld of K, so D2
+F ≤ DK. Thus
+DK0 ≫ ǫD−ǫ
+K ·D
+1
+5
+K
+D
+1
+2
+k
+≥ D
+3
+20 −ǫ
+K >D
+1
+9
+K
+as desired.
+□
+Lemma 7.15. Forg = 6, the size of the image of ˜rK
+∗ is at least cǫD
+1
+12 −ǫ
+K .
+BRAUER-SIEGEL FOR TORI AND LOWER BOUNDS FOR CM GALOIS ORBITS 29
+Proof. LetB be the cokernel of ˆrK
+∗. As X(L0)∗ is generated by the elements
+1∗ − g∗, we see that the image U of ˆrK
+∗ is the span of some subset W of the
+vectors
+{
+6∑
+i=1
+aiπ ∗
+i |ai ∈ { 0, 1}, 1 ≤ i ≤ 6}
+which includes the vector v = (1, 1, 1, 1, 1, 1). Given a vector w = ∑6
+i=1ciπ ∗
+i ,
+we refer to ci as the i’th entry of w. By replacing w byv − w we can assume
+all vectors in W with 1,2 or 3 entries being 1, and at least 3 entries being 0.
+Recall thatU is invariant byG. Since G acts transitively on the vectors ±π ∗
+i ,
+we deduce that the order of the π ∗
+i (possibly inﬁnite) in B is independent of
+i. If B is torsion free then the lemma follows from lemma 7.7, so we as sume
+from now on that this isn’t the case.
+Lemma 7.16. The image of ˆrK
+∗ contains an element of the form π ∗
+i ± π ∗
+j ,
+for j ̸=i.
+Proof. If W contains a vector with exactly 1 entry being 1, then for some
+i we have π ∗
+i = 0 in B, and hence by the G-invariance of U we see that
+B must be trivial, contradicting our assumption that B is torsion free. If
+W contains an element with exactly 2 entries being 1’s, then we ’re done.
+Hence the only remaining case is where all the vectors in W have exactly 3
+entries being 1’s. Let v1 be 1 such vector. If W consists only of v1 and/or
+v − v1, then it is easy to see that B is isomorphic to Z4 and hence torsion
+free. So W must contain at least 2 vectors v1,v 2 with 3 non-zero entries and
+v1 /∈ {v2,v − v1}. Then either v1 andv2 orv1 andv − v2 have 2 of the same
+entries being 1. Assume wlog v1 and v2 have 2 of the same entries being 1.
+Then v1 − v2 has 1 entry equal to 1, 1 entry equal to -1, and the rest equal
+to 0. This proves the lemma. □
+By acting by G on the vector produced by lemma 7.16 we deduce that U
+contains an element of the form π ∗
+1 ± π ∗
+j , and by relabeling we can assume
+it contains π ∗
+1 ± π ∗
+2. Now, W6 acts naturally on X(L0)∗ and U is invariant
+by G. Since U contains π ∗
+1 ± π ∗
+2, we see that U is also invariant either by
+(1+2+) or (1 − 2− ). Let GU denote the subgroup of W preservingU , so that
+GU contains G and this signed transposition. Let G0 denote the image of
+GU in S6, so that G0 is a transitive subgroup of S6 containing (12). Draw
+a graph VU on {1, 2, 3, 4, 5, 6} where two elements i,j are connected by an
+edge if (ij) ∈ G0. Since (ij) and (jk) generate (ik), we see that this graph is
+a disjoint union of complete graphs. Since G0 acts on this graph transitively,
+the complete graphs must have the same size. We thus see that e itherVU is
+the complete graph, in which case G0 is either all of S6, or VU is 2 triangles
+or 3 disjoint edges. We thus split into 3 cases:
+• Case i:G0 ≈ S6.
+30 JACOB TSIMERMAN
+TheGU orbit of π ∗
+1 ± π ∗
+2 thus contains either π ∗
+1 +π ∗
+j orπ ∗
+1 − π ∗
+j for
+eachj ̸= 1. Thus B is cyclic and generated by π ∗
+1. Since we assumed
+thatB is torsion, we see that U has full rank in X(L0)∗. Now, each
+element of G takesπ ∗
+1 to ±π ∗
+j for some j. As π ∗
+j = ±π ∗
+1 inB, we see
+that the G action on B factors through Z/ 2Z. Taking the kernel of
+the action of G on B, we see that there is a quadratic ﬁeld k ∈ K
+such that Cl(B) ≤ CL(k). But CL(k) ≪ ǫD
+1
+2 +ǫ
+k ≪ D
+1
+12 +ǫ
+K . Thus,
+|im(˜rK )| ≫ ǫ
+D
+1
+2 −ǫ
+K
+D
+1
+2
+FD
+1
+2
+k
+≫ D
+1
+6 −ǫ
+K .
+• Case ii: VU consists of 2 triangles with vertices {1, 2, 3} and
+{4, 5, 6}.
+In this case {{1, 2, 3}, {4, 5, 6} must be a G0-quotient set.
+As in Case i, we have that in B,
+π ∗
+1 = ±π ∗
+2 = ±π ∗
+3,π ∗
+4 = ±π ∗
+5 = ±π ∗
+6.
+Let G0 denote the stabilizer of π ∗
+1 in G. Then G0 contains H as a
+subgroup of index at most 3, so that there is a ﬁeld k ∈ K of degree
+at most 4 over Q such thatCl(B) ≤ CL(k). But CL(k) ≪ ǫD
+1
+2 +ǫ
+k ≪
+D
+1
+6 +ǫ
+K . Thus,
+|im(˜rK )| ≫ ǫ
+D
+1
+2 −ǫ
+K
+D
+1
+2
+FD
+1
+2
+k
+≫ D
+1
+12 −ǫ
+K .
+• Case iii: VU consists of 3 disjoint edges {1, 2}, {3, 4} and {5, 6}.
+In this case {{1, 2}, {3, 4}, {5, 6}} must be a G0-quotient set. Also,
+we have
+π ∗
+1 = ±π ∗
+2,π ∗
+3 = ±π ∗
+4,π ∗
+5 = ±π ∗
+6
+in B.
+Suppose that π ∗
+1 is 2-torsion in B. Then the stabilizer G0 ⊂ G of
+π ∗
+1 in B has H as a subgroup of index at least 4, and so there is a
+subﬁeld k ⊂ K of degree at most 3 such that
+Cl(B) ≤ CL(k) ≪ ǫD
+1
+4 +ǫ
+k .
+Thus
+|im(˜rK )| ≫ ǫ
+D
+1
+2 −ǫ
+K
+D
+1
+2
+FD
+1
+2
+k
+≫ D
+1
+8 −ǫ
+K .
+Henceforth we assume that π ∗
+i is not 2-torsion in B.
+BRAUER-SIEGEL FOR TORI AND LOWER BOUNDS FOR CM GALOIS ORBITS 31
+Consider a vector w ∈ W . If w has 1 non-zero entry then B is
+trivial as before and we’re done. If w has 2 non-zero entries, then
+they must both be {1, 2}, {3, 4} or {5, 6} by the main assumption of
+this case. If W consists only of some subset of
+{π ∗
+1 +π ∗
+2,π ∗
+3 +π ∗
+4,π ∗
+5 +π ∗
+6}
+then since U is generated by W and v and W ∪ v can be completed
+to a basis of X(L0)∗, it follows that B is torsion-free. Hence we can
+assume W contains a vector w with 3 non-zero coeﬃcients.
+Thus,w ∈ W is of the form w =π ∗
+i +π ∗
+j +π ∗
+k. Suppose i,j both
+belong to the same set {1, 2}, {3, 4} or {5, 6}. Wlog i = 1,j = 2,k =
+3. Then we see that either B is trivial contrary to assumption,
+or π ∗
+3 = − 2π ∗
+1 in B. Now, the action of G0 on the 3 element set
+{{1, 2}, {3, 4}, {5, 6}} is transitive, so it must contain both 3-cycles.
+Acting on the relation π ∗
+3 = − 2π ∗
+1 inB byGU thus gives π ∗
+5 = ± 2π ∗
+3
+in B and π ∗
+1 = ± 2π ∗
+5, and so π ∗
+1 = ± 8π ∗
+1 in B. Hence B is cyclic,
+generated by π ∗
+1, and π ∗
+1 has order 3, 7 or 9. But v − w =π ∗
+4 +π ∗
+5 +π ∗
+6
+is in U , which gives the relation π ∗
+4 = − 2π ∗
+5 = ±π ∗
+1 in B, so that
+π ∗
+1 = ± 2π ∗
+1 and π ∗
+1 must have order 3 in B. We can now proceed as
+in case i.
+Hence we can assume that any w with 3 non-zero coeﬃcients must
+be of the form w =π ∗
+i +π ∗
+j +π ∗
+k with each of {i,j,k } belonging to
+a diﬀerent element of {{1, 2}, {3, 4}, {5, 6}}. Recalling the relations
+π ∗
+1 = ±π ∗
+2,π ∗
+3 = ±π ∗
+4 and π ∗
+5 = ±π ∗
+6 in B, we see that each such
+w imposes a relation in B of the form π ∗
+1 ± π ∗
+3 ± π ∗
+5 = 0. Any 2
+distinct such relations imply that 2 π ∗
+i = 0 in B for some i, which we
+assumed was not the case. Hence B is isomorphic as an abelian group
+to the free module on π ∗
+1,π ∗
+3,π ∗
+5 modded out by a single relation
+π ∗
+1 ± π ∗
+3 ± π ∗
+5 = 0. Hence B is torsion free, which is a contradiction.
+□
+□
+References
+[1] A. Brumer and J.H.Silverman, The number of elliptic curv es over Q with conductor
+N , Manuscripta Math. 91 (1996), no. 1, pp. 95102
+[2] C.Chai and F.Oort, abelian Varieties Isogenous to a Jaco bian,
+http://www.math.upenn.edu/∼ chai/papers
+pdf/isogJac65.pdf, preprint, 2010
+[3] B.Edixhoven, On the Andre-Oort conjecture for Hilbert m odular surfaces, Moduli of
+abelian varieties (Texel Island, 1999),Progr. Math. 195, Birkhauser, Basel, 2001, pp.
+133-155,
+[4] B.Edixhoven, B.Moonen and F.Oort, Open problems in alge braic geometry, Bull. Sci.
+Math., vol. 125. (2001), pp. 1-22
+[5] J.Ellenberg and A.Venkatesh, Reﬂection principles and bounds for class group torsion,
+Int. Math. Res. Not. 2007, no. 1
+[6] F.Gerth, Ranks of 3-Class Groups of non-Galois Cubic Fie lds, Acta Arithmetica ,
+XXX, 1976, pp. 307-322
+32 JACOB TSIMERMAN
+[7] B.Klingler and A.Yafaev, The Andr´ e-Oort conjecture, http://www.math.jussieu.fr/∼
+klingler/papiers/KY12.pdf, preprint, 2008
+[8] T.Nakayama, Cohomology of class ﬁeld theory and tensor p roduct modules, Ann. of
+Math., 65 (1957), pp. 255-267.
+[9] T.Ono, On the Tamagawa Number of Algebraic Tori, Annals of Mathematics , Vol.
+78, No. 1, July, 1963,
+[10] T.Ono, Arithmetic of Algebraic Tori, Annals of Mathematics , Vol. 74, No. 1, July,
+1961,
+[11] J.Pila, O-minimality and the Andr´ e-Oort conjecture f or Cn,
+http://www.maths.ox.ac.uk/system/ﬁles/PilaAOMML4.pdf, to appear in Annals Math.
+[12] V.Platonov and A.Rapinchuk, Algebraic Groups and Numb er Theory, Academic
+Press, 1993, ISBN0125581807
+[13] G.Shimura, On abelian Varieties with Complex Multipli cation, Princeton Mathematical Series 46 , Princeton University Press, 1998
+[14] J.Shyr, On Some Class Number Relations of Algebraic Tor i, Michigan Math Journal ,
+Vol. 24, Issue 3, 1977, pp. 365-377
+[15] E.Ullmo and A.Yafaev, Galois orbits and equidistribut ion of
+special subvarieties : towards the Andr´ e-Oort conjecture .
+http://www.math.u-psud.fr/∼ullmo/Prebublications/UllmoYafaev2(3)(2)(2).pdf
+[16] E.Ullmo and A.Yafaev,Nombre de classes des tores de mul tiplication complexe et
+bornes inf´ erieures pour orbites Galoisiennes de points sp ´ eciaux. preprint.
+[17] A.Yafaev, A conjecture of Yves Andr´ e’s, Duke Mathematical Journal , Vol.132, No.3,
+2006, pp. 393-408
+[18] S.Zhang, Equidistribution of CM points on Quaternioni c Shimura Varieties, International Mathematics Research Notices , No.59, 2005, pp. 3657-3689

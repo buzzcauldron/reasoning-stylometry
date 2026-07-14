@@ -1,0 +1,3 @@
+This proof appears in the Book IV of Mathematical Collection by Pappus of Alexandria (ca A.D. 300) [ Eves , Pappas ]. It generalizes the Pythagorean Theorem in two ways: the triangle ABC is not required to be right-angled and
+the shapes built on its sides are arbitrary parallelograms instead of squares. Thus build parallelograms CADE and CBFG on sides AC and, respectively, BC. Let DE and FG meet in H and draw AL and BM parallel and equal to HC. Then Area(ABML) = Area(CADE) + Area(CBFG). Indeed, with the sheering transformation already used in proofs #1 and #12, Area(CADE) = Area(CAUH) = Area(SLAR) and also Area(CBFG) = Area(CBVH) = Area(SMBR). Now, just add up what's equal.
+A dynamic illustration is available elsewhere .

@@ -1,0 +1,27 @@
+(By J. Barry Sutton, The Math Gazette , v 86, n 505, March 2002, p72.)
+
+Let in ΔABC, angle C = 90°. As usual, AB = c, AC = b, BC = a. Define points D and E on AB so that AD = AE = b.
+
+By construction, C lies on the circle with center A and radius b. Angle DCE subtends its diameter and thus is right: DCE = 90°. It follows that BCD = ACE. Since ΔACE is isosceles, CEA = ACE.
+
+Triangles DBC and EBC share DBC. In addition, BCD = BEC. Therefore, triangles DBC and EBC are similar. We have BC/BE = BD/BC, or
+
+a / (c + b) = (c - b) / a.
+
+And finally
+
+a² = c² - b²,
+a² + b² = c².
+
+The diagram reminds one of Thâbit ibn Qurra's proof . But the two are quite different. However, this is exactly proof 14 from Elisha Loomis' collection . Furthermore, Loomis provides two earlier references from 1925 and 1905. With the circle centered at A drawn, Loomis repeats the proof as 82 (with references from 1887, 1880, 1859, 1792) and also lists (as proof 89) a symmetric version of the above:
+
+For the right triangle ABC, with right angle at C, extend AB in both directions so that AE = AC = b and BG = BC = a. As above we now have triangles DBC and EBC similar. In addition, triangles AFC and ACG are also similar, which results in two identities:
+
+a² = c² - b², and
+b² = c² - a².
+
+Instead of using either of the identities directly, Loomis adds the two:
+
+2(a² + b²) = 2c²,
+
+which appears as both graphical and algebraic overkill.

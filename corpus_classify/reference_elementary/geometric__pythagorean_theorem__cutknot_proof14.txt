@@ -1,0 +1,15 @@
+This proof by H.E. Dudeney (1917) starts by cutting the square on the larger side into four parts that are then combined with the smaller one to form the square built on the hypotenuse.
+
+Greg Frederickson from Purdue University, the author of a truly illuminating book, Dissections: Plane & Fancy (Cambridge University Press, 1997), pointed out the historical inaccuracy:
+
+You attributed proof #14 to H.E. Dudeney (1917), but it was actually published earlier (1872) by Henry Perigal, a London stockbroker.
+A different dissection proof appeared much earlier, given by the Arabian mathematician/astronomer Thâbit in the tenth century. I have included details about these and other dissections proofs (including proofs of the Law of Cosines) in my recent book "Dissections: Plane & Fancy", Cambridge University Press, 1997. You might enjoy the web page for the book:
+
+http://www.cs.purdue.edu/homes/gnf/book.html
+
+Sincerely,
+Greg Frederickson
+
+Bill Casselman from the University of British Columbia seconds Greg's information. Mine came from Proofs Without Words by R.B.Nelsen (MAA, 1993).
+
+The proof has a dynamic version .

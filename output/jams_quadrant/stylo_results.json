@@ -1,0 +1,61 @@
+{
+  "full_papers": {
+    "files": ["algebraic__algebraic_style__hrushovski_approx_subgroups.txt", "algebraic__geometric_style__dritschel_mccullough_rational_dilation.txt", "geometric__algebraic_style__bateman_katz_cap_sets.txt", "geometric__geometric_style__masur_schleimer_disk_complex.txt"],
+    "expected_filename_prefix": ["algebraic", "algebraic", "geometric", "geometric"],
+    "predicted_style": ["geometric", "geometric", "algebraic", "geometric"],
+    "success_rate": 25
+  },
+  "excerpts": {
+    "expected_filename_prefix": ["algebraic", "algebraic", "geometric", "geometric"],
+    "predicted_style": ["geometric", "geometric", "geometric", "algebraic"],
+    "success_rate": 25
+  },
+  "rolling": {
+    "algebraic__algebraic_style__hrushovski_approx_subgroups": {
+      "counts": {
+        "algebraic": 190,
+        "geometric": 142
+      },
+      "share_geometric": 0.4277,
+      "share_algebraic": 0.5723,
+      "n_slices": 332
+    },
+    "algebraic__geometric_style__dritschel_mccullough_rational_dilation": {
+      "counts": {
+        "algebraic": 103,
+        "geometric": 86
+      },
+      "share_geometric": 0.455,
+      "share_algebraic": 0.545,
+      "n_slices": 189
+    },
+    "geometric__algebraic_style__bateman_katz_cap_sets": {
+      "counts": {
+        "geometric": 80,
+        "algebraic": 49
+      },
+      "share_geometric": 0.6202,
+      "share_algebraic": 0.3798,
+      "n_slices": 129
+    },
+    "geometric__geometric_style__masur_schleimer_disk_complex": {
+      "counts": {
+        "geometric": 144,
+        "algebraic": 116
+      },
+      "share_geometric": 0.5538,
+      "share_algebraic": 0.4462,
+      "n_slices": 260
+    }
+  },
+  "style_accuracy": {
+    "whole_paper": 3,
+    "rolling_majority": 2,
+    "expert_labels": {
+      "geometric__geometric_style__masur_schleimer_disk_complex": "geometric",
+      "geometric__algebraic_style__bateman_katz_cap_sets": "algebraic",
+      "algebraic__geometric_style__dritschel_mccullough_rational_dilation": "geometric",
+      "algebraic__algebraic_style__hrushovski_approx_subgroups": "algebraic"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+(B. F. Yanney and J. A. Calderhead, Am Math Monthly , v.3, n. 12 (1896), 299-300, #XVII)
+
+Let ABC be right angled at C and let BC = a be the shortest of the two legs. With C as a center and a as a radius describe a circle. Let D be the intersection of AC with the circle, and H the other one obtained by producing AC beyond C, E the intersection of AB with the circle. Draw CL perpendicular to AB. L is the midpoint of BE.
+
+By the Intersecting Chords theorem,
+
+AH·AD = AB·AE.
+
+In other words,
+
+(b + a)(b - a) = c(c - 2·BL).
+
+Now, the right triangles ABC and BCL share an angle at B and are, therefore, similar, wherefrom
+
+BL/BC = BC/AB,
+
+so that BL = a²/c. Combining all together we see that
+
+b² - a² = c(c - 2a²/c)
+
+and ultimately the Pythagorean identity.
+
+Remark
+
+Note that the proof fails for an isosceles right triangle. To accommodate this case, the authors suggest to make use of the usual method of the theory of limits. I am not at all certain what is the "usual method" that the authors had in mind. Perhaps, it is best to subject this case to Socratic reasoning which is simple and does not require the theory of limits. If the case is exceptional anyway, why not to treat it as such.

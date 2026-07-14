@@ -1,0 +1,2998 @@
+arXiv:math/0607446v2  [math.MG]  19 Oct 2006
+JOURNAL OF THE
+AMERICAN MATHEMATICAL SOCIETY
+Volume 20, Number 1, Pages 99–148
+S 0894-0347(06)00546-7
+Article electronically published on September 5, 2006
+UNIVERSALL Y OPTIMAL DISTRIBUTION
+OF POINTS ON SPHERES
+HENRY COHN AND ABHINA V KUMAR
+Contents
+1. Introduction 99
+2. Background 109
+2.1. Hermite interpolation 109
+2.2. Positive-deﬁnite kernels 111
+3. Orthogonal polynomials 114
+4. Linear programming bounds 119
+5. Choosing auxiliary functions 121
+6. Proof of the main theorem 123
+7. The 600-cell 126
+7.1. Proof that h is positive deﬁnite 127
+7.2. Proof that h(t) ≤ a(t) 128
+7.3. Proof of uniqueness 128
+8. Other compact two-point homogeneous spaces 129
+9. The Euclidean case 135
+Acknowledgements 145
+Appendix A. Uniqueness of spherical codes 145
+References 146
+1. Introduction
+There are many beautiful and important conﬁgurations of poi nts on the surface
+of a sphere, ranging from familiar examples such as the verti ces of an icosahedron
+to more subtle cases such as the minimal vectors of the E8 or Leech lattices. Yudin,
+Kolushov, and Andreev have shown in [Y, KY1, KY2, An1, An2] th at certain conﬁgurations, including the ones mentioned above, minimize s peciﬁc sorts of energy.
+In this paper, we prove that in fact they minimize a far broade r class of energies
+than was previously known; we call this property universal optimality (the precise
+deﬁnition is given below). Our proofs apply to a number of oth er conﬁgurations,
+Received by the editors November 1, 2004.
+2000 Mathematics Subject Classiﬁcation. Primary 52A40, 52C17; Secondary 41A05.
+Key words and phrases. Potential energy minimization, spherical codes, spherica l designs,
+sphere packing.
+The second author was supported by a summer internship in the Theory Group at Microsoft
+Research and a Putnam Fellowship at Harvard University.
+c⃝2006 American Mathematical Society
+99
+100 HENRY COHN AND ABHINA V KUMAR
+enumerated in Table 1 below, as well as to energy minimizatio n in other compact
+two-point homogeneous spaces or Euclidean space.
+The setting of this paper is potential energy minimization. If one constrains
+some identically charged particles to move on the surface of a sphere, how will they
+arrange themselves? They will eventually spread out so as to locally minimize their
+electrical potential energy, assuming their kinetic energ y dissipates according to
+a force such as viscosity. We will ignore questions of dynami cs and simply focus
+on the relative positions of the particles once they reach a m inimum for potential
+energy. Furthermore, we will focus on global minima, althou gh particles can indeed
+become trapped in a local minimum.
+This question leads to a fundamental problem in extremal geo metry, in which
+we abstract the key points by working in an arbitrary dimensi on and replacing
+the electrical potential with an arbitrary radial potentia l function. Let f : (0 , 4] →
+[0, ∞ ) be any decreasing, continuous function. Given a ﬁnite subs et C of the unit
+sphere Sn− 1 ⊂ Rn, deﬁne the potential energy (more precisely, the f -potential
+energy) of C to be
+∑
+x,y ∈C ,x ̸=y
+f
+(
+|x − y|2)
+.
+Because each pair x, y is counted in both orders, our potential energy is twice that
+from physics. We normalize it this way because it makes the fo rmulas prettier. It
+is also important to note that we view potential functions as functions of squared
+distance.
+For a ﬁxed number N > 1, how can one choose C with |C|= N so as to minimize
+the potential energy? (To ensure that a minimum exists, when limr→ 0+ f (r) is
+ﬁnite, we must allow degenerations in which points in the con ﬁguration coincide.)
+In most cases the answer is some complicated conﬁguration, b ut it is remarkable
+how many important structures minimize potential energy.
+In R3 the electrical potential corresponds to f (r) = 1 /r 1/ 2, and a natural generalization to Rn with n ≥ 3 is f (r) = 1 /r n/ 2− 1. That is an especially important
+power law, because x ↦→ 1/ |x|n− 2 is a harmonic function on Rn \ {0}. However,
+any power law is of interest, as are more general potentials.
+Many researchers have studied potential energy minima. One of the most beautiful rigorous approaches is due to Yudin in [Y]. He studied t he harmonic power law
+and used spherical harmonics to give sharp lower bounds for p otential energy for
+n+ 1 or 2n points on Sn− 1 (the optima are the regular simplex and cross polytope).
+This work was extended by Kolushov and Yudin in [KY1]. For ( n, N ) = (8 , 240),
+they showed that the minimal vectors in the E8 root lattice are the unique global
+minimum. Andreev applied their techniques in [An2, An1] to s how that the Leech
+lattice minimal vectors are the unique minimum for ( n, N ) = (24 , 196560) and the
+vertices of the regular icosahedron are the unique minimum f or ( n, N ) = (3 , 12).
+In the present paper, we extend this approach to much more gen eral potential
+functions, as well as numerous other point conﬁgurations (l isted in Table 1).
+The paper [KY2] analyzed arbitrary power laws for the simple x, cross polytope,
+and E8 root system in a closely related maximization problem (maxi mizing potential energy given an increasing potential function) and rai sed the question of how
+generally the techniques could be applied. We will deal with quite general potential
+functions. Without loss of generality one can assume that th e potential function
+is nonnegative (only distances between 0 and 2 occur on the sp here, and one can
+UNIVERSALLY OPTIMAL DISTRIBUTION OF POINTS ON SPHERES 101
+add a constant to ensure nonnegativity over that range). The potential function
+must be decreasing, which corresponds to a repulsive force, and it is natural to
+require convexity as well. Our results require a strengthen ing of these conditions,
+namely complete monotonicity. Recall that a C∞ function f : I → R on an interval I is completely monotonic if ( − 1)kf (k)(x) ≥ 0 for all x ∈ I and all k ≥ 0
+(see [Wid, p. 145]) and strictly completely monotonic if strict inequality always
+holds in the interior of I. Of course, derivatives at endpoints of intervals denote
+one-sided derivatives. In this paper, endpoints are irrele vant, because we use halfopen intervals closed on the right, and one can show using the mean value theorem
+that complete monotonicity on the interior implies that it h olds also at the right
+endpoint.
+If a completely monotonic function fails to be strictly comp letely monotonic,
+then it must be a polynomial: if f (k)(x) = 0, then complete monotonicity implies
+that f (k)(y) = 0 for all y > x , in which case f (k) is identically zero because it is
+analytic (Theorem 3a in [Wid, p. 146]).
+All inverse power laws f (r) = 1 /r s with s > 0 are strictly completely monotonic
+on (0, ∞ ), and they are the most important cases for our purposes. Oth er examples
+include f (r) = e− cr with c > 0.
+It might seem preferable to use completely monotonic functi ons of distance,
+rather than squared distance, but squared distance is in fac t more natural than it
+ﬁrst appears. It simpliﬁes formulas appearing in later sect ions of this paper, it ﬁts
+into the general framework described in Section 8, and it is m ore general than using
+distance: it is not hard to prove that if r ↦→ f (r2) is completely monotonic on a
+subinterval (a, b ) of (0 , ∞ ), then f is completely monotonic on ( a2, b 2), but not vice
+versa.
+We will examine certain special conﬁgurations of points on h igh-dimensional
+spheres, which were introduced by Levenshtein in [Lev2] (in which he proved that
+they are optimal spherical codes). We refer to them as the sha rp arrangements,
+because everything ﬁts into place so perfectly that many bou nds turn out to be
+sharp. Each is a spherical code with certain parameters: an ( n, N, t ) spherical code
+is a set of N points on Sn− 1 such that no two of them have inner product greater
+than t (unless they are equal). In other words, all angles between t hem are at least
+cos− 1 t. Each sharp conﬁguration is also a spherical M -design for some M ; recall
+that a spherical M -design is a ﬁnite subset of the sphere such that every polynomial
+on Rn of total degree at most M has the same average over the design as over the
+entire sphere.
+Deﬁnition 1.1. A ﬁnite subset of the unit sphere Sn− 1 is a sharp conﬁguration
+if there are m inner products between distinct points in it and it is a spher ical
+(2m − 1)-design.
+Replacing 2 m − 1 with 2 m + 1 in Deﬁnition 1.1 would be impossible, for the
+following reason. If t1, . . . , t m are the inner products that occur between distinct
+points in a conﬁguration and y is a point in the conﬁguration, then the polynomial
+x ↦→
+(
+1 − ⟨ x, y ⟩
+) m∏
+i=1
+(
+⟨x, y ⟩ − ti
+) 2
+of degree 2 m + 1 vanishes on the entire conﬁguration. However, its integr al over the
+sphere does not vanish, because the polynomial is nonnegati ve on the sphere and
+not identically zero. Thus, sharp conﬁgurations are spheri cal designs of nearly the
+102 HENRY COHN AND ABHINA V KUMAR
+Table 1. The known sharp conﬁgurations, together with the 600-cell.
+n N M Inner products Name
+2 N N − 1 cos(2 πj/N ) (1 ≤ j ≤ N/ 2) N -gon
+n N ≤ n 1 − 1/ (N − 1) simplex
+n n + 1 2 − 1/n simplex
+n 2n 3 − 1, 0 cross polytope
+3 12 5 − 1, ± 1/
+√
+5 icosahedron
+4 120 11 − 1, ± 1/ 2, 0, (± 1 ±
+√
+5)/ 4 600-cell
+8 240 7 − 1, ± 1/ 2, 0 E8 roots
+7 56 5 − 1, ± 1/ 3 kissing
+6 27 4 − 1/ 2, 1/ 4 kissing/Schl¨ aﬂi
+5 16 3 − 3/ 5, 1/ 5 kissing
+24 196560 11 − 1, ± 1/ 2, ± 1/ 4, 0 Leech lattice
+23 4600 7 − 1, ± 1/ 3, 0 kissing
+22 891 5 − 1/ 2, − 1/ 8, 1/ 4 kissing
+23 552 5 − 1, ± 1/ 5 equiangular lines
+22 275 4 − 1/ 4, 1/ 6 kissing
+21 162 3 − 2/ 7, 1/ 7 kissing
+22 100 3 − 4/ 11, 1/ 11 Higman-Sims
+q q3+1
+q+1 (q + 1)(q3 + 1) 3 − 1/q, 1/q 2 isotropic subspaces
+(4 if q = 2) ( q a prime power)
+greatest possible strength given the number of distances oc curring in them. (Some
+but not all sharp conﬁgurations are actually 2 m-designs.)
+All sharp arrangements that we know of are listed in Table 1, t ogether with
+the 600-cell (which is not sharp, but to which our techniques nevertheless apply).
+The columns list the dimension n of the ambient Euclidean space, the number N of
+points, the largest M such that the code is a spherical M -design, the inner products
+other than 1 that occur between points in the code, and the nam e of the code, if
+any. If t denotes the largest inner product, then each of these codes i s the unique
+(n, N, t ) spherical code, except for some of those listed on the last l ine of the table
+(the isotropic subspace codes). See Appendix A for details a bout uniqueness.
+The ﬁrst six conﬁgurations listed in Table 1 are the vertices of certain fulldimensional regular polytopes (speciﬁcally, those regula r polytopes whose faces
+are simplices), together with lower-dimensional simplice s. The next seven cases
+are derived from the E8 root lattice in R8 and the Leech lattice in R24. The
+240-point and 196560-point conﬁgurations are the minimal ( nonzero) vectors in
+those lattices. In sphere packing terms, they are the kissing conﬁgurations , the
+points of tangency in the corresponding sphere packings. Ea ch arrangement with
+the label “kissing” is the kissing conﬁguration of the arran gement above it: each
+conﬁguration yields a sphere packing in spherical geometry by centering congruent
+spherical caps at the points, with radius as large as possibl e without making their
+interiors overlap. The points of tangency on a given cap form a spherical code
+in a space of one fewer dimension. In general diﬀerent sphere s in a packing can
+have diﬀerent kissing conﬁgurations, but that does not occu r here because each
+UNIVERSALLY OPTIMAL DISTRIBUTION OF POINTS ON SPHERES 103
+conﬁguration’s automorphism group acts transitively on it . (See Chapter 14 of
+[CS] for the details of these conﬁgurations.) Some of the kis sing conﬁgurations
+are of independent interest. For example, the 27 points on S5 form the Schl¨ aﬂi
+arrangement, which is connected as follows with the classic al conﬁguration of 27
+lines on a cubic surface. Let X be a smooth cubic surface in CP3. Its divisor class
+group Pic( X) is a free abelian group of rank 7, equipped with a bilinear fo rm of
+signature (1 , 6) given by taking intersection numbers (see Proposition 4. 8 in [H,
+p. 401]). The class h of a hyperplane section has self-intersection number h2 = 3,
+so its orthogonal complement h⊥ is negative deﬁnite. Thus, after changing the sign
+of the metric, h⊥ ⊗ Z R is naturally a Euclidean space. Orthogonally projecting
+the divisor classes of the 27 lines on X from Pic( X) ⊗ Z R to h⊥ ⊗ Z R yields 27
+points on a sphere, which form the Schl¨ aﬂi conﬁguration (up to scaling). The sharp
+conﬁgurations with 240, 56, or 16 points have similar interp retations via exceptional
+curves on del Pezzo surfaces; see Corollary 25.1.1 and Theor em 26.2 in [Man] for
+details.
+The sharp conﬁguration of 552 points in R23 comes from an equiangular arrangement of 276 lines in R23 described by the unique regular two-graph on 276 vertices;
+see Chapter 11 of [GR]. It can be derived from the Leech lattic e Λ 24 as follows.
+Choose any w ∈ Λ24 with |w|2 = 6. Then the 552 points are the vectors v ∈ Λ24
+satisfying |v|2 = |w − v|2 = 4. These points all lie on a hyperplane, but it does
+not pass through the origin, so subtract w/ 2 from each vector to obtain points on
+a sphere centered at the origin.
+The Higman-Sims conﬁguration of 100 points in R22 can be constructed similarly, following [Wil]. Choose w1 and w2 in Λ 24 satisfying |w1|2 = |w2|2 = 6 and
+|w1 − w2|2 = 4. Then there are 100 points v ∈ Λ24 satisfying |v|2 = |w1 − v|2 =
+|w2 − v|2 = 4, and they form the Higman-Sims conﬁguration (on an aﬃne su bspace
+as above).
+One might imitate the last two constructions by using the E8 lattice instead of
+the Leech lattice and replacing the norms 6 and 4 with the smal lest two norms in
+E8, namely 4 and 2. That works, but it merely yields the cross pol ytope in R7 and
+the simplex in R6.
+The last line of the table describes a remarkable family of sh arp conﬁgurations
+from [CGS]. They are the only known sharp conﬁgurations not d erived from regular
+polytopes, the E8 lattice, or the Leech lattice. The parameter q must be a prime
+power. When q = 2, this arrangement is the Schl¨ aﬂi conﬁguration (and it is a
+spherical 4-design), but for q > 2 it is diﬀerent from all the other entries in the table.
+Points in the conﬁguration correspond to totally isotropic 2-dimensional subspaces
+of a 4-dimensional Hermitian space over Fq2 , with the distances between points
+determined by the dimensions of the intersections of the cor responding subspaces
+(inner product − 1/q corresponds to intersection dimension 1). This constructi on
+generalizes to higher-dimensional Hermitian spaces, but t he 891-point conﬁguration
+in R22 appears to be the only other sharp conﬁguration that can be ob tained in this
+way, from totally isotropic 3-dimensional subspaces of a 6- dimensional Hermitian
+space over F4.
+Antipodal sharp conﬁgurations are the same as antipodal tig ht spherical designs,
+by Theorem 6.8 in [DGS]. Much progress has been made towards c lassifying such
+designs; see [BMV] for more details. In particular, Table 1 c ontains all of the
+antipodal sharp conﬁgurations in at most 103 dimensions.
+104 HENRY COHN AND ABHINA V KUMAR
+Table 1 coincides with the list of known cases in which the lin ear programming
+bounds for spherical codes are sharp; the list comes from [Le v3, p. 621], except
+for the 600-cell, which was dealt with in [An3] and [El]. We co njecture that our
+techniques apply to a conﬁguration if and only if the linear p rogramming bounds
+for spherical codes prove a sharp bound for it.
+In our main theorem, we prove that sharp arrangements and als o the 600-cell are
+global potential energy minima for every completely monoto nic potential function:
+Theorem 1.2. Let f : (0 , 4] → R be completely monotonic, and let C ⊂ Sn− 1 be a
+sharp arrangement or the vertices of a regular 600-cell. If C′⊂ Sn− 1 is any subset
+satisfying |C′|= |C|, then
+∑
+x,y ∈C ′,x ̸=y
+f
+(
+|x − y|2)
+≥
+∑
+x,y ∈C ,x ̸=y
+f
+(
+|x − y|2)
+.(1.1)
+If f is strictly completely monotonic, then equality in (1.1) implies that C′ is also
+a sharp conﬁguration or the vertices of a 600-cell (whichever C is) and the same
+distances occur in C and C′. In that case, if C is listed in Table 1 but not on the
+last line, then C′= AC for some A ∈ O(n) (i.e., C′ and C are isometric).
+Uniqueness does not necessarily hold if the hypothesis that f must be strictly
+completely monotonic is removed (consider a constant poten tial function). Furthermore, the conﬁgurations from the last line in Table 1 are not a lways unique. The
+construction in [CGS] builds such a conﬁguration given any g eneralized quadrangle with parameters ( q, q 2). For q ≤ 3 such quadrangles are unique (see Section 9
+in [CGS]), as are the spherical codes derived from them, but f or larger q that is
+not always true. Whenever distinct generalized quadrangle s exist, the construction
+yields distinct spherical codes. In particular, as explain ed in [CGS], one can construct such quadrangles from ovoids in FqP3. When q = 2 k with k odd and k > 1,
+there are at least two distinct ovoids, namely the elliptic q uadric ovoid and the
+Suzuki-Tits ovoid (see [T]). They yield distinct generaliz ed quadrangles and thus
+distinct universally optimal spherical codes.
+To illustrate the techniques used to prove Theorem 1.2, in th is section we will
+prove the simplest possible case, namely when |C| ≤ n + 1 (in which case C is a
+simplex). The full proof is in Section 6.
+Proof of special case. Let N = |C|, and suppose N ≤ n + 1. Then C is a regular
+simplex with inner product − 1/ (N − 1) between distinct points, so the squared
+Euclidean distance between distinct points is 2 + 2 / (N − 1) (because |x − y|2 =
+2 − 2⟨x, y ⟩ when |x|2 = |y|2 = 1). For this special case, we only require f to be
+decreasing and convex, rather than completely monotonic.
+Let
+h(x) = f
+(
+2 + 2/ (N − 1)
+)
++ f ′(
+2 + 2/ (N − 1)
+)(
+x − (2 + 2/ (N − 1))
+)
+,
+so h is the tangent line to f at 2 + 2 / (N − 1). Because f is convex, f (x) ≥ h(x)
+for all x ∈ (0, 4], and if f is strictly convex, then equality holds if and only if
+x = 2 + 2 / (N − 1).
+Suppose C′ is any subset of Sn− 1 with |C′|= N . Then
+∑
+x,y ∈C ′,x ̸=y
+f
+(
+|x − y|2)
+≥
+∑
+x,y ∈C ′,x ̸=y
+h
+(
+|x − y|2)
+,
+UNIVERSALLY OPTIMAL DISTRIBUTION OF POINTS ON SPHERES 105
+and the right side equals
+N (N − 1)f
+(
+2 + 2/ (N − 1)
+)
+− (2 + 2/ (N − 1))N (N − 1)f ′(
+2 + 2/ (N − 1)
+)
++ f ′(
+2 + 2/ (N − 1)
+) ∑
+x,y ∈C ′
+|x − y|2.
+We have ∑
+x,y ∈C ′
+|x − y|2 =
+∑
+x,y ∈C ′
+(
+2 − 2⟨x, y ⟩
+)
+= 2 N 2 − 2
+⏐
+⏐
+⏐
+⏐
+⏐
+∑
+x∈C ′
+x
+⏐
+⏐
+⏐
+⏐
+⏐
+2
+≤ 2N 2.
+Because f ′(
+2 + 2/ (N − 1)
+)
+≤ 0, we ﬁnd that the potential energy of C′ is at least
+N (N − 1)f
+(
+2 + 2/ (N − 1)
+)
+− (2 + 2/ (N − 1))N (N − 1)f ′(
+2 + 2/ (N − 1)
+)
++ 2N 2f ′(
+2 + 2/ (N − 1)
+)
+,
+which equals
+N (N − 1)f
+(
+2 + 2/ (N − 1)
+)
+.
+That is the potential energy of C, so we have proved that
+∑
+x,y ∈C ′,x ̸=y
+f
+(
+|x − y|2)
+≥
+∑
+x,y ∈C ,x ̸=y
+f
+(
+|x − y|2)
+.
+When f is strictly convex, equality holds only if |x − y|2 = 2 + 2 / (N − 1) for all
+x, y ∈ C ′ with x ̸= y, in which case C′ is a regular simplex. □
+We use the term universal optimality to describe the conclusion of Theorem 1.2:
+Deﬁnition 1.3. A ﬁnite subset C ⊂ Sn− 1 is universally optimal if it (weakly)
+minimizes potential energy among all conﬁgurations of |C|points on Sn− 1 for each
+completely monotonic potential function.
+As the name suggests, every universally optimal spherical c ode is indeed an
+optimal spherical code, in the sense of maximizing the minim al distance between
+points. For the potential function f (r) = 1 /r s, the leading term in the large- s
+asymptotics of the potential energy comes from the minimal d istance. If there were
+a spherical code with the same number of points but a larger mi nimal distance,
+then it would have lower potential energy when s is suﬃciently large.
+As we mentioned above, the optimality of sharp conﬁguration s as spherical codes
+is not new. Levenshtein proved in [Lev2] that every sharp con ﬁguration is a maximal
+spherical code, by using linear programming bounds. For the E8 and Leech minimal
+vectors, this amounts to the solution of the kissing problem by Levenshtein and
+independently by Odlyzko and Sloane in [Lev1, OS]; see [Lev3 ] for an overview of
+the other cases, except for the 600-cell, for which optimali ty follows from the bound
+in [B˝ o] (see also [An3] and [El] for a solution using linear p rogramming bounds).
+Our theorem can thus be viewed as a continuum of optimality re sults connecting
+the kissing problem and Levenshtein’s theorem to the result s of [KY1] and [An2].
+106 HENRY COHN AND ABHINA V KUMAR
+Certain other known optimality results can also be derived. For example, [KY1]
+and [An2] prove that the E8 and Leech minimal vectors maximize the sum of the
+distances between pairs of points. That is the case f (r) = 2 − r1/ 2 in Theorem 1.2.
+Similarly, taking f (r) = log(4 /r ) shows that sharp conﬁgurations maximize the
+product of the distances between pairs of distinct points.
+When testing whether a conﬁguration is universally optimal , it is helpful to be
+able to restrict to a smaller class of potential functions. T heorem 9b in [Wid, p. 154]
+implies that on each compact subinterval of (0 , 4], every completely monotonic function on (0 , 4] can be approximated uniformly by nonnegative linear comb inations
+of the functions r ↦→ (4 − r)k with k ∈ {0, 1, 2, . . . }. For example,
+1
+rs =
+∑
+k≥ 0
+(s + k − 1
+k
+) (4 − r)k
+4k+s .
+Thus, a conﬁguration is universally optimal if and only if it is optimal for each of
+the potential functions f (r) = (4 − r)k.
+The conclusion of optimality under all completely monotoni c potential functions
+is quite strong, and computer experiments suggest that it is rarely true in other
+cases. For example, it provably fails in the case of ﬁve point s on S2. Sch¨ utte and
+van der Waerden proved in [SchW] that the minimal angle in suc h a code cannot
+be greater than π/ 2. Their analysis shows that all optimal codes consist of a pa ir of
+antipodal points with three points on the orthogonal plane. Among such codes, the
+only one that could be universally optimal is the one in which the three points form
+an equilateral triangle. However, when f (r) = (4 − r)7, there is a conﬁguration with
+lower energy: take a single point together with four points e quidistant from it and
+forming a square in the opposite hemisphere (the size of the s quare is chosen so as
+to minimize energy). Thus, the only candidate for a ﬁve-poin t universal optimum
+is not universally optimal. Furthermore, it is not even a loc al minimum for energy
+when f (r) = (4 − r)k with k suﬃciently large or f (r) = 1 /r s with s suﬃciently
+large.
+Leech proved a far stronger theorem in [Lee]. He classiﬁed th e conﬁgurations
+on S2 that are in equilibrium under all force laws, which is a neces sary but not
+suﬃcient condition for universal optimality. His theorem i mplies that there are no
+universal optima in R3 beyond those in Table 1, by ruling out all cases except for
+ﬁve points (see [Lee, p. 89]). We conjecture that for each n ≥ 3 there are only
+ﬁnitely many universal optima in Rn, but we cannot prove it even for n = 4.
+We do not know of any other spherical codes that could be added to Table 1, but
+some may well exist. One surprising case in which universal o ptimality fails is the
+vertices of the regular 24-cell on S3 (equivalently, the D4 root system). It is not a
+sharp conﬁguration, because it has four inner products besi des 1 while it is only a
+spherical 5-design, but one might still hope that it would be universally optimal. It
+appears to be optimal for many inverse power law potentials, but even this weaker
+conclusion is surprisingly subtle: for example, when one si mulates 24 randomly
+chosen points on S3 under the potential function f (r) = 1 /r , more than 90% of the
+time one reaches a local optimum with potential energy 334 . 096 . . . (an algebraic
+number of degree 20), which is only slightly worse than the po tential energy 334 of
+the 24-cell. In other words, there is a suboptimal arrangeme nt with a much larger
+basin of attraction. This arrangement belongs to an explici t one-parameter family
+of conﬁgurations analyzed in [CCEK]. In that paper, some of t hem were shown
+UNIVERSALLY OPTIMAL DISTRIBUTION OF POINTS ON SPHERES 107
+to improve on the 24-cell for certain completely monotonic p otential functions,
+including f (r) = (4 − r)k with 8 ≤ k ≤ 13 and f (r) = e− 3r. The 24-cell is therefore
+not universally optimal.
+The remaining regular polytopes (the cubes in Rn for n ≥ 3, the dodecahedron
+in R3, and the 120-cell in R4) are also not universally optimal, for a less interesting
+reason: they are not even optimal spherical codes. Antipris ms improve on cubes,
+and [Sl] deals with the other two cases. Thus, a full-dimensi onal regular polytope
+is universally optimal if and only if all its faces are simpli ces.
+One might also wonder about the (4 , 10, 1/ 6) code that is the kissing conﬁguration of the universally optimal (5 , 16, 1/ 5) code. It consists of the midpoints of
+the edges of a regular simplex. This code is not universally o ptimal, because for
+the potential functions f (r) = (4 − r)k with 3 ≤ k ≤ 6, arranging two regular pentagons on orthogonal planes yields lower potential energy. For k ≤ 2 their potential
+energies agree; for k ≥ 7, the (4 , 10, 1/ 6) code is superior to the two pentagons,
+but we do not know whether it is optimal in these cases. Note th at the kissing
+conﬁguration of this (4 , 10, 1/ 6) code is a (3 , 6, 1/ 7) code that is not even optimal,
+let alone universally optimal.
+The (4 , 10, 1/ 6) code described above is a spherical 2-design in which only two
+inner products occur between distinct points. It follows th at replacing the bound
+2m − 1 with 2 m − 2 in Deﬁnition 1.1 would make Theorem 1.2 false.
+Probably the (21 , 336, 1/ 5) kissing conﬁguration of the (22 , 891, 1/ 4) code is not
+universally optimal, but in this case we do not know a better c onﬁguration. We
+also do not know whether universal optimality holds for the ( 20, 105, 1/ 8) kissing
+conﬁguration of the (21 , 162, 1/ 7) code or the (21 , 77, 1/ 12) kissing conﬁguration of
+the (22 , 100, 1/ 11) code. These conﬁgurations are not sharp, so Theorem 1.2 d oes
+not apply.
+We do not know whether there exist universally optimal spher ical codes whose
+universal optimality cannot be proved by our methods. It see ms likely that such
+codes exist, but we have no candidates to propose.
+Another important question not addressed by our methods is w hether there are
+other local minima for potential energy in the cases listed i n Table 1. In certain
+special cases the existence of other minima is trivial; for e xample, for f (r) = 4 − r,
+a conﬁguration minimizes potential energy if and only if its centroid is the origin, so
+there is a positive-dimensional space of global minima (whe n N > 3). In general,
+that is true for f (r) = (4 − r)k if k is small relative to the number of points in
+the conﬁguration. (It was proved in [SZ] that spherical k-designs exist on Sn− 1 for
+all suﬃciently large numbers of points. Spherical k-designs automatically minimize
+energy for f (r) = (4 − r)k, and because the set of such designs is closed under
+rotation and taking unions they exist in positive-dimensio nal families once the
+number of points is large enough.) For suﬃciently large k or for inverse power
+laws, the set of local minima appears to be ﬁnite, but sometim es there are several.
+When the number of points is large, there can be vast numbers o f local minima.
+For example, experiments suggest that for 120 points on S3 under the harmonic
+power law potential, there are more than ﬁve thousand distin ct local minima, and
+perhaps far more than that.
+It is natural to ask whether the requirement of complete mono tonicity could be
+weakened. For example, regular simplices are optimal for al l decreasing, convex
+potential functions, although not for all decreasing poten tial functions. That does
+108 HENRY COHN AND ABHINA V KUMAR
+not always hold. Speciﬁcally, the icosahedron is not even a l ocal minimum for
+the decreasing, convex potential function f (r) = r3 − 48r + 128, but rather a
+saddle point. One can show using Proposition 4.1 that the glo bal minimum for
+twelve points in R3 is obtained degenerately by letting them coincide in triple s at
+the vertices of a tetrahedron. More generally, repeating th e vertices of a regular
+simplex in Rn is optimal whenever the number of points is a multiple of n + 1. This
+potential function therefore behaves quite diﬀerently fro m completely monotonic
+potential functions.
+The potential function f (r) = r3 − 48r + 128 from the previous paragraph is
+convex, but r ↦→ f (r2) is not (so the potential energy is not convex as a function of
+distance, as opposed to distance squared). At the cost of sli ghtly greater complexity
+one can obtain that stronger property: if f (r) = r7 − 7 ·214 ·√
+r + 13 ·214, then
+r ↦→ f (r2) is decreasing and convex, as is f , but the icosahedron is not a local
+minimum for potential energy.
+Although it is not enough to assume that the potential functi on is decreasing
+and convex, in each case only ﬁnitely many derivative condit ions are needed. For
+each sharp conﬁguration, our methods produce an explicit bo und K such that
+optimality holds for a potential function f ∈ CK((0, 4]) whenever ( − 1)kf (k)(r) ≥ 0
+for all r ∈ (0, 4] and k ≤ K. We will not discuss this issue further, but it is worth
+recording the result: for a sharp conﬁguration with m inner products between
+distinct points, we can take K = 2 m; furthermore, if ( − 1)kf (k)(r) > 0 for all
+r ∈ (0, 4) and k ≤ 2m, then every conﬁguration of the same size and dimension
+with this potential energy is sharp (and the same distances o ccur between points
+in it as in the original conﬁguration). For antipodal conﬁgu rations a more reﬁned
+construction can be used to reduce both of these bounds by 1, b ut it is implausible
+that they could be substantially reduced using our methods.
+We conclude the introduction with one negative result in arb itrary dimensions,
+namely that there are no universal optima in between the simp lex and cross polytope:
+Proposition 1.4. If n + 1 < N < 2n, then there is no N -point universally optimal
+conﬁguration on Sn− 1.
+Proof. An optimal code of this size has the following structure (see , for example,
+Theorem 6.2.1 in [B˝ oJr] and the remark following it). There are N − n pairwise
+orthogonal subspaces of Rn whose span is Rn, each containing d + 1 points of
+the code if its dimension is d. If the code is universally optimal, then each of
+these subspaces must contain a regular simplex: because of o rthogonality, distances
+between points in diﬀerent subspaces are constant, so withi n each subspace we must
+have a universally optimal code. For the same reason, every u nion of some of the
+component simplices must be universally optimal as well. Th us, without loss of
+generality we can assume that N = n + 2. We can also assume that n ≥ 4 because
+the case of n = 3 and N = 5 was dealt with earlier in this section.
+Suppose the two regular simplices have i + 1 and n − i + 1 points. For the
+potential function f (r) = (4 − r)k, the energy of the conﬁguration equals
+i(i + 1)
+(
+2 − 2
+i
+) k
++ (n − i)(n − i + 1)
+(
+2 − 2
+n − i
+) k
++ (i + 1)(n − i + 1)2k+1.
+For k = 2 that equals 4 n(n + 1) − 4n/
+(
+i(n − i)
+)
+, from which it follows that the
+potential energy is minimized exactly when i = ⌊n/ 2⌋ or i = ⌈n/ 2⌉. As k → ∞ ,
+UNIVERSALLY OPTIMAL DISTRIBUTION OF POINTS ON SPHERES 109
+the energy is asymptotic to ( i + 1)(n − i + 1)2k+1, which is minimized exactly when
+i = 1 or i = n − 1 (and hence not at i = ⌊n/ 2⌋ or i = ⌈n/ 2⌉, because n ≥ 4). Thus,
+universal optimality fails, as asserted. □
+2. Background
+In this section we brieﬂy review the tools required for the pr oof of Theorem 1.2.
+2.1. Hermite interpolation. Recall that Hermite interpolation is a generalization of Lagrange interpolation in which one computes a polyn omial that matches
+not only the values but also some derivatives of a function at some speciﬁed points.
+More precisely, suppose we are given f ∈ C∞ ([a, b ]), distinct points t1, . . . , t m ∈
+[a, b ], and positive integers k1, . . . , k m. We wish to ﬁnd a polynomial of degree less
+than D = k1 + k2 + · · ·+ km such that for 1 ≤ i ≤ m and 0 ≤ k < k i,
+p(k)(ti) = f (k)(ti).
+In other words, p and f agree to order ki at ti. A unique such polynomial always
+exists, because the linear map that takes a polynomial p of degree less than D to
+(
+p(t1), p ′(t1), . . . , p (k1− 1)(t1), p (t2), p ′(t2), . . . , p (km− 1)(tm)
+)
+is injective (and hence surjective as well).
+One fundamental fact about Hermite interpolation is the fol lowing remainder
+formula (see Theorem 3.5.1 in [D, p. 68]):
+Lemma 2.1. Under the hypotheses above, for each t ∈ [a, b ] there exists ξ ∈ (a, b )
+such that min(t, t 1, . . . , t m) < ξ < max(t, t 1, . . . , t m) and
+f (t) − p(t) = f (D)(ξ )
+D! (t − t1)k1 . . . (t − tm)km .
+Because the standard proof is short, we reproduce it here for the convenience of
+the reader:
+Proof. Let
+g(t) = f (t) − p(t)
+(t − t1)k1 . . . (t − tm)km
+.
+For ﬁxed t ∈ [a, b ] \ {t1, . . . , t m} (the lemma is trivial for t ∈ {t1, . . . , t m}), consider
+the function
+s ↦→ f (s) − p(s) − g(t)(s − t1)k1 . . . (s − tm)km .
+By construction, for each i it vanishes at ti to order ki, and it also vanishes at t, so
+it has D + 1 roots in the interval
+[min(t, t 1, . . . , t m), max(t, t 1, . . . , t m)].
+By iterated use of Rolle’s theorem, there exists ξ in the interior of this interval at
+which the D-th derivative vanishes. At that point,
+f (D)(ξ ) − g(t)D! = 0 ,
+which gives the desired formula for g(t). □
+110 HENRY COHN AND ABHINA V KUMAR
+This formula will play a fundamental role later in the paper, but we will also need
+a stronger result. Recall that a function is absolutely monotonic on an interval if it is
+C∞ and it and all its derivatives are nonnegative on that interv al (see [Wid, p. 144]).
+Unfortunately, the terms “completely monotonic” and “abso lutely monotonic” are
+easy to confuse, but they are standard terms. As a mnemonic, a ssociate “absolutely
+monotonic” with “absolute value” to remember which one has n o signs. We call a
+function strictly absolutely monotonic on an interval if it and all its derivatives are
+nonnegative on the interval and strictly positive on its int erior.
+Proposition 2.2. Under the hypotheses above, suppose further that f is absolutely
+monotonic on (a, b ). Then
+f (t) − p(t)
+(t − t1)k1 . . . (t − tm)km
+is also absolutely monotonic on (a, b ). If f is strictly absolutely monotonic, then
+f (t) − p(t)
+(t − t1)k1 . . . (t − tm)km
+is as well.
+Of course, when we write quotients such as this one, we deﬁne t hem by continuity
+when t = ti for some i so that they become C∞ functions. It seems plausible that
+Proposition 2.2 is known, but we do not know where to ﬁnd it in t he literature.
+The hypothesis that t1, . . . , t m lie in the interval [ a, b ] is crucial (it is part of the
+setup above, but it is worth reiterating it here).
+Before proving Proposition 2.2, it is convenient to introdu ce systematic notation
+for Hermite interpolations. Given a polynomial g with deg( g) ≥ 1, let H(f, g )
+denote the polynomial of degree less than deg( g) that agrees with f at each root
+of g to the order of that root. (If f is a polynomial, then H(f, g ) is its remainder
+modulo g in polynomial division.) In other words, if g(t) vanishes to order k at
+t = s, then
+f (t) − H(f, g )(t) = O
+(
+(t − s)k)
+as t → s. It follows that the function Q(f, g ) deﬁned by
+Q(f, g )(t) = f (t) − H(f, g )(t)
+g(t)
+extends to a C∞ function at the roots of g. Proposition 2.2 is the assertion that if
+g(t) = ( t − t1)k1 . . . (t − tm)km , then Q(f, g ) is absolutely monotonic.
+Proof. The proof rests on two key properties. The ﬁrst is that
+Q(f, g 1g2) = Q(Q(f, g 1), g 2),
+which follows from the uniqueness of the Hermite interpolat ion:
+Q(Q(f, g 1), g 2) = f − H(f, g 1) − g1H(Q(f, g 1), g 2)
+g1g2
+,
+but H(f, g 1g2) is the unique polynomial of degree less than deg( g1) + deg( g2)
+such that ( f − H(f, g 1g2))/ (g1g2) extends to a C∞ function everywhere. Thus,
+H(f, g 1g2) = H(f, g 1) + g1H(Q(f, g 1), g 2) and Q(f, g 1g2) = Q(Q(f, g 1), g 2).
+The second property is that if g0(t) = ( t − s0)n, then
+Q(f, g 0)(s0) = f (n)(s0)
+n! .
+UNIVERSALLY OPTIMAL DISTRIBUTION OF POINTS ON SPHERES 111
+This follows immediately from the Taylor expansion.
+We must show that for n ≥ 0 and t ∈ (a, b ),
+Q(f, g )(n)(t) ≥ 0.
+When n = 0, that follows from Lemma 2.1, which asserts the existence of ξ ∈ (a, b )
+(depending on t) such that
+Q(f, g )(t) = f (deg(g))(ξ )
+deg(g)! ≥ 0.
+For larger n, given s0 ∈ (a, b ), deﬁne g0(t) = ( t − s0)n. Then
+Q(f, g )(n)(s0)
+n! = Q(Q(f, g ), g 0)(s0) = Q(f, gg 0)(s0) ≥ 0.
+This completes the proof when f is absolutely monotonic. The case of strictly
+absolutely monotonic functions works exactly the same way. □
+It follows immediately from continuity that the statement o f Proposition 2.2 also
+holds when the open interval ( a, b ) is replaced with a half-open or closed interval.
+2.2. Positive-deﬁnite kernels. A continuous function K : Sn− 1 × Sn− 1 → R is a
+positive-deﬁnite kernel if for all k and all x1, . . . , x k ∈ Sn− 1, the k × k matrix whose
+i, j entry is K(xi, x j) is positive semideﬁnite. In other words, for all t1, . . . , t k ∈ R,
+∑
+1≤ i,j ≤ k
+titjK(xi, x j ) ≥ 0.
+The most important special case is when t1 = · · ·= tk = 1: for every ﬁnite subset
+C ⊂ Sn− 1, ∑
+x,y ∈C
+K(x, y ) ≥ 0.
+Positive-deﬁnite kernels K such that K(x, y ) depends only on the distance |x− y|
+between x and y will be particularly important. There is a simple represent ationtheoretic construction of such kernels, which Schoenberg p roved gives all of them
+(see [Sch]). As a unitary representation of O(n), the Hilbert space L2(Sn− 1) breaks
+up as a completed orthogonal direct sum of inﬁnitely many ﬁni te-dimensional representations:
+L2(Sn− 1) = ˆ⨁
+ℓ ≥ 0
+Vℓ ,
+where Vℓ is the space of spherical harmonics of degree ℓ (i.e., restrictions to Sn− 1 of
+homogeneous polynomials on Rn of degree ℓ that are in the kernel of the Euclidean
+Laplacian). Note that spherical harmonics of diﬀerent degr ees are orthogonal, which
+will play a useful role later. It is also important to know tha t every polynomial on
+Rn has the same restriction to Sn− 1 as some unique linear combination of spherical
+harmonics. For more details on spherical harmonics, see §2 of Chapter IV in [StW].
+For each ℓ ≥ 0 and each x ∈ Sn− 1, there is a unique reproducing kernel evℓ,x ∈ Vℓ ,
+deﬁned by requiring that for all f ∈ Vℓ ,
+⟨f, evℓ,x ⟩ = f (x).
+112 HENRY COHN AND ABHINA V KUMAR
+(We use Hermitian forms that are conjugate-linear in the sec ond variable.) To
+construct ev ℓ,x explicitly, choose an orthonormal basis eℓ, 1, . . . , e ℓ, dim Vℓ of Vℓ and
+deﬁne
+evℓ,x (y) =
+eℓ, 1(x)eℓ, 1(y) + · · ·+ eℓ, dim Vℓ (x)eℓ, dim Vℓ (y).
+Deﬁne the function Kℓ : Sn− 1 × Sn− 1 → C by
+Kℓ (x, y ) = ⟨evℓ,x , evℓ,y ⟩ = ev ℓ,x (y).
+It is straightforward to check that ev ℓ,Ax = ev ℓ,x ◦A− 1 for A ∈ O(n). Because
+O(n) acts distance-transitively on Sn− 1 (i.e., if |u − v|= |x − y|, then there exists
+A ∈ O(n) such that Au = x and Av = y), Kℓ (x, y ) depends only on the distance
+between x and y. That implies that it is real-valued, since
+Kℓ (x, y ) = Kℓ (y, x )
+follows immediately from the deﬁnition while Kℓ (x, y ) = Kℓ (y, x ) since |x − y|=
+|y − x|.
+The key property of Kℓ is that it is a positive-deﬁnite kernel:
+∑
+1≤ i,j ≤ k
+titjKℓ (xi, x j) =
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+∑
+1≤ i≤ k
+ti evℓ,x i
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+2
+≥ 0.
+All convergent nonnegative inﬁnite linear combinations of these functions are still
+positive-deﬁnite kernels, and Schoenberg proved that thos e are the only continuous
+positive-deﬁnite kernels that depend only on the distance b etween points.
+One can compute Kℓ explicitly. Because Kℓ (x, y ) depends only on the distance
+between x and y, we can write Kℓ (x, y ) = Cℓ (⟨x, y ⟩) for some function Cℓ . To
+compute Cℓ , we use the orthogonality between spherical harmonics of di ﬀerent
+degrees. If we ﬁx a point on the sphere and project orthogonal ly onto the line
+through the origin and that point, then the surface measure o n the sphere projects
+to a constant times the measure
+(1 − t2)(n− 3)/ 2 dt
+on the interval [ − 1, 1], and the orthogonality property amounts to saying that
+C0, C 1, . . . are orthogonal polynomials with respect to that measure, wi th Ci having
+degree i. That determines these functions up to multiplication by a p ositive scalar
+(positive because Ci(1) > 0), and pinning down that factor is irrelevant for our
+purposes.
+These orthogonal polynomials are known as the ultraspheric al (or Gegenbauer)
+polynomials. The standard notation is Cλ
+i (t) for the degree i polynomial orthogonal
+with respect to (1 − t2)λ − 1/ 2 dt on [− 1, 1] (for Sn− 1, λ = n/ 2− 1). These polynomials
+are normalized so that Cλ
+0 (t) = 1 and Cλ
+1 (t) = 2 λt , and they satisfy the recurrence
+iC λ
+i (t) = 2( i + λ − 1)tCλ
+i− 1(t) − (i + 2λ − 2)Cλ
+i− 2(t)
+for i ≥ 2. See [AAR, p. 303] for more details on ultraspherical polyn omials, as
+well as Chapter 9 of [AAR] for spherical harmonics. We always assume λ ≥ 0
+(equivalently, n ≥ 2), because the one-dimensional case is trivial and its ultr aspherical polynomials are poorly normalized: above degree 0 they have negative
+leading coeﬃcients, and C− 1/ 2
+1 is not a positive-deﬁnite kernel.
+Whenever we refer to the ultraspherical coeﬃcients of a function, we mean its
+coeﬃcients in terms of ultraspherical polynomials (where t he parameter λ is implicit
+UNIVERSALLY OPTIMAL DISTRIBUTION OF POINTS ON SPHERES 113
+in the context). A positive-deﬁnite function will be a function whose ultraspherical
+coeﬃcients are nonnegative.
+One fundamental fact about positive-deﬁnite functions is t hat they are closed
+under taking products. Equivalently, the product of two ult raspherical polynomials
+is a nonnegative linear combination of ultraspherical poly nomials (for λ ≥ 0). By
+orthogonality, proving that amounts to showing that
+∫ 1
+− 1
+Ci(t)Cj (t)Ck(t) (1 − t2)(n− 3)/ 2dt ≥ 0 (2.1)
+for all i, j, k ≥ 0. Let µ denote the surface measure on Sn− 1. Then using the
+expansion
+Kℓ (x, y ) =
+dim Vℓ∑
+m=1
+eℓ,m (x)eℓ,m (y)
+in terms of a choice of orthonormal basis eℓ, 1, . . . , e ℓ, dim Vℓ for each Vℓ shows that
+(2.1) holds if and only if
+dim Vi∑
+a=1
+dim Vj∑
+b=1
+dim Vk∑
+c=1
+∫
+ei,a (x)ej,b (x)ek,c (x) dµ (x)
+ei,a (y) ej,b (y) ek,c (y) ≥ 0
+for some (equivalently, all) y ∈ Sn− 1. Integrating over y yields
+dim Vi∑
+a=1
+dim Vj∑
+b=1
+dim Vk∑
+c=1
+⏐
+⏐
+⏐
+⏐
+∫
+ei,a (x)ej,b (x)ek,c (x) dµ (x)
+⏐
+⏐
+⏐
+⏐
+2
+,
+which is visibly nonnegative.
+This result also follows from the Schur product theorem: the set of positive
+semideﬁnite matrices of a given size is closed under taking H adamard products
+(i.e., taking the product entry by entry). See Theorem 7.5.3 in [HJ, p. 458]. That
+approach leads to the proof of Schoenberg’s characterizati on of positive-deﬁnite
+kernels. Suppose ( x, y ) ↦→ f (⟨x, y ⟩) is a positive-deﬁnite kernel. By the Schur
+product theorem, the same is true for ( x, y ) ↦→ f (⟨x, y ⟩)Ci(⟨x, y ⟩) for each i. It
+follows that the integral of this function over ( x, y ) ∈ Sn− 1 × Sn− 1 is nonnegative,
+and hence for ﬁxed y the integral over x ∈ Sn− 1 is nonnegative (because it is
+independent of y). In other words, the i-th ultraspherical coeﬃcient of f must be
+nonnegative.
+We call a polynomial strictly positive deﬁnite if all its ultraspherical coeﬃcients
+are strictly positive (up to its degree, of course). The prod uct of strictly positivedeﬁnite polynomials is strictly positive deﬁnite; the proo f rests on the fact that
+in the expansion of Cλ
+i Cλ
+j , the coeﬃcient of Cλ
+i+j is positive (because all these
+polynomials have positive leading coeﬃcients).
+One useful application of ultraspherical polynomials is th e following simple test
+for spherical design strength (Theorem 5.5 in [DGS]): a conﬁ guration C ⊂ Sn− 1 is
+a spherical M -design if and only if
+∑
+x,y ∈C
+Cn/ 2− 1
+i (⟨x, y ⟩) = 0 (2.2)
+for 1 ≤ i ≤ M . That property depends only on the distance distribution of C (i.e,
+which distances occur between points in C and the multiplicities of those distances).
+114 HENRY COHN AND ABHINA V KUMAR
+To prove this characterization of designs, observe that the identity
+∑
+x,y ∈C
+Cn/ 2− 1
+i (⟨x, y ⟩) =
+∑
+x,y ∈C
+⟨evi,x , evi,y ⟩ =
+⏐
+⏐
+⏐
+⏐
+⏐
+∑
+x∈C
+evi,x
+⏐
+⏐
+⏐
+⏐
+⏐
+2
+shows that (2.2) holds if and only if all of the degree i spherical harmonics sum to
+zero over C.
+3. Orthogonal polynomials
+The proof of Theorem 1.2 involves expansions as nonnegative linear combinations of orthogonal polynomials. In this section we prove a t heorem about such
+expansions that will play a fundamental role later in the pap er. We prove it in
+greater generality than is required for Theorem 1.2, becaus e it is no more diﬃcult
+and the proof is of independent interest.
+Let µ be any Borel measure on R such that all polynomials are integrable with
+respect to µ and for all polynomials p,
+∫
+p(t)2 dµ (t) > 0
+if p is not identically zero. Equivalently, for all polynomials p such that p(t) ≥ 0
+for all t but p is not identically zero,
+∫
+p(t) dµ (t) > 0.
+(Every such polynomial is a sum of two squares of polynomials ; see for example
+Problem 44 in Part VI of [PS] and its solution.)
+Let p0, p 1, . . . be the monic orthogonal polynomials for µ , with deg( pi) = i. In
+other words, for i ̸= j ∫
+pi(t)pj(t) dµ (t) = 0 .
+It is known that for each α ∈ R, the polynomial pn + αp n− 1 has n distinct real
+roots, which are interlaced with the roots of pn− 1 (see Theorem 3.3.4 in [Sz]).
+Theorem 3.1. Let α be any real number, and let
+r1 < r 2 < · · ·< r n
+be the roots of pn + αp n− 1. Then for k < n ,
+k∏
+i=1
+(t − ri)
+has positive coeﬃcients in terms of p0(t), p 1(t), . . . , p k(t).
+The proof is conceptually simple, but it involves some techn icalities. We begin
+with the simplest case, namely k = n − 1:
+Proposition 3.2. Let α be any real number, and let r be the largest root of pn +
+αp n− 1. Then
+pn(t) + αp n− 1(t)
+t − r
+has positive coeﬃcients in terms of p0(t), p 1(t), . . . , p n− 1(t).
+UNIVERSALLY OPTIMAL DISTRIBUTION OF POINTS ON SPHERES 115
+Proposition 3.2 follows from the Christoﬀel-Darboux formu la (Theorem 5.2.4 in
+[AAR]), but we prove it directly to illustrate the technique we will apply to the
+general case.
+Proof. Deﬁne c0, . . . , c n− 1 so that
+pn(t) + αp n− 1(t)
+t − r =
+n− 1∑
+ℓ =0
+cℓ pℓ (t).
+For ℓ ≤ n − 1, it follows from orthogonality that
+∫
+(pn(t) + αp n− 1(t)) pℓ (t) − pℓ (r)
+t − r dµ (t) = 0 ,
+because
+pℓ (t) − pℓ (r)
+t − r
+is a polynomial of degree ℓ − 1 and hence orthogonal to both pn(t) and pn− 1(t).
+Thus,
+∫ pn(t) + αp n− 1(t)
+t − r pℓ (t) dµ (t) = pℓ (r)
+∫ pn(t) + αp n− 1(t)
+t − r dµ (t).
+In terms of the coeﬃcients c0, . . . , c n− 1,
+cℓ
+∫
+pℓ (t)2 dµ (t) = c0pℓ (r)
+∫
+dµ (t).
+Because the roots of pn + αp n− 1 and pn− 1 are interlaced, r is greater than
+the largest root of pn− 1 and hence greater than the largest root of pℓ . It follows
+that pℓ (r) > 0, and thus c0, . . . , c n− 1 all have the same sign. Comparing leading
+coeﬃcients shows that cn− 1 = 1, so every coeﬃcient must be positive. □
+There is a natural generalization of this proof to the case of arbitrary k in
+Theorem 3.1. The key idea is to use orthogonality with respec t to a signed measure,
+because for k < n ,
+k∏
+i=1
+(t − ri)
+is the monic orthogonal polynomial of degree k for the signed measure
+(t − rk+1) . . . (t − rn) dµ (t),
+assuming there is a unique such polynomial, as we prove below in Lemma 3.5 and
+Lemma 3.7. To verify that, we simply need to show that it is ort hogonal to all
+polynomials of degree less than k, which is equivalent with the orthogonality of
+pn(t) + αp n− 1(t) to all such polynomials with respect to dµ (t). (For k = n the
+conclusion is false unless α = 0.) More generally, we have the following lemma:
+Lemma 3.3. Suppose ν is a signed measure that has monic orthogonal polynomials
+q0, q 1, . . . , q N +1, where deg(qi) = i. For i ≤ N , if qi(r) ̸= 0 and (t − r) dν (t) has a
+unique degree i monic orthogonal polynomial, then it equals
+qi+1(t) + α iqi(t)
+t − r ,
+where α i is chosen so that qi+1(r) + α iqi(r) = 0 .
+116 HENRY COHN AND ABHINA V KUMAR
+Proof. The orthogonality of this polynomial with respect to ( t − r) dν (t) amounts
+to the orthogonality with respect to dν (t) of qi+1(t) + α iqi(t) to all polynomials of
+degree at most i − 1. □
+One might hope to imitate the proof of Proposition 3.2 as one r emoves successive
+roots of pn + αp n− 1. In fact, this approach works, but it is not obvious that it
+works, because of a fundamental technical diﬃculty. As soon as one introduces
+linear factors such as t − r into the measure, it is no longer a positive measure but
+rather a signed measure. Many of the basic properties of orth ogonal polynomials
+fail in the case of a signed measure. Monic orthogonal polyno mials may not exist
+or be unique, and the roots of pi and pi+1 may not be interlaced. In addition, there
+is an even more dramatic problem: the proof of Proposition 3. 2 depends on the
+positivity of ∫
+pℓ (t)2 dµ (t)
+and ∫
+dµ (t),
+neither of which is generally positive for a signed measure.
+Fortunately, the measures that actually arise in the proof w ill be considerably
+better behaved than a typical signed measure. In particular , they will all have the
+following property for some N :
+Deﬁnition 3.4. Let ν be a signed Borel measure on R with respect to which all
+polynomials are integrable. We say ν is positive deﬁnite up to degree N if for all
+polynomials f such that deg( f ) ≤ N ,
+∫
+f (t)2 dν (t) ≥ 0,
+with equality only if f is identically zero.
+If ν is positive deﬁnite up to degree N , then many of the usual properties hold
+for orthogonal polynomials of degrees up to N +1. Lemma 3.5 covers the properties
+we will require.
+Lemma 3.5. Let ν be positive deﬁnite up to degree N . Then there are unique
+monic polynomials q0, q 1, . . . , q N +1 such that deg(qi) = i for each i and
+∫
+qi(t)qj (t) dν (t) = 0
+for i ̸= j. For each i, qi has i distinct real roots, and the roots of qi and qi− 1 are
+interlaced.
+The standard proofs for orthogonal polynomials from Chapte r 5 of [AAR] can
+be adapted, if one uses the trick of writing a nonnegative pol ynomial as a sum of
+two squares. Here we use instead a particularly elegant proo f from [Si, p. 14]:
+Proof. The orthogonal polynomials for ν are obtained by applying Gram-Schmidt
+orthogonalization to 1 , t, . . . , t N +1:
+qi(t) = ti −
+i− 1∑
+j=0
+qj(t)
+∫ siqj(s) dν (s)
+∫
+qj(s)2 dν (s) ,
+UNIVERSALLY OPTIMAL DISTRIBUTION OF POINTS ON SPHERES 117
+which makes sense for i ≤ N + 1 because the norm of qj in the denominator is
+always nonzero. They are unique because the quotients of int egrals are the only
+coeﬃcients in such an expansion that yield orthogonality.
+The next step is to prove the three-term recurrence relation . The polynomial
+qi(t) − tqi− 1(t) is orthogonal to all polynomials of degree less than i − 2, and hence
+there exist constants ai and bi such that
+qi(t) = ( t + ai)qi− 1(t) + biqi− 2(t).
+Multiplying by qi− 2(t) and integrating yields
+bi
+∫
+qi− 2(t)2 dν (t) = −
+∫
+qi− 1(t)tqi− 2(t) dν (t),
+by orthogonality. The polynomials tqi− 2(t) and qi− 1(t) diﬀer by a polynomial of
+degree at most i − 2, and hence
+∫
+qi− 1(t)tqi− 2(t) dν (t) =
+∫
+qi− 1(t)2 dν (t).
+Combining the last two equations shows that bi < 0.
+We now prove by induction that the roots of qi and qi− 1 are real and interlaced.
+The base case of i = 1 is trivial. For the induction step, suppose the roots of qi− 1
+and qi− 2 are real and interlaced. For each root r of qi− 1,
+qi(r) = biqi− 2(r),
+by the three-term recurrence relation. By hypothesis, qi− 2 alternates in sign at the
+roots of qi− 1. Because bi is negative, qi and qi− 2 have opposite signs at the roots of
+qi− 1. That implies that qi must have a root between each pair of consecutive roots
+of qi− 1. Because qi(t) and qi− 2(t) have the same sign when |t|is suﬃciently large,
+qi must also have a root greater than every root of qi− 1 and a root less than every
+root of qi− 1. All i roots of qi are now accounted for, so all the roots of qi are real
+and interlaced with those of qi− 1. That completes the proof. □
+The following minor variant of Gauss-Jacobi quadrature (se e Theorem 5.3.2 in
+[AAR]) will prove crucial for understanding the signed meas ures that arise in our
+proof.
+Lemma 3.6. Let α be any real number, and let
+r1 < r 2 < · · ·< r n
+be the roots of pn + αp n− 1. Then there are positive numbers λ 1, . . . , λ n such that
+for every polynomial f of degree at most 2n − 2,
+∫
+f (t) dµ (t) =
+n∑
+i=1
+λ if (ri).
+Proof. There exist coeﬃcients λ 1, . . . , λ n such that
+∫
+f (t) dµ (t) =
+n∑
+i=1
+λ if (ri)
+whenever deg( f ) < n , because a polynomial of degree less than n is completely
+determined by its values at r1, . . . , r n and the map taking these values to the integral
+is linear.
+118 HENRY COHN AND ABHINA V KUMAR
+For deg(f ) ≤ 2n − 2, there exist polynomials g and h satisfying
+f = (pn + αp n− 1)g + h
+with deg( g) ≤ n − 2 and deg( h) < n. By orthogonality,∫
+f (t) dµ (t) =
+∫
+h(t) dµ (t),
+and f (ri) = h(ri) for each i because pn(ri) +αp n− 1(ri) = 0 by deﬁnition. It follows
+that ∫
+f (t) dµ (t) =
+n∑
+i=1
+λ if (ri)
+holds whenever deg( f ) ≤ 2n − 2.
+All that remains is to prove positivity for the coeﬃcients. F or ﬁxed i, let
+f (t) =
+∏
+j̸=i
+(t − rj)2.
+Then ∫
+f (t) dµ (t) = λ if (ri)2,
+from which it follows that λ i > 0. □
+Let r1 < · · ·< r n be the roots of pn + αp n− 1, and for 0 ≤ j ≤ n deﬁne the
+measure µ j by
+dµ j(t) =
+j− 1∏
+i=0
+(rn− i − t) dµ (t)
+(of course µ 0 = µ ).
+Lemma 3.7. For 0 ≤ j ≤ n − 1, the measure µ j is positive deﬁnite up to degree
+n − j − 1.
+Proof. If deg( f ) ≤ n − 1 − j/ 2, then by Lemma 3.6,
+∫
+f (t)2
+j− 1∏
+i=0
+(rn− i − t) dµ (t) =
+n∑
+i=1
+λ if (ri)2
+j− 1∏
+ℓ =0
+(rn− ℓ − ri) ≥ 0;
+equality holds if and only if f vanishes at r1, . . . , r n− j, which is impossible for a
+polynomial of degree at most n − j − 1 unless it vanishes identically. □
+Let qj,i be the monic orthogonal polynomial of degree i for µ j. (Note that
+q0,i = pi.) The polynomial qj,i is simplest when i = n − j, in which case we have
+qj,n − j(t) = ( t − r1) . . . (t − rn− j),
+as pointed out earlier. That implies that for i < n − j, the largest root of qj,i is less
+than rn− j , because the roots are interlaced.
+Equivalently, for i ≤ n − j, the largest root of qj− 1,i is less than rn− j+1, so
+qj− 1,i (rn− j+1) ̸= 0. Hence Lemma 3.3 implies that for i ≤ n− j, there are constants
+α j,i such that
+qj,i (t) = qj− 1,i +1(t) + α j,i qj− 1,i (t)
+t − rn− j+1
+.
+Lemma 3.8. For 1 ≤ j ≤ n and i ≤ n − j, the polynomial qj,i is a positive linear
+combination of qj− 1, 0, . . . , q j− 1,i .
+UNIVERSALLY OPTIMAL DISTRIBUTION OF POINTS ON SPHERES 119
+Proof. Deﬁne c0, . . . , c i so that
+qj,i (t) =
+i∑
+ℓ =0
+cℓ qj− 1,ℓ (t).
+We argue as in the proof of Proposition 3.2. For ℓ ≤ i,
+∫ (
+qj− 1,i +1(t) + α j,i qj− 1,i (t)
+) qj− 1,ℓ (t) − qj− 1,ℓ (rn− j+1)
+t − rn− j+1
+dµ j− 1(t) = 0 (3.1)
+by orthogonality, because
+qj− 1,ℓ (t) − qj− 1,ℓ (rn− j+1)
+t − rn− j+1
+is a polynomial of degree ℓ − 1, which is less than i. It now follows from
+qj,i (t) = qj− 1,i +1(t) + α j,i qj− 1,i (t)
+t − rn− j+1
+and (3.1) that
+∫
+qj,i (t)qj− 1,ℓ (t) dµ j− 1(t) = qj− 1,ℓ (rn− j+1)
+∫
+qj,i (t) dµ j− 1(t).
+Thus,
+cℓ
+∫
+qj− 1,ℓ (t)2 dµ j− 1(t) = c0qj− 1,ℓ (rn− j+1)
+∫
+dµ j− 1(t).
+Because ℓ ≤ i ≤ n − j, both integrals are positive by Lemma 3.7. The largest root
+of qj− 1,ℓ is less than rn− j+1, so
+qj− 1,ℓ (rn− j+1) > 0.
+Thus, c0, . . . , c i all have the same sign, which is positive because ci = 1. □
+Theorem 3.1 follows from applying Lemma 3.8 repeatedly, sta rting with qk,n − k.
+4. Linear programming bounds
+Theorem 1.2 is deduced from the following proposition, whic h originates in [Y]
+and is the key technique in [Y, KY1, KY2, An1, An2] (here we giv e a somewhat
+diﬀerent proof from the one in [Y], along the lines of [An2]):
+Proposition 4.1. Let f : (0 , 4] → R be any function. Suppose h : [ − 1, 1] → R is a
+polynomial such that
+h(t) ≤ f (2 − 2t)
+for all t ∈ [− 1, 1), and suppose there are nonnegative coeﬃcients α 0, . . . , α d such
+that h has the expansion
+h(t) =
+d∑
+i=0
+α iCn/ 2− 1
+i (t)
+in terms of ultraspherical polynomials. Then every set of N points on Sn− 1 has
+potential energy at least
+N 2α 0 − N h(1)
+with respect to the potential function f .
+120 HENRY COHN AND ABHINA V KUMAR
+Fundamentally, this proposition is a generalization of the linear programming
+bounds for spherical codes due independently to Kabatiansk y and Levenshtein in
+[KL] and Delsarte, Goethals, and Seidel in [DGS] (see also Ch apter 9 in [CS]). As
+is pointed out in [Y], one can derive those bounds for spheric al codes with minimal
+angle θ from Proposition 4.1 by setting
+f (2 − 2t) =
+{
+∞ if t > cos θ , and
+0 otherwise.
+(Of course, f takes values in R ∪ {∞} , but that is not a problem.) The potential
+energy is then 0 for a spherical code with minimal angle at lea st θ and ∞ otherwise;
+Proposition 4.1 implies that no such code can exist if N > h (1)/α 0.
+Choosing the optimal function h amounts to solving an inﬁnite-dimensional
+linear programming problem: the potential energy bound is a linear functional
+of h, and the only restrictions on h are the linear constraints on its values and
+ultraspherical coeﬃcients. As in the case of the traditiona l linear programming
+bounds, it is not hard to approximate the optimum numericall y (by solving a
+ﬁnite-dimensional linear programming problem in which one imposes the constraint
+h(t) ≤ f (2 − 2t) for only ﬁnitely many values of t). Even though the bound is usually not sharp, it is often quite close. For example, for twen ty points on S2 and
+the Coulomb potential function f (r) = 1 /r 1/ 2, the minimal-energy conﬁguration,
+which incidentally is not the vertices of a regular dodecahe dron, appears to have
+potential energy 301 . 763 . . . . The polynomial
+h(t) = 0 . 8729C1/ 2
+0 (t) + 0. 634C1/ 2
+1 (t) + 0. 425C1/ 2
+2 (t) + 0. 258C1/ 2
+3 (t)
++ 0. 135C1/ 2
+4 (t) + 0. 0569C1/ 2
+5 (t) + 0. 016C1/ 2
+6 (t)
+proves a lower bound of 301 . 204. It is not the best possible choice of h, but we have
+found no polynomial that beats 301 . 5.
+What is remarkable is that in the case of the sharp arrangemen ts, for every
+completely monotonic potential function there is an auxili ary function that proves
+a sharp bound, as we show in the proof of Theorem 1.2.
+Proof of Proposition 4.1. Suppose C ⊂ Sn− 1 has cardinality N . By assumption,
+∑
+x,y ∈C ,x ̸=y
+f
+(
+|x − y|2)
+≥
+∑
+x,y ∈C ,x ̸=y
+h(⟨x, y ⟩),
+because |x − y|2 = 2 − 2⟨x, y ⟩. On the other hand,
+∑
+x,y ∈C ,x ̸=y
+h(⟨x, y ⟩) = − N h(1) +
+∑
+x,y ∈C
+h(⟨x, y ⟩)
+= − N h(1) +
+d∑
+i=0
+α i
+∑
+x,y ∈C
+Cn/ 2− 1
+i (⟨x, y ⟩).
+Because Cn/ 2− 1
+i is a positive-deﬁnite kernel (see Subsection 2.2),
+∑
+x,y ∈C
+Cn/ 2− 1
+i (⟨x, y ⟩) ≥ 0.
+UNIVERSALLY OPTIMAL DISTRIBUTION OF POINTS ON SPHERES 121
+It follows that∑
+x,y ∈C ,x ̸=y
+h(⟨x, y ⟩) ≥ − N h(1) + α 0
+∑
+x,y ∈C
+Cn/ 2− 1
+0 (⟨x, y ⟩) = N 2α 0 − N h(1),
+as desired. □
+The bound proved by an auxiliary polynomial h is sharp for a conﬁguration C
+and potential function f if and only if two conditions hold: h(t) must equal f (2− 2t)
+at every inner product t that occurs between distinct points in C, and whenever the
+ultraspherical coeﬃcient α i is positive with i > 0, we must have
+∑
+x,y ∈C
+Cn/ 2− 1
+i (⟨x, y ⟩) = 0 .
+In particular, if h is strictly positive deﬁnite, then C must be a spherical deg( h)design, by Theorem 5.5 in [DGS].
+One can easily generalize Proposition 4.1 to deal with the ca se of unequally
+charged particles (this was pointed out in Theorem 1 of [Y]). Suppose we have N
+real numbers c1, . . . , c N , which we refer to as charges; they must all have the same
+sign. Given a potential function f and an ordered N -tuple (x1, . . . , x N ) ∈ (Sn− 1)N ,
+deﬁne the potential energy to be
+∑
+1≤ i,j ≤ N,i ̸=j
+cicjf
+(
+|xi − xj |2)
+.
+Under the conditions in Proposition 4.1, no such conﬁgurati on can have potential
+energy less than ( N∑
+i=1
+ci
+) 2
+α 0 −
+( N∑
+i=1
+c2
+i
+)
+h(1).
+We know of few beautiful conﬁgurations with unequal charges and none for which
+linear programming bounds are sharp, but they may well exist .
+5. Choosing auxiliary functions
+In this section, we describe an explicit choice for the auxil iary function h in
+Proposition 4.1; it is analogous to the constructions using the Christoﬀel-Darboux
+formula in [KL, MRR W]. We will not require this function late r in the paper,
+but it provides a simple way to apply Proposition 4.1, and the techniques used in
+analyzing it will be important in the proof of Theorem 1.2.
+Let f : (0 , 4] → R be completely monotonic. From the proof of Proposition 4.1 w e
+know that it is more natural to look at a(t) = f (2− 2t), because |x− y|2 = 2 − 2⟨x, y ⟩.
+The function a is absolutely monotonic on [− 1, 1) because f is completely monotonic
+on (0, 4], and a is strictly absolutely monotonic if and only if f is strictly completely
+monotonic.
+Our construction of h requires three inputs: the dimension n − 1 of the sphere
+Sn− 1, a natural number m ≥ 1, and a real number α ≥ 0. Let
+t1 < · · ·< t m
+be the roots of the polynomial Cn/ 2− 1
+m + αC n/ 2− 1
+m− 1 . We require that t1 ≥ − 1
+and thus {t1, . . . , t m} ⊂ [− 1, 1); by Theorem 3.3.4 in [Sz], that amounts to α ≤
+− Cn/ 2− 1
+m (− 1)/C n/ 2− 1
+m− 1 (− 1) (which is positive because Cn/ 2− 1
+i (− 1) has sign ( − 1)i).
+122 HENRY COHN AND ABHINA V KUMAR
+Let h(t) be the Hermite interpolating polynomial that agrees with a(t) to order 2
+at each ti (i.e., h(ti) = a(ti) and h′(ti) = a′(ti)). The idea of constructing auxiliary
+functions via Hermite interpolation originates in [Y].
+Lemma 5.1. For all t ∈ [− 1, 1),
+h(t) ≤ a(t).
+Proof. By Lemma 2.1, there exists a point ξ such that
+min(t, t 1, . . . , t m) < ξ < max(t, t 1, . . . , t m)
+and
+a(t) − h(t) = a(2m)(ξ )
+(2m)! (t − t1)2 . . . (t − tm)2.
+The right side is nonnegative, and hence a(t) ≥ h(t). □
+The last requirement before we can apply Proposition 4.1, na mely that h must
+be a positive-deﬁnite function, is more subtle. Let
+F (t) = Cn/ 2− 1
+m (t) + αC n/ 2− 1
+m− 1 (t) =
+m∏
+i=1
+(t − ti).
+In the notation introduced before Proposition 2.2, h = H(a, F 2). We will show
+that F 2 has a strong property that we refer to as conductivity:
+Deﬁnition 5.2. A nonconstant polynomial g with all its roots in [ − 1, 1) is conductive if for all absolutely monotonic functions a on [ − 1, 1), H(a, g ) is positive
+deﬁnite. It is strictly conductive if it is conductive and for all strictly absolutely
+monotonic a, H(a, g ) is strictly positive deﬁnite of degree deg( g) − 1.
+Lemma 5.3. If g1 and g2 are conductive and g1 is positive deﬁnite, then g1g2
+is conductive. If g1 is conductive and strictly positive deﬁnite and g2 is strictly
+conductive, then g1g2 is strictly conductive.
+Proof. As noted in the proof of Proposition 2.2, for every absolutel y monotonic
+function a on [ − 1, 1),
+H(a, g 1g2) = H(a, g 1) + g1H(Q(a, g 1), g 2).
+The lemma now follows from Proposition 2.2 and the fact that t he set of positivedeﬁnite (or strictly positive-deﬁnite) functions is close d under taking products. □
+For r ∈ [− 1, 1), let ℓ r denote the linear polynomial ℓ r(t) = t − r. Clearly ℓ r is
+conductive, and even strictly conductive if r ̸= − 1, because H(a, ℓ r) is the constant
+polynomial a(r), which is nonnegative. Lemma 5.3 implies that if g is conductive
+and positive deﬁnite, then gℓ r is conductive.
+Consider the partial products
+j∏
+i=1
+(t − ti)
+for j ≤ m. By Theorem 3.1, this product is positive deﬁnite for j < m (even strictly
+positive deﬁnite), and for j = m it is positive deﬁnite because α ≥ 0. It follows
+UNIVERSALLY OPTIMAL DISTRIBUTION OF POINTS ON SPHERES 123
+from Lemma 5.3 and the remarks in the previous paragraph that each product is
+conductive. Thus,
+m∏
+i=1
+(t − ti)
+is conductive, so Lemma 5.3 implies that its square is as well . Because h =
+H(a, F 2), we conclude that h is positive deﬁnite, as desired.
+These auxiliary polynomials are rarely optimal. For exampl e, consider the case
+n = 3, N = 20, and f (r) = 1 /r 1/ 2 that was discussed in Section 4. Numerical
+calculations suggest that the best bound is obtained by taki ng m = 3 and α =
+0. 752718117 . . . (an algebraic number of degree 22). That yields a lower bound of
+299. 708 . . . , which is worse than the bound of 301 . 204 derived in Section 4. However,
+it is reasonably close, especially given how simple and syst ematic the construction
+of h was.
+The connection between our construction and those used in [M RR W] and [KL]
+may not be immediately apparent. Those constructions are eq uivalent to using the
+polynomial
+(t − tm)
+m− 1∏
+i=1
+(t − ti)2
+in the linear programming bounds for spherical codes with mi nimal angle θ satisfying cos θ = tm. The fact that
+m− 1∏
+i=1
+(t − ti)
+is positive deﬁnite is proved in those papers using the Chris toﬀel-Darboux formula.
+Unlike in our construction, α can be arbitrarily large.
+One can generalize the construction from this section as fol lows. Let p0, p 1, . . .
+be any family of orthogonal polynomials such that each is pos itive deﬁnite. Given
+m and α , choose t1, . . . , t m to be the roots of pm + αp m− 1. The construction and
+proof are essentially the same as before. The proof of Theore m 1.2 will be based
+on this approach.
+6. Proof of the main theorem
+Let f : (0 , 4] → R be completely monotonic, deﬁne a(t) = f (2− 2t) as in Section 5,
+and let C ⊂ Sn− 1 be a sharp arrangement with |C|= N . To prove Theorem 1.2,
+we will construct an auxiliary polynomial h that satisﬁes the hypotheses of Proposition 4.1 and proves a sharp bound. The case when C is the set of vertices of the
+600-cell is qualitatively more diﬃcult than the other cases , so for the time being we
+assume that we are in the sharp case. (We deal with the 600-cel l in Section 7.)
+Suppose that the possible inner products that occur between distinct points in
+C are t1, . . . , t m, ordered so that
+− 1 ≤ t1 < · · ·< t m < 1.
+Let h(t) be the Hermite interpolating polynomial that agrees with a(t) to order 2
+at each ti.
+When t1 = − 1, it might seem more natural to interpolate only to ﬁrst orde r at
+that point. The purpose of second-order interpolation is to avoid sign changes in
+h(t) − a(t) when t = ti, and that is not a concern when t = − 1. In fact, ﬁrstorder interpolation works there, but we will omit the detail s here, because the only
+124 HENRY COHN AND ABHINA V KUMAR
+advantage we see in it is that it leads to a slightly improved b ound on the number of
+derivative sign conditions one must impose on the potential function (it decreases
+by 1 the bound K mentioned in Section 1). See Section 8 for the details of that
+approach in a context in which it is more useful.
+Lemma 6.1. For all t ∈ [− 1, 1),
+h(t) ≤ a(t).
+The proof is identical to that of Lemma 5.1. Thus, the ﬁrst hyp othesis of Proposition 4.1 is satisﬁed. What remains to be shown is that h is a positive-deﬁnite
+function and that the bound is sharp. (The bound derived from this function h
+is not sharp for the 600-cell, which is why that case is more su btle and we have
+postponed it until later.)
+The sharpness of the lower bound is simple, because it follow s from the deﬁnition
+of a sharp arrangement that C is a spherical deg( h)-design. Thus,
+∑
+x,y ∈C
+Cn/ 2− 1
+i (⟨x, y ⟩) = 0
+whenever 0 < i ≤ deg(h); in fact, for each ﬁxed y, the polynomial Cn/ 2− 1
+i (⟨x, y ⟩)
+has the same average over C as over the entire sphere Sn− 1, and it integrates
+to 0 over the sphere because it is a positive-degree spherica l harmonic and thus
+orthogonal to the constant functions. Because h agrees with a at the inner products
+t1, . . . , t m from C, the conditions for a sharp bound that were listed after the p roof
+of Proposition 4.1 are satisﬁed.
+The proof that h is positive deﬁnite is analogous to the proof in Section 5, bu t
+it will involve more elaborate lemmas. Deﬁne
+F (t) =
+m∏
+i=1
+(t − ti).
+Then h = H(a, F 2), and we will prove that F 2 is conductive. In fact, we will show
+that F 2 is strictly conductive, which will be important in the proof of uniqueness.
+Lemma 6.2. The function F is strictly positive deﬁnite.
+This lemma is a standard fact in the theory of linear programm ing bounds. We
+prove it as in [El].
+Proof. The leading coeﬃcient of F in terms of powers of t is positive, which implies
+that its leading ultraspherical coeﬃcient is also positive . For the others, we apply
+orthogonality to see that the i-th ultraspherical coeﬃcient of F equals a positive
+constant (depending on i) times
+∫
+Sn− 1
+F (⟨x, y ⟩)Cn/ 2− 1
+i (⟨x, y ⟩) dx,
+where y is an arbitrary point on Sn− 1 and of course dx denotes surface measure on
+Sn− 1. Choose y ∈ C .
+Because we know that the leading ultraspherical coeﬃcient i n F is positive, we
+can take i < deg(F ). Thus, deg( F ) + i ≤ 2 deg(F ) − 1. Because C is a sharp
+UNIVERSALLY OPTIMAL DISTRIBUTION OF POINTS ON SPHERES 125
+conﬁguration, it is a spherical (2 deg( F ) − 1)-design. It follows that the integral
+above equals a positive constant times
+∑
+x∈C
+F (⟨x, y ⟩)Cn/ 2− 1
+i (⟨x, y ⟩).
+By the construction of F , each term in the sum vanishes except for x = y, so the
+sum equals F (1)Cn/ 2− 1
+i (1). Both factors are positive, as desired. □
+In order to deal with the partial products
+j∏
+i=1
+(t − ti),
+we must express F in terms of orthogonal polynomials. Recall that the ultraspherical polynomials Cn/ 2− 1
+i are orthogonal with respect to the measure
+(1 − t2)(n− 3)/ 2 dt
+on [ − 1, 1]. Call that measure dµ (t). Let p0, p 1, . . . denote the monic orthogonal
+polynomials with respect to (1 − t) dµ (t). These polynomials are a special case
+of Jacobi polynomials, but we will require only one fact abou t them: they are
+nonnegative linear combinations of the ultraspherical pol ynomials Cn/ 2− 1
+i . That
+follows from Lemma 3.3 and Proposition 3.2.
+Lemma 6.3. There exists a constant α such that F = pm + αp m− 1.
+Proof. We simply need to show that F is orthogonal to all polynomials of degree at
+most m − 2 with respect to the measure (1 − t) dµ (t). That is equivalent to showing
+that (1 − t)F (t) is orthogonal to all such polynomials with respect to dµ (t).
+Let p be any polynomial of degree at most m − 2. Because C is a sharp conﬁguration, it must be a spherical (2 m − 1)-design. It follows as in the previous proof
+that ∫
+(1 − t)F (t)p(t) dµ (t)
+equals a positive linear combination of
+(1 − t1)F (t1)p(t1), . . . , (1 − tm)F (tm)p(tm), (1 − 1)F (1)p(1).
+Each of these vanishes because F vanishes at t1, . . . , t m. Thus,∫
+F (t)p(t) (1 − t)dµ (t) = 0 ,
+as desired. □
+Combining Lemma 6.3 with Theorem 3.1 shows that for j < m , the polynomial
+j∏
+i=1
+(t − ti)
+is strictly positive deﬁnite, and the case j = m is Lemma 6.2. Now the proof that
+F and F 2 are conductive concludes as in Section 5, by using Lemma 5.3 r epeatedly.
+We must still prove the additional uniqueness results when f is strictly completely monotonic. For that, we use the following lemma:
+Lemma 6.4. If a satisﬁes a(k)(t) > 0 for all k ≥ 0 and t ∈ (− 1, 1), then a(t) − h(t)
+has at most deg(h) + 1 roots in [− 1, 1), counted with multiplicity.
+126 HENRY COHN AND ABHINA V KUMAR
+Proof. By Rolle’s theorem, a(t) − h(t) has at most one more root than a′(t) −
+h′(t). Repeated diﬀerentiation reduces to the case in which deg( h) = 0, which is
+trivial. □
+Thus, the only roots of a(t) − h(t) in [ − 1, 1) are at t = ti for some i. It follows
+from the proof of Proposition 4.1 that if C′ is any other potential energy minimum
+with |C′|= |C|, then all inner products between distinct points of C′ occur among
+t1, . . . , t m. Thus C′ is a spherical code with the same parameters as C, and each
+sharp conﬁguration listed in Table 1 except on the last line i s known to be the
+unique spherical code with its parameters, up to orthogonal transformations, of
+course. See Appendix A for details and references.
+Even when the spherical code is not unique, one can still conc lude from the strict
+absolute monotonicity of a that C′ must be sharp. The key observation is that F 2
+is strictly conductive (except in the trivial case when C consists of two antipodal
+points), which follows easily from Lemma 5.3. It implies tha t h is a strictly positivedeﬁnite polynomial of degree 2 m− 1. Then the sharpness in Proposition 4.1 implies
+that C′ must be a spherical deg( h)-design (by Theorem 5.5 in [DGS]) and hence a
+sharp conﬁguration. Furthermore, each of t1, . . . , t m must occur as an inner product
+in C′, from switching the roles of C and C′.
+7. The 600-cell
+The ﬁnal conﬁguration is the vertices of the regular 600-cel l. The construction
+in Section 6 does not work in this case, and overall the 600-ce ll appears to be
+intrinsically more complicated than the sharp conﬁguratio ns. The fundamental
+problem is that it is only a spherical 11-design, but the poly nomial h constructed
+as in the previous section would have degree 15 (or 14 if one us es the alternate
+construction for antipodal conﬁgurations). Recall that be ing a spherical deg( h)design was crucial to having a sharp bound. In fact, h does turn out to be a
+positive-deﬁnite function in this case, but it proves a subo ptimal bound.
+Andreev and Elkies have shown in [An3, El] that a degree 17 pol ynomial with
+coeﬃcients in Q(
+√
+5) proves a sharp bound for the number of points in a spherical
+code with minimal angle π/ 5 = cos − 1(1 +
+√
+5)/ 4 on S3, although polynomials of
+lower degree do not work. A similar phenomenon occurs in our p roblem. What
+saves the proof is that although the 600-cell is not a spheric al 12-design, all spherical harmonics of degrees from 13 to 19 do indeed sum to 0 over th e 600-cell. Degree
+12 is the only problem, and that can be addressed by ensuring t hat the 12-th ultraspherical coeﬃcient of h vanishes. The fact that spherical harmonics of degrees 13
+through 19 sum to 0 over the 600-cell is easily checked using t he distance distribution from Table 2, which tells for each vertex how many others have a given inner
+product with it. One can also prove it using invariant theory as follows. The symmetry group of the 600-cell is the H4 reﬂection group, for which the ring of invariant
+polynomials has generators of degrees 2 (the trivial invari ant x ↦→ | x|2), 12, 20, and
+30. Summing a polynomial over the vertices of the 600-cell am ounts to averaging it
+with respect to H4. For any degree that is not a nonnegative integer combinatio n
+of 12, 20, and 30, averaging must yield a polynomial that is co nstant on S3, and
+that constant vanishes for spherical harmonics because the y are orthogonal to the
+constant polynomials.
+For the 600-cell, we have m = 8 and {t1, . . . , t m} = {−1, 0, ± 1/ 2, (± 1 ±
+√
+5)/ 4};
+we order the inner products so that t1 < · · ·< t 8. Let h(t) be the unique polynomial
+UNIVERSALLY OPTIMAL DISTRIBUTION OF POINTS ON SPHERES 127
+Table 2. The distance distribution of the 600-cell.
+Inner Product Count
+± 1 1
+(± 1 ±
+√
+5)/ 4 12
+± 1/ 2 20
+0 30
+of degree at most 17 such that h(ti) = a(ti) for 1 ≤ i ≤ 8, h′(ti) = a′(ti) for
+2 ≤ i ≤ 8, and α 11 = α 12 = α 13 = 0, where α i denotes the i-th ultraspherical
+coeﬃcient of h. Note that we do not require that h′(− 1) = a′(− 1).
+It might seem more natural to use a polynomial of degree 15 and simply set
+α 12 = 0, but that does not work. We have no conceptual explanation for why it
+fails or why our slightly more complicated approach succeed s.
+If h(t) ≤ a(t) for all t and h is positive deﬁnite, then it proves a sharp bound
+(as pointed out above, because α 12 = 0). Unfortunately, we know of no simple
+reason why these inequalities hold. We have proved them usin g a computer algebra
+system. The proof is completely rigorous, in the sense that i t uses no ﬂoating point
+arithmetic or other unrigorous approximations; all comput ations are performed
+using exact arithmetic in Q(
+√
+5).
+7.1. Proof that h is positive deﬁnite. We wish to prove that h(t) is a nonnegative linear combination of the ultraspherical polynomials C1
+i (t). Each ultraspherical
+coeﬃcient of h(t) is a linear function of a(ti) and a′(ti) for 1 ≤ i ≤ m. Let ui denote
+the coeﬃcient of a(ti) in this linear function, and let vi denote the coeﬃcient of
+a′(ti).
+As explained in Section 1, it suﬃces to consider the potentia l functions f (r) =
+(4 − r)k with k ∈ {0, 1, 2, . . . }; up to scaling, that amounts to taking a(t) = (1 + t)k.
+The linear combination
+m∑
+i=1
+(
+uia(ti) + via′(ti)
+)
+then becomes
+m∑
+i=1
+(
+ui(1 + ti)k + vik(1 + ti)k− 1)
+.
+If v8 > 0, then this expression is positive for all suﬃciently large k. To prove that
+it is nonnegative for all k, we simply compute a bound ℓ such that it is guaranteed
+to be positive for all k ≥ ℓ and then check nonnegativity for 0 ≤ k < ℓ .
+Let
+χ (x) =
+{
+x if x ≤ 0, and
+0 if x > 0.
+If ℓ is chosen so that
+m∑
+i=1
+(
+χ (ui)(1 + ti)ℓ + χ (vi)ℓ(1 + ti)ℓ − 1)
++ v8ℓ(1 + t8)ℓ − 1 ≥ 0,(7.1)
+128 HENRY COHN AND ABHINA V KUMAR
+then
+m∑
+i=1
+(
+ui(1 + ti)k + vik(1 + ti)k− 1)
+≥ 0
+for all k ≥ ℓ. In other words, once the asymptotically dominant term outw eighs all
+the negative terms, it continues to do so forever (because wh enever k increases, the
+dominant term increases by a larger factor than any other ter m does).
+To prove that h is positive deﬁnite, we deal with eighteen cases, one for eac h
+ultraspherical coeﬃcient of h. In each case, we compute the coeﬃcients
+u1, . . . , u 8, v 1, . . . , v 8
+explicitly as elements of Q(
+√
+5). We then check that v8 > 0 and that (7.1) holds
+with ℓ = 32. Finally, we check that the ultraspherical coeﬃcient is nonnegative for
+k ∈ { 0, 1, . . . , 31}. These calculations are too cumbersome to carry out by hand,
+but they are easily done using a computer algebra system.
+7.2. Proof that h(t) ≤ a(t). Unfortunately, the inequality h(t) ≤ a(t) no longer
+has as simple a proof as in the case of the sharp conﬁgurations . To prove it, we will
+use Proposition 2.2. Let
+F (t) = ( t + 1)
+m∏
+i=2
+(t + ti)2,
+and let ˜h be the usual Hermite interpolation H(a, F ) of a (without requiring any
+ultraspherical coeﬃcients to vanish). By Proposition 2.2,
+a(t) − ˜h(t)
+F (t)
+is absolutely monotonic on [ − 1, 1). Let q(t) be the quadratic Taylor polynomial for
+this quotient about t = − 1. Then it follows from absolute monotonicity that
+a(t) − ˜h(t)
+F (t) ≥ q(t)
+for all t ∈ [− 1, 1). Thus,
+a(t) − h(t)
+F (t) ≥ q(t) +
+˜h(t) − h(t)
+F (t) .
+The right side of this inequality is a quadratic polynomial. If we verify that it
+is nonnegative over [ − 1, 1), then a(t) ≥ h(t) over that range (because F (t) ≥
+0). To check this, we simply check that it is nonnegative at t = ± 1 and has
+nonpositive leading coeﬃcient. Each of these calculations amounts to checking that
+a certain explicit linear combination of a(t1), . . . , a (t8), a′(t1), . . . , a ′(t8), a(2)(− 1),
+and a(3)(− 1) is nonnegative. We prove it using the method from the previ ous
+subsection, with ℓ = 36.
+7.3. Proof of uniqueness. Finally, we must deal with the issue of uniqueness
+when the potential function f is strictly completely monotonic (so a is strictly
+absolutely monotonic). In that case, by Proposition 2.2,
+a(t) − ˜h(t)
+F (t)
+UNIVERSALLY OPTIMAL DISTRIBUTION OF POINTS ON SPHERES 129
+is strictly absolutely monotonic on ( − 1, 1), which implies that
+a(t) − ˜h(t)
+F (t) > q (t)
+for t ∈ (− 1, 1). Thus, a(t) − h(t) has roots only at t = ti for some i. Uniqueness
+follows, because the vertices of the regular 600-cell are th e only (4 , 120, (1 +
+√
+5)/ 4)
+spherical code (see [B˝ o, p. 260] or [BD]).
+8. Other compact two-point homogeneous spaces
+The key property underlying our proofs is the two-point homo geneity of the
+sphere. Recall that a metric space is two-point homogeneous if for each r > 0,
+its isometry group acts transitively on ordered pairs of poi nts at distance r. In
+this section we generalize Theorem 1.2 to all compact, conne cted two-point homogeneous spaces. This generalization is parallel to the ge neral setting for linear
+programming bounds in [CS, Lev2, Lev3]. It seems plausible t hat our results also
+generalize to the case of discrete two-point homogeneous sp aces (see Chapter 9 of
+[CS] for examples), but we have not investigated that possib ility.
+Let X be a compact, connected two-point homogeneous space with mo re than
+one point. Wang proved in [Wa] that, up to changing to an equiv alent metric (i.e.,
+applying an invertible function to the metric), X is one of the following possibilities: a sphere, a real projective space, a complex projectiv e space, a quaternionic
+projective space, or the octonionic projective plane, each with its standard metric.
+In other words, we use the round metric on the sphere, the Fubi ni-Study metric on
+real, complex, or quaternionic projective space, and the F4-invariant metric on OP2
+(up to scaling, they are the unique two-point homogeneous Ri emannian metrics on
+these spaces).
+The octonionic projective plane OP2 may be the least familiar of these possibilities; it cannot be deﬁned as O3 \ {0} modulo the action of O∗ because of the
+nonassociativity of the octonions ( O∗ is not a group and does not act on O3). However, it can be deﬁned using the exceptional Jordan algebra o r as F4/ Spin(9). There
+is no such space as OP3, because OP2 does not satisfy the Desargues theorem. See
+[Ba] for more details on octonionic projective geometry.
+Normalize the metric d on X (the geodesic distance with respect to the Riemannian metric) so that the greatest distance between point s is π . Just as we use
+inner products to measure distances between points on spher es, it is natural to use
+cos d(x, y ) instead of d(x, y ). In RPn, CPn, or HPn this function is easy to calculate:
+if we represent x and y by unit vectors in Rn+1, Cn+1, or Hn+1, respectively, then
+cos d(x, y ) = 2 |⟨x, y ⟩|2 − 1, where the brackets denote the standard Hermitian form
+over R, C, or H.
+Spheres are n-point homogeneous for every n, but the other two-point homogeneous spaces are not even three-point homogeneous. One co nsequence is that
+conﬁgurations in projective space can frequently be deform ed without changing the
+distances between points. For example, for τ ∈ C with |τ |= (1+
+√
+5)/ 2, consider the
+conﬁguration Cτ consisting of the six points in CP2 with homogeneous coordinates
+[τ, 1, 0], [ τ, − 1, 0], [1 , 0, τ ], [ − 1, 0, τ ], [0 , τ, 1], and [0 , τ, − 1]. When τ = (1 +
+√
+5)/ 2,
+they are the images in RP2 ⊂ CP2 of the vertices of a regular icosahedron in R3.
+The cosine of the distance between any two distinct points is − 3/ 5, so the points
+form a regular simplex embedded in CP2. It will follow from Theorem 8.2 that
+130 HENRY COHN AND ABHINA V KUMAR
+each Cτ is a universally optimal six-point code in CP2. Lemma 8.1 shows that these
+conﬁgurations form a one-dimensional family. By contrast, positive-dimensional
+families of sharp conﬁgurations do not exist in spheres.
+Lemma 8.1. For |τ |= |τ ′|= (1 +
+√
+5)/ 2, there is an isometry of CP2 mapping Cτ
+to Cτ ′ if and only if τ /τ ′ or τ / ¯τ ′ is a sixth root of unity.
+Proof. The isometry group of CP2 is generated by the action of U (3) on lines in
+C3 together with complex conjugation. Complex conjugation se nds Cτ to C¯τ , the
+diagonal unitary transformation that multiplies the j-th coordinate by e2πij/ 3 sends
+Cτ to Cτ e − 2πi/ 3 , and the identity map sends Cτ to C− τ . In the other direction, if
+x, y, and z are unit vectors in the six lines in C3 corresponding to the points of Cτ ,
+then
+⟨x, y ⟩⟨y, z ⟩⟨z, x ⟩ ∈
+{
+1, 1/ 5, ± 1/
+(
+5
+√
+5
+)
+, ± τ 3/
+(
+|τ |2 + 1
+) 3
+, ± ¯τ 3/
+(
+|τ |2 + 1
+) 3}
+,
+and each of these values occurs (note that the triple product ⟨x, y ⟩⟨y, z ⟩⟨z, x ⟩ is
+independent of which unit vector is chosen in each line). Bec ause |τ |3/
+(
+|τ |2 + 1
+) 3
+=
+1/
+(
+5
+√
+5
+)
+, the isometry class of Cτ determines the set {±1, ± τ 3, ± ¯τ 3}, and that
+proves the necessity of the condition in the lemma statement . □
+The potential functions we will consider are the absolutely monotonic functions
+of cos d(x, y ). As in the case of the sphere, these functions can also be und erstood
+in terms of another metric, namely the chordal distance dc(x, y ) = sin
+(
+d(x, y )/ 2
+)
+introduced for Grassmannians in [CHS] (i.e.,
+√
+1 − |⟨x, y ⟩|2 when x and y are represented by unit vectors as above). For motivation, recall tha t the Euclidean distance
+between two points separated by an angle of θ on the unit sphere is 2 sin( θ/ 2). For
+projective spaces, the chordal distance is most naturally e xpressed in terms of the
+orthogonal projection operators Π x and Π y onto the lines x and y. Then
+dc(x, y ) = |Πx − Πy|F√
+2 ,
+where | · |F is the Frobenius norm, deﬁned by
+|A|2
+F =
+∑
+i,j
+|Ai,j |2 = tr ¯AtA.
+Absolutely monotonic functions of cos d(x, y ) are the same as completely monotonic
+functions of squared chordal distance, just as in the case of the unit sphere.
+Let G be the isometry group of X. Then one can decompose L2(X) as
+L2(X) = ˆ⨁
+ℓ ≥ 0
+Vℓ ,
+where V0, V 1, . . . are certain ﬁnite-dimensional irreducible representatio ns of G.
+This decomposition is unique because the summands are pairw ise nonisomorphic.
+For each ℓ, one can deﬁne a positive-deﬁnite kernel Kℓ on X as in the case of the
+sphere, and one can deﬁne a function Cℓ : [ − 1, 1] → R such that
+Kℓ (x, y ) = Cℓ (cos d(x, y )).
+We index the representations Vℓ so that Cℓ is a polynomial of degree ℓ. One can
+compute these polynomials explicitly (see for example [Gan , p. 178]). For projective
+spaces, the result is that Cℓ is a positive constant times the Jacobi polynomial
+UNIVERSALLY OPTIMAL DISTRIBUTION OF POINTS ON SPHERES 131
+P (α,β )
+ℓ , where α = n/ 2 − 1, n is the dimension of X as a real manifold, and β is
+− 1/ 2, 0, 1, or 3 according to whether one is working over R, C, H, or O, respectively
+(i.e., β = (dim R A)/ 2− 1 for the algebra A). We deﬁne a positive-deﬁnite polynomial
+to be a nonnegative linear combination of C0, C 1, . . . .
+An M -design in X is a ﬁnite subset C ⊂ X such that for f ∈ Vi with 1 ≤ i ≤ M ,
+∑
+x∈C
+f (x) = 0 .
+As in the case of spheres, being an M -design is also characterized by the requirement
+that ∑
+x,y ∈C
+Ci(cos d(x, y )) = 0
+for 1 ≤ i ≤ M . For example, to verify that the conﬁgurations Cτ constructed above
+are 1-designs in CP2, one need only check that 6 C1(1) + 30C1(− 3/ 5) = 0.
+We say that a ﬁnite subset C ⊂ X is a sharp conﬁguration if it is an M -design,
+m distances occur between distinct points in C, and M ≥ 2m − 1 − δ , where
+δ = 1 if there are two antipodal points in C and δ = 0 otherwise. By a pair of
+“antipodal points” we mean points separated by the greatest possible distance in
+X; this condition is more subtle in projective spaces than in s pheres, because it is
+no longer true that each point has a unique antipode.
+This deﬁnition of a sharp conﬁguration agrees with the previ ous one in the case of
+spheres. Here we merely require an antipodal sharp conﬁgura tion to be a (2 m − 2)design, but in the case of spheres every antipodal (2 m − 2)-design is automatically
+a (2 m − 1)-design: by Theorem 7.4 of [DGS], every point in such a desi gn has
+an antipode if one does, and that suﬃces to make every odd-deg ree homogeneous
+polynomial sum to zero. On the other hand, some antipodal sha rp conﬁgurations
+in projective space are only (2 m − 2)-designs. For example, the D4, E6, and E7
+root systems give antipodal sharp conﬁgurations of 12, 36, a nd 63 points in RP3,
+RP5, and RP6, respectively. For these codes m = 2 (the cosines of the distances are
+− 1 and − 1/ 2), and they are 2-designs but not 3-designs. By contrast, E8 yields a
+3-design in RP7.
+The following theorem generalizes Theorem 1.2 and the resul ts of Levenshtein
+from [Lev2] (namely, that all sharp conﬁgurations are optim al codes):
+Theorem 8.2. Let f : [ − 1, 1) → R be absolutely monotonic, and let C ⊂ X be a
+sharp conﬁguration. If C′⊂ X is any subset satisfying |C′|= |C|, then
+∑
+x,y ∈C ′,x ̸=y
+f (cos d(x, y )) ≥
+∑
+x,y ∈C ,x ̸=y
+f (cos d(x, y )).
+If f is strictly absolutely monotonic, then equality implies th at C′ is a sharp conﬁguration and that the same distances occur between points in C and C′.
+Naturally, we call ∑
+x,y ∈C ,x ̸=y
+f (cos d(x, y ))
+the f -potential energy of C. Strictly speaking, this deﬁnition conﬂicts with our earlier deﬁnition for the special case X = Sn− 1, because previously we used functions
+of squared Euclidean distance as our potential functions. H owever, that should not
+cause any confusion: the Euclidean distance is twice the cho rdal distance, so this
+132 HENRY COHN AND ABHINA V KUMAR
+change simply amounts to the diﬀerence between using the squ ared chordal distance and the cosine of the geodesic distance. In the termino logy of Section 6, here
+we are dealing with the absolutely monotonic function a instead of the completely
+monotonic potential function, and thus our previous framew ork is equivalent to the
+current one in the case of Sn− 1.
+The proof of Theorem 8.2 is parallel to the proof for spheres, so we merely
+sketch it here, with particular attention to arguments that require modiﬁcation in
+projective space.
+The linear programming bounds generalize in a straightforw ard manner, with
+essentially the same proof:
+Proposition 8.3. Let f : [ − 1, 1) → R be any function. Suppose h : [ − 1, 1] → R
+is a polynomial such that h(t) ≤ f (t) for all t ∈ [− 1, 1), and suppose there are
+nonnegative coeﬃcients α 0, . . . , α d such that h has the expansion
+h(t) =
+d∑
+i=0
+α iCi(t).
+Then every set of N points in X has f -potential energy at least
+N 2α 0 − N h(1).
+We apply this proposition in the same way as before. Suppose ﬁ rst that C is a
+(2m − 1)-design, with m distances between distinct points in C. Let t1 < · · ·< t m
+be the cosines of those distances. As before, we construct th e Hermite interpolating
+polynomial h of degree 2 m − 1 that agrees with f to order 2 at each of t1, . . . , t m.
+The proof that h(t) ≤ f (t) for all t ∈ [− 1, 1) is the same as in Lemma 6.1.
+Deﬁne
+F (t) =
+m∏
+i=1
+(t − ti).
+The same proof as in Lemma 6.2 shows that F is positive deﬁnite, and we apply
+an analogue of Lemma 6.3 to express g in terms of a related family of orthogonal
+polynomials as pm + αp m− 1. To complete the proof that h is positive deﬁnite, we
+use the fact that the polynomials in that family are themselv es positive deﬁnite,
+together with Theorem 3.1, to establish conductivity. Ever ything is completely
+parallel to the spherical case. Finally, because C is a (2 m − 1)-design and deg( h) =
+2m − 1, the lower bound for potential energy must be sharp. When f is strictly
+absolutely monotonic, the uniqueness argument is the same a s before.
+When t1 = − 1 and C is a (2 m − 2)-design but not a (2 m − 1)-design, one must
+instead use ﬁrst-order Hermite interpolation at t = − 1, which complicates the
+proof. We can assume that m > 1, since if m = 1, then every pair of points in C is
+antipodal and Theorem 8.2 visibly holds.
+If we deﬁne
+F (t) =
+m∏
+i=2
+(t − ti),
+then the heart of the proof is the veriﬁcation that ( t+ 1)F (t)2 is strictly conductive,
+and everything else works exactly the same as before. Let q0, q 1, . . . be the monic
+orthogonal polynomials with respect to (1 − t2) dµ (t), where µ is the measure on
+[− 1, 1] with respect to which the polynomials Cℓ are orthogonal. (Recall that they
+UNIVERSALLY OPTIMAL DISTRIBUTION OF POINTS ON SPHERES 133
+are certain Jacobi polynomials P (α,β )
+ℓ . Then dµ (t) = (1 − t)α (1 + t)β dt.) The
+argument used to prove Lemma 6.3 shows that F = qm− 1 + αq m− 2 for some α .
+The most subtle part of the proof of Theorem 8.2 is the proof th at α > 0. (If C
+were a (2 m − 1)-design, then α would vanish.) We start with a crucial observation
+about the polynomials qi:
+Lemma 8.4. For each i, the polynomial (t + 1)qi(t) is strictly positive deﬁnite.
+Proof. This polynomial is orthogonal to all polynomials of degree l ess than i with
+respect to (1 − t) dµ (t), so for some constant c it equals pi+1(t) + cpi(t) in terms
+of the monic orthogonal polynomials for this measure. Setti ng t = − 1 shows that
+c ≥ 0, because each pj has all its roots in ( − 1, 1) and hence pj(− 1) has sign ( − 1)j.
+As before, it follows from Lemma 3.3 and Proposition 3.2 that each pj is strictly
+positive deﬁnite. □
+Lemma 8.5. Let f (t) be a monic polynomial, with 0-th coeﬃcient f0 in terms of
+C0(t), C 1(t), . . . .
+(1) If deg(f ) ≤ 2m − 2 and f (ti) = 0 for 1 ≤ i ≤ m, then f0|C|= f (1).
+(2) If deg(f ) = 2 m − 1 and f (ti) = 0 for 1 ≤ i ≤ m, then f0|C|< f (1).
+(3) If deg(f ) ≤ 2m − 2 and f (t) ≥ 0 for − 1 ≤ t ≤ 1, then f0|C| ≥f (1).
+Proof. Write
+f (t) =
+deg(f )∑
+i=0
+fiCi(t).
+In cases (1) and (2), ∑
+x,y ∈C
+f
+(
+cos d(x, y )
+)
+= |C|f (1),
+while in case (3), ∑
+x,y ∈C
+f
+(
+cos d(x, y )
+)
+≥ |C|f (1).
+On the other hand,
+∑
+x,y ∈C
+f
+(
+cos d(x, y )
+)
+=
+deg(f )∑
+i=0
+fi
+∑
+x,y ∈C
+Ci
+(
+cos d(x, y )
+)
+.
+The i = 0 term yields f0|C|2, while all terms with 1 ≤ i ≤ 2m − 2 vanish because
+C is a (2 m − 2)-design. In case (1) that yields f0|C|= f (1) and in case (3) it
+yields f0|C| ≥ f (1). Finally, in case (2) we have f2m− 1 > 0 because f is monic,
+so the i = 2m − 1 term is positive (because C is not a (2 m − 1)-design) and hence
+f0|C|< f (1). □
+Lemma 8.6. If f is a polynomial with deg(f ) ≤ i, then (t + 1)f (t)qi(t) has 0-th
+coeﬃcient equal to f (1) times that of (t + 1)qi(t) (in terms of C0(t), C 1(t), . . . ).
+Proof. The 0-th coeﬃcient of a polynomial p(t) equals
+∫
+p(t) dµ (t)∫ dµ (t) .
+134 HENRY COHN AND ABHINA V KUMAR
+Divide f (t) by t − 1 to yield f (t) = g(t)(t − 1) + f (1), with deg( g) < i. Then
+∫
+(t + 1)f (t)qi(t) dµ (t) =
+∫
+g(t)qi(t) (1 − t2)dµ (t) + f (1)
+∫
+(1 + t)qi(t) dµ (t).
+Because qi is orthogonal to all polynomials of degree less than i with respect to
+(1 − t2)dµ (t),
+∫
+(t + 1)f (t)qi(t) dµ (t) = f (1)
+∫
+(1 + t)qi(t) dµ (t),
+which completes the proof. □
+Let β i denote the 0-th coeﬃcient of ( t + 1) qi(t) in terms of C0(t), C 1(t), . . . .
+Taking f (t) = ( t + 1)F (t) in case (1) of Lemma 8.5, we ﬁnd that
+(β m− 1 + β m− 2α )|C|= 2qm− 1(1) + 2qm− 2(1)α.
+For an upper bound on |C|, take f (t) = ( t + 1) F (t)qm− 1(t) in case (2). By
+Lemma 8.6,
+|C|< f (1)
+F (1)β m− 1
+= 2qm− 1(1)
+β m− 1
+(because F (1)β m− 1 > 0). For a lower bound, take f (t) = ( t + 1)qm− 2(t)2 in case
+(3). By Lemma 8.6,
+|C| ≥ f (1)
+qm− 2(1)β m− 2
+= 2qm− 2(1)
+β m− 2
+(because qm− 2(1)β m− 2 > 0). We have shown that
+2qm− 1(1) − β m− 1|C|> 0
+and
+2qm− 2(1) − β m− 2|C| ≤0,
+while
+2qm− 1(1) − β m− 1|C|+ α
+(
+2qm− 2(1) − β m− 2|C|
+)
+= 0.
+It follows that α > 0.
+To prove that ( t + 1)F (t)2 is strictly conductive using Lemma 5.3, we need only
+show that all its partial products
+(t + 1)
+j∏
+i=2
+(t − ti)2
+and
+(t + 1)(t − tj+1)
+j∏
+i=2
+(t − ti)2
+are strictly positive deﬁnite. That follows from Theorem 3. 1, Lemma 8.4, and
+the fact that the set of nonnegative linear combinations of q0, q 1, q 2, . . . is closed
+under taking products (see [Gas] for the most general case or Theorem 5.2 in [As,
+p. 44] for a simpler proof that applies to these orthogonal po lynomials). Once the
+conductivity of (t+1)F (t)2 has been established, the rest of the proof of Theorem 8.2
+is essentially identical to that of Theorem 1.2.
+UNIVERSALLY OPTIMAL DISTRIBUTION OF POINTS ON SPHERES 135
+9. The Euclidean case
+One can generalize Proposition 4.1 to apply to conﬁguration s in Euclidean space.
+Here we outline this approach, which leads to an optimizatio n problem reminiscent
+of the Beurling-Selberg extremal functions (see [V]). We de al only with the case
+of periodic, discrete point conﬁgurations (unions of ﬁnite ly many translates of a
+lattice), to avoid worries about how potential energy is deﬁ ned in pathological
+cases.
+Deﬁne the density of a periodic arrangement to be the number of points per unit
+volume in space. If the arrangement consists of the N translates Λ + v1, . . . , Λ +vN
+of a lattice Λ ∈ Rn, with vj − vk ̸∈ Λ for j ̸= k, then the density is N/ vol(Rn/ Λ).
+Given a potential function f : (0 , ∞ ) → [0, ∞ ), deﬁne the potential energy of the
+packing to be
+1
+N
+∑
+1≤ j,k ≤ N
+∑
+x∈Λ,x +vj− vk̸=0
+f
+(
+|x + vj − vk|2)
+.
+Of course summing over all pairs of points in the packing woul d give a divergent sum
+(even this sum may diverge, in which case we say the potential energy is inﬁnite).
+The potential energy is the average over all points in the con ﬁguration of the sum
+over all distances to other points. In particular, the same p eriodic arrangement
+can be written in terms of diﬀerent Λ and v1, . . . , v N , but the potential energy is
+independent of this choice.
+For a diﬀerent point of view, imagine placing ﬁnitely many po ints v1, . . . , v N on
+the ﬂat torus Rn/ Λ. The energy of a point is given by a sum over all geodesics
+connecting it to the other points or to itself, and the energy of the conﬁguration is
+the average of this quantity over all the points.
+Let BR(0) denote the ball of radius R about 0. Given a conﬁguration C ⊂ Rn,
+let
+CR = C ∩ BR(0).
+Lemma 9.1. Let C be a periodic point conﬁguration in Rn. If the potential energy
+of C is ﬁnite, then it equals
+lim
+R→∞
+1
+|CR|
+∑
+x,y ∈CR,x ̸=y
+f
+(
+|x − y|2)
+.
+The same holds even without the assumption that f is nonnegative, as long as
+f (x) = O
+(
+(1 + |x|)− n/ 2− δ )
+for some δ > 0.
+Proof. Suppose C is the disjoint union of Λ + v1, . . . , Λ + vN as above. Say a point
+in C has type j if it is in Λ + vj. With each point x ∈ C we associate the sum
+∑
+y∈C ,y ̸=x
+f
+(
+|x − y|2)
+.(9.1)
+This sum depends only on the type of x, and the deﬁnition of the f -potential energy
+of C equals the average over all types of this quantity.
+All these sums must converge, because of the bounds on f if f is not assumed
+nonnegative or else because of the hypothesis that the poten tial energy is ﬁnite.
+Let ε > 0 be small, and choose K such that for x of each type,
+∑
+y∈C , |y− x|>K
+⏐
+⏐f
+(
+|x − y|2) ⏐
+⏐ ≤ ε.
+136 HENRY COHN AND ABHINA V KUMAR
+In particular, summing in (9.1) only over y such that |x − y| ≤ K yields a partial
+sum within ε of the total sum.
+In the sum ∑
+x,y ∈CR,x ̸=y
+f
+(
+|x − y|2)
+,
+we can focus our attention on the points x ∈ BR− K(0), since the number in BR(0)\
+BR− K(0) is negligible compared to the number in BR− K(0) (on the order of Rn− 1
+rather than Rn as R → ∞ ). Each point contributes a bounded amount to the sum,
+so omitting the points in BR(0) \BR− K(0) changes the sum by O
+(
+Rn− 1)
+.
+For each x ∈ C R− K, ∑
+y∈CR,y ̸=x
+f
+(
+|x − y|2)
+is within ε of ∑
+y∈C ,y ̸=x
+f
+(
+|x − y|2)
+.
+The numbers of points of each type in CR− K are equal, up to a factor of 1+ O(1/R ).
+Thus, for R large,
+1
+|CR|
+∑
+x,y ∈CR,x ̸=y
+f
+(
+|x − y|2)
+is O(1/R ) plus a quantity within ε of the f -potential energy of C. Choosing ε
+arbitrarily small and R accordingly large completes the proof. □
+The Euclidean analogue of Proposition 4.1 is stated in terms of the Fourier
+transform on Rn. We normalize the Fourier transform of an L1 function h : Rn → R
+by
+ˆh(t) =
+∫
+Rn
+h(x)e2πi ⟨x,t ⟩ dx.
+Lemma 9.2. Let C be a periodic point conﬁguration in Rn, with density δ . If ε > 0
+is suﬃciently small (depending on C), then
+lim
+R→∞
+∫
+Bε (0)
+⏐
+⏐∑
+x∈CR e2πi ⟨x,t ⟩⏐
+⏐2
+|CR| dt = δ.
+Proof. We will prove that for ε > 0 suﬃciently small, if g is any radial, smooth
+function supported in Bε (0), then
+lim
+R→∞
+∫
+Rn
+⏐
+⏐∑
+x∈CR e2πi ⟨x,t ⟩⏐
+⏐2
+|CR| g(t) dt = δg (0).
+Because the characteristic function of a small ball can be bo unded above and below
+by such functions, that will suﬃce to prove the lemma.
+We expand the numerator of the integrand via
+⏐
+⏐
+⏐
+⏐
+⏐
+∑
+x∈CR
+e2πi ⟨x,t ⟩
+⏐
+⏐
+⏐
+⏐
+⏐
+2
+=
+∑
+x,y ∈CR
+e2πi ⟨x− y,t ⟩.
+It follows that
+∫
+Rn
+⏐
+⏐∑
+x∈CR e2πi ⟨x,t ⟩⏐
+⏐2
+|CR| g(t) dt = 1
+|CR|
+∑
+x,y ∈CR
+ˆg(x − y).
+UNIVERSALLY OPTIMAL DISTRIBUTION OF POINTS ON SPHERES 137
+Let C be the disjoint union of translates Λ + v1, . . . , Λ +vN of a lattice Λ. It follows
+from Lemma 9.1 that
+lim
+R→∞
+1
+|CR|
+∑
+x,y ∈CR
+ˆg(x − y) = 1
+N
+∑
+1≤ j,k ≤ N
+∑
+z∈Λ
+ˆg(z + vj − vk).
+(This quantity is not quite the same as that considered in Lem ma 9.1, because we
+allow x = y or z + vj − vk = 0 in the sum, but the extra terms amount to ˆg(0) on
+each side.)
+Recall the Poisson summation formula, which states that for every Schwartz
+function h : Rn → R and every v ∈ Rn,
+∑
+z∈Λ
+h(z + v) = 1
+vol(Rn/ Λ)
+∑
+t∈Λ∗
+ˆh(t)e− 2πi ⟨v,t ⟩,
+where
+Λ∗ = {t ∈ Rn : ⟨t, z ⟩ ∈ Z for all z ∈ Λ}
+is the dual lattice. (See Appendix A of [CK2] for the standard proof.) Taking h = ˆg
+yields
+1
+N
+∑
+1≤ j,k ≤ N
+∑
+z∈Λ
+ˆg(z + vj − vk) = 1
+N vol(Rn/ Λ)
+∑
+t∈Λ∗
+g(t)
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+∑
+1≤ j≤ N
+e2πi ⟨vj ,t ⟩
+⏐
+⏐
+⏐
+⏐
+⏐
+⏐
+2
+.
+If the support of g is suﬃciently small, then only the t = 0 term contributes to the
+right side, and it equals δg (0) because N/ vol(Rn/ Λ) = δ . □
+Proposition 9.3. Let f : (0 , ∞ ) → [0, ∞ ) be any function. Suppose h : Rn → R
+satisﬁes h(x) ≤ f
+(
+|x|2)
+for all x ∈ Rn \ {0} and is the Fourier transform of a
+function g ∈ L1(Rn) such that g(t) ≥ 0 for all t ∈ Rn. Then every periodic
+conﬁguration in Rn with density δ has f -potential energy at least
+δ
+(
+lim inf
+t→ 0
+g(t)
+)
+− h(0).
+Without loss of generality, one can assume that g and h are radial functions
+(replace g with the average of its rotations about the origin). For simp licity of
+notation, we typically write g = ˆh. That is justiﬁed because g is in fact the Fourier
+transform of h as a tempered distribution (when these functions are radial ; of course
+in general g(t) = ˆh(− t)), but note that we have not assumed that h is integrable
+and thus it is not clear that ∫
+Rn
+h(x)e2πi ⟨x,t ⟩ dx
+converges. By contrast, h(x) does equal
+∫
+Rn
+ˆh(t)e2πi ⟨x,t ⟩ dt.
+Proof. Deﬁne
+ℓ = lim inf
+t→ 0
+g(t).
+Let ε > 0, and choose η > 0 such that g(t) ≥ ℓ − ε whenever |t| ≤ η .
+138 HENRY COHN AND ABHINA V KUMAR
+Let C be a periodic conﬁguration with density δ . By Lemma 9.1, the f -potential
+energy is
+lim
+R→∞
+1
+|CR|
+∑
+x,y ∈CR,x ̸=y
+f
+(
+|x − y|2)
+.
+Because h(x) ≤ f
+(
+|x|2)
+for all x ̸= 0,
+1
+|CR|
+∑
+x,y ∈CR,x ̸=y
+f
+(
+|x − y|2)
+≥ − h(0) + 1
+|CR|
+∑
+x,y ∈CR
+h(x − y).
+On the other hand,
+1
+|CR|
+∑
+x,y ∈CR
+h(x − y) = 1
+|CR|
+∑
+x,y ∈CR
+∫
+Rn
+g(t)e2πi ⟨x− y,t ⟩ dt
+=
+∫
+Rn
+g(t)
+⏐
+⏐∑
+x∈CR e2πi ⟨x,t ⟩⏐
+⏐2
+|CR| dt
+≥
+∫
+Bη (0)
+(ℓ − ε )
+⏐
+⏐∑
+x∈CR e2πi ⟨x,t ⟩⏐
+⏐2
+|CR| dt.
+In the limit as R → ∞ , Lemma 9.2 implies that the potential energy is at least
+− h(0) + δ (ℓ − ε ),
+if η is suﬃciently small. Because ε can be taken to be arbitrarily small, the desired
+lower bound follows. □
+This proposition is closely analogous to the linear program ming bounds for
+sphere packing introduced in [CE] (see also [Co, CK1, CK2]). The proof given
+here is somewhat diﬀerent, because we have arranged it to min imize the hypotheses on h. If one is willing to assume stronger hypotheses, namely bou nds on the
+decay rates of h and ˆh, then one can give a proof closer to that in [CE] by moving
+the Poisson summation from the proof of Lemma 9.2 into that of Proposition 9.3.
+Analogously to the case of Proposition 4.1, one can derive th e bounds from [CE]
+(with weaker hypotheses than in that paper) by setting
+f (r) =
+{
+∞ for r < 1, and
+0 otherwise.
+Then one concludes that the sphere centers in a packing with b alls of radius 1 / 2
+must have density at most h(0)/ ˆh(0) (assuming ˆh is continuous at 0).
+Let Λ 2, Λ 8, and Λ 24 denote the hexagonal lattice in R2, the E8 root lattice in
+R8, and the Leech lattice in R24, respectively.
+Conjecture 9.4. Let n ∈ { 2, 8, 24}, and let f : (0 , ∞ ) → R be completely monotonic and satisfy f (x) = O
+(
+|x|− n/ 2− ε )
+as |x| → ∞ for some ε > 0. Then there
+exists a function h that satisﬁes the hypotheses of Proposition 9.3 and proves t hat
+Λn has the least f -potential energy of any periodic conﬁguration in Rn with its
+density.
+One consequence of this conjecture is that these lattices ar e universally optimal
+conﬁgurations in Euclidean space. That appears to be a rare p roperty, which
+provably fails for lattices in dimensions 3, 5, 6, and 7. The u nique optimal lattices
+in those dimensions are the A3, D5, E6, and E7 root lattices (see [Mar]). Each
+UNIVERSALLY OPTIMAL DISTRIBUTION OF POINTS ON SPHERES 139
+of these lattices has higher energy than its dual lattice for the potential function
+f (x) = e− x, when both lattices are rescaled to have unit density.
+Montgomery proved in [Mo] that the hexagonal lattice is univ ersally optimal
+among all lattices in R2, but that is a weaker assertion than universal optimality
+among all periodic point conﬁgurations. Sarnak and Str¨ omb ergsson conjectured in
+[SS] that D4, E8, and the Leech lattice are universally optimal among lattic es and
+proved that they are local optima. Perhaps one could combine their theorem with
+the techniques in this paper and [CK1] to prove that E8 and Λ 24 are the global
+minima among lattices in their dimensions.
+If true, Conjecture 9.4 implies that E8 and the Leech lattice are the densest
+sphere packings in their dimensions, by using the potential function f (r) = 1 /r s
+with s large. (The density of a sphere packing is the fraction of spa ce covered by the
+spheres; unfortunately this terminology conﬂicts with the density of a point conﬁguration. We will refer to these numbers as the “packing densit y” and “point density”
+to avoid confusion.) The potential energy of any periodic pa cking is asymptotic to
+K
+r2s
+min
+as s → ∞ , where rmin is the smallest distance between distinct points and K is
+the average number of points at distance rmin from a point in the packing (i.e.,
+the average kissing number if one centers balls of radius rmin/ 2 at the points of
+the arrangement to form a sphere packing). Universal optima lity implies that rmin
+must be as large as possible for a periodic conﬁguration of po int density 1, which
+means the packing density is maximized. Thus, Conjecture 9. 4 implies that no
+periodic packing can exceed the packing density of E8 or the Leech lattice, and
+therefore no packing can (see Appendix A of [CE]).
+Furthermore, Conjecture 9.4 implies that E8 and the Leech lattice are the unique
+densest periodic packings in R8 and R24. In the notation used above, any equally
+dense periodic packing must have at least as large an average kissing number K,
+or the potential energy would be lower. Because E8 and Λ 24 have the greatest
+possible kissing numbers in their dimensions and those kiss ing conﬁgurations are
+unique (see Chapters 13 and 14 of [CS]), the kissing conﬁgura tions in the hypothetical packing are determined up to orthogonal transform ations. However, those
+orthogonal transformations may be nontrivial, so it is not o bvious that the packing
+is uniquely determined.
+Lemma 9.5. For n = 8 or n = 24 , there is a unique sphere packing in Rn such
+that each kissing conﬁguration is the Λn kissing conﬁguration.
+Proof. Without loss of generality, suppose one sphere is centered a t a point in Λ n
+and the spheres tangent to it are centered at the nearest poin ts in Λ n. We must
+prove that each sphere is centered at a point of Λ n. Call a sphere center good if
+it is in Λ n and the same is true for all spheres tangent to it, and call one point
+a neighbor of another if they are the centers of tangent spher es. By assumption,
+at least one point is good; call it the origin. We will prove th at all neighbors of
+good points are also good. It follows that all points in the pa cking are good. To
+see why, suppose x is not good with |x|minimal. Then x must have a neighbor y
+with |y|< |x|, since otherwise a suitable scalar multiple of x (chosen between x and
+the origin to match the minimal distance of the packing) coul d be included with
+the neighbors of x to increase the kissing number in Rn; the reason is that every
+140 HENRY COHN AND ABHINA V KUMAR
+neighbor of x would be on or outside the sphere of radius |x|and hence at least
+as far from the new point as x is. The smaller neighbor y is good by assumption,
+which implies that x is good.
+It remains to prove that all neighbors of good points are good . Suppose x is good
+and y is a neighbor of x. We must show that there is a unique way to arrange the
+neighbors of y (namely, as points of Λ n). The positions of the common neighbors
+of x and y are already determined, because x is good. It would suﬃce to show
+that every isometry of Rn that ﬁxes x and y and preserves the set of common
+neighbors must preserve Λ n, because any two possible kissing arrangements about
+y are related by such an isometry. (They are related by some iso metry ﬁxing y
+by the uniqueness of the kissing conﬁguration. Because the s ymmetry group acts
+transitively on the neighbors (see Lemma 1.10 in [Eb, p. 25] a nd Theorem 27 in
+[CS, p. 288]), we may assume that x is ﬁxed as well, and it follows that the set
+of common neighbors is also preserved.) For n = 8 we will show that this is true;
+for n = 24 it is false, but we will prove a slightly weaker statement that will still
+suﬃce.
+Without loss of generality, we can translate the origin so th at y = 0. When n = 8,
+x and its 56 common neighbors with 0 span E8, so every orthogonal transformation
+that preserves x and the common neighbors clearly preserves E8. That completes
+the proof by showing that the kissing arrangements about two neighbors can only
+be in one orientation relative to each other.
+When n = 24, x and its 4600 common neighbors with 0 do not span Λ 24 (their
+span cannot contain any vector that has an odd inner product w ith x). Instead,
+they span a sublattice L of index 2, as is not hard to check using Figure 4.12 in
+[CS, p. 133] (with x = (4 , − 4, 0, . . . , 0)/
+√
+8). This lattice contains all the minimal
+vectors from Λ 24 that have even inner product with x, and it contains twice the
+minimal vectors from Λ 24 that have inner product ± 1 with x.
+The dual lattice
+L∗ = {w ∈ Rn : ⟨w, z ⟩ ∈ Z for all z ∈ L}
+contains L (because L is integral), and considering covolumes shows that [ L∗ : L] =
+4. The Leech lattice is contained in L∗, as is the vector x/ 2, and they must generate
+L∗ because they generate a lattice in which L has index 4.
+Every orthogonal transformation that preserves x and the set of 4600 common
+neighbors preserves L and hence L∗. That means the kissing conﬁguration of our
+packing at 0 must be contained among the vectors of norm 4 in L∗, because there
+exists such an orthogonal transformation that yields the Le ech kissing conﬁguration,
+which is contained in L∗. Besides the minimal vectors of Λ 24, the only other
+possibilities are the vectors of the form ± (x/ 2 − z) where z is a minimal vector
+of Λ 24 satisfying ⟨x, z ⟩ = 1. (Any vector in L∗ but not Λ 24 must be of the form
+x/ 2 − w with w ∈ Λ24. A short calculation shows that if |x/ 2 − w|2 = 4, then either
+w = z with |z|2 = 4 and ⟨x, z ⟩ = 1 or w = x − z for such a z.)
+The kissing conﬁguration must contain all the minimal vecto rs of L, namely the
+minimal vectors of Λ 24 that have even inner product with x, because L is preserved
+under the transformation to the Leech kissing conﬁguration . It must then either
+contain ± z for all z ∈ Λ24 with |z|2 = 4 and ⟨x, z ⟩ = 1, in which case it is simply all
+the minimal vectors in Λ 24, or it must contain all the vectors ± (x/ 2 − z) for such z.
+(If it contains one of the points ± z, then it contains all of them because any one of
+them together with L spans Λ 24 and hence the orthogonal transformation would be
+UNIVERSALLY OPTIMAL DISTRIBUTION OF POINTS ON SPHERES 141
+a symmetry of Λ 24.) One can check as follows that the second possibility is ind eed
+a valid kissing conﬁguration about 0. If r denotes reﬂection in the hyperplane
+through the origin orthogonal to x, then the map z ↦→ − r(z) preserves L, maps x
+to x, and interchanges the two kissing conﬁgurations.
+We have shown that there are only two distinct kissing conﬁgu rations about 0
+that both contain x and the 4600 common neighbors. Fortunately, only the ﬁrst ca n
+occur in the sphere packing. Suppose the kissing conﬁgurati on about 0 contained
+x/ 2 − z with z ∈ Λ24, |z|2 = 4, and ⟨x, z ⟩ = 1. Because x is good, its kissing
+conﬁguration contains the point x − z, which is so close to x/ 2 − z that the spheres
+centered at those points would overlap. That contradiction rules out the second
+case, so 0 must be good as well, which completes the proof. □
+Under Conjecture 9.4, let hs prove a sharp bound for f (r) = 1 /r s. It seems likely
+that, when suitably rescaled, hs converges as s → ∞ to a function that proves a
+sharp bound in the setting of [CE]. (One can check that this ho lds for the functions
+constructed below when n = 1.) That would put the mysterious functions from that
+paper into a broader context and exhibit them as limits of fam ilies of functions.
+We have not been able to prove Conjecture 9.4, but we can prove the onedimensional analogue. Of course, minimizing potential ene rgy in R1 is completely
+trivial, so this result has no interesting geometric conseq uences. However, it is not
+obvious that Proposition 9.3 proves a sharp bound even in thi s trivial case, so we
+view its sharpness as an argument in favor of Conjecture 9.4.
+Proposition 9.6. Let f : (0 , ∞ ) → R be completely monotonic and satisfy f (x) =
+O
+(
+|x|− 1/ 2− ε )
+for some ε > 0 as |x| → ∞ . Then there exists a function h : R → R
+such that h(x) ≤ f
+(
+x2)
+for all x ∈ R\{0}, h is the Fourier transform of a continuous
+function ˆh : R → R with support in [− 1, 1], ˆh(t) ≥ 0 for all t ∈ R, and
+ˆh(0) − h(0) =
+∑
+k∈Z\{ 0}
+f
+(
+k2)
+.
+For notational convenience, deﬁne ˜f (x) = f
+(
+x2)
+for x ∈ R \ {0} (and let ˜f ′(x) =
+2xf ′(x2) denote its derivative). Then we can take
+h(x) =
+∑
+k∈Z\{ 0}
+˜f (k)
+(sin π (x − k)
+π (x − k)
+) 2
++
+∑
+k∈Z\{ 0}
+˜f ′(k)
+(
+sin π (x − k)
+) 2
+π 2(x − k)
+− 2
+(sin πx
+πx
+) 2 ∞∑
+k=1
+(˜f (k) + k ˜f ′(k)
+)
+.
+(Of course we deﬁne h(x) by continuity when x ∈ Z.) By the mean value theorem
+and the fact that f ′ is increasing and nonpositive,
+⏐
+⏐
+⏐
+⏐
+f (x) − f (x/ 2)
+x/ 2
+⏐
+⏐
+⏐
+⏐ ≥ |f ′(x)|,
+which implies that |xf ′(x)|= O
+(
+|x|− 1/ 2− ε )
+; thus, the sum of k ˜f ′(k) in the deﬁnition
+of h converges, because ˜f ′(k) = 2 kf ′(
+k2)
+.
+We have no reason to think that these functions are the only on es that prove a
+sharp bound in Proposition 9.3 for n = 1, but they are the only ones we know how to
+construct. We prove below that they satisfy the properties l isted in Proposition 9.6.
+142 HENRY COHN AND ABHINA V KUMAR
+The construction of h is based on a variant of the Shannon sampling theorem
+for band-limited functions (see Theorem 9 in [V] for the part icular interpolation
+formula we use). It is natural to search for a function h such that ˆh vanishes
+outside [ − 1, 1], by analogy with the one-dimensional construction in Sec tion 5 of
+[CE]. One can reconstruct such a function from its values and derivatives at the
+integers, assuming h is integrable, via
+h(x) =
+∑
+k∈Z
+h(k)
+(sin π (x − k)
+π (x − k)
+) 2
++
+∑
+k∈Z
+h′(k)
+(
+sin π (x − k)
+) 2
+π 2(x − k) .
+We will not require this general fact, but it is important mot ivation for the deﬁnition
+of h.
+It is easy to check from the deﬁnition of h that h(k) = ˜f (k) and h′(k) = ˜f ′(k)
+for k ∈ Z \ {0}. These conditions are necessary if h is to prove a sharp bound in
+Proposition 9.3. We also have h′(0) = 0 (in fact, h is even). However, the value of
+h(0), which is given by
+h(0) = − 2
+∞∑
+k=1
+(˜f (k) + k ˜f ′(k)
+)
+,
+is more mysterious. Setting h(0) = ˜f (0) would make no sense, because ˜f (0) = f (0),
+which is frequently undeﬁned. The value we have chosen for h(0) makes h have
+the right properties, but we know no motivation for it that do es not rely on some
+calculation.
+Because (sin πx
+πx
+) 2
+=
+∫ 1
+− 1
+(1 − |t|)e2πitx dt
+and
+(sin πx )2
+π 2x =
+∫ 1
+− 1
+sgn t
+2πi e2πitx dt,
+h is the Fourier transform of a function ˆh supported on [ − 1, 1]. Because h is even, ˆh
+is also even, so it suﬃces to compute ˆh(t) for t ∈ [0, 1]. (Of course the simpliﬁcation
+is inessential, but it avoids absolute value signs.) For suc h t, one ﬁnds that
+ˆh(t) = 2(1 − t)
+∞∑
+k=1
+˜f (k) cos 2πkt − 1
+π
+∞∑
+k=1
+˜f ′(k) sin 2πkt
+− 2(1 − t)
+∞∑
+k=1
+(˜f (k) + k ˜f ′(k)
+)
+.
+One motivation for the value of h(0) is that if one formally computes ˆh′(1), one
+gets the answer 0. However, we do not require this fact and mak e no attempt to
+justify it.
+To complete the proof of Proposition 9.6, we must prove that h(x) ≤ f
+(
+x2)
+for
+all x ̸= 0 and ˆh(t) ≥ 0 for all t. One potential approach is to reduce to the case of
+f (x) = e− cx with c > 0: by Bernstein’s theorem (Theorem 12b in [Wid, p. 161]),
+there exists a weakly increasing function α : [0 , ∞ ) → R such that for all x > 0,
+f (x) =
+∫ ∞
+0
+e− cx dα (c).
+UNIVERSALLY OPTIMAL DISTRIBUTION OF POINTS ON SPHERES 143
+We can thus assume without loss of generality that f (x) = e− cx with c > 0. (There
+is no contribution from c = 0 because if there were, then f would not decay at
+inﬁnity.) To see that the inequalities we need are preserved under this reduction,
+we must check that integration over c commutes with the sums over k in the formulas
+for h and ˆh. That follows from Fubini’s theorem.
+We have not fully carried out this approach, but it is likely p ossible. For the less
+general case of f (x) = e− c√ x, which corresponds to the special case when not only
+f but also x ↦→ f
+(
+x2)
+is completely monotonic, the inequality h(x) ≤ f
+(
+x2)
+is very
+nearly proved in Theorem 8 of [GV], which constructs similar functions to solve a
+related optimization problem. That paper does not contain p recisely the inequality
+we need, but a simple modiﬁcation of the techniques used ther e suﬃces, and one
+can furthermore prove that ˆh(t) ≥ 0 by computing ˆh explicitly and manipulating
+it. This proof suﬃces for potential functions f such that x ↦→ f
+(
+x2)
+is completely
+monotonic, but it is somewhat complicated and unilluminati ng.
+Here we check these inequalities (and hence prove Propositi on 9.6) via a more
+conceptual approach, by proving that they follow from the co rresponding assertions
+about codes on S1 by taking limits. Consider N points on S1, under the completely
+monotonic potential function g; we will deﬁne g in terms of f shortly. In the proof
+of Theorem 1.2, we constructed an auxiliary function hN,g that proved a sharp
+bound for the g-potential energy in Proposition 4.1. When N is odd, one can write
+it down explicitly as follows. Deﬁne F (t) = ( TN (t) − 1)/ (t − 1), where TN is the
+N -th Chebyshev polynomial, given by TN (cos θ ) = cos N θ. (The roots of F are the
+inner products other than 1 in the regular N -gon.)
+Lemma 9.7. When N is odd,
+hN,g (t) = F (t)
+N 2
+∑
+r:F (r)=0
+ar + br(t − r)
+(t − r)2 ,
+where
+ar = 2(1 − r)2(1 + r)g(2 − 2r)
+and
+br = − 4(1 − r)2(1 + r)g′(2 − 2r) − 2(1 − r)(1 + 2r)g(2 − 2r).
+The sum is over all roots r of F , each included only once despite the fact that
+they are double roots. The proof of this formula amounts to ve rifying that the right
+side is the Hermite interpolation of t ↦→ g(2 − 2t) to second order at the roots of F ,
+which is a straightforward calculation. (The case of even N diﬀers slightly because
+one must treat the single root r = − 1 of F diﬀerently. We will assume without loss
+of generality that N is odd, but the even case can easily be handled by the same
+techniques.)
+We deﬁne g by
+g(x) = f
+(
+N 2x/
+(
+4π 2))
+.
+The motivation is that as N → ∞ ,
+g
+(
+2 − 2 cos(2πx/N )
+)
+= ˜f
+(
+(N/π ) sin(πx/N )
+)
+→ ˜f (x),
+which suggests the following lemma.
+144 HENRY COHN AND ABHINA V KUMAR
+Lemma 9.8. For g(x) = f
+(
+N 2x/
+(
+4π 2))
+, we have
+lim
+N →∞
+hN,g
+(
+cos(2πx/N )
+)
+= h(x)
+as N → ∞ with N odd.
+The same is also true for N even, but we will not need it. Note that Lemma 9.8
+makes no assertion as to the uniformity of the convergence (p ointwise convergence
+will suﬃce for our purposes).
+Proof. At a formal level, it follows from taking limits term by term a nd using
+lim
+N →∞
+g′(
+2 − 2 cos(2πx/N )
+)
+(
+N/ (2π )
+) 2 =
+˜f ′(x)
+2x
+and
+lim
+N →∞
+F
+(
+cos(2πx/N )
+)
+N 2 =
+(sin πx
+πx
+) 2
+that hN,g
+(
+cos(2πx/N )
+)
+converges to
+(sin πx
+πx
+) 2 ∞∑
+k=1
+(
+˜f (k)
+(2kx − k2
+(x − k)2 − 2kx + k2
+(x + k)2
+)
++ ˜f ′(k)
+( k2
+x − k − k2
+x + k
+))
+,
+which is equal to h(x). (The roots of F are of the form cos(2 πk/N ), which is how
+the sum over r becomes a sum over k.) To prove rigorously that
+lim
+N →∞
+hN,g
+(
+cos(2πx/N )
+)
+= h(x),
+one must justify taking the limit term by term.
+To do so, we will apply the dominated convergence theorem. Se t
+r = cos(2πk/N ) = 1 − 2 sin2(πk/N )
+for 0 < k < N/ 2, and turn the sum over r in the formula for hN,g (t) into a sum
+over all k > 0 by including zero terms for all larger k. Let t = 1 − 2 sin2(πx/N ).
+We will prove that the k-th term in the sum is O
+(
+k− 1− 2ε )
+in absolute value, where
+the implicit constant is independent of N . (Of course this calculation uses f (x) =
+O
+(
+|x|− 1/ 2− ε )
+and f ′(x) = O
+(
+|x|− 3/ 2− ε )
+.) Because
+∞∑
+k=1
+k− 1− 2ε
+converges, taking limits term by term is justiﬁed by the domi nated convergence
+theorem.
+One can calculate that the k-th term is given by
+ar + br(t − r)
+(t − r)2 = 2
+(
+2s2
+k − 1 + 3(sx/s k)2 − 4s2
+x
+)
+(
+1 − (sx/s k)2) 2 fk − 4N 2s2
+k
+(
+1 − s2
+k
+)
+π 2(
+1 − (sx/s k)2) f ′
+k,(9.2)
+where to save space we write
+sx = sin(πx/N ),
+sk = sin(πk/N ),
+fk = f
+(
+(N/π )2 sin2(πk/N )
+)
+,
+and
+f ′
+k = f ′(
+(N/π )2 sin2(πk/N )
+)
+.
+UNIVERSALLY OPTIMAL DISTRIBUTION OF POINTS ON SPHERES 145
+We always have 0 < k < N/ 2, and for ﬁxed x we have 0 < x < N/ 2 whenever
+N is suﬃciently large relative to x. It follows that sk and sx are always within
+ﬁxed constant factors of πk/N and πx/N , respectively. If k is also suﬃciently large
+relative to x, then examining (9.2) and applying N 2s2
+k = O
+(
+k2)
+shows that the right
+side is O
+(
+k− 1− 2ε )
+in absolute value, where the implicit constant is independe nt of
+N . □
+The desired inequalities for h and ˆh now follow easily. For each N ,
+hN,g
+(
+cos(2πx/N )
+)
+≤ g
+(
+2 − 2 cos(2πx/N )
+)
+,
+so it follows in the limit as N → ∞ that
+h(x) ≤ ˜f (x),
+as desired. For the other inequality, we apply Bochner’s the orem, which says that a
+continuous function h on R is the Fourier transform of a nonnegative, L1 function
+(which is of course uniquely determined by h, up to a set of measure 0) if and
+only if h is positive deﬁnite, in the sense that for all x1, . . . , x ℓ ∈ R, the ℓ × ℓ
+matrix whose i, j entry is h(xi − xj) is positive semideﬁnite. (See [St, p. 124] or
+[R, p. 303].) That property follows immediately from the cor responding property
+of hN,g , because the set of positive-semideﬁnite matrices is close d. This completes
+the proof of Proposition 9.6.
+Acknowledgements
+We thank Eiichi Bannai, Charles Doran, Noam Elkies, Gabriel e Nebe, Andreas
+Str¨ ombergsson, Frank Vallentin, and G¨ unter Ziegler for their valuable comments
+and suggestions on our manuscript.
+Appendix A. Uniqueness of spherical codes
+Uniqueness of the N -gon is trivial. For the simplex, cross polytope, icosahedron, and 600-cell, uniqueness follows from analyzing the c ase of equality in the
+B˝ or˝ oczky bound (see [B˝ o, p. 260], or see [BD] for another proof for the 600-cell). For
+the (24 , 196560, 1/ 2), (23 , 4600, 1/ 3), (8 , 240, 1/ 2), and (7 , 56, 1/ 3) spherical codes,
+uniqueness was proved by Bannai and Sloane in [BS] (see also C hapter 14 of [CS]).
+For the (6 , 27, 1/ 4), (5 , 16, 1/ 5), (22 , 275, 1/ 6), (21 , 162, 1/ 7), and (22 , 100, 1/ 11)
+codes, uniqueness follows from results in the theory of stro ngly regular graphs. In
+each case there are only two distinct inner products other th an 1, so one can form
+a graph out of the vertices by making edges correspond to one p articular inner
+product (one obtains one of two complementary graphs, which encode the same information). Using Theorem 7.4 and Lemma 7.3 from [DGS] one pr oves that these
+graphs are strongly regular and determines their parameter s. In each case there
+are unique strongly regular graphs with these parameters. F or the (6 , 27, 1/ 4) and
+(5, 16, 1/ 5) codes, see Theorem 10.6.4 and Lemma 10.9.4 in [GR]; the rem aining
+cases are dealt with in [CGS]. It follows that the Gram matric es of the corresponding point conﬁgurations are uniquely determined, so t he conﬁgurations are
+determined up to orthogonal transformations.
+For the (23, 552, 1/ 5) code, uniqueness follows from the uniqueness of the regul ar
+two-graph on 276 vertices. In any (23 , 552, 1/ 5) code, the linear programming
+bounds show that only the inner products − 1 and ± 1/ 5 occur. Such a code thus
+gives rise to an arrangement of 276 equiangular lines in R23, which corresponds
+146 HENRY COHN AND ABHINA V KUMAR
+to a regular two-graph on 276 vertices. (See Chapter 11 of [GR ] for background
+on two-graphs and equiangular line arrangements.) Goethal s and Seidel proved in
+[GS] that it is unique, which implies the uniqueness of the (2 3, 552, 1/ 5) code.
+The last remaining case is the (22 , 891, 1/ 4) spherical code. A proof of its uniqueness is implicit in [Cu] (based on results from [SY]). For an a lternative proof using
+the techniques of Bannai and Sloane, see [CK3].
+References
+[An1] N. N. Andreev, An extremal property of the icosahedron , East J. Approx. 2 (1996),
+459–462. MR 1426716 (97m:52022)
+[An2] N. N. Andreev, Location of points on a sphere with minimal energy (Russian), Tr. Mat.
+Inst. Steklova 219 (1997), 27–31; translation in Proc. Steklov Inst. Math. 219 (1997),
+20–24. MR 1642295 (99i:52019)
+[An3] N. N. Andreev, A spherical code (Russian), Uspekhi Mat. Nauk 54 (1999), 255–256;
+translation in Russian Math. Surveys 54 (1999), 251–253. MR 1706807
+[AAR] G. Andrews, R. Askey, and R. Roy, Special Functions , Encyclopedia of Mathematics
+and its Applications 71, Cambridge University Press, Cambridge, 1999. MR 1688958
+(2000g:33001)
+[As] R. Askey, Orthogonal Polynomials and Special Functions , Society for Industrial and
+Applied Mathematics, Philadelphia, Pennsylvania, 1975. M R 0481145 (58:1288)
+[Ba] J. Baez, The octonions , Bull. Amer. Math. Soc. (N.S.) 39 (2002), 145–205, arXiv:
+math.RA/0105155; see also errata in Bull. Amer. Math. Soc. 42 (2005), 213. MR 1886087
+(2003f:17003); MR 2132837
+[BMV] E. Bannai, A. Munemasa, and B. Venkov, The nonexistence of certain tight spherical
+designs, Algebra i Analiz 16 (2004), 1–23. MR 2090848 (2005e:05022)
+[BS] E. Bannai and N. J. A. Sloane, Uniqueness of certain spherical codes , Canad. J. Math.
+33 (1981), no. 2, 437–449. MR 0617634 (83a:94020)
+[B˝ o] K. B˝ or˝ oczky, Packing of spheres in spaces of constant curvature , Acta Math. Acad. Sci.
+Hung. 32 (1978), 243–261. MR 0512399 (80h:52014)
+[B˝ oJr] K. B˝ or˝ oczky, Jr.,Finite packing and covering , Cambridge Tracts in Mathematics 154,
+Cambridge University Press, Cambridge, 2004. MR 2078625 (2 005g:52045)
+[BD] P. Boyvalenkov and D. Danev, Uniqueness of the 120-point spherical 11-design in four
+dimensions, Arch. Math. (Basel) 77 (2001), no. 4, 360–368. MR 1853553 (2002f:05045)
+[CGS] P. J. Cameron, J. M. Goethals, and J. J. Seidel, Strongly regular graphs having strongly
+regular subconstituents, J. Algebra 55 (1978), 257–280. MR 0523457 (81d:05034)
+[Co] H. Cohn, New upper bounds on sphere packings II , Geom. Topol. 6 (2002), 329–353,
+arXiv:math.MG/0110010. MR 1914571 (2004b:52032)
+[CE] H. Cohn and N. D. Elkies, New upper bounds on sphere packings I , Ann. of Math. 157
+(2003), 689–714, arXiv:math.MG/0110009. MR 1973059 (2004b:11096)
+[CK1] H. Cohn and A. Kumar, Optimality and uniqueness of the Leech lattice among lattic es,
+preprint, 2003, arXiv:math.MG/0403263.
+[CK2] H. Cohn and A. Kumar, The densest lattice in twenty-four dimensions , Electron. Res.
+Announc. Amer. Math. Soc. 10 (2004), 58–67, arXiv:math.MG/0408174. MR 2075897
+(2005e:11089)
+[CK3] H. Cohn and A. Kumar, Uniqueness of the (22, 891, 1/4) spherical code, preprint, 2004,
+arXiv:math.MG/0607448.
+[CCEK] H. Cohn, J. H. Conway, N. D. Elkies, and A. Kumar, The D4 root system is not
+universally optimal , preprint, 2004, arXiv:math.MG/0607447.
+[CHS] J. Conway, R. Hardin, and N. J. A. Sloane, Packing lines, planes, etc.: packings in
+Grassmannian spaces, Experiment. Math. 5 (1996), 139–159. MR 1418961 (98a:52029)
+[CS] J. Conway and N. J. A. Sloane, Sphere Packings, Lattices and Groups , third edition, Grundlehren der Mathematischen Wissenschaften 290, Springer-Verlag, New York,
+1999. MR 1662447 (2000b:11077)
+[Cu] H. Cuypers, A note on the tight spherical 7-design in R23 and 5-design in R7, Des.
+Codes Cryptogr. 34 (2005), 333–337. MR 2128339 (2005k:05058)
+UNIVERSALLY OPTIMAL DISTRIBUTION OF POINTS ON SPHERES 147
+[D] P. J. Davis, Interpolation and Approximation , Blaisdell Publishing Company, New York,
+1963. MR 0157156 (28:393)
+[DGS] P. Delsarte, J. Goethals, and J. Seidel, Spherical codes and designs , Geometriae Dedicata 6 (1977), 363–388. MR 0485471 (58:5302)
+[Eb] W. Ebeling, Lattices and codes. A course partially based on lectures by F . Hirzebruch ,
+second edition, Advanced Lectures in Mathematics, Friedr. Vieweg & Sohn, Braunschweig, 2002. MR 1938666 (2003i:11093)
+[El] N. Elkies, Optimal codes in homogeneous spaces , unpublished manuscript, 1995.
+[Gan] R. Gangolli, Positive deﬁnite kernels on homogeneous spaces and certain stochastic processes related to L´ evy’s Brownian motion of several parameters, Ann. Inst. H. Poincar´ e
+Sect. B (N.S.) 3 (1967), 121–226. MR 0215331 (35:6172)
+[Gas] G. Gasper, Linearization of the product of Jacobi polynomials I , Canad. J. Math. 22
+(1970), 171–175. MR 0257433 (41:2084)
+[GR] C. Godsil and G. Royle, Algebraic Graph Theory , Graduate Texts in Mathematics 207,
+Springer-Verlag, New York, 2001. MR 1829620 (2002f:05002)
+[GS] J. Goethals and J. Seidel, The regular two-graph on 276 vertices, Discrete Math. 12
+(1975), 143–158. MR 0384597 (52:5471)
+[GV] S. W. Graham and J. D. Vaaler, A class of extremal functions for the Fourier transform ,
+Trans. Amer. Math. Soc. 265 (1981), no. 1, 283–302. MR 0607121 (82i:42008)
+[H] R. Hartshorne, Algebraic Geometry , Graduate Texts in Mathematics 52, SpringerVerlag, New York, 1977. MR 0463157 (57:3116)
+[HJ] R. A. Horn and C. R. Johnson, Matrix Analysis , Cambridge University Press, 1985.
+MR 0832183 (87e:15001)
+[KL] G. A. Kabatiansky and V. I. Levenshtein, Bounds for packings on a sphere and in space
+(Russian), Problemy Peredaˇ ci Informacii 14 (1978), 3–25; translation in Problems of
+Information Transmission 14 (1978), no. 1, 1–17. MR 0514023 (58:24018)
+[KY1] A. V. Kolushov and V. A. Yudin, On the Korkin-Zolotarev construction (Russian),
+Diskret. Mat. 6 (1994), 155–157; translation in Discrete Math. Appl. 4 (1994), 143–146.
+MR 1273240 (95j:52033)
+[KY2] A. V. Kolushov and V. A. Yudin, Extremal dispositions of points on the sphere , Anal.
+Math. 23 (1997), 25–34. MR 1630001 (99f:41039)
+[Lee] J. Leech, Equilibrium of sets of particles on a sphere , Math. Gaz. 41 (1957), 81–90.
+MR 0086325 (19:165b)
+[Lev1] V. I. Levenshtein, On bounds for packings in n-dimensional Euclidean space (Russian),
+Dokl. Akad. Nauk SSSR 245 (1979), 1299–1303; translation in Soviet Math. Dokl. 20
+(1979), 417–421. MR 0529659 (80d:52017)
+[Lev2] V. I. Levenshtein, Designs as maximum codes in polynomial metric spaces , Acta Appl.
+Math. 29 (1992), 1–82. MR 1192833 (93j:05012)
+[Lev3] V. I. Levenshtein, Universal bounds for codes and designs , in Handbook of Coding Theory, Vol. I , North-Holland, Amsterdam, 1998, pages 499–648. MR 166794 2
+[Man] Yu. I. Manin, Cubic Forms: Algebra, Geometry, Arithmetic , second edition, NorthHolland Mathematical Library 4, North-Holland, Amsterdam, 1986. MR 0833513
+(87d:11037)
+[Mar] J. Martinet, Perfect lattices in Euclidean spaces , Grundlehren der Mathematischen Wissenschaften 327, Springer-Verlag, Berlin, 2003. MR 1957723 (2003m:11099)
+[MRR W] R. J. McEliece, E. R. Rodemich, H. C. Rumsey, Jr., and L . R. W elch, New upper
+bounds on the rate of a code via the Delsarte-MacWilliams ine qualities, IEEE Trans.
+Information Theory 23 (1977), 157–166. MR 0439403 (55:12296)
+[Mo] H. Montgomery, Minimal theta functions , Glasgow Math. J. 30 (1988), 75–85.
+MR 0925561 (89d:11029)
+[OS] A. M. Odlyzko and N. J. A. Sloane, New bounds on the number of unit spheres that can
+touch a unit sphere in n dimensions, J. Combin. Theory Ser. A 26 (1979), 210–214.
+MR 0530296 (81d:52010)
+[PS] G. P´ olya and G. Szeg˝ o, Problems and theorems in analysis, Vol. II , revised and enlarged
+translation by C. E. Billigheimer of the fourth German editi on, Springer-Verlag, New
+York-Heidelberg, 1976. MR 0465631 (57:5529)
+[R] W. Rudin, Functional Analysis , second edition, McGraw-Hall, New York, 1991.
+MR 1157815 (92k:46001)
+148 HENRY COHN AND ABHINA V KUMAR
+[SS] P. Sarnak and A. Str¨ ombergsson, Minima of Epstein ’s zeta function and heights of ﬂat
+tori, Invent. Math. 165 (2006), 115–151. MR 2221138
+[Sch] I. J. Schoenberg, Positive deﬁnite functions on spheres , Duke Math. J. 9 (1942), 96–108.
+MR 0005922 (3:232c)
+[SchW] K. Sch¨ utte and B. L. van der W aerden, Auf welcher Kugel haben 5, 6, 7, 8 oder 9
+Punkte mit Mindestabstand 1 Platz? , Math. Ann. 123 (1951), 96–124. MR 0042150
+(13:61e)
+[SZ] P. D. Seymour and T. Zaslavsky, Averaging sets: a generalization of mean values and
+spherical designs , Adv. in Math. 52 (1984), 213–240. MR 0744857 (85m:05031)
+[SY] E. Shult and A. Yanushka, Near n-gons and line systems , Geom. Dedicata 9 (1980),
+1–72. MR 0566437 (82b:51018)
+[Si] B. Simon, Orthogonal polynomials on the unit circle, Part 1: Classica l theory , American
+Mathematical Society Colloquium Publications 54, American Mathematical Society,
+Providence, RI, 2005. MR 2105088 (2006a:42002a)
+[Sl] N. J. A. Sloane, with the collaboration of R. H. Hardin, W . D. Smith, and others, Tables
+of spherical codes , published electronically at http://www.research.att.com/~njas/
+packings/.
+[StW] E. M. Stein and G. W eiss, Introduction to Fourier analysis on Euclidean spaces , Princeton Mathematical Series 32, Princeton University Press, Princeton, New Jersey, 1971.
+MR 0304972 (46:4102)
+[St] R. Strichartz, A Guide to Distribution Theory and Fourier Transforms , CRC Press,
+Boca Raton, Florida, 1994. MR 1276724 (95f:42001)
+[Sz] G. Szeg˝ o, Orthogonal Polynomials , fourth edition, AMS Colloquium Publications
+23, American Mathematical Society, Providence, Rhode Island , 1975. MR 0372517
+(51:8724)
+[T] J. Tits, Ovo¨ides et groupes de Suzuki , Arch. Math. 13 (1962), 187–198. MR 0140572
+(25:3990)
+[V] J. D. Vaaler, Some extremal functions in Fourier analysis , Bull. Amer. Math. Soc.
+(N.S.) 12 (1985), 183–216. MR 0776471 (86g:42005)
+[W a] H. C. W ang, Two-point homogeneous spaces , Ann. Math. 55 (1952), 177–191.
+MR 0047345 (13:863a)
+[Wid] D. V. Widder, The Laplace Transform , Princeton University Press, Princeton, New
+Jersey, 1941. MR 0005923 (3:232d)
+[Wil] R. A. Wilson, Vector stabilizers and subgroups of Leech lattice groups , J. Algebra 127
+(1989), 387–408. MR 1028461 (91g:20020)
+[Y] V. A. Yudin, Minimum potential energy of a point system of charges (Russian),
+Diskret. Mat. 4 (1992), 115–121; translation in Discrete Math. Appl. 3 (1993), 75–81.
+MR 1181534 (93f:31008)
+Microsoft Research, One Microsoft W ay, Redmond, W ashingto n 98052-6399
+E-mail address : cohn@microsoft.com
+Department of Mathematics, Harvard University, Cambridge, Ma ssachusetts 02138
+E-mail address : abhinav@math.harvard.edu
+Current address : Microsoft Research, One Microsoft W ay, Redmond, W ashingt on 98052-6399
+E-mail address : abhinavk@microsoft.com

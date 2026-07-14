@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render JAMS content×style quadrant reports in cross_view / within_view HTML style."""
+"""DEPRECATED: use scripts/render_jams_reports.R (R engine). Kept for reference only."""
 
 from __future__ import annotations
 

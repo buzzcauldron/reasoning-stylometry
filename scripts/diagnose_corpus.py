@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Diagnose why a stylometry reference corpus succeeds or fails."""
+"""DEPRECATED: use scripts/diagnose_corpus.R (stylo::crossv). Kept for reference only."""
 
 from __future__ import annotations
 

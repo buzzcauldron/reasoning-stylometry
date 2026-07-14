@@ -1,0 +1,21 @@
+{
+  "corpus_dir": "corpus_classify/reference_research/balanced",
+  "n_texts": 17948,
+  "n_geometric": 8974,
+  "n_algebraic": 8974,
+  "n_features_used": 100,
+  "class_separability_l1": 0.0054,
+  "stylo_loo": {
+    "n_sampled": 500,
+    "correct": 254,
+    "accuracy_pct": 50.8,
+    "confusion_matrix": [
+      138,
+      128,
+      118,
+      116
+    ],
+    "method": "stylo::crossv leave-one-out on classify() training matrix"
+  },
+  "verdict": "WEAK: stylo crossv LOO accuracy only 51% on sample"
+}

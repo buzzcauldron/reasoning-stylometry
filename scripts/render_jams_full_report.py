@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render comprehensive JAMS quadrant stylometric analysis HTML report."""
+"""DEPRECATED: use scripts/render_jams_reports.R (R engine). Kept for reference only."""
 
 from __future__ import annotations
 
@@ -661,7 +661,11 @@ def paper_section(p: dict, analysis: dict) -> str:
 
 
 def heatmap_section(analysis: dict) -> str:
-    all_d = analysis["full_papers"]["distance_matrix"]
+    fp = analysis["full_papers"]
+    all_d = fp.get("distance_matrix_top18") or fp.get("distance_matrix", {})
+    if isinstance(all_d, list):
+        papers = analysis.get("full_papers", {}).get("papers", {})
+        all_d = {k: v for k, v in zip(papers.keys(), all_d)} if papers else {}
     ref_scores: dict[str, float] = {}
     for dists in all_d.values():
         for ref, val in dists.items():
@@ -671,17 +675,20 @@ def heatmap_section(analysis: dict) -> str:
     row_data = []
     for paper_stem, dists in all_d.items():
         short = paper_stem.split("__")[2] if "__" in paper_stem else paper_stem
-        row_vals = [dists[ref] for ref in top_refs]
-        all_vals.extend(row_vals)
+        row_vals = [dists.get(ref) for ref in top_refs]
+        all_vals.extend(v for v in row_vals if v is not None)
         row_data.append((short, row_vals))
     vmin, vmax = min(all_vals), max(all_vals)
     rows_html = []
     for short, row_vals in row_data:
         cells = [f'<th class="sticky">{html.escape(short[:40])}</th>']
         for ref, v in zip(top_refs, row_vals):
-            cells.append(
-                f'<td style="{heat_color(v, vmin, vmax)}" title="{html.escape(ref)}">{v:.2f}</td>'
-            )
+            if v is None:
+                cells.append(f'<td style="background:#f0f0f0">—</td>')
+            else:
+                cells.append(
+                    f'<td style="{heat_color(v, vmin, vmax)}" title="{html.escape(ref)}">{v:.2f}</td>'
+                )
         rows_html.append("<tr>" + "".join(cells) + "</tr>")
     ref_classes = analysis["reference_classes"]
     header = '<tr><th class="sticky">Paper ↓ / Ref →</th>' + "".join(

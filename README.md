@@ -1,44 +1,40 @@
 # Reasoning stylometry
 
-Stylometric analysis of four JAMS papers on a **content × style** quadrant (geometric vs algebraic reasoning register). Expert v4 rubric ratings are compared against [stylo](https://github.com/computationalstylistics/stylo) Burrows-Delta stopword classification on full PDF text.
+Stylometric analysis of four JAMS papers on a **content × style** quadrant. **R/stylo is the engine**; Python is only a thin launcher shell.
 
-## Test papers
-
-| Paper | Content | Expert style |
-|-------|---------|--------------|
-| Masur & Schleimer | geometric | geometric |
-| Bateman & Katz | geometric | algebraic |
-| Dritschel & McCullough | algebraic | geometric |
-| Hrushovski | algebraic | algebraic |
-
-## Quick start
-
-Requires R with **stylo**, Python 3, and `curl`.
+## Run analysis
 
 ```bash
-# Build reference corpus (see corpus_classify/CORPUS.md)
-python3 scripts/scrape_contemporary_arxiv.py --target-per-style 430 --merge
-python3 scripts/build_research_reference.py --resume
-python3 scripts/balance_research_corpus.py
-
-# End-to-end JAMS classification + HTML reports
-./scripts/run_jams_report.sh
-Rscript scripts/export_stylo_analysis.R
-python3 scripts/render_jams_full_report.py
+python3 scripts/run.py
+# or
+Rscript scripts/run_stylo_analysis.R
+# or
+bash scripts/run_jams_report.sh
 ```
 
-Reports land in `output/jams_quadrant/` and `~/Downloads/jams_quadrant_full_report.html`.
+Pipeline (all R except the launcher):
+
+1. `extract_jams_pdfs.R` — PDF → text (pdftools or pdftotext)
+2. `run_jams_quadrant.R` — `stylo::classify`, `rolling.classify`
+3. `diagnose_corpus.R` — `stylo::crossv` LOO on training matrix
+4. `export_stylo_analysis.R` — JSON export via stylo distance.table / dist.delta
+5. `render_jams_reports.R` — HTML reports (cross, within, full statistical)
+
+Reports: `~/Downloads/jams_quadrant_*.html` and `output/jams_quadrant/`.
+
+## Requirements
+
+- R packages: `stylo`, `stopwords`, `jsonlite`
+- Optional: `pdftools` for PDF extraction
+- Python 3 (launcher only for `scripts/run.py`)
+
+## Corpus build (offline, legacy Python)
+
+Reference corpus construction still uses Python scripts (`build_research_reference.py`, etc.). See `corpus_classify/CORPUS.md`. After building chunks, point stylo at `corpus_classify/reference_research/balanced`.
 
 ## Layout
 
-- `scripts/` — pipeline, corpus build, benchmarks, HTML renderers
-- `corpus_classify/jams_quadrant/` — full extracted JAMS test texts
-- `corpus_classify/reference_research/manifest.json` — arXiv source list (860 papers, balanced geo/alg)
-- `corpus_classify/CORPUS.md` — corpus design and failure-mode notes
-- `output/jams_quadrant/` — stylo results, rolling plots, HTML reports
-
-Training chunks (`reference_research/chunks/`, `balanced/`) are not in git — regenerate with the build scripts above (~18k chunks).
-
-## Key findings
-
-Stopword centroids on the research corpus are nearly indistinguishable (L1 ≈ 0.005; sampled LOO ≈ 53%). Rolling-window attribution on JAMS papers yields weak margins and 2/4 agreement with expert style labels at majority vote; high-confidence slice subsets are sparse. See the full statistical report for Wilson CIs, binomial tests, and corpus health diagnostics.
+- `R/` — paper metadata, HTML helpers, report rendering
+- `scripts/*.R` — stylo pipeline
+- `scripts/run.py` — invokes R only (no stylometry logic)
+- `scripts/*.py` (except `run.py`) — corpus/data prep only, not the analysis engine

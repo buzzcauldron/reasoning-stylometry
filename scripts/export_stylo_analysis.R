@@ -1,5 +1,7 @@
-# Export detailed stylometric analysis JSON for HTML report generation.
-# Run after classify/rolling: Rscript scripts/export_stylo_analysis.R
+# Export stylometric analysis JSON from stylo classify/rolling RDS outputs.
+# All distances and LOO use stylo internals (distance.table, dist.delta, crossv).
+# Run after: Rscript scripts/run_jams_quadrant.R
+library(stylo)
 library(jsonlite)
 
 out_dir <- "output/jams_quadrant"
@@ -27,113 +29,103 @@ cohens_h <- function(p1, p2) {
   2 * (asin(sqrt(p1)) - asin(sqrt(p2)))
 }
 
-delta_to_centroid <- function(row_vec, centroid_vec) {
-  mean(abs(as.numeric(row_vec) - as.numeric(centroid_vec)))
-}
-
-delta_to_refs <- function(test_row, train_mat) {
-  d <- sapply(seq_len(nrow(train_mat)), function(j) {
-    mean(abs(as.numeric(test_row) - train_mat[j, ]))
-  })
-  names(d) <- rownames(train_mat)
-  d
-}
-
 ref_labels <- rownames(full$frequencies.training.set)
 ref_class <- ifelse(grepl("^geometric", ref_labels), "geometric", "algebraic")
+feats_used <- full$features.actually.used
 
-train_freq <- as.matrix(full$frequencies.training.set)
+train_freq <- as.matrix(full$frequencies.training.set[, feats_used, drop = FALSE])
 geo_idx <- which(ref_class == "geometric")
 alg_idx <- which(ref_class == "algebraic")
 geo_centroid <- colMeans(train_freq[geo_idx, , drop = FALSE])
 alg_centroid <- colMeans(train_freq[alg_idx, , drop = FALSE])
 
-feats_used <- full$features.actually.used
-train_sub_all <- train_freq[, feats_used, drop = FALSE]
-geo_c_feat <- colMeans(train_sub_all[geo_idx, , drop = FALSE])
-alg_c_feat <- colMeans(train_sub_all[alg_idx, , drop = FALSE])
-
-class_sep_l1 <- mean(abs(geo_c_feat - alg_c_feat))
-top_disc_idx <- order(abs(geo_c_feat - alg_c_feat), decreasing = TRUE)[seq_len(min(15, length(feats_used)))]
+class_sep_l1 <- mean(abs(geo_centroid - alg_centroid))
+top_disc_idx <- order(abs(geo_centroid - alg_centroid), decreasing = TRUE)[seq_len(min(15, length(feats_used)))]
 top_discriminators <- lapply(top_disc_idx, function(j) {
   list(
     word = feats_used[j],
-    geo_centroid = round(geo_c_feat[j], 5),
-    alg_centroid = round(alg_c_feat[j], 5),
-    geo_minus_alg = round(geo_c_feat[j] - alg_c_feat[j], 5)
+    geo_centroid = round(geo_centroid[j], 5),
+    alg_centroid = round(alg_centroid[j], 5),
+    geo_minus_alg = round(geo_centroid[j] - alg_centroid[j], 5)
   )
 })
 
-sample_loo <- function(freq_mat, labels, n_sample = 2000, seed = 42) {
+stylo_delta <- function(a, b) {
+  as.numeric(dist.delta(rbind(a, b), scale = TRUE))[1]
+}
+
+stylo_delta_row_to_centroid <- function(row_mat, centroid_mat) {
+  vapply(seq_len(nrow(row_mat)), function(i) stylo_delta(row_mat[i, , drop = FALSE], centroid_mat), numeric(1))
+}
+
+geo_intra <- mean(stylo_delta_row_to_centroid(train_freq[geo_idx, , drop = FALSE], geo_centroid))
+alg_intra <- mean(stylo_delta_row_to_centroid(train_freq[alg_idx, , drop = FALSE], alg_centroid))
+geo_to_alg <- mean(stylo_delta_row_to_centroid(train_freq[geo_idx, , drop = FALSE], alg_centroid))
+alg_to_geo <- mean(stylo_delta_row_to_centroid(train_freq[alg_idx, , drop = FALSE], geo_centroid))
+
+stylo_loo_sample <- function(freq_mat, labels, n_sample = 500L, seed = 42L) {
   set.seed(seed)
   n <- nrow(freq_mat)
   idx <- sample(seq_len(n), min(n_sample, n))
-  correct <- 0L
-  for (i in idx) {
-    g_idx <- which(labels == "geometric" & seq_len(n) != i)
-    a_idx <- which(labels == "algebraic" & seq_len(n) != i)
-    cg <- colMeans(freq_mat[g_idx, , drop = FALSE])
-    ca <- colMeans(freq_mat[a_idx, , drop = FALSE])
-    v <- freq_mat[i, ]
-    pred <- if (delta_to_centroid(v, cg) < delta_to_centroid(v, ca)) "geometric" else "algebraic"
-    if (pred == labels[i]) correct <- correct + 1L
-  }
-  total <- length(idx)
+  sub <- freq_mat[idx, , drop = FALSE]
+  lab <- labels[idx]
+  cv <- crossv(
+    training.set = sub,
+    cv.mode = "leaveoneout",
+    classes.training.set = lab,
+    classification.method = "delta"
+  )
+  correct <- sum(cv$predicted == cv$expected, na.rm = TRUE)
+  total <- length(cv$expected)
   ci <- wilson_ci(correct, total)
   list(
     n_sampled = total,
-    correct = correct,
+    correct = as.integer(correct),
     accuracy = round(correct / total, 4),
     accuracy_pct = round(100 * correct / total, 2),
     wilson_ci_low = round(ci[1], 4),
     wilson_ci_high = round(ci[2], 4),
-    note = "Sampled leave-one-out Burrows-Delta on training feature matrix (stylo stopwords)"
+    confusion_matrix = as.list(as.matrix(cv$confusion_matrix)),
+    method = "stylo::crossv leave-one-out (Burrows Delta)",
+    note = sprintf("Sampled %d/%d training chunks via stylo crossv", total, n)
   )
 }
 
-loo_train <- sample_loo(train_sub_all, ref_class)
+loo_train <- stylo_loo_sample(train_freq, ref_class, as.integer(Sys.getenv("STYLO_LOO_SAMPLE", "500")))
 
-geo_intra <- mean(sapply(geo_idx, function(i) delta_to_centroid(train_sub_all[i, ], geo_c_feat)))
-alg_intra <- mean(sapply(alg_idx, function(i) delta_to_centroid(train_sub_all[i, ], alg_c_feat)))
-geo_to_alg <- mean(sapply(geo_idx, function(i) delta_to_centroid(train_sub_all[i, ], alg_c_feat)))
-alg_to_geo <- mean(sapply(alg_idx, function(i) delta_to_centroid(train_sub_all[i, ], geo_c_feat)))
+distance_table <- as.matrix(full$distance.table)
+colnames(distance_table) <- ref_labels
 
-analyze_paper <- function(i, classify_result) {
+analyze_paper_from_stylo <- function(i, classify_result, dist_mat, train_names, train_class) {
   stem <- rownames(classify_result$frequencies.test.set)[i]
-  test_row <- classify_result$frequencies.test.set[i, classify_result$features.actually.used, drop = FALSE]
-  train_sub <- classify_result$frequencies.training.set[, classify_result$features.actually.used, drop = FALSE]
-  dists <- delta_to_refs(test_row, train_sub)
-  geo_mean <- mean(dists[ref_class == "geometric"])
-  alg_mean <- mean(dists[ref_class == "algebraic"])
-  nn <- sort(dists)[1:10]
-  nn_out <- lapply(names(nn), function(nm) {
+  dists <- dist_mat[i, ]
+  names(dists) <- train_names
+  geo_mean <- mean(dists[train_class == "geometric"])
+  alg_mean <- mean(dists[train_class == "algebraic"])
+  nn_idx <- order(dists)[1:10]
+  nn_out <- lapply(nn_idx, function(j) {
+    nm <- train_names[j]
     list(
       id = nm,
       short_id = sub("^[^_]+__([^_]+(?:_[^_]+)*)__.*", "\\1", nm),
-      class = ref_class[match(nm, ref_labels)],
-      distance = round(unname(nn[nm]), 4)
+      class = train_class[j],
+      distance = round(dists[j], 4)
     )
   })
   nn_classes <- vapply(nn_out, function(x) x$class, character(1))
-  nn_geo <- sum(nn_classes == "geometric")
 
-  test_freq <- as.numeric(classify_result$frequencies.test.set[i, ])
-  names(test_freq) <- colnames(classify_result$frequencies.test.set)
-  feats <- classify_result$features.actually.used
-  test_freq <- test_freq[feats]
-  geo_c <- geo_centroid[feats]
-  alg_c <- alg_centroid[feats]
-  geo_pull <- test_freq - geo_c
-  alg_pull <- test_freq - alg_c
+  test_freq <- as.numeric(classify_result$frequencies.test.set[i, feats_used, drop = FALSE])
+  names(test_freq) <- feats_used
+  geo_pull <- test_freq - geo_centroid
+  alg_pull <- test_freq - alg_centroid
   style_score <- alg_pull - geo_pull
-
   ord <- order(abs(style_score), decreasing = TRUE)[1:15]
   top_features <- lapply(ord, function(j) {
     list(
-      word = feats[j],
+      word = feats_used[j],
       test_freq = round(test_freq[j], 4),
-      geo_centroid = round(geo_c[j], 4),
-      alg_centroid = round(alg_c[j], 4),
+      geo_centroid = round(geo_centroid[j], 4),
+      alg_centroid = round(alg_centroid[j], 4),
       style_score = round(style_score[j], 4)
     )
   })
@@ -147,16 +139,22 @@ analyze_paper <- function(i, classify_result) {
     alg_mean_distance = round(alg_mean, 4),
     delta_alg_minus_geo = round(alg_mean - geo_mean, 4),
     nearest_neighbors = nn_out,
-    nn_geo_count = nn_geo,
-    nn_alg_count = 10L - nn_geo,
+    nn_geo_count = sum(nn_classes == "geometric"),
+    nn_alg_count = sum(nn_classes == "algebraic"),
     top_style_features = top_features
   )
 }
 
-papers_full <- lapply(seq_len(nrow(full$frequencies.test.set)), function(i) analyze_paper(i, full))
+papers_full <- lapply(seq_len(nrow(full$frequencies.test.set)), function(i) {
+  analyze_paper_from_stylo(i, full, distance_table, ref_labels, ref_class)
+})
 names(papers_full) <- rownames(full$frequencies.test.set)
 
-papers_excerpt <- lapply(seq_len(nrow(excerpt$frequencies.test.set)), function(i) analyze_paper(i, excerpt))
+papers_excerpt <- lapply(seq_len(nrow(excerpt$frequencies.test.set)), function(i) {
+  dt_ex <- as.matrix(excerpt$distance.table)
+  colnames(dt_ex) <- ref_labels
+  analyze_paper_from_stylo(i, excerpt, dt_ex, ref_labels, ref_class)
+})
 names(papers_excerpt) <- rownames(excerpt$frequencies.test.set)
 
 rolling_export <- list()
@@ -170,11 +168,7 @@ margin_histogram <- function(margins, n_bins = 20) {
   brks <- seq(0, max(margins) * 1.001, length.out = n_bins + 1)
   counts <- as.integer(hist(margins, breaks = brks, plot = FALSE)$counts)
   lapply(seq_len(n_bins), function(i) {
-    list(
-      bin_low = round(brks[i], 4),
-      bin_high = round(brks[i + 1], 4),
-      count = counts[i]
-    )
+    list(bin_low = round(brks[i], 4), bin_high = round(brks[i + 1], 4), count = counts[i])
   })
 }
 
@@ -195,12 +189,8 @@ for (stem in paper_stems) {
   geo_ci <- wilson_ci(n_geo, total)
   bt <- binom.test(n_geo, total, p = 0.5, alternative = "two.sided")
   set.seed(42)
-  boot_shares <- replicate(2000, {
-    idx <- sample(total, total, replace = TRUE)
-    mean(slices[idx] == "geometric")
-  })
+  boot_shares <- replicate(2000, mean(slices[sample(total, total, replace = TRUE)] == "geometric"))
   boot_ci <- quantile(boot_shares, c(0.025, 0.975))
-
   lag1_same <- if (total > 1) mean(slices[-total] == slices[-1]) else NA
 
   threshold_stats <- lapply(CONF_THRESHOLDS, function(th) {
@@ -213,13 +203,9 @@ for (stem in paper_stems) {
     n_g <- sum(seg == "geometric")
     ci <- wilson_ci(n_g, n)
     list(
-      threshold = th,
-      n = as.integer(n),
-      pct = round(100 * n / total, 2),
-      geo_share = round(n_g / n, 4),
-      alg_share = round(1 - n_g / n, 4),
-      wilson_ci_low = round(ci[1], 4),
-      wilson_ci_high = round(ci[2], 4)
+      threshold = th, n = as.integer(n), pct = round(100 * n / total, 2),
+      geo_share = round(n_g / n, 4), alg_share = round(1 - n_g / n, 4),
+      wilson_ci_low = round(ci[1], 4), wilson_ci_high = round(ci[2], 4)
     )
   })
 
@@ -232,9 +218,7 @@ for (stem in paper_stems) {
     seg <- slices[lo:hi]
     seg_m <- margins[lo:hi]
     list(
-      index = b,
-      start_slice = lo,
-      end_slice = hi,
+      index = b, start_slice = lo, end_slice = hi,
       geo_share = round(mean(seg == "geometric"), 4),
       alg_share = round(mean(seg == "algebraic"), 4),
       mean_margin = round(mean(seg_m), 4),
@@ -245,8 +229,7 @@ for (stem in paper_stems) {
   top_conf <- order(margins, decreasing = TRUE)[seq_len(min(12, total))]
   top_slices <- lapply(top_conf, function(i) {
     list(
-      slice_index = as.integer(i),
-      predicted = slices[i],
+      slice_index = as.integer(i), predicted = slices[i],
       margin = round(margins[i], 4),
       word_offset = as.integer(names(r$classification.results)[i])
     )
@@ -256,22 +239,17 @@ for (stem in paper_stems) {
   eff_n <- if (!is.na(text_len)) as.integer(ceiling(text_len / SLICE_STEP)) else NA
 
   rolling_export[[stem]] <- list(
-    n_slices = total,
-    text_length = text_len,
-    effective_independent_slices = eff_n,
-    slice_step_words = SLICE_STEP,
+    n_slices = total, text_length = text_len,
+    effective_independent_slices = eff_n, slice_step_words = SLICE_STEP,
     overlap_fraction = round(SLICE_OVERLAP / SLICE_SIZE, 3),
     counts = counts,
     share_geometric = if ("geometric" %in% names(counts)) round(counts[["geometric"]] / total, 4) else 0,
     share_algebraic = if ("algebraic" %in% names(counts)) round(counts[["algebraic"]] / total, 4) else 0,
-    geo_wilson_ci_low = round(geo_ci[1], 4),
-    geo_wilson_ci_high = round(geo_ci[2], 4),
-    geo_bootstrap_ci_low = round(boot_ci[1], 4),
-    geo_bootstrap_ci_high = round(boot_ci[2], 4),
+    geo_wilson_ci_low = round(geo_ci[1], 4), geo_wilson_ci_high = round(geo_ci[2], 4),
+    geo_bootstrap_ci_low = round(boot_ci[1], 4), geo_bootstrap_ci_high = round(boot_ci[2], 4),
     binomial_p_vs_half = signif(bt$p.value, 4),
     cohens_h_vs_half = round(cohens_h(n_geo / total, 0.5), 4),
-    margin_mean = round(mean(margins), 4),
-    margin_sd = round(sd(margins), 4),
+    margin_mean = round(mean(margins), 4), margin_sd = round(sd(margins), 4),
     margin_median = round(median(margins), 4),
     margin_p05 = round(as.numeric(quantile(margins, 0.05)), 4),
     margin_p10 = round(as.numeric(quantile(margins, 0.10)), 4),
@@ -285,18 +263,20 @@ for (stem in paper_stems) {
     confidence_weighted_geo_share = round(conf_weighted_geo, 4),
     threshold_stats = threshold_stats,
     timeline_bins = bins,
-    top_confident_slices = top_slices
+    top_confident_slices = top_slices,
+    stylo_method = "stylo::rolling.classify (Burrows Delta)"
   )
 }
 
-distance_matrix <- lapply(rownames(full$frequencies.test.set), function(row) {
-  idx <- match(row, rownames(full$frequencies.test.set))
-  test_row <- full$frequencies.test.set[idx, full$features.actually.used, drop = FALSE]
-  train_sub <- full$frequencies.training.set[, full$features.actually.used, drop = FALSE]
-  vals <- delta_to_refs(test_row, train_sub)
-  as.list(round(vals, 4))
-})
-names(distance_matrix) <- rownames(full$frequencies.test.set)
+# Top-18 nearest refs per paper from stylo distance.table (not full 17k matrix)
+distance_matrix_top <- setNames(
+  lapply(rownames(distance_table), function(row) {
+    dists <- distance_table[row, ]
+    top_idx <- order(dists)[1:18]
+    as.list(setNames(round(dists[top_idx], 4), ref_labels[top_idx]))
+  }),
+  rownames(distance_table)
+)
 
 manifest_path <- "corpus_classify/reference_research/manifest.json"
 manifest_meta <- if (file.exists(manifest_path)) {
@@ -342,10 +322,7 @@ load_benchmark <- function(path) {
 corpus_health <- list(
   class_separability_l1 = round(class_sep_l1, 6),
   loo_sample = loo_train,
-  intra_class_delta = list(
-    geometric_mean = round(geo_intra, 4),
-    algebraic_mean = round(alg_intra, 4)
-  ),
+  intra_class_delta = list(geometric_mean = round(geo_intra, 4), algebraic_mean = round(alg_intra, 4)),
   inter_class_delta = list(
     geo_chunks_to_alg_centroid = round(geo_to_alg, 4),
     alg_chunks_to_geo_centroid = round(alg_to_geo, 4)
@@ -357,7 +334,7 @@ corpus_health <- list(
       "CRITICAL: stopword centroids nearly identical on stylo features (L1=%.4f)", class_sep_l1
     ),
     if (loo_train$accuracy < 0.85) sprintf(
-      "WEAK: sampled LOO accuracy %.1f%% (95%% Wilson %.1f–%.1f%%) on training matrix",
+      "WEAK: stylo crossv LOO accuracy %.1f%% (95%% Wilson %.1f–%.1f%%)",
       loo_train$accuracy_pct, 100 * loo_train$wilson_ci_low, 100 * loo_train$wilson_ci_high
     ),
     if (class_sep_l1 >= 0.005 && loo_train$accuracy >= 0.85) "Training matrix passes separability checks"
@@ -367,10 +344,12 @@ corpus_health$verdict <- corpus_health$verdict[!vapply(corpus_health$verdict, fu
 
 export <- list(
   meta = list(
-    method = "Burrows Delta",
-    features = "175 English stopwords (Snowball)",
+    engine = "stylo",
+    stylo_version = as.character(packageVersion("stylo")),
+    method = "Burrows Delta via stylo::classify / rolling.classify",
+    features = sprintf("%d English stopwords (Snowball), %d used after culling", length(stopwords::stopwords("en", "snowball")), length(feats_used)),
     n_features_used = length(feats_used),
-    train_dir = "corpus_classify/reference_research/balanced",
+    train_dir = Sys.getenv("STYLO_TRAIN_DIR", "corpus_classify/reference_research/balanced"),
     reference_n = length(ref_labels),
     reference_geometric = sum(ref_class == "geometric"),
     reference_algebraic = sum(ref_class == "algebraic"),
@@ -380,14 +359,15 @@ export <- list(
     slice_step = SLICE_STEP,
     culling = 0,
     classification_method = "delta",
-    confidence_note = "Slice margin = Delta(2nd best) - Delta(best); larger = more confident assignment",
-    inference_note = "Rolling slices overlap (150/250); Wilson/bootstrap CIs treat slices as i.i.d. — conservative; effective independent slices ≈ ceil(words/100)"
+    distance_source = "stylo classify distance.table + dist.delta(scale=TRUE) for centroids",
+    confidence_note = "Slice margin from stylo rolling.classify scores: Delta(2nd) - Delta(1st)",
+    inference_note = "LOO via stylo::crossv; Wilson/bootstrap CIs on rolling slices treat overlap windows as i.i.d."
   ),
   corpus_health = corpus_health,
   full_papers = list(
     success_rate = as.numeric(full$success.rate),
     papers = papers_full,
-    distance_matrix = distance_matrix
+    distance_matrix_top18 = distance_matrix_top
   ),
   excerpts = list(
     success_rate = as.numeric(excerpt$success.rate),
@@ -400,7 +380,6 @@ export <- list(
     corpora = load_benchmark("output/corpus_benchmark/benchmark.json"),
     features = load_benchmark("output/corpus_benchmark/ngram_benchmark.json")
   ),
-  reference_labels = ref_labels,
   reference_classes = as.list(setNames(as.character(ref_class), ref_labels))
 )
 

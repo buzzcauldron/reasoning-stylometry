@@ -8,6 +8,7 @@ import json
 import re
 import subprocess
 import sys
+import unicodedata
 from pathlib import Path
 
 from pypdf import PdfReader
@@ -48,6 +49,18 @@ def extract_text(pdf_path: Path) -> str:
         if t:
             parts.append(t)
     text = "\n".join(parts)
+    # NFKD decomposes PDF ligatures (U+FB01 "fi", U+FB02 "fl", ...) to plain
+    # ASCII letters -- without this, "finitely" survives extraction as
+    # "ﬁnitely" and the alpha-only regex in tokenize() silently drops the
+    # ligature, corrupting the word to "nitely".
+    text = unicodedata.normalize("NFKD", text)
+    # pypdf occasionally emits embedded NUL bytes (valid UTF-8, but R's
+    # readLines() treats NUL as a C-string terminator and silently truncates
+    # the read to nothing) -- confirmed empirically: 20/10000 balanced_content
+    # chunks tokenized to 0-1 words in stylo because of this, which crashed
+    # any n-gram feature config (ngram.size>1) despite looking like perfectly
+    # normal text via `cat`. Strip NUL and other non-printable control chars.
+    text = "".join(ch for ch in text if ch == "\n" or ch == "\t" or ord(ch) >= 32)
     text = re.sub(r"-\n(\w)", r"\1", text)
     text = re.sub(r"\s+\n\s+", "\n\n", text)
     text = re.sub(r"\n{3,}", "\n\n", text)
@@ -55,6 +68,7 @@ def extract_text(pdf_path: Path) -> str:
 
 
 def tokenize(text: str) -> list[str]:
+    text = unicodedata.normalize("NFKD", text)
     text = text.lower()
     text = re.sub(r"[^a-z\s]", " ", text)
     return [w for w in text.split() if w]
@@ -107,7 +121,10 @@ def chunk_text(text: str, min_words: int, target_words: int) -> list[str]:
     for i in range(0, max(len(raw) - min_words, 1), step):
         seg_words = raw[i : i + target_words]
         if len(tokenize(" ".join(seg_words))) < min_words:
-            break
+            # A single sparse window (title page, table of contents, a
+            # reference list) shouldn't stop the whole scan -- skip it and
+            # keep looking at later windows.
+            continue
         chunk = " ".join(seg_words)
         if not any(tokenize(chunk)[:50] == tokenize(c)[:50] for c in chunks):
             chunks.append(chunk)
@@ -145,6 +162,9 @@ def build(clean: bool = True, resume: bool = False) -> dict:
             stats["errors"].append(f"skipped excluded {arxiv}")
             continue
         style = src["style"]
+        # content_topic is a placeholder here (often just `style`, or absent for
+        # newer manifests); scripts/retag_content_style.py overwrites both fields
+        # from the actual chunk text after this build step, so it's not load-bearing.
         topic = src.get("content_topic", style)
 
         if resume:

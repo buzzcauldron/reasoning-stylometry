@@ -138,14 +138,23 @@ def main() -> None:
             "style": style,
             "arxiv": aid,
             "title": f"cross_view style mean {sum(combined[aid])/len(combined[aid]):+.2f}",
-            "content_topic": style,
         }
         for aid, style in sorted(labels.items(), key=lambda x: (x[1], x[0]))
     ]
 
     manifest = {
-        "version": "3.0",
-        "description": "Large research-register corpus from cross_view/within_view arXiv IDs, style-labeled by mean expert style_axis score in HTML ratings.",
+        "version": "3.1",
+        "description": (
+            "Large research-register corpus from cross_view/within_view arXiv IDs, "
+            "style-labeled by mean expert style_axis score in HTML ratings. "
+            "content_topic is intentionally NOT set here — earlier versions hardcoded "
+            "it equal to style, which meant content and style were the same label by "
+            "construction (see corpus_classify/CORPUS.md). The authoritative, "
+            "independent content AND style labels are assigned per-chunk from full "
+            "paper text by scripts/retag_content_style.py after chunking; that step "
+            "also preserves this file's expert style_axis rating instead of "
+            "overwriting it with a keyword guess."
+        ),
         "min_words_per_chunk": 400,
         "chunk_target_words": 1200,
         "exclude_test_papers": sorted(EXCLUDE),

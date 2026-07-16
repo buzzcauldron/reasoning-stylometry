@@ -9,6 +9,7 @@ Sys.setenv(REASONING_STYLOMETRY_ROOT = root)
 
 steps <- c(
   "extract_jams_pdfs.R",
+  "make_style_leading_targets.R",
   "run_jams_quadrant.R",
   "diagnose_corpus.R",
   "export_stylo_analysis.R",

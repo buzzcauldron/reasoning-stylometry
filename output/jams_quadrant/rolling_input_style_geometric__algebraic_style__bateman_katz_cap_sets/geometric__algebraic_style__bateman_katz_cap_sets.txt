@@ -1,0 +1,3389 @@
+JOURNAL OF THE
+
+AMERICAN MA THEMA TICAL SOCIETY
+
+V olume 25, Number 2, April 2012, Pages 585–613
+
+S 0894-0347(2011)00725-X
+
+Article electronically published on November 29, 2011
+
+NEW BOUNDS ON CAP SETS
+
+MICHAEL BATEMAN AND NETS HAWK KATZ
+
+1. Introduction
+
+As e tA ⊂FN
+
+3 is called a cap set if it contains no lines. In this paper, we will be
+
+concerned with proving the following theorem:
+
+Theorem 1.1. There exist anϵ> 0 and C< ∞ such that ifA ⊆FN
+
+3 is a cap set,
+
+then
+
+|A|
+
+3N ≤ C
+
+N1+ϵ.
+
+The problem of the maximal size of cap sets is a characteristic 3 model for
+
+the problem of ﬁnding arithmetic progressions of length 3 in rather dense sets of
+
+integers. Meshulam [M95] , through a direct use of ideas of Roth, was able to show
+
+that there is a constantC so that any cap setA has density at most
+
+C
+
+N .O u rr e s u l t
+
+may be viewed as a very modest improvement over Meshulam’s result.
+
+Sanders [S11] recently showed that any subset of the integers whose density in
+
+{1,...,M } is at leastC(loglog M)5
+
+logM must contain arithmetic progressions of length 3.
+
+This may be thought of as bringing the results known for arithmetic progressions
+
+almost to the level of Meshulam’s result. This has spurred further interest in
+
+improving Meshulam’s result in hopes that it might suggest a way of improving the
+
+results on arithmetic progressions.
+
+A rather concrete, though perhaps still out of reach, goal in this direction is a
+
+conjecture of Erd¨os and Turan:
+
+Conjecture 1.2. Suppose A ⊆Z is such that
+
+∑
+
+n∈A
+
+n = ∞.
+
+Then A contains an arithmetic progression of every length.
+
+It is clear that the present paper is directly relevant only for ﬁnding 3-term
+
+progressions. However it is also easy to see, based purely on density considerations,
+
+that proving an estimate of the type in Theorem 1.1 in the integer setting would
+
+yield the 3-term case of the conjecture stated above. In fact, Polymath 6 [PM6]
+
+has recently been started with the goal of adapting the ideas of this paper to the
+
+integer setting. See [PM] for more information about so-called “polymath” projects
+
+in general.
+
+Received by the editors April 2, 2011 and, in revised form, October 28, 2011.
+
+2010 Mathematics Subject Classiﬁcation.Primary 11T71; Secondary 05D40.
+
+The ﬁrst author is supported by an NSF postdoctoral fellowship, DMS-0902490.
+
+The second author is partially supported by NSF grant DMS-1001607.
+
+c⃝2011 American Mathematical Society
+
+Reverts to public domain 28 years from publication
+
+Licensed to Indiana Univ Bloomington. Prepared on Thu Oct 23 15:48:20 EDT 2014 for download from IP 129.79.34.151.
+
+License or copyright restrictions may apply to redistribution; see http://www.ams.org/journal-terms-of-use
+
+586 MICHAEL BATEMAN AND NETS HAWK KATZ
+
+While the research in this paper was well underway, Gowers [G] wrote a post
+
+on his blog suggesting that one could attack the problem of bounding cap sets by
+
+studying the additive structure of their large spectrum. This had been our approach
+
+as well and we wrote a reply [K1] sketching our rather strong results regarding that
+
+structure. In the course of a few days, we realized that we actually could convert our
+
+structural theory into an estimate on cap sets. We recorded this [K2] in a second
+
+reply to Gowers’s blog. The current paper should be viewed as an elaboration of
+
+these two posts.
+
+We describe our plan for proving Theorem 1.1. To prove this theorem we will
+
+prove a theorem about sets without unusually dense subspaces, a notion we make
+
+precise below.
+
+Deﬁnition 1.3. Suppose A ⊆F
+
+N
+
+3 has densityρ; i.e., |A| = ρ3n.W es a yt h a tA
+
+has no strong increments if for every subspaceV ⊆FN
+
+3 with d =c o d i mV ≤N
+
+2 ,w e
+
+have
+
+|A∩V|
+
+|V| ≤ρ+ 20dρ
+
+N .
+
+Theorem 1.4. There exist anϵ> 0 and C< ∞ such that ifA ⊆FN
+
+3 is a cap set
+
+with no strong increments, then
+
+|A|
+
+3N ≤ C
+
+N1+ϵ.
+
+The major ingredients needed to prove this theorem are Proposition 3.3, Lemma
+
+5.4, and Theorem 7.1. We combine them with a Fourier analytic argument in
+
+Section 8.
+
+Proof. We deduce Theorem 1.1 from Theorem 1.4 using induction. Suppose that
+
+for everyn ≤N −1w eh a v es h o w nt h a ti fB ⊆Fn
+
+3 is a cap set, then
+
+|B|
+
+3n ≤ C
+
+n1+ϵ.
+
+We aim for a contradiction: assume there exists a cap set A ⊆ FN
+
+3 such that
+
+|A|
+
+3N > C
+
+N 1+ϵ . By Theorem 1.4, this implies thatA has a strong increment. SinceA
+
+has a strong increment, there exists an aﬃne subspaceV ⊆FN
+
+3 with codimension
+
+≤N
+
+2 such that
+
+|A∩V|
+
+|V| ≥ ρ+ 20dρ
+
+N
+
+= ρ(1+ 20d
+
+N )
+
+> C
+
+(N −d)1+ϵ
+
+since the derivative of C
+
+x1+ϵ is uniformly bounded by 16CN−2−ϵ =1 6ρwhenever
+
+0 <ϵ< 1. But we know thatA ∩V (in fact any subset of A) is a cap set. This
+
+contradicts the induction hypothesis, yielding Theorem 1.1. □
+
+Licensed to Indiana Univ Bloomington. Prepared on Thu Oct 23 15:48:20 EDT 2014 for download from IP 129.79.34.151.
+
+License or copyright restrictions may apply to redistribution; see http://www.ams.org/journal-terms-of-use
+
+NEW BOUNDS ON CAP SETS 587
+
+1.1. Proof sketch. We sketch our plan for proving Theorem 1.4.
+
+We will study the large spectrum Δ of a cap setA with no strong increments.
+
+The reader should think of Δ, for a cap set of the size3N
+
+N given by Meshulam’s
+
+estimate, as consisting of the positions at which the absolute value of the Fourier
+
+transform ofA is around
+
+N 2 . The set Δ should have cardinality approximatelyN3
+
+(established in Section 3) and have aboutN7 additive quadruples (established in
+
+Section 4). The estimate on the number of quadruples is essentially the same as
+
+a result in the integer setting obtained independently by Shkredov [Shk08]. Recall
+
+that an additive quadruple is a quadruple (x1,x2,x3,x4)o fe l e m e n t so fΔw i t ht h e
+
+property that
+
+x1 +x2 = x3 +x4.
+
+Similarly an additive octuple is an octuple (x1,x2,x3,x4,x5,x6,x7,x8) of elements
+
+of Δ with
+
+x1 +x2 +x3 +x4 = x5 +x6 +x7 +x8.
+
+It is easy to seeap r i o r ithat a set with many additive quadruples will have
+
+many additive octuples. In our case, a set with sizeN3, having N7 quadruples
+
+must have at leastN15 octuples. (But it may have more octuples.) The number of
+
+octuples it has should be taken as an indication of its structure. If there are many
+
+octuples, it means that the sum set Δ+Δ looks like it has more additive structure
+
+than the set Δ. We then say that the set Δ is additively smoothing. (It becomes
+
+smoother under addition.) We show, however, that this cannot be the case for Δ,
+
+the large spectrum. We use the probabilistic method to do this, ﬁnding too much
+
+of the spectrum contained in a small subspace in the additively smoothing case.
+
+We establish this in Section 5. (This is somewhat reminiscent of the paper of Croot
+
+and Sisask [CS11], where random selections are used to uncover structure.)
+
+Thus our set Δ is entirely additively nonsmoothing. This means it is already as
+
+smooth as it will become under a small number of additions. This makes its additive
+
+structure particularly easy to uncover as it is already present without adding the
+
+set to itself. This kind of idea was ﬁrst exploited in a paper of the second author
+
+with Koester [KK10] , and we use techniques quite similar to those found in that
+
+paper. We end up showing that the set Δ should be thought of as looking like the
+
+sum of a very structured setK of sizeN (that is to say thatK is almost additively
+
+closed) with a very random set Λ of sizeN
+
+2. Section 6 contains the proof of a
+
+structural theorem for sets with substantial additive energy (i.e., many additive
+
+quadruples) but no additive smoothing.
+
+We ﬁnd that this structure of Δ is inconsistent withA’s being a cap set with no
+
+strong increments. The reason is that we can use Freiman’s theorem to placeK
+
+inside a subspaceH with relatively low dimension. We can essentially mod out by
+
+H, examining the “ﬁbers”, the intersections ofA with translates ofH
+
+⊥. We ﬁnd
+
+that the structure of Δ makes the behavior of the ﬁbers unrealistic. This argument
+
+is suggested by a paper of Sanders [S10] and is carried out in Section 8.
+
+One ﬁnal remark about the value ofϵ obtained in this paper: it is necessarily
+
+rather small (at least with our current argument). We discuss the reasons for this
+
+in a brief ﬁnal section as well as giving some conjectures that if true would greatly
+
+improve the eﬃciency. We have not attempted to optimizeϵ (or even keep track of
+
+the exact dependence onϵ) throughout the paper.
+
+Licensed to Indiana Univ Bloomington. Prepared on Thu Oct 23 15:48:20 EDT 2014 for download from IP 129.79.34.151.
+
+License or copyright restrictions may apply to redistribution; see http://www.ams.org/journal-terms-of-use
+
+588 MICHAEL BATEMAN AND NETS HAWK KATZ
+
+2. Preliminaries
+
+In this section, we record a few general results of which we will make frequent
+
+use throughout the paper. We begin with our favorite form of the Cauchy-Schwarz
+
+inequality.
+
+Lemma 2.1. Let S and T be ﬁnite sets andρa map,
+
+ρ: S −→T.
+
+Let P be the set of pairs
+
+P = {(s1,s2): ρ(s1)= ρ(s2)}.
+
+Then
+
+|P|≥ |S|2
+
+|T| .
+
+Proof. Note that we can express|P| by
+
+|P| =
+
+∑
+
+t∈T
+
+|ρ−1(t)|2.
+
+Applying the Cauchy-Schwarz inequality we obtain
+
+|P|≥ 1
+
+|T|(
+
+∑
+
+t∈T
+
+|ρ−1(t)|)2 = |S|2
+
+|T| .
+
+□
+
+Here we introduce another variant of Cauchy-Schwarz:
+
+Lemma 2.2. Let (X,m) be a measure space with total measureM.L e tA1,...,A k
+
+be measurable subsets of X and 0 <ρ< 1 be a number (the density), so that
+
+m(Aj) ≳ ρMfor eachj.S u p p o s ek ≳ 1
+
+ρ
+
+.T h e n
+
+k∑
+
+j=1
+
+∑
+
+l̸=j
+
+m(Aj ∩Al) ≳ k2ρ2M.
+
+Proof. Note that
+
+k∑
+
+j=1
+
+m(Aj)= ρkM≪ k2ρ2M,
+
+unless ρ∼1. Thus we may estimate the full sum
+
+k∑
+
+j=1
+
+k∑
+
+l=1
+
+m(Aj ∩Al).
+
+Deﬁnec(x) to be the measurable function giving, for eachx,t h en u m b e ro fs e t sAj
+
+which containx. Thus we would like to estimate∫
+
+c(x)2 ≥ 1
+
+M(
+
+∫
+
+c(x))2 = k2ρ2M.
+
+□
+
+Licensed to Indiana Univ Bloomington. Prepared on Thu Oct 23 15:48:20 EDT 2014 for download from IP 129.79.34.151.
+
+License or copyright restrictions may apply to redistribution; see http://www.ams.org/journal-terms-of-use
+
+NEW BOUNDS ON CAP SETS 589
+
+In what followsμshall be a small exponent. We will frequently use expressions
+
+such as NO(μ). The exponent will be bounded byCμfor C a universal constant
+
+which varies from line to line in the paper. We illustrate this by the following
+
+version of the large families principle (this is the principle which says that most
+
+children belong to large families) which will be used extremely often in this paper.
+
+Lemma 2.3 (Large Families Principle). Let M
+
+1,...,M K > 0 be real numbers and
+
+let R> 0 be a real number. Suppose thatMj ≤RNμ for eachj and suppose that
+
+K∑
+
+j=1
+
+Mj ≥RKN−μ.
+
+Then there exists a subsetJ of {1,...,K } with |J| ≳ N−O(μ)K so that for each
+
+j ∈J, we haveMj ≳ N−O(μ)R.
+
+Proof. Let
+
+J = {j : Mj ≳ N−10μR}.
+
+Suppose that|J| ≲ N−10μK. Then by the upper bound onMj,w eh a v et h a t
+
+∑
+
+j∈J
+
+Mj ≲ N−9μRK,
+
+while ∑
+
+j/∈J
+
+Mk ≲ N−10μRK.
+
+Combining these two estimates gives us a contradiction. □
+
+We take a moment to state the asymmetric Balog-Szemeredi-Gowers theorem,
+
+which we will have occasion to use. First, we give a slightly nonstandard deﬁnition.
+
+Deﬁnition 2.4. As e tB ⊂FN
+
+3 will be said to beμ-additively closedif
+
+|B +B| ≲ NO(μ)|B|.
+
+Lemma 2.5. Let B,C ⊂FN
+
+3 so that there are at leastNη|B||C|2 additive quadru-
+
+ples of the form
+
+b1 +c1 = b2 +c2
+
+with b1,b2 ∈B and c1,c2 ∈C.L e tL = |B|
+
+|C| and assume L ≲ N10. Then there
+
+exists μdepending only onη,w i t hμ→ 0 as η→ 0,a n dt h e r ee x i s taμ-additively
+
+closed setK ⊂FN
+
+3 and a setX ⊂FN
+
+3 with
+
+|X| ≲ NO(μ)|B|
+
+|C|,
+
+so that
+
+|B ∩(X +K)| ≳ N−O(μ)|B|,
+
+and an elementx ∈FN
+
+3 so that
+
+|C ∩(x+K)| ≳ N−O(μ)|C|.
+
+In particular, the last inequality implies that
+
+|K| ≳ N−O(μ)|C|.
+
+Licensed to Indiana Univ Bloomington. Prepared on Thu Oct 23 15:48:20 EDT 2014 for download from IP 129.79.34.151.
+
+License or copyright restrictions may apply to redistribution; see http://www.ams.org/journal-terms-of-use
+
+590 MICHAEL BATEMAN AND NETS HAWK KATZ
+
+An only slightly stronger form of this lemma appears in the book of Tao and Vu
+
+as Lemma 2.35. See [TV06].
+
+Finally, we record the form of Freiman’s theorem which we shall use.
+
+Theorem 2.6. A μ-additively closed set is contained in a subspace of dimension
+
+NO(μ).
+
+Various improvements of the ﬁnite characteristic Freiman’s theorem have ap-
+
+peared, such as the result by Sanders [S08], but these only aﬀect the constant in
+
+our formulation. Even Ruzsa’s original version [R99] suﬃces. We also mention a
+
+remarkable recent result in the integer setting due to Schoen [Sch11].
+
+3. Review of Meshulam’s argument, Fourier analysis in FN
+
+3 , and
+
+sparsity of the spectrum
+
+For the remainder of this paper,Awill be a subset ofFN
+
+3 with|A| = ρ3N ≫ 3N
+
+N 1+ϵ
+
+with ϵ> 0 to be determined later. Moreover,A shall be a cap set, meaning that it
+
+contains no lines. A line inFN
+
+3 is characterized by being a set with exactly three
+
+distinct elementsa,b,c satisfying a+b+c =0 .
+
+In this section we will establish some basic facts needed for our proof and that
+
+are enough to obtain Meshulam’s bound of∼ 1
+
+N on the density of cap sets. Further,
+
+we shall prove a statement of the form “The spectrum Δ does not have too much
+
+intersection with any small subspace.”
+
+We will assume that there are no strong increments forA in the sense of Deﬁni-
+
+tion 1.3. Precisely, we assume there is no hyperplaneH so thatA∩H has density
+
+≥ρ+20ρ
+
+N in H and no subspaceH of codimensiond< N
+
+2 so thatA∩H has density
+
+≥ρ+ 20ρd
+
+N . We recall that a contradiction of this assumption will mean that every
+
+large cap setA has strong increments. This will contradict the existence of large
+
+cap sets.
+
+We deﬁne the charactere : F3 −→ C by e(0) = 1, e(1) = −1
+
+2 +
+
+√
+
+2 i,a n d
+
+e(2) =−1
+
+2 −
+
+√
+
+2 i. We will study the Fourier transform of the setA,n a m e l y
+
+ˆA(x)= 1
+
+3N
+
+∑
+
+a∈A
+
+e(a·x).
+
+As a consequence of the assumption thatA is a large cap set without strong incre-
+
+ments, we shall see that there is a signiﬁcant set Δ ofx for which| ˆA(x)| is fairly
+
+large (the set Δ will be called the spectrum ofA) and we shall see that Δ does
+
+not concentrate too much in any fairly low dimensional subspace ofFN
+
+3 . Our ﬁrst
+
+nontrivial fact about ˆA is that ˆA−ρhas large L3 norm, and moreover that this
+
+large L3 norm is accounted for by the set ofx where | ˆA(x)| is large. Precisely:
+
+Deﬁnition 3.1. Deﬁne
+
+Δ= {x ̸=0: | ˆA(x)| ≳ ρ2}.
+
+We shall refer to the set Δ as thespectrumof A and it shall be our central object
+
+of study for the remainder of the paper.
+
+Note that with this deﬁnition, Δ is symmetric, that is,
+
+Δ= −Δ.
+
+Licensed to Indiana Univ Bloomington. Prepared on Thu Oct 23 15:48:20 EDT 2014 for download from IP 129.79.34.151.
+
+License or copyright restrictions may apply to redistribution; see http://www.ams.org/journal-terms-of-use
+
+NEW BOUNDS ON CAP SETS 591
+
+It is worth noting that the following proposition is the only place in the paper
+
+where we use the assumption thatA is a cap set speciﬁcally; the other parts of the
+
+paper use only the assumption thatA has no strong increments.
+
+Proposition 3.2. If A is a cap set, then
+
+∑
+
+x̸=0
+
+| ˆA(x)|3 ≳ ρ3.
+
+Moreover,
+
+∑
+
+x∈Δ
+
+| ˆA(x)|3 ≳ ρ3,
+
+and
+
+N3 ≲ |Δ| ≲ N3+3ϵ.
+
+Note that this proposition is already enough to obtain Meshulam’s estimate: in
+
+particular, it guarantees that the set Δ deﬁned in the statement of the proposition
+
+is nonempty. This means that there is at least onex such that| ˆA(x)| ≳ ρ2.T h i s
+
+guarantees the existence of a hyperplaneP such that the density ofA∩P inside P
+
+is at leastρ+cρ2. Taking ρlarge enough compared to1
+
+N already contradicts the
+
+no-strong-increment hypothesis, yielding Meshulam’s estimate.
+
+In what follows, we prove this proposition. We consider
+
+∑
+
+x∈FN
+
+ˆA(x)3 = 1
+
+33N
+
+∑
+
+x∈FN
+
+∑
+
+a∈A
+
+∑
+
+b∈A
+
+∑
+
+c∈A
+
+e((a+b+c)·x).
+
+Summingﬁrstinx, weseethatthisexpressionyields3 −2N multipliedbythenumber
+
+of solutions of the equationa+b+c =0w i t ha,b,c taken fromA.S i n c ew eh a v e
+
+assumed thatA is a cap set, the only solutions occur whena = b = c.T h u s
+
+∑
+
+x∈FN
+
+ˆA(x)3 =3 −2N|A| =3 −Nρ.
+
+However, we observe that ˆA(0) = ρ. Thus, given the size of A,w es e et h a tρ3
+
+dominates 3−Nρand we conclude that
+
+(3.1)
+
+∑
+
+x̸=0
+
+| ˆA(x)|3 ≳ ρ3.
+
+However, following the proof of Plancherel’s inequality, we see that
+
+∑
+
+x̸=0
+
+| ˆA(x)|2 ≤
+
+∑
+
+x∈FN
+
+| ˆA(x)|2 = 1
+
+32N
+
+∑
+
+x∈FN
+
+∑
+
+a∈A
+
+∑
+
+b∈B
+
+e((a−b)·x).
+
+Summing ﬁrst inx, we conclude that
+
+(3.2)
+
+∑
+
+x̸=0
+
+| ˆA(x)|2 ≤3−N|A|≤ ρ.
+
+By the assumption thatA has no strong codimension 1 increment, we conclude
+
+that
+
+(3.3) | ˆA(x)| ≲ |A|
+
+N3N = ρ
+
+N.
+
+Recall that
+
+Δ= {x ̸=0: | ˆA(x)| ≳ ρ2}.
+
+Licensed to Indiana Univ Bloomington. Prepared on Thu Oct 23 15:48:20 EDT 2014 for download from IP 129.79.34.151.
+
+License or copyright restrictions may apply to redistribution; see http://www.ams.org/journal-terms-of-use
+
+592 MICHAEL BATEMAN AND NETS HAWK KATZ
+
+By selecting the implicit constant in the deﬁnition of Δ correctly, we see by com-
+
+bining inequalities (3.1) and (3.2) that
+
+(3.4)
+
+∑
+
+x∈Δ
+
+| ˆA(x)|3 ≳ ρ3.
+
+Combining inequalities (3.3) and (3.4), we see that
+
+|Δ| ≳ N3.
+
+Combining the deﬁnition of Δ with Proposition 3.2 we get
+
+|Δ| ≲ N3+3ϵ.
+
+Now we prove a statement of the form “The spectrum Δ does not have too much
+
+intersection with any small subspace.” Precisely:
+
+Proposition 3.3. LetA be a set without strong increments. LetΔbe the spectrum,
+
+as in Deﬁnition3.1. Then for any subspaceW of FN
+
+3 having dimension d ≤ N
+
+2 ,
+
+we have
+
+|Δ∩W| ≲ dN1+2ϵ.
+
+Moreover for such a subspaceW, we have the estimate
+
+∑
+
+w̸=0∈W
+
+| ˆA(w)|2 ≲ ρ2 d
+
+N.
+
+Here we see what the assumption of no higher codimension strong increments
+
+implies about the spectrum Δ. LettingH be a subspace with codimensiond< N
+
+2 ,
+
+we letV be a dimensiond subspace which is transverse toH (i.e., V +H = FN
+
+3 )
+
+and we letW be the annihilator space ofH. Then for anyw ̸=0 ∈W,w es e et h a t
+
+ˆA(w)= 1
+
+3N
+
+∑
+
+v∈V
+
+(|A∩(H +v)|−3−d|A|)e(v ·w).
+
+Then we have
+
+(3.5)
+
+∑
+
+w̸=0∈W
+
+| ˆA(w)|2 =3 d−2N ∑
+
+v∈V
+
+(|A∩(H +v)|−3−d|A|)2.
+
+By getting an upper bound on the right-hand side of (3.5), we can obtain an upper
+
+bound on|Δ∩W|, which is our goal.
+
+To estimate the right-hand side, we subdivideV = V+ ∪V−,w h e r e
+
+V+ = {v : |A∩(H +v)|−3−d|A|≥ 0}
+
+and
+
+V− = {v : |A∩(H +v)|−3−d|A| < 0}.
+
+We observe that since
+
+∑
+
+v∈V
+
+(|A∩(H +v)|−3−d|A|)=0 ,
+
+we have
+
+(3.6)
+
+∑
+
+v∈V +
+
+||A∩(H +v)|−3−d|A|| =
+
+∑
+
+v∈V −
+
+||A∩(H +v)|−3−d|A||.
+
+Licensed to Indiana Univ Bloomington. Prepared on Thu Oct 23 15:48:20 EDT 2014 for download from IP 129.79.34.151.
+
+License or copyright restrictions may apply to redistribution; see http://www.ams.org/journal-terms-of-use
+
+NEW BOUNDS ON CAP SETS 593
+
+We observe that the hypothesis thatA has no strong increments implies that for
+
+v ∈V+, we have the estimate
+
+||A∩(H +v)|−3−d|A|| ≲ 3−d|A| d
+
+N.
+
+Thus simply using that|V| =3 d,w eg e tt h ee s t i m a t e s
+
+(3.7)
+
+∑
+
+v∈V +
+
+||A∩(H +v)|−3−d|A|| ≲ |A| d
+
+N
+
+and
+
+(3.8)
+
+∑
+
+v∈V +
+
+||A∩(H +v)|−3−d|A||2 ≲ 3−d|A|2 d2
+
+N2.
+
+Now forv ∈V−, we have the trivial estimate
+
+||A∩(H +v)|−3−d|A|| ≤3−d|A|.
+
+In light of (3.6) and (3.7) this yields
+
+(3.9)
+
+∑
+
+v∈V −
+
+||A∩(H +v)|−3−d|A||2 ≲ 3−d|A|2 d
+
+N.
+
+Combining (3.8) and (3.9) gives the estimate
+
+∑
+
+v∈V
+
+||A∩(H +v)|−3−d|A||2 ≲ 3−d|A|2 d
+
+N.
+
+Thus (3.5) gives
+
+∑
+
+w̸=0∈W
+
+| ˆA(w)|2 ≲ ρ2 d
+
+N.
+
+However, we recall that ifw ∈Δ, we have that
+
+| ˆA(w)| ≳ ρ2 = 1
+
+N2+2ϵ .
+
+Thus we get the desired estimate:
+
+|Δ∩W| ≲ dN1+2ϵ.
+
+4. Additive structure in the spectrum of large cap sets
+
+In this section we establish that the spectrum has some nontrivial additive struc-
+
+ture. Speciﬁcally, we prove that it hasN7−O(ϵ) additive quadruples. We mention
+
+that similar results in the integer setting were obtained independently by Shkredov;
+
+see [Shk08].
+
+Corollary 4.1. Let A be a large cap set. LetΔbe the spectrum ofA and let Δ
+
+′
+
+be any symmetric subset ofΔwith
+
+|Δ′|≥ 1
+
+2|Δ|.
+
+LetE4(Δ′) be the number of additive quadrupletsx1+x2 = x3+x4 with x1,x2,x3,x4
+
+∈Δ′.T h e n
+
+E(Δ′) ≳ |Δ|4
+
+N5+5ϵ.
+
+Licensed to Indiana Univ Bloomington. Prepared on Thu Oct 23 15:48:20 EDT 2014 for download from IP 129.79.34.151.
+
+License or copyright restrictions may apply to redistribution; see http://www.ams.org/journal-terms-of-use
+
+594 MICHAEL BATEMAN AND NETS HAWK KATZ
+
+The argument for a major subset Δ′ of Δ is no diﬀerent, so for convenience of
+
+notation we assume in fact Δ′ =Δ .
+
+We retain the notation of the previous section, considering Δ to be the spectrum
+
+of a large cap setA.I np a r t i c u l a r ,w eh a v e|A|≫ 3N
+
+N 1+ϵ ,w eh a v e
+
+N3 ≲ |Δ| ≲ N3+3ϵ,
+
+we have for everyx ∈Δ, that| ˆA(x)| ≳ |A|
+
+N 1+ϵ , and we have that Δ is symmetric,
+
+namely Δ =−Δ.
+
+From the lower bound on| ˆA(x)|,w eh a v ef o re a c hx,a na ﬃ n eh y p e r p l a n eHx,
+
+annihilated byx so that
+
+|A∩Hx|− 1
+
+3|A| ≳ 3N ρ
+
+N1+ϵ = |A|
+
+N1+ϵ .
+
+Summing over Δ, we obtain
+
+∑
+
+x∈Δ
+
+(|A∩Hx|− |A|
+
+3 ) ≳ |A||Δ|
+
+N1+ϵ .
+
+We wish to rewrite this as a double sum by introducing 1Hx, the indicator func-
+
+tion ofHx: ∑
+
+x∈Δ
+
+∑
+
+y∈A
+
+(1Hx(y)−1
+
+3) ≳ |A||Δ|
+
+N1+ϵ .
+
+We interchange the order of the sum:
+
+∑
+
+y∈A
+
+(
+
+∑
+
+x∈Δ
+
+(1Hx(y)−1
+
+3)) ≳ |A||Δ|
+
+N1+ϵ .
+
+Now we apply H¨older’s inequality:
+
+|A|
+
+4 (
+
+∑
+
+y∈A
+
+|
+
+∑
+
+x∈Δ
+
+(1Hx(y)−1
+
+3)|4)
+
+4 ≳ |A||Δ|
+
+N1+ϵ .
+
+Taking everything to the fourth power and simplifying, we get
+
+∑
+
+y∈A
+
+|
+
+∑
+
+x∈Δ
+
+(1Hx(y)−1
+
+3)|4 ≳ |A||Δ|4
+
+N4+4ϵ .
+
+Crudely expanding the sum, we get the apparently weaker inequality
+
+∑
+
+y∈FN
+
+|
+
+∑
+
+x∈Δ
+
+(1Hx(y)−1
+
+3)|4 ≳ |A||Δ|4
+
+N4+4ϵ .
+
+We can rewrite this as
+
+(4.1)
+
+∑
+
+y∈FN
+
+∑
+
+x1,x2,x3,x4∈FN
+
+4∏
+
+α=1
+
+(1Hxα(y)−1
+
+3) ≳ |A||Δ|4
+
+N4+4ϵ .
+
+We claim that (4.1) says that the spectrum Δ has substantial additive structure.
+
+This will be demonstrated by the following proposition.
+
+Proposition 4.2. Let x1,x2,x3, and x4 be nonzero elements ofFN
+
+3 . Then the
+
+expression
+
+∑
+
+y∈FN
+
+4∏
+
+α=1
+
+(1Hxα(y)−1
+
+3) ≲ 3N.
+
+Licensed to Indiana Univ Bloomington. Prepared on Thu Oct 23 15:48:20 EDT 2014 for download from IP 129.79.34.151.
+
+License or copyright restrictions may apply to redistribution; see http://www.ams.org/journal-terms-of-use
+
+NEW BOUNDS ON CAP SETS 595
+
+Moreover it vanishes unless an equality of the form
+
+±x1 ±x2 ±x3 ±x4 =0
+
+holds.
+
+Proof. We introduce the Fourier transforms of the balanced function of the hyper-
+
+planes Hxα setting
+
+fα(z)= 1
+
+3N
+
+∑
+
+x∈FN
+
+(1Hxα(y)−1
+
+3)e(y ·z).
+
+Then we use the standard Fourier identity
+
+∑
+
+y∈FN
+
+4∏
+
+α=1
+
+(1Hxα(y)−1
+
+3)=3 N ∑
+
+z1+z2+z3+z4=0
+
+f1(z1)f2(z2)f3(z3)f4(z4).
+
+We observe thatfj(zj) vanishes unlesszj = ±xj.
+
+The upper bound on the sum just follows from the triangle inequality. □
+
+To ﬁnish the proof of Proposition 4.1, we apply (4.1), the fact that|A|≫ 3N
+
+N 1+ϵ ,
+
+Proposition 4.2 and the fact that the spectrum Δ is symmetric.
+
+5. Random selection argument for additively smoothing spectrum
+
+In this section we study the additive properties of random subsets of the spec-
+
+trum. We will show that they typically have very poor additive structure. This
+
+will allow us to conclude that, although the spectrum has many 4-tuples, it cannot
+
+have too many 8-tuples. The signiﬁcance of this will only be made clear in Section
+
+6.
+
+We deﬁnedE
+
+4(Δ) to be the number of additive quadruplets in Δ.
+
+Deﬁnition 5.1. We deﬁneE2m(Δ) to be the number of additive 2m-tuples
+
+x1 +x2 +··· +xm = xm+1 +xm+2 +··· +x2m,
+
+such thatx1,x2,...,x 2m ∈Δ.
+
+We let ˆΔ(x) be the Fourier transform:
+
+ˆΔ(y)= 1
+
+3N
+
+∑
+
+x∈Δ
+
+e(y ·x).
+
+Then
+
+E2m(Δ) = 3(2m−1)N ∑
+
+y∈FN
+
+|ˆΔ(y)|2m.
+
+We always haveE2(Δ) =|Δ|. When we have nontrivial amounts of additive struc-
+
+ture in the sense that sayE2k(Δ)≫| Δ|k, we can lift this up to counts of higher-
+
+tuplets using H¨older’s inequality. (We use the inequality to bound the 2k-norm by
+
+the 2-norm and the 2m-norm.) We can view this process as a poor man’s Plunnecke
+
+theorem. We record this result for highE4 and highE8.
+
+Lemma 5.2. Let m> 2.T h e n
+
+E4(Δ)m−1
+
+|Δ|m−2 ≤E2m(Δ).
+
+Licensed to Indiana Univ Bloomington. Prepared on Thu Oct 23 15:48:20 EDT 2014 for download from IP 129.79.34.151.
+
+License or copyright restrictions may apply to redistribution; see http://www.ams.org/journal-terms-of-use
+
+596 MICHAEL BATEMAN AND NETS HAWK KATZ
+
+Suppose m> 3.T h e n
+
+E8(Δ)
+
+m−1
+
+|Δ|
+
+m−4
+
+≤E2m(Δ).
+
+5.1. Discussion of additive smoothing. We are now ready to introduce the
+
+notion of additive smoothing. We keep in mind two examples of kinds of sets
+
+having additive structure. One kind of set consists of a subspace plus a random
+
+set. The other consists of a random subset of a subspace. We think of the ﬁrst kind
+
+of set as not being additively smoothing because as you add it to itself, its expansion
+
+rate stays essentially constant. This is the kind of example for which Lemma 5.2
+
+is close to sharp. But the second kind of set, when added to itself, will quickly ﬁll
+
+out the subspace, and its rate of additive expansion will shrink dramatically. The
+
+lack of additive structure smooths out under addition. This is the kind of example
+
+for which Lemma 5.2 is far from sharp.
+
+We will momentarily deﬁne Δ to be additively smoothing ifE
+
+8(Δ) is substan-
+
+tiallylargerthanexpectedfromLemma5.2andourlowerboundfor E4(Δ)obtained
+
+in Section 4. (Nonetheless the gain in the exponent need only beO(ϵ).) We will
+
+deﬁne additive smoothing so that if Δ is additively smoothing, then for some not
+
+very largem, we may expect to ﬁnd additivem-tuplets of Δ in a randomly chosen
+
+set S of d elements.
+
+Before we formally deﬁne the property of additive smoothing, we illustrate how
+
+the calculation works in the caseϵ =0 .I nt h a tc a s ed ∼N so that an element of
+
+Δ( w h i c hh a ss i z eN
+
+3) is chosen with probabilityN−2.W eh a v eal o w e rb o u n do f
+
+N7 on E4(Δ). Suppose that we can improve on the lower bound ofN15 for E8(Δ),
+
+which we get from the ﬁrst part of Lemma 5.2, and in fact
+
+E8(Δ)>N 15+δ
+
+for someδ>0. Then from the second part of Lemma 5.2, we obtain the estimate
+
+N(4+δ
+
+3)m+7−δ
+
+3 ≤E2m(Δ).
+
+Thus there is somem which depends only onδso that
+
+E2m(Δ)≫ N4m.
+
+Thus the expected number of 2m-tuplets in S is ≫ 1. We will formally deﬁne
+
+additive smoothing to achieve the same eﬀect whenϵ is diﬀerent from 0.
+
+5.2. Nonsmoothing of the spectrum. In this subsection we make rigorous the
+
+arguments of the last subsection.
+
+Deﬁnition 5.3. We deﬁne Δ to be additively smoothing if there is someσ>30ϵ
+
+so thatE8(Δ)≫ N15+σ.
+
+We are now in a position to state the main result of this section.
+
+Lemma 5.4. If Δ is the spectrum of a large cap set without strong increments,
+
+then Δis not additively smoothing.
+
+We begin with a few comments about our proof strategy in this section. IfS is
+
+a “random” subset of Δ, then we expect
+
+E2m(S)=
+
+(|S|
+
+|Δ|
+
+)2m
+
+E2m(Δ).
+
+Licensed to Indiana Univ Bloomington. Prepared on Thu Oct 23 15:48:20 EDT 2014 for download from IP 129.79.34.151.
+
+License or copyright restrictions may apply to redistribution; see http://www.ams.org/journal-terms-of-use
+
+NEW BOUNDS ON CAP SETS 597
+
+Thus we can show thatE2m(Δ) is small by showing thatER is small for a typical
+
+(somewhat large) subsetR of Δ.
+
+Now we ﬁx a particular numberd and consider random subsets of Δ of sized.
+
+We will take
+
+(5.1) d ∼N1−ϵ
+
+with the explicit constant to be determined later. Our ﬁrst goal is to prove that we
+
+expect this subset to span a space of dimensiond. More precisely:
+
+Deﬁnition 5.5. Let S be a set ofd vectors x1,...,x d ∈FN
+
+3 . We say that the set
+
+S has nullityk if the dimension of the span ofS is d−k.
+
+We will consider uniform random selections of sets ofd elements from Δ. We can
+
+view these selections asd-fold repetitions of uniform selection without replacement.
+
+We will prove
+
+Lemma 5.6. A random selectionS of size d from the spectrumΔhas nullity at
+
+least k with probability ≲ 2−k.
+
+Proof. Once we have completed our ﬁrstm choices, our selectionsx1,...,x m span
+
+a vector spaceWm with dimension no more thanm.T h u s|Δ∩Wm| ≲ mN1+2ϵ by
+
+Proposition 3.3. We choose the constant in (5.1) so that the probability that the
+
+(m+1 ) s te l e m e n to fS lies in Wm is bounded by 1
+
+d for allm ≤d −1. Note that
+
+since m ≤d, this probability is bounded by
+
+|Δ∩Wm|
+
+|Δ| ≤ CdN1+2ϵ
+
+N3
+
+= Cd
+
+N2−2ϵ
+
+≤ 1
+
+d
+
+provided d ≪ N1−ϵ. Thus the probability thatS has nullity at leastk is bounded
+
+by the probability that ford independent events with probability1
+
+d at leastk occur.
+
+The probability that exactlyk events fromd independent events with probability
+
+d occur is exactly
+
+g(k,d)=
+
+(d
+
+k
+
+)(d−1)d−k
+
+dd .
+
+The numbersg(k,d) decrease by a factor of more than 2 ask is increased by 1 as
+
+long ask> 2. This completes the proof of the lemma □
+
+Now that we know our random subset is likely to have full rank, we estimate the
+
+number of 2m-tuples it contains in the case it does not have full rank. Given a set
+
+S with nullityk we will bound the number of possible additive 2m-tuplets between
+
+elements ofS. Speciﬁcally:
+
+Lemma 5.7. As e tS of sized and nullity k has E2m(S) ≲ Cmk2m.
+
+Proof. We write a listE of all equations among elements ofS which involve 2m
+
+or fewer elements ofS. Because the nullity isk, the span of these equations has
+
+dimension at most k. We pick a basis B for E, and the equations inB involve
+
+Licensed to Indiana Univ Bloomington. Prepared on Thu Oct 23 15:48:20 EDT 2014 for download from IP 129.79.34.151.
+
+License or copyright restrictions may apply to redistribution; see http://www.ams.org/journal-terms-of-use
+
+598 MICHAEL BATEMAN AND NETS HAWK KATZ
+
+at most 2mk elements of S. Thus all of the equations ofE involve at most 2mk
+
+elements ofS.T h u st h e r ea r ea tm o s t
+
+h(m,k)=2 m(2m)!
+
+(2mk
+
+2m
+
+)
+
+additive 2m-tuplets fromS. Wereferto h(m,k) as thenumber of possiblem-tuplets
+
+in S.N o t et h a th(m,k) is a polynomial of degree 2m in k. □
+
+Proof of Lemma5.4 . Now letS be a random selection ofd elements from Δ. Then
+
+by Lemma 5.6, the probability thatS has nullityk is ≲ 2−k. Thus the expected
+
+value of the number of possible 2m-tuples ∑
+
+k≥0 h(m,k)i s ≲m
+
+∑
+
+k≥0 2−kk2m ≲ 1.
+
+Now we will show that we have deﬁned additive smoothing so that the expected
+
+number of 2m-tuples is≫ 1. This will give us a contradiction.
+
+We know thatd ≳ N1−ϵ. Thus our selection S will be expected to have≫ 1
+
+nontrivial 2m-tuples, whenever E2m(Δ) ≫ N4m+2mϵ. (We simply calculate the
+
+probability that an individual 2m-tuple involves only elements ofS.) Thus we may
+
+assume that
+
+E2m(Δ) ≲ N4m+8mϵ.
+
+Using the fact that|Δ| ≲ N3+3ϵ and the second part of Lemma 5.2, we get that
+
+E8(Δ) ≲ N
+
+15m+27mϵ−1−ϵ
+
+m−1 .
+
+Choosing m suﬃciently large gives
+
+E8(Δ) ≲ N15+27ϵ.
+
+The choice ofm and hence the constants depends onϵ but not onN. □
+
+6. Structure of robust additively nonsmoothing sets
+
+In this section, the only properties of the spectrum Δ which we shall use are
+
+its size, its additive structure, and its nonadditive smoothing. Consequently the
+
+results can be stated in somewhat more generality. We leave intact, however, the
+
+numerology coming from the case of a spectrum of cap sets.
+
+Deﬁnition 6.1. We will say that a symmetric set Δ⊂F
+
+N
+
+3 is arobust additively
+
+nonsmoothing set of strengthδprovided that we know its size:
+
+(6.1) N3 ≲ |Δ| ≲ N3+δ,
+
+that we know how many additive quadruples can be made from any large subset of
+
+it, namely that if Δ′ ⊂Δ with|Δ′|≥ 3
+
+5|Δ| and Δ′ symmetric, we have
+
+(6.2) E4(Δ′) ≳ N7−δ
+
+and that we have additive nonsmoothing, namely
+
+(6.3) E8(Δ) ≲ N15+δ
+
+and moreover that for each elementa ∈Δ, there are at mostN4+δquadruples of
+
+the form
+
+±a±b = ±c±d
+
+with b,c,d ∈Δ.
+
+Licensed to Indiana Univ Bloomington. Prepared on Thu Oct 23 15:48:20 EDT 2014 for download from IP 129.79.34.151.
+
+License or copyright restrictions may apply to redistribution; see http://www.ams.org/journal-terms-of-use
+
+NEW BOUNDS ON CAP SETS 599
+
+Let us pause to consider the case of Δ, the spectrum of a cap set with no strong
+
+increments. We know that the number ofa ∈Δ participating in more thanN4+O(ϵ)
+
+quadruplets
+
+±a±b = ±c±d
+
+is smaller than 1
+
+10|Δ| since otherwise Δ would have more quadruples and hence
+
+more octuples than allowed by Lemma 5.4. Let Δ′ be the remaining elements of Δ.
+
+Note that by its deﬁnition Δ′ is still symmetric. Note that any symmetric subset
+
+of Δ′ containing at least three ﬁfths of its elements must contain at least half the
+
+elements of Δ. Thus from Proposition 3.2, Corollary 4.1, and Lemma 5.4 we know
+
+that:
+
+Proposition 6.2. Let Δ be the spectrum of a large capset with no strong incre-
+
+ments. There is a subsetΔ′ of Δso that Δ′ is a robust additively nonsmoothing
+
+set of strengthO(ϵ).
+
+Returning to the setting of robust additively nonsmoothing sets, we let, for the
+
+remainder of the section, the set Δ be a robust additively nonsmoothing set of
+
+strength δ.
+
+Given a valuex ∈Δ−Δ, we deﬁnem(x) to be the number of pairs (a,b) ∈Δ×Δ
+
+so thata−b = x. Clearly we have
+
+E4(Δ) =
+
+∑
+
+x∈Δ−Δ
+
+m(x)2.
+
+Given a robust additively nonsmoothing set Δ of strengthδ,f o re a c hα,w em a y
+
+deﬁneGα⊂Δ×Δb y
+
+Gα= {(a,b) ∈Δ×Δ: N1+α≤m(a,b) < 2N1+α}.
+
+By the dyadic pigeonhole principle, there is anαso that
+
+|Gα| ≳ N6−α−δ
+
+logN .
+
+Moreover, we know that noa in Δ participates in more thatN4+δquadruples.
+
+Thus no elementa in Δ participates in more thanN3−α+δpairs inGα.T h u st h e r e
+
+are at least N 3−2δ
+
+logN elements of Δ, each of which participates in at leastN 3−α−2δ
+
+logN
+
+pairs inGα.
+
+We now forget about optimizing our exponents and consolidate this information
+
+in a single deﬁnition.
+
+Deﬁnition 6.3. We say that (Δ,G,D )i sa nadditive structure at heightαwith
+
+ambiguity ηif the following hold. We have
+
+|Δ|≤ N3+η.
+
+We have
+
+G ⊂Δ×Δ
+
+with the property that for each (a,b) ∈G we have thata −b ∈D,a n ds ot h a t
+
+each d ∈D has ∼N1+α representations as a diﬀerence of a pair inG.W eh a v e
+
+|G|∼ N6−α−η. Moreover there are at leastN3−ηelements of Δ participating in at
+
+least N3−α−ηsums each. Finally there are no more thanN15+ηadditive octuples
+
+among elements of Δ.
+
+We summarize what we have shown so far in a proposition.
+
+Licensed to Indiana Univ Bloomington. Prepared on Thu Oct 23 15:48:20 EDT 2014 for download from IP 129.79.34.151.
+
+License or copyright restrictions may apply to redistribution; see http://www.ams.org/journal-terms-of-use
+
+600 MICHAEL BATEMAN AND NETS HAWK KATZ
+
+Proposition 6.4. Given a robust additively nonsmoothing setΔof strengthδwe
+
+may ﬁndG ⊂Δ×Δ,a n dD ⊂Δ−Δand α≥0 so that(Δ,G,D ) is an additive
+
+structure at heightαand ambiguityO(δ).
+
+We now describe a slightly deeper property of additive structures at heightαand
+
+ambiguity η. Given a structure (Δ,G,D ), for eachx ∈D,w ed e ﬁ n et h es e tΔG[x]
+
+to be the set ofa ∈Δ so that there existsb ∈Δw i t h(a,b) ∈G and a−b = x.I n
+
+light of our deﬁnitions, we have for eachx ∈D that |ΔG[x]|∼ N1+α.W ec o n s i d e r
+
+the quantity
+
+(6.4) K(Δ,G,D )=
+
+∑
+
+x∈D
+
+∑
+
+y∈D
+
+|ΔG[x]∩ΔG[y]|.
+
+Clearly K(Δ,G,D ) counts the number of triples (a,x,y ) with a ∈ΔG[x]a n d
+
+a ∈ΔG[y]. Each element in a is contained in exactly as many sets ΔG[x]a s
+
+it participates (in the ﬁrst position) in pairs inG. Thus we conclude that for
+
+(Δ,G,D ) an additive structure with heightαand ambiguityηthat
+
+K(Δ,G,D ) ≳ N9−2α−3η.
+
+Now examining (6.4) and dyadically pigeonholing, we observe that we can ﬁnd
+
+βso that there are at leastN9−2α−β−4ηpairs (x,y)s ot h a tf o re a c hs u c hp a i r ,w e
+
+have Nβ≤|ΔG[x]∩ΔG[y]| < 2Nβ.
+
+Deﬁnition 6.5. We say that the additive structure (Δ,G,D )a th e i g h tαand with
+
+ambiguityηhas comity μif we can ﬁnd the above-mentionedβwith β>1+ α−μ.
+
+Lemma 6.6. Given an additive structure(Δ,G,D ) at heightαa n dw i t ha m b i g u i t y
+
+ηeither it has comityμor there is an additive structure(Δ,G′,D′) with height
+
+β−1 <α−μand ambiguityO(η).
+
+Proof. We dyadically pigeonhole (6.4) to ﬁndβso that there is a set of at least
+
+N9−2α−β−4ηpairs (x,y)s ot h a tf o re a c hs u c hp a i r ,w eh a v eNβ≤|ΔG[x]∩ΔG[y]| <
+
+2Nβ. If it happens that β−1 >α −μ, then we are done. Otherwise, we will
+
+construct an additive structure at heightβ−1.
+
+Now any time thata ∈ΔG[x]∩ΔG[y], this means that we can writex = a−b
+
+and y = a −c.T h u s w e h a v ex −y = c −b. We have between Nβ and 2Nβ
+
+representations of the diﬀerencex −y. It remains to determine how many such
+
+diﬀerences there are.
+
+We have two distinct upper bounds on the number of such diﬀerences. First
+
+there are ≲ N6−β+2η, since each diﬀerence is represented by∼Nβpairs in Δ×Δ
+
+and there are only N6+2η such pairs. The second estimate is that there are ≲
+
+N7−2β+O(η) many such diﬀerences, because otherwiseE4(Δ) would be much larger
+
+than N7 which would makeE8(Δ) larger thanN15+η. The ﬁrst upper bound is
+
+most eﬀective (ignoring ambiguity) whenβ< 1 while the second is most eﬀective
+
+when β>1. Our plan (modulo ambiguity) is that we shall rule out the caseβ<1
+
+and that we shall show that the second upper bound is tight up to a factor ofNO(η).
+
+Both estimates will follow from the upper bound onE8(Δ) and the Cauchy-Schwarz
+
+inequality, namely Lemma 2.1.
+
+Since we haveN9−2α−β−O(η) pairs (x,y)w i t ha tm o s tN6−β+O(η) diﬀerences,
+
+by the Cauchy-Schwarz inequality, there must be at leastN12−4α−β−O(η) additive
+
+quadruples inD,n a m e l yx−y = x′ −y′. (Here we letS be the set of pairs (x,y),
+
+we letT be the set of diﬀerences with∼Nβrepresentations as diﬀerence of Δ and
+
+Licensed to Indiana Univ Bloomington. Prepared on Thu Oct 23 15:48:20 EDT 2014 for download from IP 129.79.34.151.
+
+License or copyright restrictions may apply to redistribution; see http://www.ams.org/journal-terms-of-use
+
+NEW BOUNDS ON CAP SETS 601
+
+we letρbe the diﬀerence map,ρ(x,y)= x−y. Then we can apply Lemma 2.1.)
+
+However since each diﬀerencex,y can be represented inN1+α ways as a diﬀerence
+
+in Δ, we can represent each quadruple inD as an octuple in Δ inN4+4α ways.
+
+Thus there are at leastN16−β−O(η) many such octuples which impliesβ≥1−O(η).
+
+Thus we are in the regime where the estimate that there are at mostN7−2β+O(η)
+
+many diﬀerences is most eﬀective. Suppose that there were onlyN7−2β−γ many
+
+such diﬀerences withγ≫ η. Then applying Cauchy-Schwarz again, we would
+
+see that there are at leastN11−4α−O(η)+γ many quadruples in D which implies
+
+N15−O(η)+γoctuples in Δ, a contradiction.
+
+Thus taking D′ to be the diﬀerencesx −y obtained from (x,y)s ot h a tNβ ≤
+
+|Δ[x]∩Δ[y]| < 2Nβand takingG′ to consist of representatives of these diﬀerences
+
+coming from the intersections, we obtain an additive structure (Δ,G′,D′) with
+
+height β−1 <α−μand ambiguityO(η). □
+
+Corollary 6.7. Given an additive structure(Δ,G,D ) at heightαa n dw i t ha m b i -
+
+guity ηthere is an additve structure(Δ,G,D ) at height α′ ≤αwith ambiguity μ
+
+and comityμwith μ≲ 1
+
+log 1
+
+η
+
+.
+
+Proof. We iteratively apply Lemma 6.6 with comityμﬁxed by
+
+μ= K
+
+log 1
+
+η
+
+with K a large constant, and with the ambiguity increasing by a constant factor
+
+C in each iteration. Since αdecreases by μeach time we don’t ﬁnd comity we
+
+need only 1
+
+μ iterations to achieve comity. At this point, we have ambiguity given
+
+by C
+
+log( 1
+
+η)
+
+K η≪ μ,a sl o n ga sK was chosen suﬃciently large. □
+
+Now we begin to investigate what we can say about the shape of the setH of
+
+all pairs (b,c)i nΔ × Δ having the property thatb −c h a sa tl e a s tN1+α−O(μ)
+
+representations in Δ× Δf o r( Δ,G,D ) an additive structure with heightαand
+
+ambiguity and comityμ. We will ﬁnd that the setH is rather thick in a product
+
+set whose projection has sizeN3−α−O(μ).
+
+Lemma 6.8. Let (Δ,G,D ) be an additive structure with heightαand ambiguity
+
+and comityμ. Then there is a subsetB ⊂Δwith |B| ≳ N3−α−O(μ) so that there
+
+is a setH ⊂B ×B with
+
+|H| ≳ N−O(μ)|B|2,
+
+so that for any(b,c) ∈H, the diﬀerenceb −c has N1+α−O(μ) representations in
+
+Δ×Δ.
+
+Proof. From the hypotheses, we have that
+
+∑
+
+x∈D
+
+∑
+
+y∈D
+
+|ΔG[x]∩ΔG[y]| ≳ N9−2α−O(μ),
+
+and that there are at leastN8−3α−O(μ) pairs (x,y) for which
+
+|ΔG[x]∩ΔG[y]| ≳ N1+α−O(μ).
+
+Using the pigeonhole principle, we ﬁx one value ofxfor whichN3−α−O(μ) choices
+
+of y exist such that
+
+|ΔG[x]∩ΔG[y]| ≳ N1+α−O(μ).
+
+Licensed to Indiana Univ Bloomington. Prepared on Thu Oct 23 15:48:20 EDT 2014 for download from IP 129.79.34.151.
+
+License or copyright restrictions may apply to redistribution; see http://www.ams.org/journal-terms-of-use
+
+602 MICHAEL BATEMAN AND NETS HAWK KATZ
+
+Again using the pigeonhole principle, we ﬁnd ana ∈Δa n das e tY ⊂D so that
+
+a ∈Δ[y] for everyy ∈Y,s ot h a t|Y| = N3−α−O(μ) and so that for eachy ∈Y,w e
+
+have
+
+|ΔG[x]∩ΔG[y]| ≳ N1+α−O(μ).
+
+We noticethat bydeﬁnition,a−Y ⊂Δ. We chooseB = a−Y. Finally since each
+
+ΔG[y] has relative densityN−O(μ) in ΔG[x], we have by Cauchy-Schwarz (Lemma
+
+2.2) that ∑
+
+y∈Y
+
+∑
+
+y′∈Y
+
+|ΔG[y]∩ΔG[y′]| ≳ |Y|2N1+α−O(μ).
+
+This implies thatB satisﬁes the conclusion of the lemma. The reason is that by
+
+Lemma 2.3, we have a set˜Y of pairsy,y′ so that|Δ[y]∩Δ[y′]| ≳ N1+α−O(μ).T h i s
+
+implies that y −y′ h a sa tl e a s tN1+α−O(μ) representatives as a diﬀerence of two
+
+elements of Δ. □
+
+Now we are going to use Lemma 6.8 repeatedly to show that for any robust
+
+additively nonsmoothing set of sizeδwe can ﬁnd an additive structure of ambiguity
+
+ηwith η≲ 1
+
+log 1
+
+δ
+
+which breaks into dense blocks.
+
+Lemma 6.9. Let Δbe a robust additively nonsmoothing set of strengthδ. Choose
+
+μ∼ 1
+
+log 1
+
+δ
+
+. Then for some 0 ≤ α≤1, there is an additive structure(Δ,G,D )
+
+of height αand ambiguity μand disjoint subsets B1,...,B K of Δ with each Bj
+
+satisfying |Bj| ≲ N3−α+O(μ) so that
+
+G ⊂
+
+K⋃
+
+j=1
+
+Bj ×Bj.
+
+Note that since we are requiring that(Δ,G,D ) be an additive structure, this requires
+
+|G| ≳ N6−α−O(μ), which impliesK ≳ Nα−O(μ).
+
+Proof. Using Proposition 6.4 , Corollary 6.7, and Lemma 6.8. We can ﬁnd a subset
+
+B1 of Δ so that for some choice ofα, it has size at mostN3−α+O(μ) and nevertheless
+
+B1 × B1 contains at least N6−2α−O(μ) pairs whose diﬀerences haveN1+α−O(μ)
+
+representations as diﬀerences in Δ.
+
+Having done this, we use the robustness property of Δ to apply the same argu-
+
+ment to Δ\(B1∪−B1). We continue removing sets from Δ until we have exhausted
+
+half of Δ. Now one diﬃculty is that the disjoint setsB which we chose do not all
+
+have the sameα. We use dyadic pigeonholing to resolve this for only a small cost
+
+in the number of sets. We call these setsB1,...,B K. Now Lemma 6.8 guarantees
+
+us in eachBj × Bj, a subsetHj of cardinality at leastN6−2α−O(μ) so that each
+
+diﬀerence inHj is represented in Δ×Δa tl e a s tN1+α−O(μ) times. We denote by
+
+Dα the set of diﬀerences represented in Δ×Δa tl e a s tN1+α−O(μ) times, and note
+
+that
+
+|Dα| ≲ N5−2α+O(μ),
+
+lest there be enough quadruples in Δ to violate the additive nonsmoothing con-
+
+dition. Pigeonholing, we ﬁnd someα′ ≳ α−O(μ)s ot h a ta tl e a s tN5−2α−O(μ)
+
+diﬀerences are represented at leastN1+α′
+
+many times in⋃
+
+j Hj ×Hj.W ed e n o t e
+
+this set of diﬀerences asD′
+
+α.W el e tD be D′
+
+α and letG be a subset of⋃
+
+j Hj ×Hj
+
+consisting ofN1+α′
+
+representatives of each diﬀerence inD. □
+
+Licensed to Indiana Univ Bloomington. Prepared on Thu Oct 23 15:48:20 EDT 2014 for download from IP 129.79.34.151.
+
+License or copyright restrictions may apply to redistribution; see http://www.ams.org/journal-terms-of-use
+
+NEW BOUNDS ON CAP SETS 603
+
+Our goal now will be to use Lemma 6.9 to ﬁnd almost additively closed setsE of
+
+size at leastN1−f(μ) inside robust nonadditively smoothing sets of strengthδ.H e r e
+
+f :[ 0,1] −→[0,∞) is some function with limt−→0 f(t) = 0. We will be employing
+
+such functions from now on in the paper. They, like constants, will change from
+
+line to line.
+
+The project of ﬁnding additively closed sets will be easiest when we have additive
+
+structures of height zero having ambiguity and comity μ. For this reason, we
+
+are about to deﬁne a stylized structure which generalizes this situation. We will
+
+eventually use the generalized version, replacing Δ with the blocksB
+
+j.
+
+Deﬁnition 6.10. We will now deﬁne aμ-full stylized ρ-structure which is τ-
+
+energetic and has ambiguity and comity μ. (The error exponents μare all the
+
+same.) This will be a set (Δ′,G,D ), where
+
+|Δ′|∼ Nρ
+
+(hence aρ-structure), whereG ⊂Δ′ ×Δ′ with
+
+|G| >N 2ρ−O(μ)
+
+(this was theμ-fullness), where D is the set of diﬀerences in pairs inG and each
+
+diﬀerence represented≳ Nτand ≲ Nτ+O(μ) times, hence τ-energetic. Finally we
+
+assume that there are at leastN3ρ−τ−O(μ) pairs (x,y) ∈D ×D so that
+
+|Δ′[x]∩Δ′[y]| ≳ Nτ−O(μ),
+
+which is of course theμ-comity.
+
+Deﬁnition 6.11. We shall say that a setK is μ-additively closedprovided that
+
+|K −K| ≲ NO(μ)|K|.
+
+Lemma 6.12. There is a functionf :[ 0,1] −→[0,∞) with
+
+lim
+
+t−→0
+
+f(t)=0 ,
+
+so that the following holds. Let (Δ′,G,D ) be a μ-full stylized ρ-structure which
+
+is τ-energetic and has ambiguity and comityμ. Then there is an f(μ) additively
+
+closed setK with
+
+|K| ≳ Nτ−f(μ)
+
+and a setX so that
+
+|X| ≲ Nf(μ) |Δ′|
+
+|K|,
+
+so that
+
+|Δ′ ∩(X +K)| ≳ Nρ−f(μ).
+
+Proof. We proceed essentially as in the proof of Lemma 6.8. We ﬁndx ∈D so that
+
+there is a setY of y ∈D with |Y| ≳ Nρ−O(μ) so that
+
+|Δ′
+
+G[x]∩Δ′
+
+G[y]| ≳ Nτ−O(μ),
+
+for everyy ∈Y. As before, we use the pigeonhole principle to ﬁnda ∈Δ′ so that
+
+there is a subsetYa of Y so that for eachy ∈Ya,w eh a v e
+
+a ∈Δ′
+
+G[y]
+
+and so that
+
+|Ya| ≳ Nρ−O(μ).
+
+Licensed to Indiana Univ Bloomington. Prepared on Thu Oct 23 15:48:20 EDT 2014 for download from IP 129.79.34.151.
+
+License or copyright restrictions may apply to redistribution; see http://www.ams.org/journal-terms-of-use
+
+604 MICHAEL BATEMAN AND NETS HAWK KATZ
+
+However Ya ⊂a −A. Thus we think ofYa as a dense part of a translate of−A.
+
+N o ww ek n o wt h a t∑
+
+y∈Ya
+
+|Δ′
+
+G[x]∩Δ′
+
+G[y]| ≳ Nρ+τ−O(μ).
+
+This precisely means that there areNρ+τ−O(μ) triples (b,c,d ) withb,c ∈Δ′ and
+
+d ∈Δ′[x] witha−b = d−c with a still ﬁxed. Applying Cauchy-Schwarz we ﬁnd
+
+Nρ+2τ−O(μ) quadruples (d,c,d ′,c′) withd,d′ ∈Δ′[x]a n dc,c′ ∈Δ′.A si th a p p e n s ,
+
+this is precisely the hypothesis of the asymmetric Balog-Szemeredi-Gowers theorem
+
+(Theorem 2.5) applied to Δ′ and ΔG[x]. The conclusion follows directly. □
+
+We are now prepared to state the main result of this section.
+
+Theorem 6.13. Let Δbe a robust additively nonsmoothing set of strengthδ.A s
+
+before chooseμ∼ 1
+
+log 1
+
+δ
+
+.T h e r ei sf :[ 0,1] −→[0,∞) with
+
+lim
+
+t−→0
+
+f(t)=0 ,
+
+so that for someγ≥0, there is anf(μ)-additively closed setK with
+
+|K| ≳ N1+γ−f(μ),
+
+contained inΔ. In the event that we must haveγ= O(f(μ)),f o rs o m e0 ≤α≤1,
+
+we may ﬁnd pairwise disjoint subsetsB1,...,B M ⊂Δwith M ≳ Nα−O(μ) so that
+
+for each integer1 ≤j ≤m, we have
+
+N3−α−O(μ) ≲ |Bj| ≲ N3−α+O(μ),
+
+and moreover we ﬁnd for eachj a μ-additively closed setKj with
+
+N1−f(μ) ≲ |Kj| ≲ N1+f(μ),
+
+together with a setXj with
+
+N2−α−f(μ) ≲ |Xj| ≲ N2−α+f(μ),
+
+so that
+
+|Bj ∩(Xj +Kj)| ≳ N3−α−f(μ).
+
+Further, there is a setD with |D| ≳ N5−2α+f(μ) so that each element ofD has at
+
+least N1+α−f(μ) representations as a diﬀerence of elements ofΔ and so that for
+
+each j,t h es e to f4-tuples Qj = {(k1,d1,k2,d2): k1,k2 ∈Kj,d1,d2 ∈D : k1 −d1 =
+
+k2 −d2} satisﬁes
+
+|Qj| ≳ N7−2α−f(μ).
+
+Moreover we may chooseKj to be contained in the set of diﬀerences having at least
+
+N5−2α−f(μ) representations as a diﬀerence between elements ofD.
+
+Proof. We apply Lemma 6.9 and restrict our attention to
+
+G ⊂
+
+K⋃
+
+j=1
+
+Bj ×Bj,
+
+where the Bj are the blocks obtained there. Now toG, we apply the argument
+
+used in the proof of Lemma 6.6.
+
+That is, for any elementx ∈−(G), we study
+
+ΔG[x]= {a ∈Δ: ∃b ∈Δ:( a,b) ∈G; a−b = x}.
+
+Licensed to Indiana Univ Bloomington. Prepared on Thu Oct 23 15:48:20 EDT 2014 for download from IP 129.79.34.151.
+
+License or copyright restrictions may apply to redistribution; see http://www.ams.org/journal-terms-of-use
+
+NEW BOUNDS ON CAP SETS 605
+
+Then, we observe
+
+∑
+
+x,y∈−(G)
+
+|ΔG[x]∩ΔG[y]| ≳ N9−2α−O(μ),
+
+and we observe as before that there is some 1 +α≥β≥1 −O(μ) so that there
+
+are at leastN9−2α−β−O(μ) pairs (x,y) for which|ΔG[x]∩ΔG[y]| ≳ Nβ.W en o t e
+
+that when this happens, for each a in the intersection ΔG[x] ∩ΔG[y], we have
+
+x = a−b1 and y = a−b2.H e r ei fa ∈Bj,w em u s th a v eb1 ∈Bj and b2 ∈Bj,s i n c e
+
+(a,b1),(a,b2) ∈G. We argue as in the proof of Lemma 6.6, that there are at least
+
+N7−2β−O(μ) diﬀerences havingNβ representations in
+
+K⋃
+
+j=1
+
+Bj ×Bj,
+
+which is impossible unlessβ≥α−O(μ) since there are at mostN6−α+O(μ) pairs
+
+in
+
+K⋃
+
+j=1
+
+Bj ×Bj.
+
+Clearly this gives usO(μ) comity forG.
+
+Thus we have a setH of pairsx,y for which|ΔG[x]∩ΔG[y]| ≳ N1+α−O(μ) and
+
+so that|H| ≳ N8−3α−O(μ). Now we use the pairwise disjointness of the blocksBj
+
+to write the identity
+
+(6.5)
+
+∑
+
+(x,y)∈H
+
+|ΔG[x]∩ΔG[y]| =
+
+K∑
+
+j=1
+
+∑
+
+(x,y)∈H
+
+|ΔG[x]∩ΔG[y]∩Bj| ≳ N9−2α−O(μ).
+
+Now we begin to use the comity ofG. We ﬁrst eliminate from the second sum in
+
+(6.5) all terms for which the relative density of ΔG[x]i nΔG[y]∩Bj or the relative
+
+density of ΔG[y]i nΔG[x] ∩Bj is smaller thanN−Cμ for too large a constantC.
+
+By choosingC suﬃciently large we do not reduce the sum by a factor of more than
+
+2. We dyadically pigeonhole to obtain the largest possible sum from those terms
+
+where N
+
+1+γ ≤|ΔG[x] ∩ΔG[y] ∩Bj|≤ 2N1+γ. (We denote this set of (x,y)a s
+
+Hγ,j.) Thus we have reduced the sum by at most a factor of logN. We keep only
+
+those j for which
+
+(6.6)
+
+∑
+
+(x,y)∈Hγ,j
+
+|ΔG[x]∩ΔG[y]∩Bj| ≳ N9−3α−O(μ).
+
+We observe that for eachx, there are at mostN3−α+O(μ) choices of y so that
+
+(x,y) ∈H. The reason is that anya ∈Δ belongs to at mostN3−α+O(μ) sets ΔG[y]
+
+because G is contained in⋃
+
+j Bj ×Bj. However if there were more thanN3−α+O(μ)
+
+choices ofy so that (x,y) ∈H, then there would be elementsa ∈ΔG[x]w h i c ha r e
+
+contained in ΔG[y] for more thanN3−α+O(μ) choices ofy.T h u s ,s i n c ew eh a v ea t
+
+least N8−2α−γ−O(μ) triples (j,x,y ) for which
+
+|ΔG[x]∩ΔG[y]∩Bj| ≳ N1+γ,
+
+while at the same time
+
+|ΔG[x]∩Bj| ≲ N1+γ+O(μ),
+
+it must be that for some values ofj,w em u s th a v ea tl e a s tN8−3α−γpairs (x,y) ∈
+
+Hγ,j. This means, ﬁxing one such value ofj (since at mostN3−α+O(μ) values of
+
+Licensed to Indiana Univ Bloomington. Prepared on Thu Oct 23 15:48:20 EDT 2014 for download from IP 129.79.34.151.
+
+License or copyright restrictions may apply to redistribution; see http://www.ams.org/journal-terms-of-use
+
+606 MICHAEL BATEMAN AND NETS HAWK KATZ
+
+y are paired with a givenx), there are at leastN5−2α+γ−O(μ) diﬀerencesx with
+
+N1+γrepresentations inG∩(Bj ×Bj). We call this setDj,γ.
+
+Thus G∩(Bj ×Bj)i sμ-full and (1 +γ)-energetic. Another way of describing
+
+the μ- f u l l n e s si st h a tN5−2α+γ−O(μ) (up toNO(μ) factors) is the largest number of
+
+such x possible, purely based on the size ofBj ×Bj.T h u si tm u s tb et h a tf o ras e t
+
+of sizeN5−2α+γ−O(μ) many suchx,t h e r ea r eN3−α−O(μ) such y with (x,y) ∈Hγ,j.
+
+Thus (Bj,G ∩(Bj ×Bj),Dj,γ)h a sO(μ)-comity. Clearly (Bj,G ∩(Bj ×Bj),Dj,γ)
+
+is a 3−αstructure with ambiguityμ. Thus we are in a position to apply Lemma
+
+6.12. This proves the ﬁrst part of the theorem. (Indeed, since all our estimates
+
+were optimal up toNO(μ) factors, there is a setJ of choices ofj for which we could
+
+apply Lemma 6.12 with|J| ≳ Nα−O(μ).)
+
+To prove the second part, we consider in detail the caseγ= 0. We will apply
+
+the argument proving Lemma 6.12 to allj ∈J. This will give usμ-additive sets
+
+Kj and setsXj with appropriate upper and lower bounds since we can assume Δ
+
+contains noμ-additive sets with more thanN1+f(μ) elements.
+
+We will allowf to vary from line to line and we will express even quantities that
+
+are clearlyO(μ)a sf(μ).
+
+We letD be the set of all diﬀerencesx for which|Δ[x]∩Bj| ≳ N1−f(μ) for at
+
+leastNα−f(μ) values ofj ∈J. For each value ofj ∈J,t h e r ea r ea tl e a s tN8−3α−f(μ)
+
+pairs (x,y) ∈D2 with |ΔG[x] ∩ΔG[y] ∩Bj| ≳ N1−f(μ). Note that we may also
+
+restrict D to diﬀerences which cannot be represented in more thanN1+f(μ) ways
+
+as diﬀerences of elements ofBj for more thanNα−f(μ) values inj and so that in
+
+each Bj our count of good pairs (x,y) consists only of pairs of diﬀerences which
+
+cannot be represented as diﬀerences inBj in more thanN1+f(μ) ways. Otherwise,
+
+we could chooseγ>f(μ).
+
+Now we recall the structure of the argument in Lemma 6.12. We chose an
+
+a ∈Bj and a setBa of size N3−α−f(μ) of the diﬀerences in whicha participates,
+
+and a set Ka which is actually of the form ΔG[x] ∩Bj and has size N1−f(μ).
+
+We ﬁndN5−α−f(μ) additive quadruples made up of two elements ofBa and two
+
+elements ofKa. We may strip downKa further to those elements which participate
+
+in at leastN4−α−f(μ) of these quadruples and not harm our estimate. Now, we
+
+note that since Ba is a large subset of a translate ofBj, it must be that there
+
+are N2−f(μ) pairs (q1,q2) ∈K2
+
+a with the property that q1 −q2 is represented
+
+N3−α−f(μ) times as a diﬀerence of elements ofBj.W e l e tK1,j be the set of
+
+diﬀerences ofBj that can be represented inN3−α−f(μ) ways as diﬀerences inBj.
+
+Because Bj contains noμ-additively closed set of size more thanN1+f(μ),w eh a v e
+
+that |K1,j|≤ N1+f(μ). Otherwise we could apply the asymmetric Balog-Szemeredi-
+
+Gowers theorem to obtain aμ-additively closed set, contained inBj, which is larger
+
+than Q.
+
+We can replace N5−α−f(μ) quadruples q1 −q2 = x1 −x2 with q1,q2 ∈K1,j
+
+and x1,x2 ∈Aa by an equation of the form q = x1 −x2 with multiplicity at
+
+most N1+f(μ).T h u sw eo b t a i na tl e a s tN4−α−f(μ) such equations. We rewrite the
+
+equation asx1 −q = x2 and use Cauchy-Schwarz to obtainN5−α−f(μ) quadruples
+
+x1 −q = x′
+
+1 −q′. We see then that without losing more thanNf(μ) factors in
+
+our estimates, we can replaceKa by K1,j. T h i si sg o o ds i n c ew eh a v em a d ei t
+
+independent of the choice ofa. Now we need only show that we can ﬁnd many
+
+Licensed to Indiana Univ Bloomington. Prepared on Thu Oct 23 15:48:20 EDT 2014 for download from IP 129.79.34.151.
+
+License or copyright restrictions may apply to redistribution; see http://www.ams.org/journal-terms-of-use
+
+NEW BOUNDS ON CAP SETS 607
+
+quadruples not only betweenK1,j and Ba but betweenK1,j and D. This will give
+
+us the desired result.
+
+To do this, we observe that we may delete fromBa a set with relative density
+
+N−f(μ) without harming our estimates on the number of quadruplets betweenBa
+
+and K1,j. Our goal will be to cover a subsetD′ by a disjoint union of subsets of
+
+the formB′
+
+a,w h e r eB′
+
+a is a subset ofBa with relative density 1−N−f(μ).T od o
+
+this we observe that for any ﬁxeda ∈Bj,
+
+∑
+
+a2
+
+|Ba1 ∩Ba2| ≲ N4−α+f(μ).
+
+We can do this because the sum counts triples (x,a,a 2) with x a diﬀerence and
+
+a,a2 are parts of representations of it. We have assumed that we are only dealing
+
+with diﬀerences with fewer thanN1+O(μ) representations. Here we are using that
+
+we are in theγ=0c a s e ,
+
+Now we produceD′ as follows. We choose a1 and keep the setBa1.W e a d d
+
+all elements of Ba1 to D′.W e c h o o s eBa2 to have the minimal possible sized
+
+intersection with Ba1 and let B′
+
+a2 be those elements inBa2 that are not already
+
+in D′.W ec h o o s eBa3 to have minimal possible intersection withBa1 ∪Ba2.W e
+
+continue in this way until we reach ak so thatB′
+
+ak no longer has relative density
+
+1−Nf(μ) inBak. Becausetheaverage intersection |Ba∩Ba′|is bounded byN1+f(μ),
+
+we get thatk is at leastN2−α−f(μ).T h u so u rs e tD′ has relative density at least
+
+N−f(μ) in D.T h u sw eh a v et h a tK1,j has N7−2α−f(μ) quadruples with D and a
+
+fortiori with D′.
+
+Now we slightly reﬁneK1,j to K2,j consisting only of diﬀerences of elements
+
+of K1,j which participate in at leastN5−α−f(μ) of the quadruples withD′.( W e
+
+perform this reﬁnement so that after we apply Balog-Szemeredi-Gowers toK2,j,w e
+
+will still be guaranteed to have many quadruples between theμ-additively closed
+
+set we obtain and D.S i n c eD′ is a disjoint union of sets with relative density
+
+N−f(μ) inside translates ofBj, it must be thatK2,j still hasN5−α−f(μ) quadruples
+
+with Bj. Thus we can apply the asymmetric Balog-Szemeredi-Gowers theorem to
+
+ﬁnd a subsetKj satisfying the conclusions of the theorem. □
+
+7. Structure of spectrum of large cap sets
+
+with no strong increments
+
+In this section, we transfer the results obtained in Theorem 6.13 over to the
+
+setting of the spectrum of large cap sets with no strong increments. This turns out
+
+to be rather simple. The main ideas which we have not yet taken advantage of are
+
+Freiman’s theorem and the use of the estimate in Proposition 3.3 which bounds the
+
+number of elements of the spectrum in a subspace of dimensiond by dN
+
+1+2ϵ.
+
+We state the main result of the section.
+
+Theorem 7.1. Let Δbe the spectrum of a large cap set without strong increments.
+
+There is a functionf :[ 0,1] −→[0,∞] with limt−→0 f(t)=0 so that the following
+
+holds. There is a subspace H of FN
+
+3 of dimension f(ϵ) and a set Λ⊂ FN
+
+3 of
+
+size N2−f(ϵ) so that for each elementλ∈Λ, there is a subsetHλ ⊂H with the
+
+properties that
+
+|Hλ| ≳ N1−f(ϵ),
+
+and the setsλ+Hλare pairwise disjoint subsets ofΔ. For any subspaceW ⊂FN
+
+of dimensiond, we have thatW contains at mostdNf(ϵ) elements ofΛ.
+
+Licensed to Indiana Univ Bloomington. Prepared on Thu Oct 23 15:48:20 EDT 2014 for download from IP 129.79.34.151.
+
+License or copyright restrictions may apply to redistribution; see http://www.ams.org/journal-terms-of-use
+
+608 MICHAEL BATEMAN AND NETS HAWK KATZ
+
+Proof. As before we allow our functionf to vary from line to line until we achieve
+
+the desired result.
+
+In light of Theorem 2.6 and Proposition 3.3, anyf(ϵ)-additively closed set in
+
+whichthespectrumhas N−f(ϵ) relativedensity, must beboundedinsizeby N1+f(ϵ).
+
+Therefore, we are in theγ= 0 case of Theorem 6.13. We know that there is a set
+
+Δ′ of densityN−f(ϵ) in the spectrum Δ which is contained in
+
+K⋃
+
+j=1
+
+Xj +Kj,
+
+with each Kj an f(ϵ)-additively closed set (of size at leastN1−f(ϵ) and at most
+
+N1+f(ϵ))a n dw i t he a c hs e tXj of size N2−α±f(ϵ). Moreover, each set Kj lies in
+
+the setK of diﬀerences having at leastN5−2α−f(ϵ) representations as diﬀerences of
+
+elements ofD, the diﬀerences among elements of the spectrum which have at least
+
+N1+α−f(ϵ) representations. In light of the nonadditive smoothing property of Δ, we
+
+have that|K| ≲ N1+f(ϵ) since there can be at mostN11−4α+f(ϵ) quadruplets among
+
+elements ofD. We may eliminate all elementsq of eachKj for which Δ∩q +Xj
+
+does not have size at leastN2−α−f(ϵ). Now we let K′ be the set of elements of
+
+K which appear in at leastNα−f(ϵ) many Kj. We can ﬁnd someKj which has
+
+intersectionofsize N1−f(ϵ) withK′.T h e nK′∩Kj = K′′ is anf(ϵ)-additivelyclosed
+
+set with cardinality at leastN1−f(ϵ). Moreover each element ofK′′ is contained in
+
+Nα−f(ϵ) many Kj. Thus by pigeonholing there are at leastNα−f(ϵ) many Kj so
+
+that |Kj ∩K′′| ≳ N1−f(ϵ). We only keep thesej and replaceKj by Kj ∩K′′.B u t
+
+by Theorem 2.6, we have thatK′′ is contained in a subspace of dimensionNf(ϵ),
+
+which we callH.
+
+This basically proves the ﬁrst part of the theorem. We have that a subset of the
+
+spectrum of densityN−f(ϵ) is contained inK′′ + X,w h e r eX is the union of the
+
+Xj’s. We will pick Λ and the setsHλ as follows: Find x1 in X so that at least
+
+N1−f(ϵ) elements of Δ are contained inx1 + K′′.L e t Δ1 be the elements of Δ
+
+contained inX+K′′ but not inx1 +K′′.L e tΔ1 be those elements of Δ contained
+
+in x1 +K′′ and letHx1 =Δ1 −x1.N o t et h a tHx1 is contained inK′′ and therefore
+
+in H. Now we proceed iteratively. Findxj ∈X so that there are at leastN1−f(ϵ)
+
+elements of Δj−1 in xj + K′′. When this is no longer possible, we terminate the
+
+process. Then we let Δj be the elements of Δj−1 not inxj +K′′ and we let Δj be
+
+the ones that are. We letHxj =Δj −xj.W el e tΛ={xj} after the iteration has
+
+terminated.
+
+To prove the second part of the theorem, letS be any subset of Λ with some car-
+
+dinality M.B u tS+H contains at leastMN1−f(ϵ) elements of Δ. This contradicts
+
+Proposition 3.3 unless the span ofS has dimension at leastMN−f(ϵ). □
+
+8. Contradiction
+
+The goal of this section is to obtain a contradiction from the existence of large
+
+cap sets without strong increments by using the result of Theorem 7.1. We begin
+
+by recording some easy consequences of Plancherel’s identity for the interaction
+
+between the Fourier transform of the characteristic function of a set and the Fourier
+
+transforms of its ﬁbers over a subspace.
+
+Licensed to Indiana Univ Bloomington. Prepared on Thu Oct 23 15:48:20 EDT 2014 for download from IP 129.79.34.151.
+
+License or copyright restrictions may apply to redistribution; see http://www.ams.org/journal-terms-of-use
+
+NEW BOUNDS ON CAP SETS 609
+
+For any setA ⊂FN
+
+3 , we deﬁne its Fourier transform
+
+ˆA(x)= 1
+
+3N
+
+∑
+
+a∈A
+
+e(a·x).
+
+We state Plancherel’s identity:
+
+Proposition 8.1. ∑
+
+x∈FN
+
+| ˆA(x)|2 =3 −N|A|.
+
+We letH be a subspace ofFN
+
+3 and we letH⊥ be its annihilator. We letV be
+
+a subspace of the same dimension asH which is transverse toH⊥. We deﬁne the
+
+ﬁberAH,v for v ∈V by
+
+AH,v = A∩(H⊥ +v).
+
+If we haveh ∈H,t h e n
+
+ˆA(h)=3 −N ∑
+
+v∈V
+
+e(h·v)|AH,v|.
+
+Thus we arrive at another form of Plancherel:
+
+Proposition 8.2. ∑
+
+h∈H
+
+| ˆA(h)|2 = |H|3−2N ∑
+
+v∈V
+
+|AH,v|2.
+
+Moreover ∑
+
+h̸=0∈H
+
+| ˆA(h)|2 = |H|3−2N ∑
+
+v∈V
+
+(|AH,v|− |A|
+
+|H|)2.
+
+Next, we consider the situation where we have a subspaceH ⊂FN
+
+3 and a larger
+
+subspace K with H ⊂K ⊂FN
+
+3 .W el e tV be a subspace transverse toH⊥ as before
+
+and we would like to consider the Fourier transforms of the ﬁbers ofA,n a m e l yt h e
+
+sets AH,v. We can think of each ﬁberAH,v as being identiﬁed with a subset ofH⊥
+
+(by translation byv) and of courseH⊥ can be identiﬁed withFN
+
+3 \H.T h a ti s ,w e
+
+deﬁne functionsAH,v : FN
+
+3 \H −→C by
+
+ˆAH,v(w)= |H|
+
+3N
+
+∑
+
+a∈AH,v
+
+e((a−v)·w).
+
+The function ˆAH,v(w)i sw e l ld e ﬁ n e do nFN
+
+3 \H since a −v is in H⊥.N e x t ,
+
+we write down a version of Proposition 8.2 which shows how theL2 norms of the
+
+Fourier transforms of the ﬁbers onK\H compare with theL2 norm of the Fourier
+
+transform onK.W el e tW be a subspace transverse toK⊥ with V ⊂W.
+
+Proposition 8.3. With H, K, V,a n dW as above,
+
+∑
+
+k̸=0∈K
+
+| ˆA(k)|2 =
+
+∑
+
+h̸=0∈H
+
+| ˆA(h)|2 + 1
+
+|H|
+
+∑
+
+v∈V
+
+∑
+
+k̸=0∈K/H
+
+| ˆAH,v(k)|2.
+
+Proof. Since clearly we haveK⊥ ⊂H⊥, there is a unique subspaceW′ ⊂W with
+
+W′ +K⊥ = H⊥. We haveV +W′ = W.
+
+We consider the following function onW:
+
+g(w)= |AK,w|− |A|
+
+|K|.
+
+Licensed to Indiana Univ Bloomington. Prepared on Thu Oct 23 15:48:20 EDT 2014 for download from IP 129.79.34.151.
+
+License or copyright restrictions may apply to redistribution; see http://www.ams.org/journal-terms-of-use
+
+610 MICHAEL BATEMAN AND NETS HAWK KATZ
+
+Clearly, in light of the second part of Proposition 8.2, the left-hand side of the
+
+identity we are trying to prove is the normalized square of theL2 norm of the
+
+function g(w).
+
+We now break upg as the sum of a functiong0 which is constant on translates of
+
+W′ and functionsgv with v running overV having mean zero and supported on the
+
+translate v+W′ of W′. Clearly the functionsg0 and {gv} are pairwise orthogonal.
+
+The ﬁrst term on the right-hand side of the identity is the normalized squareL2
+
+norm of the functiong0. The second term on the right-hand side represents the
+
+sum overv of the normalized squareL2 norm of the functionsgv. The identity is
+
+then an application of the Pythagorean theorem. □
+
+(We remark that Proposition 8.3 can simply be thought of as Plancherel for a
+
+“local Fourier transform” ofA. Here, we localize to the translates ofH⊥.)
+
+Now we are prepared to apply Proposition 8.3 to the setting in whichA is a large
+
+cap set without strong increments andH is the subspace given to us by Theorem
+
+7.1.
+
+We letA be a large cap set with no strong increments. As usual,f will be a
+
+function taking [0,1] to [0,∞] with limt−→0 f(t) = 0. We will varyf from line to
+
+line.
+
+Then there is a subspaceH with dimensionNf(ϵ) and a set Λ of sizeN2−f(ϵ) so
+
+that for eachλ∈Λ there is a subsetHλof H,s ot h a t|Hλ| >N 1−f(ϵ) so that for
+
+each h ∈Hλ,w eh a v et h a t
+
+| ˆA(h+λ)| ≳ N−1−f(ϵ)3−N|A|.
+
+We also have that the setsλ+Hλare pairwise disjoint.
+
+Note therefore that∑
+
+λ∈Λ
+
+∑
+
+h∈Hλ
+
+| ˆA(h+λ)|2 ≳ N−f(ϵ)N3−2N|A|2 ≳ N−f(ϵ)3−N|A|.
+
+Thus the structured elements of the spectrum ofA account for a large proportion
+
+of the squaredL2 norm of the Fourier transform ofA.
+
+Now we would like to consider the ﬁbersAH,v,w h e r eH is the subspace we’ve
+
+been discussing. Because the cap setA h a sn os t r o n gi n c r e m e n t s ,w ek n o wt h a tf o r
+
+each valuev,w eh a v e
+
+|AH,v|≤ (|A|
+
+|H|)(1+ Nf(ϵ)−1).
+
+(We will now momentarily ﬁx the functionf.)
+
+However, we don’t have a good lower bound on|AH,v| in general. All we know
+
+is that the sum of all the positive increments is equal to the sum of all the negative
+
+increments. We letVbad be the set of allv ∈V for which
+
+|AH,v|≤ (|A|
+
+|H|)(1−N2
+
+√
+
+f(ϵ)−1).
+
+(That is, Vbad is the set of thosev ∈V for which the ﬁber has a bad negative
+
+increment.) We know that
+
+|Vbad| ≲ N−
+
+√
+
+f(ϵ)|V|.
+
+We deﬁne
+
+Abad =
+
+⋃
+
+v∈Vbad
+
+AH,v,
+
+Licensed to Indiana Univ Bloomington. Prepared on Thu Oct 23 15:48:20 EDT 2014 for download from IP 129.79.34.151.
+
+License or copyright restrictions may apply to redistribution; see http://www.ams.org/journal-terms-of-use
+
+NEW BOUNDS ON CAP SETS 611
+
+and we let
+
+A′ = A\Abad.
+
+We know that
+
+|Abad| ≲ N−
+
+√
+
+f(ϵ)|A|.
+
+Thus ∑
+
+x
+
+| ˆAbad(x)|2 ≲ N−
+
+√
+
+f (ϵ)
+
+∑
+
+λ∈Λ
+
+∑
+
+h∈Hλ
+
+| ˆA(h+λ)|2.
+
+Thus removingAbad does not perturb the large spectrum ofA too much.
+
+(In making this precise, we now resume changing the functionf from line to
+
+line, observing that we may take the nextf to be larger than the previous√f.)
+
+We may ﬁnd a set Λ′ which is a subset of Λ with|Λ′| ≳ N2−f(ϵ) and so that for
+
+each λ∈Λ′ there is a subsetH′
+
+λof H so that for eachλ∈Λ′ and eachh ∈H′
+
+λwe
+
+have
+
+| ˆA′(h+λ)| ≳ N−1−f(ϵ)3−N|A|.
+
+Thus from the point of view of the structure of the spectrum, we have thatA′ is
+
+essentially as good asA. However, the setA′ has a big advantage overA in that we
+
+have good bounds on the Fourier transform of its ﬁbers. This is because the ﬁbers
+
+are either empty or close to size|A|
+
+H . Empty ﬁbers achieve no increments. On the
+
+other hand, ﬁbers which are close to average cannot have an increment too large,
+
+or else the setA w i l lh a v eas t r o n gi n c r e m e n to nat r a n s l a t eo fac o d i m e n s i o n1
+
+subspace ofH⊥. Precisely, the estimate we get is
+
+| ˆA′
+
+H,v(x)| ≲ 3−N|A|N−1+f(ϵ) = ρN−1+f(ϵ).
+
+(This is because the negative increment on density to pass fromA to A′
+
+H,v does no
+
+more than to reduce the density by a factor of 1−Nf(ϵ)−1 and the codimension
+
+of H is onlyf(ϵ). Should the Fourier transform ofA′
+
+H,v exceed the above bound,
+
+then A will have a strong increment into a codimension one subspace ofH⊥ +v.)
+
+Moreover, thesetA′
+
+H,V isalargecapsetwithoutstrongincrements(onsubspaces
+
+of codimension no more thanN
+
+2 −Nf(ϵ)) but withϵ replaced byf(ϵ). Thus we see
+
+using Proposition 3.3 that for any subspaceL of FN
+
+3 \H with dimensiond,w eh a v e
+
+that ∑
+
+x∈W
+
+| ˆA′
+
+H,V (x)|2 ≲ (|A|
+
+3N )2dN−1+f(ϵ).
+
+This estimate is a version of the bound on the number of elements of the spectrum
+
+of A′
+
+H,V in W.
+
+From this information, together with the fact that no subspaceK of dimension
+
+d contains more thandNf(ϵ) elements of Λ and hence of Λ′, we are ready to achieve
+
+a contradiction.
+
+We introduce some measure spaces on which we will apply Lemma 2.2. For each
+
+v ∈V, we deﬁneχv,am e a s u r eo nFN
+
+3 \H −{0},b y
+
+χv(X)=
+
+∑
+
+x∈X
+
+| ˆA′
+
+H,v(x)|2.
+
+Clearly the total measure ofχv is bounded by 3−N|A|Nf(ϵ).W e n o w g i v e a
+
+construction for sets which have large density for many of the measuresχv.
+
+Let Ξ⊂Λ′ with |Ξ| = d ≲ N1−f(ϵ). Then in light of the fact that Ξ+H contains
+
+at leastdN1−f(ϵ) points x where ˆA′(x) is large and in light of Proposition 8.3, there
+
+Licensed to Indiana Univ Bloomington. Prepared on Thu Oct 23 15:48:20 EDT 2014 for download from IP 129.79.34.151.
+
+License or copyright restrictions may apply to redistribution; see http://www.ams.org/journal-terms-of-use
+
+612 MICHAEL BATEMAN AND NETS HAWK KATZ
+
+must beO(N−f(ϵ)|H|)v a l u e so fv for whichspan(Ξ) has density at leastdN−2−f(ϵ)
+
+for χv. (Here, by slight abuse of notation, the span is taken inFN
+
+3 \H.)
+
+We will taked ∼N
+
+3 . Now let Π be any collection ofN
+
+3+O(√μ) subsets of Λ′
+
+with cardinalityN
+
+3 . We chose the exponents2
+
+3 and 8
+
+3 somewhat arbitrarily. By
+
+pigeonholing, we may ﬁnd a set ofv’s of cardinality|H|N−f(ϵ) for which at least
+
+N
+
+3−f(ϵ) of the sets Ξ in Π have the property thatspan(Ξ) has densityN−4
+
+3−f(ϵ)
+
+for χv. From this and Lemma 2.2 we obtain the lower bound
+
+(8.1)
+
+∑
+
+v∈V −Vbad
+
+∑
+
+Ξ1∈Π
+
+∑
+
+Ξ2∈Π
+
+χv(span(Ξ1)∩span(Ξ2))
+
+χV (FN
+
+3 \H) ≳ |H|N
+
+3−f(ϵ).
+
+What this says is that moduloNf(ϵ) terms, the average density (inχv measure)
+
+of an intersection span(Ξ1) ∩span(Ξ2)i sa tl e a s ta p p r o x i m a t e l yN−8
+
+3 .T h i s i s
+
+rather large since the density of any single element ofFN
+
+3 \H is only approximately
+
+N−3 in light of the bound on the Fourier transforms of the ﬁbers.
+
+We will now produce a random construction of Π. We choose each set of Π
+
+uniformly at random. We will write down an upper bound on the expected density
+
+in any χv of the intersection span(Ξ1) ∩span(Ξ2), which contradicts the lower
+
+bound (8.1). We observe that ifρis the density inχv of span(Ξ1)∩span(Ξ2), then
+
+ρ≤N−3+O(f(ϵ))(3k −1),
+
+where k is the nullity of the set Ξ1 ∪Ξ2. We recall that there are no more than
+
+N
+
+3+f(ϵ) elements of Λ′ in any subspace of dimension 2N
+
+3 .T h u sa sw ec h o o s et h e
+
+2N
+
+3 elements of Ξ1 and Ξ2, the probability of introducing nullity at each selection
+
+is bounded byN−4
+
+3+f(ϵ). Thus the probabilitypk of having nullityk is bounded
+
+by
+
+pk ≲ (N−2
+
+3+f(ϵ))k.
+
+Thus the expected density of span(Ξ1) ∩span(Ξ2)i s O(N−11
+
+3 +f(ϵ)). This is a
+
+contradiction since we have just proved that Δ cannot contain a set as thick in
+
+Λ+H as required by Theorem 7.1.
+
+Thus we have proved Theorem 1.4 and hence Theorem 1.1.
+
+9. Epilogue on efficiency
+
+The ϵ which we obtain in Theorem 1.1 is of necessity quite small. Like many
+
+arguments in analysis, ours does not aim for great eﬃciency, and we seem to lose a
+
+factor in the size ofϵ in nearly every line of the argument. However, there are a few
+
+points in the argument where we lose signiﬁcantly more. The most notable of these
+
+are the use of the asymmetric Balog-Szemeredi-Gowers lemma and the discovery of
+
+the additive structure with comity in Corollary 6.7. What these two parts of the
+
+argument have in common is that they are iterative. One starts with a structure
+
+and seeks a certain property. If the property is lacking, one ﬁnds a structure which
+
+is in a certain sense better but which has cost us a factor inϵ.
+
+Iteration can be a powerful thing. It sometimes allows us to prove a very deep
+
+result with very few words. The proof doesn’t care how many iterates must be
+
+calculated to implement it. We have a version of our argument which we will
+
+publish elsewhere that adds even another layer of iteration to the argument but
+
+spares us some of the diﬃculties of Theorem 6.13. We have semantic disagreements
+
+Licensed to Indiana Univ Bloomington. Prepared on Thu Oct 23 15:48:20 EDT 2014 for download from IP 129.79.34.151.
+
+License or copyright restrictions may apply to redistribution; see http://www.ams.org/journal-terms-of-use
+
+NEW BOUNDS ON CAP SETS 613
+
+about whether the more iterative argument is easier to understand. But certainly,
+
+it is less eﬃcient than the argument presented here.
+
+To improve eﬃciency, it is important to make the argument less iterative. In
+
+hopes of doing so, we leave the reader with two conjectures:
+
+Conjecture 9.1. Let N> 0 be a large parameter. (Constants may not depend on
+
+N.) SupposeB and C are sets inFN
+
+3 each of whose cardinality is bounded byN100.
+
+Suppose the number of quadrupletsb1 +c1 = b2 +c2 with b1,b2 ∈B and c1,c2 ∈C
+
+is at least|B||C|2N−σ. Then C is contained in a subspace of dimensionNO(σ).
+
+Conjecture 9.2. SupposeΔis a subset ofFN
+
+3 that isNσadditively nonsmoothing.
+
+(We may assume as in the previous conjecture that|Δ|≤ N100.) Then Δadmits
+
+an additive structure at some height withNO(σ) comity.
+
+Acknowledgements
+
+The authors thank Izabella /suppressLaba and Olof Sisask for pointing out an error in
+
+the statement of the asymmetric Balog-Szemeredi-Gowers theorem in a preliminary
+
+version of this paper.
+
+References
+
+[CS11] E. Croot and O. Sisask, A Probabilistic Technique for Finding Almost-Periods of Con-
+
+volutions, Geom. Funct. Anal.20 (2010), 1367–1396. MR2738997
+
+[G] T. Gowers, What is diﬃcult about the cap set problem?, http://gowers.wordpress.com/
+
+2011/01/11/what-is-diﬃcult-about-the-cap-set-problem/.
+
+[K1] (M. Bateman and) N.H. Katz, http: //gowers.wordpress.com/2011/01/11/what-is-
+
+diﬃcult-about-the-cap-set-problem/# comment-10533.
+
+[K2] (M. Bateman and) N.H. Katz, http: //gowers.wordpress.com/2011/01/11/what-is-
+
+diﬃcult-about-the-cap-set-problem/# comment-10540.
+
+[KK10] N. H. Katz and P. Koester,On Additive Doubling and Energy, SIAM J. Discrete Math.
+
+24 (2010), 1684-1693. MR2746716
+
+[M95] R. Meshulam, On subsets of ﬁnite abelian groups with no3-term arithmetic progressions,
+
+J .C o m b i n .T h e o r yS e r .A71 (1995), 168-172. MR1335785 (96g:20033)
+
+[PM] Polymath on wikipedia, http://en.wikipedia.org/wiki/Polymath project#Polymath
+
+Project.
+
+[PM6] Polymath 6: Improving the bounds for Roth’s theorem, http://polymathprojects.org/
+
+2011/02/05/polymath6-improving-the-bounds-for-roths-theorem/.
+
+[R99] I. Ruzsa, An analog of Freiman’s theorem in groups, Structure theory of set addition,
+
+Ast´erisque No. 258 (1999), 323–329. MR1701207 (2000h:11111)
+
+[S08] T. Sanders, A note on Freiman’s theorem in vector spaces, Combin. Probab. Comput.
+
+17 (2008), 297–305. MR2396355 (2009a:11024)
+
+[S10] T. Sanders, Structure in Sets with Logarithmic Doubling, Arxiv 1002.1552.
+
+[S11] T. Sanders, On Roth’s Theorem on Progressions, Arxiv 1011.0104.
+
+[Sch11] T. Schoen, Near optimal bounds in Freiman’s theorem, Duke Math. J.158,N u m b e r1
+
+(2011), 1-12. MR2794366
+
+[Shk08] I. Shkredov, On sets of large trigonometric sums, 2008 Izv. Ross. Akad. Nauk Ser. Math.
+
+72, pp. 161-182. MR2394976 (2009e:11151)
+
+[TV06] T. Tao and V. Vu, Additive Combinatorics, Cambridge Univ. Press, Cambridge, 2006.
+
+MR2289012 (2008a:11002)
+
+Department of Mathematics, UCLA, Los Angeles, California 90095
+
+E-mail address: bateman@math.ucla.edu
+
+Department of Mathematics, Indiana University, Bloomington, Indiana 47405-7000
+
+E-mail address: nhkatz@indiana.edu
+
+Licensed to Indiana Univ Bloomington. Prepared on Thu Oct 23 15:48:20 EDT 2014 for download from IP 129.79.34.151.
+
+License or copyright restrictions may apply to redistribution; see http://www.ams.org/journal-terms-of-use

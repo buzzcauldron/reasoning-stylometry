@@ -14,9 +14,40 @@ output/corpus_build.log
 output/rolling_minmax_result.rds
 output/rolling_minmax_stopwords.png
 
-# Reference chunks (rebuild via scripts/build_research_reference.py)
+# Reference chunks (rebuild via scripts/build_research_reference.py,
+# scripts/retag_content_style.py, scripts/split_mixed_content_holdout.py,
+# scripts/balance_research_corpus.py, scripts/lemmatize_corpus.py)
 corpus_classify/reference_research/chunks/
+corpus_classify/reference_research/chunks_lemmatized/
+corpus_classify/reference_research/chunks_pseudo_labeled/
+corpus_classify/reference_research/chunks_pseudo_labeled_lemmatized/
+corpus_classify/reference_research/textbook_chunks/
+corpus_classify/reference_research/textbook_chunks_lemmatized/
+corpus_classify/reference_research/mixed_content_holdout/
+corpus_classify/reference_research/mixed_content_holdout_content_leading/
+corpus_classify/reference_research/mixed_content_holdout_style_leading/
 corpus_classify/reference_research/balanced/
+corpus_classify/reference_research/balanced_content/
+corpus_classify/reference_research/balanced_content_lemmatized/
+corpus_classify/reference_research/balanced_style/
+corpus_classify/reference_research/balanced_style_lemmatized/
+
+# Style-first / lemmatized copies of the JAMS test set (rebuild via
+# scripts/make_style_leading_targets.R, scripts/lemmatize_corpus.py --
+# source jams_quadrant/ and jams_excerpts/ are the tracked originals)
+corpus_classify/jams_quadrant_style_first/
+corpus_classify/jams_excerpts_style_first/
+corpus_classify/jams_quadrant_lemmatized/
+corpus_classify/jams_excerpts_lemmatized/
+corpus_classify/jams_quadrant_style_first_lemmatized/
+corpus_classify/jams_excerpts_style_first_lemmatized/
+
+# Ad hoc stylo config-sweep scratch outputs
+output/stylo_sweep_parts/
+output/stylo_sweep_content.json
+output/stylo_sweep_style.json
+output/corpus_balance_report_lemmatized.json
+.venv_nlp/
 
 # Python
 __pycache__/

@@ -1,0 +1,20 @@
+{
+  "balanced_content": {
+    "axis": "content",
+    "geometric": 5000,
+    "algebraic": 5000,
+    "total": 10000,
+    "n_verified": 2227,
+    "n_pseudo_labeled": 7015,
+    "n_textbook": 758
+  },
+  "balanced_style": {
+    "axis": "style",
+    "geometric": 5000,
+    "algebraic": 5000,
+    "total": 10000,
+    "n_verified": 2196,
+    "n_pseudo_labeled": 7127,
+    "n_textbook": 677
+  }
+}

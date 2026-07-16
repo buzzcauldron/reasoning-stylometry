@@ -1,0 +1,412 @@
+{
+  "content": {
+    "axis": "content",
+    "n_geometric_docs": 350,
+    "n_algebraic_docs": 350,
+    "verb_density_per_1000_words": {
+      "geometric_mean": 95.93,
+      "geometric_sd": 20.032,
+      "algebraic_mean": 90.307,
+      "algebraic_sd": 22.758,
+      "welch_t": 3.4696,
+      "welch_p": 0.0005538518283175701,
+      "mannwhitney_u": 71024.0,
+      "mannwhitney_p": 0.00025864973874737193,
+      "cohens_d": 0.2623
+    },
+    "top_verb_lemmas_more_geometric": [
+      {
+        "lemma": "embed",
+        "geo_per_1k": 0.735,
+        "alg_per_1k": 0.202,
+        "diff": 0.533
+      },
+      {
+        "lemma": "bound",
+        "geo_per_1k": 0.93,
+        "alg_per_1k": 0.424,
+        "diff": 0.506
+      },
+      {
+        "lemma": "contain",
+        "geo_per_1k": 1.39,
+        "alg_per_1k": 0.928,
+        "diff": 0.461
+      },
+      {
+        "lemma": "exist",
+        "geo_per_1k": 1.55,
+        "alg_per_1k": 1.137,
+        "diff": 0.412
+      },
+      {
+        "lemma": "suppose",
+        "geo_per_1k": 0.904,
+        "alg_per_1k": 0.6,
+        "diff": 0.304
+      },
+      {
+        "lemma": "fix",
+        "geo_per_1k": 1.066,
+        "alg_per_1k": 0.784,
+        "diff": 0.282
+      },
+      {
+        "lemma": "prove",
+        "geo_per_1k": 1.591,
+        "alg_per_1k": 1.342,
+        "diff": 0.25
+      },
+      {
+        "lemma": "cross",
+        "geo_per_1k": 0.254,
+        "alg_per_1k": 0.007,
+        "diff": 0.247
+      },
+      {
+        "lemma": "admit",
+        "geo_per_1k": 0.466,
+        "alg_per_1k": 0.222,
+        "diff": 0.244
+      },
+      {
+        "lemma": "depend",
+        "geo_per_1k": 0.462,
+        "alg_per_1k": 0.231,
+        "diff": 0.231
+      },
+      {
+        "lemma": "connect",
+        "geo_per_1k": 0.74,
+        "alg_per_1k": 0.518,
+        "diff": 0.222
+      },
+      {
+        "lemma": "act",
+        "geo_per_1k": 0.492,
+        "alg_per_1k": 0.278,
+        "diff": 0.215
+      },
+      {
+        "lemma": "lie",
+        "geo_per_1k": 0.44,
+        "alg_per_1k": 0.229,
+        "diff": 0.211
+      },
+      {
+        "lemma": "choose",
+        "geo_per_1k": 0.615,
+        "alg_per_1k": 0.438,
+        "diff": 0.177
+      },
+      {
+        "lemma": "intersect",
+        "geo_per_1k": 0.245,
+        "alg_per_1k": 0.08,
+        "diff": 0.165
+      }
+    ],
+    "top_verb_lemmas_more_algebraic": [
+      {
+        "lemma": "follow",
+        "geo_per_1k": 2.887,
+        "alg_per_1k": 3.772,
+        "diff": -0.885
+      },
+      {
+        "lemma": "give",
+        "geo_per_1k": 2.377,
+        "alg_per_1k": 3.232,
+        "diff": -0.855
+      },
+      {
+        "lemma": "define",
+        "geo_per_1k": 1.821,
+        "alg_per_1k": 2.39,
+        "diff": -0.569
+      },
+      {
+        "lemma": "apply",
+        "geo_per_1k": 0.777,
+        "alg_per_1k": 1.151,
+        "diff": -0.374
+      },
+      {
+        "lemma": "leave",
+        "geo_per_1k": 0.223,
+        "alg_per_1k": 0.564,
+        "diff": -0.341
+      },
+      {
+        "lemma": "induce",
+        "geo_per_1k": 0.519,
+        "alg_per_1k": 0.793,
+        "diff": -0.274
+      },
+      {
+        "lemma": "value",
+        "geo_per_1k": 0.083,
+        "alg_per_1k": 0.329,
+        "diff": -0.246
+      },
+      {
+        "lemma": "consider",
+        "geo_per_1k": 1.112,
+        "alg_per_1k": 1.353,
+        "diff": -0.241
+      },
+      {
+        "lemma": "generate",
+        "geo_per_1k": 0.604,
+        "alg_per_1k": 0.835,
+        "diff": -0.231
+      },
+      {
+        "lemma": "yield",
+        "geo_per_1k": 0.269,
+        "alg_per_1k": 0.493,
+        "diff": -0.224
+      },
+      {
+        "lemma": "coincide",
+        "geo_per_1k": 0.186,
+        "alg_per_1k": 0.389,
+        "diff": -0.203
+      },
+      {
+        "lemma": "grade",
+        "geo_per_1k": 0.088,
+        "alg_per_1k": 0.28,
+        "diff": -0.192
+      },
+      {
+        "lemma": "m",
+        "geo_per_1k": 0.409,
+        "alg_per_1k": 0.593,
+        "diff": -0.184
+      },
+      {
+        "lemma": "preserve",
+        "geo_per_1k": 0.438,
+        "alg_per_1k": 0.609,
+        "diff": -0.171
+      },
+      {
+        "lemma": "assume",
+        "geo_per_1k": 0.983,
+        "alg_per_1k": 1.153,
+        "diff": -0.17
+      }
+    ],
+    "chi_square_top200_lemma_distribution": {
+      "chi2": 2166.785,
+      "dof": 199,
+      "p_value": 0.0
+    }
+  },
+  "style": {
+    "axis": "style",
+    "n_geometric_docs": 350,
+    "n_algebraic_docs": 350,
+    "verb_density_per_1000_words": {
+      "geometric_mean": 93.976,
+      "geometric_sd": 18.266,
+      "algebraic_mean": 88.559,
+      "algebraic_sd": 22.353,
+      "welch_t": 3.5105,
+      "welch_p": 0.0004771863473035174,
+      "mannwhitney_u": 68714.5,
+      "mannwhitney_p": 0.005267555995325672,
+      "cohens_d": 0.2654
+    },
+    "top_verb_lemmas_more_geometric": [
+      {
+        "lemma": "adapt",
+        "geo_per_1k": 0.414,
+        "alg_per_1k": 0.064,
+        "diff": 0.35
+      },
+      {
+        "lemma": "represent",
+        "geo_per_1k": 0.578,
+        "alg_per_1k": 0.228,
+        "diff": 0.35
+      },
+      {
+        "lemma": "embed",
+        "geo_per_1k": 0.547,
+        "alg_per_1k": 0.267,
+        "diff": 0.28
+      },
+      {
+        "lemma": "induce",
+        "geo_per_1k": 0.822,
+        "alg_per_1k": 0.561,
+        "diff": 0.261
+      },
+      {
+        "lemma": "lie",
+        "geo_per_1k": 0.529,
+        "alg_per_1k": 0.294,
+        "diff": 0.235
+      },
+      {
+        "lemma": "base",
+        "geo_per_1k": 0.381,
+        "alg_per_1k": 0.169,
+        "diff": 0.212
+      },
+      {
+        "lemma": "identify",
+        "geo_per_1k": 0.501,
+        "alg_per_1k": 0.294,
+        "diff": 0.207
+      },
+      {
+        "lemma": "normalise",
+        "geo_per_1k": 0.2,
+        "alg_per_1k": 0.0,
+        "diff": 0.2
+      },
+      {
+        "lemma": "contain",
+        "geo_per_1k": 1.173,
+        "alg_per_1k": 0.981,
+        "diff": 0.193
+      },
+      {
+        "lemma": "intersect",
+        "geo_per_1k": 0.326,
+        "alg_per_1k": 0.139,
+        "diff": 0.187
+      },
+      {
+        "lemma": "send",
+        "geo_per_1k": 0.326,
+        "alg_per_1k": 0.142,
+        "diff": 0.184
+      },
+      {
+        "lemma": "say",
+        "geo_per_1k": 0.705,
+        "alg_per_1k": 0.533,
+        "diff": 0.172
+      },
+      {
+        "lemma": "correspond",
+        "geo_per_1k": 0.911,
+        "alg_per_1k": 0.742,
+        "diff": 0.169
+      },
+      {
+        "lemma": "construct",
+        "geo_per_1k": 0.543,
+        "alg_per_1k": 0.381,
+        "diff": 0.163
+      },
+      {
+        "lemma": "reduce",
+        "geo_per_1k": 0.489,
+        "alg_per_1k": 0.353,
+        "diff": 0.136
+      }
+    ],
+    "top_verb_lemmas_more_algebraic": [
+      {
+        "lemma": "follow",
+        "geo_per_1k": 2.916,
+        "alg_per_1k": 3.469,
+        "diff": -0.553
+      },
+      {
+        "lemma": "bound",
+        "geo_per_1k": 0.411,
+        "alg_per_1k": 0.953,
+        "diff": -0.542
+      },
+      {
+        "lemma": "assume",
+        "geo_per_1k": 0.871,
+        "alg_per_1k": 1.283,
+        "diff": -0.413
+      },
+      {
+        "lemma": "exist",
+        "geo_per_1k": 1.086,
+        "alg_per_1k": 1.444,
+        "diff": -0.358
+      },
+      {
+        "lemma": "write",
+        "geo_per_1k": 0.397,
+        "alg_per_1k": 0.75,
+        "diff": -0.353
+      },
+      {
+        "lemma": "imply",
+        "geo_per_1k": 0.712,
+        "alg_per_1k": 1.064,
+        "diff": -0.352
+      },
+      {
+        "lemma": "prove",
+        "geo_per_1k": 1.313,
+        "alg_per_1k": 1.625,
+        "diff": -0.312
+      },
+      {
+        "lemma": "hold",
+        "geo_per_1k": 0.655,
+        "alg_per_1k": 0.953,
+        "diff": -0.298
+      },
+      {
+        "lemma": "get",
+        "geo_per_1k": 0.326,
+        "alg_per_1k": 0.608,
+        "diff": -0.283
+      },
+      {
+        "lemma": "use",
+        "geo_per_1k": 2.044,
+        "alg_per_1k": 2.322,
+        "diff": -0.278
+      },
+      {
+        "lemma": "m",
+        "geo_per_1k": 0.308,
+        "alg_per_1k": 0.547,
+        "diff": -0.239
+      },
+      {
+        "lemma": "converge",
+        "geo_per_1k": 0.056,
+        "alg_per_1k": 0.269,
+        "diff": -0.214
+      },
+      {
+        "lemma": "vanish",
+        "geo_per_1k": 0.134,
+        "alg_per_1k": 0.342,
+        "diff": -0.208
+      },
+      {
+        "lemma": "generate",
+        "geo_per_1k": 0.602,
+        "alg_per_1k": 0.797,
+        "diff": -0.195
+      },
+      {
+        "lemma": "consider",
+        "geo_per_1k": 1.076,
+        "alg_per_1k": 1.264,
+        "diff": -0.188
+      }
+    ],
+    "chi_square_top200_lemma_distribution": {
+      "chi2": 1658.463,
+      "dof": 199,
+      "p_value": 2.767633022752922e-228
+    }
+  }
+}

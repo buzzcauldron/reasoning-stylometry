@@ -122,9 +122,21 @@ JAMS_PAPERS <- list(
   )
 )
 
-EXPERT_STYLE_LABELS <- c(
-  "geometric__geometric_style__masur_schleimer_disk_complex" = "geometric",
-  "geometric__algebraic_style__bateman_katz_cap_sets" = "algebraic",
-  "algebraic__geometric_style__dritschel_mccullough_rational_dilation" = "geometric",
-  "algebraic__algebraic_style__hrushovski_approx_subgroups" = "algebraic"
+EXPERT_STYLE_LABELS <- setNames(
+  vapply(JAMS_PAPERS, function(p) p$style_label, character(1)),
+  vapply(JAMS_PAPERS, function(p) STEM_TO_ROLLING[[p$file_stem]], character(1))
+)
+
+EXPERT_CONTENT_LABELS <- setNames(
+  vapply(JAMS_PAPERS, function(p) p$content_label, character(1)),
+  vapply(JAMS_PAPERS, function(p) STEM_TO_ROLLING[[p$file_stem]], character(1))
+)
+
+# Expert v4 labels are contested holistic judgments, not ground truth --
+# afc_consistency is the 2AFC rater-agreement rate for that paper (1.00 =
+# unanimous). Use as a weight so a miss on a low-consistency paper (currently
+# only Dritschel, at 0.88) doesn't count the same as a miss on a unanimous one.
+EXPERT_LABEL_CONFIDENCE <- setNames(
+  vapply(JAMS_PAPERS, function(p) p$afc_consistency, numeric(1)),
+  vapply(JAMS_PAPERS, function(p) STEM_TO_ROLLING[[p$file_stem]], character(1))
 )

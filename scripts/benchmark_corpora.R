@@ -1,7 +1,11 @@
 # Benchmark JAMS classification against v1 vs v2 reference corpora.
+# Legacy/exploratory script predating the content/style split (see
+# corpus_classify/CORPUS.md); benchmarks the CONTENT axis specifically since
+# test.corpus.dir below (jams_quadrant) is content-leading.
 # Run from project root: Rscript scripts/benchmark_corpora.R
 library(stylo)
 library(jsonlite)
+source("R/jams_metadata.R")
 
 stopword_list <- stopwords::stopwords("en", source = "snowball")
 out_dir <- "output/corpus_benchmark"
@@ -29,19 +33,14 @@ benchmark <- function(train_dir, label) {
     )
   )
   stems <- rownames(result$frequencies.test.set)
-  style_labels <- c(
-    "geometric__geometric_style__masur_schleimer_disk_complex" = "geometric",
-    "geometric__algebraic_style__bateman_katz_cap_sets" = "algebraic",
-    "algebraic__geometric_style__dritschel_mccullough_rational_dilation" = "geometric",
-    "algebraic__algebraic_style__hrushovski_approx_subgroups" = "algebraic"
-  )
+  content_labels <- EXPERT_CONTENT_LABELS
   pred <- as.character(result$predicted)
   names(pred) <- stems
-  hits <- sum(pred[names(style_labels)] == style_labels)
-  cat("Style accuracy:", hits, "/ 4\n")
-  for (s in names(style_labels)) {
-    cat(" ", s, "\n    expert:", style_labels[s], " predicted:", pred[s],
-        if (pred[s] == style_labels[s]) "OK" else "MISS", "\n")
+  hits <- sum(pred[names(content_labels)] == content_labels)
+  cat("Content accuracy:", hits, "/ 4\n")
+  for (s in names(content_labels)) {
+    cat(" ", s, "\n    expert:", content_labels[s], " predicted:", pred[s],
+        if (pred[s] == content_labels[s]) "OK" else "MISS", "\n")
   }
   list(
     label = label,
@@ -50,7 +49,7 @@ benchmark <- function(train_dir, label) {
     predicted = as.list(pred),
     expected_prefix = as.list(as.character(result$expected)),
     test_files = rownames(result$frequencies.test.set),
-    style_accuracy = hits,
+    content_accuracy = hits,
     success_rate_filename = as.numeric(result$success.rate)
   )
 }
@@ -59,7 +58,7 @@ results <- list(
   v1_cutknot = benchmark("corpus_classify/reference_set", "v1 elementary CutKnot"),
   v2_mixed = benchmark("corpus_classify/reference_v2", "v2 research + elementary"),
   v3_research_all = benchmark("corpus_classify/reference_research/chunks", "v3 research all chunks"),
-  v3_research_balanced = benchmark("corpus_classify/reference_research/balanced", "v3 research balanced")
+  v5_research_balanced_content = benchmark("corpus_classify/reference_research/balanced_content", "v5 research balanced (content axis)")
 )
 
 write_json(results, file.path(out_dir, "benchmark.json"), pretty = TRUE, auto_unbox = TRUE)

@@ -1,28 +1,28 @@
 #!/usr/bin/env Rscript
-# Benchmark word/character n-grams vs stopword baseline on JAMS style holdout.
+# Benchmark word/character n-grams vs stopword baseline on JAMS content holdout.
+# Legacy/exploratory script predating the content/style split (see
+# corpus_classify/CORPUS.md); benchmarks the CONTENT axis specifically since
+# `test` below is content-leading. There is no style-axis equivalent of this
+# script yet.
 library(stylo)
 library(jsonlite)
+source("R/jams_metadata.R")
 
-train <- "corpus_classify/reference_research/balanced"
+train <- "corpus_classify/reference_research/balanced_content"
 test <- "corpus_classify/jams_quadrant"
 out_dir <- "output/corpus_benchmark"
 dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
 
 sw <- stopwords::stopwords("en", source = "snowball")
-style_labels <- c(
-  "geometric__geometric_style__masur_schleimer_disk_complex" = "geometric",
-  "geometric__algebraic_style__bateman_katz_cap_sets" = "algebraic",
-  "algebraic__geometric_style__dritschel_mccullough_rational_dilation" = "geometric",
-  "algebraic__algebraic_style__hrushovski_approx_subgroups" = "algebraic"
-)
+content_labels <- EXPERT_CONTENT_LABELS
 
 score <- function(r) {
   pred <- setNames(as.character(r$predicted), rownames(r$frequencies.test.set))
-  hits <- pred[names(style_labels)] == style_labels
+  hits <- pred[names(content_labels)] == content_labels
   list(
     accuracy = sum(hits),
-    per_paper = as.list(setNames(as.character(pred[names(style_labels)]), names(style_labels))),
-    matches = as.list(setNames(hits, names(style_labels)))
+    per_paper = as.list(setNames(as.character(pred[names(content_labels)]), names(content_labels))),
+    matches = as.list(setNames(hits, names(content_labels)))
   )
 }
 
@@ -55,8 +55,8 @@ run_one <- function(label, ...) {
     ...
   )
   s <- score(r)
-  cat("Style accuracy:", s$accuracy, "/4\n")
-  for (nm in names(style_labels)) {
+  cat("Content accuracy:", s$accuracy, "/4\n")
+  for (nm in names(content_labels)) {
     cat(" ", nm, "->", s$per_paper[[nm]], if (s$matches[[nm]]) "OK" else "MISS", "\n")
   }
   cat("Centroid L1 sep:", round(sep(r), 6), "\n")

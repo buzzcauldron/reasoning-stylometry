@@ -36,16 +36,18 @@ ratings_block <- function(p) {
   )
 }
 
-excerpt_col <- function(label, p, roll = NULL) {
-  stylo_line <- if (!is.null(roll) && length(roll) > 0) {
+excerpt_col <- function(label, p, roll_content = NULL, roll_style = NULL) {
+  line_for <- function(axis_name, roll) {
+    if (is.null(roll) || length(roll) == 0) return("")
     sprintf(
-      '<div class="rlabel">stylo rolling (Burrows Delta)</div><div class="mstat">geometric %.1f%% · algebraic %.1f%% (%d slices)</div>',
-      100 * roll$share_geometric, 100 * roll$share_algebraic, roll$n_slices
+      '<div class="rlabel">stylo rolling %s (Burrows Delta)</div><div class="mstat">geometric %.1f%% · algebraic %.1f%% (%d slices)</div>',
+      axis_name, 100 * roll$share_geometric, 100 * roll$share_algebraic, roll$n_slices
     )
-  } else ""
+  }
   paste0(
     '<div class="col"><div class="sidehdr">', html_escape(label), '</div>',
-    '<div class="para">', tex_para(p$excerpt_tex), '</div>', ratings_block(p), stylo_line, '</div>'
+    '<div class="para">', tex_para(p$excerpt_tex), '</div>', ratings_block(p),
+    line_for("content", roll_content), line_for("style", roll_style), '</div>'
   )
 }
 
@@ -58,54 +60,64 @@ pair_card <- function(pid, left, right, stylo) {
   } else {
     if (dc < 0) "RIGHT" else "LEFT"
   }
-  l_roll <- stylo$rolling[[STEM_TO_ROLLING[[left$file_stem]]]] %||% list()
-  r_roll <- stylo$rolling[[STEM_TO_ROLLING[[right$file_stem]]]] %||% list()
+  l_stem <- STEM_TO_ROLLING[[left$file_stem]]
+  r_stem <- STEM_TO_ROLLING[[right$file_stem]]
+  l_roll_c <- stylo$content$rolling[[l_stem]] %||% list()
+  r_roll_c <- stylo$content$rolling[[r_stem]] %||% list()
+  l_roll_s <- stylo$style$rolling[[l_stem]] %||% list()
+  r_roll_s <- stylo$style$rolling[[r_stem]] %||% list()
   paste0(
     '<div class="card"><div class="phdr"><span class="pid">', pid, '</span> ',
     html_escape(paste(left$authors, "|", right$authors)), ' · ',
     html_escape(paste(left$quadrant, "vs", right$quadrant)),
     sprintf('<span class="mstat">Δstyle %+.2f · Δcontent %+.2f · 2AFC: %s more geometric</span></div>',
             ds, dc, afc),
-    '<div class="cols">', excerpt_col("excerpt 1", left, l_roll),
-    excerpt_col("excerpt 2", right, r_roll), '</div></div>'
+    '<div class="cols">', excerpt_col("excerpt 1", left, l_roll_c, l_roll_s),
+    excerpt_col("excerpt 2", right, r_roll_c, r_roll_s), '</div></div>'
   )
 }
 
 stylo_summary <- function(stylo) {
-  expert <- EXPERT_STYLE_LABELS
   rows <- paste(vapply(JAMS_PAPERS, function(p) {
     stem <- STEM_TO_ROLLING[[p$file_stem]]
-    roll <- stylo$rolling[[stem]]
-    rp <- roll_pred(roll)
-    idx <- which(stylo$full_papers$files == paste0(stem, ".txt"))
-    wp <- if (length(idx)) stylo$full_papers$predicted_style[[idx[1]]] else "?"
+    roll_c <- stylo$content$rolling[[stem]]
+    roll_s <- stylo$style$rolling[[stem]]
+    rp_c <- roll_pred(roll_c)
+    rp_s <- roll_pred(roll_s)
+    wp_c <- stylo$content$full_papers$predicted[[which(stylo$content$full_papers$files == paste0(stem, ".txt"))[1]]] %||% "?"
+    wp_s <- stylo$style$full_papers$predicted[[which(stylo$style$full_papers$files == paste0(stem, ".txt"))[1]]] %||% "?"
     sprintf(
-      "<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%.1f%% / %.1f%%</td><td>%s</td><td>%s</td></tr>",
-      html_escape(p$authors), p$style_label, rp, wp,
-      100 * roll$share_geometric, 100 * roll$share_algebraic,
-      if (rp == p$style_label) "\u2713" else "\u2717",
-      if (wp == p$style_label) "\u2713" else "\u2717"
+      "<tr><td>%s</td><td>%s / %s</td><td>%s / %s</td><td>%s / %s</td><td>%s / %s</td><td>%s / %s</td></tr>",
+      html_escape(p$authors),
+      p$content_label, p$style_label,
+      rp_c, rp_s, wp_c, wp_s,
+      if (rp_c == p$content_label) "✓" else "✗", if (rp_s == p$style_label) "✓" else "✗",
+      if (wp_c == p$content_label) "✓" else "✗", if (wp_s == p$style_label) "✓" else "✗"
     )
   }, character(1)), collapse = "")
+  ca <- stylo$content_accuracy
   sa <- stylo$style_accuracy
   paste0(
-    '<div class="summarybox"><h2 style="margin-top:0">Stylo classification (R engine)</h2>',
-    sprintf("<p>Style accuracy: rolling <b>%s/4</b> · whole-paper <b>%s/4</b></p>",
-            sa$rolling_majority, sa$whole_paper),
-    '<table class="data"><tr><th>Paper</th><th>Expert</th><th>Rolling</th><th>Whole</th><th>Geo/Alg</th><th>Roll</th><th>Whole</th></tr>',
+    '<div class="summarybox"><h2 style="margin-top:0">Stylo classification (R engine, two independent axes)</h2>',
+    sprintf("<p>Content accuracy: rolling <b>%s/4</b> &middot; whole-paper <b>%s/4</b>. Style accuracy: rolling <b>%s/4</b> &middot; whole-paper <b>%s/4</b>. Joint quadrant: <b>%s/4</b>.</p>",
+            ca$rolling_majority %||% "?", ca$whole_paper %||% "?", sa$rolling_majority %||% "?", sa$whole_paper %||% "?", stylo$quadrant_accuracy %||% "?"),
+    '<table class="data"><tr><th>Paper</th><th>Expert (content/style)</th><th>Rolling (c/s)</th><th>Whole (c/s)</th><th>Rolling ok (c/s)</th><th>Whole ok (c/s)</th></tr>',
     rows, "</table></div>"
   )
 }
 
 within_card <- function(p, stylo) {
   stem <- STEM_TO_ROLLING[[p$file_stem]]
-  roll <- stylo$rolling[[stem]]
-  pred <- roll_pred(roll)
-  match_txt <- if (pred == p$style_label) "matches" else "conflicts with"
+  roll_c <- stylo$content$rolling[[stem]]
+  roll_s <- stylo$style$rolling[[stem]]
+  pred_c <- roll_pred(roll_c)
+  pred_s <- roll_pred(roll_s)
+  match_c <- if (pred_c == p$content_label) "matches" else "conflicts with"
+  match_s <- if (pred_s == p$style_label) "matches" else "conflicts with"
   paste0(
     '<div class="card"><div class="phdr">', p$pid, " ", html_escape(p$authors),
-    sprintf(' · stylo rolling <b>%s</b> (%s expert style)</div>', pred, match_txt),
-    '<div class="cols">', excerpt_col("holdout excerpt", p, roll), '</div></div>'
+    sprintf(' · stylo rolling content <b>%s</b> (%s expert content) · style <b>%s</b> (%s expert style)</div>', pred_c, match_c, pred_s, match_s),
+    '<div class="cols">', excerpt_col("holdout excerpt", p, roll_c, roll_s), '</div></div>'
   )
 }
 
@@ -131,14 +143,14 @@ render_cross_within <- function() {
   }
   cross <- page_shell(
     "JAMS quadrant — cross-paper view (R/stylo)",
-    "Expert v4 ratings + stylo rolling stopword classification.",
+    "Expert v4 ratings + stylo rolling stopword classification (independent content/style axes).",
     body
   )
   within_body <- stylo_summary(stylo)
   for (p in JAMS_PAPERS) within_body <- paste0(within_body, within_card(p, stylo))
   within <- page_shell(
     "JAMS quadrant — within-paper view (R/stylo)",
-    "Single-excerpt expert coding with stylo rolling on full PDF text.",
+    "Single-excerpt expert coding with stylo rolling on full PDF text (independent content/style axes).",
     within_body
   )
   write_html(file.path(downloads_dir, "jams_quadrant_cross_view.html"), cross)

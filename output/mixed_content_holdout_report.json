@@ -1,0 +1,261 @@
+{
+  "n_moved_to_holdout": 14265,
+  "n_kept_in_training_pool": 4793,
+  "holdout_dir": "/Users/halxiii/Projects/reasoning-stylometry/corpus_classify/reference_research/mixed_content_holdout",
+  "examples": [
+    {
+      "file": "algebraic__algebraic__0710_1470__chunk001.txt",
+      "hits_geo": [
+        "link",
+        "boundary",
+        "dimension"
+      ],
+      "hits_alg": [
+        "ring",
+        "representation",
+        "character",
+        "lattice"
+      ],
+      "margin": -1.1
+    },
+    {
+      "file": "algebraic__algebraic__0710_1470__chunk002.txt",
+      "hits_geo": [
+        "boundary"
+      ],
+      "hits_alg": [
+        "lattice"
+      ],
+      "margin": -0.2
+    },
+    {
+      "file": "algebraic__algebraic__0710_1470__chunk003.txt",
+      "hits_geo": [
+        "boundary"
+      ],
+      "hits_alg": [
+        "ring"
+      ],
+      "margin": -0.2
+    },
+    {
+      "file": "algebraic__algebraic__0710_1470__chunk004.txt",
+      "hits_geo": [
+        "boundary"
+      ],
+      "hits_alg": [
+        "ring"
+      ],
+      "margin": -0.2
+    },
+    {
+      "file": "algebraic__algebraic__0710_1470__chunk007.txt",
+      "hits_geo": [
+        "boundary",
+        "dimension"
+      ],
+      "hits_alg": [
+        "character",
+        "lattice"
+      ],
+      "margin": -0.3
+    },
+    {
+      "file": "algebraic__algebraic__0710_1470__chunk011.txt",
+      "hits_geo": [
+        "boundary"
+      ],
+      "hits_alg": [
+        "ring"
+      ],
+      "margin": -0.2
+    },
+    {
+      "file": "algebraic__algebraic__0710_1470__chunk012.txt",
+      "hits_geo": [
+        "boundary"
+      ],
+      "hits_alg": [
+        "ring",
+        "representation",
+        "lattice"
+      ],
+      "margin": -2.0
+    },
+    {
+      "file": "algebraic__algebraic__0710_1470__chunk013.txt",
+      "hits_geo": [
+        "boundary",
+        "dimension"
+      ],
+      "hits_alg": [
+        "representation",
+        "lattice"
+      ],
+      "margin": -0.7
+    },
+    {
+      "file": "algebraic__algebraic__0710_1470__chunk015.txt",
+      "hits_geo": [
+        "dimension"
+      ],
+      "hits_alg": [
+        "ring"
+      ],
+      "margin": -0.3
+    },
+    {
+      "file": "algebraic__algebraic__0710_1470__chunk016.txt",
+      "hits_geo": [
+        "dimension"
+      ],
+      "hits_alg": [
+        "ring",
+        "lattice"
+      ],
+      "margin": -1.1
+    },
+    {
+      "file": "algebraic__algebraic__0803_3351__chunk001.txt",
+      "hits_geo": [
+        "hyperbolic",
+        "embedding",
+        "fundamental group",
+        "dimension"
+      ],
+      "hits_alg": [
+        "homomorphism",
+        "category",
+        "morphism",
+        "module",
+        "ring",
+        "character",
+        "tensor",
+        "von neumann",
+        "fourier",
+        "lattice",
+        "logic"
+      ],
+      "margin": -8.5
+    },
+    {
+      "file": "algebraic__algebraic__0803_3351__chunk002.txt",
+      "hits_geo": [
+        "hyperbolic",
+        "fundamental group",
+        "dimension"
+      ],
+      "hits_alg": [
+        "morphism",
+        "ring",
+        "von neumann",
+        "lattice"
+      ],
+      "margin": -1.6
+    },
+    {
+      "file": "algebraic__algebraic__0803_3351__chunk003.txt",
+      "hits_geo": [
+        "fundamental group"
+      ],
+      "hits_alg": [
+        "morphism",
+        "ring",
+        "von neumann"
+      ],
+      "margin": -3.1
+    },
+    {
+      "file": "algebraic__algebraic__0803_3351__chunk004.txt",
+      "hits_geo": [
+        "fundamental group"
+      ],
+      "hits_alg": [
+        "homomorphism",
+        "category",
+        "morphism",
+        "character",
+        "fourier"
+      ],
+      "margin": -5.6
+    },
+    {
+      "file": "algebraic__algebraic__0803_3351__chunk005.txt",
+      "hits_geo": [
+        "fundamental group",
+        "dimension"
+      ],
+      "hits_alg": [
+        "homomorphism",
+        "category",
+        "morphism",
+        "ring",
+        "character",
+        "fourier"
+      ],
+      "margin": -5.9
+    },
+    {
+      "file": "algebraic__algebraic__0803_3351__chunk006.txt",
+      "hits_geo": [
+        "dimension"
+      ],
+      "hits_alg": [
+        "morphism",
+        "module",
+        "ring",
+        "von neumann"
+      ],
+      "margin": -4.8
+    },
+    {
+      "file": "algebraic__algebraic__0803_3351__chunk007.txt",
+      "hits_geo": [
+        "dimension"
+      ],
+      "hits_alg": [
+        "morphism",
+        "module",
+        "von neumann"
+      ],
+      "margin": -4.0
+    },
+    {
+      "file": "algebraic__algebraic__0803_3351__chunk009.txt",
+      "hits_geo": [
+        "embedding"
+      ],
+      "hits_alg": [
+        "homomorphism",
+        "morphism",
+        "module"
+      ],
+      "margin": -3.3
+    },
+    {
+      "file": "algebraic__algebraic__0803_3351__chunk010.txt",
+      "hits_geo": [
+        "embedding",
+        "fundamental group"
+      ],
+      "hits_alg": [
+        "homomorphism",
+        "morphism",
+        "module"
+      ],
+      "margin": -2.3
+    },
+    {
+      "file": "algebraic__algebraic__0803_3351__chunk011.txt",
+      "hits_geo": [
+        "embedding",
+        "fundamental group"
+      ],
+      "hits_alg": [
+        "homomorphism",
+        "morphism"
+      ],
+      "margin": -1.1
+    }
+  ]
+}

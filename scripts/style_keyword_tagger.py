@@ -1,12 +1,34 @@
-"""Keyword-based geometric vs algebraic style tagging for math paper metadata."""
+"""Independent content-topic and reasoning-style tagging for math paper text.
+
+The two axes are deliberately built from disjoint vocabularies so they can move
+independently, matching the JAMS "quadrant" premise (content and style are meant
+to be orthogonal — see corpus_classify/CORPUS.md and R/jams_metadata.R):
+
+- score_content(): WHAT the paper is about. Subject-matter nouns (geodesic,
+  manifold, functor, cap set...) plus arXiv subfield category. This is a topic
+  classifier.
+- score_style(): HOW the reasoning is presented. Rhetorical/discourse markers
+  (visualize, locally/globally, by definition, substituting...) that describe
+  the *mode* of argument rather than the subject. These phrases are chosen to
+  be generic across subfields so a paper about algebra can still score
+  geometric-style (heavy in spatial/visual presentation) and vice versa.
+
+Do not add subject nouns (ring, manifold, functor, knot...) to the style
+markers, and do not add presentation-mode phrases to the content keywords —
+that recreates the content/style conflation this module exists to avoid.
+"""
 
 from __future__ import annotations
 
 import re
-from dataclasses import dataclass
+import unicodedata
+from dataclasses import dataclass, field
 
-# v4 rubric: spatial / geometric reasoning register
-GEOMETRIC_KEYWORDS: dict[str, float] = {
+# ---------------------------------------------------------------------------
+# CONTENT axis: subject-matter vocabulary (topic), independent of style.
+# ---------------------------------------------------------------------------
+
+CONTENT_GEOMETRIC_KEYWORDS: dict[str, float] = {
     "geodesic": 2.0,
     "curvature": 1.8,
     "riemannian": 1.8,
@@ -48,7 +70,6 @@ GEOMETRIC_KEYWORDS: dict[str, float] = {
     "surgery": 1.2,
     "boundary": 0.6,
     "dimension": 0.5,
-    "visualization": 1.0,
     "configuration space": 1.2,
     "geometric group": 1.5,
     "cube complex": 1.6,
@@ -56,8 +77,7 @@ GEOMETRIC_KEYWORDS: dict[str, float] = {
     "nonpositive curvature": 2.0,
 }
 
-# v4 rubric: symbolic / algebraic reasoning register
-ALGEBRAIC_KEYWORDS: dict[str, float] = {
+CONTENT_ALGEBRAIC_KEYWORDS: dict[str, float] = {
     "homomorphism": 1.8,
     "functor": 1.8,
     "category": 1.2,
@@ -85,7 +105,6 @@ ALGEBRAIC_KEYWORDS: dict[str, float] = {
     "cap set": 2.0,
     "recurrence": 1.0,
     "generating function": 1.5,
-    "asymptotic": 0.8,
     "combinatorial": 1.0,
     "lattice": 0.8,
     "poset": 1.2,
@@ -105,8 +124,8 @@ ALGEBRAIC_KEYWORDS: dict[str, float] = {
     "proof system": 1.5,
 }
 
-# arXiv primary category lean (applied before keyword tie-break)
-CATEGORY_LEAN: dict[str, tuple[float, float]] = {
+# arXiv primary category lean (subfield -> content axis, applied before keyword tie-break)
+CONTENT_CATEGORY_LEAN: dict[str, tuple[float, float]] = {
     "math.gt": (1.5, 0.0),
     "math.dg": (1.5, 0.0),
     "math.at": (1.2, 0.0),
@@ -122,6 +141,127 @@ CATEGORY_LEAN: dict[str, tuple[float, float]] = {
     "math.oa": (0.0, 1.5),
 }
 
+# ---------------------------------------------------------------------------
+# STYLE axis: rhetorical/discourse markers of HOW the argument is presented.
+# Deliberately subject-agnostic — no subfield nouns here.
+# ---------------------------------------------------------------------------
+
+STYLE_SPATIAL_MARKERS: dict[str, float] = {
+    "visualize": 1.5,
+    "visualise": 1.5,
+    "pictorially": 1.8,
+    "as illustrated": 1.5,
+    "as depicted": 1.5,
+    "as shown in the figure": 1.8,
+    "as shown in figure": 1.8,
+    "diagrammatically": 1.8,
+    "geometric picture": 1.8,
+    "geometric intuition": 1.6,
+    "intuitively, one can think of": 1.8,
+    "can be thought of as living in": 1.6,
+    "think of it as sitting inside": 1.6,
+    "moving along": 1.4,
+    "sliding along": 1.6,
+    "continuously deform": 1.8,
+    "deform continuously": 1.8,
+    "perturb slightly": 1.2,
+    "shrinks to a point": 1.6,
+    "expands outward": 1.2,
+    "converges to a point": 1.2,
+    "sweeps out": 1.4,
+    "traces out a path": 1.6,
+    "flows toward": 1.2,
+    "local-to-global": 1.8,
+    "in a neighborhood of": 1.2,
+    "nearby points": 1.0,
+    "patch these together": 1.6,
+    "glue together": 1.2,
+    "sits inside": 1.0,
+    "lies inside": 0.8,
+    "positioned at": 1.0,
+    "located near": 1.0,
+    "at a distance of": 1.0,
+}
+
+STYLE_SYMBOLIC_MARKERS: dict[str, float] = {
+    "substituting": 1.6,
+    "substitute this into": 1.8,
+    "rearranging": 1.6,
+    "rearrange terms": 1.8,
+    "collecting terms": 1.8,
+    "expanding the expression": 1.8,
+    "simplify the expression": 1.6,
+    "algebraic manipulation": 1.8,
+    "symbolically": 1.4,
+    "syntactically": 1.4,
+    "we compute directly": 1.4,
+    "explicitly compute": 1.4,
+    "plugging in": 1.6,
+    "plug in": 1.4,
+    "solving for": 1.4,
+    "derive the identity": 1.6,
+    "the above equation implies": 1.6,
+    "combining these identities": 1.6,
+}
+
+
+def _normalize(text: str) -> str:
+    # NFKD decomposes PDF-extracted ligatures (U+FB01 "fi", U+FB02 "fl", ...)
+    # to plain ASCII letters. Without this, "finitely" survives PDF text
+    # extraction as "ﬁnitely" and downstream alpha-only regexes silently
+    # drop the ligature, corrupting the word to "nitely".
+    text = unicodedata.normalize("NFKD", text)
+    text = text.lower()
+    text = text.replace("−", "-").replace("–", "-")
+    return re.sub(r"\s+", " ", text)
+
+
+def _score(text: str, geo_kw: dict[str, float], alg_kw: dict[str, float]) -> tuple[float, float, list[str], list[str]]:
+    geo = 0.0
+    alg = 0.0
+    hits_geo: list[str] = []
+    hits_alg: list[str] = []
+    for kw, w in geo_kw.items():
+        if kw in text:
+            geo += w
+            hits_geo.append(kw)
+    for kw, w in alg_kw.items():
+        if kw in text:
+            alg += w
+            hits_alg.append(kw)
+    return geo, alg, hits_geo, hits_alg
+
+
+FIGURE_PATTERN = re.compile(r"\bfig(?:ure)?s?\.?\b|\bdiagrams?\b|\bpictures?\b", re.IGNORECASE)
+EQUATION_REF_PATTERN = re.compile(r"\(\s*\d{1,3}(\.\d{1,2})?\s*\)")
+
+
+def _structural_density(text: str) -> tuple[float, float, list[str], list[str]]:
+    """Presentation-mode density: figure/diagram references (visual) vs. numbered
+    equation references (derivation-chain-heavy), per 1000 words. Independent of
+    subject vocabulary — a paper on any topic can be figure-heavy or equation-heavy."""
+    text = unicodedata.normalize("NFKD", text)
+    n_words = max(len(text.split()), 1)
+    n_fig = len(FIGURE_PATTERN.findall(text))
+    n_eqref = len(EQUATION_REF_PATTERN.findall(text))
+    fig_per_1k = 1000 * n_fig / n_words
+    eqref_per_1k = 1000 * n_eqref / n_words
+    geo = 3.0 * fig_per_1k
+    alg = 0.5 * eqref_per_1k
+    hits_geo = [f"figure/diagram refs: {n_fig} ({fig_per_1k:.2f}/1k words)"] if n_fig else []
+    hits_alg = [f"numbered equation refs: {n_eqref} ({eqref_per_1k:.2f}/1k words)"] if n_eqref else []
+    return geo, alg, hits_geo, hits_alg
+
+
+@dataclass
+class ContentScore:
+    geometric: float
+    algebraic: float
+    label: str
+    margin: float
+    hits_geo: list[str] = field(default_factory=list)
+    hits_alg: list[str] = field(default_factory=list)
+
 
 @dataclass
 class StyleScore:
@@ -129,45 +269,50 @@ class StyleScore:
     algebraic: float
     label: str
     margin: float
-    hits_geo: list[str]
-    hits_alg: list[str]
+    hits_geo: list[str] = field(default_factory=list)
+    hits_alg: list[str] = field(default_factory=list)
 
 
-def _normalize(text: str) -> str:
-    text = text.lower()
-    text = text.replace("−", "-").replace("–", "-")
-    return re.sub(r"\s+", " ", text)
-
-
-def score_text(text: str, categories: list[str] | None = None) -> StyleScore:
-    text = _normalize(text)
-    geo = 0.0
-    alg = 0.0
-    hits_geo: list[str] = []
-    hits_alg: list[str] = []
-
-    for kw, w in GEOMETRIC_KEYWORDS.items():
-        if kw in text:
-            geo += w
-            hits_geo.append(kw)
-    for kw, w in ALGEBRAIC_KEYWORDS.items():
-        if kw in text:
-            alg += w
-            hits_alg.append(kw)
-
+def score_content(text: str, categories: list[str] | None = None) -> ContentScore:
+    """Topic/subject-matter score: what the paper is about."""
+    norm = _normalize(text)
+    geo, alg, hits_geo, hits_alg = _score(norm, CONTENT_GEOMETRIC_KEYWORDS, CONTENT_ALGEBRAIC_KEYWORDS)
     if categories:
         for cat in categories:
-            lean = CATEGORY_LEAN.get(cat.lower())
+            lean = CONTENT_CATEGORY_LEAN.get(cat.lower())
             if lean:
                 geo += lean[0]
                 alg += lean[1]
-
     margin = geo - alg
-    if margin >= 0.5:
-        label = "geometric"
-    elif margin <= -0.5:
-        label = "algebraic"
-    else:
-        label = "algebraic" if alg >= geo else "geometric"
+    label = "geometric" if margin >= 0.5 else "algebraic" if margin <= -0.5 else ("algebraic" if alg >= geo else "geometric")
+    return ContentScore(geo, alg, label, margin, hits_geo, hits_alg)
 
+
+def score_style(text: str) -> StyleScore:
+    """Reasoning-style score: how the argument is presented, independent of topic."""
+    norm = _normalize(text)
+    geo, alg, hits_geo, hits_alg = _score(norm, STYLE_SPATIAL_MARKERS, STYLE_SYMBOLIC_MARKERS)
+    d_geo, d_alg, d_hits_geo, d_hits_alg = _structural_density(text)
+    geo += d_geo
+    alg += d_alg
+    hits_geo = hits_geo + d_hits_geo
+    hits_alg = hits_alg + d_hits_alg
+    margin = geo - alg
+    label = "geometric" if margin >= 0.5 else "algebraic" if margin <= -0.5 else ("algebraic" if alg >= geo else "geometric")
     return StyleScore(geo, alg, label, margin, hits_geo, hits_alg)
+
+
+@dataclass
+class PaperScore:
+    content: ContentScore
+    style: StyleScore
+
+
+def score_paper(text: str, categories: list[str] | None = None) -> PaperScore:
+    return PaperScore(content=score_content(text, categories), style=score_style(text))
+
+
+# Backward-compatible alias: old callers used `score_text` for what was actually
+# a content/topic score mislabeled as style. New callers should use
+# score_content()/score_style() explicitly.
+score_text = score_content

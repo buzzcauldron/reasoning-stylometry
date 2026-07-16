@@ -15,7 +15,7 @@ from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
-from style_keyword_tagger import score_text  # noqa: E402
+from style_keyword_tagger import score_content, score_style  # noqa: E402
 
 MANIFEST = ROOT / "corpus_classify" / "reference_research" / "manifest.json"
 CONTEMP = ROOT / "corpus_classify" / "reference_research" / "manifest_contemporary.json"
@@ -77,12 +77,16 @@ def canonical_arxiv_id(aid: str) -> str:
     return re.sub(r"v\d+$", "", aid)
 
 
-def manifest_style_counts() -> tuple[int, int]:
+def manifest_content_counts() -> tuple[int, int]:
+    """Count existing sources by content topic (query buckets select for content,
+    not style — see the comment in scrape()). Falls back to `style` for older
+    manifest entries that predate the content/style split."""
     if not MANIFEST.exists():
         return 0, 0
     data = json.loads(MANIFEST.read_text(encoding="utf-8"))
-    geo = sum(1 for s in data.get("sources", []) if s["style"] == "geometric")
-    alg = sum(1 for s in data.get("sources", []) if s["style"] == "algebraic")
+    bucket = lambda s: s.get("content_topic", s.get("style"))
+    geo = sum(1 for s in data.get("sources", []) if bucket(s) == "geometric")
+    alg = sum(1 for s in data.get("sources", []) if bucket(s) == "algebraic")
     return geo, alg
 
 
@@ -156,7 +160,7 @@ def scrape(
     date_to = f"{year_to}1231"
     seen = load_existing_ids()
     collected: dict[str, dict] = {}
-    base_geo, base_alg = manifest_style_counts()
+    base_geo, base_alg = manifest_content_counts()
     print(f"Manifest baseline: {base_geo} geometric, {base_alg} algebraic", flush=True)
     if target_per_style:
         print(f"Target per style: {target_per_style}", flush=True)
@@ -193,7 +197,15 @@ def scrape(
             if aid in seen or aid in collected:
                 continue
             blob = f"{p['title']} {p['abstract']}"
-            score = score_text(blob, p["categories"])
+            # SEARCH_QUERIES buckets are subfield/topic queries (arXiv category,
+            # topic keywords like "model theory" or "cube complex") -- they select
+            # for CONTENT, so query-bucket balancing below is driven by score_content.
+            # score_style is a separate, independent (abstract-only, so necessarily
+            # weaker than the full-text pass) style estimate recorded alongside it.
+            # Both get superseded by full-text retagging in retag_content_style.py
+            # once the paper is downloaded and chunked.
+            score = score_content(blob, p["categories"])
+            style_score = score_style(blob)
             if score.label != query_style and abs(score.margin) < min_margin:
                 continue
             # prefer query-aligned papers; allow cross-label if margin is strong
@@ -208,17 +220,18 @@ def scrape(
             if target_per_style and style_at_target(label, base_geo, base_alg, collected, target_per_style):
                 continue
             collected[aid] = {
-                "style": label,
+                "style": style_score.label,
                 "arxiv": aid,
                 "title": p["title"][:200],
-                "content_topic": score.label,
+                "content_topic": label,
                 "published": p["published"],
                 "query_bucket": query_style,
-                "keyword_score_geo": round(score.geometric, 2),
-                "keyword_score_alg": round(score.algebraic, 2),
-                "keyword_margin": round(score.margin, 2),
-                "keyword_hits_geo": score.hits_geo[:8],
-                "keyword_hits_alg": score.hits_alg[:8],
+                "content_keyword_score_geo": round(score.geometric, 2),
+                "content_keyword_score_alg": round(score.algebraic, 2),
+                "content_keyword_margin": round(score.margin, 2),
+                "content_keyword_hits_geo": score.hits_geo[:8],
+                "content_keyword_hits_alg": score.hits_alg[:8],
+                "style_keyword_margin": round(style_score.margin, 2),
                 "categories": p["categories"][:5],
             }
             seen.add(aid)

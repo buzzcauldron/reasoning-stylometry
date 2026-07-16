@@ -1,0 +1,17 @@
+{
+  "n_chunks": 19058,
+  "n_renamed": 14264,
+  "n_moved_from_prior_holdout": 14261,
+  "n_skipped": 0,
+  "skipped": [],
+  "n_expert_style_preserved": 3583,
+  "n_keyword_style_derived": 15475,
+  "contingency_content__style": {
+    "geometric__geometric": 2541,
+    "geometric__algebraic": 5069,
+    "algebraic__geometric": 3148,
+    "algebraic__algebraic": 8300
+  },
+  "off_diagonal_fraction": 0.4312,
+  "note": "off_diagonal_fraction is the share of chunks where content and style labels disagree (e.g. algebraic content written in geometric style). 0.0 means content and style are still fully confounded; the two axes being independent heuristics does not guarantee a specific fraction, but 0.0 would indicate the scorers are not actually decoupled."
+}

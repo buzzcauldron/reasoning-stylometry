@@ -1,19 +1,18 @@
-# Quick benchmark: MFW vs stopwords vs PCA on JAMS holdout
+# Quick benchmark: MFW vs stopwords vs PCA on JAMS content holdout.
+# Legacy/exploratory script predating the content/style split (see
+# corpus_classify/CORPUS.md); benchmarks the CONTENT axis specifically since
+# `test` below is content-leading. There is no style-axis equivalent yet.
 library(stylo)
+source("R/jams_metadata.R")
 
-train <- "corpus_classify/reference_research/balanced"
+train <- "corpus_classify/reference_research/balanced_content"
 test <- "corpus_classify/jams_quadrant"
 sw <- stopwords::stopwords("en", source = "snowball")
-style_labels <- c(
-  "geometric__geometric_style__masur_schleimer_disk_complex" = "geometric",
-  "geometric__algebraic_style__bateman_katz_cap_sets" = "algebraic",
-  "algebraic__geometric_style__dritschel_mccullough_rational_dilation" = "geometric",
-  "algebraic__algebraic_style__hrushovski_approx_subgroups" = "algebraic"
-)
+content_labels <- EXPERT_CONTENT_LABELS
 
 score <- function(r) {
   pred <- setNames(as.character(r$predicted), rownames(r$frequencies.test.set))
-  sum(pred[names(style_labels)] == style_labels)
+  sum(pred[names(content_labels)] == content_labels)
 }
 
 run <- function(label, ...) {
@@ -29,7 +28,7 @@ run <- function(label, ...) {
   r
 }
 
-cat("JAMS style-axis holdout:\n")
+cat("JAMS content-axis holdout:\n")
 results <- list()
 results[["stopwords175 + Delta"]] <- run("stopwords175 + Delta", mfw = length(sw), culling = 0, features = sw, classification.method = "delta")
 results[["mfw100 cull20 + Delta"]] <- run("mfw100 cull20 + Delta", mfw = 100, culling = 20, classification.method = "delta")
@@ -37,11 +36,11 @@ results[["mfw100 cull40 + Delta"]] <- run("mfw100 cull40 + Delta", mfw = 100, cu
 results[["mfw200 cull20 + Delta"]] <- run("mfw200 cull20 + Delta", mfw = 200, culling = 20, classification.method = "delta")
 results[["mfw500 cull20 + Delta"]] <- run("mfw500 cull20 + Delta", mfw = 500, culling = 20, classification.method = "delta")
 
-cat("\nPer-paper predictions (style axis):\n")
+cat("\nPer-paper predictions (content axis):\n")
 for (nm in names(results)) {
   r <- results[[nm]]
   pred <- setNames(as.character(r$predicted), rownames(r$frequencies.test.set))
-  cat(nm, ":", paste(names(style_labels), pred[names(style_labels)], sep = "=", collapse = ", "), "\n")
+  cat(nm, ":", paste(names(content_labels), pred[names(content_labels)], sep = "=", collapse = ", "), "\n")
 }
 
 pca_holdout <- function(mfw, cull, npc, features = NULL) {
@@ -77,7 +76,7 @@ pca_holdout <- function(mfw, cull, npc, features = NULL) {
     names(which.min(d))
   }, character(1))
   names(preds) <- rownames(Xte)
-  sum(preds[names(style_labels)] == style_labels)
+  sum(preds[names(content_labels)] == content_labels)
 }
 
 cat("\nPCA nearest-centroid:\n")

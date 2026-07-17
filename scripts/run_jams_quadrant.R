@@ -1,6 +1,11 @@
 # Classify four JAMS quadrant papers on TWO independent axes — content (topic)
 # and style (reasoning presentation) — against independently-labeled reference
-# corpora using stopword-only stylo features.
+# corpora. Content uses stopword-only stylo features; style uses MFW-500 word
+# unigrams, per the config sweep (scripts/run_one_stylo_config.R and friends,
+# 2026-07-16) that found this the only config beating the stopword baseline on
+# BOTH leave-one-out accuracy (56.8% vs 54.3%) and JAMS holdout accuracy (3/4
+# vs 1/4) simultaneously. No content-axis config cleared that bar on both
+# metrics at once, so content keeps the stopword baseline.
 #
 # Content and style used to be the same label by construction (see
 # corpus_classify/CORPUS.md and scripts/retag_content_style.py for the history).
@@ -25,10 +30,24 @@ stopword_list <- stopwords::stopwords("en", source = "snowball")
 out_dir <- "output/jams_quadrant"
 dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
 
-stylo_args <- list(
+content_stylo_args <- list(
   mfw = length(stopword_list),
   culling = 0,
   features = stopword_list,
+  classification.method = "delta",
+  analyzed.features = "w",
+  ngram.size = 1
+)
+
+# NOTE on parameter names: classify()'s real MFW/culling knobs are
+# mfw.min/mfw.max/mfw.incr and culling.min/culling.max/culling.incr -- a
+# plain mfw=/culling= is silently absorbed into `...` and ignored (confirmed
+# empirically during the sweep). content_stylo_args above gets away with the
+# plain names only because passing an explicit `features=` list bypasses MFW
+# ranking entirely; this config has no `features=`, so it needs the real names.
+style_stylo_args <- list(
+  mfw.min = 500, mfw.max = 500, mfw.incr = 100,
+  culling.min = 20, culling.max = 20, culling.incr = 20,
   classification.method = "delta",
   analyzed.features = "w",
   ngram.size = 1
@@ -43,7 +62,7 @@ stylo_args <- list(
 # axis keys its results by the same canonical stem.
 strip_style_first_prefix <- function(x) sub("^[^_]+__[^_]+_content__", "", x)
 
-run_classify <- function(train_dir, test_dir, label, rowname_fn = identity) {
+run_classify <- function(train_dir, test_dir, label, stylo_args, rowname_fn = identity) {
   cat("\n=== classify:", label, "===\n")
   result <- do.call(
     classify,
@@ -68,7 +87,7 @@ run_classify <- function(train_dir, test_dir, label, rowname_fn = identity) {
   result
 }
 
-run_rolling_one <- function(train_dir, test_file, label) {
+run_rolling_one <- function(train_dir, test_file, label, stylo_args, config_name) {
   test_dir <- file.path(out_dir, paste0("rolling_input_", label))
   dir.create(test_dir, showWarnings = FALSE, recursive = TRUE)
   dest <- file.path(test_dir, basename(test_file))
@@ -93,7 +112,7 @@ run_rolling_one <- function(train_dir, test_file, label) {
         slice.size = 250,
         slice.overlap = 150,
         write.png.file = TRUE,
-        custom.graph.title = paste("Rolling:", label, "(stopwords)")
+        custom.graph.title = paste0("Rolling: ", label, " (", config_name, ")")
       ),
       stylo_args
     )
@@ -108,10 +127,10 @@ run_rolling_one <- function(train_dir, test_file, label) {
 }
 
 # --- whole-paper + excerpt classification, both axes ---
-content_full <- run_classify(CONTENT_TRAIN_DIR, "corpus_classify/jams_quadrant", "content_full_papers")
-content_excerpt <- run_classify(CONTENT_TRAIN_DIR, "corpus_classify/jams_excerpts", "content_excerpts")
-style_full <- run_classify(STYLE_TRAIN_DIR, "corpus_classify/jams_quadrant_style_first", "style_full_papers", strip_style_first_prefix)
-style_excerpt <- run_classify(STYLE_TRAIN_DIR, "corpus_classify/jams_excerpts_style_first", "style_excerpts", strip_style_first_prefix)
+content_full <- run_classify(CONTENT_TRAIN_DIR, "corpus_classify/jams_quadrant", "content_full_papers", content_stylo_args)
+content_excerpt <- run_classify(CONTENT_TRAIN_DIR, "corpus_classify/jams_excerpts", "content_excerpts", content_stylo_args)
+style_full <- run_classify(STYLE_TRAIN_DIR, "corpus_classify/jams_quadrant_style_first", "style_full_papers", style_stylo_args, strip_style_first_prefix)
+style_excerpt <- run_classify(STYLE_TRAIN_DIR, "corpus_classify/jams_excerpts_style_first", "style_excerpts", style_stylo_args, strip_style_first_prefix)
 
 # --- rolling classification, both axes (test file naming doesn't matter for
 # rolling.classify — only the training corpus determines what the labels mean —
@@ -121,8 +140,8 @@ content_rolling <- list()
 style_rolling <- list()
 for (path in paper_files) {
   stem <- sub("\\.txt$", "", basename(path))
-  content_rolling[[stem]] <- run_rolling_one(CONTENT_TRAIN_DIR, path, paste0("content_", stem))
-  style_rolling[[stem]] <- run_rolling_one(STYLE_TRAIN_DIR, path, paste0("style_", stem))
+  content_rolling[[stem]] <- run_rolling_one(CONTENT_TRAIN_DIR, path, paste0("content_", stem), content_stylo_args, "stopwords")
+  style_rolling[[stem]] <- run_rolling_one(STYLE_TRAIN_DIR, path, paste0("style_", stem), style_stylo_args, "mfw500_word1gram")
 }
 
 rolling_summary <- function(rolling_results) {

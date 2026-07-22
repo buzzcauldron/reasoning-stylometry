@@ -1,91 +1,66 @@
 {
   "content": {
     "full_papers": {
-      "files": [
-        "algebraic__algebraic_style__hrushovski_approx_subgroups.txt",
-        "algebraic__geometric_style__dritschel_mccullough_rational_dilation.txt",
-        "geometric__algebraic_style__bateman_katz_cap_sets.txt",
-        "geometric__geometric_style__masur_schleimer_disk_complex.txt"
-      ],
-      "expected_filename_prefix": [
-        "algebraic",
-        "algebraic",
-        "geometric",
-        "geometric"
-      ],
-      "predicted": [
-        "algebraic",
-        "geometric",
-        "algebraic",
-        "geometric"
-      ],
+      "files": ["algebraic__algebraic_style__hrushovski_approx_subgroups.txt", "algebraic__geometric_style__dritschel_mccullough_rational_dilation.txt", "geometric__algebraic_style__bateman_katz_cap_sets.txt", "geometric__geometric_style__masur_schleimer_disk_complex.txt"],
+      "expected_filename_prefix": ["algebraic", "algebraic", "geometric", "geometric"],
+      "predicted": ["geometric", "geometric", "geometric", "geometric"],
       "success_rate": 50
     },
     "excerpts": {
-      "expected_filename_prefix": [
-        "algebraic",
-        "algebraic",
-        "geometric",
-        "geometric"
-      ],
-      "predicted": [
-        "algebraic",
-        "geometric",
-        "geometric",
-        "geometric"
-      ],
+      "expected_filename_prefix": ["algebraic", "algebraic", "geometric", "geometric"],
+      "predicted": ["algebraic", "algebraic", "algebraic", "geometric"],
       "success_rate": 75
     },
     "rolling": {
       "algebraic__algebraic_style__hrushovski_approx_subgroups": {
         "counts": {
-          "algebraic": 189,
-          "geometric": 152
+          "algebraic": 168,
+          "geometric": 164
         },
-        "share_geometric": 0.4457,
-        "share_algebraic": 0.5543,
-        "n_slices": 341
+        "share_geometric": 0.494,
+        "share_algebraic": 0.506,
+        "n_slices": 332
       },
       "algebraic__geometric_style__dritschel_mccullough_rational_dilation": {
         "counts": {
-          "algebraic": 115,
-          "geometric": 85
+          "algebraic": 103,
+          "geometric": 86
         },
-        "share_geometric": 0.425,
-        "share_algebraic": 0.575,
-        "n_slices": 200
+        "share_geometric": 0.455,
+        "share_algebraic": 0.545,
+        "n_slices": 189
       },
       "geometric__algebraic_style__bateman_katz_cap_sets": {
         "counts": {
-          "geometric": 69,
-          "algebraic": 68
+          "geometric": 68,
+          "algebraic": 61
         },
-        "share_geometric": 0.5036,
-        "share_algebraic": 0.4964,
-        "n_slices": 137
+        "share_geometric": 0.5271,
+        "share_algebraic": 0.4729,
+        "n_slices": 129
       },
       "geometric__geometric_style__masur_schleimer_disk_complex": {
         "counts": {
-          "algebraic": 145,
-          "geometric": 126
+          "algebraic": 144,
+          "geometric": 116
         },
-        "share_geometric": 0.4649,
-        "share_algebraic": 0.5351,
-        "n_slices": 271
+        "share_geometric": 0.4462,
+        "share_algebraic": 0.5538,
+        "n_slices": 260
       }
     },
     "accuracy": {
       "whole_paper": 2,
       "rolling_majority": 3,
+      "whole_paper_weighted": 2,
+      "rolling_majority_weighted": 2.88,
+      "max_possible_weighted": 3.88,
       "expert_labels": {
         "geometric__geometric_style__masur_schleimer_disk_complex": "geometric",
         "geometric__algebraic_style__bateman_katz_cap_sets": "geometric",
         "algebraic__geometric_style__dritschel_mccullough_rational_dilation": "algebraic",
         "algebraic__algebraic_style__hrushovski_approx_subgroups": "algebraic"
       },
-      "whole_paper_weighted": 2,
-      "rolling_majority_weighted": 2.88,
-      "max_possible_weighted": 3.88,
       "expert_label_confidence": {
         "geometric__geometric_style__masur_schleimer_disk_complex": 1,
         "geometric__algebraic_style__bateman_katz_cap_sets": 1,
@@ -96,91 +71,66 @@
   },
   "style": {
     "full_papers": {
-      "files": [
-        "algebraic__algebraic_style__hrushovski_approx_subgroups.txt",
-        "algebraic__geometric_style__dritschel_mccullough_rational_dilation.txt",
-        "geometric__algebraic_style__bateman_katz_cap_sets.txt",
-        "geometric__geometric_style__masur_schleimer_disk_complex.txt"
-      ],
-      "expected_filename_prefix": [
-        "algebraic",
-        "algebraic",
-        "geometric",
-        "geometric"
-      ],
-      "predicted": [
-        "algebraic",
-        "geometric",
-        "geometric",
-        "geometric"
-      ],
-      "success_rate": 75
+      "files": ["algebraic__algebraic_style__hrushovski_approx_subgroups.txt", "algebraic__geometric_style__dritschel_mccullough_rational_dilation.txt", "geometric__algebraic_style__bateman_katz_cap_sets.txt", "geometric__geometric_style__masur_schleimer_disk_complex.txt"],
+      "expected_filename_prefix": ["algebraic", "algebraic", "geometric", "geometric"],
+      "predicted": ["geometric", "geometric", "algebraic", "geometric"],
+      "success_rate": 25
     },
     "excerpts": {
-      "expected_filename_prefix": [
-        "algebraic",
-        "algebraic",
-        "geometric",
-        "geometric"
-      ],
-      "predicted": [
-        "algebraic",
-        "algebraic",
-        "geometric",
-        "algebraic"
-      ],
-      "success_rate": 75
+      "expected_filename_prefix": ["algebraic", "algebraic", "geometric", "geometric"],
+      "predicted": ["algebraic", "geometric", "algebraic", "algebraic"],
+      "success_rate": 25
     },
     "rolling": {
       "algebraic__algebraic_style__hrushovski_approx_subgroups": {
         "counts": {
-          "algebraic": 200,
-          "geometric": 141
+          "algebraic": 212,
+          "geometric": 120
         },
-        "share_geometric": 0.4135,
-        "share_algebraic": 0.5865,
-        "n_slices": 341
+        "share_geometric": 0.3614,
+        "share_algebraic": 0.6386,
+        "n_slices": 332
       },
       "algebraic__geometric_style__dritschel_mccullough_rational_dilation": {
         "counts": {
-          "algebraic": 125,
-          "geometric": 75
+          "algebraic": 145,
+          "geometric": 44
         },
-        "share_geometric": 0.375,
-        "share_algebraic": 0.625,
-        "n_slices": 200
+        "share_geometric": 0.2328,
+        "share_algebraic": 0.7672,
+        "n_slices": 189
       },
       "geometric__algebraic_style__bateman_katz_cap_sets": {
         "counts": {
-          "algebraic": 78,
-          "geometric": 59
+          "algebraic": 85,
+          "geometric": 44
         },
-        "share_geometric": 0.4307,
-        "share_algebraic": 0.5693,
-        "n_slices": 137
+        "share_geometric": 0.3411,
+        "share_algebraic": 0.6589,
+        "n_slices": 129
       },
       "geometric__geometric_style__masur_schleimer_disk_complex": {
         "counts": {
-          "algebraic": 157,
-          "geometric": 114
+          "algebraic": 158,
+          "geometric": 102
         },
-        "share_geometric": 0.4207,
-        "share_algebraic": 0.5793,
-        "n_slices": 271
+        "share_geometric": 0.3923,
+        "share_algebraic": 0.6077,
+        "n_slices": 260
       }
     },
     "accuracy": {
-      "whole_paper": 3,
+      "whole_paper": 1,
       "rolling_majority": 2,
+      "whole_paper_weighted": 1,
+      "rolling_majority_weighted": 1.88,
+      "max_possible_weighted": 3.88,
       "expert_labels": {
         "geometric__geometric_style__masur_schleimer_disk_complex": "geometric",
         "geometric__algebraic_style__bateman_katz_cap_sets": "algebraic",
         "algebraic__geometric_style__dritschel_mccullough_rational_dilation": "geometric",
         "algebraic__algebraic_style__hrushovski_approx_subgroups": "algebraic"
       },
-      "whole_paper_weighted": 2.88,
-      "rolling_majority_weighted": 2,
-      "max_possible_weighted": 3.88,
       "expert_label_confidence": {
         "geometric__geometric_style__masur_schleimer_disk_complex": 1,
         "geometric__algebraic_style__bateman_katz_cap_sets": 1,
@@ -204,9 +154,9 @@
       "stem": "geometric__algebraic_style__bateman_katz_cap_sets",
       "expert_content": "geometric",
       "expert_style": "algebraic",
-      "predicted_content": "algebraic",
+      "predicted_content": "geometric",
       "predicted_style": "geometric",
-      "content_match": false,
+      "content_match": true,
       "style_match": false,
       "quadrant_match": false
     },
@@ -215,21 +165,21 @@
       "expert_content": "algebraic",
       "expert_style": "geometric",
       "predicted_content": "geometric",
-      "predicted_style": "geometric",
+      "predicted_style": "algebraic",
       "content_match": false,
-      "style_match": true,
+      "style_match": false,
       "quadrant_match": false
     },
     "algebraic__algebraic_style__hrushovski_approx_subgroups": {
       "stem": "algebraic__algebraic_style__hrushovski_approx_subgroups",
       "expert_content": "algebraic",
       "expert_style": "algebraic",
-      "predicted_content": "algebraic",
-      "predicted_style": "algebraic",
-      "content_match": true,
-      "style_match": true,
-      "quadrant_match": true
+      "predicted_content": "geometric",
+      "predicted_style": "geometric",
+      "content_match": false,
+      "style_match": false,
+      "quadrant_match": false
     }
   },
-  "quadrant_accuracy": 2
+  "quadrant_accuracy": 1
 }

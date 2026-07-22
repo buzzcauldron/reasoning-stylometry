@@ -72,7 +72,7 @@ In this paper we initiate the study of the geometry of the disk complex
 
 of a handlebody V . The disk complex D(V ) has a natural simplicial
 
-inclusion into the curve complexC(S) of the boundary of the handlebody.
+inclusion into the curve complex C(S) of the boundary of the handlebody.
 
 Surprisingly, this inclusion is not a quasi-isometric embedding; there are
 
@@ -172,7 +172,7 @@ Theorem 20.3. The disk complex is Gromov hyperbolic.
 
 Again, as a warm-up to the proof of Theorem 20.3 we prove that
 
-C(F ) andA(S) are hyperbolic in Corollary 6.4 and Theorem 20.2. Note
+C(F ) and A(S) are hyperbolic in Corollary 6.4 and Theorem 20.2. Note
 
 that Bestvina and Fujiwara [ 4] have previously dealt with the curve
 
@@ -206,15 +206,15 @@ hierarchies are too ﬂexible to respect a symmetry, such as the involution
 
 giving a non-orientable surface, and at the same time too rigid for the
 
-disk complex. ForC(F ) we use the highly rigid Teichm¨ uller geodesic
+disk complex. For C(F ) we use the highly rigid Teichm¨ uller geodesic
 
-machine, due to Raﬁ [ 33]. ForD(V ) we use the extremely ﬂexible train
+machine, due to Raﬁ [ 33]. For D(V ) we use the extremely ﬂexible train
 
 track machine, developed by ourselves and Mosher [27].
 
 Theorems 19.1 and 20.3 are part of a more general framework. Namely,
 
-given a combinatorial complexG we understand its geometry by clas-
+given a combinatorial complex G we understand its geometry by clas-
 
 sifying the holes: the geometric obstructions lying between G and the
 
@@ -312,19 +312,19 @@ setwise. A proper arc β⊂ S is essential if β is not properly isotopic
 
 into a regular neighborhood of ∂S.
 
-DeﬁneC(S) to be the set of isotopy classes of essential, non-peripheral
+Deﬁne C(S) to be the set of isotopy classes of essential, non-peripheral
 
 curves in S. Deﬁne A(S) to be the set of proper isotopy classes of
 
-essential arcs. When S =S0,2 is an annulus deﬁneA(S) to be the set
+essential arcs. When S =S0,2 is an annulus deﬁne A(S) to be the set
 
 of essential arcs, up to isotopies ﬁxing the boundary pointwise. For any
 
 surface deﬁneAC(S) =A(S)∪C (S).
 
-Forα,β ∈AC (S) the geometric intersection number ι(α,β ) is the
+For α,β ∈AC (S) the geometric intersection number ι(α,β ) is the
 
-minimum intersection possible between α and any β′ equivalent toβ.
+minimum intersection possible between α and any β′ equivalent to β.
 
 When S = S0,2 we do not count intersection points occurring on the
 
@@ -340,9 +340,9 @@ Deﬁne ∆⊂AC (S) to be a multicurve if for all α,β ∈ ∆ we have
 
 simplical complex onAC(S): the simplices are exactly the multicurves.
 
-Also,C(S) andA(S) naturally span sub-complexes.
+Also,C(S) and A(S) naturally span sub-complexes.
 
-Note that the curve complexes C(S1,1) andC(S0,4) have no edges. It
+Note that the curve complexes C(S1,1) and C(S0,4) have no edges. It
 
 is useful to alter the deﬁnition in these cases. Place edges between all
 
@@ -350,11 +350,11 @@ vertices with geometric intersection exactly one if S = S1,1 or two if
 
 S =S0,4. In both cases the result is the Farey graph. Also, with the
 
-current deﬁnitionC(S) is empty if S =S0,2. Thus for the annulus only
+current deﬁnition C(S) is empty if S =S0,2. Thus for the annulus only
 
 we setAC(S) =C(S) =A(S).
 
-Deﬁnition 2.1. For verticesα,β ∈C (S) deﬁne the distancedS(α,β ) to
+Deﬁnition 2.1. For vertices α,β ∈C (S) deﬁne the distanced S(α,β ) to
 
 be the minimum possible number of edges of a path in the one-skeleton
 
@@ -394,7 +394,7 @@ surface. We say X is essential exactly when all boundary components
 
 of X are essential in S. We say that α∈AC (S) cuts X if all represen-
 
-tatives of α intersectX. If some representative is disjoint then we say
+tatives of α intersect X. If some representative is disjoint then we say
 
 α misses X.
 
@@ -412,7 +412,7 @@ Y and also ∂Y cuts X then we say that X and Y overlap.
 
 A compact connected surface S is simple ifAC(S) has ﬁnite diameter.
 
-Lemma 2.6. SupposeS is a connected compact surface. The following
+Lemma 2.6. Suppose S is a connected compact surface. The following
 
 are equivalent:
 
@@ -430,7 +430,7 @@ Lemma 4.6 of [ 24] shows that pseudo-Anosov maps have quasi-geodesic
 
 orbits, when acting on the associated curve complex. A Dehn twist
 
-acting onC(S0,2) has geodesic orbits.
+acting on C(S0,2) has geodesic orbits.
 
 Note that Lemma 2.6 is only used in this paper when∂S is non-empty.
 
@@ -474,13 +474,13 @@ is the genus of the handlebody. A properly embedded disk D⊂V is
 
 essential if ∂D⊂∂V is essential.
 
-LetD(V ) be the set of essential disks D⊂V , up to proper isotopy.
+Let D(V ) be the set of essential disks D⊂V , up to proper isotopy.
 
 A subset ∆ ⊂D (V ) is a multidisk if for every D,E ∈ ∆ we have
 
 ι(∂D,∂E ) = 0. Following McCullough [ 28] we place a simplical struc-
 
-ture onD(V ) by taking multidisks to be simplices. As with the curve
+ture on D(V ) by taking multidisks to be simplices. As with the curve
 
 complex, deﬁne dD to be the distance in the one-skeleton of D(V ).
 
@@ -512,7 +512,7 @@ Deﬁnition 2.7. A complete clean marking µ ={αi}∪{ βi} consists of
 
 • A collection of base curves base(µ) ={αi}: a maximal simplex
 
-inC(S).
+in C(S).
 
 • A collection of transversal curves{βi}: for each i deﬁne Xi =
 
@@ -526,7 +526,7 @@ discussed in [25] there are two kinds of elementary moves which con-
 
 nected markings. There is a twist about a pants curve α, replacing its
 
-transversalβ by a new transversal β′ which is a Farey neighbor of both
+transversal β by a new transversal β′ which is a Farey neighbor of both
 
 α and β. We can ﬂip by swapping the roles of αi and βi. (In the case
 
@@ -564,7 +564,7 @@ x,y∈X ,
 
 dX (x,y ) =AdY(f(x),f (y)).
 
-The relation f is a quasi-isometry, andX is quasi-isometric toY, if f
+The relation f is a quasi-isometry, and X is quasi-isometric to Y, if f
 
 is an A–quasi-isometric embedding and the image of f is A–dense: the
 
@@ -572,7 +572,7 @@ A–neighborhood of the image equals all of Y.
 
 3.2. Geodesics. Fix an interval [u,v ]⊂ R. A geodesic, connecting
 
-x to y inX , is an isometric embedding f : [u,v ]→X with f(u) = x
+x to y in X , is an isometric embedding f : [u,v ]→X with f(u) = x
 
 and f(v) =y. Often the exact choice of f is unimportant and all that
 
@@ -582,29 +582,29 @@ matters are the endpoints x and y. We then denote the image of f by
 
 Fix now intervals [m,n ], [p,q ]⊂ Z. An A–quasi-isometric embed-
 
-ding g : [m,n ]→X is called an A–quasi-geodesic inX . A function
+ding g : [m,n ]→X is called an A–quasi-geodesic in X . A function
 
-g : [m,n ]→X is an A–unparameterized quasi-geodesic inX if
+g : [m,n ]→X is an A–unparameterized quasi-geodesic in X if
 
 • there is an increasing function ρ: [p,q ]→ [m,n ] so that g◦
 
-ρ: [p,q ]→X is an A–quasi-geodesic inX and
+ρ: [p,q ]→X is an A–quasi-geodesic in X and
 
-• for all i∈ [p,q− 1], diamX (g [ρ(i),ρ (i + 1)])≤A.
+• for all i∈ [p,q− 1], diam X (g [ρ(i),ρ (i + 1)])≤A.
 
 (Compare to the deﬁnition of (K,δ,s )–quasi-geodesics found in [24].)
 
-A subsetY⊂X is Q–quasi-convex if everyX –geodesic connecting a
+A subset Y⊂X is Q–quasi-convex if every X –geodesic connecting a
 
-pair of points ofY lies within a Q–neighborhood ofY.
+pair of points of Y lies within a Q–neighborhood of Y.
 
-3.3. Hyperbolicity. We now assume thatX is a connected graph with
+3.3. Hyperbolicity. We now assume that X is a connected graph with
 
 metric induced by giving all edges length one.
 
-Deﬁnition 3.1. The spaceX is δ–hyperbolic if, for any three points
+Deﬁnition 3.1. The space X is δ–hyperbolic if, for any three points
 
-x,y,z inX and for any geodesics k = [x,y ], g = [y,z ], h = [z,x ], the
+x,y,z in X and for any geodesics k = [x,y ], g = [y,z ], h = [z,x ], the
 
 triangle ghk is δ–slim: the δ–neighborhood of any two sides contains
 
@@ -626,7 +626,7 @@ geodesics.
 
 THE GEOMETRY OF THE DISK COMPLEX 9
 
-Deﬁnition 3.3. We takeρk :X→ k to be the closest points relation:
+Deﬁnition 3.3. We take ρk :X→ k to be the closest points relation:
 
 ρk(z) =
 
@@ -682,7 +682,7 @@ an error in our ﬁrst proof of Theorem 3.11 and for informing us of
 
 Gilman’s work [13, 14].
 
-Suppose thatX is a graph with all edge-lengths equal to one. Suppose
+Suppose that X is a graph with all edge-lengths equal to one. Suppose
 
 that γ : [0,N ] → X is a loop in X with unit speed. Any pair of
 
@@ -694,7 +694,7 @@ chord is dX (γ(a),γ (b)).
 
 Following Gilman [13, Theorem B] we have:
 
-Theorem 3.10. Suppose thatX is a graph with all edge-lengths equal
+Theorem 3.10. Suppose that X is a graph with all edge-lengths equal
 
 to one. Then X is Gromov hyperbolic if and only if there is a constant
 
@@ -710,7 +710,7 @@ paper of Gilman [14].
 
 10 HOW ARD MASUR AND SAUL SCHLEIMER
 
-Theorem 3.11. Suppose thatX is a graph with all edge-lengths equal
+Theorem 3.11. Suppose that X is a graph with all edge-lengths equal
 
 to one. Then X is Gromov hyperbolic if and only if there is a constant
 
@@ -718,7 +718,7 @@ M ≥ 0 and, for all unordered pairs x,y ∈X 0, there is a connected
 
 subgraphgx,y containingx and y with the following properties:
 
-• (Local) IfdX (x,y )≤ 1 then gx,y has diameter at most M.
+• (Local) Ifd X (x,y )≤ 1 then gx,y has diameter at most M.
 
 • (Slim triangles) For allx,y,z ∈X 0 the subgraphgx,y is contained
 
@@ -750,7 +750,7 @@ there is a point a∈I0 so that a,b are 1/4–separated and so that
 
 dX (γ(a),γ (b))≤ 2M⌈log2N⌉ + 2M.
 
-Thus there is an additive error K large enough so thatX satisﬁes the
+Thus there is an additive error K large enough so that X satisﬁes the
 
 criterion of Theorem 3.10 and we are done. □
 
@@ -800,21 +800,21 @@ of a regular neighborhood of α∪∂S.
 
 With S and X as above:
 
-Deﬁnition 4.3. The subsurface projection relationπX :AC(S)→C (X)
+Deﬁnition 4.3. The subsurface projection relation πX :AC(S)→C (X)
 
 is deﬁned as follows: If X is not an annulus then deﬁne πX =σX◦κX.
 
 When X is an annulus πX =κX.
 
-If α,β ∈AC (S) both cut X we write dX(α,β ) = diamX(πX(α)∪
+If α,β ∈AC (S) both cut X we write dX(α,β ) = diam X(πX(α)∪
 
-πX(β)). This is the subsurface projection distance betweenα and β in
+πX(β)). This is the subsurface projection distance between α and β in
 
 X.
 
 Lemma 4.4. Suppose α,β ∈AC (S) are disjoint and cut X. Then
 
-diamX(πX(α)),dX(α,β )≤ 3. □
+diam X(πX(α)),dX(α,β )≤ 3. □
 
 See Lemma 2.3 of [ 25] and the remarks in the section Projection
 
@@ -840,7 +840,7 @@ the following property. Fix X⊂S. Suppose that {βi}n
 
 i=0 is a geodesic
 
-inC(S). Suppose that βi cuts X for all i. Then dX(β0,βn)≤M0. □
+in C(S). Suppose that βi cuts X for all i. Then dX(β0,βn)≤M0. □
 
 Here is a converse for Lemma 4.4.
 
@@ -928,15 +928,15 @@ plex. □
 
 It is natural to ask if this map is a quasi-isometric embedding. If so,
 
-the hyperbolicity ofC(V ) immediately follows. In fact, the inclusion
+the hyperbolicity of C(V ) immediately follows. In fact, the inclusion
 
 again badly distorts distance and we investigate exactly how, below.
 
 4.3. Markings and the mapping class group. Once the connect-
 
-edness ofM(S) is in hand, it is possible to use local ﬁniteness to show
+edness of M(S) is in hand, it is possible to use local ﬁniteness to show
 
-thatM(S) is quasi-isometric to the Cayley graph of the mapping class
+that M(S) is quasi-isometric to the Cayley graph of the mapping class
 
 group [25].
 
@@ -974,7 +974,7 @@ that the sum ranges over the same set.
 
 Suppose that S is a compact connected surface. In this paper a
 
-combinatorial complexG(S) will have vertices being isotopy classes of
+combinatorial complex G(S) will have vertices being isotopy classes of
 
 certain multicurves in S. We will assume throughout that vertices of
 
@@ -996,7 +996,7 @@ complex [19], the complex of separating curves [ 7], the arc complex and
 
 the curve complexes themselves.
 
-For any combinatorial complexG deﬁned in this paper other than
+For any combinatorial complex G deﬁned in this paper other than
 
 the curve complex we will denote distance in the one-skeleton of G by
 
@@ -1010,7 +1010,7 @@ embedded subsurface. A vertex α∈G cuts X if some component of α
 
 cuts X.
 
-Deﬁnition 5.1. We sayX⊂S is a hole forG if every vertex ofG cuts
+Deﬁnition 5.1. We say X⊂S is a hole for G if every vertex of G cuts
 
 X.
 
@@ -1026,19 +1026,19 @@ an annulus), so generally cannot be a hole. A hole X⊂S is strict if X
 
 is not homeomorphic to S.
 
-We now classify the holes forA(S).
+We now classify the holes for A(S).
 
 14 HOW ARD MASUR AND SAUL SCHLEIMER
 
 Example 5.2. Suppose that S = Sg,b with b > 0 and consider the
 
-arc complexA(S). The holes, up to isotopy, are exactly the cleanly
+arc complex A(S). The holes, up to isotopy, are exactly the cleanly
 
 embedded surfaces which contain ∂S. So, for example, if S is planar
 
-then only S is a hole forA(S). The same holds for S =S1,1. In these
+then only S is a hole for A(S). The same holds for S =S1,1. In these
 
-cases it is an exercise to show that C(S) andA(S) are quasi-isometric.
+cases it is an exercise to show that C(S) and A(S) are quasi-isometric.
 
 In all other cases the arc complex admits inﬁnitely many holes.
 
@@ -1052,7 +1052,7 @@ group acts on the arc complex, all non-simple holes for A(S) have
 
 inﬁnite diameter.
 
-Suppose now that X,X′⊂S are disjoint holes forG. In the presence
+Suppose now that X,X′⊂S are disjoint holes for G. In the presence
 
 of symmetry there can be a relationship between πX|G and πX ′|G as
 
@@ -1084,7 +1084,7 @@ of twisted I–bundles inside of a handlebody.
 
 ma is used repeatedly throughout the paper:
 
-Lemma 5.7. Suppose thatG(S) is a combinatorial complex. Suppose
+Lemma 5.7. Suppose that G(S) is a combinatorial complex. Suppose
 
 that X is a hole for G. Then for any α,β ∈G we have
 
@@ -1094,7 +1094,7 @@ The additive error is required only when α =β.
 
 Proof. This follows directly from Corollary 4.5 and our assumption that
 
-vertices ofG connected by an edge represent disjoint multicurves. □
+vertices of G connected by an edge represent disjoint multicurves. □
 
 THE GEOMETRY OF THE DISK COMPLEX 15
 
@@ -1102,7 +1102,7 @@ THE GEOMETRY OF THE DISK COMPLEX 15
 
 Bowditch’s question.
 
-Lemma 5.8. Suppose thatG(S) is a combinatorial complex. Suppose
+Lemma 5.8. Suppose that G(S) is a combinatorial complex. Suppose
 
 that there is a strict hole X ⊂ S having inﬁnite diameter. Then
 
@@ -1110,19 +1110,19 @@ that there is a strict hole X ⊂ S having inﬁnite diameter. Then
 
 This lemma and Example 5.2 completely determines when the in-
 
-clusion ofA(S) intoAC(S) is a quasi-isometric embedding. It quickly
+clusion of A(S) intoAC(S) is a quasi-isometric embedding. It quickly
 
 becomes clear that the set of holes tightly constrains the intrinsic
 
 geometry of a combinatorial complex.
 
-Lemma 5.9. Suppose thatG(S) is a combinatorial complex invariant
+Lemma 5.9. Suppose that G(S) is a combinatorial complex invariant
 
 under the natural action of MCG(S). Then every non-simple hole for G
 
 has inﬁnite diameter. Furthermore, if X,Y ⊂S are disjoint non-simple
 
-holes forG then there is a quasi-isometric embedding of Z2 intoG. □
+holes for G then there is a quasi-isometric embedding of Z2 into G. □
 
 We will not use Lemmas 5.8 or 5.9 and so omit the proofs. Instead
 
@@ -1136,7 +1136,7 @@ projection distances in holes gives a lower bound for distance.
 
 Theorem 5.10. Fix S, a compact connected non-simple surface. Sup-
 
-pose thatG(S) is a combinatorial complex. Then there is a constant C0
+pose that G(S) is a combinatorial complex. Then there is a constant C0
 
 so that for all c≥C0 there is a constant A satisfying
 
@@ -1144,7 +1144,7 @@ so that for all c≥C0 there is a constant A satisfying
 
 [dX(α,β )]c≤AdG(α,β ).
 
-Hereα,β ∈G and the sum is taken over all holes X for the complex
+Here α,β ∈G and the sum is taken over all holes X for the complex
 
 G. □
 
@@ -1170,7 +1170,7 @@ reverse inequality; Theorem 13.1.
 
 6. Holes for the non-orientable surface
 
-FixF a compact, connected, and non-orientable surface. Let S be the
+Fix F a compact, connected, and non-orientable surface. Let S be the
 
 orientation double cover with covering map ρF : S→F . Let τ : S→S
 
@@ -1178,7 +1178,7 @@ be the associated involution; so for all x∈S, ρF (x) =ρF (τ(x)).
 
 Deﬁnition 6.1. A multicurve γ⊂AC (S) is symmetric if τ(γ)∩γ =∅
 
-orτ(γ) =γ. A multicurve γ is invariant if there is a curve or arcγ′⊂F
+or τ(γ) =γ. A multicurve γ is invariant if there is a curve or arc γ′⊂F
 
 so that γ =ρ−1
 
@@ -1234,7 +1234,7 @@ Cτ(S) with diameter greater than K then X =S.
 
 Proof. Suppose that X⊂ S is a strict subsurface, cleanly embedded.
 
-Suppose that diamX(Cτ(S)) > K. Thus X is symmetric. It follows
+Suppose that diam X(Cτ(S)) > K. Thus X is symmetric. It follows
 
 that ∂X ∖∂S is also symmetric. Since ∂X does not cut X deduce that
 
@@ -1260,11 +1260,11 @@ A(S, ∆) is the subcomplex of A(S) spanned by essential arcs α⊂ S
 
 with ∂α⊂ ∆.
 
-Note thatA(S,∂S ) andA(S) are identical.
+Note that A(S,∂S ) and A(S) are identical.
 
-Lemma 7.2. SupposeX⊂S is cleanly embedded. Then X is a hole
+Lemma 7.2. Suppose X⊂S is cleanly embedded. Then X is a hole
 
-forA(S, ∆) if and only if ∆⊂∂X . □
+for A(S, ∆) if and only if ∆⊂∂X . □
 
 This follows directly from the deﬁnition of a hole. We now have an
 
@@ -1296,15 +1296,15 @@ Deﬁnition 7.4. We deﬁneAτ(S, ∆) to be the invariant arc complex:
 
 vertices are invariant multi-arcs and simplices arise from disjointness.
 
-Again,Aτ(S, ∆) is simplicially isomorphic toA(F, ∆′). If X∩τ(X) =
+Again,Aτ(S, ∆) is simplicially isomorphic to A(F, ∆′). If X∩τ(X) =
 
-∅ and ∆⊂X∪τ(X) then the subsurfaces X andτ(X) are paired holes,
+∅ and ∆⊂X∪τ(X) then the subsurfaces X and τ(X) are paired holes,
 
 as in Deﬁnition 5.5. Notice as well that all non-simple symmetric holes
 
 X⊂S forAτ(S, ∆) have inﬁnite diameter.
 
-UnlikeA(F, ∆′) the complexAτ(S, ∆) may have disjoint holes. None-
+Unlike A(F, ∆′) the complexAτ(S, ∆) may have disjoint holes. None-
 
 theless, we have:
 
@@ -1328,7 +1328,7 @@ about handlebodies and I–bundles.
 
 Fix M a compact connected irreducible three-manifold. Recall that
 
-M is irreducible if every embedded two-sphere inM bounds a three-ball.
+M is irreducible if every embedded two-sphere in M bounds a three-ball.
 
 Recall that if N is a closed submanifold of M then fr(N), the frontier
 
@@ -1348,7 +1348,7 @@ regular neighborhood of B. First remove from F the annulus N∩F .
 
 Now form F′ by gluing on both disk components of ∂N ∖F . We say
 
-that F′ is obtained by compressingF along B. If no such disk exists
+that F′ is obtained by compressing F along B. If no such disk exists
 
 we say F is incompressible.
 
@@ -1378,15 +1378,15 @@ be essential in F . We do not require this additional property because,
 
 for us, F will usually be a properly embedded disk in a handlebody.
 
-Just as for compressing disks we may boundary compressF along B
+Just as for compressing disks we may boundary compress F along B
 
 to obtain a new surface F′: Let N be a closed regular neighborhood of
 
-B. First remove from F the rectangleN∩F . Now form F′ by gluing on
+B. First remove from F the rectangle N∩F . Now form F′ by gluing on
 
 both bigon components of fr(N)∖F . Again, F′ is obtained by boundary
 
-compressingF along B. Note that the relevant boundary components
+compressing F along B. Note that the relevant boundary components
 
 of F and F′ cobound a pair of pants embedded in ∂M . If no boundary
 
@@ -1398,7 +1398,7 @@ dlebody Vg, g≥ 2, is either compressible or boundary compressible.
 
 THE GEOMETRY OF THE DISK COMPLEX 19
 
-Suppose now thatF is properly embedded inM and Γ is a multicurve
+Suppose now that F is properly embedded in M and Γ is a multicurve
 
 in ∂M .
 
@@ -1418,7 +1418,7 @@ Suppose B is a boundary compression of F . If B∩∂M⊂ X we say
 
 that F is boundary compressible into X.
 
-Lemma 8.4. Suppose thatM is irreducible. Fix X a connected essential
+Lemma 8.4. Suppose that M is irreducible. Fix X a connected essential
 
 subsurface of ∂M . Let F⊂M be a properly embedded, incompressible
 
@@ -1478,7 +1478,7 @@ F1 and F2 in exactly one point of ∂δ. Let N⊂M be a closed regular
 
 20 HOW ARD MASUR AND SAUL SCHLEIMER
 
-neighborhood ofδ. Form a new surface by adding toF′∖N the rectangle
+neighborhood of δ. Form a new surface by adding to F′∖N the rectangle
 
 component of fr(N)∖F′. The surface F obtained is the result of band
 
@@ -1486,7 +1486,7 @@ summing F1 to F2 along δ. Note that F has a boundary compression
 
 dual to δ yielding F′: that is, there is a boundary compression B for F
 
-so that δ∩B is a single point and compressing F along B givesF′.
+so that δ∩B is a single point and compressing F along B gives F′.
 
 8.3. Handlebodies and I-bundles. Recall that handlebodies are ir-
 
@@ -1496,7 +1496,7 @@ Suppose that F is a compact connected surface with at least one
 
 boundary component. Let T be the orientation I–bundle over F . If F
 
-is orientable thenT∼=F×I. If F is not orientable thenT is the unique
+is orientable then T∼=F×I. If F is not orientable then T is the unique
 
 I–bundle over F with orientable total space. We call T the I–bundle
 
@@ -1510,7 +1510,7 @@ respect to T . In particular take ∂vT = ρ−1
 
 F (∂F ) to be the vertical
 
-boundary ofT . Take ∂hT to be the union of the boundaries of all of the
+boundary of T . Take ∂hT to be the union of the boundaries of all of the
 
 ﬁbers: this is the horizontal boundary of T . Note that ∂hT is always
 
@@ -1550,7 +1550,7 @@ be a handlebody. Let S = Sg = ∂V . Recall that there is a natural
 
 inclusion ν :D(V )→C (S).
 
-Remark 9.1. The notion of a hole X⊂∂V forD(V ) may be phrased
+Remark 9.1. The notion of a hole X⊂∂V for D(V ) may be phrased
 
 in several diﬀerent ways:
 
@@ -1562,17 +1562,17 @@ THE GEOMETRY OF THE DISK COMPLEX 21
 
 • X is disk-busting in V .
 
-The classiﬁcation of holes X⊂S forD(V ) breaks roughly into three
+The classiﬁcation of holes X⊂S for D(V ) breaks roughly into three
 
 cases: either X is an annulus, is compressible in V , or is incompressible
 
 in V . In each case we obtain a result:
 
-Theorem 10.1. SupposeX is a hole for D(V ) and X is an annulus.
+Theorem 10.1. Suppose X is a hole for D(V ) and X is an annulus.
 
 Then the diameter of X is at most 5.
 
-Theorem 11.6. SupposeX is a compressible hole for D(V ) with di-
+Theorem 11.6. Suppose X is a compressible hole for D(V ) with di-
 
 ameter at least 15. Then there are a pair of essential disks D,E ⊂V
 
@@ -1642,13 +1642,13 @@ ever, the exceptional deﬁnition of C(S0,2) prevents a uniﬁed approach.
 
 Fix V , a handlebody.
 
-Theorem 10.1. SupposeX is a hole for D(V ) and X is an annulus.
+Theorem 10.1. Suppose X is a hole for D(V ) and X is an annulus.
 
 Then the diameter of X is at most 5.
 
 We begin with:
 
-Claim. For allD∈D (V ),|D∩X|≥ 2.
+Claim. For all D∈D (V ),|D∩X|≥ 2.
 
 Proof. Since X is a hole, every disk cuts X. Since X is an annulus,
 
@@ -1714,7 +1714,7 @@ Proof. Consider the intersection of D and E, thought of as a collection
 
 of arcs and curves in E. Any simple closed curve component of D∩E
 
-can be removed by an isotopy ofE, ﬁxed on the boundary. (This follows
+can be removed by an isotopy of E, ﬁxed on the boundary. (This follows
 
 from the irreducibility of V and an innermost disk argument.) Since
 
@@ -1738,9 +1738,9 @@ E
 
 α
 
-Figure 2. The arcα cuts a bigonB oﬀ ofE. The darker
+Figure 2. The arc α cuts a bigon B oﬀ of E. The darker
 
-part of∂E are the arcs ofE∩X. Either β is disjoint from
+part of∂E are the arcs of E∩X. Either β is disjoint from
 
 X, β is contained in X, β meets X in a single subarc, or
 
@@ -1752,7 +1752,7 @@ compressing D along the bigon B. Suppose α is as shown in one of the
 
 24 HOW ARD MASUR AND SAUL SCHLEIMER
 
-ﬁrst three pictures of Figure 2. It follows that either D′ orD′′ has, after
+ﬁrst three pictures of Figure 2. It follows that either D′ or D′′ has, after
 
 tightening, smaller intersection with X than D does, a contradiction.
 
@@ -1784,9 +1784,9 @@ leaves. We may choose the homeomorphism so that (D∪B)∩X = Υ×∂I.
 
 It follows that we may properly isotope D∪B until (D∪B)∩X is a
 
-pair of arcs. Recall that D′ andD′′ are the disks obtained by boundary
+pair of arcs. Recall that D′ and D′′ are the disks obtained by boundary
 
-compressingD alongB. It follows that one of D′ orD′′ (or both) meets
+compressing D along B. It follows that one of D′ or D′′ (or both) meets
 
 X in at most a single arc, contradicting our ﬁrst claim. □
 
@@ -1820,7 +1820,7 @@ compression sequence maximal if either
 
 • there is a component Z⊂S∖Γ and a boundary compression of
 
-∆n intoS∖Γ yielding an essential disk E with ∂E⊂Z.
+∆n into S∖Γ yielding an essential disk E with ∂E⊂Z.
 
 We say that such maximal sequences end essentially or end in Z,
 
@@ -1856,7 +1856,7 @@ changes in maximal sequences.
 
 Lemma 11.3. Fix a multicurve Γ⊂ S. Suppose that D cuts Γ and
 
-choose a maximal sequence starting atD. Fix any component X⊂S∖Γ.
+choose a maximal sequence starting at D. Fix any component X⊂S∖Γ.
 
 Fix any disk Dk∈ ∆k. Then either Dk∈ ∆n or there are four distinct
 
@@ -1904,7 +1904,7 @@ of Γ∩P .
 
 Let δ be a band sum arc dual to B (the dotted arc in Figure 3). We
 
-may assume that|Γ∩δ| is minimal over all arcs dual toB. It follows that
+may assume that|Γ∩δ| is minimal over all arcs dual to B. It follows that
 
 26 HOW ARD MASUR AND SAUL SCHLEIMER
 
@@ -1946,7 +1946,7 @@ Second suppose that exactly one endpoint x∈ ∂δ meets X. Let
 
 γ⊂Dk+1 be the component of Dk+1∩X containingx. Let X′ be the
 
-component ofX∩P that containsx and letα,α′ be the two components
+component of X∩P that containsx and let α,α′ be the two components
 
 of Dk∩X′. Let β be any arc of D′
 
@@ -1984,7 +1984,7 @@ pairs are inherited by Dk. The pairs (α,β ) and (α′,β ) give the desired
 
 conclusion.
 
-Third suppose that the endpoints of δ meetγ⊂Dk+1 andγ′⊂D′
+Third suppose that the endpoints of δ meet γ⊂Dk+1 and γ′⊂D′
 
 k+1.
 
@@ -2008,7 +2008,7 @@ Given a disk D∈D (V ) and a hole X⊂S our Lemma 11.3 allows us
 
 to adapt D to X.
 
-Lemma 11.4. Fix a hole X⊂ S forD(V ). For any disk D∈D (V )
+Lemma 11.4. Fix a hole X⊂ S for D(V ). For any disk D∈D (V )
 
 there is a disk D′ with the following properties:
 
@@ -2022,7 +2022,7 @@ X and dA(D,D′)≤ 3.
 
 • If X is compressible then ∂D′⊂X and dAC(D,D′)≤ 3.
 
-HereA =A(X) andAC =AC(X).
+Here A =A(X) andAC =AC(X).
 
 Proof. If∂D⊂X then the lemma is trivial. So assume, by Remark 9.1,
 
@@ -2048,7 +2048,7 @@ Assume now that the sequence is trivial (n = 1). Then take E =D∈
 
 Remark 11.5. Lemma 11.4 is unexpected: after all, any pair of curves
 
-inC(X) can be connected by a sequence of band sums. Thus arbitrary
+in C(X) can be connected by a sequence of band sums. Thus arbitrary
 
 band sums can change the subsurface projection to X. However, the
 
@@ -2058,7 +2058,7 @@ they do not cross ∂X and secondly they are “tree-like” due to the fact
 
 every arc in D is separating.
 
-WhenD is replaced by a surface with genus then Lemma 11.4 does not
+When D is replaced by a surface with genus then Lemma 11.4 does not
 
 hold in general; this is a fundamental observation due to Kobayashi [ 21]
 
@@ -2068,7 +2068,7 @@ planar surface Lemma 11.4 does not hold in general.
 
 11.2. Proving the theorem. We now prove:
 
-Theorem 11.6. SupposeX is a compressible hole for D(V ) with di-
+Theorem 11.6. Suppose X is a compressible hole for D(V ) with di-
 
 ameter at least 15. Then there are a pair of essential disks D,E ⊂V
 
@@ -2078,9 +2078,9 @@ so that
 
 • ∂D and ∂E ﬁll X.
 
-Proof. Choose disks D′ and E′ inD(V ) so that dX(D′,E′)≥ 15. By
+Proof. Choose disks D′ and E′ in D(V ) so that dX(D′,E′)≥ 15. By
 
-Lemma 11.4 there are disksD andE so that∂D,∂E ⊂X,dX(D′,D )≤
+Lemma 11.4 there are disks D and E so that∂D,∂E ⊂X,dX(D′,D )≤
 
 6, and dX(E′,E )≤ 6. It follows from the triangle inequality that
 
@@ -2108,13 +2108,13 @@ in V so that
 
 Here is a short plan of the proof: We are given X, an incompressible
 
-hole forD(V ). Following Lemma 11.4 we may assume that D,E are
+hole for D(V ). Following Lemma 11.4 we may assume that D,E are
 
 essential disks, without boundary compressions into X or S∖X, with
 
 dX(D,E )> 43. Examine the intersection pattern of D and E to ﬁnd
 
-two families of rectanglesR andQ. The intersection pattern of these
+two families of rectangles R and Q. The intersection pattern of these
 
 rectangles in V will determine the desired I–bundle T . The third
 
@@ -2156,15 +2156,15 @@ meets at least nine non-parallel diagonals then |Γ|≥ 9
 
 contradiction. □
 
-12.2. Improving disks. Suppose now thatX is an incompressible hole
+12.2. Improving disks. Suppose now that X is an incompressible hole
 
-forD(V ) with diameter at least 61. Note that, by Theorem 10.1, X is
+for D(V ) with diameter at least 61. Note that, by Theorem 10.1, X is
 
 not an annulus. Let Y =S∖X.
 
-Choose disksD′ andE′ inV so thatdX(D′,E′)≥ 61. By Lemma 11.4
+Choose disks D′ and E′ in V so thatd X(D′,E′)≥ 61. By Lemma 11.4
 
-there are a pair of disks D andE so that both are essential in V , cannot
+there are a pair of disks D and E so that both are essential in V , cannot
 
 be boundary compressed into X or into Y , and so that dA(X)(D′,D )≤
 
@@ -2270,7 +2270,7 @@ Let Z⊂ ∂V be a small regular neighborhood of Θ and deﬁne Z′
 
 similarly.
 
-Claim 12.5. No component of Θ or of Θ′ is contained in a diskD⊂∂V .
+Claim 12.5. No component of Θ or of Θ′ is contained in a disk D⊂∂V .
 
 No component of Θ or of Θ ′ is contained in an annulus A⊂∂V that is
 
@@ -2286,7 +2286,7 @@ Suppose now that some component W is contained in an annulus A,
 
 peripheral in X. Thus W ﬁlls A. Suppose that αi and βj are large and
 
-contained inW . By the classiﬁcation of arcs in A we deduce that either
+contained in W . By the classiﬁcation of arcs in A we deduce that either
 
 αi and βj form a bigon in A or ∂X, αi and βj form a triangle. Either
 
@@ -2318,13 +2318,13 @@ There are now two possibilities: either Θ∩ Θ′ is empty or not. In the
 
 ﬁrst case set Σ = Θ and in the second set Σ = Θ ∪ Θ′. By the claims
 
-above, Σ is connected and ﬁlls X. Let R ={Ri} andQ ={Qj} be the
+above, Σ is connected and ﬁlls X. Let R ={Ri} and Q ={Qj} be the
 
 collections of large rectangles.
 
-12.3. Building the I-bundle. We are given Σ, R andQ as above.
+12.3. Building the I-bundle. We are given Σ, R and Q as above.
 
-Note thatR∪Q is anI–bundle and Σ is the component of its horizontal
+Note that R∪Q is an I–bundle and Σ is the component of its horizontal
 
 boundary meeting X. See Figure 6 for a simple case.
 
@@ -2394,7 +2394,7 @@ are disjoint from Σ⊂∂hT , which ﬁlls X, by induction. It follows that
 
 the component of ∂hT containing Σ is isotopic to X.
 
-This ﬁnishes the construction of the promisedI–bundleT and demon-
+This ﬁnishes the construction of the promised I–bundle T and demon-
 
 strates the ﬁrst two conclusions of Theorem 12.1. For future use we
 
@@ -2448,7 +2448,7 @@ It follows that α is essential in A. Now carefully boundary compress
 
 A: Let N be the closure of a regular neighborhood of B, taken in V ∖A.
 
-LetA′ be the closure of A∖N (soA′ is a rectangle). Let B′∪B′′ be the
+Let A′ be the closure of A∖N (so A′ is a rectangle). Let B′∪B′′ be the
 
 closure of fr(N)∖A. Both B′ and B′′ are bigons, parallel to B. Form
 
@@ -2462,15 +2462,15 @@ THE GEOMETRY OF THE DISK COMPLEX 33
 
 It follows that D is inessential in V . Thus D cuts a closed three-ball
 
-U out ofV . There are two ﬁnal cases: either N⊂U orN∩U =B′∪B′′.
+U out of V . There are two ﬁnal cases: either N⊂U or N∩U =B′∪B′′.
 
-If U containsN then U containsA. Thus ∂A is contained in the disk
+If U contains N then U contains A. Thus ∂A is contained in the disk
 
 U∩∂V . This contradicts Remark 12.8. Deduce instead that W =U∪N
 
 is a solid torus with meridional disk B. Thus W gives a parallelism
 
-betweenA and the annulus ∂V∩∂W , as desired. □
+between A and the annulus ∂V∩∂W , as desired. □
 
 Remark 12.11. Similar considerations prove that the multicurve
 
@@ -2484,7 +2484,7 @@ surface F of the I–bundle T admits a pseudo-Anosov map.
 
 As in Section 12.2, pick essential disks D′ and E′ in V so that
 
-dX(D′,E′)≥ 61. Lemma 11.4 provides disks D andE which cannot be
+dX(D′,E′)≥ 61. Lemma 11.4 provides disks D and E which cannot be
 
 boundary compressed into X or into S∖X – thus D and E cannot be
 
@@ -2500,7 +2500,7 @@ Lemma 8.5 we conclude that D may be isotoped in V so that D∩T is
 
 vertical in T . The same holds of E. Choose A and B, components of
 
-D∩T andE∩T . Each are vertical rectangles. Since diamX(πX(D))≤ 3
+D∩T and E∩T . Each are vertical rectangles. Since diam X(πX(D))≤ 3
 
 (Lemma 4.4) we now have dX(A,B )≥ 43− 6 = 37.
 
@@ -2548,7 +2548,7 @@ isotopic, in ∂vT , to a collection of vertical arcs. Let E⊂D′∩T be a
 
 component. Lemma 8.5 implies that E is vertical in T , after an isotopy
 
-ofD′ preserving∂hT setwise. Since E is vertical, the arcs E∩∂hT⊂D′
+of D′ preserving∂hT setwise. Since E is vertical, the arcs E∩∂hT⊂D′
 
 are τ–invariant. The conclusion follows. □
 
@@ -2608,7 +2608,7 @@ The goal of this section and the next is to prove, inductively, an
 
 upper bound on distance in a combinatorial complex G(S) =G. This
 
-section presents our axioms onG: suﬃcient hypotheses for Theorem 13.1.
+section presents our axioms on G: suﬃcient hypotheses for Theorem 13.1.
 
 The axioms, apart from Axiom 13.2, are quite general. Axiom 13.2 is
 
@@ -2620,11 +2620,11 @@ THE GEOMETRY OF THE DISK COMPLEX 35
 
 Theorem 13.1. Fix S a compact connected non-simple surface. Sup-
 
-pose thatG =G(S) is a combinatorial complex satisfying the axioms
+pose that G =G(S) is a combinatorial complex satisfying the axioms
 
 of Section 13. Let X be a hole for G and suppose that αX,βX∈G are
 
-contained inX. For any constant c> 0 there is a constant A satisfying:
+contained in X. For any constant c> 0 there is a constant A satisfying:
 
 dG(αX,βX)≤A
 
@@ -2632,13 +2632,13 @@ dG(αX,βX)≤A
 
 [dY (αX,βX)]c
 
-where the sum is taken over all holes Y⊆X forG.
+where the sum is taken over all holes Y⊆X for G.
 
 The proof of the upper bound is more diﬃcult than that of the lower
 
 bound, Theorem 5.10. This is because naturally occurring paths in G
 
-betweenαX and βX may waste time in non-holes. The ﬁrst example
+between αX and βX may waste time in non-holes. The ﬁrst example
 
 of this is the path in C(S) obtained by taking the short curves along
 
@@ -2654,7 +2654,7 @@ In Sections 16, 17, 19 we will verify these axioms for the curve complex
 
 of a non-orientable surface, the arc complex, and the disk complex.
 
-13.1. The axioms. Suppose thatG =G(S) is a combinatorial complex.
+13.1. The axioms. Suppose that G =G(S) is a combinatorial complex.
 
 We begin with the axiom required for hyperbolicity.
 
@@ -2776,7 +2776,7 @@ Our ﬁnal axiom is:
 
 Axiom 13.11 (Straight). There is a constant A depending only on X
 
-andG so that for every straight interval [p,q ]:
+and G so that for every straight interval [p,q ]:
 
 dG(γp,γq)≤AdX(γp,γq)
 
@@ -2838,7 +2838,7 @@ of 4.6. We must choose a lower threshold L1(Y ) for every essential
 
 Y ⊂ X. We must also choose the general upper threshold, L2 and
 
-general lower thresholdL0. We require, for all essential Z,Y inX, with
+general lower thresholdL0. We require, for all essential Z,Y in X, with
 
 38 HOW ARD MASUR AND SAUL SCHLEIMER
 
@@ -2854,7 +2854,7 @@ L1(X)>L 1(Z) + 2C3 + 4C2 + 4L4(13.17)
 
 14. Partition and the upper bound on distance
 
-In this section we prove Theorem 13.1 by induction onξ(X). The ﬁrst
+In this section we prove Theorem 13.1 by induction on ξ(X). The ﬁrst
 
 stage of the proof is to describe the inductive partition: we partition the
 
@@ -2874,7 +2874,7 @@ from above by combining the contributions from the various intervals.
 
 14.1. Inductive partition. We begin by identifying the relevant sur-
 
-faces for the construction of the partition. We are given a hole X forG
+faces for the construction of the partition. We are given a hole X for G
 
 and vertices αX,βX∈G contained in X. Deﬁne
 
@@ -2894,7 +2894,7 @@ electric, or undetermined. Suppose that [ i,j ]∈P X is undetermined.
 
 Claim. If BX(i,j ) is empty then [i,j ] is electric.
 
-Proof. SinceBX(i,j ) is empty, every holeY ⊊X has eitherdY (γi,γj)<
+Proof. SinceBX(i,j ) is empty, every hole Y ⊊X has eitherd Y (γi,γj)<
 
 L1(X) or Y /∈BX. In the former case, as L1(X)<L 2, we are done.
 
@@ -3040,7 +3040,7 @@ In this case we are done, just as in the previous paragraph.
 
 Suppose now that Z is paired with Z′. Since all holes interfere, Z′
 
-andY must meet. If Z′ is nested in Y then we are done. If Y is strictly
+and Y must meet. If Z′ is nested in Y then we are done. If Y is strictly
 
 nested in Z′ then, as r([i,j ])⊂JY , we ﬁnd that as above by Axioms
 
@@ -3052,13 +3052,13 @@ and so dZ(γi,γj)<C 3 + 2C2 + 2L4 <L 1(Z), a contradiction. We reach
 
 the same contradiction if Y and Z′ overlap. □
 
-Proposition 14.2. SupposeY ⊊X is a hole for G.
+Proposition 14.2. Suppose Y ⊊X is a hole for G.
 
 THE GEOMETRY OF THE DISK COMPLEX 41
 
 (1) If Y is associated to an inductive interval IY ∈P X and Y is
 
-paired withY′ thenY′ is not associated to any inductive interval
+paired with Y′ then Y′ is not associated to any inductive interval
 
 inPX.
 
@@ -3068,7 +3068,7 @@ Y .
 
 (3) There are at most two holes Z and W , distinct from Y (and
 
-fromY′, if Y is paired) such that
+from Y′, if Y is paired) such that
 
 • there are inductive intervals IZ = [h,i ] and IW = [j,k ] and
 
@@ -3086,7 +3086,7 @@ Proof of Proposition 14.2. To prove the ﬁrst claim: Suppose that IY =
 
 If q + 1 =p′ then the partition would have chosen a larger inductive
 
-interval for one ofY orY′. It must be the case that there is an inductive
+interval for one of Y or Y′. It must be the case that there is an inductive
 
 intervalIZ⊂ [q + 1,p′− 1] for some hole Z, distinct from Y and Y′,
 
@@ -3116,7 +3116,7 @@ JY ′∩r(IW )) are also non-empty.
 
 It follows that the interval between IZ and IW , after reindexing, is
 
-contained inJY (andJY ′, ifY is paired). Thus for any inductive interval
+contained inJY (andJY ′, if Y is paired). Thus for any inductive interval
 
 IV = [p,q ] between IZ and IW the associated hole V is nested in Y
 
@@ -3210,7 +3210,7 @@ containing at least L2 of the Yi, each disjoint from distinct vertices of
 
 gZ.
 
-So suppose that there are at least L2 distinctηi associated to distinct
+So suppose that there are at least L2 distinct ηi associated to distinct
 
 Yi and we have taken Z =W . Now we must ﬁnd at least L2− 4(C1 +
 
@@ -3366,7 +3366,7 @@ Lemma 14.1 implies that V is strictly nested in Z. (When pairing
 
 THE GEOMETRY OF THE DISK COMPLEX 45
 
-occurs we may ﬁnd instead that V⊂Z′ orV′⊂Z.) Thus ξ(Z)>ξ (V )
+occurs we may ﬁnd instead that V⊂Z′ or V′⊂Z.) Thus ξ(Z)>ξ (V )
 
 and we ﬁnd that Z would be chosen from BX(p′,q′), instead of V . This
 
@@ -3392,7 +3392,7 @@ CX(p,q ) ={Y∈CX|JY∩ [r(p),r (q)]̸=∅}.
 
 Our recursion starts with the partition of one part, P(i,j ) ={[i,j ]}.
 
-RecursivelyP(i,j ) is a partition of [ i,j ] into shortcut, straight, or
+Recursively P(i,j ) is a partition of [ i,j ] into shortcut, straight, or
 
 undetermined intervals. Suppose that [p,q ]∈P (i,j ) is undetermined.
 
@@ -3432,7 +3432,7 @@ Now divide the interval [p,q ] into the two undetermined intervals [p,p′],
 
 one and we add the element [p′ + 1
 
-2] toP(i,j ).
+2] to P(i,j ).
 
 Next suppose that JY∩r([p,q ]) is non-empty. Let p′,q′∈ [p,q ] be the
 
@@ -3454,7 +3454,7 @@ and
 
 Pstr ={I∈P (i,j )|I is straight}.
 
-Proposition 14.9. WithP(i,j ) as deﬁned above,
+Proposition 14.9. With P(i,j ) as deﬁned above,
 
 dX(γi,γj)≥ |Pshort|
 
@@ -3538,7 +3538,7 @@ We are now equipped to give:
 
 THE GEOMETRY OF THE DISK COMPLEX 47
 
-Proof of Proposition 14.8. Suppose thatP(i,j ) is the given partition
+Proof of Proposition 14.8. Suppose that P(i,j ) is the given partition
 
 of the electric interval [i,j ] into straight and shortcut subintervals. As
 
@@ -3590,7 +3590,7 @@ dX(I)≤dX(γi,γj) + (2C1 + 2C2)|Pstr| + 2C2.
 
 We deduce that ∑
 
-I∈PstrdG(I) is also quasi-bounded above by dX(γi,γj).
+I∈Pstrd G(I) is also quasi-bounded above by dX(γi,γj).
 
 Thus for a somewhat larger value of A we ﬁnd
 
@@ -3614,7 +3614,7 @@ Z
 
 [dZ(γi,γj)]c
 
-whereZ ranges over all holes for G contained in X.
+where Z ranges over all holes for G contained in X.
 
 Proof. Axiom 13.6 gives vertices γ′
 
@@ -3920,7 +3920,7 @@ f
 
 {1
 
-2 logK(f)
+2 log K(f)
 
 }
 
@@ -3994,7 +3994,7 @@ least ϵ.
 
 We deﬁne P = P (σ), a Bers pants decomposition of S, as follows:
 
-pickα1, any systole for σ. Deﬁne αi to be any systole of σ restricted
+pick α1, any systole for σ. Deﬁne αi to be any systole of σ restricted
 
 to S∖(α1∪... ∪αi−1). Continue in this fashion until P is a pants
 
@@ -4052,7 +4052,7 @@ and for any time t, there is a constant δ >0 so that if |t−s|≤ δ then
 
 ι(νt,νs)<B 0.
 
-Suppose that Σt and Σs are surfaces in the ϵ–thick part ofT (S). We
+Suppose that Σt and Σs are surfaces in the ϵ–thick part of T (S). We
 
 takeB0 suﬃciently large so that if ι(νt,νs)≥B0 then dT (Σt, Σs)≥ 1.
 
@@ -4062,7 +4062,7 @@ for n∈ [0,N ]⊂ N, as follows. Take µ0 = ν−M. Now suppose that
 
 µn =νt is deﬁned. Let s>t be the ﬁrst time that there is a marking
 
-withι(νt,νs)≥B0, if such a time exists. If so, let µn+1 =νs. If no such
+with ι(νt,νs)≥B0, if such a time exists. If so, let µn+1 =νs. If no such
 
 time exists take N =n and we are done.
 
@@ -4150,7 +4150,7 @@ X
 
 α
 
-[logdα(µ,µ′)]c
+[logd α(µ,µ′)]c
 
 where µ and µ′ are Bers markings on Σ and Σ′, Y ⊂ S ranges over
 
@@ -4172,13 +4172,13 @@ components.
 
 Our goal for this section is to prove Lemma 16.4, the classiﬁcation
 
-of holes forC(F ). As remarked above, Lemma 6.3 and Corollary 6.4
+of holes for C(F ). As remarked above, Lemma 6.3 and Corollary 6.4
 
-follow, proving the hyperbolicity ofC(F ).
+follow, proving the hyperbolicity of C(F ).
 
 16.1. The marking path. We will use the extreme rigidity of Te-
 
-ichm¨ uller geodesics to ﬁndτ–invariant marking paths. We ﬁrst show
+ichm¨ uller geodesics to ﬁnd τ–invariant marking paths. We ﬁrst show
 
 that τ–invariant Bers pants decompositions exist.
 
@@ -4188,9 +4188,9 @@ Bers pants decomposition P =P (σ) which is τ–invariant.
 
 Proof. LetP0 =∅. Suppose that 0 ≤k <ξ(S) curves have been chosen
 
-to form Pk. By induction we may assume that Pk isτ–invariant. Let Y
+to form Pk. By induction we may assume that Pk is τ–invariant. Let Y
 
-be a component ofS∖Pk withξ(Y )≥ 1. Note that since τ is orientation
+be a component of S∖Pk with ξ(Y )≥ 1. Note that since τ is orientation
 
 reversing,τ does not ﬁx any boundary component of Y .
 
@@ -4216,13 +4216,13 @@ of S, contradicting our assumption that α was a geodesic. Suppose,
 
 by way of contradiction, that β′ is homotopic to some boundary curve
 
-b⊂∂Y . Since τ(β′) =β′, it follows that τ(b) andβ′ are also homotopic.
+b⊂∂Y . Since τ(β′) =β′, it follows that τ(b) and β′ are also homotopic.
 
 Thusb and τ(b) cobound an annulus, implying that Y is an annulus, a
 
 contradiction. The same holds for γ′.
 
-Letβ′′ andγ′′ be the geodesic representatives ofβ′ andγ′. Since β and
+Let β′′ and γ′′ be the geodesic representatives of β′ and γ′. Since β and
 
 τ(β) meet transversely, β′′ has length in σ strictly smaller than 2ℓσ(β).
 
@@ -4250,7 +4250,7 @@ Pk+2 =Pk∪{α,τ (α)} and Lemma 16.1 is proved. □
 
 Transversals are chosen with respect to a quadratic diﬀerential metric.
 
-Suppose that α,β ∈C τ(S). If α andβ do not ﬁllS then we may replace
+Suppose that α,β ∈C τ(S). If α and β do not ﬁll S then we may replace
 
 S by the support of their union. Following Thurston [ 38] there exists
 
@@ -4264,7 +4264,7 @@ Teichm¨ uller geodesic ﬂow. We have:
 
 Lemma 16.2. τ∗qt =qt.
 
-Proof. Note that τ preservesα and also β. Since τ permutes the points
+Proof. Note that τ preserves α and also β. Since τ permutes the points
 
 of α∩β it permutes the rectangles of the singular Euclidean metric qt
 
@@ -4292,7 +4292,7 @@ choose any transversal β⊂X close to being qt–perpendicular and take
 
 τ(β) to be the transversal to τ(α).
 
-Suppose now thatτ(X) =X. It follows that X is a four-holed sphere.
+Suppose now that τ(X) =X. It follows that X is a four-holed sphere.
 
 The quotient X/τ is homeomorphic to a twice-holed RP2. Therefore
 
@@ -4310,7 +4310,7 @@ Let Sα be the annular cover of S and lift qt to Sα. Let⊥ be the set of
 
 qα
 
-t –perpendiculars. This is a τ-invariant diameter one subset ofC(Sα).
+t –perpendiculars. This is a τ-invariant diameter one subset of C(Sα).
 
 THE GEOMETRY OF THE DISK COMPLEX 55
 
@@ -4338,7 +4338,7 @@ Axioms 13.3 and 13.4.
 
 markings{µn}N
 
-n=0. To choose the combinatorial path, pickγn∈ base(µn)
+n=0. To choose the combinatorial path, pick γn∈ base(µn)
 
 so that γn is a τ–invariant curve or pair of curves and so that γn is
 
@@ -4372,7 +4372,7 @@ Lemma 16.4. Suppose that α,β ∈C τ(S). Suppose that X⊂ S has
 
 dX(α,β )>L 0. Then X is symmetric.
 
-Proof. Let (Σt,qt) be the Teichm¨ uller geodesic deﬁned above and letσt
+Proof. Let (Σt,qt) be the Teichm¨ uller geodesic deﬁned above and let σt
 
 be the uniformizing hyperbolic metric. Since L0 >C 3 + 2C2 it follows
 
@@ -4406,7 +4406,7 @@ By the combinatorial axiom it follows that
 
 dX(α,β )< 3C3 + 2C2
 
-a contradiction. Deduce that either X =Y orX∩Y =∅ as desired. □
+a contradiction. Deduce that either X =Y or X∩Y =∅ as desired. □
 
 As noted in Section 6 this shows that the only hole for Cτ(S) is S
 
@@ -4482,7 +4482,7 @@ non-orientable case; this is discussed at the end of this section.
 
 First note that Axiom 13.2 follows from Lemma 7.3.
 
-17.1. The marking path. We are given a pair of arcsα,β ∈A (X, ∆).
+17.1. The marking path. We are given a pair of arcs α,β ∈A (X, ∆).
 
 Recall that σS :A(X)→C (X) is the surgery map, deﬁned in Deﬁni-
 
@@ -4524,13 +4524,13 @@ Y ⊂ X is a subsurface and γn has n∈ JY . Let µn = νt; that is t is
 
 the time when µn is a short marking. Thus ∂Y ⊂ base(µn) and so
 
-γn∩∂Y =∅. So regardless of the hole-nature of Y we may takeγ′ =γn
+γn∩∂Y =∅. So regardless of the hole-nature of Y we may take γ′ =γn
 
 and the axiom is veriﬁed.
 
 Axiom 13.11 is veriﬁed exactly as in Section 16.
 
-17.4. Non-orientable surfaces. Suppose thatF is non-orientable and
+17.4. Non-orientable surfaces. Suppose that F is non-orientable and
 
 ∆F is a collection of boundary components. Let S be the orientation
 
@@ -4550,9 +4550,9 @@ a pants we deﬁne α′⊂S to be the preimage of σF (αF ). When X is a
 
 58 HOW ARD MASUR AND SAUL SCHLEIMER
 
-twice-holed RP2 we takeγF to be a core of one of the two M¨ obius bands
+twice-holed RP2 we take γF to be a core of one of the two M¨ obius bands
 
-contained inX and we deﬁneα′ to be the preimage of γF∪σF (αF ). We
+contained in X and we deﬁne α′ to be the preimage of γF∪σF (αF ). We
 
 deﬁne β′ similarly. Notice that α and α′ meet in at most four points.
 
@@ -4570,7 +4570,7 @@ twice-holed RP2 the ﬁrst vertex, γ0, is disjoint from but not equal to
 
 constants are stated in terms of their subsurface projection distances.
 
-However, sinceα∩γ0 =∅, and the same holds forβ,γN, their subsurface
+However, since α∩γ0 =∅, and the same holds for β,γN, their subsurface
 
 projection distances are all bounded.
 
@@ -4600,7 +4600,7 @@ outgoing
 
 Figure 7. The local model of a train track.
 
-LetB(τ) be the set of branches. A transverse measure onτ is function
+Let B(τ) be the set of branches. A transverse measure on τ is function
 
 w :B→ R≥0 satisfying the switch conditions: at every switch the sum
 
@@ -4612,7 +4612,7 @@ vertices of P (τ). As discussed in the references, each vertex measure
 
 gives a simple closed curve carried by τ.
 
-For every trackτ we refer to V (τ) as the marking corresponding to
+For every track τ we refer to V (τ) as the marking corresponding to
 
 τ (see Section 2.4). Note that there are only ﬁnitely many tracks up
 
@@ -4630,7 +4630,7 @@ dY (τ,σ ) =dY (V (τ),V (σ)).
 
 We also adopt the notation πY (τ) =πY (V (τ)).
 
-A train track σ is obtained from τ by sliding ifσ andτ are related as
+A train track σ is obtained from τ by sliding if σ and τ are related as
 
 in Figure 8. We say that a train track σ is obtained from τ by splitting
 
@@ -4690,7 +4690,7 @@ In Section 5.2 of [27], for every sliding and splitting sequence{τn}N
 
 n=0
 
-and for any essential subsurfaceX ⊊S an accessible intervalIX⊂ [0,N ]
+and for any essential subsurface X ⊊S an accessible intervalIX⊂ [0,N ]
 
 is deﬁned. Axiom 13.4 is now veriﬁed by Theorem 5.3 of [27].
 
@@ -4734,13 +4734,13 @@ set of holes X⊂∂V for the disk complex.
 
 as Lemma 12.13. This veriﬁes Axiom 13.2.
 
-19.2. The combinatorial path. Suppose thatD,E ∈D (V ) are disks
+19.2. The combinatorial path. Suppose that D,E ∈D (V ) are disks
 
-contained in a compressible holeX⊂S =∂V . As usual we may assume
+contained in a compressible hole X⊂S =∂V . As usual we may assume
 
 that D and E ﬁll X. Recall that V (τ) is the set of vertices for the
 
-trackτ⊂X. We now appeal to a result of the ﬁrst author and Minsky,
+track τ⊂X. We now appeal to a result of the ﬁrst author and Minsky,
 
 found in [26].
 
@@ -4838,7 +4838,7 @@ compressed in the complement of∂Y . Let D′′ be a outermost component
 
 62 HOW ARD MASUR AND SAUL SCHLEIMER
 
-ofD′∖Γ. Then Lemma 8.5 implies that D′′ is isotopic in T to a vertical
+of D′∖Γ. Then Lemma 8.5 implies that D′′ is isotopic in T to a vertical
 
 disk.
 
@@ -4862,7 +4862,7 @@ Z =X∖Y or in Y . This completes the veriﬁcation of Axiom 13.6.
 
 19.4. Straight intervals. We end by checking Axiom 13.11. Suppose
 
-that [p,q ]⊂ [0,K ] is a straight interval. Recall thatdY (µr(p),µr(q))<L 2
+that [p,q ]⊂ [0,K ] is a straight interval. Recall thatd Y (µr(p),µr(q))<L 2
 
 for all strict subsurfaces Y ⊂X. We must check that dD(Dp,Dq)≤A
 
@@ -4872,7 +4872,7 @@ Note that|p−q|≤| r(p)−r(q)| because the reindexing map is increasing.
 
 Now,|r(p)−r(q)|≤AdM(X)(µr(p),µr(q)) because the sequence{µn} is
 
-a quasi-geodesic inM(X) (Theorem 18.3). Increasing A as needed and
+a quasi-geodesic in M(X) (Theorem 18.3). Increasing A as needed and
 
 applying Theorem 4.10 we have
 
@@ -4904,7 +4904,7 @@ the disk complex.
 
 20.1. Hyperbolicity. We prove:
 
-Theorem 20.1. FixG =G(S), a combinatorial complex. Suppose that
+Theorem 20.1. Fix G =G(S), a combinatorial complex. Suppose that
 
 G satisﬁes the axioms of Section 13. Then G is Gromov hyperbolic.
 
@@ -4918,7 +4918,7 @@ THE GEOMETRY OF THE DISK COMPLEX 63
 
 In fact, Theorem 20.1 follows quickly from:
 
-Theorem 20.4. FixG, a combinatorial complex. Suppose that G
+Theorem 20.4. Fix G, a combinatorial complex. Suppose that G
 
 satisﬁes the axioms of Section 13. Then for all A≥ 1 there exists
 
@@ -4930,11 +4930,11 @@ A–unparameterized quasi-geodesic. Then T is δ–slim.
 
 Proof of Theorem 20.1. As laid out in Section 14 there is a uniform
 
-constantA so that for any pairα,β ∈G there is a recursively constructed
+constant A so that for any pair α,β ∈G there is a recursively constructed
 
-pathP ={γi}⊂G so that
+path P ={γi}⊂G so that
 
-• for any hole X forG, the projection πX(P) is an A–unparame-
+• for any hole X for G, the projection πX(P) is an A–unparame-
 
 terized quasi-geodesic and
 
@@ -4950,7 +4950,7 @@ The rest of this section is devoted to proving Theorem 20.4.
 
 20.2. Index in a hole. For the following deﬁnitions, we assume that
 
-α and β are ﬁxed vertices ofG.
+α and β are ﬁxed vertices of G.
 
 For any hole X and for any geodesic k∈C (X) connecting a point of
 
@@ -4960,19 +4960,19 @@ For any hole X and for any geodesic k∈C (X) connecting a point of
 
 diameter of ρk(γ) is uniformly bounded, we may simplify our formulas
 
-by treating ρk as a function. Deﬁne indexX :G→ N to be the index in
+by treating ρk as a function. Deﬁne index X :G→ N to be the index in
 
 X:
 
-indexX(σ) =dX(α,ρk(σ)).
+index X(σ) =dX(α,ρk(σ)).
 
-Remark 20.5. Suppose thatk′ is a diﬀerent geodesic connectingπX(α)
+Remark 20.5. Suppose thatk′ is a diﬀerent geodesic connecting πX(α)
 
 to πX(β) and index′
 
 X is deﬁned with respect to k′. Then
 
-| indexX(σ)− index′
+| index X(σ)− index′
 
 X(σ)|≤ 17δ + 4
 
@@ -4980,17 +4980,17 @@ by Lemma 3.7 and Lemma 3.8. After permitting a small additive error,
 
 the index depends only on α,β,σ and not on the choice of geodesic k.
 
-20.3. Back and sidetracking. Fix σ,τ ∈G . We say σ precedesτ by
+20.3. Back and sidetracking. Fix σ,τ ∈G . We say σ precedes τ by
 
 at least K in X if
 
-indexX(σ) +K≤ indexX(τ).
+index X(σ) +K≤ index X(τ).
 
-We sayσ precedes τ by at most K if the inequality is reversed. If σ
+We say σ precedes τ by at most K if the inequality is reversed. If σ
 
-precedes τ then we say τ succeedsσ.
+precedes τ then we say τ succeeds σ.
 
-Now takeP ={σi} to be a path in G connecting α to β. Recall that
+Now take P ={σi} to be a path in G connecting α to β. Recall that
 
 we have made the simplifying assumption that σi and σi+1 are disjoint.
 
@@ -5042,23 +5042,23 @@ property. Suppose that X⊂ Y are nested non-simple domains. Fix
 
 α,β,γ ∈ AC(S) that cut X. Fix k = [α′,β′] ⊂ C(Y ), a geodesic
 
-connecting a point ofπY (α) to a point ofπY (β). Assume that dX(α,β )≥
+connecting a point of πY (α) to a point of πY (β). Assume that dX(α,β )≥
 
 M0, the constant given by Theorem 4.6. If dX(α,γ )≥M2 then
 
-indexY (∂X)− 4≤ indexY (γ).
+index Y (∂X)− 4≤ index Y (γ).
 
 Symmetrically, we have
 
-indexY (γ)≤ indexY (∂X) + 4
+index Y (γ)≤ index Y (∂X) + 4
 
 if dX(γ,β )≥M2. □
 
 20.5. Finding the midpoint of a side. Fix A≥ 1. Let P,Q,R be
 
-the sides of a triangle inG with vertices atα,β,γ . We assume that each
+the sides of a triangle in G with vertices at α,β,γ . We assume that each
 
-ofP,Q, andR are A–unparameterized quasi-geodesics when projected
+of P,Q, and R are A–unparameterized quasi-geodesics when projected
 
 to any hole.
 
@@ -5072,7 +5072,7 @@ THE GEOMETRY OF THE DISK COMPLEX 65
 
 Now chooseK1≥ max{M0, 4M1,M 2, 8}+8δ suﬃciently large so that
 
-anyA–unparameterized quasi-geodesic in any hole back and side tracks
+any A–unparameterized quasi-geodesic in any hole back and side tracks
 
 at most K1.
 
@@ -5086,27 +5086,27 @@ not consider the possibility that X∩Y =∅. If X =Y we immediately
 
 deduce that
 
-indexX(σi) + 2K1≤ indexX(γ)≤ indexX(σj)− 2K1.
+index X(σi) + 2K1≤ index X(γ)≤ index X(σj)− 2K1.
 
-Thus indexX(σi) + 4K1≤ indexX(σj). SinceP backtracks at most K1
+Thus index X(σi) + 4K1≤ index X(σj). Since P backtracks at most K1
 
 we havei<j , as desired.
 
 Suppose instead that X⊂Y . Since σi precedes γ in X we immedi-
 
-ately ﬁnddX(α,β )≥ 2K1≥M0 anddX(α,γ )≥ 2K1−2δ≥M2. Apply
+ately ﬁndd X(α,β )≥ 2K1≥M0 andd X(α,γ )≥ 2K1−2δ≥M2. Apply
 
-Lemma 20.8 to deduce indexY (∂X)− 4≤ indexY (γ). Since σj succeeds
+Lemma 20.8 to deduce index Y (∂X)− 4≤ index Y (γ). Since σj succeeds
 
-γ inY it follows that indexY (∂X)−4 + 2K1≤ indexY (σj). Again using
+γ in Y it follows that index Y (∂X)−4 + 2K1≤ index Y (σj). Again using
 
 the fact that σi precedes γ in X we have that dX(σi,β )≥ M2. We
 
-deduce from Lemma 20.8 that index Y (σi)≤ indexY (∂X) + 4. Thus
+deduce from Lemma 20.8 that index Y (σi)≤ index Y (∂X) + 4. Thus
 
-indexY (σi)− 8 + 2K1≤ indexY (σj).
+index Y (σi)− 8 + 2K1≤ index Y (σj).
 
-SinceP backtracks at most K1 in Y we again deduce that i<j . The
+Since P backtracks at most K1 in Y we again deduce that i<j . The
 
 case where Y⊂X is similar.
 
@@ -5114,9 +5114,9 @@ Suppose now that X and Y overlap. Applying Lemma 20.7 and
 
 breaking symmetry, we may assume that dX(γ,∂Y ) < M1. Since σi
 
-precedes γ we have indexX(γ)≥ 2K1. Lemma 3.7 now implies that
+precedes γ we have index X(γ)≥ 2K1. Lemma 3.7 now implies that
 
-indexX(∂Y )≥ 2K1−M1− 6δ. Thus,
+index X(∂Y )≥ 2K1−M1− 6δ. Thus,
 
 dX(α,∂Y )≥ 2K1−M1− 8δ≥M1
 
@@ -5124,7 +5124,7 @@ where the ﬁrst inequality follows from Lemma 3.4.
 
 Applying Lemma 20.7 again, we ﬁnd that dY (α,∂X ) < M1. Now,
 
-since σj succeeds γ in Y , we deduce that indexY (σj) ≥ 2K1. So
+since σj succeeds γ in Y , we deduce that index Y (σj) ≥ 2K1. So
 
 Lemma 3.4 implies that dY (α,σj)≥ 2K1− 2δ. The triangle inequality
 
@@ -5134,13 +5134,13 @@ dY (∂X,σ j)≥ 2K1−M1− 2δ≥M1.
 
 Applying Lemma 20.7 one last time, we ﬁnd that dX(∂Y,σ j) < M1.
 
-ThusdX(γ,σj)≤ 2M1. Finally, Lemma 3.7 implies that the diﬀerence
+Thusd X(γ,σj)≤ 2M1. Finally, Lemma 3.7 implies that the diﬀerence
 
-in index (in X) betweenσi andσj is at least 2K1−2M1−6δ. Since this
+in index (in X) between σi and σj is at least 2K1−2M1−6δ. Since this
 
 is greater than the backtracking constant, K1, it follows that i<j . □
 
-Let σα∈P be the last vertex ofP preceding γ by at least 2K1 in
+Let σα∈P be the last vertex of P preceding γ by at least 2K1 in
 
 some hole. If no such vertex of P exists then take σα =α.
 
@@ -5156,31 +5156,31 @@ Proof. Since σi and σi+1 are disjoint we have dX(σi,σi+1)≥ 3 and so
 
 Lemma 3.7 implies that
 
-| indexX(σi+1)− indexX(σi)|≤ 6δ + 3.
+| index X(σi+1)− index X(σi)|≤ 6δ + 3.
 
-SinceP is a path connecting α to β the image ρh(P) is 6δ + 3–dense
+Since P is a path connecting α to β the image ρh(P) is 6δ + 3–dense
 
-in h. Thus, if indexX(σα) + 2K1 + 6δ + 3< indexX(γ) then we have a
+in h. Thus, if index X(σα) + 2K1 + 6δ + 3< index X(γ) then we have a
 
 contradiction to the deﬁnition of σα.
 
-On the other hand, if indexX(σα)≥ indexX(γ)+2K1 thenσα precedes
+On the other hand, if index X(σα)≥ index X(γ)+2K1 then σα precedes
 
 and succeeds γ in X. This directly contradicts Claim 20.9.
 
 We deduce that the diﬀerence in index between σα and γ in X is at
 
-most 2K1 + 6δ + 3. Finally, asP sidetracks by at most K1 we have
+most 2K1 + 6δ + 3. Finally, as P sidetracks by at most K1 we have
 
 dX(σα,ρh(γ))≤ 3K1 + 6δ + 3
 
 as desired. □
 
-We deﬁneσβ to be the ﬁrst σi to succeed γ by at least 2K1 — if no
+We deﬁne σβ to be the ﬁrst σi to succeed γ by at least 2K1 — if no
 
-such vertex ofP exists take σβ =β. If α =β then σα =σβ. Otherwise,
+such vertex of P exists take σβ =β. If α =β then σα =σβ. Otherwise,
 
-from Claim 20.9, we immediately deduce that σα comes before σβ inP.
+from Claim 20.9, we immediately deduce that σα comes before σβ in P.
 
 A symmetric version of Claim 20.10 applies to σβ: for every hole X
 
@@ -5188,7 +5188,7 @@ dX(ρh(γ),σβ)≤ 3K1 + 6δ + 3.
 
 20.6. Another side of the triangle. Recall now that we are also
 
-given a path R ={τi} connecting α to γ inG. As before, R has
+given a path R ={τi} connecting α to γ in G. As before, R has
 
 bounded back and sidetracking. Thus we again ﬁnd vertices τα and
 
@@ -5212,7 +5212,7 @@ is bounded in size. We now show that the legs are narrow.
 
 Claim 20.12. There is a constant N2 = N2(S) with the following
 
-property. For every σi≤σα inP there is a τj≤τα inR so that
+property. For every σi≤σα in P there is a τj≤τα in R so that
 
 dX(σi,τj)≤N2
 
@@ -5238,11 +5238,11 @@ C(X) we ﬁnd that the initial segments
 
 of k and h respectively must fellow travel. Because of bounded back-
 
-tracking alongP, ρk(σi) lies on, or at least near, this initial segment of
+tracking along P, ρk(σi) lies on, or at least near, this initial segment of
 
 k. Thus by Lemma 3.8 ρh(σi) is close to ρk(σi) which in turn is close
 
-to πX(σi), becauseP has bounded sidetracking. In short, dX(α,σi) is
+to πX(σi), because P has bounded sidetracking. In short, dX(α,σi) is
 
 bounded for all holes X. Thus we may take τj = τ0 = α and we are
 
@@ -5252,7 +5252,7 @@ Now suppose that some vertex of R precedes σi by at least 2K1 in
 
 some hole X. Take τj to be the last such vertex in R. Following the
 
-proof of Claim 20.9 shows that τj comes before τα inR. The argument
+proof of Claim 20.9 shows that τj comes before τα in R. The argument
 
 now required to bound dX(σi,τj) is essentially identical to the proof of
 
@@ -5260,7 +5260,7 @@ Claim 20.10. □
 
 By the distance estimate, we ﬁnd that there is a uniform neighborhood
 
-of [σ0,σα]⊂P , taken inG, which contains [τ0,τα]⊂P . The slimness of
+of [σ0,σα]⊂P , taken in G, which contains [τ0,τα]⊂P . The slimness of
 
 PQR follows directly. This completes the proof of Theorem 20.4. □
 
@@ -5332,7 +5332,7 @@ Since computing distance between ﬁxed vertices in the curve complex
 
 is algorithmic [22, 37] we may compute dS(D,E ). By the hyperbolicity
 
-ofC(S) (Theorem 3.2) and by the quasi-convexity of the disk set
+of C(S) (Theorem 3.2) and by the quasi-convexity of the disk set
 
 (Theorem 4.9) this is the desired estimate. □
 
@@ -5374,7 +5374,7 @@ For every marking ν so produced we use Whitehead’s algorithm (see
 
 Lemma 21.4) to try and ﬁnd a disk meeting some curve γ∈ν at most
 
-twice. For every diskC found computedS(α,C ) [22, 37]. Finally, output
+twice. For every disk C found computed S(α,C ) [22, 37]. Finally, output
 
 any disk which minimizes this distance, among all disks considered, and
 
@@ -5400,11 +5400,11 @@ Y ⊂S there is a stability constant M3 for the path πY (µn). Let δ be
 
 the hyperbolicity constant for C(S) (Theorem 3.2) and let Q be the
 
-quasi-convexity constant forD(V )⊂C (S) (Theorem 4.9).
+quasi-convexity constant for D(V )⊂C (S) (Theorem 4.9).
 
 Since ι(D,µ 0) is bounded we will, at the cost of an additive error,
 
-identify their images inC(S). Now, for every n pick some En∈ρV (µn).
+identify their images in C(S). Now, for every n pick some En∈ρV (µn).
 
 Lemma 21.5. There is a constant R2 with the following property.
 
@@ -5432,7 +5432,7 @@ k=0 so that
 
 dM(ν0,µn) is bounded and En∈ base(νK).
 
-We say a hole X⊂S is small if diamX(D(V ))< 61.
+We say a hole X⊂S is small if diam X(D(V ))< 61.
 
 Claim. There is a constant R3 so that for any small hole X we have
 
@@ -5456,7 +5456,7 @@ distance dX(νK,En) is bounded.
 
 Finally, becausep↦→πX(µp) is an A–unparameterized quasi-geodesic
 
-inC(X) it follows that dX(D,µn) is also bounded and the claim is
+in C(X) it follows that dX(D,µn) is also bounded and the claim is
 
 proved. □
 
@@ -5486,7 +5486,7 @@ If there are such surfaces then choose one, say Z, that minimizes
 
 strict large holes. Since dS(µn,En)≤ M3 +δ +Q and{νm} is an
 
-unparameterized quasi-geodesic [33, Theorem 6.1] we ﬁnd thatdS(µn,νl)
+unparameterized quasi-geodesic [33, Theorem 6.1] we ﬁnd thatd S(µn,νl)
 
 is uniformly bounded. The claim above bounds distances in small holes.
 
@@ -5632,7 +5632,7 @@ amenability. Invent. Math., 175(3):545–609, 2009. [60]
 
 have bounded distance. Paciﬁc J. Math. , 204(1):61–75, 2002.
 
-http://nyjm.albany.edu:8000/PacJ/2002/204-1-5nf.htm. [27]
+http://nyjm.albany.edu:8000/Pac J/2002/204-1-5nf.htm. [27]
 
 72 HOW ARD MASUR AND SAUL SCHLEIMER
 

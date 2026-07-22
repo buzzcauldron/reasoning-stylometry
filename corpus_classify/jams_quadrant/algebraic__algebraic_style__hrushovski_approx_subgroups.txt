@@ -124,7 +124,7 @@ way. See [52] for a compelling exposition of the issue.
 
 Gromov’s theorem [18] on ﬁnitely generated groups of polynomial gr owth ﬁts into this frame-
 
-work, takingX to be a ball of size 2 n in the Cayley graph, for large n; thenX is a 2d-approximate
+work, taking X to be a ball of size 2 n in the Cayley graph, for large n; then X is a 2d-approximate
 
 subgroup, where d is the growth exponent. Gromov shows that the group is nilpotent, up to
 
@@ -140,7 +140,7 @@ Theorem 1.1. Letf : N2 → N be any function, and ﬁx k ∈ N. Then there exist
 
 such that the following holds.
 
-LetG be any group, X a ﬁnite subset, and assume |XX− 1X| ≤ k|X|.
+Let G be any group, X a ﬁnite subset, and assume |XX− 1X| ≤ k|X|.
 
 Then there are e ≤ e∗,c ≤ c∗ , and subsets XN ⊆ XN− 1 ⊆ · · · ⊆ X1 ⊆ X− 1XX− 1X such
 
@@ -248,7 +248,7 @@ alternative version of the hypotheses. p can be taken to be a recursive function
 
 I have made no attempt to estimate it. As Ward Henson pointed out, the proof does give an
 
-explicit estimate for K. The proof also shows that X normalizesS. Laci Pyber remarked that
+explicit estimate for K. The proof also shows that X normalizes S. Laci Pyber remarked that
 
 with this strengthening (but not without it), the conclusion implies sm all tripling for X.
 
@@ -264,7 +264,7 @@ originating in the Larsen-Pink classiﬁcation of large ﬁnite simple linear g 
 
 generalized and formulated as a dimension-comparison lemma in [24]. We obtain:
 
-Theorem 1.3. LetG be a semisimple algebraic group, deﬁned over Z, and k an integer. Then
+Theorem 1.3. Let G be a semisimple algebraic group, deﬁned over Z, and k an integer. Then
 
 for some integer k′, the following statement holds. Let K be a ﬁeld, X a ﬁnite subset of G(K)
 
@@ -372,7 +372,7 @@ assume knowledge of the the deﬁnition of a ﬁrst-order formula, an d of the c
 
 asserting that a ﬁnitely satisﬁable set of formulas is satisﬁable in som e structure.
 
-LetL be a ﬁxed language, T a theory,M a model. We will occasionally use notation as if the
+Let L be a ﬁxed language, T a theory,M a model. We will occasionally use notation as if the
 
 language is countable (e.g. indices named n), but this will not be really assumed unless explicitly
 
@@ -410,7 +410,7 @@ B of U. Here let us say B is small if 2|B| ≤ | U|.
 
 (1) Saturation: Every type over B is realized in U.
 
-(2) Homogeneity: For c,d tuples fromM ,tp(c/B ) = tp(d/B ) iﬀ there exists σ ∈ Aut(M/B )
+(2) Homogeneity: For c,d tuples from M ,tp(c/B ) = tp(d/B ) iﬀ there exists σ ∈ Aut(M/B )
 
 with σ (c) = d.
 
@@ -434,7 +434,7 @@ under implication in the LA-theory of M .
 
 The solution sets D of partial types r (over various countable sets A) are called ⋀-deﬁnable
 
-(read: ∞ -deﬁnable) sets; so an ⋀-deﬁnable set overA is any intersection ofA-deﬁnable sets. The
+(read: ∞ -deﬁnable) sets; so an ⋀-deﬁnable set over A is any intersection of A-deﬁnable sets. The
 
 correspondence r ↦→ D is bijective, because of the saturation property (1) above. Comp lements
 
@@ -490,7 +490,7 @@ these concepts.
 
 A subset of a set X is relatively deﬁnable if it has the form X ∩ Z for some deﬁnable Z.
 
-Lemma 1.6. LetG be a deﬁnable group. Let X be an ⋀-deﬁnable subset of G,Y a ⋁- deﬁnable
+Lemma 1.6. Let G be a deﬁnable group. Let X be an ⋀-deﬁnable subset of G,Y a ⋁- deﬁnable
 
 subset of G, and assume X and X ∩ Y are subgroups of G, and X ∩ Y has bounded index in
 
@@ -518,7 +518,7 @@ Types over U are also called global types.
 
 A sequence (ai :i ∈ N) of elements of U is called A- indiscernible if any order-preserving map
 
-f :u → u′ between two ﬁnite subsets of N extends to an automorphism of U ﬁxingA. The same
+f :u → u′ between two ﬁnite subsets of N extends to an automorphism of U ﬁxing A. The same
 
 applies to sequences of n-tuples. Using Ramsey’s theorem and compactness, one shows tha t if
 
@@ -554,9 +554,9 @@ inﬁnite sets but arbitrary countable iterations of the power set op eration.)
 
 In all notations, if A is absent we take A = ∅. Generally a statement made for TA over ∅ is
 
-equivalent to the same statement for T overA, so no generality is lost.
+equivalent to the same statement for T over A, so no generality is lost.
 
-We will occasionally refer to ultraproducts of a family Mi ofL-structures. They are speciﬁc
+We will occasionally refer to ultraproducts of a family Mi of L-structures. They are speciﬁc
 
 way of constructing models M of the set of all sentences holding in all but ﬁnitely many Mi,
 
@@ -572,11 +572,11 @@ Let T be a ﬁrst-order theory, U a universal domain. One of the main lessons of
 
 is the usefulness of A-invariant types, meaning Aut(U/A )-invariant types. We note that if a
 
-global type p is ﬁnitely satisﬁable in some A ≤ M , then p isA-invariant: if a,a ′ areAut(U/A )-
+global type p is ﬁnitely satisﬁable in some A ≤ M , then p is A-invariant: if a,a ′ areAut(U/A )-
 
 conjugate, then φ(x,a )&¬φ(x,a ′) cannot be satisﬁed in A.
 
-We sayA is an elementary submodel of U (written: A ≺ U) if any nonempty A-deﬁnable set
+We say A is an elementary submodel of U (written: A ≺ U) if any nonempty A-deﬁnable set
 
 has points in A. If A ≺ U, then any type over A extends to a global type, ﬁnitely satisﬁable in
 
@@ -618,7 +618,7 @@ extension of a stably separated pair to a larger base set remains st ably separa
 
 A partial typer′(x,b ) is said to divide over A if there exists an indiscernible sequence b0,b 1,...
 
-overA such that ∪ ir′(x,b i) is inconsistent, and tp(b/A ) = tp(bi/A ). Equivalently, for some k,
+over A such that ∪ ir′(x,b i) is inconsistent, and tp(b/A ) = tp(bi/A ). Equivalently, for some k,
 
 {r′(x,b i) : i ∈ w} is inconsistent for any k-element subset w of N. By compactness, r′(x,b )
 
@@ -712,9 +712,9 @@ that tp(a/A (b)) does not fork, then in particular it holds for a pair in E′ (
 
 (2), it holds for al such pairs; hence certainly for all pairs for which tp(a/A (b)) does not fork
 
-overA.
+over A.
 
-Thus a single truth value forR is associated with pairs (a,b ) ∈ E′. Similarly, as the conditions
+Thus a single truth value for R is associated with pairs (a,b ) ∈ E′. Similarly, as the conditions
 
 are symmetric, a single truth value for R is associated with pairs ( a,b ) ∈ E′′. It remains to
 
@@ -756,7 +756,7 @@ probability measure on the formulas (or deﬁnable sets) φ(x) over the universa
 
 [25].
 
-We sayµ isA-invariant if for any formula φ(x,y ), for some function g :Sy(A) → R, we have
+We sayµ is A-invariant if for any formula φ(x,y ), for some function g :Sy(A) → R, we have
 
 µ (φ(x,b )) = g(tp(b/A )) for all b. If in addition g is continuous, we say that µ is an A-deﬁnable
 
@@ -804,7 +804,7 @@ We say I is ⋀-deﬁnable if for any θ(x,y ), the set {b :θ(x,b ) ∈ I} is �
 
 for ⋁-deﬁnable.
 
-We say a partial type Q overA is I-wide if it implies no formula in I.
+We say a partial type Q over A is I-wide if it implies no formula in I.
 
 In case X is ⋁-deﬁnable, i.e. a countable union of A-deﬁnable sets X = ⋁
 
@@ -836,7 +836,7 @@ D(x,a i) ∈ I.
 
 The forking ideal is contained in any S1-ideal:
 
-Lemma 2.9. LetI be an invariant S1 ideal over A. If φ(x,b ) forks over A then φ(x,b ) ∈ I.
+Lemma 2.9. Let I be an invariant S1 ideal over A. If φ(x,b ) forks over A then φ(x,b ) ∈ I.
 
 Proof. It suﬃces to show that if φ(x,b ) divides over A, then φ(x,b ) ∈ I. Let ( bi) be an A-
 
@@ -846,7 +846,7 @@ indiscernible sequence, with {φ(x,b i)} inconsistent; so for some k,φ(x,b 1)�
 
 ci = (b1,...,b m− 1,b m+i), and let ψ (x,c i) = φ(x,b 1) ∧ ... ∧ φ(x,b m− 1) ∧ φ(x,b m+i). Then the
 
-intersection of any twoψ (x,c i) is inI, but no ψ (x,c i) is inI. This contradicts Deﬁnition 2.8. □
+intersection of any two ψ (x,c i) is in I, but no ψ (x,c i) is in I. This contradicts Deﬁnition 2.8. □
 
 The forking ideal over A is also invariant under all A-deﬁnable bijections; in particular for
 
@@ -912,7 +912,7 @@ be deduced from either Lemma 2.16 or Lemma 2.17; the former has a s horter, more
 
 much more impredicative proof.
 
-Lemma 2.15. LetI =I(x) be a ⋁-deﬁnable ideal, deﬁned over a model M . Then there exists
+Lemma 2.15. Let I =I(x) be a ⋁-deﬁnable ideal, deﬁned over a model M . Then there exists
 
 a global type p, ﬁnitely satisﬁable in M , such that if b |= p|M , a |= p|M (b), then tp(b/Ma )
 
@@ -926,7 +926,7 @@ M . Let b |=p|M , a |=p|M (b). If tp(b/Ma ) is not wide, then for some φ(x,y ) 
 
 and φ(a,y ) ∈ I; by ⋁-deﬁnability, for some θ ∈ tp(a/M ), for all a′ with θ(a′), φ(a′,y ) ∈ I.
 
-Sincetp(a/Mb ) is ﬁnitely satisﬁable in M , there exists a′ ∈ M withθ(a′) and φ(a′,b ). It follows
+Sincetp(a/Mb ) is ﬁnitely satisﬁable in M , there exists a′ ∈ M with θ(a′) and φ(a′,b ). It follows
 
 that p0 =tp(b/M ) is not wide, a contradiction. □
 
@@ -940,7 +940,7 @@ Proof. Let Tsk be a Skolemization of the theory, in a expansion Lsk of the langu
 
 Lsk-substructure M (X) generated by a set X is an elementary submodel. Deﬁne a sequence
 
-of elements ai (i <ℶω 1 ), and sets Ai = M ({aj : j < i}), with tpL(ai/A i) wide. By Morley’s
+of elements ai (i <ℶω 1 ), and sets Ai = M ({aj : j < i}), with tp L(ai/A i) wide. By Morley’s
 
 theorem [39], there exists an indiscernible sequence ( ci :i<ω + 2) such that for any n, for some
 
@@ -956,7 +956,7 @@ b |=q|M (a), and tp(a/M (b)) is wide.
 
 STABLE GROUP THEORY AND APPROXIMATE SUBGROUPS 11
 
-Lemma 2.17. LetI =I(x) be an ⋀-deﬁnable ideal, deﬁned over a model M withL(M ) count-
+Lemma 2.17. Let I =I(x) be an ⋀-deﬁnable ideal, deﬁned over a model M with L(M ) count-
 
 able. Assume (“Fubini”) there exists an ideal I 2(x,y ) onLx,y (M ) such that: (i) if φ(a,y ) ∈ I(y)
 
@@ -966,7 +966,7 @@ then φ ∈ I 2; (iii) if φ(x) ∧ φ(y) ∈ I 2 then φ ∈ I.
 
 Then there exists a global type p, ﬁnitely satisﬁable in M , such that if b |=p|M ,a |=p|M (b),
 
-then tp(a/Mb ) and tp(b/Ma ) areI-wide.
+then tp(a/Mb ) and tp(b/Ma ) are I-wide.
 
 Proof. Let B be the Boolean algebra of formulas of M modulo I. We show that a generic
 
@@ -994,7 +994,7 @@ third option in (*) is met. Otherwise, ( P (x) ∧ φ 3(c,x )) ∈ I for all c �
 
 M -⋀-deﬁnability of I that (P (x) ∧ φ 3(c,x )) ∈ I for all c. So P (y) ∧ φ 3(x,y ) ∈ I 2.
 
-If for some P′ ∈ B ∖I implyingP we have: P′(a) implies φ 1(a,x ) /∈ I, then the ﬁrst disjunct
+If for some P′ ∈ B ∖I implying P we have: P′(a) implies φ 1(a,x ) /∈ I, then the ﬁrst disjunct
 
 of (*) holds. Otherwise, using the M -⋀-deﬁnability of I, we see that for all a ∈ P withtp(a/M )
 
@@ -1212,7 +1212,7 @@ random. Let p23 be the restriction of p123 to the 2 , 3-variables. Let ( b2,b 3)
 
 p23 is random in X23, so tp(b3/M (b2)) does not divide over M .
 
-Nowθ12(x1,b 2) ∧ θ13(x1,b 3) has positive µ 1-measure (otherwise p123 could not be random.)
+Now θ12(x1,b 2) ∧ θ13(x1,b 3) has positive µ 1-measure (otherwise p123 could not be random.)
 
 By Theorem 2.18, θ12(x1,a 2) ∧ θ13(x1,a 3) has positive µ 1-measure too. □
 
@@ -1238,7 +1238,7 @@ uθu is
 
 consistent. Fix such θu. Since q1j is random in X1j, it is random in X1j(q1,q j) over (q1,q j).
 
-Henceθ1j has positive measure in X1j(q1,q j). By Lemma 2.21, even θ12(x1,x 2)∧θ13(x1,x 3)∪q23
+Hence θ1j has positive measure in X1j(q1,q j). By Lemma 2.21, even θ12(x1,x 2)∧θ13(x1,x 3)∪q23
 
 is consistent. □
 
@@ -1422,7 +1422,7 @@ An ⋀-deﬁnable subset of ( X− 1X)3 closed under m and − 1 will be called 
 
 subgroup of ˜G (though in the local setting there is a priori no group of which it is a su bstructure).
 
-The main case is that of countable intersections; in this case one can writeH = ∩ n∈ NHn, with
+The main case is that of countable intersections; in this case one can write H = ∩ n∈ NHn, with
 
 Hn deﬁnable, Hn =H− 1
 
@@ -1488,7 +1488,7 @@ In particular, X ⊆ ∪ b∈ BX− 1Xb, for some ﬁnite B; since µ (X) > 0 it
 
 In the local case, we say Z ⊆ (X− 1X)2 is right-generic if ﬁnitely many translates Zb (b ∈ X)
 
-coverX− 1X. Again if Z ⊆ X− 1X has positive I-measure, then Z− 1Z is right-generic.
+cover X− 1X. Again if Z ⊆ X− 1X has positive I-measure, then Z− 1Z is right-generic.
 
 Lemma 3.3. [cf. [26]] Let H be an ⋀-deﬁnable subgroup of ˜G. Then ˜G/H is bounded iﬀ every
 
@@ -1554,7 +1554,7 @@ parameters; but N isAut(U/A )-invariant, and in general if an ⋀-deﬁnable set
 
 Aut(U/A ) then it is an inﬁnite intersection of A-deﬁnable sets. □
 
-Theorem 3.5. LetM be a model, µ anM -invariant S1-ideal on deﬁnable subsets of ˜G, invari-
+Theorem 3.5. Let M be a model, µ an M -invariant S1-ideal on deﬁnable subsets of ˜G, invari-
 
 ant under (left or right) translations by elements of ˜G. Let q be a wide type over M (contained
 
@@ -1564,7 +1564,7 @@ in ˜G.) Assume:
 
 tp(a/Mb ) does not fork over M .
 
-Then there exists a wide, ⋀-deﬁnable over M subgroupS of G. We have S = (q− 1q)2; the
+Then there exists a wide, ⋀-deﬁnable over M subgroup S of G. We have S = (q− 1q)2; the
 
 set qq− 1q is a coset of S. Moreover, S is normal in ˜G, and S ∖q− 1q is contained in a union
 
@@ -1596,13 +1596,13 @@ ideal, not of the measure. In particular, regardless of unimodularit y, this ass
 
 is true for Haar measures on a locally compact group.
 
-(4) (Weakening of left invariance.) Most of the proof is devoted to s howing thatS = (q− 1q)2
+(4) (Weakening of left invariance.) Most of the proof is devoted to s howing that S = (q− 1q)2
 
 is a subgroup of ˜G, and qq− 1q is a coset of S. For this, left-translation invariance can
 
 be replaced with existence of an f -generic extension of q, in the sense of [26], i.e. the
 
-existence of an M -invariant idealJ containing the forking ideal, and with q wide for J.
+existence of an M -invariant ideal J containing the forking ideal, and with q wide for J.
 
 We will use such a J in Claims 3’ and 5’ (without assuming that µ =J.) The statement
 
@@ -1624,7 +1624,7 @@ we can achieve this by choosing a ﬁrst, then c1,c 2.)
 
 (6) (Locality). Inspection of the proof will show that for all asser tions except the normality
 
-ofS, we only use µ (as an S1 ideal) on deﬁnable subsets of XX− 1X. To show normality
+of S, we only use µ (as an S1 ideal) on deﬁnable subsets of XX− 1X. To show normality
 
 S, we also require XaX− 1, where a ∈ X or a ∈ X− 1. Moreover the group structure is
 
@@ -1680,7 +1680,7 @@ Given two subsets X,Y of ˜G, let
 
 X × nf Y = {(a,b ) ∈ X × Y :tp(b/M (a)) does not fork over M }
 
-LetQ = {a− 1b : (a,b ) ∈ q × nfq}. Let J be as in Remark (4) (or just set J =µ for the basic
+Let Q = {a− 1b : (a,b ) ∈ q × nfq}. Let J be as in Remark (4) (or just set J =µ for the basic
 
 statement of the theorem), and set Q′ = {a− 1b :a,b ∈ q,tp (b/Ma ) is J-wide}.
 
@@ -1760,7 +1760,7 @@ c2 ∈ Q′, there exists a′
 
 2/M ) = p2; extend r
 
-to aJ-wide typer′ overM (a0,a 1), and let a2 |=r′. We thus have (a0,a 1,a 2) ∈ (q×q)× nfq, with
+to aJ-wide typer′ over M (a0,a 1), and let a2 |=r′. We thus have (a0,a 1,a 2) ∈ (q×q)× nfq, with
 
 tp(a− 1
 
@@ -1796,7 +1796,7 @@ with tp(b,a ) speciﬁed and such that tp(b,a/M (c)) does not divide over M . We
 
 tp(a/M (c)) to be a nonforking extension of q =tp(a/M ), and tp(b/M (a,c )) to be a non-forking
 
-overM extension of tp(b/M (a)). The latter is possible using the assumption that tp(b/M (a))
+over M extension of tp(b/M (a)). The latter is possible using the assumption that tp(b/M (a))
 
 does not fork over M .
 
@@ -1894,15 +1894,15 @@ is hence ⋀-deﬁnable over M ; by completeness again, as the realizations of q
 
 contained in cT . But then q− 1q ⊆ T ; so S ⊆ T .
 
-We know at this point that S has no proper ⋀-deﬁnable overM subgroups of bounded index.
+We know at this point that S has no proper ⋀-deﬁnable over M subgroups of bounded index.
 
-Let r be a type of elements of X ∪ X− 1 overM . There cannot exist an unbounded family of
+Let r be a type of elements of X ∪ X− 1 over M . There cannot exist an unbounded family of
 
-cosets aiS with ai ∈ r, for then the sets aibq would also be disjoint for any b ∈ q− 1, so for
+cosets ai S with ai ∈ r, for then the sets aibq would also be disjoint for any b ∈ q− 1, so for
 
-some deﬁnable X′ with q ⊂ X′ ⊂ X the sets aibX′ can be taken disjoint, contradicting the S1
+some deﬁnable X′ with q ⊂ X′ ⊂ X the sets aib X′ can be taken disjoint, contradicting the S1
 
-property for µ within rbX ⊆ (X ∪ X− 1)3. Thus r is contained in boundedly many left cosets
+property for µ within rb X ⊆ (X ∪ X− 1)3. Thus r is contained in boundedly many left cosets
 
 of S, hence (being a complete type over a model) in one; call it Cr. So Cr is M -deﬁnable, and
 
@@ -1910,9 +1910,9 @@ hence the conjugate group Sr =C− 1
 
 r SCr is M -deﬁnable.
 
-For anyc ∈ X ∪X− 1 ∪ { 1},r =tp(c), the image of qc inG/S is bounded. Otherwise there is
+For anyc ∈ X ∪X− 1 ∪ { 1},r =tp(c), the image of qc in G/S is bounded. Otherwise there is
 
-a large collection of disjoint sets of the form aicS, with ai ∈ q. Pick b0 ∈ q; then q− 1b0 ⊆ S; the
+a large collection of disjoint sets of the form aic S, with ai ∈ q. Pick b0 ∈ q; then q− 1b0 ⊆ S; the
 
 sets aicSb− 1
 
@@ -1938,7 +1938,7 @@ We argued above thatq− 1q is wide; in particular S is wide. Q is also wide: su
 
 So Q ⊆ D for some deﬁnable D with µ (D) = 0. Let a ∈ q. Then a− 1q is wide. So a− 1q ∖D is
 
-wide. However q ∖aD forks overM , since if b ∈ q ∖aD thena− 1b /∈ Q sotp(b/M (a)) forks over
+wide. However q ∖aD forks over M , since if b ∈ q ∖aD thena− 1b /∈ Q sotp(b/M (a)) forks over
 
 M . Thus D′ ∖aD lies in the forking ideal, for some deﬁnable D′ containingq. By Lemma 2.9
 
@@ -2020,7 +2020,7 @@ ultraproduct of the p-adic ﬁelds Qp. Let K denote the valued ﬁeld, O the val
 
 maximal ideal. Let G be the semi-direct product of the additive group Ga with the multiplicative
 
-groupGm. So G =TU whereT,U are Abelian subgroups, U =Ga normal,T ∼
+groupGm. So G =TU where T,U are Abelian subgroups, U =Ga normal,T ∼
 
 =Gm. Let t ∈ K
 
@@ -2062,7 +2062,7 @@ sharp, in view of Example 3.8. See [12]
 
 22 EHUD HRUSHOVSKI
 
-WhenX is ﬁnite, any right-invariant measure must be proportional to the c ounting measure.
+When X is ﬁnite, any right-invariant measure must be proportional to the c ounting measure.
 
 Asymptotically, when (X,G ) vary in some family, we have that every ultraproduct is a near-
 
@@ -2084,9 +2084,9 @@ in a ﬁnite union of right translates of (X− 1X)2. µ extends to an invariant
 
 Proof. For this we may add parameters, and work over a model. Let ˜G be the group generated
 
-byX. By Theorem 3.5 and Remark 6 to that theorem, there exists a wide ⋀-deﬁnable subgroup
+by X. By Theorem 3.5 and Remark 6 to that theorem, there exists a wide ⋀-deﬁnable subgroup
 
-normalS of ˜G. The proof also shows that S ⊆ (X− 1X)2 and that the image of X moduloS has
+normal S of ˜G. The proof also shows that S ⊆ (X− 1X)2 and that the image of X modulo S has
 
 bounded cardinality. Hence ˜G/S is bounded, and in particular for any n, (X− 1X)n is contained
 
@@ -2140,7 +2140,7 @@ Wn(a1,...,a l;b1,...,b l) for some b1,...,b l ∈ X; or ∞ of there is no such 
 
 Proposition 3.12. For any k,l,n ∈ N, for some M,K ∈ N, the following holds:
 
-LetG be a group, X a ﬁnite subset. Assume |XX− 1X| ≤ k|X|. Also assume that there exist
+Let G be a group, X a ﬁnite subset. Assume |XX− 1X| ≤ k|X|. Also assume that there exist
 
 x1,...,x M ∈ X such that:
 
@@ -2154,9 +2154,9 @@ Then there exists a subgroup S of G, S ⊆ (X− 1X)2, such that X is contained 
 
 of S.
 
-Proof. Fix k,l,n . Suppose there are no such M,K ; then there are groups GM andX =XM ⊂
+Proof. Fix k,l,n . Suppose there are no such M,K ; then there are groups GM and X =XM ⊂
 
-GM such that there exist x1,...,x M with (*), and there is no subgroup S ofG,S ⊆ (X− 1X)2,
+GM such that there exist x1,...,x M with (*), and there is no subgroup S of G,S ⊆ (X− 1X)2,
 
 such that X is contained in ≤ M cosets of S. Consider ( GM,X M, ·) as a structure, and
 
@@ -2186,7 +2186,7 @@ all lie in S. Now d(X,y 1,...,y l) ≤ n; so X ⊆ Wn(y1,...,y l;b1,...,b l) for
 
 Let N be the normal subgroup of ˜G generated by the yi, and let X be the image of X modulo
 
-N . Then X ⊆ Wn(1,..., 1; ¯b1,..., ¯bl), where ¯bi =biN . Hence X is ﬁnite. As S ⊆ (X− 1X)2, it
+N . Then X ⊆ Wn(1,..., 1; ¯b1,..., ¯bl), where ¯bi =bi N . Hence X is ﬁnite. As S ⊆ (X− 1X)2, it
 
 follows that the image of S modulo N is ﬁnite, i.e. [ S :N ]< ∞ . Since N is ⋁-deﬁnable, so is
 
@@ -2200,7 +2200,7 @@ By Ruzsa’s argument, the condition |aX
 
 l | ≥ | X|/m implies that X ∪ X 2 is con-
 
-tained in the union of ≤ m translates cjaX
+tained in the union of ≤ m translates cja X
 
 1 · · ·aX
 
@@ -2214,7 +2214,7 @@ d(a1,...,a l;G) ≤ max(m, 2l). We can now deduce Corollary 1.2 from Proposition
 
 Ramsey’s theorem, but will give a direct argument. We denote the l’th Cartesian power of X
 
-byX (l).
+by X (l).
 
 Proof of Corollary 1.2. Fixk,l,m and suppose for contradiction that the conclusion fails. Then
 
@@ -2256,7 +2256,7 @@ and 1 = µ (X) ≤ kµ (X0) < ∞ . Further, there exists a deﬁnable set Q ⊆
 
 l ) ≥ 1/m , and µ l(Q) ≥ 1 − 1/K for any K = 1, 2,... , i.e.
 
-µ l(Q) = 1. Finally, for no deﬁnable group S ⊆ XX isX contained in ﬁnitely many cosets of S.
+µ l(Q) = 1. Finally, for no deﬁnable group S ⊆ XX is X contained in ﬁnitely many cosets of S.
 
 In fact only one instance of Fubini will be required: µ l(Y l) = µ (Y )l.
 
@@ -2330,13 +2330,13 @@ l ⊆ S. Since µ (aX
 
 l ) > 1/ (m + 1), it follows that
 
-S cannot have µ (X0X)(m + 1) disjoint cosets xiS. So X0/S is ﬁnite; it follows that XX/S is
+S cannot have µ (X0X)(m + 1) disjoint cosets xi S. So X0/S is ﬁnite; it follows that XX/S is
 
 ﬁnite, so XX = S ∪ ∪ k
 
-ν =1(XX ∩ ciS) for some c1,...,c ν . Since S is ⋀-deﬁnable, so is each
+ν =1(XX ∩ ci S) for some c1,...,c ν . Since S is ⋀-deﬁnable, so is each
 
-ciS, and we see that the the complement of S in XX is also ⋀-deﬁnable. When a subset of
+ci S, and we see that the the complement of S in XX is also ⋀-deﬁnable. When a subset of
 
 a deﬁnable set and its complement are both ⋀-deﬁnable, they are both deﬁnable. Hence S
 
@@ -2352,7 +2352,7 @@ Though we stated Proposition 3.12 for ﬁnite X, it holds with the same proof if
 
 4. Near subgroups and Lie groups
 
-LetX ⊆ ˜G be a near-subgroup with respect to an M -invariant, right-invariant idealµ , as in
+Let X ⊆ ˜G be a near-subgroup with respect to an M -invariant, right-invariant idealµ , as in
 
 the previous section.
 
@@ -2480,7 +2480,7 @@ follows that if W ⊆ L is compact, then h− 1(W ) is ⋀-deﬁnable.
 
 • If W ⊆ L is a neighborhood of 1, then h− 1(W ) contains a deﬁnable set of the form
 
-U− 1U , with U a deﬁnable subset of (G,X ) contained in ˘G and commensurable toX− 1X.
+U− 1U , with U a deﬁnable subset of (G,X ) contained in ˘G and commensurable to X− 1X.
 
 • Any deﬁnable set containing K contains some h− 1(W ), with W a neighborhood of 1 in
 
@@ -2624,7 +2624,7 @@ We now begin to address the issue of parameters.
 
 Lemma 4.5. With the assumptions and notation of Lemma 4.4, there exists an ⋀-deﬁnable
 
-subgroupS of ˜G without parameters, with ˜G/S bounded.
+subgroup S of ˜G without parameters, with ˜G/S bounded.
 
 Proof. We may work in a homogeneous elementary extension U of (G,X, ·), so that ⋀-deﬁnable
 
@@ -2652,7 +2652,7 @@ the form H/ Γ′ with Γ′ ⋀-deﬁnable. Then ( H, Γ′) is in β . □
 
 Claim 2. Let (H, Γ), (H′, Γ′) ∈ β . Then ( H ∩ H′, Γ ∩ H′) ∈ β .
 
-Proof. SinceH′ is locally deﬁnable, while Γ is contained in a deﬁnable set, it is clear that H′∩ Γ
+Proof. Since H′ is locally deﬁnable, while Γ is contained in a deﬁnable set, it is clear that H′∩ Γ
 
 is ⋀-deﬁnable. Since ˜G/ Γ and ˜G/H ′ are bounded, so is ˜G/ (Γ ∩ H′). Also H ∩ H′ is locally
 
@@ -2682,7 +2682,7 @@ Similarly (H ∩ H′, Γ′ ∩ H) ∈ β . So Γ′ ∩ H = Γ ∩ H′ and th
 
 We noted that Γ′∩H has ﬁnite index in Γ′; moreover since this holds for any pair from α , in
 
-particular it holds for Γ′ and any Aut(U)-conjugateσ (H) of H, so Γ′∩σ (H) has index bounded
+particular it holds for Γ′ and any Aut(U)-conjugate σ (H) of H, so Γ′∩σ (H) has index bounded
 
 independently of σ .
 
@@ -2728,7 +2728,7 @@ We have h : ˘G → L. Note that if C is a compact normal subgroup of L, the com
 
 of h with the quotient map L → L/C has the same properties (1,2) as h : ˘G → L. Replacing
 
-L byL/C for a maximal compact normal subgroup C of L, we may assume L has no compact
+L by L/C for a maximal compact normal subgroup C of L, we may assume L has no compact
 
 normal subgroups.
 
@@ -2808,7 +2808,7 @@ normal compact subgroup of LC(M )0. Let ˆL(X) = LC(M )/C 0; then L(X) = ˆL(X)0
 
 the connected component.
 
-• l(X) = dimL(X).
+• l(X) = dim L(X).
 
 We refer to l(X) as the Lie rank of X, or of ˜G.
 
@@ -2882,7 +2882,7 @@ above. By translating W , we can arrange 1 ∈ W . □
 
 Can Lemma 4.8 be used to bound l(X) = dim( L) in terms of doubling constants of X?
 
-WhenG is nilpotent, we have: l(X) ≤ log2(k5). This follows from Lemma 4.8 and Lemma 4.9,
+When G is nilpotent, we have: l(X) ≤ log2(k5). This follows from Lemma 4.8 and Lemma 4.9,
 
 due (with a diﬀerent proof) to Tsachik Gelander; thanks for allowing me to include it here. Use
 
@@ -2892,7 +2892,7 @@ Lemma 4.9 (Gelander). Let X be a compact subset of Rd, or more generally of a co
 
 simply connected Lie group, and let λ be Haar measure. Then λ(XX ) ≥ 2dλ(X).
 
-Proof. In fact we haveλ(s(X)) ≥ 2dλ(X), wheres(x) = x2. The ambient group H is isomorphic
+Proof. In fact we have λ(s(X)) ≥ 2dλ(X), wheres(x) = x2. The ambient group H is isomorphic
 
 to a subgroup of the strict upper triangular matrices over R, of some dimension; the map s
 
@@ -3000,7 +3000,7 @@ follows that (0) × R/α Z is contained in the image of ˜G, so that ˜G → R �
 
 STABLE GROUP THEORY AND APPROXIMATE SUBGROUPS 31
 
-The doubling of this square within the cylinder is similar to the doubling of theX[n] within Z.
+The doubling of this square within the cylinder is similar to the doubling of the X[n] within Z.
 
 By contrast the associated Lie group without compact subgroups is R, which does not account
 
@@ -3010,7 +3010,7 @@ X.
 
 It is also interesting to note here that if one takes X[n]′ = {[mα n] : m ∈ Z, −n ≤ m ≤ n}
 
-whereα n approaches ∞ , the associated Lie group will be R2; this limit is natural for the directly
+where α n approaches ∞ , the associated Lie group will be R2; this limit is natural for the directly
 
 associated Lie group but not for the reduced one.
 
@@ -3018,7 +3018,7 @@ For the record we state a version of Theorem 4.2 waiving canonicity b ut gaining
 
 of the location of the kernel.
 
-Lemma 4.12. LetX generate a ⋁-deﬁnable group ˜G, and assume an ideal on ˜G exists satsi-
+Lemma 4.12. Let X generate a ⋁-deﬁnable group ˜G, and assume an ideal on ˜G exists satsi-
 
 fying the assumption of Lemma 2.17. Then there exists a ⋁-deﬁnable subgroup ˘G contained in
 
@@ -3076,13 +3076,13 @@ eachXn is closed under the commutator bracket.
 
 Proof. We may assume (G0,X ) is ℵ 0-saturated. Let h,L be as in Theorem 4.2. We ﬁrst show
 
-thatL has a system Un of compact neighborhoods of the identity with properties (1-3). L et L
+that L has a system Un of compact neighborhoods of the identity with properties (1-3). L et L
 
 be the Lie algebra of L,exp : L → L the exponential map, and ﬁx a Euclidean inner product on
 
 L. Let V be a simply connected open neighborhood of 0 ∈ L such that exp is a diﬀeomorphism
 
-V → exp(V ) = U , and such that the image of ( X− 1X)2 inL containsU in its interior. Let Vn
+V → exp(V ) = U , and such that the image of ( X− 1X)2 in L contains U in its interior. Let Vn
 
 be the ball of radius r02− n around 0. Here r0> 0 is chosen small enough so that V0 is contained
 
@@ -3166,7 +3166,7 @@ injective on U1 (if one chooses U1 small enough.) □
 
 Remark 4.14. (1) Let (Xn) be as in Lemma 4.13. Let (G,X ) be a non-principal ultraproduct
 
-of (G0,X n), and let ˜G be the subgroup of G generated byX. Then there exists a locally deﬁnable
+of (G0,X n), and let ˜G be the subgroup of G generated by X. Then there exists a locally deﬁnable
 
 subgroup ˘G ≤ ˜G, a connected, ﬁnite-dimensional Lie group U , and a homomorphism h : ˘G → U
 
@@ -3178,7 +3178,7 @@ carries over to the ultraproduct, so X[k] is deﬁned for all k ∈ Z, and has s
 
 X[k]X[k] ⊆ X[k + 1]. Since the ultraﬁlter is nonprincipal, it concentrates on n > k, so by
 
-(5) of 4.13 we have [ X,X [k]] ⊆ X[k +n − 1] ⊆ X[k′] for all k′ ∈ N. Factoring out ∩ khX[k]
+(5) of 4.13 we have [ X,X [k]] ⊆ X[k +n − 1] ⊆ X[k′] for all k′ ∈ N. Factoring out ∩ kh X[k]
 
 we obtain a commutative locally compact group. As in Theorem 4.2 we ma y replace it with a
 
@@ -3200,7 +3200,7 @@ STABLE GROUP THEORY AND APPROXIMATE SUBGROUPS 33
 
 Let G be any group, X a subset, and assume there exists a translation - invariant ﬁ nitely
 
-additive real-valued measureν on the deﬁnable subsets of G contained in some power of XX− 1,
+additive real-valued measure ν on the deﬁnable subsets of G contained in some power of XX− 1,
 
 with ν(XX− 1X) ≤ kν(X).
 
@@ -3230,13 +3230,13 @@ Proof. Fix f,k . We consider groups G and subsets X admitting a measure as above
 
 and formulas φ of one free variable. Given c,φ and X, let X1 be the subset deﬁned by φ. Let
 
-N =f (e,c ) + 1, and deﬁne Xn using (6) for 2 ≤ n ≤ N . Let us say that ( c,e,φ ) works forX if
+N =f (e,c ) + 1, and deﬁne Xn using (6) for 2 ≤ n ≤ N . Let us say that ( c,e,φ ) works for X if
 
 properties (1-5) hold for the sets Xn deﬁned in this way.
 
 We will show that for some ﬁnite set ( c1,e 1,φ 1),..., (cn,e n,φ n), for any G and any k-near-
 
-subgroupX ofG, some (ci,e i,φ i) works for X. Suppose this is false. Then by the compactness
+subgroup X of G, some (ci,e i,φ i) works for X. Suppose this is false. Then by the compactness
 
 theorem there exists G, a measure µ on the deﬁnable subsets of the group ˜G generated by
 
@@ -3246,7 +3246,7 @@ X with µ (X) = 1, and a deﬁnable subset X of G with µ (XX− 1X) ≤ kµ (X)
 
 of Corollary 4.13 (3), and e the number of translates of X1 needed to cover X. Then ( c,e,φ )
 
-works forX (indeed theXn have the required properties beyond any bound.) This contradictio n
+works for X (indeed theXn have the required properties beyond any bound.) This contradictio n
 
 proves the the statement, and the theorem. □
 
@@ -3328,7 +3328,7 @@ Actually it is easy to see in the same way (using the fact that L has no compact
 
 subgroups) that if G is a periodic group and X is a near subgroup, then there exists a subgroup
 
-S ofG such thatS,X are commensurable. This does not extend to families of ﬁnite approx imate
+S of G such that S,X are commensurable. This does not extend to families of ﬁnite approx imate
 
 groups, since without a uniform bound taking an ultraproduct will no t preserve periodicity.
 
@@ -3422,7 +3422,7 @@ with C +I = I. Note that for a subset of V , the inﬁmum (in the sense of V′)
 
 agrees with the inﬁmum in V .
 
-Whenα n,β n are descending sequences of cuts, inf n(α n +βn) = inf nα n + infnβn holds in V .
+When α n,β n are descending sequences of cuts, inf n(α n +βn) = inf nα n + infn βn holds in V .
 
 By the above remark, it suﬃces to check this in V′. The inequality ≥ is clear, since α n +βn ≥
 
@@ -3462,19 +3462,19 @@ where D ranges over all deﬁnable sets containing X. Note a continuity property
 
 sion: If X = ∩Xn with X1 ⊃ X2 ⊃ ... ⋀-deﬁnable, then δ(X) = inf nδ(Xn).
 
-The subadditivity property holds for ⋀-deﬁnable setsX: let f be a deﬁnable map, let γ ∈ V1,
+The subadditivity property holds for ⋀-deﬁnable sets X: let f be a deﬁnable map, let γ ∈ V1,
 
-and assumeδ(f− 1(a)∩X) ≤ γ for alla. Then δ(X) ≤ δ(f (X))+γ. Indeed if X = ∩Xn withXn
+and assume δ(f− 1(a)∩X) ≤ γ for alla. Then δ(X) ≤ δ(f (X))+γ. Indeed if X = ∩Xn withXn
 
 a descending sequence of deﬁnable sets, then f (X) = ∩ nf (Xn) by compactness (saturation); say
 
-γ = infγk; then for eachk, for somen(k), we haveδ(f− 1(a)∩Xn(k)) ≤ γk, again by compactness.
+γ = inf γk; then for eachk, for somen(k), we have δ(f− 1(a)∩Xn(k)) ≤ γk, again by compactness.
 
 Soδ(Xn(k)) ≤ δ(f (Xn(k)))+γk. Thus inf nδ(Xn) ≤ inf kδ(Xn(k)) ≤ inf kδ(f (Xn(k)))+ inf kγk =
 
 δ(f (X)) +γ.
 
-As a very special case of subadditivity, noting that δ(F ) = 0 for ﬁnite F , we haveδ(D1∪D2) =
+As a very special case of subadditivity, noting that δ(F ) = 0 for ﬁnite F , we have δ(D1∪D2) =
 
 max(δ(D1),δ (D2)).
 
@@ -3488,7 +3488,7 @@ inf E1δ(E1) + inf E2δ(E2) = δ(D1) +δ(D2).
 
 36 EHUD HRUSHOVSKI
 
-If X is ⋀-deﬁnable over a set A, there exists a complete type P overA containing X with
+If X is ⋀-deﬁnable over a set A, there exists a complete type P over A containing X with
 
 δ(X) = δ(P ). To see this it suﬃces to check that X ∖ ∪{D :δ(D)<δ (X)} is nonempty, since
 
@@ -3500,7 +3500,7 @@ Ifδ(X) ∈ V0, we say that X has strict quasi-ﬁnite dimension. Note in this c
 
 of R∗ , that if δ(X) = inf n∈ Nα n then δ(X) = α n for large enough n.
 
-5.3. Examples. The best behaved case is of totally categorical theories, i.e. theor iesT with a
+5.3. Examples. The best behaved case is of totally categorical theories, i.e. theor ies T with a
 
 unique model in each power; a basic example is the theory of vector s paces over a ﬁxed ﬁnite
 
@@ -3572,7 +3572,7 @@ It follows that if Y,Z are constructible subsets of G, deﬁned over a subﬁeld
 
 0< dim(Y ) ≤ dim(Z)< dim(G), then dim(Fc(Y ×Z))> dim(Z) for somec ∈ Γ0. Moreover, let
 
-Y ×′Z =Y × Z ∖ ∪ jWj, where Wj ranges over all A-deﬁnable constructible subsets W ofY × Z
+Y ×′Z =Y × Z ∖ ∪ jWj, where Wj ranges over all A-deﬁnable constructible subsets W of Y × Z
 
 with dim(W )< dim(Y ) + dim(Z). (This is the same, for the theory ACF of algebraically closed
 
@@ -3600,7 +3600,7 @@ generalizations.
 
 5.5. The dimension inequality. Let Γ ⊆ X be an ⋀-deﬁnable subgroup, of strict quasi-ﬁnite
 
-dimensionδ(Γ) = δ(X); and with Γ 0 ≤ Γ. Let δ0 =δ(Γ),V =V (δ0). For n ∈ Q andv ∈ V ,nv
+dimension δ(Γ) = δ(X); and with Γ 0 ≤ Γ. Let δ0 =δ(Γ),V =V (δ0). For n ∈ Q andv ∈ V ,nv
 
 is deﬁned; we write γ0n for nγ0. Let γ0 =δ(Γ)/ dim(G).
 
@@ -3644,13 +3644,13 @@ Z)) ≤ dim(f (Y ×′Z))γ0. By subadditivity we obtain δΓ(Y ×′Z) ≤ (b +
 
 dim(Y ×′Z)γ0.
 
-Now there exists a complete type Q overA with Q ⊆ Y × Z and δΓ(Q) = δΓ(Y ) +δΓ(Z).
+Now there exists a complete type Q over A with Q ⊆ Y × Z and δΓ(Q) = δΓ(Y ) +δΓ(Z).
 
 I claim that Q = Y ×′Z (formed over A). For if Q is any other type, the ﬁbers Qa = {w :
 
 (w,a ) ∈ Q} have dimension dim(Qa) = b′< dim(Y ) for a ∈ Z (the dimension is constant on Z
 
-sinceZ is a complete type). By minimality of dim( Y ) we have δΓ(Qa) ≤ b′γ0. By subadditivity
+since Z is a complete type). By minimality of dim( Y ) we have δΓ(Qa) ≤ b′γ0. By subadditivity
 
 it follows that
 
@@ -3672,7 +3672,7 @@ and deﬁnability of Zariski dimension, cf. [24].
 
 Recall that a morphism f :U → V of algebraic varieties is dominant if there exists no proper
 
-subvarietyV′ of V such that the image of U , over any ﬁeld, is contained in V′.
+subvariety V′ of V such that the image of U , over any ﬁeld, is contained in V′.
 
 38 EHUD HRUSHOVSKI
 
@@ -3690,13 +3690,13 @@ m dim(G) − 1, and by Proposition 5.6 δ(V ∩ Γn) ≤ dim(V )γ0 < mδΓ(G). 
 
 There exists a relatively Zariski open W′ ⊆ W , dim(W′) = dim(W ), such that dim f− 1(b) is
 
-constant for b ∈ W′. Replacing W byW′ and U byf− 1(W′), we may assume dim f− 1(b) = d
+constant for b ∈ W′. Replacing W by W′ and U byf− 1(W′), we may assume dim f− 1(b) = d
 
 is constant for b ∈ W . So dim( U ) = d + dim(W ). By Proposition 5.6, for any b ∈ W ∩ Γn, we
 
-haveδΓ(f− 1(b)) ≤ dγ0. Hence if δ(f (U ∩ Γm)) = γ <dim(W )γ0, then by subadditivity of δ we
+have δΓ(f− 1(b)) ≤ dγ0. Hence if δ(f (U ∩ Γm)) = γ <dim(W )γ0, then by subadditivity of δ we
 
-haveδ(U ∩ Γm) ≤ γ +dγ0 < (dim(W ) +d)γ0 = dim(U )γ0; this contradicts the ﬁrst paragraph.
+have δ(U ∩ Γm) ≤ γ +dγ0 < (dim(W ) +d)γ0 = dim(U )γ0; this contradicts the ﬁrst paragraph.
 
 Note that adding the invertible element dγ0 preserves strict inequalities. □
 
@@ -3710,7 +3710,7 @@ Note that an ⋀-deﬁnable subgroup Γ of G(K) has strict quasi-ﬁnite dimensi
 
 5.9. From now on we assume C is the convex hull of R in R∗ , a ⋁-deﬁnable convex
 
-subgroup. ForY ⊆ X, let µ (Y ) be the unique real number r such that for any rational α ,
+subgroup. For Y ⊆ X, let µ (Y ) be the unique real number r such that for any rational α ,
 
 α |X|> |Y | if α > r and α |X|< |Y | if α < r. Then µ is a deﬁnable measure on deﬁnable
 
@@ -3742,9 +3742,9 @@ by X. Then ˜G/ Γ is bounded. Let S ⊆ Γ be an ⋀-deﬁnable normal subgroup
 
 bounded (Lemma 3.4), and choose a noncentral b ∈ S. Let Y be the deﬁnable set Y =fb(X d).
 
-SinceS is normal, Y ⊆ S. We have δ(Y ) ≥ δ(fb(Γd)) = δ(G), so µ (Y )> 0. Hence S contains a
+Since S is normal, Y ⊆ S. We have δ(Y ) ≥ δ(fb(Γd)) = δ(G), so µ (Y )> 0. Hence S contains a
 
-bounded ﬁnite number of disjoint translates siY of Y , so any s ∈ S lies in siYY − 1 for some i
+bounded ﬁnite number of disjoint translates si Y of Y , so any s ∈ S lies in siYY − 1 for some i
 
 (Ruzsa’s argument.) Hence S = ∪ iYY − 1 is deﬁnable. Since Γ /S is bounded and ⋀-deﬁnable,
 
@@ -3854,11 +3854,11 @@ In general, let Z be the center of L. Then L/Z acts faithfully on the Lie algebr
 
 conjugation, so it embeds into GLd(R). By the linear case, If X is a k-approximate subgroup
 
-of L, then the image of X inL/Z is a k-approximate subgroup of L/Z , so by the linear case it
+of L, then the image of X in L/Z is a k-approximate subgroup of L/Z , so by the linear case it
 
 is contained in boundedly many cosets of a solvable subgroup S/Z . The pullback S of S/Z to
 
-L is d + 2-solvable, and ﬁnitely many cosets of S coverX. □
+L is d + 2-solvable, and ﬁnitely many cosets of S cover X. □
 
 Remarks.
 
@@ -3906,7 +3906,7 @@ Stronger uniformity statements in this direction may give a more pow erful means
 
 of results about saturated models.
 
-Remark 6.1. LetT be a simple theory, or a NIP theory. Then the forking ideal is a n S1-ideal.
+Remark 6.1. Let T be a simple theory, or a NIP theory. Then the forking ideal is a n S1-ideal.
 
 Proof. Let (ai) be an A-indiscernible sequence, and suppose φ(x,a i) does not fork over A. We
 
@@ -3922,7 +3922,7 @@ tp(ai/M ) is constant. By 3-amalgamation we can ﬁnd c independent over M from 
 
 tp(c,a i/M ) = tp(ci,a i/M ). Since tp(ci/M ) = tp(c/M ), c,M are independent over A, so c is
 
-independent from a1,a 2 overA. Hence tp(c′/a 1a2) does not fork A.
+independent from a1,a 2 over A. Hence tp(c′/a 1a2) does not fork A.
 
 NIP case: Let qi be a global type with φ(x,a i) ∈ qi, such that qi does not fork over A. Let
 
@@ -3960,7 +3960,7 @@ Theorem 1.3. See [3].
 
 STABLE GROUP THEORY AND APPROXIMATE SUBGROUPS 41
 
-Lemma 6.2. LetM be a Riemannian manifold, G a topological group acting isometrically and
+Lemma 6.2. Let M be a Riemannian manifold, G a topological group acting isometrically and
 
 transitively on M (the action G × M → M is assumed continuous.) Let B(p0,r ) be a geodesic
 
@@ -3968,7 +3968,7 @@ ball of M , contained in a convex set W . Assume there exists a compact Y ⊆ G 
 
 x,x ′ ∈ B(p0,r ) then for some g ∈ Y we have gx =x′ and ρ(x,g 2x) = 2ρ(x,x ′).
 
-LetU be any open set of diameter <r . Let C be the collection of neighborhoods of p0 of the
+Let U be any open set of diameter <r . Let C be the collection of neighborhoods of p0 of the
 
 form cl(g1U ∩ g2U ). Then C strongly generates the topology at p0.
 
@@ -3980,7 +3980,7 @@ will still have small diameter, and will strongly generate the topology at p0.
 
 Let ¯U be the closure of U , and let δ <r be the diameter of U .
 
-Findpn,q n ∈ U withρ(pn,q n) ≥ δ − 1/n ; and ﬁnd gn ∈ G withgnpn =qn andρ(pn,g 2
+Findpn,q n ∈ U with ρ(pn,q n) ≥ δ − 1/n ; and ﬁnd gn ∈ G withgnpn =qn and ρ(pn,g 2
 
 npn) =
 
@@ -3996,11 +3996,11 @@ follows from uniqueness of the minimizing geodesic between p andg2p that ¯B(p,�
 
 ¯U ⊆ ¯B(q,δ ). From the latter we obtain: g ¯U ⊆ ¯B(g2p,δ ). So ¯U ∩ g ¯U = {q}.
 
-The set U ∩gnU is nonempty, since qn ∈ U ∩gnU . It remains only to show that the diameter
+The set U ∩gn U is nonempty, since qn ∈ U ∩gn U . It remains only to show that the diameter
 
-of U ∩ gnU approaches 0 as n → ∞ .
+of U ∩ gn U approaches 0 as n → ∞ .
 
-Suppose otherwise; then there exist γ > 0, and an,b n ∈ U ∩ gnU such that ρ(an,b n) ≥ γ
+Suppose otherwise; then there exist γ > 0, and an,b n ∈ U ∩ gn U such that ρ(an,b n) ≥ γ
 
 for inﬁnitely many n. We can reﬁne the sequence again to assume an → a,b n → b; we have
 
@@ -4020,7 +4020,7 @@ x− 1x′, and let |u|=ρ(1,u ). Then gx =x′. We have ρ(x,x ′) = ρ(x′,g
 
 somev, where exp is the the exponential map at 1, h2 =exp(2v), and |h2|= |2v|= 2|v|= 2|h|.
 
-Corollary 6.3 (Stabilizer theorem) . LetX be a near-subgoup of G.
+Corollary 6.3 (Stabilizer theorem) . Let X be a near-subgoup of G.
 
 • There exist a ⋁-deﬁnable ˘G and an ⋀-deﬁnable normal subgroup Γ ⊆ ˘G, both deﬁned
 
@@ -4066,7 +4066,7 @@ gU ∩ g′U . The uniformly deﬁnable family is the family of unions D ∪ gD.
 
 6.4. The locally compact Lascar group. Let T be a theory, U a universal domain, ˜E a⋁-deﬁnable equivalence relation, Σ an ⋀-deﬁnable equivalence relation, such that Σ implies ˜E.
 
-LetP be a complete type. Let ˜a be a class of ˜E restricted to P , such that τ = ˜a/ Σ is bounded.
+Let P be a complete type. Let ˜a be a class of ˜E restricted to P , such that τ = ˜a/ Σ is bounded.
 
 Let π : ˜a → ˜a/ Σ be the quotient map. Then ˜ a/ Σ admits a natural locally compact topology,
 
@@ -4108,7 +4108,7 @@ with nu ∈ N,s u ∈ Su. Then su → s and nu → n for some s,n . We have s �
 
 n ∈ N .)
 
-NowL′ is a compact Lie group, so it has no inﬁnite descending sequences of c losed subgroups.
+Now L′ is a compact Lie group, so it has no inﬁnite descending sequences of c losed subgroups.
 
 Thus for some ﬁnite tuple u = (x1,...,x k) we have SuN = N . It follows that τ′ = L′x is a
 
@@ -4308,7 +4308,7 @@ a congruence . Indeed let F be a ﬁnitely generated free algebra in this equati
 
 h :F → E a surjective homomorphism. Let g :F → E/N be the composition F → E → E/N .
 
-SinceE/N is ﬁnitely presented, g has a ﬁnitely generated kernel K. Thus N =h(K) is ﬁnitely
+Since E/N is ﬁnitely presented, g has a ﬁnitely generated kernel K. Thus N =h(K) is ﬁnitely
 
 generated.
 
@@ -4334,11 +4334,11 @@ STABLE GROUP THEORY AND APPROXIMATE SUBGROUPS 45
 
 Proof. Let U be a compact neighborhood of 1 in A. Then π− 1(U ) is contained in a deﬁnable
 
-subsetD of ˘H. U generates an open subgroup of A; this open subgroup is also closed, and must
+subset D of ˘H. U generates an open subgroup of A; this open subgroup is also closed, and must
 
 containA0. On the other hand A/A 0 is generated by ﬁnitely many elements π (h1),...,π (hr).
 
-Let D′ = D ∪ {h1,...,h r}. Since D contains kerπ and π ˘H is generated by π (D′), it follows
+Let D′ = D ∪ {h1,...,h r}. Since D contains ker π and π ˘H is generated by π (D′), it follows
 
 that ˘H is generated by D′.
 
@@ -4348,7 +4348,7 @@ In fact if A/A 0 is m-generated, the proof shows that ˘H is generated by Y alon
 
 additional elements, whenever Y is a deﬁnable set containing Γ.
 
-Lemma 7.4. LetG be a suﬃciently saturated group (with additional structure ),H a deﬁnable
+Lemma 7.4. Let G be a suﬃciently saturated group (with additional structure ),H a deﬁnable
 
 normal subgroup with G/H Abelian. Let ˘G be a ⋁-deﬁnable subgroup of G, Γ a ⋀-deﬁnable
 

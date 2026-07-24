@@ -1,20 +1,20 @@
 {
   "balanced_content": {
     "axis": "content",
-    "geometric": 5000,
-    "algebraic": 5000,
-    "total": 10000,
-    "n_verified": 2227,
-    "n_pseudo_labeled": 7015,
-    "n_textbook": 758
+    "geometric": 2022,
+    "algebraic": 2022,
+    "total": 4044,
+    "n_verified": 3155,
+    "n_pseudo_labeled": 0,
+    "n_textbook": 889
   },
   "balanced_style": {
     "axis": "style",
     "geometric": 5000,
     "algebraic": 5000,
     "total": 10000,
-    "n_verified": 2196,
-    "n_pseudo_labeled": 7127,
-    "n_textbook": 677
+    "n_verified": 9489,
+    "n_pseudo_labeled": 0,
+    "n_textbook": 511
   }
 }

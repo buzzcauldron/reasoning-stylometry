@@ -1680,7 +1680,7 @@ Given two subsets X,Y of ˜G, let
 
 X × nf Y = {(a,b ) ∈ X × Y :tp(b/M (a)) does not fork over M }
 
-Let Q = {a− 1b : (a,b ) ∈ q × nfq}. Let J be as in Remark (4) (or just set J =µ for the basic
+Let Q = {a− 1b : (a,b ) ∈ q × nf)}. Let J be as in Remark (4) (or just set J =µ for the basic
 
 statement of the theorem), and set Q′ = {a− 1b :a,b ∈ q,tp (b/Ma ) is J-wide}.
 
@@ -1760,7 +1760,7 @@ c2 ∈ Q′, there exists a′
 
 2/M ) = p2; extend r
 
-to aJ-wide typer′ over M (a0,a 1), and let a2 |=r′. We thus have (a0,a 1,a 2) ∈ (q×q)× nfq, with
+to aJ-wide typer′ over M (a0,a 1), and let a2 |=r′. We thus have (a0,a 1,a 2) ∈ (q×q)× nf), with
 
 tp(a− 1
 
@@ -1898,7 +1898,7 @@ We know at this point that S has no proper ⋀-deﬁnable over M subgroups of bo
 
 Let r be a type of elements of X ∪ X− 1 over M . There cannot exist an unbounded family of
 
-cosets ai S with ai ∈ r, for then the sets aibq would also be disjoint for any b ∈ q− 1, so for
+cosets ai S with ai ∈ r, for then the sets aib) would also be disjoint for any b ∈ q− 1, so for
 
 some deﬁnable X′ with q ⊂ X′ ⊂ X the sets aib X′ can be taken disjoint, contradicting the S1
 
@@ -1916,7 +1916,7 @@ a large collection of disjoint sets of the form aic S, with ai ∈ q. Pick b0 �
 
 sets aicSb− 1
 
-0 are also disjoint, hence so are the aicq− 1. Thus there exists a deﬁnable X′ ⊂ X
+0 are also disjoint, hence so are the aic)− 1. Thus there exists a deﬁnable X′ ⊂ X
 
 with aic(X′)− 1 disjoint. So the sets Xc− 1a− 1
 
@@ -1934,13 +1934,13 @@ S, i.e. S is normal in ˜G.
 
 At this point we begin using left invariance freely.
 
-We argued above thatq− 1q is wide; in particular S is wide. Q is also wide: suppose otherwise.
+We argued above that)− 1q is wide; in particular S is wide. Q is also wide: suppose otherwise.
 
 So Q ⊆ D for some deﬁnable D with µ (D) = 0. Let a ∈ q. Then a− 1q is wide. So a− 1q ∖D is
 
 wide. However q ∖aD forks over M , since if b ∈ q ∖aD thena− 1b /∈ Q sotp(b/M (a)) forks over
 
-M . Thus D′ ∖aD lies in the forking ideal, for some deﬁnable D′ containingq. By Lemma 2.9
+M . Thus D′ ∖aD lies in the forking ideal, for some deﬁnable D′ containing). By Lemma 2.9
 
 we have µ (D′ ∖aD) = 0; so µ (a− 1D′ ∖D) = 0. It follows that µ (a− 1D′) = 0 and µ (D′) = 0,
 

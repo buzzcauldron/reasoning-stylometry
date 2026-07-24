@@ -1,5 +1,28 @@
 # Expert v4 metadata for four JAMS quadrant papers (independent of stylo).
 
+# Wilson score interval for a binomial proportion -- used across rolling-
+# classification scripts to decide whether a rolling majority is a real lean
+# or a coin toss, rather than just picking whichever side has more slices
+# (a 51/49 split on 20 slices is not a meaningful "majority", it's noise).
+wilson_ci <- function(k, n, z = 1.96) {
+  if (n <= 0) return(c(NA_real_, NA_real_))
+  p <- k / n
+  denom <- 1 + z^2 / n
+  centre <- (p + z^2 / (2 * n)) / denom
+  margin <- z * sqrt((p * (1 - p) + z^2 / (4 * n)) / n) / denom
+  c(max(0, centre - margin), min(1, centre + margin))
+}
+
+# "coin_toss" whenever the 95% Wilson CI for the geometric share straddles
+# 0.5 -- i.e. the rolling result can't distinguish this paper from a fair
+# coin at that slice count. Otherwise, whichever side has the majority.
+rolling_label <- function(n_geo, n_total) {
+  if (n_total == 0) return("coin_toss")
+  ci <- wilson_ci(n_geo, n_total)
+  if (ci[1] <= 0.5 && ci[2] >= 0.5) return("coin_toss")
+  if (n_geo / n_total > 0.5) "geometric" else "algebraic"
+}
+
 STEM_TO_ROLLING <- c(
   "geometric__geometric_style__masur_schleimer" = "geometric__geometric_style__masur_schleimer_disk_complex",
   "geometric__algebraic_style__bateman_katz" = "geometric__algebraic_style__bateman_katz_cap_sets",

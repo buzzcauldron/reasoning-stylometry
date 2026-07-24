@@ -1,11 +1,21 @@
 # Classify four JAMS quadrant papers on TWO independent axes — content (topic)
 # and style (reasoning presentation) — against independently-labeled reference
-# corpora. Content uses stopword-only stylo features; style uses MFW-500 word
-# unigrams, per the config sweep (scripts/run_one_stylo_config.R and friends,
-# 2026-07-16) that found this the only config beating the stopword baseline on
-# BOTH leave-one-out accuracy (56.8% vs 54.3%) and JAMS holdout accuracy (3/4
-# vs 1/4) simultaneously. No content-axis config cleared that bar on both
-# metrics at once, so content keeps the stopword baseline.
+# corpora. Content uses stopword-only stylo features. Style uses a fixed list
+# of 147 function words (corpus_classify/style_function_words.txt) derived
+# 2026-07-17 by POS-tagging balanced_style/ with spaCy, keeping only
+# closed-class function words (DET/PRON/ADP/CCONJ/SCONJ/AUX/PART), and
+# requiring membership in a curated reference lexicon (spaCy's own
+# Defaults.stop_words) to reject corpus-specific noise. That two-step filter
+# replaced an earlier MFW-500 raw-word-unigram config: MFW-500 also beat the
+# stopword baseline (56.8% LOO / 3-4 JAMS vs 54.3% / 1-4) but on inspection
+# its lower-ranked features were real content vocabulary (morphisms,
+# embedding, surjective, differential, complexes, ...) -- i.e. it was
+# partly re-learning TOPIC, which is exactly what splitting content/style
+# scoring exists to avoid. The 147-word list nearly matches MFW-500's
+# accuracy (56.2% LOO / 3/4 JAMS) while being provably free of that leakage.
+# No content-axis config (raw MFW-500, POS-filtered topic nouns by
+# frequency, or by keyness) beat the stopword baseline on both LOO and JAMS
+# at once, so content keeps the stopword baseline.
 #
 # Content and style used to be the same label by construction (see
 # corpus_classify/CORPUS.md and scripts/retag_content_style.py for the history).
@@ -31,8 +41,8 @@ out_dir <- "output/jams_quadrant"
 dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
 
 content_stylo_args <- list(
-  mfw = length(stopword_list),
-  culling = 0,
+  mfw.min = length(stopword_list), mfw.max = length(stopword_list), mfw.incr = 100,
+  culling.min = 0, culling.max = 0, culling.incr = 20,
   features = stopword_list,
   classification.method = "delta",
   analyzed.features = "w",
@@ -41,13 +51,20 @@ content_stylo_args <- list(
 
 # NOTE on parameter names: classify()'s real MFW/culling knobs are
 # mfw.min/mfw.max/mfw.incr and culling.min/culling.max/culling.incr -- a
-# plain mfw=/culling= is silently absorbed into `...` and ignored (confirmed
-# empirically during the sweep). content_stylo_args above gets away with the
-# plain names only because passing an explicit `features=` list bypasses MFW
-# ranking entirely; this config has no `features=`, so it needs the real names.
+# plain mfw=/culling= is silently absorbed into `...` and ignored. Passing an
+# explicit `features=` list does bypass MFW *ranking*, but NOT culling: with
+# only the fake names set, the real culling.min/culling.max actually applied
+# fall back to whatever's cached in classify_config.txt (a git-tracked
+# per-project settings file classify() reads/writes) from the last call
+# anywhere that used the real names -- confirmed to silently filter the
+# 147-word style list down to a fraction of itself when a stale 20%-culling
+# value was cached (see 2026-07-22 investigation). Set the real names
+# explicitly below so this can never depend on ambient/cached state.
+style_word_list <- readLines("corpus_classify/style_function_words.txt")
 style_stylo_args <- list(
-  mfw.min = 500, mfw.max = 500, mfw.incr = 100,
-  culling.min = 20, culling.max = 20, culling.incr = 20,
+  mfw.min = length(style_word_list), mfw.max = length(style_word_list), mfw.incr = 100,
+  culling.min = 0, culling.max = 0, culling.incr = 20,
+  features = style_word_list,
   classification.method = "delta",
   analyzed.features = "w",
   ngram.size = 1
@@ -141,7 +158,7 @@ style_rolling <- list()
 for (path in paper_files) {
   stem <- sub("\\.txt$", "", basename(path))
   content_rolling[[stem]] <- run_rolling_one(CONTENT_TRAIN_DIR, path, paste0("content_", stem), content_stylo_args, "stopwords")
-  style_rolling[[stem]] <- run_rolling_one(STYLE_TRAIN_DIR, path, paste0("style_", stem), style_stylo_args, "mfw500_word1gram")
+  style_rolling[[stem]] <- run_rolling_one(STYLE_TRAIN_DIR, path, paste0("style_", stem), style_stylo_args, "pos_filtered_function_words")
 }
 
 rolling_summary <- function(rolling_results) {
@@ -149,11 +166,13 @@ rolling_summary <- function(rolling_results) {
     r <- rolling_results[[name]]
     counts <- as.list(sort(table(as.character(r$classification.results)), decreasing = TRUE))
     total <- sum(unlist(counts))
+    n_geo <- if ("geometric" %in% names(counts)) counts[["geometric"]] else 0
     list(
       counts = counts,
-      share_geometric = if ("geometric" %in% names(counts)) round(counts[["geometric"]] / total, 4) else 0,
+      share_geometric = if (total > 0) round(n_geo / total, 4) else 0,
       share_algebraic = if ("algebraic" %in% names(counts)) round(counts[["algebraic"]] / total, 4) else 0,
-      n_slices = as.integer(total)
+      n_slices = as.integer(total),
+      label = rolling_label(n_geo, total)
     )
   }) |> setNames(names(rolling_results))
 }
@@ -162,15 +181,22 @@ axis_accuracy <- function(full_result, excerpt_result, rolling_results, expert_l
   whole_pred <- setNames(as.character(full_result$predicted), rownames(full_result$frequencies.test.set))
   rolling_share <- rolling_summary(rolling_results)
   whole_match <- whole_pred[names(expert_labels)] == expert_labels
-  rolling_match <- vapply(names(rolling_share), function(stem) {
+  # Three-way outcome per paper: "correct", "wrong", or "coin_toss" (not
+  # counted as either -- a coin toss is not a wrong guess, it's an honest
+  # "the rolling data doesn't support calling this paper either way").
+  rolling_outcome <- vapply(names(rolling_share), function(stem) {
     r <- rolling_share[[stem]]
-    pred <- if (r$share_geometric > r$share_algebraic) "geometric" else "algebraic"
-    pred == expert_labels[stem]
-  }, logical(1))
+    if (r$label == "coin_toss") return("coin_toss")
+    if (r$label == expert_labels[stem]) "correct" else "wrong"
+  }, character(1))
+  rolling_match <- rolling_outcome == "correct"
   weights <- EXPERT_LABEL_CONFIDENCE[names(expert_labels)]
   list(
     whole_paper = sum(whole_match),
     rolling_majority = sum(rolling_match),
+    rolling_coin_toss = sum(rolling_outcome == "coin_toss"),
+    rolling_wrong = sum(rolling_outcome == "wrong"),
+    rolling_outcome_by_paper = as.list(rolling_outcome),
     # Confidence-weighted: a correct/incorrect call on a paper with weaker
     # rater agreement (afc_consistency < 1) counts for less than a unanimous
     # one, out of a max possible score of sum(weights) rather than n=4.
@@ -247,8 +273,10 @@ summary <- list(
 saveRDS(summary, file.path(out_dir, "jams_quadrant_summary.rds"))
 cat("\nDone. Outputs in", out_dir, "\n")
 cat("Content accuracy: whole-paper", export$content$accuracy$whole_paper, "/4, rolling", export$content$accuracy$rolling_majority, "/4",
+    sprintf("(+%d coin toss, %d wrong)", export$content$accuracy$rolling_coin_toss, export$content$accuracy$rolling_wrong),
     "(weighted", export$content$accuracy$whole_paper_weighted, "/", export$content$accuracy$max_possible_weighted, ")\n")
 cat("Style accuracy:   whole-paper", export$style$accuracy$whole_paper, "/4, rolling", export$style$accuracy$rolling_majority, "/4",
+    sprintf("(+%d coin toss, %d wrong)", export$style$accuracy$rolling_coin_toss, export$style$accuracy$rolling_wrong),
     "(weighted", export$style$accuracy$whole_paper_weighted, "/", export$style$accuracy$max_possible_weighted, ")\n")
 cat("Joint quadrant (both axes correct):", export$quadrant_accuracy, "/4\n")
 cat("Note: expert labels are contested judgments, not ground truth -- see afc_consistency per paper (R/jams_metadata.R)\n")

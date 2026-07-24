@@ -1,0 +1,158 @@
+arXiv:1502.00947v2  [math.CO]  13 Nov 2015
+Counterexamples to the topological Tverberg conjecture
+Florian Frick
+The “topological Tverberg conjecture” states that for given int egers r ≥ 2,
+d ≥ 1, N = (r − 1)(d + 1), and for any continuous map f : ∆ N → Rd from the N simplex ∆ N into Rd there are r pairwise disjoint faces σ1, . . . , σr of ∆ N such that
+f (σ1) ∩ · · · ∩f (σr) ̸= ∅. This holds if f is an affine map: this is a reformulation of
+Tverberg’s original theorem [ 9]. The conjecture for continuous f was introduced,
+and proven for r a prime, by B ́ ar ́ any, Shlosman and Sz ̋ ucs [1], and later extended
+to the case when r is a prime power by  ̈Ozaydin [ 7]. The conjecture is trivial for
+d = 1. All other cases have remained open. According to Matouˇ sek [ 6, p. 154],
+the validity of the conjecture for general r is one of the most challenging problems
+in topological combinatorics.
+Here we prove the existence of counterexamples to the topologica l Tverberg
+conjecture for any r that is not a power of a prime and dimensions d ≥ 3r + 1.
+Our construction builds on recent work of Mabillard and Wagner [ 5], from which we
+first obtain counterexamples to r-fold versions of the van Kampen–Flores theorem.
+Counterexamples to the topological Tverberg conjecture are th en obtained by an
+additional application of the constraint method of Blagojevi ́ c, Zie gler and the
+author [ 3].
+In the conference proceedings version [ 5] Mabillard and Wagner announced the
+generalized van Kampen theorem together with an extended sketc h of its proof;
+a full version of the paper is forthcoming. To state the generalized van Kampen
+theorem, we first need to fix some notation. We refer to Matouˇ se k [ 6] for further
+explanations. For a simplicial complex K denote by
+K ×r
+∆(2) = {(x1, . . . , xr) ∈ σ1 × · · · ×σr |σi face of K, σi ∩ σj = ∅ ∀ i ̸= j}
+the 2-wise deleted product of K and by K (d) the d-skeleton of K. The space K ×r
+∆(2)
+is a polytopal cell complex in a natural way (its faces are products o f simplices).
+Denote by Wr the vector space {(x1, . . . , xr) ∈ Rr | ∑ xi = 0} with the action by
+the symmetric group Sr that permutes coordinates.
+Theorem 1 (Mabillard & Wagner [5, Theorem 3]). Suppose that r ≥ 2, k ≥ 3, and
+let K be a simplicial complex of dimension (r − 1)k. Then the following statements
+are equivalent:
+(i) There exists an Sr-equivariant map K ×r
+∆(2) → S(W ⊕rk
+r ).
+(ii) There exists a continuous map f : K → Rrk such that for any r pairwise
+disjoint faces σ1, . . . , σr of K we have f (σ1) ∩ · · · ∩f (σr) = ∅.
+An important result on the existence of equivariant maps was shown by  ̈Ozaydin.
+Lemma 2 (  ̈Ozaydin [ 7, Lemma 4.1]) . Let d ≥ 3 and G be a finite group. Let X
+be a d-dimensional free G-CW complex and let Y be a (d − 2)-connected G-CW
+complex. There is a G-map X → Y if and only if there are Gp-maps X → Y for
+every Sylow p-subgroup Gp, p prime.
+1
+ ̈Ozaydin uses this result to prove the existence of Sr-equivariant maps
+(∆(r−1)(d+1))×r
+∆(2) → S(W ⊕d
+r )
+for r not a prime power. An initial motivation for Mabillard and Wagner was to use
+such a map to construct counterexamples to the topological Tver berg conjecture
+via r-fold versions of the Whitney trick. However, for their approach t o work they
+need codimension k ≥ 3. Here we first derive counterexamples to r-fold versions
+of the van Kampen–Flores theorem, which is a Tverberg-type stat ement with a
+bound on the dimension of faces, see Corollary 3, from the result of Mabillard
+and Wagner and  ̈Ozaydin’s work, and eventually obtain counterexamples to the
+topological Tverberg conjecture by a combinatorial reduction.
+Corollary 3. Let r ≥ 6 be an integer that is not a prime power and k ≥ 3 an
+integer. Then for any N there exists a continuous map f : ∆ N → Rrk such that
+for any r pairwise disjoint faces σ1, . . . , σr of ∆N with dim σi ≤ (r − 1)k we have
+f (σ1) ∩ · · · ∩f (σr) = ∅.
+Proof. Let K = ∆ ((r−1)k)
+N denote the ((r− 1)k)-dimensional skeleton of the simplex
+∆N on N + 1 vertices. We only need to construct f on K and extend continuously
+to ∆ N in an arbitrary way. By Theorem
+1 we need to show that there exists an
+Sr-equivariant map K ×r
+∆(2) → S(W ⊕rk
+r ). The reasoning is the same as in [ 7, Proof
+of Theorem 4.2]: the free Sr-space K ×r
+∆(2) has dimension at most d = r(r − 1)k,
+and S(W ⊕rk
+r ) ∼
+= S(r−1)rk−1 is ( d − 2)-connected. By Lemma
+2 the existence of
+an Sr-map K ×r
+∆(2) → S(W ⊕rk
+r ) reduces to the existence of equivariant maps for
+Sylow p-subgroups, but p-groups have fixed points in S(W ⊕rk
+r ) for r not a prime
+power by [ 7, Lemma 2.1], so a constant map will do. □
+The existence of the Sr-equivariant map K ×r
+∆(2) → S(W ⊕rk
+r ) also follows immediately from [ 7, Theorem 4.2] by observing that an n-dimensional, finite, free
+Sr-complex always admits an equivariant map into an ( n− 1)-connected Sr-space,
+see for example Matouˇ sek [6, Lemma 6.2.2].
+Any r generic affine subspaces of dimension ( r − 1)k in Rrk intersect in a point
+by codimension reasons. Here we see that a continuous map ∆ ((r−1)k)
+N → Rrk can
+avoid this intersection, and indeed a map without any such intersect ion exists for
+any N , but only if r is not a prime power. Volovikov [ 10] proved that a map as
+postulated by Corollary 3 does not exist if r is a prime power and N ≥ (r− 1)(d+2)
+— the case r prime was proved by Sarkaria [ 8]; see [ 3] for more general results
+with significantly simplified proofs.
+The map f in Corollary 3 could not be constructed if the topological Tverberg
+conjecture were true, since the validity of the topological Tverbe rg conjecture
+would imply such an intersection result for faces of bounded dimensio n by the
+constraint method. For the sake of completeness we will present a construction
+that does not rely on [ 3].
+Theorem 4 (The topological Tverberg conjecture fails) . Let r ≥ 6 be an integer
+that is not a prime power, and let k ≥ 3 be an integer. Let N = ( r − 1)(rk + 2).
+Then there exists a continuous map F : ∆ N → Rrk+1 such that for any r pairwise
+disjoint faces σ1, . . . , σr of ∆N we have F (σ1) ∩ · · · ∩F (σr) = ∅.
+2
+Proof. Let f : ∆ N → Rrk be a continuous map as constructed in Corollary 3, that
+is, such that for any r pairwise disjoint faces σ1, . . . , σr of ∆ N with dim σi ≤
+(r − 1)k we have f (σ1) ∩ · · · ∩ f (σr) = ∅. Define F : ∆ N → Rrk+1, x ↦→
+(f (x), dist(x, ∆((r−1)k)
+N )). Suppose there were r pairwise disjoint faces σ1, . . . , σr
+of ∆ N such that there are points xi ∈ σi with F (x1) = · · ·= F (xr). By restricting
+to subfaces if necessary we can assume that xi is in the relative interior of σi.
+Then all the xi have the same distance to the ( r − 1)k-skeleton of ∆ N .
+Suppose all σi had dimension at least ( r − 1)k + 1. Then these faces would
+involve at least r((r − 1)k + 2) = ( r − 1)(rk + 2) + 2 > N + 1 vertices. Thus, one
+face σj has dimension at most ( r − 1)k and dist( xj, ∆((r−1)k)
+N ) = 0. But then we
+have dist(xi, ∆((r−1)k)
+N ) = 0 for all i, so xi ∈ ∆((r−1)k)
+N and thus σi ⊆ ∆((r−1)k)
+N for
+all i. This contradicts our assumption on f . □
+If the topological Tverberg conjecture holds for r pairwise disjoint faces and
+dimension d + 1, then it also holds for dimension d and the same number of
+faces. Thus, we are only interested in low-dimensional counterexa mples. If r is
+not a prime power then the topological Tverberg conjecture fails f or dimensions
+3r + 1 and above. Hence, the smallest counterexample this construct ion yields is a
+continuous map ∆ 100 → R19 such that any six pairwise disjoint faces have images
+that do not intersect in a common point.
+Update November 2015. This and further applications of these methods can now
+be found in [
+2]. The full version of Mabillard and Wagner’s extended abstract [ 5]
+along with further constructions and a lower-dimensional counter example is now
+available [4].
+Acknowledgements. I am grateful to Pavle Blagojevi ́ c and G ̈ unter M. Ziegler for
+many insightful discussions. I would like to thank John M. Sullivan and U li Wagner
+for improving the exposition of this manuscript with several good co mments and
+suggestions. Research supported by DFG via the Berlin Mathematic al School.
+References
+[1] I. B ́ ar ́ any, S. B. Shlosman, and A. Sz ̋ ucs,On a topological generalization of a theorem of
+Tverberg, J. Lond. Math. Soc. 2 (1981), no. 1, 158–164.
+[2] P. V. M. Blagojevi ́ c, F. Frick, and G. M. Ziegler, Barycenters of Polytope Skeleta and
+Counterexamples to the Topological Tverberg Conjecture, v ia Constraints, Preprint, 6 pages,
+October 2015, arXiv:1510.07984.
+[3] , Tverberg plus constraints , Bull. Lond. Math. Soc. 46 (2014), no. 5, 953–967.
+[4] I. Mabillard and U. W agner, Eliminating Higher-Multiplicity Intersections, I. A Whit ney
+Trick for Tverberg-Type Problems , Preprint, 46 pages, arXiv:1508.02349, August 2015.
+[5] , Eliminating Tverberg Points, I. An Analogue of the Whitney T rick, Proceedings
+of the Thirtieth Annual Symposium on Computational Geometr y (New York, NY, USA),
+SOCG’14, ACM, 2014, pp. 171–180.
+[6] J. Matouˇ sek, Using the Borsuk–Ulam Theorem. Lectures on Topological Met hods in Combinatorics and Geometry , Universitext, Springer-Verlag, 2003.
+[7] M.  ̈Ozaydin, Equivariant maps for the symmetric group , unpublished, 17 pages, available
+online at http://minds.wisconsin.edu/handle/1793/6382 9, 1987.
+[8] P. Sarkaria, A generalized van Kampen–Flores theorem , Proc. Amer. Math. Soc. 111 (1991),
+no. 2, 559–565.
+[9] H. Tverberg, A generalization of Radon ’s theorem, J. Lond. Math. Soc. 41 (1966), 123–128.
+[10] A. Yu. Volovikov, On the van Kampen–Flores theorem , Math. Notes 59 (1996), no. 5, 477–
+481.
+3

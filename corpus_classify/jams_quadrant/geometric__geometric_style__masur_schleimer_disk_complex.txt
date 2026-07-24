@@ -3082,7 +3082,7 @@ greater than L0.
 
 Proof of Proposition 14.2. To prove the ﬁrst claim: Suppose that IY =
 
-[p,q ] andIY ′ = [p′,q′] withq <p′. It follows that [r(p),r (q′)]⊂JY∩JY ′.
+[p,q ] andIY ′ = [p′,q′] with) <p′. It follows that [r(p),r (q′)]⊂JY∩JY ′.
 
 If q + 1 =p′ then the partition would have chosen a larger inductive
 
@@ -3964,7 +3964,7 @@ The foliation by lines x =c is called the vertical foliation.
 
 Now ﬁx a quadratic diﬀerential q on Σ = Σ 0. Let x,y be natural
 
-coordinates forq. For every t∈ R we obtain a new quadratic diﬀerential
+coordinates for). For every t∈ R we obtain a new quadratic diﬀerential
 
 qt with coordinates
 
@@ -3972,7 +3972,7 @@ xt =etx, y t =e−ty.
 
 Also, qt determines a conformal structure Σ t on S. The map t↦→ Σt is
 
-the Teichm¨ uller geodesic determined by Σ andq.
+the Teichm¨ uller geodesic determined by Σ and).
 
 15.2. Marking coming from a Teichm¨ uller geodesic. Suppose
 

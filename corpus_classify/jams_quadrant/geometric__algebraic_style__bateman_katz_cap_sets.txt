@@ -2674,7 +2674,7 @@ N1+α−f(ϵ) representations. In light of the nonadditive smoothing property of
 
 have that|K| ≲ N1+f(ϵ) since there can be at mostN11−4α+f(ϵ) quadruplets among
 
-elements of D. We may eliminate all elementsq of eachKj for which Δ∩q +Xj
+elements of D. We may eliminate all elements) of eachKj for which Δ∩q +Xj
 
 does not have size at leastN2−α−f(ϵ). Now we let K′ be the set of elements of
 

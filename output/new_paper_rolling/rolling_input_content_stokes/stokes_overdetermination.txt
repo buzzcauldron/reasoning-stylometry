@@ -1,0 +1,2254 @@
+Academic Editor: Dhananjay Gopal
+Received: 9 March 2026
+Revised: 14 April 2026
+Accepted: 17 April 2026
+Published: 22 April 2026
+Copyright: © 2026 by the authors.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed under the terms and
+conditions of the Creative Commons
+Attribution (CC BY) license.
+Article
+Existence of Solutions to the Nonstationary Stokes System with
+a Nonlinear Overdetermination Condition
+Vytautas Baˇ cianskas and Kristina Kaulakyt ̇e *
+Institute of Applied Mathematics, Faculty of Mathematics and Informatics, Vilnius University,
+Naugarduko Str., 24, LT-03225 Vilnius, Lithuania; vytautas.bacianskas@mif.stud.vu.lt
+* Correspondence: kristina.kaulakyte@mif.vu.lt
+Abstract
+In this paper, we study an inverse problem for the nonstationary Stokes system in a
+bounded domain Ω with a nonlinear integral overdetermination condition, describing the
+kinetic energy E(t) of the fluid. We construct two classes of solutions: weak and very weak.
+In the case where the kinetic energy E belongs to W1
+2 (0, T), we construct weak solutions. If
+E belongs only to L2(0, T), we construct very weak solutions.
+Keywords: inverse problem; nonstationary Stokes system; very weak solution; primitive
+function; Lebesgue points
+MSC: 35R30
+1. Introduction
+The Stokes system represents a special case of the Navier–Stokes equations in which
+inertial effects are negligible compared with viscous forces. Although the nonlinear convective term is omitted, the Stokes equations still describe a wide range of physically
+significant flows and remain widely used in various applications. In this paper, we focus
+on the nonstationary Stokes system describing the flow of a viscous incompressible fluid.
+Suppose that Ω ⊂ Rd, d = 2, 3, is a bounded domain with Lipschitz boundary ∂Ω and
+T is a finite positive real number. We denote ΩT = Ω × (0, T) and ST = ∂Ω × (0, T). The
+classical Stokes problem is to find the velocity vector field u and the pressure p satisfying
+
+
+
+ρut(x, t) − ν∆u(x, t) + ∇p(x, t) = ρ f (x, t), (x, t) ∈ ΩT,
+div u = 0, (x, t) ∈ ΩT,
+u
+
+ST
+= 0, u(x, 0) = u0(x), x ∈ Ω,
+(1)
+where f describes the external forces, u0 is the initial condition, ν > 0 is the constant
+coefficient of kinematic viscosity, and ρ > 0 is the density of the fluid. Since we consider an
+incompressible fluid, the density ρ is constant, and without loss of generality, we assume
+that ρ ≡ 1. Notice that in the classical formulation, both f and u0 are prescribed functions.
+In this case, the solvability of problem (1) is well known and can be found in [1].
+In addition to the classical Stokes problem, it is possible to formulate inverse problems
+where f is treated as an unknown and must be determined as part of the solution. For such
+a problem to be well posed, an additional condition is required. Most existing results on
+inverse problems involve a linear integral condition given by
+Mathematics 2026, 14, 1402 https://doi.org/10.3390/math14091402
+Mathematics 2026, 14, 1402 2 of 18
+Z
+Ω
+u(x, t) · ω(x)dx = F(t) ∀t ∈ [0, T], F(0) =
+Z
+Ω
+u0(x) · ω(x)dx, (2)
+where ω and F are known functions. In many papers (see [2–13]), the authors assume that
+the function F is sufficiently smooth (for instance,F ∈ W1
+2 (0, T)). However, in [14,15], the
+solvability of a Poiseuille type inverse problem(1) with a linear integral side condition (similar
+to (2)) was also proved under minimal regularity on F, i.e., assuming that F ∈ L2(0, T) only .
+In this work, we consider the Stokes problem (1) together with a nonlinear condition
+as follows: Z
+Ω
+|u(x, t)|2dx = E2(t) ∀t ∈ [0, T], E(0) = ∥u0∥L2(Ω), (3)
+where E is a given function. In [16], the inverse problem for the heat equation with nonlinear condition (3) was considered assuming that the function E belongs to the Sobolev
+space W1
+2 (0, T). Problem (1), (3) can be seen as a generalization of [16] to the vector-valued
+case where nonlinear condition (3) becomes a specification of kinetic energy 1
+2 ∥u(·, t)∥2
+L2(Ω)
+at time t. Thus, this formulation has a clear physical interpretation: we look for the flow
+velocity u, pressure p, and external forces f such that the described flow has the prescribed kinetic energy. Therefore, the recovered force is constructed within a specific
+admissible class tailored to the prescribed energy profile. In [16], the authors constructed
+solutions (u, f ) such that u and ut belong to L2(0, T; L2(Ω)), while f ∈ L2(0, T; W−2
+2 (Ω)).
+In the present paper, we investigate the Stokes problem in two cases. For the case when
+E ∈ W1
+2 (0, T), we construct the classical weak solutions, while for the case when E belongs
+only to L2(0, T), we use a different approach compared with previous works and construct
+very weak solutions (defined in a similar way as in [ 15]) such that u and ∇u belong to
+L2(0, T; L2(Ω)), while f belongs to a certain dual space.
+The novelty of the paper lies in the combination of several aspects. While linear
+overdetermination conditions for the Stokes system and nonlinear energy-type conditions
+for scalar equations have been studied previously, the present paper treats a nonlinear
+integral overdetermination condition in the context of the nonstationary Stokes system. In
+particular, we develop a framework for constructing weak and very weak solutions under
+low regularity assumptions on the prescribed energy function E, which, to the best of our
+knowledge, has not been studied in this setting.
+Throughout most of the paper, it is assumed that u0 is not identically equal to 0 so that
+the norm ∥u0∥L2(Ω) is positive. The case when u0 ≡ 0 is treated in a similar way, so it will
+be discussed briefly at the end of this paper.
+2. Notation and Auxiliary Results
+2.1. Function Spaces
+We introduce some notations that are used in this paper. First, suppose that G ⊂ Rd,
+d = 2, 3, is a bounded open domain with a Lipschitz boundary. Let C∞(G) denote the space
+of all infinitely differentiable (smooth) functions defined on a set G, and let C∞
+0 (G) ⊂ C∞(G)
+be the subspace of compactly supported functions, whose supports are contained in G.
+For p ≥ 1, we use the usual notation for Lebesgue spaces Lp(G), consisting of measurable
+functions u with a finite norm ∥u∥Lp(G) =
+R
+G |u(x)|pdx
+ 1
+p , and Sobolev spaces Wk
+p(G),
+consisting of functions having all weak derivatives of order |α| ≤ k, such that the norm
+∥u∥Wkp(G) =
+
+∑|α|≤k ∥Dαu(x)∥p
+Lp(G)
+ 1
+p
+is finite. Here, α is a multi-index and Dα is the weak
+partial derivative of order |α|. Additionally, the subspace  ̊Wk
+p(G) is defined as the closure
+of C∞
+0 (G) in the norm of Wk
+p(G). In the case when p = 2, the spaces L2(G), Wk
+2 (G), and
+ ̊Wk
+2 (G) are also Hilbert spaces.
+https://doi.org/10.3390/math14091402
+Mathematics 2026, 14, 1402 3 of 18
+Vector-valued functions are denoted by bold letters. For a normed space V, we write
+u ∈ V to indicate that each component of u = ( u1, u2, . . ., ud) belongs to V. Moreover,
+we define
+∇u · ∇v =
+d
+∑
+i=1
+d
+∑
+j=1
+∂ui
+∂xj
+∂vi
+∂xj
+.
+If u ∈ V, then ∥u∥2
+V = ∑d
+i=1 ∥ui∥2
+V and ∥∇u∥2
+V = ∑d
+i=1 ∑d
+j=1
+ ∂ui
+∂xj
+
+2
+V
+. The dual space of V is
+denoted as V∗ and ⟨·, ·⟩ denotes the duality pairing between V and V∗. If H is a Hilbert
+space, the scalar product between u ∈ H and v ∈ H is written as ⟨u, v⟩H. It will be clear
+from the context whether the angle brackets refer to the scalar product or to the pairing
+of a normed space and its dual. The (weak) divergence of u = ( u1, u2, . . ., ud) is defined
+as div u = ∑d
+i=1
+∂ui
+∂xi
+. We use the following spaces that consist of vector-valued functions
+u : G → Rd:
+D(G) is the space  ̊W1
+2 (G) with the equivalent norm ∥u∥D(G) = ∥∇u∥L2(G);
+J∞
+0 (G) is the space of functions u ∈ C∞
+0 (G) such that div u = 0;
+J(G) is the closure of the set J∞
+0 (G) with respect to the L2(G) norm;
+H(G) is the closure of the set J∞
+0 (G) with respect to the D(G) norm.
+Lastly, we use spaces that incorporate both time and space. Let0 < T < ∞ be a real number
+and denote GT = G × (0, T), and ST = ∂G × (0, T). The spaces W0,1
+2 (GT), W1,0
+2 (GT) and
+W1,1
+2 (GT) are defined similarly to Sobolev spaces, i.e.,
+W0,1
+2 (GT) = {u ∈ L2(GT) : ut ∈ L2(GT)}, ∥u∥W0,1
+2 (GT ) =
+
+∥u∥2
+L2(GT ) + ∥ut∥2
+L2(GT )
+ 1
+2
+;
+W1,0
+2 (GT) = {u ∈ L2(GT) : uxi ∈ L2(GT), 1 ≤ i ≤ d}, ∥u∥W1,0
+2 (GT ) =
+
+∥u∥2
+L2(GT ) + ∥∇u∥2
+L2(GT )
+ 1
+2
+;
+W1,1
+2 (GT) = W0,1
+2 (GT) ∩ W1,0
+2 (GT), ∥u∥W1,1
+2 (GT ) =
+
+∥u∥2
+L2(GT ) + ∥∇u∥2
+L2(GT ) + ∥ut∥2
+L2(GT )
+ 1
+2
+.
+Spaces  ̊W1,0
+2 (GT) and  ̊W1,1
+2 (GT) are subspaces of W1,0
+2 (GT) and W1,1
+2 (GT), respectively,
+consisting of functions u such that u
+
+ST
+= 0 in the sense of traces.
+We mainly work with solenoidal functions with zero boundary conditions defined
+on the surface ST. Let J ∞
+0 (GT) be defined as the space of functions u ∈ C∞(GT) such that
+u
+
+ST
+= 0 and div u = 0. Then the closure of J ∞
+0 (GT) in the space W1,0
+2 (GT) is denoted as
+ ̊V1,0
+2 (GT), while the closure in the space W1,1
+2 (GT) is denoted as  ̊V1,1
+2 (GT).
+2.2. Eigenvalues and Eigenfunctions of the Stokes Operator
+Let vk ∈ H(Ω) and λk ∈ R, k ∈ N, be the eigenfunctions and eigenvalues of the Stokes
+operator as follows:
+
+
+
+−ν∆vk(x) + ∇p(x) = λkvk(x), x ∈ Ω,
+div vk = 0, x ∈ Ω,
+vk
+
+∂Ω = 0,
+which satisfy the following integral identity:
+ν
+Z
+Ω
+∇vk(x) · ∇η(x)dx = λk
+Z
+Ω
+vk(x) · η(x)dx, ∀η ∈ H(Ω).
+It is known that the eigenvalues λk are real, positive, and λk → ∞ as k → ∞ (see, e.g., [17],
+Chapter 2.6). Additionally, the eigenfunctions {vk}∞
+k=1 form an orthogonal basis in H(Ω)
+and J(Ω), and can be normalized in L2(Ω) so that ∥vk∥L2(Ω) = 1. These eigenfunctions
+have the following properties:
+https://doi.org/10.3390/math14091402
+Mathematics 2026, 14, 1402 4 of 18
+Z
+Ω
+vk(x) · vl(x)dx =
+
+
+
+1, if k = l,
+0, if k ̸= l,
+Z
+Ω
+∇vk(x) · ∇vl(x)dx =
+
+
+
+λk
+ν , if k = l,
+0, if k ̸= l.
+(4)
+3. Weak Solution
+3.1. Definition of a Weak Solution
+In order to derive the definition of a weak solution to problem (1), (3), we first suppose that u, f , and p are sufficiently smooth. Multiply Equation (1)1 by a test function
+η ∈ C∞(ΩT) such that η
+
+ST
+= 0, div η = 0 and apply integration by parts with respect to x
+to get that
+Z
+Ω
+ut(x, t) · η(x, t)dx + ν
+Z
+Ω
+∇u(x, t) · ∇η(x, t)dx =
+Z
+Ω
+f (x, t) · η(x, t)dx. (5)
+There are no surface integrals over ∂Ω because η
+
+ST
+= 0. The integral term containing the
+pressure function p vanishes because div η = 0, and so
+Z
+Ω
+∇p(x, t) · η(x, t)dx = −
+Z
+Ω
+p(x, t) div η dx = 0.
+Next, we integrate (5) with respect to time from 0 to t. Thus,
+Z t
+0
+Z
+Ω
+ut(x, τ) · η(x, τ)dxd τ + ν
+Z t
+0
+Z
+Ω
+∇u(x, τ) · ∇η(x, τ)dxd τ =
+Z t
+0
+Z
+Ω
+f (x, τ) · η(x, τ)dxd τ (6)
+for all t ∈ (0, T]. By density arguments, this identity remains valid for all η ∈  ̊V1,0
+2 (ΩT).
+Definition 1. Suppose that E ∈ W1
+2 (0, T), u0 ∈ W2
+2 (Ω) ∩ H(Ω), and E satisfies the compatibility
+condition E(0) = ∥u0∥L2(Ω). A pair of functions (u, f ) ∈  ̊V1,1
+2 (ΩT) × L2(ΩT) is called a
+weak solution of problem (1), (3) if it satisfies the integral identity (6) for all t ∈ (0, T] and for
+all test functions η ∈  ̊V1,0
+2 (ΩT), and as well satisfies side condition (3) and initial condition
+u(x, 0) = u0(x) for a.e. x ∈ Ω.
+The first goal of this paper is to prove the following theorem.
+Theorem 1. Suppose that u0 ∈ W2
+2 (Ω) ∩ H(Ω), E ∈ W1
+2 (0, T) are given functions and E
+satisfies the compatibility condition E(0) = ∥u0∥L2(Ω). Then there exists at least one weak solution
+(u, f ) to problem (1), (3).
+3.2. Approximate Solution
+For every N ∈ N, we will find approximate solutions (u(N), f (N)) of problem (1),
+(3) represented in the following forms:
+u(N)(x, t) =
+N
+∑
+k=1
+wk(t)vk(x), f (N)(x, t) =
+N
+∑
+k=1
+qk(t)vk(x), (7)
+where vk are eigenfunctions of the Stokes operator. We require u(N) and f (N) to satisfy for
+a.e. t ∈ (0, T) and j = 1, . . . ,N in the following system:
+https://doi.org/10.3390/math14091402
+Mathematics 2026, 14, 1402 5 of 18
+
+
+
+Z
+Ω
+(u(N))t(x, t) · vj(x)dx + ν
+Z
+Ω
+∇u(N)(x, t) · ∇vj(x)dx =
+Z
+Ω
+f (N)(x, t) · vj(x)dx,
+u(N)(x, 0) =
+N
+∑
+k=1
+βkvk(x), x ∈ Ω,
+Z
+Ω
+u(N)(x, t)
+
+2
+dx = ∑N
+k=1 β2
+k
+∥u0∥2
+L2(Ω)
+E2(t),
+(8)
+where βk are the Fourier coefficients of the function u0 in terms of the orthogonal basis
+{vk}∞
+k=1 in H(Ω) so that u0 = ∑∞
+k=1 βkvk.
+Substituting expressions (7) into (8)1 and using the fact that eigenfunctions are orthonormal in L2(Ω) and orthogonal in H(Ω) (see (4)), we get an ordinary differential
+equation as follows:
+w′
+k(t) + λkwk(t) = qk(t). (9)
+Together with the initial conditionwk(0) = βk, Equation (9) has a unique solution as follows:
+wk(t) =
+tZ
+0
+e−λk(t−τ)qk(τ) dτ + βk.
+Substituting (7)1 into (8)3, we get
+Z
+Ω
+|u(N)(x, t)|2dx =
+
+N
+∑
+k=1
+wk(t)vk
+
+2
+L2(Ω)
+=
+N
+∑
+k=1
+∥wk(t)vk∥2
+L2(Ω) =
+N
+∑
+k=1
+(wk(t))2 = ∑N
+k=1 β2
+k
+∥u0∥2
+L2(Ω)
+E2(t), (10)
+where the last equality follows from (8)3.
+To satisfy condition (10) for all t ∈ [0, T], we choose
+wk(t) = βk
+∥u0∥L2(Ω)
+E(t), (11)
+and to satisfy Equation (9), we set
+qk := w′
+k + λkwk ∈ L2(0, T). (12)
+Since the function E is from the space W1
+2 (0, T), it is continuous. Therefore, u(N) belongs to
+the space C([0, T]; L2(Ω)) (see, e.g., [18], Chapter 5.9.2) and u(N)(·, 0) is well defined. Since
+E(0) = ∥u0∥L2(Ω), we also have that
+u(N)(x, 0) =
+N
+∑
+k=1
+wk(0)vk(x) = E(0)
+∥u0∥L2(Ω)
+N
+∑
+k=1
+βkvk(x) =
+N
+∑
+k=1
+βkvk(x).
+Next, we will get estimates for u(N) and f (N). Recall that βk are Fourier coefficients of
+u0, so ∑∞
+k=1 β2
+k = ∥u0∥2
+L2(Ω). Thus,
+∥u(N)∥2
+L2(ΩT ) =
+Z T
+0
+Z
+Ω
+|u(N)(x, t)|2dxdt
+(10)
+= ∑N
+k=1 β2
+k
+∥u0∥2
+L2(Ω)
+Z T
+0
+E2(t)dt ≤ ∥ E∥2
+L2(0,T). (13)
+Similarly, by using properties of eigenfunctions (see (4)), we obtain
+∥∇u(N)∥2
+L2(ΩT ) =
+Z T
+0
+Z
+Ω
+|∇u(N)(x, t)|2dxdt =
+Z T
+0
+Z
+Ω
+
+N
+∑
+k=1
+wk(t)∇vk(x)
+
+2
+dxdt
+=
+Z T
+0
+N
+∑
+k=1
+|wk(t)|2 λk
+ν dt =
+∥E∥2
+L2(0,T)
+ν∥u0∥2
+L2(Ω)
+N
+∑
+k=1
+β2
+kλk. (14)
+https://doi.org/10.3390/math14091402
+Mathematics 2026, 14, 1402 6 of 18
+For the time derivative u(N)
+t , we have
+∥u(N)
+t ∥2
+L2(ΩT ) =
+Z T
+0
+
+N
+∑
+k=1
+w′
+k(t)vk
+
+2
+L2(Ω)
+dt =
+Z T
+0
+N
+∑
+k=1
+(w′
+k(t))2dt =
+Z T
+0
+N
+∑
+k=1
+β2
+k|E′(t)|2
+∥u0∥2
+L2(Ω)
+dt
+= ∑N
+k=1 β2
+k
+∥u0∥2
+L2(Ω)
+Z T
+0
+|E′(t)|2dt ≤ ∥ E∥2
+W1
+2 (0,T). (15)
+Thus, functions u(N) belong to the space  ̊V1,1
+2 (ΩT). Finally, using Equation (12), we
+get an estimate for f (N) in the space L2(ΩT) as follows:
+Z T
+0
+|qk(t)|2dt =
+Z T
+0
+w′
+k(t) + λkwk(t)
+2dt ≤ 2
+Z T
+0
+w′
+k(t)
+2 + |λkwk(t)|2
+
+dt
+= 2
+Z T
+0
+
+βkE′(t)
+∥u0∥L2(Ω)
+
+2
+dt + 2
+Z T
+0
+
+λk βkE(t)
+∥u0∥L2(Ω)
+
+2
+dt
+= 2β2
+k
+∥u0∥2
+L2(Ω)
+
+∥E′∥2
+L2(0,T) + λ2
+k∥E∥2
+L2(0,T)
+
+≤ 2β2
+k
+∥u0∥2
+L2(Ω)
+(1 + λ2
+k)∥E∥2
+W1
+2 (0,T), (16)
+and
+∥ f (N)∥2
+L2(ΩT ) =
+Z T
+0
+Z
+Ω
+
+N
+∑
+k=1
+qk(t)vk(x)
+
+2
+dxdt =
+Z T
+0
+
+N
+∑
+k=1
+qk(t)vk
+
+2
+L2(Ω)
+dt
+=
+N
+∑
+k=1
+Z T
+0
+|qk(t)|2dt
+(16)
+≤
+N
+∑
+k=1
+2β2
+k
+∥u0∥2
+L2(Ω)
+(1 + λ2
+k)∥E∥2
+W1
+2 (0,T)
+≤ 2∥E∥2
+W1
+2 (0,T)
+ 
+1 + ∑N
+k=1 β2
+kλ2
+k
+∥u0∥2
+L2(Ω)
+!
+. (17)
+Bounds (14) and (17) are independent of N because we have assumed that
+u0 ∈ W2
+2 (Ω) ∩ H(Ω). Therefore,
+∞
+∑
+k=1
+β2
+kλ2
+k ≤ ν2∥∆u0∥2
+L2(Ω) ≤ ν2∥u0∥2
+W2
+2 (Ω), (18)
+∞
+∑
+k=1
+β2
+kλk ≤ ν∥u0∥2
+H(Ω). (19)
+From (17), we get that f is bounded in the space L2(ΩT) and
+∥ f (N)∥2
+L2(ΩT ) ≤ 2∥E∥2
+W1
+2 (0,T)
+
+1 +
+ν2∥u0∥2
+W2
+2 (Ω)
+∥u0∥2
+L2(Ω)
+
+.
+Using (13), (14), and (15) together with (19), we can estimate u(N) in the space  ̊V1,1
+2 (ΩT)
+as follows:
+∥u(N)∥2
+ ̊V1,1
+2 (ΩT ) = ∥u(N)∥2
+L2(ΩT ) + ∥∇u(N)∥2
+L2(ΩT ) + ∥u(N)
+t ∥2
+L2(ΩT )
+≤ ∥ E∥2
+W1
+2 (0,T)
+ 
+2 +
+∥u0∥2
+H(Ω)
+∥u0∥2
+L2(Ω)
+!
+.
+https://doi.org/10.3390/math14091402
+Mathematics 2026, 14, 1402 7 of 18
+3.3. Convergence
+Since the sequence {u(N)}∞
+N=1 is bounded in the space  ̊V1,1
+2 (ΩT) and the sequence
+{ f (N)}∞
+N=1 is bounded in the space L2(ΩT), there exists a subsequence {Nl}∞
+l=1 such that
+u(Nl ) weakly converges to a function u ∈  ̊V1,1
+2 (ΩT) and f (Nl ) weakly converges to some
+f ∈ L2(ΩT). Importantly, this means that u(Nl ) ⇀ u, u(Nl )
+t ⇀ ut and ∇u(Nl ) ⇀ ∇u in
+L2(ΩT). Next, consider arbitrary functions dj ∈ C[0, T], j ∈ N. Multiply Equation (8)1
+by dj, and then sum them over all j ∈ { 1, 2,. . ., M}, where M ≤ N. Denote η(x, t) =
+∑M
+k=1 dk(t)vk(x), and replace N by Nl in the integral identity as follows:
+Z
+Ω
+u(Nl )
+t (x, t) · η(x, t)dx + ν
+Z
+Ω
+∇u(Nl )(x, t) · ∇η(x, t)dx =
+Z
+Ω
+f (Nl )(x, t) · η(x, t)dx.
+By integrating this identity with respect to time from 0 to t, we get
+Z t
+0
+Z
+Ω
+u(Nl )
+t (x, τ) · η(x, τ)dxd τ + ν
+Z t
+0
+Z
+Ω
+∇u(Nl )(x, τ) · ∇η(x, τ)dxd τ =
+Z t
+0
+Z
+Ω
+f (Nl )(x, τ) · η(x, τ)dxd τ. (20)
+For the first integral in (20), we notice that it can be written as an inner product in the space
+L2(ΩT). Then, by using the fact that u(Nl )
+t ⇀ ut in this space, we get
+Z t
+0
+Z
+Ω
+u(Nl )
+t (x, τ) · η(x, τ)dxd τ = ⟨u(Nl )
+t , η1{τ≤t}⟩L2(ΩT )
+l→∞− − → ⟨ut, η1{τ≤t}⟩L2(ΩT ) =
+Z t
+0
+Z
+Ω
+ut(x, τ) · η(x, τ)dxd τ.
+For the other integrals, we can similarly write them as inner products in L2(ΩT) and, by
+using weak convergence, we obtain that
+Z t
+0
+Z
+Ω
+∇u(Nl )(x, τ) · ∇η(x, τ)dxd τ l→∞− − →
+Z t
+0
+Z
+Ω
+∇u(x, τ) · ∇η(x, τ)dxd τ,
+Z t
+0
+Z
+Ω
+f (Nl )(x, τ) · η(x, τ)dxd τ l→∞− − →
+Z t
+0
+Z
+Ω
+f (x, τ) · η(x, τ)dxd τ.
+Thus, after passing to the limit as l → ∞ in (20), we get integral identity (6) for the pair of
+limit functions (u, f ). However, it holds only for those η that are finite linear combinations
+of functions vk. These linear combinations are dense in the space  ̊V1,0
+2 (ΩT). The proof
+is similar to the proof of Theorem 2.3.8 in the book [ 19]. Additionally, since Nl → ∞
+when l → ∞, the number M in the sum η(x, t) = ∑M
+k=1 dk(t)vk(x) can be arbitrarily large.
+Therefore, by approximation, we have that the constructed solution (u, f ) satisfies (6) for
+all η ∈  ̊V1,0
+2 (ΩT).
+Side condition
+Next, we need to show that the function u satisfies the side condition as follows:
+Z
+Ω
+|u(x, t)|2dx = E2(t)
+for all t ∈ [0, T]. By the definition of u(N) (see (7)) and properties of eigenfunctions (see (4)),
+for N, M ∈ N with N ≤ M, we obtain
+Z
+Ω
+u(N)(x, t) · u(M)(x, t)dx =
+Z
+Ω
+ 
+N
+∑
+k=1
+wk(t)vk(x)
+!
+·
+ 
+M
+∑
+k=1
+wk(t)vk(x)
+!
+dx
+=
+N
+∑
+k=1
+w2
+k(t)
+(11)
+= ∑N
+k=1 β2
+k
+∥u0∥2
+L2(Ω)
+E2(t).
+https://doi.org/10.3390/math14091402
+Mathematics 2026, 14, 1402 8 of 18
+After integrating this equality from 0 to an arbitrary (fixed) t ∈ [0, T], we get
+Z t
+0
+Z
+Ω
+u(N)(x, τ) · u(M)(x, τ)dxd τ = ∑N
+k=1 β2
+k
+∥u0∥2
+L2(Ω)
+Z t
+0
+E2(τ)dτ.
+Now, we replace M by the subsequence Nl which we got earlier and take the limit as
+l → ∞. For any N ∈ N, the inequality N ≤ Nl holds for sufficiently large l. Additionally,
+u(Nl ) ⇀ u in L2(ΩT). Thus, after passing to the limit, we obtain
+Z t
+0
+Z
+Ω
+u(N)(x, τ) · u(x, τ)dxd τ = ∑N
+k=1 β2
+k
+∥u0∥2
+L2(Ω)
+Z t
+0
+E2(τ)dτ.
+The last equality is true for all N ∈ N, so we can replace N by Nl and take the limit as
+l → ∞. Recalling that ∑∞
+k=1 β2
+k = ∥u0∥L2(Ω), we get
+Z t
+0
+∥u(·, τ)∥2
+L2(Ω)dτ =
+Z t
+0
+E2(τ)dτ. (21)
+The function u is from C([0, T]; L2(Ω)) due to the embedding W0,1
+2 (ΩT) ⊂ C([0, T]; L2(Ω))
+(see [18], Chapter 5.9.2). Therefore, ∥u(·, τ)∥L2(Ω) is a continuous function. Similarly, the
+function E is continuous on [0, T] since E ∈ W1
+2 (0, T) ⊂ C[0, T]. Hence, we can differentiate
+both sides of (21) by t and obtain
+∥u(·, t)∥2
+L2(Ω) = E2(t), (22)
+for all t ∈ [0, T]. Notice that (22) is equivalent to
+R
+Ω |u(x, t)|2dx = E2(t) for all t ∈ [0, T].
+Initial condition
+Let u(N)
+0 = ∑N
+k=1 βkvk denote the partial sum of the Fourier series of u0 with respect to the
+basis {vk} in J(Ω). Clearly, u(N)
+0 → u0 in L2(Ω). Let N, M ∈ N with N ≤ M. Then, by (7)
+and the orthonormality of vk in L2(Ω), we obtain
+Z
+Ω
+
+u(N)(x, t) − u(N)
+0 (x)
+
+·
+
+u(M)(x, t) − u(M)
+0 (x)
+
+dx
+=
+Z
+Ω
+ 
+N
+∑
+k=1
+wk(t)vk(x) −
+N
+∑
+k=1
+βkvk(x)
+!
+·
+ 
+M
+∑
+k=1
+wk(t)vk(x) −
+M
+∑
+k=1
+βkvk(x)
+!
+dx
+(11)
+=
+Z
+Ω
+ 
+N
+∑
+k=1
+βkvk(x)
+∥u0∥L2(Ω)
+
+E(t) − ∥u0∥L2(Ω)
+!
+·
+ 
+M
+∑
+k=1
+βkvk(x)
+∥u0∥L2(Ω)
+
+E(t) − ∥u0∥L2(Ω)
+!
+dx
+= ∑N
+k=1 β2
+k
+∥u0∥2
+L2(Ω)
+(E(t) − ∥u0∥L2(Ω))2
+.
+Integrating both sides of the last equality from 0 to an arbitrary but fixed t ∈ [0, T] yields
+Z t
+0
+Z
+Ω
+
+u(N)(x, τ) − u(N)
+0 (x)
+
+·
+
+u(M)(x, τ) − u(M)
+0 (x)
+
+dxd τ
+= ∑N
+k=1 β2
+k
+∥u0∥2
+L2(Ω)
+Z t
+0
+(E(τ) − ∥u0∥L2(Ω))2dτ. (23)
+Now, we have that u(Nl ) ⇀ u in L2(ΩT); therefore, u(Nl ) − u(Nl )
+0 ⇀ u − u0 in the space
+L2(ΩT). Therefore, if we replace M by Nl in (23) and pass to the limit as l → ∞, we get that
+https://doi.org/10.3390/math14091402
+Mathematics 2026, 14, 1402 9 of 18
+Z t
+0
+Z
+Ω
+
+u(N)(x, τ) − u(N)
+0 (x)
+
+· (u(x, τ) − u0(x))dxd τ = ∑N
+k=1 β2
+k
+∥u0∥2
+L2(Ω)
+Z t
+0
+(E(τ) − ∥u0∥L2(Ω))2dτ.
+Similarly, if we replace N by Nl and pass to the limit again as l → ∞, we get
+Z t
+0
+Z
+Ω
+(u(x, τ) − u0(x)) · (u(x, τ) − u0(x))dxd τ =
+Z t
+0
+(E(τ) − ∥u0∥L2(Ω))2dτ,
+where we have used that ∑∞
+k=1 β2
+k = ∥u0∥2
+L2(Ω). Rewriting the final expression, we obtain
+Z t
+0
+∥u(·, τ) − u0∥2
+L2(Ω)dτ =
+Z t
+0
+(E(τ) − ∥u0∥L2(Ω))2dτ.
+Differentiating by t yields
+∥u(·, t) − u0∥2
+L2(Ω) = ( E(t) − ∥u0∥L2(Ω))2, ∀t ∈ [0, T]. (24)
+By taking t = 0 in (24) and using the condition E(0) = ∥u0∥L2(Ω), we finally obtain that
+∥u(·, 0) − u0∥2
+L2(Ω) = 0
+which is equivalent to u(x, 0 ) = u0(x) for almost all x ∈ Ω.
+4. Very Weak Solution
+4.1. Definition of a Very Weak Solution
+In this section, we consider problem (1), (3) in the case where the function E does not
+possess a weak derivative and belongs only to L2(0, T). Since a function in L2 is defined
+only almost everywhere, the compatibility condition E(0) = ∥u0∥L2(Ω) must be generalized.
+Specifically, it is understood in the following sense: t = 0 is a Lebesgue point of E(t) with
+the value of ∥u0∥L2(Ω). Equivalently,
+lim
+t→0+
+1
+t
+Z t
+0
+|E(τ) − ∥u0∥L2(Ω)|dτ = 0. (25)
+Similarly, u(·, 0) = u0 is understood to mean that t = 0 is a Lebesgue point of u(·, t) with
+the value of u0, where u0 ∈ L2(Ω) and u(·, t) ∈ L2(Ω) for a.e. t ∈ (0, T). Equivalently,
+lim
+t→0+
+1
+t
+Z t
+0
+∥u(·, τ) − u0∥L2(Ω)dτ = 0.
+For the derivation of the very weak solution, we also need a generalized version of a
+primitive function. For any function g ∈ L2(0, T), define its primitive Sg(t) = R t
+0 g(τ)dτ.
+Then dSg
+dt = g almost everywhere and Sg(0) = 0. We extend this notion to a larger class of
+functions in the same way as in [15]. Denote by ˆW0,1
+2 (ΩT) the subspace {φ ∈ W0,1
+2 (ΩT) :
+φ(·, T) = 0}.
+Lemma 1. If h ∈ ( ˆW0,1
+2 (ΩT))∗, then there exists a unique H ∈ L2(ΩT) such that
+⟨h, η⟩ =
+Z T
+0
+Z
+Ω
+H(x, t) · ηt(x, t)dxdt ∀η ∈ ˆW0,1
+2 (ΩT). (26)
+Proof. The functional defined in (26) is bounded since, for any H ∈ L2(ΩT),
+|⟨h, η⟩| ≤ ∥ H∥L2(ΩT )∥ηt∥L2(ΩT ) ≤ ∥ H∥L2(ΩT )∥η∥ ˆW0,1
+2 (ΩT ).
+https://doi.org/10.3390/math14091402
+Mathematics 2026, 14, 1402 10 of 18
+Let D : ˆW0,1
+2 (ΩT) → L2(ΩT) be the derivative operator defined by Dη = ηt. To show that
+D is surjective, let φ ∈ L2(ΩT) and set
+ψ(x, t) := −
+Z T
+t
+φ(x, τ)dτ.
+Then ψ ∈ ˆW0,1
+2 (ΩT), and since ψ is absolutely continuous in t,
+ψt(x, t) = ∂
+∂t
+Z t
+0
+φ(x, τ)dτ −
+Z T
+0
+φ(x, τ)dτ
+
+= φ(x, t).
+The operator D is injective. Indeed, if η1, η2 ∈ ˆW0,1
+2 (ΩT) satisfy (η1)t = ( η2)t, then
+(η1 − η2)t = 0, so η1(x, t) − η2(x, t) is constant in time. Since, by definition of the space
+ˆW0,1
+2 (ΩT), we know that η1(x, T) = η2(x, T) = 0 for almost all x ∈ Ω, it follows that
+η1 = η2. Operator D is linear and bounded; hence, it is an isomorphism between ˆW0,1
+2 (ΩT)
+and L2(ΩT).
+Let h ∈ ( ˆW0,1
+2 (ΩT))∗. Consider the linear functional F on L2(ΩT) defined by F(φ) =
+⟨h, D−1φ⟩ = (h ◦ D−1)(φ). Then F is bounded as D−1 is bounded. Therefore, by the Riesz
+representation theorem on L2(ΩT), there exists a unique H ∈ L2(ΩT) such that
+F(φ) = ⟨h, D−1φ⟩ =
+Z T
+0
+Z
+Ω
+H(x, t) · φ(x, t)dxdt.
+For any η ∈ ˆW0,1
+2 (ΩT), we have η = D−1ηt, which implies
+F(ηt) = ⟨h, η⟩ =
+Z T
+0
+Z
+Ω
+H(x, t) · ηt(x, t)dxdt.
+Remark 1. If h ∈ ( ˆW0,1
+2 (ΩT))∗, define Sh := −H, where H ∈ L2(ΩT) is the function associated with h by Lemma 1. This definition extends the classical notion of a primitive function.
+Indeed, if h corresponds via the Riesz representation theorem to a function h ∈ L2(ΩT), i.e.,
+⟨h, η⟩ =R T
+0
+R
+Ω h(x, t) · η(x, t)dxdt, then integration by parts gives
+⟨h, η⟩ =
+Z T
+0
+Z
+Ω
+∂Sh(x, t)
+∂t · η(x, t)dxdt = −
+Z T
+0
+Z
+Ω
+Sh(x, t) · ηt(x, t)dxdt,
+using Sh(x, 0) = 0 and η(x, T) = 0.
+Let us define a very weak solution to problem (1), (3). Suppose that u, f , and p are
+sufficiently smooth. Multiplying Equation (1)1 by an arbitrary function η ∈ C∞(ΩT) such
+that η
+
+ST
+= 0, div η = 0, η(·, T) = 0 and applying integration by parts with respect to x,
+we get identity (5). Unlike in the case of a weak solution, we integrate (5) with respect to
+time over (0, T) and apply integration by parts to the first and last integrals. Thus, we get
+Z T
+0
+Z
+Ω
+u(x, t) · ηt(x, t)dxdt +
+Z
+Ω
+u0(x) · η(x, 0)dx
+− ν
+Z T
+0
+Z
+Ω
+∇u(x, t) · ∇η(x, t)dx =
+Z T
+0
+Z
+Ω
+S f (x, t) · ηt(x, t)dx.
+(27)
+By density arguments, (27) remains valid for all η ∈ ˆV1,1
+2 (ΩT), where ˆV1,1
+2 (ΩT) is defined
+as the closure of the space {v ∈ C∞(ΩT) : v
+
+ST
+= 0, v(·, T) = 0, div v = 0} in the
+W1,1
+2 (ΩT)-norm.
+https://doi.org/10.3390/math14091402
+Mathematics 2026, 14, 1402 11 of 18
+Definition 2. Suppose that E ∈ L2(0, T), u0 ∈ W2
+2 (Ω) ∩ H(Ω), and E(0) = ∥u0∥L2(Ω) in the
+sense of definition(25). A pair of functions (u, f ) ∈  ̊V1,0
+2 (ΩT) × ( ˆW0,1
+2 (ΩT))∗ is called a very weak
+solution of problem (1), (3) if the integral identity (27) holds for all test functions η ∈ ˆV1,1
+2 (ΩT)
+and if the initial and side conditions are satisfied as follows:
+Z
+Ω
+|u(x, t)|2dx = E2(t), for a.e. t ∈ [0, T], (28)
+u(·, 0 ) = u0 in the sense of Lebesgue points. (29)
+The second goal of this paper is to prove the following theorem.
+Theorem 2. Suppose that u0 ∈ W2
+2 (Ω) ∩ H(Ω), E ∈ L2(0, T) are given functions and E satisfies
+the compatibility condition E(0) = ∥u0∥L2(Ω) in the sense of Lebesgue points. Then there exists at
+least one very weak solution (u, f ) to problem (1), (3).
+4.2. Approximate Solution
+We cannot define the approximate solution as in Section 3.1 since definition (12)
+involves the derivative of E. Therefore, we approximate E by a sequence En ∈ W1
+2 (0, T)
+such that En → E in L2(Ω) and En(0) = ∥u0∥L2(Ω). For every N ∈ N and n ∈ N, we define
+approximate solutions (u(N)
+n , f (N)
+n ) to problem (1), (3) by
+u(N)
+n (x, t) =
+N
+∑
+k=1
+wk,n(t)vk(x), f (N)
+n (x, t) =
+N
+∑
+k=1
+qk,n(t)vk(x), (30)
+where {vk}∞
+k=1 is a basis in J(Ω) and H(Ω).
+The coefficients wk,n and qk,n are determined by the system, which holds for a.e.
+t ∈ (0, T) and j = 1, . . . ,N, as follows:
+
+
+
+Z
+Ω
+(u(N)
+n )t(x, t) · vj(x)dx + ν
+Z
+Ω
+∇u(N)
+n (x, t) · ∇vj(x)dx =
+Z
+Ω
+f (N)
+n (x, t) · vj(x)dx,
+u(N)
+n (x, 0) =
+N
+∑
+k=1
+βkvk(x), x ∈ Ω,
+Z
+Ω
+u(N)
+n (x, t)
+
+2
+dx = ∑N
+k=1 β2
+k
+∥u0∥2
+L2(Ω)
+E2
+n(t),
+(31)
+where βk, k ∈ N, are the Fourier coefficients of the function u0. As in Section 3.2, we get the
+same expressions for wk,n and qk,n, namely,
+wk,n(t) = βk
+∥u0∥L2(Ω)
+En(t), (32)
+qk,n = (wk,n)′ + λkwk,n ∈ L2(0, T). (33)
+The function En ∈ W1
+2 (0, T) is continuous. Therefore, u(N)
+n is from the space C([0, T]; L2(Ω))
+and u(N)
+n (·, 0) is well defined. Using that En(0) = ∥u0∥L2(Ω), we obtain
+u(N)
+n (x, 0) =
+N
+∑
+k=1
+wk,n(0)vk(x) = En(0)
+∥u0∥L2(Ω)
+N
+∑
+k=1
+βkvk(x) =
+N
+∑
+k=1
+βkvk(x).
+Then the pair of functions (u(N)
+n , f (N)
+n ) satisfies system (31).
+https://doi.org/10.3390/math14091402
+Mathematics 2026, 14, 1402 12 of 18
+Next, we get suitable estimates for u(N)
+n and f (N)
+n . The bounds for u(N)
+n and ∇u(N)
+n we
+get by the same arguments as in the previous section (see (13) and (14)) as follows:
+∥u(N)
+n ∥2
+L2(ΩT ) ≤ ∥ En∥2
+L2(0,T), (34)
+∥∇u(N)
+n ∥2
+L2(ΩT ) ≤
+∥En∥2
+L2(0,T)
+ν∥u0∥2
+L2(Ω)
+N
+∑
+k=1
+β2
+kλk. (35)
+Estimate (17) involves the derivative of E; thus, the sequence { f (N)
+n }∞
+N=1 cannot be
+estimated in L2(ΩT). Instead, we get an estimate of the primitive function S f (N)
+n
+in the
+space L2(ΩT). First, integrate Equation (33) from 0 to t to get
+Sqk,n
+(t) =
+Z t
+0
+(wk,n)′(τ)dτ + λk
+Z t
+0
+wk,n(τ)dτ = wk,n(t) − wk,n(0) + λk
+Z t
+0
+wk,n(τ)dτ
+(32)
+= βk
+∥u0∥L2(Ω)
+En(t) − βk + λk βk
+∥u0∥L2(Ω)
+Z t
+0
+En(τ)dτ.
+We use the following estimate that we get by applying the Cauchy–Schwarz inequality:
+Z T
+0
+
+Z t
+0
+En(τ)dτ
+
+2
+dt ≤
+Z T
+0
+Z T
+0
+|En(τ)|dτ
+2
+dt ≤ T2∥En∥2
+L2(0,T).
+This, together with the inequality (a + b + c)2 ≤ 3(a2 + b2 + c2), a, b, c ∈ R, yields
+∥Sqk,n
+∥2
+L2(0,T) =
+Z T
+0
+|Sqk,n
+(t)|2dt =
+Z T
+0
+ 
+βk
+∥u0∥L2(Ω)
+En(t) − βk + λk βk
+∥u0∥L2(Ω)
+Z t
+0
+En(τ)dτ
+!2
+dt
+≤ 3
+ 
+β2
+k
+∥u0∥2
+L2(Ω)
+Z T
+0
+E2
+n(t)dt + β2
+kT + λ2
+k β2
+k
+∥u0∥2
+L2(Ω)
+Z T
+0
+
+Z t
+0
+En(τ)dτ
+
+2
+dt
+!
+≤ 3β2
+k
+∥u0∥2
+L2(Ω)
+∥En∥2
+L2(0,T) + 3β2
+kT + 3λ2
+k β2
+k
+∥u0∥2
+L2(Ω)
+T2∥En∥2
+L2(0,T).
+Therefore, by the last inequality,
+∥S f (N)
+n
+∥2
+L2(ΩT ) =
+Z T
+0
+
+N
+∑
+k=1
+Sqk,n
+(τ)vk
+
+2
+L2(Ω)
+dτ =
+N
+∑
+k=1
+Z T
+0
+|Sqk,n
+(τ)|2dτ
+≤
+∞
+∑
+k=1
+ 
+3β2
+k
+∥u0∥2
+L2(Ω)
+∥En∥2
+L2(0,T) + 3β2
+kT + 3λ2
+k β2
+k
+∥u0∥2
+L2(Ω)
+T2∥En∥2
+L2(0,T)
+!
+= 3∥En∥2
+L2(0,T) + 3T∥u0∥2
+L2(Ω) + 3T2 ∥En∥2
+L2(0,T)
+∥u0∥L2(Ω)
+∞
+∑
+k=1
+β2
+kλ2
+k.
+Inequality (18) gives the following bound:
+∥S f (N)
+n
+∥2
+L2(ΩT ) ≤ 3∥En∥2
+L2(0,T) + 3T∥u0∥2
+L2(Ω) + 3T2ν2
+∥u0∥2
+W2
+2 (Ω)
+∥u0∥L2(Ω)
+∥En∥2
+L2(0,T). (36)
+Combining Equations (34), (35), and (19), we have
+∥u(N)
+n ∥2
+ ̊V1,0
+2 (ΩT ) = ∥u(N)
+n ∥2
+L2(ΩT ) + ∥∇u(N)
+n ∥2
+L2(ΩT )
+≤ ∥ En∥2
+L2(0,T) +
+∥u0∥2
+H(Ω)
+∥u0∥2
+L2(Ω)
+∥En∥2
+L2(0,T). (37)
+https://doi.org/10.3390/math14091402
+Mathematics 2026, 14, 1402 13 of 18
+By using these estimates, we conclude that the sequence{u(N)
+n }∞
+N=1 is bounded in the space
+ ̊V1,0
+2 (ΩT), while the sequence {S f (N)
+n
+}∞
+N=1 is bounded in the space L2(ΩT).
+4.3. Convergence
+Since the sequence {u(N)
+n }∞
+N=1 is bounded in  ̊V1,0
+2 (ΩT) and the sequence {S f (N)
+n
+}∞
+N=1
+is bounded in L2(ΩT), there exists for each fixed n ∈ N a subsequence {Nl}∞
+l=1 such that
+u(Nl )
+n weakly converges to un ∈  ̊V1,0
+2 (ΩT) and S
+f (Nl )
+n
+weakly converges to S fn ∈ L2(ΩT)
+for some fn ∈ ( ˆW0,1
+2 (ΩT))∗. We also have that u(Nl )
+n ⇀ un and ∇u(Nl )
+n ⇀ ∇un in
+L2(ΩT). Next, consider arbitrary functions dj ∈ C1[0, T] with dj(T) = 0, k ∈ N. Multiply
+Equation (31)1 by dj and sum over all j ∈ {1, 2,. . ., M}, where M ≤ N. If we also denote
+η(x, t) = ∑M
+k=1 dk(t)vk(x) and integrate by t from 0 to T, we get the following
+integral identity:
+Z T
+0
+Z
+Ω
+(u(N)
+n )t(x, t) · η(x, t)dxdt + ν
+Z T
+0
+Z
+Ω
+∇u(N)
+n (x, t) · ∇η(x, t)dxdt =
+Z T
+0
+Z
+Ω
+f (N)
+n (x, t)η(x, t)dxdt. (38)
+Then, we integrate by parts on the first and third integrals in Equation (38). Recalling that
+u(N)
+n (x, 0) = ∑N
+k=1 βkvk(x) and that η(·, T) ≡ 0, we get
+Z
+Ω
+u(N)
+n (x, 0) · η(x, 0)dx +
+Z T
+0
+Z
+Ω
+u(N)
+n (x, t)ηt(x, t)dxdt
+− ν
+Z T
+0
+Z
+Ω
+∇u(N)
+n (x, t) · ∇η(x, t)dxdt =
+Z T
+0
+Z
+Ω
+S f (N)
+n
+(x, t) · ηt(x, t)dxdt.
+(39)
+We interpret the last three integrals in(39) as inner products in the space L2(ΩT) and use
+weak convergence to get that
+Z T
+0
+Z
+Ω
+u(Nl )
+n (x, t) · ηt(x, t)dxdt l→∞− − →
+Z T
+0
+Z
+Ω
+un(x, t) · ηt(x, t)dxdt,
+Z T
+0
+Z
+Ω
+∇u(Nl )
+n (x, t) · ∇η(x, t)dxdt l→∞− − →
+Z T
+0
+Z
+Ω
+∇un(x, t) · ∇η(x, t)dxdt,
+Z T
+0
+Z
+Ω
+S
+f (Nl )
+n
+(x, t) · ηt(x, t)dxdt l→∞− − →
+Z T
+0
+Z
+Ω
+S fn (x, t) · ηt(x, t)dxdt.
+Since ∑N
+k=1 βkvk → u0 in L2(Ω) as N → ∞, we can pass to the limit in the first integral on
+the left-hand side of (39), and we get
+Z
+Ω
+u0(x) · η(x, 0)dx +
+Z T
+0
+Z
+Ω
+un(x, t) · ηt(x, t)dxdt
+− ν
+Z T
+0
+Z
+Ω
+∇un(x, t) · ∇η(x, t)dxdt =
+Z T
+0
+Z
+Ω
+S fn (x, t) · ηt(x, t)dxdt,
+(40)
+where η is a linear combination∑M
+k=1 dk(t)vk(x). The number M in the sum can be arbitrarily
+large because Nl → ∞ when l → ∞. Since the set of all these linear combinations is dense
+in the space ˆV1,1
+2 (ΩT) (see Theorem 2.3.8 in [19]), by approximation, we get that integral
+identity (40) holds for all η ∈ ˆV1,1
+2 (ΩT).
+Next, we have to pass to the limit as n → ∞. For each n ∈ N, we have
+∥un∥  ̊V1,0
+2 (ΩT ) ≤ lim inf
+l→∞
+∥u(Nl )
+n ∥  ̊V1,0
+2 (ΩT ), ∥S fn ∥L2(ΩT ) ≤ lim inf
+l→∞
+∥S f (N)
+n
+∥L2(ΩT ).
+Additionally, En → E in L2(0, T). Therefore, from (36) and (37), we get that {un}∞
+n=1 is
+bounded in  ̊V1,0
+2 (ΩT) and {S fn }∞
+n=1 is bounded in L2(ΩT). Thus, there exists a subsequence
+https://doi.org/10.3390/math14091402
+Mathematics 2026, 14, 1402 14 of 18
+{nl}∞
+l=1 such that unl ⇀ u and S fnl
+⇀ S f for some u ∈  ̊V1,0
+2 (ΩT) and f ∈ ( ˆW0,1
+2 (ΩT))∗.
+Finally, after passing to the limit in (40) as nl → ∞, we get
+Z
+Ω
+u0(x) · η(x, 0)dx +
+Z T
+0
+Z
+Ω
+u(x, t) · ηt(x, t)dxdt
+− ν
+Z T
+0
+Z
+Ω
+∇u(x, t) · ∇η(x, t)dxdt =
+Z T
+0
+Z
+Ω
+S f (x, t) · ηt(x, t)dxdt
+for all η ∈ ˆV1,1
+2 (ΩT).
+Side condition
+By the definition of u(N)
+n (see (30)) and properties of eigenfunctions (see (4)), we obtain
+that for N, M ∈ N, N ≤ M, for all n, m ∈ N, and for almost all t ∈ (0, T) holds the
+following equality:
+Z
+Ω
+u(N)
+n (x, t) · u(M)
+m (x, t)dx =
+Z
+Ω
+ 
+N
+∑
+k=1
+wk,n(t)vk(x)
+!
+·
+ 
+M
+∑
+k=1
+wk,m(t)vk(x)
+!
+dx
+=
+N
+∑
+k=1
+wk,n(t)wk,m(t) = ∑N
+k=1 β2
+k
+∥u0∥2
+L2(Ω)
+En(t)Em(t).
+Integrate this last equality from 0 to an arbitrary but fixed t ∈ [0, T] to get
+Z t
+0
+Z
+Ω
+u(N)
+n (x, τ) · u(M)
+m (x, τ)dxd τ = ∑N
+k=1 β2
+k
+∥u0∥2
+L2(Ω)
+Z t
+0
+En(τ)Em(τ)dτ. (41)
+Since there exists a subsequence Ml such that u(Ml )
+m ⇀ um in L2(ΩT), after replacing M by
+Ml in (41), we can pass to the limit as l → ∞, provided that N ≤ Ml for sufficiently large l.
+Then, for all N ∈ N,
+Z t
+0
+Z
+Ω
+u(N)
+n (x, τ) · um(x, τ)dxd τ = ∑N
+k=1 β2
+k
+∥u0∥2
+L2(Ω)
+Z t
+0
+En(τ)Em(τ)dτ. (42)
+Similarly, there exists a subsequence Nl such that u(Nl )
+n ⇀ un in L2(ΩT), so after replacing
+N by Nl in (42) and passing to the limit as l → ∞, we have
+Z t
+0
+Z
+Ω
+un(x, τ) · um(x, τ)dxd τ = ∑∞
+k=1 β2
+k
+∥u0∥2
+L2(Ω)
+Z t
+0
+En(τ)Em(τ)dτ =
+Z t
+0
+En(τ)Em(τ)dτ, (43)
+since ∑∞
+k=1 β2
+k = ∥u0∥2
+L2(Ω). Next, we take the limit as n, m → ∞ in a similar way. It does
+not matter in which order we take the limit as the result will be the same. First, we already
+have that there is a subsequence nl such that unl ⇀ u in L2(ΩT). We also have that Enl ⇀ E
+in L2(0, T). Thus, if we replace n by nl in (43) and pass to the limit as l → ∞,
+Z t
+0
+Z
+Ω
+u(x, τ) · um(x, τ)dxd τ =
+Z t
+0
+E(τ)Em(τ)dτ. (44)
+Lastly, if we replace m by nl in (44) and pass to the limit as l → ∞,
+Z t
+0
+Z
+Ω
+u(x, τ) · u(x, τ)dxd τ =
+Z t
+0
+E(τ)E(τ)dτ.
+https://doi.org/10.3390/math14091402
+Mathematics 2026, 14, 1402 15 of 18
+Thus, by differentiating this equality by t, we see that, for a.e. t ∈ (0, T), side condition (28)
+is satisfied as follows: Z
+Ω
+|u(x, t)|2dx = E2(t).
+Initial condition
+Denote u(N)
+0 = ∑N
+k=1 βkvk to be the partial sum of the Fourier series for u0 in H(Ω). Then it
+is clear that u(N)
+0 → u0 in L2(Ω) and u(N)
+0 → u0 in L2(ΩT) as well. Suppose that N, M ∈ N,
+n, m ∈ N and that N ≤ M. Then from (30) and from properties of eigenfunctions, we obtain
+Z
+Ω
+
+u(N)
+n (x, t) − u(N)
+0 (x)
+
+·
+
+u(M)
+m (x, t) − u(M)
+0 (x)
+
+dx
+=
+Z
+Ω
+ 
+N
+∑
+k=1
+wk,n(t)vk(x) −
+N
+∑
+k=1
+βkvk(x)
+!
+·
+ 
+M
+∑
+k=1
+wk,m(t)vk(x) −
+M
+∑
+k=1
+βkvk(x)
+!
+dx
+=
+Z
+Ω
+ 
+N
+∑
+k=1
+βkvk(x)
+∥u0∥L2(Ω)
+
+En(t) − ∥u0∥L2(Ω)
+!
+·
+ 
+M
+∑
+k=1
+βkvk(x)
+∥u0∥L2(Ω)
+
+Em(t) − ∥u0∥L2(Ω)
+!
+dx
+= ∑N
+k=1 β2
+k
+∥u0∥2
+L2(Ω)
+(En(t) − ∥u0∥L2(Ω))(Em(t) − ∥u0∥L2(Ω)).
+Integrating the last identity from 0 to an arbitrary t gives us
+Z t
+0
+Z
+Ω
+
+u(N)
+n (x, τ) − u(N)
+0 (x)
+
+·
+
+u(M)
+m (x, τ) − u(M)
+0 (x)
+
+dxd τ
+= ∑N
+k=1 β2
+k
+∥u0∥2
+L2(Ω)
+Z t
+0
+(En(τ) − ∥u0∥L2(Ω))(Em(τ) − ∥u0∥L2(Ω))dτ. (45)
+Now, pick a subsequence Ml, l ∈ N, such that u(Ml )
+m ⇀ um in L2(ΩT). We also know that
+u(Ml )
+0 strongly converges to u0 in L2(ΩT); thus, it also weakly converges. Using this, we
+can replace M with Ml in Equation (45) and pass to the limit as l → ∞ to get
+Z t
+0
+Z
+Ω
+(u(N)
+n (x, τ) − u(N)
+0 (x)) · (um(x, τ) − u0(x))dxd τ
+= ∑N
+k=1 β2
+k
+∥u0∥2
+L2(Ω)
+Z t
+0
+(En(τ) − ∥u0∥L2(Ω))(Em(τ) − ∥u0∥L2(Ω))dτ. (46)
+Similarly, we can find a subsequence Nl, l ∈ N, such that u(Nl )
+n ⇀ un in L2(ΩT). Then
+u(Nl )
+n − u(Nl )
+0 ⇀ un − u0 in L2(ΩT). Replace N with Nl in (46) and pass to the limit as
+l → ∞ to get
+Z t
+0
+Z
+Ω
+(un(x, τ) − u0(x)) · (um(x, τ) − u0(x))dxd τ
+=
+Z t
+0
+(En(τ) − ∥u0∥L2(Ω))(Em(τ) − ∥u0∥L2(Ω))dτ.
+Finally, choose a subsequence nl, l ∈ N, such that unl ⇀ u in L2(ΩT). Then since we also
+have that Enl ⇀ E in L2(0, T), we can replace n with nl and pass to the limit as follows:
+Z t
+0
+Z
+Ω
+(u(x, τ) − u0(x)) · (um(x, τ) − u0(x))dxd τ
+=
+Z t
+0
+(E(τ) − ∥u0∥L2(Ω))(Em(τ) − ∥u0∥L2(Ω))dτ.
+https://doi.org/10.3390/math14091402
+Mathematics 2026, 14, 1402 16 of 18
+Similarly, replacing m by nl and passing to the limit, we get
+Z t
+0
+Z
+Ω
+(u(x, τ) − u0(x)) · (u(x, τ) − u0(x))dxd τ
+=
+Z t
+0
+(E(τ) − ∥u0∥L2(Ω))(E(τ) − ∥u0∥L2(Ω))dτ.
+Differentiating this equality by t and taking the square root of both sides shows that
+∥u(·, t) − u0∥L2(Ω) = |E(t) − ∥u0∥L2(Ω)| (47)
+for a.e. t ∈ (0, T). Recall that we have assumed that E(0) = ∥u0∥L2(Ω) in terms of Lebesgue
+points; thus,
+lim
+t→0+
+1
+t
+Z t
+0
+|E(τ) − ∥u0∥L2(Ω)|dτ = 0.
+Hence, if we integrate Equation (47) from 0 to an arbitrary but positive t, divide both sides
+by t and take the limit as t → 0+ as follows:
+lim
+t→0+
+1
+t
+Z t
+0
+∥u(·, τ) − u0∥L2(Ω)dτ = lim
+t→0+
+1
+t
+Z t
+0
+|E(τ) − ∥u0∥L2(Ω)|dτ = 0.
+This shows that initial condition (29) is satisfied in the sense of definition (25).
+5. Discussion
+We show that when u0 ≡ 0, there exist multiple weak and very weak solutions. Since
+the arguments are similar, we only show the existence of very weak solutions.
+Suppose that u0 ≡ 0, E ∈ L2(0, T) and {En}∞
+n=1 is a sequence of W1
+2 (0, T) functions
+converging to E in L2-norm. We find approximate solutions (u(N), f (N)) represented in the
+forms (30), i.e.,
+u(N)
+n (x, t) =
+N
+∑
+k=1
+wk,n(t)vk(x), f (N)
+n (x, t) =
+N
+∑
+k=1
+qk,n(t)vk(x),
+that satisfy the following system for a.e. t ∈ (0, T) and k ≤ N:
+
+
+
+Z
+Ω
+(u(N)
+n )t(x, t) · vk(x)dx + ν
+Z
+Ω
+∇u(N)
+n (x, t) · ∇vk(x)dx =
+Z
+Ω
+f (N)
+n (x, t)vk(x)dx,
+u(N)
+n (x, 0) = 0, x ∈ Ω,
+Z
+Ω
+u(N)
+n (x, t)
+
+2
+dx = γ2
+k E2
+n(t),
+(48)
+where {γk}∞
+k=1 is any sequence, such that ∑∞
+k=1 γk = 1 and such that the series ∑∞
+k=1 γ2
+k λ2
+k
+converges. From (48), we get the following expressions for wk,n and qk,n:
+wk,n(t) = γkEn(t), qk,n(t) = w′
+k,n + λkwk,n.
+The estimates for u(N)
+n are similar to (34) and (35) as follows:
+∥u(N)
+n ∥2
+L2(ΩT ) ≤ ∥ En∥2
+L2(0,T), ∥∇u(N)
+n ∥2
+L2(ΩT ) ≤
+∥En∥2
+L2(0,T)
+ν
+N
+∑
+k=1
+γ2
+k λk ≤ C∥En∥2
+L2(0,T)
+https://doi.org/10.3390/math14091402
+Mathematics 2026, 14, 1402 17 of 18
+for some positive constant C depending on ν and the sequence {γk}∞
+k=1. This shows that
+u(N)
+n is from the space  ̊V1,0
+2 (ΩT). As for fk,n, we get
+Sqk,n
+(t) = wk,n(t) −
+0
+z }| {
+wk,n(0) +λk
+Z t
+0
+wk,n(τ)dτ = γkEn(t) + λkγk
+Z t
+0
+En(τ)dτ
+and
+∥Sqk,n
+∥2
+L2(0,T) =
+Z T
+0
+|Sqk,n
+(t)|2dt =
+Z T
+0
+
+γkEn(t) + λkγk
+Z t
+0
+En(τ)dτ
+2
+dt
+≤ 2
+ 
+γ2
+k
+Z T
+0
+E2
+n(t)dt + λ2
+kγ2
+k
+Z T
+0
+
+Z t
+0
+En(τ)dτ
+
+2
+dt
+!
+≤ 2γ2
+k ∥En∥2
+L2(0,T) + 2λ2
+kγ2
+kT2∥En∥2
+L2(0,T).
+Therefore,
+∥S f (N)
+n
+∥2
+L2(ΩT ) =
+N
+∑
+k=1
+Z T
+0
+|Sqk,n
+(τ)|2dτ ≤
+∞
+∑
+k=1
+
+2γ2
+k ∥En∥2
+L2(0,T) + 2λ2
+kγ2
+kT2∥En∥2
+L2(0,T)
+
+= 2(1 + C∗T2)∥En∥2
+L2(0,T),
+for some positive constant C∗ depending on the sequence {γk}∞
+k=1 . This shows that for a
+fixed n ∈ N, the sequence {S f (N)
+n
+}∞
+N=1 is bounded in L2(ΩT). Once we have these bounds,
+we can prove the existence of very weak solutions in a similar way as in Section 3.3.
+Thus, in the case u0 ≡ 0, the sequence {γk}∞
+k=1 may be chosen arbitrarily, whereas for
+u0 ̸= 0, the sequence {γk}∞
+k=1 is fixed. Therefore, when u0 ≡ 0, there exist infinitely many
+solutions, and uniqueness does not hold in this case. For nonhomogeneous initial data, the
+uniqueness of solution remains an open problem.
+Remark 2. The assumption u0 ∈ W2
+2 (Ω) ∩ H(Ω) is required to obtain estimates for the approximate solutions. In particular, this regularity condition allows us to control the series associated with
+the Fourier coefficients βk. Moreover, it guarantees that div u0 = 0 and u0
+
+∂Ω = 0.
+6. Conclusions
+In this paper, we constructed weak and very weak solutions to the nonstationary
+Stokes problem with a nonlinear integral overdetermination condition as follows:
+Z
+Ω
+|u(x, t)|2dx = E2(t).
+We have considered two cases, depending on the regularity of the function E, i.e., when the
+kinetic energy E belongs to W1
+2 (0, T) and when E is only from L2(0, T). For the case when
+E ∈ W1
+2 (0, T), we constructed the classical weak solutions, while when E belongs only to
+L2(0, T), we used a different approach and constructed very weak solutions.
+Due to the low regularity of the energy function E and the nonlinearity of the integral
+overdetermination condition, the question of uniqueness in the case of nonhomogeneous
+initial data remains open. In the case of zero initial data, uniqueness does not hold.
+Author Contributions: Conceptualization, V .B. and K.K.; methodology, V .B. and K.K.; formal analysis,
+V .B. and K.K.; investigation, V .B. and K.K.; writing—original draft, V .B.; writing—review and editing,
+K.K.; supervision, K.K. All authors have read and agreed to the published version of the manuscript.
+Funding: The research of K. Kaulakyt ̇e has received funding from the Research Council of Lithuania
+(LMTLT), Agreement No. S-MIP-23-43.
+https://doi.org/10.3390/math14091402
+Mathematics 2026, 14, 1402 18 of 18
+Data Availability Statement: The original contributions presented in this study are included in the
+article. Further inquiries can be directed to the corresponding author.
+Conflicts of Interest: The authors declare no conflicts of interest.
+References
+1. Ladyzhenskaya, O.A. The Mathematical Theory of Viscous Incompressible Flow; Gordon and Breach: New York, NY, USA, 1969.
+2. Cannon, J.R. The One-Dimensional Heat Equation; Encyclopedia of Mathematics and Its Applications; Cambridge University Press:
+Cambridge, UK, 1984.
+3. Cannon, J.R. The solution of the heat equation subject to the specification of energy. Q. Appl. Math. 1963, 21, 155–160. [CrossRef]
+4. Galdi, G.P .; Pileckas, K.; Silvestre, A.L. On the unsteady Poiseuille flow in a pipe. Z. Angew. Math. Phys. 2007, 58, 994–1007.
+[CrossRef]
+5. Kamynin, V .L.; Vasin, I.A. Inverse problems for linearized Navier-Stokes equations with integral overdetermination. Unique
+solvability and passage to the limit. Ann. Univ. Ferrara 1992, 38, 229–247. [CrossRef]
+6. Kumar, P .; Mohan, M.T. Existence, uniqueness and stability of an inverse problem for two-dimensional convective Brinkman–
+Forchheimer equations with the integral overdetermination. Banach J. Math. Anal. 2022, 16, 58. [CrossRef]
+7. Pileckas, K.; Keblikas, V . Existence of a Nonstationary Poiseuille Solution. Sib. Math. J. 2005, 46, 514–526. [CrossRef]
+8. Pileckas, K. Existence of Solutions with the Prescribed Flux of the Navier–Stokes System in an Infinite Cylinder. J. Math. Fluid
+Mech. 2006, 8, 542–563. [CrossRef]
+9. Pileckas, K. On the Behavior of a Nonstationary Poiseuille Solution as t → ∞. Sib. Math. J. 2005, 46, 707–716. [CrossRef]
+10. Pileckas, K. Solvability in weighted spaces of the three-dimensional Navier-Stokes problem in domains with cylindrical outlets to
+infinity. Topol. Methods Nonlinear Anal. 2007, 29, 333–360.
+11. Pileckas, K. The Navier–Stokes System in Domains with Cylindrical Outlets to Infinity. Leray’s Problem. In Handbook of
+Mathematical Fluid Dynamics; Friedlander, S., Serre, D., Eds.; Elsevier: Amsterdam, The Netherlands, 2007; Volume 4, pp. 445–647.
+[CrossRef]
+12. Vasin, I.A. The existence and uniqueness of the generalized solution of the inverse problem for the nonlinear nonstationary
+Navier-Stokes system in the case of integral overdetermination. Math. Notes 1993, 54, 1002–1009. [CrossRef]
+13. Hazanee, A.; Ismailov, M.I.; Lesnic, D.; Kerimov, N.B. An inverse time-dependent source problem for the heat equation.
+Appl. Numer. Math. 2013, 69, 13–33. [CrossRef]
+14. Kaulakyt ̇e, K.; Kozulinas, N.; Pileckas, K. Time-periodic Poiseuille-type solution with minimally regular flow rate. Nonlinear
+Anal. Model. Control 2021, 26, 947–968. [CrossRef]
+15. Pileckas, K.; ˇCiegis, R. Existence of nonstationary Poiseuille-type solutions under minimal regularity assumptions. Z. Angew.
+Math. Phys. 2020, 71, 192. [CrossRef]
+16. Belickas, T.; Kaulakyt ̇e, K.; Puriuškis, G. Nonstationary heat equation with nonlinear side condition. Math. Model. Anal. 2025,
+30, 109–119. [CrossRef]
+17. Pileckas, K.; Korobkov, M.; Russo, R. The Steady Navier-Stokes System; Advances in Mathematical Fluid Mechanics; Birkhäuser
+Cham: Cham, Switzerland, 2024. [CrossRef]
+18. Evans, L.C. Partial Differential Equations, 2nd ed.; American Mathematical Society: Providence, RI, USA, 2010.
+19. Pileckas, K.; Panasenko, G. Multiscale Analysis of Viscous Flows in Thin Tube Structures; Advances in Mathematical Fluid Mechanics;
+Birkhäuser: Cham, Switzerland, 2024. [CrossRef]
+Disclaimer/Publisher’s Note: The statements, opinions and data contained in all publications are solely those of the individual
+author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to
+people or property resulting from any ideas, methods, instructions or products referred to in the content.
+https://doi.org/10.3390/math14091402

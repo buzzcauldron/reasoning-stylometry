@@ -284,7 +284,14 @@ def score_content(text: str, categories: list[str] | None = None) -> ContentScor
                 geo += lean[0]
                 alg += lean[1]
     margin = geo - alg
-    label = "geometric" if margin >= 0.5 else "algebraic" if margin <= -0.5 else ("algebraic" if alg >= geo else "geometric")
+    # Was `"algebraic" if alg >= geo else "geometric"` in the tie branch --
+    # algebraically identical to `"geometric" if margin > 0 else "algebraic"`
+    # with NO middle ground, so a chunk with zero hits on both dictionaries
+    # (geo == alg == 0) silently defaulted to "algebraic" as if that were a
+    # confident label. Ties (including 0-0) get no evidence either way, so
+    # they're their own label -- callers must route "ambiguous" to a holdout,
+    # not into the training pool.
+    label = "geometric" if margin > 0 else "algebraic" if margin < 0 else "ambiguous"
     return ContentScore(geo, alg, label, margin, hits_geo, hits_alg)
 
 
@@ -298,7 +305,9 @@ def score_style(text: str) -> StyleScore:
     hits_geo = hits_geo + d_hits_geo
     hits_alg = hits_alg + d_hits_alg
     margin = geo - alg
-    label = "geometric" if margin >= 0.5 else "algebraic" if margin <= -0.5 else ("algebraic" if alg >= geo else "geometric")
+    # See the matching note in score_content(): ties (including 0-0, no
+    # marker/structural-density hits at all) are "ambiguous", not "algebraic".
+    label = "geometric" if margin > 0 else "algebraic" if margin < 0 else "ambiguous"
     return StyleScore(geo, alg, label, margin, hits_geo, hits_alg)
 
 

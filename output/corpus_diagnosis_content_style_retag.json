@@ -1,17 +1,20 @@
 {
-  "n_chunks": 19058,
-  "n_renamed": 14264,
-  "n_moved_from_prior_holdout": 14261,
+  "n_source_chunks": 22390,
+  "n_content_pool": 21743,
+  "n_style_pool": 20004,
+  "n_fully_ambiguous": 67,
+  "n_ambiguous_content": 647,
+  "n_ambiguous_style": 2386,
   "n_skipped": 0,
   "skipped": [],
-  "n_expert_style_preserved": 3583,
-  "n_keyword_style_derived": 15475,
+  "n_expert_style_preserved": 3818,
+  "n_keyword_style_derived": 15606,
   "contingency_content__style": {
-    "geometric__geometric": 2541,
-    "geometric__algebraic": 5069,
-    "algebraic__geometric": 3148,
-    "algebraic__algebraic": 8300
+    "geometric__geometric": 2838,
+    "geometric__algebraic": 5246,
+    "algebraic__geometric": 3546,
+    "algebraic__algebraic": 7794
   },
-  "off_diagonal_fraction": 0.4312,
-  "note": "off_diagonal_fraction is the share of chunks where content and style labels disagree (e.g. algebraic content written in geometric style). 0.0 means content and style are still fully confounded; the two axes being independent heuristics does not guarantee a specific fraction, but 0.0 would indicate the scorers are not actually decoupled."
+  "off_diagonal_fraction": 0.4526,
+  "note": "off_diagonal_fraction is the share of confidently-labeled-on-both-axes chunks where content and style labels disagree (e.g. algebraic content written in geometric style). 0.0 would indicate the scorers are not actually decoupled. n_content_pool/n_style_pool count chunks written to chunks_content/ and chunks_style/ respectively -- these overlap (a chunk confident on both axes is duplicated into both) but are independent: ambiguity on one axis never removes a chunk from the other axis's pool. n_fully_ambiguous chunks (no signal on either axis) go to chunks_fully_ambiguous/ instead, unusable for either."
 }

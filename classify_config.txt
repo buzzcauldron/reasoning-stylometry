@@ -1,9 +1,9 @@
 corpus.format = "plain"
 corpus.lang = "English.all"
-analyzed.features = "w"
+analyzed.features = "c"
 ngram.size = 1
-mfw.min = 100
-mfw.max = 100
+mfw.min = 20
+mfw.max = 20
 mfw.incr = 100
 start.at = 1
 culling.min = 0

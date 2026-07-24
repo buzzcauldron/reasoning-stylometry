@@ -1,724 +1,3130 @@
 {
   "sources": [
     {
+      "arxiv": "0705.0710",
+      "style": "algebraic",
+      "chunks": 28,
+      "words": 12370
+    },
+    {
+      "arxiv": "0710.1470",
+      "style": "algebraic",
+      "chunks": 16,
+      "words": 8673
+    },
+    {
+      "arxiv": "0711.2704",
+      "style": "algebraic",
+      "chunks": 20,
+      "words": 9697
+    },
+    {
+      "arxiv": "0803.3351",
+      "style": "algebraic",
+      "chunks": 19,
+      "words": 10178
+    },
+    {
+      "arxiv": "0804.3582",
+      "style": "algebraic",
+      "chunks": 25,
+      "words": 12253
+    },
+    {
+      "arxiv": "0905.3377",
+      "style": "algebraic",
+      "chunks": 67,
+      "words": 32218
+    },
+    {
+      "arxiv": "0906.1238",
+      "style": "algebraic",
+      "chunks": 17,
+      "words": 8290
+    },
+    {
+      "arxiv": "0912.1054",
+      "style": "algebraic",
+      "chunks": 54,
+      "words": 29261
+    },
+    {
+      "arxiv": "1001.2096",
+      "style": "algebraic",
+      "chunks": 39,
+      "words": 21018
+    },
+    {
+      "arxiv": "1001.5008",
+      "style": "algebraic",
+      "chunks": 48,
+      "words": 26052
+    },
+    {
+      "arxiv": "1002.4256",
+      "style": "algebraic",
+      "chunks": 31,
+      "words": 16661
+    },
+    {
+      "arxiv": "1002.4374",
+      "style": "algebraic",
+      "chunks": 23,
+      "words": 11448
+    },
+    {
+      "arxiv": "1004.2578",
+      "style": "algebraic",
+      "chunks": 22,
+      "words": 11917
+    },
+    {
+      "arxiv": "1004.2781",
+      "style": "algebraic",
+      "chunks": 48,
+      "words": 23636
+    },
+    {
+      "arxiv": "1005.5120",
+      "style": "algebraic",
+      "chunks": 25,
+      "words": 13658
+    },
+    {
+      "arxiv": "1006.2723",
+      "style": "algebraic",
+      "chunks": 33,
+      "words": 18911
+    },
+    {
+      "arxiv": "1008.4749",
+      "style": "algebraic",
+      "chunks": 17,
+      "words": 9034
+    },
+    {
+      "arxiv": "1011.3342",
+      "style": "algebraic",
+      "chunks": 27,
+      "words": 13685
+    },
+    {
+      "arxiv": "1103.4322",
+      "style": "algebraic",
+      "chunks": 28,
+      "words": 15544
+    },
+    {
+      "arxiv": "1106.0930",
+      "style": "algebraic",
+      "chunks": 42,
+      "words": 22425
+    },
+    {
+      "arxiv": "1107.3377",
+      "style": "algebraic",
+      "chunks": 41,
+      "words": 20156
+    },
+    {
+      "arxiv": "1111.5932",
+      "style": "algebraic",
+      "chunks": 53,
+      "words": 27275
+    },
+    {
+      "arxiv": "1201.0188",
+      "style": "algebraic",
+      "chunks": 40,
+      "words": 20568
+    },
+    {
+      "arxiv": "1202.2405",
+      "style": "algebraic",
+      "chunks": 33,
+      "words": 17866
+    },
+    {
+      "arxiv": "1202.3839",
+      "style": "algebraic",
+      "chunks": 43,
+      "words": 20302
+    },
+    {
+      "arxiv": "1204.1606",
+      "style": "algebraic",
+      "chunks": 22,
+      "words": 12579
+    },
+    {
+      "arxiv": "1204.6530",
+      "style": "algebraic",
+      "chunks": 40,
+      "words": 20054
+    },
+    {
+      "arxiv": "1205.2525",
+      "style": "algebraic",
+      "chunks": 59,
+      "words": 28540
+    },
+    {
+      "arxiv": "1205.5534",
+      "style": "algebraic",
+      "chunks": 39,
+      "words": 20045
+    },
+    {
+      "arxiv": "1209.3217",
+      "style": "algebraic",
+      "chunks": 31,
+      "words": 17393
+    },
+    {
+      "arxiv": "1210.6325",
+      "style": "algebraic",
+      "chunks": 31,
+      "words": 16568
+    },
+    {
+      "arxiv": "1310.0528",
+      "style": "algebraic",
+      "chunks": 120,
+      "words": 66811
+    },
+    {
+      "arxiv": "1311.4960",
+      "style": "algebraic",
+      "chunks": 14,
+      "words": 7509
+    },
+    {
+      "arxiv": "1402.5149",
+      "style": "algebraic",
+      "chunks": 34,
+      "words": 18212
+    },
+    {
+      "arxiv": "1405.0401",
+      "style": "algebraic",
+      "chunks": 27,
+      "words": 14780
+    },
+    {
+      "arxiv": "1506.07129",
+      "style": "algebraic",
+      "chunks": 31,
+      "words": 16378
+    },
+    {
+      "arxiv": "1608.00499",
+      "style": "algebraic",
+      "chunks": 67,
+      "words": 39312
+    },
+    {
+      "arxiv": "1610.04888",
+      "style": "algebraic",
+      "chunks": 29,
+      "words": 15631
+    },
+    {
+      "arxiv": "1703.07898",
+      "style": "algebraic",
+      "chunks": 92,
+      "words": 49697
+    },
+    {
+      "arxiv": "1802.08934",
+      "style": "algebraic",
+      "chunks": 38,
+      "words": 24305
+    },
+    {
+      "arxiv": "1809.01714",
+      "style": "algebraic",
+      "chunks": 63,
+      "words": 34994
+    },
+    {
+      "arxiv": "1901.07166",
+      "style": "algebraic",
+      "chunks": 121,
+      "words": 66286
+    },
+    {
+      "arxiv": "1909.07649",
+      "style": "algebraic",
+      "chunks": 148,
+      "words": 64767
+    },
+    {
+      "arxiv": "2006.00340",
+      "style": "algebraic",
+      "chunks": 11,
+      "words": 5590
+    },
+    {
+      "arxiv": "2012.05888",
+      "style": "algebraic",
+      "chunks": 81,
+      "words": 42468
+    },
+    {
+      "arxiv": "2112.07070",
+      "style": "algebraic",
+      "chunks": 53,
+      "words": 26219
+    },
+    {
+      "arxiv": "math/0007007",
+      "style": "algebraic",
+      "chunks": 28,
+      "words": 14659
+    },
+    {
+      "arxiv": "math/0102201",
+      "style": "algebraic",
+      "chunks": 16,
+      "words": 8249
+    },
+    {
+      "arxiv": "math/0109048",
+      "style": "algebraic",
+      "chunks": 33,
+      "words": 17847
+    },
+    {
+      "arxiv": "math/0111200",
+      "style": "algebraic",
+      "chunks": 23,
+      "words": 11390
+    },
+    {
+      "arxiv": "math/0211391",
+      "style": "algebraic",
+      "chunks": 50,
+      "words": 23998
+    },
+    {
+      "arxiv": "math/0212094",
+      "style": "algebraic",
+      "chunks": 22,
+      "words": 12330
+    },
+    {
       "arxiv": "math/0306277",
       "style": "algebraic",
       "chunks": 9,
-      "words": 4822
+      "words": 4835
+    },
+    {
+      "arxiv": "math/0406109",
+      "style": "algebraic",
+      "chunks": 29,
+      "words": 14819
+    },
+    {
+      "arxiv": "math/0406330",
+      "style": "algebraic",
+      "chunks": 44,
+      "words": 21110
+    },
+    {
+      "arxiv": "math/0407161",
+      "style": "algebraic",
+      "chunks": 56,
+      "words": 31392
+    },
+    {
+      "arxiv": "math/0412126",
+      "style": "algebraic",
+      "chunks": 9,
+      "words": 4742
     },
     {
       "arxiv": "math/0505035",
       "style": "algebraic",
       "chunks": 18,
-      "words": 9720
+      "words": 9620
+    },
+    {
+      "arxiv": "math/0508632",
+      "style": "algebraic",
+      "chunks": 35,
+      "words": 16061
+    },
+    {
+      "arxiv": "math/0601760",
+      "style": "algebraic",
+      "chunks": 9,
+      "words": 4499
     },
     {
       "arxiv": "math/0607446",
       "style": "algebraic",
       "chunks": 45,
-      "words": 23093
+      "words": 22809
     },
     {
       "arxiv": "math/0701247",
       "style": "algebraic",
       "chunks": 16,
-      "words": 8366
+      "words": 8312
     },
     {
       "arxiv": "math/0701334",
       "style": "algebraic",
       "chunks": 22,
-      "words": 11698
+      "words": 11700
     },
     {
       "arxiv": "math/9807012",
       "style": "algebraic",
       "chunks": 26,
-      "words": 14209
+      "words": 14175
+    },
+    {
+      "arxiv": "0705.4325",
+      "style": "geometric",
+      "chunks": 58,
+      "words": 29513
+    },
+    {
+      "arxiv": "0711.3899",
+      "style": "geometric",
+      "chunks": 22,
+      "words": 12034
+    },
+    {
+      "arxiv": "0802.3208",
+      "style": "geometric",
+      "chunks": 77,
+      "words": 41823
+    },
+    {
+      "arxiv": "0910.1390",
+      "style": "geometric",
+      "chunks": 5,
+      "words": 2520
+    },
+    {
+      "arxiv": "1007.3085",
+      "style": "geometric",
+      "chunks": 26,
+      "words": 12621
+    },
+    {
+      "arxiv": "1009.0287",
+      "style": "geometric",
+      "chunks": 21,
+      "words": 11384
     },
     {
       "arxiv": "1103.5619",
       "style": "geometric",
       "chunks": 23,
-      "words": 12697
+      "words": 12733
+    },
+    {
+      "arxiv": "1109.4047",
+      "style": "geometric",
+      "chunks": 22,
+      "words": 11582
+    },
+    {
+      "arxiv": "1203.0360",
+      "style": "geometric",
+      "chunks": 12,
+      "words": 6419
+    },
+    {
+      "arxiv": "1205.6742",
+      "style": "geometric",
+      "chunks": 26,
+      "words": 15532
+    },
+    {
+      "arxiv": "1206.2601",
+      "style": "geometric",
+      "chunks": 54,
+      "words": 23115
+    },
+    {
+      "arxiv": "1303.2354",
+      "style": "geometric",
+      "chunks": 28,
+      "words": 14101
+    },
+    {
+      "arxiv": "1307.0487",
+      "style": "geometric",
+      "chunks": 25,
+      "words": 13617
+    },
+    {
+      "arxiv": "1403.0945",
+      "style": "geometric",
+      "chunks": 81,
+      "words": 42046
+    },
+    {
+      "arxiv": "1408.0543",
+      "style": "geometric",
+      "chunks": 43,
+      "words": 23559
+    },
+    {
+      "arxiv": "1507.05842",
+      "style": "geometric",
+      "chunks": 37,
+      "words": 19955
+    },
+    {
+      "arxiv": "1705.09989",
+      "style": "geometric",
+      "chunks": 33,
+      "words": 18979
+    },
+    {
+      "arxiv": "1709.09439",
+      "style": "geometric",
+      "chunks": 34,
+      "words": 18421
+    },
+    {
+      "arxiv": "1710.05039",
+      "style": "geometric",
+      "chunks": 60,
+      "words": 31794
+    },
+    {
+      "arxiv": "1804.03701",
+      "style": "geometric",
+      "chunks": 37,
+      "words": 16561
+    },
+    {
+      "arxiv": "2108.02828",
+      "style": "geometric",
+      "chunks": 29,
+      "words": 13849
+    },
+    {
+      "arxiv": "alg-geom/9711031",
+      "style": "geometric",
+      "chunks": 22,
+      "words": 11606
+    },
+    {
+      "arxiv": "math/0204019",
+      "style": "geometric",
+      "chunks": 12,
+      "words": 5584
+    },
+    {
+      "arxiv": "math/0211401",
+      "style": "geometric",
+      "chunks": 35,
+      "words": 18443
+    },
+    {
+      "arxiv": "math/0302269",
+      "style": "geometric",
+      "chunks": 22,
+      "words": 11062
+    },
+    {
+      "arxiv": "math/0303319",
+      "style": "geometric",
+      "chunks": 6,
+      "words": 3112
+    },
+    {
+      "arxiv": "math/0305219",
+      "style": "geometric",
+      "chunks": 3,
+      "words": 1361
+    },
+    {
+      "arxiv": "math/0306038",
+      "style": "geometric",
+      "chunks": 9,
+      "words": 4951
+    },
+    {
+      "arxiv": "math/0306388",
+      "style": "geometric",
+      "chunks": 15,
+      "words": 7386
+    },
+    {
+      "arxiv": "math/0307224",
+      "style": "geometric",
+      "chunks": 10,
+      "words": 4921
+    },
+    {
+      "arxiv": "math/0402159",
+      "style": "geometric",
+      "chunks": 5,
+      "words": 2970
+    },
+    {
+      "arxiv": "math/0405573",
+      "style": "geometric",
+      "chunks": 15,
+      "words": 7779
+    },
+    {
+      "arxiv": "math/0407087",
+      "style": "geometric",
+      "chunks": 3,
+      "words": 1893
+    },
+    {
+      "arxiv": "math/0410310",
+      "style": "geometric",
+      "chunks": 8,
+      "words": 3848
+    },
+    {
+      "arxiv": "math/0410496",
+      "style": "geometric",
+      "chunks": 9,
+      "words": 4364
+    },
+    {
+      "arxiv": "math/0411468",
+      "style": "geometric",
+      "chunks": 37,
+      "words": 19868
+    },
+    {
+      "arxiv": "math/0412033",
+      "style": "geometric",
+      "chunks": 14,
+      "words": 6528
+    },
+    {
+      "arxiv": "math/0412357",
+      "style": "geometric",
+      "chunks": 23,
+      "words": 12918
+    },
+    {
+      "arxiv": "math/0503113",
+      "style": "geometric",
+      "chunks": 18,
+      "words": 8551
+    },
+    {
+      "arxiv": "math/0504212",
+      "style": "geometric",
+      "chunks": 7,
+      "words": 4219
+    },
+    {
+      "arxiv": "math/0505404",
+      "style": "geometric",
+      "chunks": 9,
+      "words": 3405
+    },
+    {
+      "arxiv": "math/0505581",
+      "style": "geometric",
+      "chunks": 6,
+      "words": 2895
+    },
+    {
+      "arxiv": "math/0506396",
+      "style": "geometric",
+      "chunks": 36,
+      "words": 18831
+    },
+    {
+      "arxiv": "math/0506576",
+      "style": "geometric",
+      "chunks": 20,
+      "words": 8865
+    },
+    {
+      "arxiv": "math/0508347",
+      "style": "geometric",
+      "chunks": 5,
+      "words": 2201
+    },
+    {
+      "arxiv": "math/0511710",
+      "style": "geometric",
+      "chunks": 16,
+      "words": 8852
+    },
+    {
+      "arxiv": "math/0512599",
+      "style": "geometric",
+      "chunks": 14,
+      "words": 7131
+    },
+    {
+      "arxiv": "math/0603575",
+      "style": "geometric",
+      "chunks": 5,
+      "words": 2170
+    },
+    {
+      "arxiv": "math/0603674",
+      "style": "geometric",
+      "chunks": 3,
+      "words": 1538
+    },
+    {
+      "arxiv": "math/0604266",
+      "style": "geometric",
+      "chunks": 9,
+      "words": 4899
+    },
+    {
+      "arxiv": "math/0604375",
+      "style": "geometric",
+      "chunks": 13,
+      "words": 6495
+    },
+    {
+      "arxiv": "math/0607442",
+      "style": "geometric",
+      "chunks": 34,
+      "words": 18666
+    },
+    {
+      "arxiv": "math/0607598",
+      "style": "geometric",
+      "chunks": 13,
+      "words": 6270
+    },
+    {
+      "arxiv": "math/0608137",
+      "style": "geometric",
+      "chunks": 28,
+      "words": 16121
+    },
+    {
+      "arxiv": "math/0608426",
+      "style": "geometric",
+      "chunks": 12,
+      "words": 6604
+    },
+    {
+      "arxiv": "math/0610674",
+      "style": "geometric",
+      "chunks": 6,
+      "words": 3145
+    },
+    {
+      "arxiv": "math/0610962",
+      "style": "geometric",
+      "chunks": 12,
+      "words": 6192
+    },
+    {
+      "arxiv": "math/0701329",
+      "style": "geometric",
+      "chunks": 19,
+      "words": 9714
+    },
+    {
+      "arxiv": "math/0703468",
+      "style": "geometric",
+      "chunks": 8,
+      "words": 3788
+    },
+    {
+      "arxiv": "math/0703858",
+      "style": "geometric",
+      "chunks": 16,
+      "words": 7830
+    },
+    {
+      "arxiv": "math/9803091",
+      "style": "geometric",
+      "chunks": 25,
+      "words": 13905
+    },
+    {
+      "arxiv": "math/9901044",
+      "style": "geometric",
+      "chunks": 3,
+      "words": 1969
+    },
+    {
+      "arxiv": "2607.11861v1",
+      "style": "geometric",
+      "chunks": 8,
+      "words": 3554
+    },
+    {
+      "arxiv": "2607.11809v1",
+      "style": "geometric",
+      "chunks": 116,
+      "words": 64784
+    },
+    {
+      "arxiv": "2607.11804v1",
+      "style": "geometric",
+      "chunks": 8,
+      "words": 3342
+    },
+    {
+      "arxiv": "2607.11735v1",
+      "style": "geometric",
+      "chunks": 16,
+      "words": 9146
+    },
+    {
+      "arxiv": "2607.11610v1",
+      "style": "geometric",
+      "chunks": 18,
+      "words": 7974
+    },
+    {
+      "arxiv": "2607.11592v1",
+      "style": "geometric",
+      "chunks": 29,
+      "words": 12115
+    },
+    {
+      "arxiv": "2607.11544v1",
+      "style": "geometric",
+      "chunks": 48,
+      "words": 24883
+    },
+    {
+      "arxiv": "2607.11489v1",
+      "style": "geometric",
+      "chunks": 26,
+      "words": 11171
+    },
+    {
+      "arxiv": "2607.11411v1",
+      "style": "geometric",
+      "chunks": 28,
+      "words": 13413
+    },
+    {
+      "arxiv": "2607.11370v1",
+      "style": "geometric",
+      "chunks": 42,
+      "words": 16199
+    },
+    {
+      "arxiv": "2607.11365v1",
+      "style": "geometric",
+      "chunks": 28,
+      "words": 10641
+    },
+    {
+      "arxiv": "2607.11296v1",
+      "style": "geometric",
+      "chunks": 7,
+      "words": 4351
+    },
+    {
+      "arxiv": "2607.11238v1",
+      "style": "geometric",
+      "chunks": 19,
+      "words": 11249
+    },
+    {
+      "arxiv": "2607.11236v1",
+      "style": "geometric",
+      "chunks": 17,
+      "words": 6363
+    },
+    {
+      "arxiv": "2607.11227v1",
+      "style": "geometric",
+      "chunks": 34,
+      "words": 14278
+    },
+    {
+      "arxiv": "2607.11092v1",
+      "style": "geometric",
+      "chunks": 35,
+      "words": 13810
+    },
+    {
+      "arxiv": "2607.11082v1",
+      "style": "geometric",
+      "chunks": 86,
+      "words": 45769
+    },
+    {
+      "arxiv": "2607.11067v1",
+      "style": "geometric",
+      "chunks": 77,
+      "words": 31471
+    },
+    {
+      "arxiv": "2607.11057v1",
+      "style": "geometric",
+      "chunks": 8,
+      "words": 4782
+    },
+    {
+      "arxiv": "2607.10904v1",
+      "style": "geometric",
+      "chunks": 28,
+      "words": 15226
+    },
+    {
+      "arxiv": "2607.10837v1",
+      "style": "geometric",
+      "chunks": 22,
+      "words": 10292
+    },
+    {
+      "arxiv": "2607.10827v1",
+      "style": "geometric",
+      "chunks": 16,
+      "words": 5754
+    },
+    {
+      "arxiv": "2607.10761v1",
+      "style": "geometric",
+      "chunks": 44,
+      "words": 22022
+    },
+    {
+      "arxiv": "2607.10733v1",
+      "style": "geometric",
+      "chunks": 31,
+      "words": 11008
+    },
+    {
+      "arxiv": "2607.10717v1",
+      "style": "geometric",
+      "chunks": 20,
+      "words": 8414
+    },
+    {
+      "arxiv": "2607.10688v1",
+      "style": "geometric",
+      "chunks": 26,
+      "words": 10934
+    },
+    {
+      "arxiv": "2607.10662v1",
+      "style": "geometric",
+      "chunks": 40,
+      "words": 17913
+    },
+    {
+      "arxiv": "2607.10529v1",
+      "style": "geometric",
+      "chunks": 8,
+      "words": 4819
+    },
+    {
+      "arxiv": "2607.10426v1",
+      "style": "geometric",
+      "chunks": 33,
+      "words": 13744
+    },
+    {
+      "arxiv": "2607.10424v1",
+      "style": "geometric",
+      "chunks": 13,
+      "words": 8403
+    },
+    {
+      "arxiv": "2607.10398v1",
+      "style": "geometric",
+      "chunks": 21,
+      "words": 12080
+    },
+    {
+      "arxiv": "2607.10344v1",
+      "style": "geometric",
+      "chunks": 13,
+      "words": 5056
+    },
+    {
+      "arxiv": "2607.10321v1",
+      "style": "geometric",
+      "chunks": 13,
+      "words": 6544
+    },
+    {
+      "arxiv": "2607.10292v1",
+      "style": "geometric",
+      "chunks": 5,
+      "words": 3006
+    },
+    {
+      "arxiv": "2607.10220v1",
+      "style": "geometric",
+      "chunks": 9,
+      "words": 4254
+    },
+    {
+      "arxiv": "2607.10216v1",
+      "style": "geometric",
+      "chunks": 15,
+      "words": 9333
+    },
+    {
+      "arxiv": "2607.10157v1",
+      "style": "geometric",
+      "chunks": 10,
+      "words": 4635
+    },
+    {
+      "arxiv": "2607.10149v1",
+      "style": "geometric",
+      "chunks": 23,
+      "words": 8828
+    },
+    {
+      "arxiv": "2607.10018v1",
+      "style": "geometric",
+      "chunks": 49,
+      "words": 26041
+    },
+    {
+      "arxiv": "2607.09981v1",
+      "style": "geometric",
+      "chunks": 41,
+      "words": 21322
+    },
+    {
+      "arxiv": "2607.09946v1",
+      "style": "geometric",
+      "chunks": 48,
+      "words": 19341
+    },
+    {
+      "arxiv": "2607.09662v1",
+      "style": "geometric",
+      "chunks": 25,
+      "words": 15940
+    },
+    {
+      "arxiv": "2607.09636v1",
+      "style": "geometric",
+      "chunks": 36,
+      "words": 15339
+    },
+    {
+      "arxiv": "2607.09633v1",
+      "style": "geometric",
+      "chunks": 60,
+      "words": 30063
+    },
+    {
+      "arxiv": "2607.09601v1",
+      "style": "geometric",
+      "chunks": 55,
+      "words": 23233
+    },
+    {
+      "arxiv": "2607.09472v1",
+      "style": "geometric",
+      "chunks": 8,
+      "words": 3540
+    },
+    {
+      "arxiv": "2607.09353v1",
+      "style": "geometric",
+      "chunks": 34,
+      "words": 14947
+    },
+    {
+      "arxiv": "2607.09325v1",
+      "style": "geometric",
+      "chunks": 11,
+      "words": 6235
+    },
+    {
+      "arxiv": "2607.09300v1",
+      "style": "geometric",
+      "chunks": 24,
+      "words": 9369
+    },
+    {
+      "arxiv": "2607.09107v1",
+      "style": "geometric",
+      "chunks": 15,
+      "words": 6460
+    },
+    {
+      "arxiv": "2607.09034v1",
+      "style": "geometric",
+      "chunks": 13,
+      "words": 5280
+    },
+    {
+      "arxiv": "2607.08939v1",
+      "style": "geometric",
+      "chunks": 23,
+      "words": 13351
+    },
+    {
+      "arxiv": "2607.08933v1",
+      "style": "geometric",
+      "chunks": 7,
+      "words": 2984
+    },
+    {
+      "arxiv": "2607.08905v1",
+      "style": "geometric",
+      "chunks": 25,
+      "words": 10194
+    },
+    {
+      "arxiv": "2607.08810v1",
+      "style": "geometric",
+      "chunks": 20,
+      "words": 10955
+    },
+    {
+      "arxiv": "2607.08764v1",
+      "style": "geometric",
+      "chunks": 30,
+      "words": 12152
+    },
+    {
+      "arxiv": "2607.08631v1",
+      "style": "geometric",
+      "chunks": 27,
+      "words": 11516
+    },
+    {
+      "arxiv": "2607.08473v1",
+      "style": "geometric",
+      "chunks": 16,
+      "words": 7538
+    },
+    {
+      "arxiv": "2607.08458v1",
+      "style": "geometric",
+      "chunks": 65,
+      "words": 26303
+    },
+    {
+      "arxiv": "2607.08356v1",
+      "style": "geometric",
+      "chunks": 28,
+      "words": 17222
+    },
+    {
+      "arxiv": "2607.08230v1",
+      "style": "geometric",
+      "chunks": 28,
+      "words": 12758
+    },
+    {
+      "arxiv": "2607.08188v1",
+      "style": "geometric",
+      "chunks": 25,
+      "words": 13924
+    },
+    {
+      "arxiv": "2607.07986v1",
+      "style": "geometric",
+      "chunks": 9,
+      "words": 5661
+    },
+    {
+      "arxiv": "2607.07940v1",
+      "style": "geometric",
+      "chunks": 10,
+      "words": 6423
+    },
+    {
+      "arxiv": "2607.07936v1",
+      "style": "geometric",
+      "chunks": 4,
+      "words": 2549
+    },
+    {
+      "arxiv": "2607.07886v1",
+      "style": "geometric",
+      "chunks": 13,
+      "words": 7408
+    },
+    {
+      "arxiv": "2607.07876v1",
+      "style": "geometric",
+      "chunks": 7,
+      "words": 4503
+    },
+    {
+      "arxiv": "2607.07856v1",
+      "style": "geometric",
+      "chunks": 17,
+      "words": 10905
+    },
+    {
+      "arxiv": "2607.07587v1",
+      "style": "geometric",
+      "chunks": 10,
+      "words": 6459
+    },
+    {
+      "arxiv": "2607.07496v1",
+      "style": "geometric",
+      "chunks": 17,
+      "words": 9561
+    },
+    {
+      "arxiv": "2607.07424v1",
+      "style": "geometric",
+      "chunks": 10,
+      "words": 5989
+    },
+    {
+      "arxiv": "2607.07150v1",
+      "style": "geometric",
+      "chunks": 22,
+      "words": 13668
+    },
+    {
+      "arxiv": "2607.07054v1",
+      "style": "geometric",
+      "chunks": 42,
+      "words": 21166
+    },
+    {
+      "arxiv": "2607.07017v1",
+      "style": "geometric",
+      "chunks": 18,
+      "words": 8703
+    },
+    {
+      "arxiv": "2607.08923v1",
+      "style": "geometric",
+      "chunks": 44,
+      "words": 22280
+    },
+    {
+      "arxiv": "2607.06810v1",
+      "style": "geometric",
+      "chunks": 20,
+      "words": 9757
+    },
+    {
+      "arxiv": "2607.06686v1",
+      "style": "geometric",
+      "chunks": 46,
+      "words": 18092
+    },
+    {
+      "arxiv": "2607.06554v1",
+      "style": "geometric",
+      "chunks": 5,
+      "words": 3216
+    },
+    {
+      "arxiv": "2607.06524v1",
+      "style": "geometric",
+      "chunks": 14,
+      "words": 6080
+    },
+    {
+      "arxiv": "2607.06473v1",
+      "style": "geometric",
+      "chunks": 63,
+      "words": 32124
+    },
+    {
+      "arxiv": "2607.06422v1",
+      "style": "geometric",
+      "chunks": 29,
+      "words": 11751
+    },
+    {
+      "arxiv": "2607.06263v1",
+      "style": "geometric",
+      "chunks": 8,
+      "words": 3641
+    },
+    {
+      "arxiv": "2607.06172v1",
+      "style": "geometric",
+      "chunks": 46,
+      "words": 24445
+    },
+    {
+      "arxiv": "2607.06061v1",
+      "style": "geometric",
+      "chunks": 6,
+      "words": 2985
+    },
+    {
+      "arxiv": "2607.05974v1",
+      "style": "geometric",
+      "chunks": 20,
+      "words": 9917
+    },
+    {
+      "arxiv": "2607.05960v1",
+      "style": "geometric",
+      "chunks": 21,
+      "words": 8471
+    },
+    {
+      "arxiv": "2607.05710v1",
+      "style": "geometric",
+      "chunks": 16,
+      "words": 9788
+    },
+    {
+      "arxiv": "2607.05703v1",
+      "style": "geometric",
+      "chunks": 7,
+      "words": 3638
+    },
+    {
+      "arxiv": "2607.05664v1",
+      "style": "geometric",
+      "chunks": 26,
+      "words": 15149
+    },
+    {
+      "arxiv": "2607.05662v2",
+      "style": "geometric",
+      "chunks": 33,
+      "words": 18346
+    },
+    {
+      "arxiv": "2607.05360v1",
+      "style": "geometric",
+      "chunks": 76,
+      "words": 44933
+    },
+    {
+      "arxiv": "2607.05232v1",
+      "style": "geometric",
+      "chunks": 4,
+      "words": 2657
+    },
+    {
+      "arxiv": "2607.05231v1",
+      "style": "geometric",
+      "chunks": 20,
+      "words": 8771
+    },
+    {
+      "arxiv": "2607.05211v1",
+      "style": "geometric",
+      "chunks": 22,
+      "words": 10305
+    },
+    {
+      "arxiv": "2607.04530v1",
+      "style": "geometric",
+      "chunks": 7,
+      "words": 3522
+    },
+    {
+      "arxiv": "2607.04496v1",
+      "style": "geometric",
+      "chunks": 18,
+      "words": 10651
+    },
+    {
+      "arxiv": "2607.03838v1",
+      "style": "geometric",
+      "chunks": 14,
+      "words": 6119
+    },
+    {
+      "arxiv": "2607.03782v1",
+      "style": "geometric",
+      "chunks": 112,
+      "words": 47756
+    },
+    {
+      "arxiv": "2607.05430v2",
+      "style": "geometric",
+      "chunks": 53,
+      "words": 22128
+    },
+    {
+      "arxiv": "2607.03484v1",
+      "style": "geometric",
+      "chunks": 42,
+      "words": 17132
+    },
+    {
+      "arxiv": "2607.03128v1",
+      "style": "geometric",
+      "chunks": 11,
+      "words": 5400
+    },
+    {
+      "arxiv": "2607.03095v1",
+      "style": "geometric",
+      "chunks": 10,
+      "words": 6158
+    },
+    {
+      "arxiv": "2607.02244v1",
+      "style": "geometric",
+      "chunks": 47,
+      "words": 17417
+    },
+    {
+      "arxiv": "2607.01991v1",
+      "style": "geometric",
+      "chunks": 9,
+      "words": 4061
+    },
+    {
+      "arxiv": "2607.01809v2",
+      "style": "geometric",
+      "chunks": 46,
+      "words": 21747
+    },
+    {
+      "arxiv": "2607.01672v1",
+      "style": "geometric",
+      "chunks": 22,
+      "words": 13069
+    },
+    {
+      "arxiv": "2607.01652v1",
+      "style": "geometric",
+      "chunks": 4,
+      "words": 2336
+    },
+    {
+      "arxiv": "2607.01385v1",
+      "style": "geometric",
+      "chunks": 37,
+      "words": 20616
+    },
+    {
+      "arxiv": "2607.01196v1",
+      "style": "geometric",
+      "chunks": 19,
+      "words": 11040
+    },
+    {
+      "arxiv": "2607.01003v1",
+      "style": "geometric",
+      "chunks": 9,
+      "words": 4932
+    },
+    {
+      "arxiv": "2607.00556v1",
+      "style": "geometric",
+      "chunks": 12,
+      "words": 6671
+    },
+    {
+      "arxiv": "2607.00428v1",
+      "style": "geometric",
+      "chunks": 27,
+      "words": 14420
+    },
+    {
+      "arxiv": "2606.31393v2",
+      "style": "geometric",
+      "chunks": 23,
+      "words": 10548
+    },
+    {
+      "arxiv": "2606.31295v1",
+      "style": "geometric",
+      "chunks": 20,
+      "words": 10710
+    },
+    {
+      "arxiv": "2606.30403v1",
+      "style": "geometric",
+      "chunks": 34,
+      "words": 17470
+    },
+    {
+      "arxiv": "2607.00036v1",
+      "style": "geometric",
+      "chunks": 68,
+      "words": 29971
+    },
+    {
+      "arxiv": "2606.29189v2",
+      "style": "geometric",
+      "chunks": 6,
+      "words": 3325
+    },
+    {
+      "arxiv": "2606.28206v1",
+      "style": "geometric",
+      "chunks": 17,
+      "words": 7005
+    },
+    {
+      "arxiv": "2606.28107v1",
+      "style": "geometric",
+      "chunks": 44,
+      "words": 21068
+    },
+    {
+      "arxiv": "2606.27912v1",
+      "style": "geometric",
+      "chunks": 26,
+      "words": 12316
+    },
+    {
+      "arxiv": "2606.27340v1",
+      "style": "geometric",
+      "chunks": 8,
+      "words": 3588
+    },
+    {
+      "arxiv": "2606.27145v1",
+      "style": "geometric",
+      "chunks": 58,
+      "words": 38275
+    },
+    {
+      "arxiv": "2606.27074v2",
+      "style": "geometric",
+      "chunks": 29,
+      "words": 15126
+    },
+    {
+      "arxiv": "2606.25940v1",
+      "style": "geometric",
+      "chunks": 13,
+      "words": 5874
+    },
+    {
+      "arxiv": "2606.25848v1",
+      "style": "geometric",
+      "chunks": 20,
+      "words": 8140
+    },
+    {
+      "arxiv": "2606.25791v1",
+      "style": "geometric",
+      "chunks": 13,
+      "words": 5171
+    },
+    {
+      "arxiv": "2606.25464v1",
+      "style": "geometric",
+      "chunks": 13,
+      "words": 5907
+    },
+    {
+      "arxiv": "2606.25289v1",
+      "style": "geometric",
+      "chunks": 26,
+      "words": 13704
+    },
+    {
+      "arxiv": "2607.09710v1",
+      "style": "geometric",
+      "chunks": 11,
+      "words": 6684
+    },
+    {
+      "arxiv": "2606.25132v2",
+      "style": "geometric",
+      "chunks": 16,
+      "words": 6481
+    },
+    {
+      "arxiv": "2606.24771v2",
+      "style": "geometric",
+      "chunks": 27,
+      "words": 11959
+    },
+    {
+      "arxiv": "2606.24761v1",
+      "style": "geometric",
+      "chunks": 25,
+      "words": 9814
+    },
+    {
+      "arxiv": "2606.24754v1",
+      "style": "geometric",
+      "chunks": 225,
+      "words": 91226
+    },
+    {
+      "arxiv": "2606.24378v1",
+      "style": "geometric",
+      "chunks": 52,
+      "words": 21468
+    },
+    {
+      "arxiv": "2606.23648v1",
+      "style": "geometric",
+      "chunks": 47,
+      "words": 19325
+    },
+    {
+      "arxiv": "2606.22286v4",
+      "style": "geometric",
+      "chunks": 30,
+      "words": 11903
+    },
+    {
+      "arxiv": "2606.21997v1",
+      "style": "geometric",
+      "chunks": 6,
+      "words": 3427
+    },
+    {
+      "arxiv": "2606.21610v1",
+      "style": "geometric",
+      "chunks": 16,
+      "words": 7267
+    },
+    {
+      "arxiv": "2606.21291v1",
+      "style": "geometric",
+      "chunks": 12,
+      "words": 6378
+    },
+    {
+      "arxiv": "2606.19619v1",
+      "style": "geometric",
+      "chunks": 18,
+      "words": 10465
+    },
+    {
+      "arxiv": "2606.19246v1",
+      "style": "geometric",
+      "chunks": 29,
+      "words": 16674
+    },
+    {
+      "arxiv": "2606.17492v1",
+      "style": "geometric",
+      "chunks": 22,
+      "words": 10699
+    },
+    {
+      "arxiv": "2606.17193v1",
+      "style": "geometric",
+      "chunks": 46,
+      "words": 24102
+    },
+    {
+      "arxiv": "2606.16588v1",
+      "style": "geometric",
+      "chunks": 22,
+      "words": 12910
+    },
+    {
+      "arxiv": "2606.13774v1",
+      "style": "geometric",
+      "chunks": 31,
+      "words": 11728
+    },
+    {
+      "arxiv": "2606.13009v1",
+      "style": "geometric",
+      "chunks": 25,
+      "words": 9766
+    },
+    {
+      "arxiv": "2606.01466v1",
+      "style": "geometric",
+      "chunks": 55,
+      "words": 33150
+    },
+    {
+      "arxiv": "2605.31383v2",
+      "style": "geometric",
+      "chunks": 28,
+      "words": 13528
+    },
+    {
+      "arxiv": "2605.28963v1",
+      "style": "geometric",
+      "chunks": 68,
+      "words": 38478
+    },
+    {
+      "arxiv": "2605.27126v1",
+      "style": "geometric",
+      "chunks": 36,
+      "words": 22269
+    },
+    {
+      "arxiv": "2605.26777v1",
+      "style": "geometric",
+      "chunks": 16,
+      "words": 9730
+    },
+    {
+      "arxiv": "2605.23829v2",
+      "style": "geometric",
+      "chunks": 25,
+      "words": 15142
+    },
+    {
+      "arxiv": "2605.23822v1",
+      "style": "geometric",
+      "chunks": 14,
+      "words": 10187
+    },
+    {
+      "arxiv": "2605.23626v1",
+      "style": "geometric",
+      "chunks": 57,
+      "words": 21599
+    },
+    {
+      "arxiv": "2605.17874v1",
+      "style": "geometric",
+      "chunks": 17,
+      "words": 8571
+    },
+    {
+      "arxiv": "2605.13372v1",
+      "style": "geometric",
+      "chunks": 2,
+      "words": 1486
+    },
+    {
+      "arxiv": "2605.13064v1",
+      "style": "geometric",
+      "chunks": 7,
+      "words": 4407
+    },
+    {
+      "arxiv": "2605.12837v1",
+      "style": "geometric",
+      "chunks": 25,
+      "words": 15858
+    },
+    {
+      "arxiv": "2605.10248v1",
+      "style": "geometric",
+      "chunks": 58,
+      "words": 36505
+    },
+    {
+      "arxiv": "2605.02823v1",
+      "style": "geometric",
+      "chunks": 23,
+      "words": 8958
+    },
+    {
+      "arxiv": "2605.02107v1",
+      "style": "geometric",
+      "chunks": 24,
+      "words": 10430
+    },
+    {
+      "arxiv": "2604.27531v2",
+      "style": "geometric",
+      "chunks": 27,
+      "words": 10675
+    },
+    {
+      "arxiv": "2604.22387v1",
+      "style": "geometric",
+      "chunks": 16,
+      "words": 8547
+    },
+    {
+      "arxiv": "2604.18815v1",
+      "style": "geometric",
+      "chunks": 7,
+      "words": 3515
+    },
+    {
+      "arxiv": "2604.15627v2",
+      "style": "geometric",
+      "chunks": 5,
+      "words": 3351
+    },
+    {
+      "arxiv": "2604.14271v1",
+      "style": "geometric",
+      "chunks": 30,
+      "words": 11630
+    },
+    {
+      "arxiv": "2604.13194v2",
+      "style": "geometric",
+      "chunks": 23,
+      "words": 11148
+    },
+    {
+      "arxiv": "2604.12520v2",
+      "style": "geometric",
+      "chunks": 17,
+      "words": 7306
+    },
+    {
+      "arxiv": "2604.06686v1",
+      "style": "geometric",
+      "chunks": 28,
+      "words": 18664
+    },
+    {
+      "arxiv": "2603.20424v1",
+      "style": "geometric",
+      "chunks": 29,
+      "words": 13609
+    },
+    {
+      "arxiv": "2603.12095v1",
+      "style": "geometric",
+      "chunks": 14,
+      "words": 8109
+    },
+    {
+      "arxiv": "2602.15636v3",
+      "style": "geometric",
+      "chunks": 52,
+      "words": 24270
+    },
+    {
+      "arxiv": "2601.17929v1",
+      "style": "geometric",
+      "chunks": 16,
+      "words": 7960
+    },
+    {
+      "arxiv": "2601.07702v1",
+      "style": "geometric",
+      "chunks": 30,
+      "words": 13296
+    },
+    {
+      "arxiv": "2601.01057v1",
+      "style": "geometric",
+      "chunks": 36,
+      "words": 14965
+    },
+    {
+      "arxiv": "2512.24136v1",
+      "style": "geometric",
+      "chunks": 58,
+      "words": 35435
+    },
+    {
+      "arxiv": "2512.20926v2",
+      "style": "geometric",
+      "chunks": 16,
+      "words": 8220
+    },
+    {
+      "arxiv": "2512.20595v1",
+      "style": "geometric",
+      "chunks": 23,
+      "words": 12860
+    },
+    {
+      "arxiv": "2511.16463v1",
+      "style": "geometric",
+      "chunks": 38,
+      "words": 21922
+    },
+    {
+      "arxiv": "2511.04238v1",
+      "style": "geometric",
+      "chunks": 31,
+      "words": 17771
+    },
+    {
+      "arxiv": "2511.03887v1",
+      "style": "geometric",
+      "chunks": 18,
+      "words": 10469
+    },
+    {
+      "arxiv": "2510.12058v1",
+      "style": "geometric",
+      "chunks": 3,
+      "words": 1584
+    },
+    {
+      "arxiv": "2510.11336v1",
+      "style": "geometric",
+      "chunks": 18,
+      "words": 12155
+    },
+    {
+      "arxiv": "2510.10838v1",
+      "style": "geometric",
+      "chunks": 58,
+      "words": 27110
+    },
+    {
+      "arxiv": "2510.09399v2",
+      "style": "geometric",
+      "chunks": 59,
+      "words": 26413
+    },
+    {
+      "arxiv": "2510.05669v1",
+      "style": "geometric",
+      "chunks": 56,
+      "words": 33753
+    },
+    {
+      "arxiv": "2509.21566v2",
+      "style": "geometric",
+      "chunks": 28,
+      "words": 12216
+    },
+    {
+      "arxiv": "2509.20532v2",
+      "style": "geometric",
+      "chunks": 34,
+      "words": 20963
+    },
+    {
+      "arxiv": "2509.13447v1",
+      "style": "geometric",
+      "chunks": 27,
+      "words": 15429
+    },
+    {
+      "arxiv": "2509.11279v1",
+      "style": "geometric",
+      "chunks": 49,
+      "words": 32259
+    },
+    {
+      "arxiv": "2509.04613v2",
+      "style": "geometric",
+      "chunks": 17,
+      "words": 10223
+    },
+    {
+      "arxiv": "2508.15738v3",
+      "style": "geometric",
+      "chunks": 43,
+      "words": 24541
+    },
+    {
+      "arxiv": "2508.14244v1",
+      "style": "geometric",
+      "chunks": 23,
+      "words": 9771
+    },
+    {
+      "arxiv": "2508.07531v1",
+      "style": "geometric",
+      "chunks": 128,
+      "words": 52500
+    },
+    {
+      "arxiv": "2507.23666v1",
+      "style": "geometric",
+      "chunks": 10,
+      "words": 4366
+    },
+    {
+      "arxiv": "2507.17973v1",
+      "style": "geometric",
+      "chunks": 31,
+      "words": 12315
+    },
+    {
+      "arxiv": "2507.07076v1",
+      "style": "geometric",
+      "chunks": 42,
+      "words": 21094
+    },
+    {
+      "arxiv": "2507.02440v3",
+      "style": "geometric",
+      "chunks": 48,
+      "words": 25980
+    },
+    {
+      "arxiv": "2507.00702v1",
+      "style": "geometric",
+      "chunks": 7,
+      "words": 3642
+    },
+    {
+      "arxiv": "2506.10108v1",
+      "style": "geometric",
+      "chunks": 55,
+      "words": 22965
+    },
+    {
+      "arxiv": "2506.04882v3",
+      "style": "geometric",
+      "chunks": 16,
+      "words": 8384
+    },
+    {
+      "arxiv": "2506.04437v5",
+      "style": "geometric",
+      "chunks": 16,
+      "words": 8340
+    },
+    {
+      "arxiv": "2505.23293v3",
+      "style": "geometric",
+      "chunks": 24,
+      "words": 12698
+    },
+    {
+      "arxiv": "2505.12095v2",
+      "style": "geometric",
+      "chunks": 49,
+      "words": 19065
+    },
+    {
+      "arxiv": "2505.10334v1",
+      "style": "geometric",
+      "chunks": 40,
+      "words": 15772
+    },
+    {
+      "arxiv": "2505.07682v1",
+      "style": "geometric",
+      "chunks": 41,
+      "words": 17749
+    },
+    {
+      "arxiv": "2505.07873v1",
+      "style": "geometric",
+      "chunks": 46,
+      "words": 25331
+    },
+    {
+      "arxiv": "2504.17048v1",
+      "style": "geometric",
+      "chunks": 97,
+      "words": 56439
+    },
+    {
+      "arxiv": "2504.14192v1",
+      "style": "geometric",
+      "chunks": 27,
+      "words": 11774
+    },
+    {
+      "arxiv": "2504.10406v1",
+      "style": "geometric",
+      "chunks": 42,
+      "words": 17181
+    },
+    {
+      "arxiv": "2504.06456v2",
+      "style": "geometric",
+      "chunks": 10,
+      "words": 5477
+    },
+    {
+      "arxiv": "2503.18047v1",
+      "style": "geometric",
+      "chunks": 10,
+      "words": 5750
+    },
+    {
+      "arxiv": "2503.16360v3",
+      "style": "geometric",
+      "chunks": 35,
+      "words": 19412
+    },
+    {
+      "arxiv": "2503.08411v1",
+      "style": "geometric",
+      "chunks": 30,
+      "words": 18625
+    },
+    {
+      "arxiv": "2503.05527v1",
+      "style": "geometric",
+      "chunks": 41,
+      "words": 21182
+    },
+    {
+      "arxiv": "2502.21251v1",
+      "style": "geometric",
+      "chunks": 12,
+      "words": 6057
+    },
+    {
+      "arxiv": "2607.11777v1",
+      "style": "algebraic",
+      "chunks": 27,
+      "words": 11626
+    },
+    {
+      "arxiv": "2607.11767v1",
+      "style": "algebraic",
+      "chunks": 58,
+      "words": 24186
+    },
+    {
+      "arxiv": "2607.11687v1",
+      "style": "algebraic",
+      "chunks": 29,
+      "words": 15791
+    },
+    {
+      "arxiv": "2607.11639v1",
+      "style": "algebraic",
+      "chunks": 13,
+      "words": 7320
+    },
+    {
+      "arxiv": "2607.11619v1",
+      "style": "algebraic",
+      "chunks": 30,
+      "words": 17747
+    },
+    {
+      "arxiv": "2607.11595v1",
+      "style": "algebraic",
+      "chunks": 16,
+      "words": 6798
+    },
+    {
+      "arxiv": "2607.11561v1",
+      "style": "algebraic",
+      "chunks": 32,
+      "words": 13617
+    },
+    {
+      "arxiv": "2607.11552v1",
+      "style": "algebraic",
+      "chunks": 7,
+      "words": 3811
+    },
+    {
+      "arxiv": "2607.11525v1",
+      "style": "algebraic",
+      "chunks": 7,
+      "words": 3966
+    },
+    {
+      "arxiv": "2607.11493v1",
+      "style": "algebraic",
+      "chunks": 19,
+      "words": 11445
+    },
+    {
+      "arxiv": "2607.11456v1",
+      "style": "algebraic",
+      "chunks": 25,
+      "words": 10315
+    },
+    {
+      "arxiv": "2607.11367v1",
+      "style": "algebraic",
+      "chunks": 21,
+      "words": 10012
+    },
+    {
+      "arxiv": "2607.11361v1",
+      "style": "algebraic",
+      "chunks": 9,
+      "words": 5605
+    },
+    {
+      "arxiv": "2607.11329v1",
+      "style": "algebraic",
+      "chunks": 28,
+      "words": 15325
+    },
+    {
+      "arxiv": "2607.11261v1",
+      "style": "algebraic",
+      "chunks": 20,
+      "words": 9059
+    },
+    {
+      "arxiv": "2607.11169v1",
+      "style": "algebraic",
+      "chunks": 41,
+      "words": 17926
+    },
+    {
+      "arxiv": "2607.11133v1",
+      "style": "algebraic",
+      "chunks": 20,
+      "words": 8535
+    },
+    {
+      "arxiv": "2607.11100v1",
+      "style": "algebraic",
+      "chunks": 10,
+      "words": 4872
+    },
+    {
+      "arxiv": "2607.11085v1",
+      "style": "algebraic",
+      "chunks": 31,
+      "words": 13425
+    },
+    {
+      "arxiv": "2607.11068v1",
+      "style": "algebraic",
+      "chunks": 2,
+      "words": 1340
+    },
+    {
+      "arxiv": "2607.11033v1",
+      "style": "algebraic",
+      "chunks": 16,
+      "words": 10302
+    },
+    {
+      "arxiv": "2607.10935v1",
+      "style": "algebraic",
+      "chunks": 23,
+      "words": 14410
+    },
+    {
+      "arxiv": "2607.10922v1",
+      "style": "algebraic",
+      "chunks": 11,
+      "words": 4802
+    },
+    {
+      "arxiv": "2607.10913v1",
+      "style": "algebraic",
+      "chunks": 20,
+      "words": 8057
+    },
+    {
+      "arxiv": "2607.10886v1",
+      "style": "algebraic",
+      "chunks": 17,
+      "words": 10065
+    },
+    {
+      "arxiv": "2607.10880v1",
+      "style": "algebraic",
+      "chunks": 12,
+      "words": 7271
+    },
+    {
+      "arxiv": "2607.10821v1",
+      "style": "algebraic",
+      "chunks": 26,
+      "words": 11218
+    },
+    {
+      "arxiv": "2607.10782v1",
+      "style": "algebraic",
+      "chunks": 14,
+      "words": 7137
+    },
+    {
+      "arxiv": "2607.10683v1",
+      "style": "algebraic",
+      "chunks": 20,
+      "words": 11051
+    },
+    {
+      "arxiv": "2607.10660v1",
+      "style": "algebraic",
+      "chunks": 41,
+      "words": 21448
+    },
+    {
+      "arxiv": "2607.10602v1",
+      "style": "algebraic",
+      "chunks": 14,
+      "words": 7706
+    },
+    {
+      "arxiv": "2607.10442v1",
+      "style": "algebraic",
+      "chunks": 18,
+      "words": 12653
+    },
+    {
+      "arxiv": "2607.10351v1",
+      "style": "algebraic",
+      "chunks": 17,
+      "words": 7266
+    },
+    {
+      "arxiv": "2607.10327v1",
+      "style": "algebraic",
+      "chunks": 11,
+      "words": 6059
+    },
+    {
+      "arxiv": "2607.10323v1",
+      "style": "algebraic",
+      "chunks": 17,
+      "words": 9836
+    },
+    {
+      "arxiv": "2607.10289v1",
+      "style": "algebraic",
+      "chunks": 36,
+      "words": 18600
+    },
+    {
+      "arxiv": "2607.10264v1",
+      "style": "algebraic",
+      "chunks": 10,
+      "words": 5491
+    },
+    {
+      "arxiv": "2607.10253v1",
+      "style": "algebraic",
+      "chunks": 11,
+      "words": 5165
+    },
+    {
+      "arxiv": "2607.10242v1",
+      "style": "algebraic",
+      "chunks": 35,
+      "words": 15667
+    },
+    {
+      "arxiv": "2607.10184v1",
+      "style": "algebraic",
+      "chunks": 14,
+      "words": 8093
+    },
+    {
+      "arxiv": "2607.10073v1",
+      "style": "algebraic",
+      "chunks": 33,
+      "words": 21474
+    },
+    {
+      "arxiv": "2607.10051v1",
+      "style": "algebraic",
+      "chunks": 17,
+      "words": 6893
+    },
+    {
+      "arxiv": "2607.10010v1",
+      "style": "algebraic",
+      "chunks": 17,
+      "words": 6992
+    },
+    {
+      "arxiv": "2607.09949v1",
+      "style": "algebraic",
+      "chunks": 9,
+      "words": 4201
+    },
+    {
+      "arxiv": "2607.09612v1",
+      "style": "algebraic",
+      "chunks": 29,
+      "words": 14886
+    },
+    {
+      "arxiv": "2607.09595v1",
+      "style": "algebraic",
+      "chunks": 45,
+      "words": 22017
+    },
+    {
+      "arxiv": "2607.09439v1",
+      "style": "algebraic",
+      "chunks": 17,
+      "words": 7448
+    },
+    {
+      "arxiv": "2607.09398v1",
+      "style": "algebraic",
+      "chunks": 11,
+      "words": 5043
+    },
+    {
+      "arxiv": "2607.09384v1",
+      "style": "algebraic",
+      "chunks": 15,
+      "words": 6827
+    },
+    {
+      "arxiv": "2607.09379v1",
+      "style": "algebraic",
+      "chunks": 16,
+      "words": 7322
+    },
+    {
+      "arxiv": "2607.09302v1",
+      "style": "algebraic",
+      "chunks": 9,
+      "words": 3428
+    },
+    {
+      "arxiv": "2607.09173v1",
+      "style": "algebraic",
+      "chunks": 5,
+      "words": 2685
+    },
+    {
+      "arxiv": "2607.09069v1",
+      "style": "algebraic",
+      "chunks": 27,
+      "words": 16919
+    },
+    {
+      "arxiv": "2607.09032v1",
+      "style": "algebraic",
+      "chunks": 21,
+      "words": 10969
+    },
+    {
+      "arxiv": "2607.09799v1",
+      "style": "algebraic",
+      "chunks": 9,
+      "words": 5916
+    },
+    {
+      "arxiv": "2607.08913v1",
+      "style": "algebraic",
+      "chunks": 34,
+      "words": 14787
+    },
+    {
+      "arxiv": "2607.08911v1",
+      "style": "algebraic",
+      "chunks": 63,
+      "words": 33687
+    },
+    {
+      "arxiv": "2607.08909v1",
+      "style": "algebraic",
+      "chunks": 46,
+      "words": 23179
+    },
+    {
+      "arxiv": "2607.08730v1",
+      "style": "algebraic",
+      "chunks": 20,
+      "words": 10413
+    },
+    {
+      "arxiv": "2607.08609v1",
+      "style": "algebraic",
+      "chunks": 11,
+      "words": 7078
+    },
+    {
+      "arxiv": "2607.08600v1",
+      "style": "algebraic",
+      "chunks": 21,
+      "words": 9722
+    },
+    {
+      "arxiv": "2607.08485v1",
+      "style": "algebraic",
+      "chunks": 9,
+      "words": 4347
+    },
+    {
+      "arxiv": "2607.08455v1",
+      "style": "algebraic",
+      "chunks": 27,
+      "words": 11968
+    },
+    {
+      "arxiv": "2607.08389v1",
+      "style": "algebraic",
+      "chunks": 17,
+      "words": 9624
+    },
+    {
+      "arxiv": "2607.08352v1",
+      "style": "algebraic",
+      "chunks": 7,
+      "words": 3938
     },
     {
       "arxiv": "2607.08311v1",
       "style": "algebraic",
-      "chunks": 12,
-      "words": 6964
+      "chunks": 14,
+      "words": 7334
     },
     {
       "arxiv": "2607.08308v1",
       "style": "algebraic",
-      "chunks": 2,
-      "words": 89439
+      "chunks": 233,
+      "words": 128002
     },
     {
       "arxiv": "2607.08304v1",
       "style": "algebraic",
-      "chunks": 14,
-      "words": 9178
+      "chunks": 21,
+      "words": 9391
     },
     {
       "arxiv": "2607.08296v1",
       "style": "algebraic",
       "chunks": 25,
-      "words": 11422
+      "words": 11357
     },
     {
       "arxiv": "2607.08271v1",
       "style": "algebraic",
-      "chunks": 12,
-      "words": 7146
+      "chunks": 18,
+      "words": 7368
     },
     {
       "arxiv": "2607.08245v1",
       "style": "algebraic",
-      "chunks": 23,
-      "words": 12586
+      "chunks": 26,
+      "words": 13211
     },
     {
       "arxiv": "2607.08239v1",
       "style": "algebraic",
-      "chunks": 18,
-      "words": 12741
+      "chunks": 19,
+      "words": 12942
     },
     {
       "arxiv": "2607.08210v1",
       "style": "algebraic",
-      "chunks": 13,
-      "words": 8002
+      "chunks": 16,
+      "words": 8091
     },
     {
       "arxiv": "2607.08206v1",
       "style": "algebraic",
-      "chunks": 8,
-      "words": 4763
+      "chunks": 9,
+      "words": 4804
     },
     {
       "arxiv": "2607.08139v1",
       "style": "algebraic",
       "chunks": 9,
-      "words": 5322
+      "words": 5626
     },
     {
       "arxiv": "2607.08126v1",
       "style": "algebraic",
       "chunks": 9,
-      "words": 5413
+      "words": 5708
     },
     {
       "arxiv": "2607.08064v1",
       "style": "algebraic",
-      "chunks": 19,
-      "words": 8693
+      "chunks": 20,
+      "words": 8935
     },
     {
       "arxiv": "2607.08052v1",
       "style": "algebraic",
-      "chunks": 27,
-      "words": 15578
+      "chunks": 28,
+      "words": 15908
     },
     {
       "arxiv": "2607.07913v1",
       "style": "algebraic",
-      "chunks": 5,
-      "words": 3259
+      "chunks": 6,
+      "words": 3321
     },
     {
       "arxiv": "2607.07900v1",
       "style": "algebraic",
-      "chunks": 19,
-      "words": 9516
+      "chunks": 22,
+      "words": 9819
     },
     {
       "arxiv": "2607.07898v1",
       "style": "algebraic",
       "chunks": 8,
-      "words": 4638
+      "words": 4696
     },
     {
       "arxiv": "2607.07786v1",
       "style": "algebraic",
-      "chunks": 45,
-      "words": 21790
+      "chunks": 54,
+      "words": 22407
     },
     {
       "arxiv": "2607.07780v1",
       "style": "algebraic",
-      "chunks": 17,
-      "words": 6984
+      "chunks": 18,
+      "words": 11616
     },
     {
       "arxiv": "2607.07755v1",
       "style": "algebraic",
-      "chunks": 12,
-      "words": 6746
+      "chunks": 16,
+      "words": 7106
     },
     {
       "arxiv": "2607.07667v1",
       "style": "algebraic",
-      "chunks": 21,
-      "words": 10534
+      "chunks": 25,
+      "words": 10722
     },
     {
       "arxiv": "2607.07659v1",
       "style": "algebraic",
-      "chunks": 14,
-      "words": 7921
+      "chunks": 15,
+      "words": 8104
     },
     {
       "arxiv": "2607.07653v1",
       "style": "algebraic",
-      "chunks": 24,
-      "words": 11408
+      "chunks": 28,
+      "words": 11575
     },
     {
       "arxiv": "2607.07555v1",
       "style": "algebraic",
-      "chunks": 20,
-      "words": 10684
+      "chunks": 24,
+      "words": 10710
     },
     {
       "arxiv": "2607.07525v1",
       "style": "algebraic",
-      "chunks": 38,
-      "words": 24651
+      "chunks": 40,
+      "words": 25115
     },
     {
       "arxiv": "2607.07512v1",
       "style": "algebraic",
-      "chunks": 39,
-      "words": 21359
+      "chunks": 46,
+      "words": 21506
     },
     {
       "arxiv": "2607.07473v1",
       "style": "algebraic",
-      "chunks": 40,
-      "words": 23545
+      "chunks": 45,
+      "words": 23999
     },
     {
       "arxiv": "2607.07427v1",
       "style": "algebraic",
-      "chunks": 65,
-      "words": 37584
+      "chunks": 88,
+      "words": 39258
     },
     {
       "arxiv": "2607.07412v1",
       "style": "algebraic",
-      "chunks": 25,
-      "words": 13787
+      "chunks": 32,
+      "words": 14073
     },
     {
       "arxiv": "2607.07369v1",
       "style": "algebraic",
       "chunks": 10,
-      "words": 4133
+      "words": 4225
     },
     {
       "arxiv": "2607.07323v1",
       "style": "algebraic",
-      "chunks": 6,
-      "words": 3436
+      "chunks": 7,
+      "words": 3477
     },
     {
       "arxiv": "2607.07319v1",
       "style": "algebraic",
-      "chunks": 20,
-      "words": 14028
+      "chunks": 21,
+      "words": 14482
     },
     {
       "arxiv": "2607.07243v1",
       "style": "algebraic",
-      "chunks": 29,
-      "words": 20880
+      "chunks": 32,
+      "words": 21659
     },
     {
       "arxiv": "2607.07227v1",
       "style": "algebraic",
-      "chunks": 21,
-      "words": 13390
+      "chunks": 25,
+      "words": 13757
     },
     {
       "arxiv": "2607.07211v1",
       "style": "algebraic",
-      "chunks": 11,
-      "words": 6387
+      "chunks": 12,
+      "words": 6639
     },
     {
       "arxiv": "2607.07088v1",
       "style": "algebraic",
-      "chunks": 20,
-      "words": 9695
+      "chunks": 25,
+      "words": 9904
     },
     {
       "arxiv": "2607.07066v1",
       "style": "algebraic",
-      "chunks": 27,
-      "words": 14515
+      "chunks": 32,
+      "words": 14576
     },
     {
       "arxiv": "2607.07042v1",
       "style": "algebraic",
-      "chunks": 28,
-      "words": 15340
+      "chunks": 38,
+      "words": 15881
     },
     {
       "arxiv": "2607.07028v1",
       "style": "algebraic",
-      "chunks": 35,
-      "words": 19439
+      "chunks": 43,
+      "words": 19917
     },
     {
       "arxiv": "2607.06960v1",
       "style": "algebraic",
-      "chunks": 28,
-      "words": 17394
+      "chunks": 36,
+      "words": 17965
     },
     {
       "arxiv": "2607.06927v1",
       "style": "algebraic",
-      "chunks": 10,
-      "words": 4414
+      "chunks": 11,
+      "words": 4477
     },
     {
       "arxiv": "2607.06869v1",
       "style": "algebraic",
       "chunks": 16,
-      "words": 11183
+      "words": 11520
     },
     {
       "arxiv": "2607.06823v1",
       "style": "algebraic",
-      "chunks": 46,
-      "words": 30495
+      "chunks": 47,
+      "words": 30961
     },
     {
       "arxiv": "2607.06733v1",
       "style": "algebraic",
-      "chunks": 17,
-      "words": 10703
+      "chunks": 21,
+      "words": 11086
     },
     {
       "arxiv": "2607.06694v1",
       "style": "algebraic",
       "chunks": 23,
-      "words": 14659
+      "words": 14864
     },
     {
       "arxiv": "2607.06676v1",
       "style": "algebraic",
-      "chunks": 34,
-      "words": 20946
+      "chunks": 40,
+      "words": 21763
     },
     {
       "arxiv": "2607.06454v1",
       "style": "algebraic",
-      "chunks": 18,
-      "words": 10262
+      "chunks": 27,
+      "words": 10624
     },
     {
       "arxiv": "2607.06418v1",
       "style": "algebraic",
-      "chunks": 11,
-      "words": 4014
+      "chunks": 12,
+      "words": 4064
     },
     {
       "arxiv": "2607.06386v1",
       "style": "algebraic",
-      "chunks": 10,
-      "words": 6506
+      "chunks": 14,
+      "words": 6693
     },
     {
       "arxiv": "2607.06359v1",
       "style": "algebraic",
-      "chunks": 32,
-      "words": 11322
+      "chunks": 34,
+      "words": 13732
     },
     {
       "arxiv": "2607.06271v1",
       "style": "algebraic",
       "chunks": 18,
-      "words": 10966
+      "words": 11140
     },
     {
       "arxiv": "2607.06218v1",
       "style": "algebraic",
       "chunks": 19,
-      "words": 12551
+      "words": 12707
     },
     {
       "arxiv": "2607.06206v1",
       "style": "algebraic",
-      "chunks": 14,
-      "words": 8711
+      "chunks": 20,
+      "words": 8914
     },
     {
       "arxiv": "2607.06022v1",
       "style": "algebraic",
-      "chunks": 24,
-      "words": 10422
+      "chunks": 25,
+      "words": 10719
     },
     {
       "arxiv": "2607.05983v1",
       "style": "algebraic",
-      "chunks": 39,
-      "words": 24000
+      "chunks": 42,
+      "words": 24577
     },
     {
       "arxiv": "2607.05941v1",
       "style": "algebraic",
-      "chunks": 5,
-      "words": 3093
+      "chunks": 6,
+      "words": 3181
     },
     {
       "arxiv": "2607.05767v1",
       "style": "algebraic",
-      "chunks": 14,
-      "words": 9609
+      "chunks": 15,
+      "words": 9865
     },
     {
       "arxiv": "2607.05723v1",
       "style": "algebraic",
-      "chunks": 17,
-      "words": 11777
+      "chunks": 19,
+      "words": 12082
     },
     {
       "arxiv": "2607.05688v1",
       "style": "algebraic",
-      "chunks": 14,
-      "words": 6554
+      "chunks": 18,
+      "words": 6682
     },
     {
       "arxiv": "2607.05592v1",
       "style": "algebraic",
       "chunks": 12,
-      "words": 7999
+      "words": 8087
     },
     {
       "arxiv": "2607.05542v1",
       "style": "algebraic",
-      "chunks": 27,
-      "words": 14484
+      "chunks": 32,
+      "words": 14660
     },
     {
       "arxiv": "2607.05532v1",
       "style": "algebraic",
       "chunks": 8,
-      "words": 4817
+      "words": 5051
     },
     {
       "arxiv": "2607.05386v2",
       "style": "algebraic",
-      "chunks": 47,
-      "words": 30753
+      "chunks": 59,
+      "words": 31524
     },
     {
       "arxiv": "2607.05358v1",
       "style": "algebraic",
-      "chunks": 12,
-      "words": 6600
+      "chunks": 16,
+      "words": 6720
     },
     {
       "arxiv": "2607.05245v1",
       "style": "algebraic",
-      "chunks": 15,
-      "words": 8392
+      "chunks": 16,
+      "words": 8570
     },
     {
       "arxiv": "2607.05228v1",
       "style": "algebraic",
-      "chunks": 13,
-      "words": 8623
+      "chunks": 14,
+      "words": 8944
     },
     {
       "arxiv": "2607.05212v1",
       "style": "algebraic",
-      "chunks": 14,
-      "words": 8031
+      "chunks": 18,
+      "words": 8290
     },
     {
       "arxiv": "2607.05075v1",
       "style": "algebraic",
-      "chunks": 10,
-      "words": 6798
+      "chunks": 11,
+      "words": 6892
     },
     {
       "arxiv": "2607.04712v1",
       "style": "algebraic",
-      "chunks": 17,
-      "words": 9689
+      "chunks": 23,
+      "words": 9791
     },
     {
       "arxiv": "2607.04539v1",
       "style": "algebraic",
-      "chunks": 10,
-      "words": 6948
+      "chunks": 12,
+      "words": 7325
     },
     {
       "arxiv": "2607.04411v1",
       "style": "algebraic",
-      "chunks": 19,
-      "words": 10377
+      "chunks": 24,
+      "words": 10911
     },
     {
       "arxiv": "2607.04266v1",
       "style": "algebraic",
       "chunks": 10,
-      "words": 5936
+      "words": 5963
     },
     {
       "arxiv": "2607.04177v1",
       "style": "algebraic",
       "chunks": 8,
-      "words": 3477
+      "words": 3471
     },
     {
       "arxiv": "2607.04015v1",
       "style": "algebraic",
-      "chunks": 30,
-      "words": 15620
+      "chunks": 37,
+      "words": 15803
     },
     {
       "arxiv": "2607.03996v1",
       "style": "algebraic",
-      "chunks": 33,
-      "words": 21733
+      "chunks": 35,
+      "words": 22266
     },
     {
       "arxiv": "2607.03995v1",
       "style": "algebraic",
-      "chunks": 7,
-      "words": 4515
+      "chunks": 9,
+      "words": 4617
     },
     {
       "arxiv": "2607.03827v1",
       "style": "algebraic",
-      "chunks": 22,
-      "words": 12964
+      "chunks": 29,
+      "words": 13302
     },
     {
       "arxiv": "2607.03684v1",
       "style": "algebraic",
       "chunks": 3,
-      "words": 1614
+      "words": 1625
     },
     {
       "arxiv": "2607.03638v1",
       "style": "algebraic",
       "chunks": 19,
-      "words": 8035
+      "words": 8010
     },
     {
       "arxiv": "2607.03630v1",
       "style": "algebraic",
       "chunks": 10,
-      "words": 5290
+      "words": 5250
     },
     {
       "arxiv": "2607.03479v1",
       "style": "algebraic",
-      "chunks": 43,
-      "words": 18201
+      "chunks": 47,
+      "words": 18518
     },
     {
       "arxiv": "2607.03444v1",
       "style": "algebraic",
-      "chunks": 13,
-      "words": 7609
+      "chunks": 14,
+      "words": 7827
     },
     {
       "arxiv": "2607.03384v1",
       "style": "algebraic",
-      "chunks": 9,
-      "words": 5938
+      "chunks": 13,
+      "words": 6082
     },
     {
       "arxiv": "2607.03237v1",
       "style": "algebraic",
-      "chunks": 3,
-      "words": 2115
+      "chunks": 4,
+      "words": 2174
     },
     {
       "arxiv": "2607.03055v1",
       "style": "algebraic",
-      "chunks": 30,
-      "words": 18180
+      "chunks": 37,
+      "words": 18403
     },
     {
       "arxiv": "2607.02950v1",
       "style": "algebraic",
-      "chunks": 10,
-      "words": 5897
+      "chunks": 12,
+      "words": 6162
     },
     {
       "arxiv": "2607.02870v1",
       "style": "algebraic",
-      "chunks": 12,
-      "words": 5672
+      "chunks": 13,
+      "words": 5846
     },
     {
       "arxiv": "2607.02754v1",
       "style": "algebraic",
-      "chunks": 31,
-      "words": 14560
+      "chunks": 35,
+      "words": 14720
     },
     {
       "arxiv": "2607.02751v1",
       "style": "algebraic",
       "chunks": 14,
-      "words": 7307
+      "words": 8257
     },
     {
       "arxiv": "2607.02725v2",
       "style": "algebraic",
-      "chunks": 6,
-      "words": 3502
+      "chunks": 7,
+      "words": 3559
     },
     {
       "arxiv": "2607.02420v1",
       "style": "algebraic",
-      "chunks": 50,
-      "words": 30878
+      "chunks": 57,
+      "words": 31144
     },
     {
       "arxiv": "2607.02377v1",
       "style": "algebraic",
-      "chunks": 27,
-      "words": 15142
+      "chunks": 32,
+      "words": 15532
     },
     {
       "arxiv": "2607.02364v1",
       "style": "algebraic",
-      "chunks": 18,
-      "words": 10796
+      "chunks": 26,
+      "words": 11030
     },
     {
       "arxiv": "2607.02311v1",
       "style": "algebraic",
-      "chunks": 4,
-      "words": 2581
+      "chunks": 5,
+      "words": 2664
     },
     {
       "arxiv": "2607.02250v1",
       "style": "algebraic",
       "chunks": 27,
-      "words": 17174
+      "words": 17595
     },
     {
       "arxiv": "2607.02239v1",
       "style": "algebraic",
-      "chunks": 24,
-      "words": 11593
+      "chunks": 27,
+      "words": 11991
     },
     {
       "arxiv": "2607.02138v1",
       "style": "algebraic",
       "chunks": 1,
-      "words": 434
+      "words": 435
     },
     {
       "arxiv": "2607.02132v1",
       "style": "algebraic",
       "chunks": 8,
-      "words": 4877
+      "words": 4992
     },
     {
       "arxiv": "2607.01970v1",
       "style": "algebraic",
-      "chunks": 19,
-      "words": 12058
+      "chunks": 26,
+      "words": 12436
     },
     {
       "arxiv": "2607.01544v2",
       "style": "algebraic",
-      "chunks": 25,
-      "words": 13798
+      "chunks": 26,
+      "words": 13861
     },
     {
       "arxiv": "2607.01322v1",
       "style": "algebraic",
-      "chunks": 89,
-      "words": 50877
+      "chunks": 109,
+      "words": 52046
     },
     {
       "arxiv": "2607.01058v1",
       "style": "algebraic",
-      "chunks": 18,
-      "words": 11128
+      "chunks": 19,
+      "words": 13395
     },
     {
       "arxiv": "2607.00220v1",
       "style": "algebraic",
-      "chunks": 26,
-      "words": 15725
+      "chunks": 30,
+      "words": 15776
     },
     {
       "arxiv": "2606.31879v1",
       "style": "algebraic",
-      "chunks": 14,
-      "words": 5700
+      "chunks": 21,
+      "words": 8984
     },
     {
       "arxiv": "2606.30273v1",
       "style": "algebraic",
-      "chunks": 7,
-      "words": 3876
+      "chunks": 8,
+      "words": 3883
     },
     {
       "arxiv": "2606.25649v1",
       "style": "algebraic",
-      "chunks": 19,
-      "words": 10747
+      "chunks": 26,
+      "words": 11110
     },
     {
       "arxiv": "2606.20228v1",
       "style": "algebraic",
-      "chunks": 15,
-      "words": 7733
+      "chunks": 18,
+      "words": 7881
     },
     {
       "arxiv": "2606.19426v1",
       "style": "algebraic",
-      "chunks": 69,
-      "words": 34155
+      "chunks": 80,
+      "words": 34881
     },
     {
       "arxiv": "2606.18533v2",
       "style": "algebraic",
-      "chunks": 27,
-      "words": 16056
+      "chunks": 30,
+      "words": 16337
     },
     {
       "arxiv": "2606.15737v1",
       "style": "algebraic",
-      "chunks": 23,
-      "words": 13999
+      "chunks": 24,
+      "words": 14526
     },
     {
       "arxiv": "2606.15712v1",
       "style": "algebraic",
-      "chunks": 14,
-      "words": 6729
+      "chunks": 17,
+      "words": 7415
     },
     {
       "arxiv": "2606.15439v1",
       "style": "algebraic",
-      "chunks": 29,
-      "words": 16853
+      "chunks": 33,
+      "words": 17046
     },
     {
       "arxiv": "2606.15437v1",
       "style": "algebraic",
       "chunks": 15,
-      "words": 8859
+      "words": 8915
     },
     {
       "arxiv": "2606.15392v3",
       "style": "algebraic",
-      "chunks": 19,
-      "words": 12370
+      "chunks": 25,
+      "words": 12894
+    },
+    {
+      "arxiv": "2606.17088v1",
+      "style": "algebraic",
+      "chunks": 35,
+      "words": 15200
     },
     {
       "arxiv": "2606.17080v1",
@@ -729,1964 +3135,2004 @@
     {
       "arxiv": "2606.10105v1",
       "style": "algebraic",
-      "chunks": 14,
-      "words": 7392
+      "chunks": 16,
+      "words": 7642
     },
     {
       "arxiv": "2606.09329v1",
       "style": "algebraic",
       "chunks": 12,
-      "words": 6706
+      "words": 6884
     },
     {
       "arxiv": "2606.09087v1",
       "style": "algebraic",
-      "chunks": 18,
-      "words": 11276
+      "chunks": 19,
+      "words": 11785
     },
     {
       "arxiv": "2606.02985v1",
       "style": "algebraic",
-      "chunks": 16,
-      "words": 8066
+      "chunks": 17,
+      "words": 8281
     },
     {
       "arxiv": "2606.02269v2",
       "style": "algebraic",
-      "chunks": 13,
-      "words": 8326
+      "chunks": 17,
+      "words": 8585
     },
     {
       "arxiv": "2606.02115v1",
       "style": "algebraic",
-      "chunks": 8,
-      "words": 4933
+      "chunks": 9,
+      "words": 4978
     },
     {
       "arxiv": "2605.31128v1",
       "style": "algebraic",
-      "chunks": 34,
-      "words": 22882
+      "chunks": 42,
+      "words": 23572
     },
     {
       "arxiv": "2605.29930v2",
       "style": "algebraic",
-      "chunks": 74,
-      "words": 44501
+      "chunks": 81,
+      "words": 44646
     },
     {
       "arxiv": "2605.29450v1",
       "style": "algebraic",
       "chunks": 33,
-      "words": 19678
+      "words": 19679
     },
     {
       "arxiv": "2605.28988v1",
       "style": "algebraic",
-      "chunks": 24,
-      "words": 13472
+      "chunks": 31,
+      "words": 13880
     },
     {
       "arxiv": "2605.28299v2",
       "style": "algebraic",
-      "chunks": 54,
-      "words": 29733
+      "chunks": 65,
+      "words": 31137
     },
     {
       "arxiv": "2605.26896v1",
       "style": "algebraic",
-      "chunks": 13,
-      "words": 8253
+      "chunks": 14,
+      "words": 8462
     },
     {
       "arxiv": "2605.22071v1",
       "style": "algebraic",
       "chunks": 15,
-      "words": 7824
+      "words": 8654
     },
     {
       "arxiv": "2605.21634v1",
       "style": "algebraic",
-      "chunks": 12,
-      "words": 7222
+      "chunks": 14,
+      "words": 7232
     },
     {
       "arxiv": "2605.19542v1",
       "style": "algebraic",
-      "chunks": 4,
-      "words": 2592
+      "chunks": 5,
+      "words": 2644
     },
     {
       "arxiv": "2605.19177v1",
       "style": "algebraic",
       "chunks": 5,
-      "words": 2535
+      "words": 2573
     },
     {
       "arxiv": "2605.17972v1",
       "style": "algebraic",
-      "chunks": 32,
-      "words": 23154
+      "chunks": 34,
+      "words": 23891
     },
     {
       "arxiv": "2605.16910v1",
       "style": "algebraic",
-      "chunks": 32,
-      "words": 17237
+      "chunks": 40,
+      "words": 17678
     },
     {
       "arxiv": "2605.16669v1",
       "style": "algebraic",
-      "chunks": 31,
-      "words": 17834
+      "chunks": 35,
+      "words": 18342
     },
     {
       "arxiv": "2605.15144v1",
       "style": "algebraic",
       "chunks": 11,
-      "words": 4534
+      "words": 4644
     },
     {
       "arxiv": "2605.14095v1",
       "style": "algebraic",
-      "chunks": 4,
-      "words": 3218
+      "chunks": 5,
+      "words": 3332
     },
     {
       "arxiv": "2605.12776v1",
       "style": "algebraic",
-      "chunks": 31,
-      "words": 15973
+      "chunks": 33,
+      "words": 16389
     },
     {
       "arxiv": "2605.11650v1",
       "style": "algebraic",
       "chunks": 7,
-      "words": 4154
+      "words": 4271
     },
     {
       "arxiv": "2605.09563v1",
       "style": "algebraic",
       "chunks": 4,
-      "words": 2500
+      "words": 2582
     },
     {
       "arxiv": "2605.06533v1",
       "style": "algebraic",
       "chunks": 12,
-      "words": 8026
+      "words": 8217
     },
     {
       "arxiv": "2605.05117v1",
       "style": "algebraic",
-      "chunks": 5,
-      "words": 3667
+      "chunks": 6,
+      "words": 3730
     },
     {
       "arxiv": "2605.03274v2",
       "style": "algebraic",
       "chunks": 11,
-      "words": 7315
+      "words": 7388
     },
     {
       "arxiv": "2605.00655v1",
       "style": "algebraic",
       "chunks": 15,
-      "words": 9771
+      "words": 9893
     },
     {
       "arxiv": "2604.26187v1",
       "style": "algebraic",
-      "chunks": 22,
-      "words": 13416
+      "chunks": 24,
+      "words": 13787
     },
     {
       "arxiv": "2604.23997v2",
       "style": "algebraic",
-      "chunks": 7,
-      "words": 4404
+      "chunks": 8,
+      "words": 4525
     },
     {
       "arxiv": "2604.22052v1",
       "style": "algebraic",
-      "chunks": 10,
-      "words": 31448
+      "chunks": 77,
+      "words": 32483
     },
     {
       "arxiv": "2604.21678v1",
       "style": "algebraic",
-      "chunks": 21,
-      "words": 12603
+      "chunks": 22,
+      "words": 12843
     },
     {
       "arxiv": "2604.21292v1",
       "style": "algebraic",
-      "chunks": 7,
-      "words": 3728
+      "chunks": 9,
+      "words": 3751
     },
     {
       "arxiv": "2604.20294v1",
       "style": "algebraic",
-      "chunks": 13,
-      "words": 7463
+      "chunks": 14,
+      "words": 7648
     },
     {
       "arxiv": "2604.19546v3",
       "style": "algebraic",
-      "chunks": 12,
-      "words": 6838
+      "chunks": 13,
+      "words": 7126
     },
     {
       "arxiv": "2604.17374v1",
       "style": "algebraic",
-      "chunks": 20,
-      "words": 12111
+      "chunks": 22,
+      "words": 12574
     },
     {
       "arxiv": "2604.15592v1",
       "style": "algebraic",
-      "chunks": 4,
-      "words": 2464
+      "chunks": 6,
+      "words": 2630
     },
     {
       "arxiv": "2604.13698v1",
       "style": "algebraic",
-      "chunks": 8,
-      "words": 5313
+      "chunks": 9,
+      "words": 5561
     },
     {
       "arxiv": "2604.13642v1",
       "style": "algebraic",
-      "chunks": 13,
-      "words": 7538
+      "chunks": 14,
+      "words": 7789
     },
     {
       "arxiv": "2604.12432v4",
       "style": "algebraic",
-      "chunks": 12,
-      "words": 6767
+      "chunks": 14,
+      "words": 6992
     },
     {
       "arxiv": "2604.12212v2",
       "style": "algebraic",
-      "chunks": 63,
-      "words": 42462
+      "chunks": 66,
+      "words": 43445
     },
     {
       "arxiv": "2604.11020v1",
       "style": "algebraic",
       "chunks": 9,
-      "words": 5450
+      "words": 5458
     },
     {
       "arxiv": "2604.10686v4",
       "style": "algebraic",
-      "chunks": 37,
-      "words": 16725
+      "chunks": 42,
+      "words": 17375
     },
     {
       "arxiv": "2604.10624v1",
       "style": "algebraic",
-      "chunks": 15,
-      "words": 7303
+      "chunks": 17,
+      "words": 7576
     },
     {
       "arxiv": "2604.08724v1",
       "style": "algebraic",
-      "chunks": 37,
-      "words": 17741
+      "chunks": 40,
+      "words": 17807
     },
     {
       "arxiv": "2604.04666v1",
       "style": "algebraic",
-      "chunks": 68,
-      "words": 31819
+      "chunks": 77,
+      "words": 32780
     },
     {
       "arxiv": "2604.03979v1",
       "style": "algebraic",
-      "chunks": 12,
-      "words": 8005
+      "chunks": 13,
+      "words": 10412
     },
     {
       "arxiv": "2604.01258v1",
       "style": "algebraic",
-      "chunks": 6,
-      "words": 3782
+      "chunks": 7,
+      "words": 3803
     },
     {
       "arxiv": "2604.00720v1",
       "style": "algebraic",
-      "chunks": 5,
-      "words": 3304
+      "chunks": 6,
+      "words": 3389
+    },
+    {
+      "arxiv": "2603.29626v1",
+      "style": "algebraic",
+      "chunks": 18,
+      "words": 10140
     },
     {
       "arxiv": "2603.29528v1",
       "style": "algebraic",
-      "chunks": 10,
-      "words": 6518
+      "chunks": 14,
+      "words": 6676
     },
     {
       "arxiv": "2603.27835v1",
       "style": "algebraic",
-      "chunks": 21,
-      "words": 13069
+      "chunks": 23,
+      "words": 13461
     },
     {
       "arxiv": "2603.27736v1",
       "style": "algebraic",
-      "chunks": 1,
-      "words": 35337
+      "chunks": 76,
+      "words": 35956
     },
     {
       "arxiv": "2603.27710v2",
       "style": "algebraic",
-      "chunks": 25,
-      "words": 11997
+      "chunks": 32,
+      "words": 12068
     },
     {
       "arxiv": "2603.26616v1",
       "style": "algebraic",
-      "chunks": 15,
-      "words": 9547
+      "chunks": 16,
+      "words": 9806
     },
     {
       "arxiv": "2603.22795v1",
       "style": "algebraic",
-      "chunks": 10,
-      "words": 4636
+      "chunks": 12,
+      "words": 5377
     },
     {
       "arxiv": "2603.22561v1",
       "style": "algebraic",
       "chunks": 10,
-      "words": 6229
+      "words": 6233
     },
     {
       "arxiv": "2603.22256v1",
       "style": "algebraic",
-      "chunks": 28,
-      "words": 13623
+      "chunks": 34,
+      "words": 14160
     },
     {
       "arxiv": "2603.22143v1",
       "style": "algebraic",
-      "chunks": 14,
-      "words": 7858
+      "chunks": 15,
+      "words": 8091
     },
     {
       "arxiv": "2603.21292v1",
       "style": "algebraic",
-      "chunks": 10,
-      "words": 5359
+      "chunks": 12,
+      "words": 5467
     },
     {
       "arxiv": "2603.20951v1",
       "style": "algebraic",
-      "chunks": 12,
-      "words": 7160
+      "chunks": 13,
+      "words": 7451
     },
     {
       "arxiv": "2603.20660v1",
       "style": "algebraic",
-      "chunks": 32,
-      "words": 17328
+      "chunks": 45,
+      "words": 18134
     },
     {
       "arxiv": "2603.17084v1",
       "style": "algebraic",
-      "chunks": 14,
-      "words": 8634
+      "chunks": 15,
+      "words": 9033
     },
     {
       "arxiv": "2603.15048v2",
       "style": "algebraic",
-      "chunks": 37,
-      "words": 24051
+      "chunks": 51,
+      "words": 25497
     },
     {
       "arxiv": "2603.11773v1",
       "style": "algebraic",
-      "chunks": 7,
-      "words": 4478
+      "chunks": 8,
+      "words": 4620
     },
     {
       "arxiv": "2603.06483v1",
       "style": "algebraic",
-      "chunks": 23,
-      "words": 13527
+      "chunks": 25,
+      "words": 14031
     },
     {
       "arxiv": "2602.22081v2",
       "style": "algebraic",
-      "chunks": 24,
-      "words": 12964
+      "chunks": 31,
+      "words": 13339
     },
     {
       "arxiv": "2602.19765v1",
       "style": "algebraic",
-      "chunks": 18,
-      "words": 8626
+      "chunks": 22,
+      "words": 11047
     },
     {
       "arxiv": "2602.19168v1",
       "style": "algebraic",
-      "chunks": 31,
-      "words": 15072
+      "chunks": 40,
+      "words": 16363
     },
     {
       "arxiv": "2602.16199v1",
       "style": "algebraic",
-      "chunks": 15,
-      "words": 8936
+      "chunks": 22,
+      "words": 9322
     },
     {
       "arxiv": "2602.14332v2",
       "style": "algebraic",
-      "chunks": 40,
-      "words": 26475
+      "chunks": 41,
+      "words": 27069
     },
     {
       "arxiv": "2602.12894v1",
       "style": "algebraic",
-      "chunks": 23,
-      "words": 14838
+      "chunks": 24,
+      "words": 15267
     },
     {
       "arxiv": "2602.12861v1",
       "style": "algebraic",
       "chunks": 7,
-      "words": 4919
+      "words": 5021
     },
     {
       "arxiv": "2602.11943v2",
       "style": "algebraic",
-      "chunks": 23,
-      "words": 9339
+      "chunks": 29,
+      "words": 12498
     },
     {
       "arxiv": "2602.11110v2",
       "style": "algebraic",
-      "chunks": 27,
-      "words": 16185
+      "chunks": 29,
+      "words": 16869
     },
     {
       "arxiv": "2602.08390v1",
       "style": "algebraic",
-      "chunks": 18,
-      "words": 10797
+      "chunks": 26,
+      "words": 11091
+    },
+    {
+      "arxiv": "2602.07292v1",
+      "style": "algebraic",
+      "chunks": 17,
+      "words": 6967
+    },
+    {
+      "arxiv": "2602.05990v1",
+      "style": "algebraic",
+      "chunks": 24,
+      "words": 11242
     },
     {
       "arxiv": "2602.04049v1",
       "style": "algebraic",
-      "chunks": 10,
-      "words": 6582
+      "chunks": 11,
+      "words": 6785
     },
     {
       "arxiv": "2602.02218v1",
       "style": "algebraic",
-      "chunks": 32,
-      "words": 14156
+      "chunks": 33,
+      "words": 16337
     },
     {
       "arxiv": "2601.21553v1",
       "style": "algebraic",
-      "chunks": 21,
-      "words": 12120
+      "chunks": 26,
+      "words": 12252
     },
     {
       "arxiv": "2601.14465v2",
       "style": "algebraic",
-      "chunks": 11,
-      "words": 4784
+      "chunks": 12,
+      "words": 4786
     },
     {
       "arxiv": "2601.05044v1",
       "style": "algebraic",
-      "chunks": 30,
-      "words": 16636
+      "chunks": 38,
+      "words": 16986
     },
     {
       "arxiv": "2512.22835v1",
       "style": "algebraic",
-      "chunks": 36,
-      "words": 21850
+      "chunks": 41,
+      "words": 23051
     },
     {
       "arxiv": "2512.14529v1",
       "style": "algebraic",
-      "chunks": 4,
-      "words": 2472
+      "chunks": 6,
+      "words": 2528
     },
     {
       "arxiv": "2512.08455v2",
       "style": "algebraic",
-      "chunks": 12,
-      "words": 7161
+      "chunks": 14,
+      "words": 7340
     },
     {
       "arxiv": "2512.04081v1",
       "style": "algebraic",
-      "chunks": 11,
-      "words": 5928
+      "chunks": 14,
+      "words": 6077
     },
     {
       "arxiv": "2509.26156v2",
       "style": "algebraic",
-      "chunks": 48,
-      "words": 27780
+      "chunks": 55,
+      "words": 28261
     },
     {
       "arxiv": "2509.24034v1",
       "style": "algebraic",
-      "chunks": 15,
-      "words": 9106
+      "chunks": 20,
+      "words": 9327
     },
     {
       "arxiv": "2509.22962v1",
       "style": "algebraic",
-      "chunks": 24,
-      "words": 11280
+      "chunks": 27,
+      "words": 11543
     },
     {
       "arxiv": "2509.19722v1",
       "style": "algebraic",
-      "chunks": 42,
-      "words": 17611
+      "chunks": 44,
+      "words": 17617
     },
     {
       "arxiv": "2509.04726v1",
       "style": "algebraic",
-      "chunks": 11,
-      "words": 7073
+      "chunks": 15,
+      "words": 7220
     },
     {
       "arxiv": "2509.04717v2",
       "style": "algebraic",
       "chunks": 10,
-      "words": 4103
+      "words": 4110
     },
     {
       "arxiv": "2509.02338v1",
       "style": "algebraic",
-      "chunks": 21,
-      "words": 11083
+      "chunks": 24,
+      "words": 11100
     },
     {
       "arxiv": "2607.11782",
       "style": "geometric",
       "chunks": 7,
-      "words": 4029
+      "words": 4170
     },
     {
       "arxiv": "2607.11695",
       "style": "geometric",
       "chunks": 8,
-      "words": 3036
+      "words": 3102
     },
     {
       "arxiv": "2607.11572",
       "style": "geometric",
-      "chunks": 80,
+      "chunks": 81,
       "words": 42588
     },
     {
       "arxiv": "2607.11331",
       "style": "geometric",
-      "chunks": 12,
-      "words": 7096
+      "chunks": 15,
+      "words": 7252
     },
     {
       "arxiv": "2607.11319",
       "style": "geometric",
-      "chunks": 6,
-      "words": 3169
+      "chunks": 7,
+      "words": 3199
     },
     {
       "arxiv": "2607.10881",
       "style": "geometric",
-      "chunks": 4,
-      "words": 2463
+      "chunks": 5,
+      "words": 2546
     },
     {
       "arxiv": "2607.10769",
       "style": "geometric",
-      "chunks": 28,
-      "words": 12519
+      "chunks": 33,
+      "words": 12611
     },
     {
       "arxiv": "2607.10636",
       "style": "geometric",
-      "chunks": 18,
-      "words": 9091
+      "chunks": 20,
+      "words": 9221
     },
     {
       "arxiv": "2607.10373",
       "style": "geometric",
-      "chunks": 35,
-      "words": 14013
+      "chunks": 36,
+      "words": 14427
     },
     {
       "arxiv": "2607.10104",
       "style": "geometric",
-      "chunks": 8,
-      "words": 3631
+      "chunks": 9,
+      "words": 3739
     },
     {
       "arxiv": "2607.10022",
       "style": "geometric",
-      "chunks": 14,
-      "words": 7819
+      "chunks": 18,
+      "words": 7996
     },
     {
       "arxiv": "2607.09412",
       "style": "geometric",
-      "chunks": 10,
-      "words": 4948
+      "chunks": 12,
+      "words": 4997
     },
     {
       "arxiv": "2607.09252",
       "style": "geometric",
-      "chunks": 23,
-      "words": 13466
+      "chunks": 28,
+      "words": 13634
     },
     {
       "arxiv": "2607.08944",
       "style": "geometric",
-      "chunks": 9,
-      "words": 4329
+      "chunks": 11,
+      "words": 4604
     },
     {
       "arxiv": "2607.08869",
       "style": "geometric",
-      "chunks": 3,
-      "words": 1680
+      "chunks": 4,
+      "words": 1713
     },
     {
       "arxiv": "2607.08622",
       "style": "geometric",
-      "chunks": 40,
-      "words": 16107
+      "chunks": 46,
+      "words": 16128
     },
     {
       "arxiv": "2607.08621",
       "style": "geometric",
       "chunks": 9,
-      "words": 3702
+      "words": 3832
     },
     {
       "arxiv": "2607.08612",
       "style": "geometric",
-      "chunks": 11,
-      "words": 51933
+      "chunks": 115,
+      "words": 52362
     },
     {
       "arxiv": "2607.08523",
       "style": "geometric",
-      "chunks": 13,
-      "words": 7877
+      "chunks": 14,
+      "words": 8370
     },
     {
       "arxiv": "2607.08338",
       "style": "geometric",
-      "chunks": 4,
-      "words": 2142
+      "chunks": 5,
+      "words": 2167
     },
     {
       "arxiv": "2607.08325",
       "style": "geometric",
-      "chunks": 21,
-      "words": 11720
+      "chunks": 29,
+      "words": 11937
     },
     {
       "arxiv": "2607.08322",
       "style": "geometric",
-      "chunks": 31,
-      "words": 18741
+      "chunks": 32,
+      "words": 19218
     },
     {
       "arxiv": "2607.08217",
       "style": "geometric",
       "chunks": 9,
-      "words": 3837
+      "words": 3877
     },
     {
       "arxiv": "2607.07809",
       "style": "geometric",
-      "chunks": 9,
-      "words": 5732
+      "chunks": 10,
+      "words": 5999
     },
     {
       "arxiv": "2607.07694",
       "style": "geometric",
-      "chunks": 50,
-      "words": 21788
+      "chunks": 52,
+      "words": 22096
     },
     {
       "arxiv": "2607.07599",
       "style": "geometric",
-      "chunks": 26,
-      "words": 11558
+      "chunks": 31,
+      "words": 11650
     },
     {
       "arxiv": "2607.07360",
       "style": "geometric",
-      "chunks": 14,
-      "words": 6579
+      "chunks": 16,
+      "words": 6759
     },
     {
       "arxiv": "2607.07306",
       "style": "geometric",
-      "chunks": 20,
-      "words": 9633
+      "chunks": 23,
+      "words": 9763
     },
     {
       "arxiv": "2607.07285",
       "style": "geometric",
-      "chunks": 14,
-      "words": 5721
+      "chunks": 16,
+      "words": 5782
     },
     {
       "arxiv": "2607.07149",
       "style": "geometric",
-      "chunks": 15,
-      "words": 7213
+      "chunks": 17,
+      "words": 7403
     },
     {
       "arxiv": "2607.07134",
       "style": "geometric",
-      "chunks": 101,
-      "words": 36873
+      "chunks": 105,
+      "words": 37161
     },
     {
       "arxiv": "2607.07059",
       "style": "geometric",
       "chunks": 5,
-      "words": 2214
+      "words": 2280
     },
     {
       "arxiv": "2607.07057",
       "style": "geometric",
-      "chunks": 23,
-      "words": 10878
+      "chunks": 27,
+      "words": 11030
     },
     {
       "arxiv": "2607.06801",
       "style": "geometric",
       "chunks": 10,
-      "words": 5016
+      "words": 5072
     },
     {
       "arxiv": "2607.06345",
       "style": "geometric",
-      "chunks": 4,
-      "words": 20077
+      "chunks": 54,
+      "words": 20850
     },
     {
       "arxiv": "2607.06041",
       "style": "geometric",
-      "chunks": 20,
-      "words": 11703
+      "chunks": 21,
+      "words": 12340
     },
     {
       "arxiv": "2607.05986",
       "style": "geometric",
-      "chunks": 8,
-      "words": 4768
+      "chunks": 9,
+      "words": 4886
     },
     {
       "arxiv": "2607.05945",
       "style": "geometric",
-      "chunks": 6,
-      "words": 3579
+      "chunks": 9,
+      "words": 3689
     },
     {
       "arxiv": "2607.05923",
       "style": "geometric",
-      "chunks": 7,
-      "words": 4418
+      "chunks": 8,
+      "words": 4470
     },
     {
       "arxiv": "2607.05918",
       "style": "geometric",
-      "chunks": 36,
-      "words": 21227
+      "chunks": 51,
+      "words": 21341
     },
     {
       "arxiv": "2607.05826",
       "style": "geometric",
-      "chunks": 44,
-      "words": 25141
+      "chunks": 50,
+      "words": 25677
     },
     {
       "arxiv": "2607.05821",
       "style": "geometric",
-      "chunks": 10,
-      "words": 6475
+      "chunks": 11,
+      "words": 6580
     },
     {
       "arxiv": "2607.05812",
       "style": "geometric",
-      "chunks": 15,
-      "words": 7557
+      "chunks": 18,
+      "words": 7710
     },
     {
       "arxiv": "2607.05706",
       "style": "geometric",
-      "chunks": 4,
-      "words": 2352
+      "chunks": 5,
+      "words": 2430
     },
     {
       "arxiv": "2607.05603",
       "style": "geometric",
-      "chunks": 4,
-      "words": 2177
+      "chunks": 5,
+      "words": 2243
     },
     {
       "arxiv": "2607.05575",
       "style": "geometric",
-      "chunks": 66,
-      "words": 27665
+      "chunks": 72,
+      "words": 28603
     },
     {
       "arxiv": "2607.05362",
       "style": "geometric",
-      "chunks": 25,
-      "words": 16055
+      "chunks": 26,
+      "words": 16686
     },
     {
       "arxiv": "2607.05349",
       "style": "geometric",
-      "chunks": 26,
-      "words": 11667
+      "chunks": 32,
+      "words": 13458
     },
     {
       "arxiv": "2607.05304",
       "style": "geometric",
-      "chunks": 19,
-      "words": 9017
+      "chunks": 23,
+      "words": 9171
     },
     {
       "arxiv": "2607.05283",
       "style": "geometric",
-      "chunks": 19,
-      "words": 10561
+      "chunks": 20,
+      "words": 10694
     },
     {
       "arxiv": "2607.05255",
       "style": "geometric",
-      "chunks": 25,
-      "words": 13484
+      "chunks": 32,
+      "words": 13900
     },
     {
       "arxiv": "2607.05170",
       "style": "geometric",
-      "chunks": 21,
-      "words": 11311
+      "chunks": 23,
+      "words": 11522
     },
     {
       "arxiv": "2607.05117",
       "style": "geometric",
-      "chunks": 25,
-      "words": 10883
+      "chunks": 29,
+      "words": 10964
     },
     {
       "arxiv": "2607.05099",
       "style": "geometric",
-      "chunks": 8,
-      "words": 4753
+      "chunks": 9,
+      "words": 4841
     },
     {
       "arxiv": "2607.05036",
       "style": "geometric",
-      "chunks": 60,
-      "words": 32359
+      "chunks": 78,
+      "words": 33001
     },
     {
       "arxiv": "2607.05023",
       "style": "geometric",
-      "chunks": 30,
-      "words": 22318
+      "chunks": 32,
+      "words": 22664
     },
     {
       "arxiv": "2607.04737",
       "style": "geometric",
-      "chunks": 11,
-      "words": 5623
+      "chunks": 12,
+      "words": 5555
     },
     {
       "arxiv": "2607.04695",
       "style": "geometric",
-      "chunks": 21,
-      "words": 11073
+      "chunks": 25,
+      "words": 11440
     },
     {
       "arxiv": "2607.04592",
       "style": "geometric",
-      "chunks": 15,
-      "words": 6195
+      "chunks": 16,
+      "words": 6229
     },
     {
       "arxiv": "2607.04477",
       "style": "geometric",
-      "chunks": 44,
-      "words": 23382
+      "chunks": 52,
+      "words": 23810
     },
     {
       "arxiv": "2607.04418",
       "style": "geometric",
-      "chunks": 7,
-      "words": 3079
+      "chunks": 8,
+      "words": 3144
     },
     {
       "arxiv": "2607.04039",
       "style": "geometric",
-      "chunks": 37,
-      "words": 20487
+      "chunks": 49,
+      "words": 21106
     },
     {
       "arxiv": "2607.03843",
       "style": "geometric",
-      "chunks": 22,
-      "words": 10209
+      "chunks": 28,
+      "words": 10478
     },
     {
       "arxiv": "2607.03815",
       "style": "geometric",
-      "chunks": 15,
-      "words": 7790
+      "chunks": 16,
+      "words": 8022
     },
     {
       "arxiv": "2607.03649",
       "style": "geometric",
-      "chunks": 31,
-      "words": 18486
+      "chunks": 34,
+      "words": 20435
     },
     {
       "arxiv": "2607.03584",
       "style": "geometric",
-      "chunks": 14,
-      "words": 7296
+      "chunks": 17,
+      "words": 7511
     },
     {
       "arxiv": "2607.03582",
       "style": "geometric",
-      "chunks": 40,
-      "words": 17083
+      "chunks": 43,
+      "words": 17202
     },
     {
       "arxiv": "2607.03497",
       "style": "geometric",
-      "chunks": 11,
-      "words": 6586
+      "chunks": 14,
+      "words": 6782
     },
     {
       "arxiv": "2607.03230",
       "style": "geometric",
-      "chunks": 24,
-      "words": 13927
+      "chunks": 27,
+      "words": 14490
     },
     {
       "arxiv": "2607.03139",
       "style": "geometric",
-      "chunks": 25,
-      "words": 10791
+      "chunks": 27,
+      "words": 11089
     },
     {
       "arxiv": "2607.03127",
       "style": "geometric",
-      "chunks": 10,
-      "words": 5854
+      "chunks": 15,
+      "words": 5934
     },
     {
       "arxiv": "2607.03041",
       "style": "geometric",
-      "chunks": 14,
-      "words": 6897
+      "chunks": 15,
+      "words": 6960
     },
     {
       "arxiv": "2607.03019",
       "style": "geometric",
-      "chunks": 15,
-      "words": 9822
+      "chunks": 16,
+      "words": 10102
     },
     {
       "arxiv": "2607.02769",
       "style": "geometric",
-      "chunks": 0,
-      "words": 5
+      "chunks": 13,
+      "words": 5235
+    },
+    {
+      "arxiv": "2607.02434",
+      "style": "geometric",
+      "chunks": 21,
+      "words": 8271
+    },
+    {
+      "arxiv": "2607.02060",
+      "style": "geometric",
+      "chunks": 43,
+      "words": 18566
+    },
+    {
+      "arxiv": "2607.01889",
+      "style": "geometric",
+      "chunks": 18,
+      "words": 8334
     },
     {
       "arxiv": "2607.01826",
       "style": "geometric",
-      "chunks": 6,
-      "words": 3764
+      "chunks": 7,
+      "words": 3867
     },
     {
       "arxiv": "2607.01482",
       "style": "geometric",
-      "chunks": 42,
-      "words": 28331
+      "chunks": 44,
+      "words": 29108
     },
     {
       "arxiv": "2607.01371",
       "style": "geometric",
-      "chunks": 51,
-      "words": 20378
+      "chunks": 53,
+      "words": 20820
     },
     {
       "arxiv": "2607.01219",
       "style": "geometric",
-      "chunks": 49,
-      "words": 30098
+      "chunks": 53,
+      "words": 31325
     },
     {
       "arxiv": "2607.01028",
       "style": "geometric",
-      "chunks": 35,
-      "words": 18754
+      "chunks": 39,
+      "words": 19663
     },
     {
       "arxiv": "2607.01024",
       "style": "geometric",
-      "chunks": 21,
-      "words": 12438
+      "chunks": 32,
+      "words": 12750
     },
     {
       "arxiv": "2607.00737",
       "style": "geometric",
-      "chunks": 30,
-      "words": 19067
+      "chunks": 43,
+      "words": 19727
     },
     {
       "arxiv": "2607.00441",
       "style": "geometric",
-      "chunks": 19,
-      "words": 10826
+      "chunks": 23,
+      "words": 11188
     },
     {
       "arxiv": "2607.00236",
       "style": "geometric",
-      "chunks": 33,
-      "words": 21223
+      "chunks": 35,
+      "words": 21934
     },
     {
       "arxiv": "2606.31674",
       "style": "geometric",
-      "chunks": 61,
-      "words": 30833
+      "chunks": 75,
+      "words": 31793
     },
     {
       "arxiv": "2606.30965",
       "style": "geometric",
       "chunks": 22,
-      "words": 13840
+      "words": 14172
     },
     {
       "arxiv": "2606.29317",
       "style": "geometric",
-      "chunks": 79,
-      "words": 40497
+      "chunks": 81,
+      "words": 40589
     },
     {
       "arxiv": "2606.28985",
       "style": "geometric",
-      "chunks": 15,
-      "words": 7130
+      "chunks": 18,
+      "words": 7372
     },
     {
       "arxiv": "2606.28768",
       "style": "geometric",
-      "chunks": 30,
-      "words": 17136
+      "chunks": 34,
+      "words": 17488
     },
     {
       "arxiv": "2606.28767",
       "style": "geometric",
-      "chunks": 21,
-      "words": 9095
+      "chunks": 23,
+      "words": 9189
     },
     {
       "arxiv": "2606.28316",
       "style": "geometric",
-      "chunks": 38,
-      "words": 21259
+      "chunks": 47,
+      "words": 21765
     },
     {
       "arxiv": "2606.28265",
       "style": "geometric",
-      "chunks": 39,
-      "words": 22468
+      "chunks": 45,
+      "words": 22875
     },
     {
       "arxiv": "2606.28256",
       "style": "geometric",
-      "chunks": 40,
-      "words": 24550
+      "chunks": 54,
+      "words": 24991
     },
     {
       "arxiv": "2606.27953",
       "style": "geometric",
-      "chunks": 24,
-      "words": 17102
+      "chunks": 25,
+      "words": 17635
     },
     {
       "arxiv": "2607.01264",
       "style": "geometric",
-      "chunks": 4,
-      "words": 2283
+      "chunks": 5,
+      "words": 2366
     },
     {
       "arxiv": "2606.26843",
       "style": "geometric",
-      "chunks": 30,
-      "words": 14141
+      "chunks": 32,
+      "words": 14360
     },
     {
       "arxiv": "2606.24951",
       "style": "geometric",
       "chunks": 3,
-      "words": 1898
+      "words": 1945
     },
     {
       "arxiv": "2606.24662",
       "style": "geometric",
-      "chunks": 35,
-      "words": 15302
+      "chunks": 38,
+      "words": 15384
+    },
+    {
+      "arxiv": "2606.24503",
+      "style": "geometric",
+      "chunks": 30,
+      "words": 13409
     },
     {
       "arxiv": "2606.24363",
       "style": "geometric",
-      "chunks": 21,
-      "words": 10960
+      "chunks": 28,
+      "words": 11108
     },
     {
       "arxiv": "2606.24249",
       "style": "geometric",
-      "chunks": 17,
-      "words": 9834
+      "chunks": 24,
+      "words": 10060
     },
     {
       "arxiv": "2606.23184",
       "style": "geometric",
-      "chunks": 6,
-      "words": 4299
+      "chunks": 7,
+      "words": 4341
     },
     {
       "arxiv": "2606.21909",
       "style": "geometric",
-      "chunks": 52,
-      "words": 23892
+      "chunks": 56,
+      "words": 24423
     },
     {
       "arxiv": "2606.21039",
       "style": "geometric",
-      "chunks": 21,
-      "words": 12142
+      "chunks": 23,
+      "words": 12374
     },
     {
       "arxiv": "2606.19858",
       "style": "geometric",
       "chunks": 12,
-      "words": 4749
+      "words": 4807
     },
     {
       "arxiv": "2606.19567",
       "style": "geometric",
       "chunks": 16,
-      "words": 10329
+      "words": 10484
     },
     {
       "arxiv": "2606.18740",
       "style": "geometric",
       "chunks": 7,
-      "words": 4245
+      "words": 4270
     },
     {
       "arxiv": "2606.18095",
       "style": "geometric",
-      "chunks": 15,
-      "words": 7801
+      "chunks": 18,
+      "words": 7850
     },
     {
       "arxiv": "2606.18086",
       "style": "geometric",
-      "chunks": 20,
-      "words": 11672
+      "chunks": 23,
+      "words": 12025
     },
     {
       "arxiv": "2606.18034",
       "style": "geometric",
-      "chunks": 30,
-      "words": 19767
+      "chunks": 34,
+      "words": 20351
     },
     {
       "arxiv": "2606.17335",
       "style": "geometric",
       "chunks": 9,
-      "words": 4878
+      "words": 4843
     },
     {
       "arxiv": "2606.16282",
       "style": "geometric",
-      "chunks": 4,
-      "words": 11806
+      "chunks": 28,
+      "words": 11985
     },
     {
       "arxiv": "2606.15104",
       "style": "geometric",
       "chunks": 17,
-      "words": 8184
+      "words": 8190
     },
     {
       "arxiv": "2606.14934",
       "style": "geometric",
-      "chunks": 27,
-      "words": 14377
+      "chunks": 29,
+      "words": 14537
     },
     {
       "arxiv": "2606.14889",
       "style": "geometric",
-      "chunks": 11,
-      "words": 6896
+      "chunks": 12,
+      "words": 7060
     },
     {
       "arxiv": "2606.14429",
       "style": "geometric",
-      "chunks": 21,
-      "words": 12774
+      "chunks": 25,
+      "words": 13344
     },
     {
       "arxiv": "2606.12912",
       "style": "geometric",
-      "chunks": 30,
-      "words": 15104
+      "chunks": 37,
+      "words": 15596
     },
     {
       "arxiv": "2604.00448",
       "style": "geometric",
       "chunks": 18,
-      "words": 9608
+      "words": 9541
     },
     {
       "arxiv": "2603.29397",
       "style": "geometric",
       "chunks": 6,
-      "words": 3816
+      "words": 3890
     },
     {
       "arxiv": "2603.28694",
       "style": "geometric",
-      "chunks": 35,
-      "words": 17064
+      "chunks": 40,
+      "words": 17501
     },
     {
       "arxiv": "2603.25714",
       "style": "geometric",
-      "chunks": 24,
-      "words": 14814
+      "chunks": 27,
+      "words": 15143
     },
     {
       "arxiv": "2603.25586",
       "style": "geometric",
-      "chunks": 25,
-      "words": 14190
+      "chunks": 27,
+      "words": 14472
     },
     {
       "arxiv": "2603.21560",
       "style": "geometric",
-      "chunks": 27,
-      "words": 15176
+      "chunks": 33,
+      "words": 15637
     },
     {
       "arxiv": "2603.14582",
       "style": "geometric",
-      "chunks": 13,
-      "words": 6704
+      "chunks": 16,
+      "words": 6701
     },
     {
       "arxiv": "2603.14338",
       "style": "geometric",
-      "chunks": 15,
-      "words": 8478
+      "chunks": 18,
+      "words": 8721
     },
     {
       "arxiv": "2603.12484",
       "style": "geometric",
       "chunks": 15,
-      "words": 9474
+      "words": 9803
     },
     {
       "arxiv": "2603.04096",
       "style": "geometric",
-      "chunks": 48,
-      "words": 25542
+      "chunks": 62,
+      "words": 26211
     },
     {
       "arxiv": "2603.02848",
       "style": "geometric",
       "chunks": 14,
-      "words": 8864
+      "words": 9012
     },
     {
       "arxiv": "2602.24179",
       "style": "geometric",
-      "chunks": 10,
-      "words": 6537
+      "chunks": 11,
+      "words": 6798
     },
     {
       "arxiv": "2602.23275",
       "style": "geometric",
-      "chunks": 35,
-      "words": 20749
+      "chunks": 37,
+      "words": 21798
     },
     {
       "arxiv": "2602.22393",
       "style": "geometric",
       "chunks": 13,
-      "words": 7370
+      "words": 7464
     },
     {
       "arxiv": "2501.03900",
       "style": "geometric",
-      "chunks": 31,
-      "words": 17630
+      "chunks": 36,
+      "words": 18325
     },
     {
       "arxiv": "2501.01688",
       "style": "geometric",
       "chunks": 18,
-      "words": 10741
+      "words": 10746
     },
     {
       "arxiv": "2412.08248",
       "style": "geometric",
-      "chunks": 31,
-      "words": 17572
+      "chunks": 32,
+      "words": 18168
     },
     {
       "arxiv": "2411.06242",
       "style": "geometric",
       "chunks": 28,
-      "words": 15678
+      "words": 15593
     },
     {
       "arxiv": "2410.16390",
       "style": "geometric",
-      "chunks": 35,
-      "words": 19420
+      "chunks": 36,
+      "words": 19466
     },
     {
       "arxiv": "2409.14290",
       "style": "geometric",
       "chunks": 10,
-      "words": 5862
+      "words": 5799
     },
     {
       "arxiv": "2409.09133",
       "style": "geometric",
-      "chunks": 5,
-      "words": 9904
+      "chunks": 22,
+      "words": 9906
     },
     {
       "arxiv": "2409.08663",
       "style": "geometric",
       "chunks": 31,
-      "words": 17488
+      "words": 17904
     },
     {
       "arxiv": "2408.10105",
       "style": "geometric",
-      "chunks": 21,
-      "words": 10382
+      "chunks": 25,
+      "words": 10387
     },
     {
       "arxiv": "2408.09091",
       "style": "geometric",
       "chunks": 18,
-      "words": 9736
+      "words": 9660
     },
     {
       "arxiv": "2407.17034",
       "style": "geometric",
-      "chunks": 25,
-      "words": 10854
+      "chunks": 28,
+      "words": 11048
     },
     {
       "arxiv": "2407.09275",
       "style": "geometric",
-      "chunks": 25,
-      "words": 14733
+      "chunks": 26,
+      "words": 15117
     },
     {
       "arxiv": "2406.02121",
       "style": "geometric",
-      "chunks": 25,
-      "words": 16349
+      "chunks": 26,
+      "words": 16850
     },
     {
       "arxiv": "2406.09432",
       "style": "geometric",
-      "chunks": 30,
-      "words": 14883
+      "chunks": 36,
+      "words": 14895
     },
     {
       "arxiv": "2607.11691",
       "style": "algebraic",
-      "chunks": 8,
-      "words": 3937
+      "chunks": 9,
+      "words": 3976
     },
     {
       "arxiv": "2607.11657",
       "style": "algebraic",
       "chunks": 6,
-      "words": 3581
+      "words": 3640
     },
     {
       "arxiv": "2607.11381",
       "style": "algebraic",
       "chunks": 8,
-      "words": 5526
+      "words": 5592
     },
     {
       "arxiv": "2607.11259",
       "style": "algebraic",
-      "chunks": 17,
-      "words": 9825
+      "chunks": 21,
+      "words": 10310
     },
     {
       "arxiv": "2607.11223",
       "style": "algebraic",
-      "chunks": 10,
-      "words": 4467
+      "chunks": 12,
+      "words": 4864
     },
     {
       "arxiv": "2607.11219",
       "style": "algebraic",
-      "chunks": 41,
-      "words": 23427
+      "chunks": 52,
+      "words": 24003
     },
     {
       "arxiv": "2607.11093",
       "style": "algebraic",
       "chunks": 6,
-      "words": 3977
+      "words": 4062
     },
     {
       "arxiv": "2607.10976",
       "style": "algebraic",
       "chunks": 10,
-      "words": 7274
+      "words": 7461
     },
     {
       "arxiv": "2607.10778",
       "style": "algebraic",
-      "chunks": 19,
-      "words": 12559
+      "chunks": 23,
+      "words": 13052
     },
     {
       "arxiv": "2607.10691",
       "style": "algebraic",
-      "chunks": 16,
-      "words": 8152
+      "chunks": 20,
+      "words": 8574
     },
     {
       "arxiv": "2607.10639",
       "style": "algebraic",
-      "chunks": 11,
-      "words": 7277
+      "chunks": 12,
+      "words": 7374
     },
     {
       "arxiv": "2607.10492",
       "style": "algebraic",
-      "chunks": 18,
-      "words": 11790
+      "chunks": 21,
+      "words": 11910
     },
     {
       "arxiv": "2607.10393",
       "style": "algebraic",
-      "chunks": 7,
-      "words": 4421
+      "chunks": 10,
+      "words": 4630
     },
     {
       "arxiv": "2607.10300",
       "style": "algebraic",
-      "chunks": 19,
-      "words": 10111
+      "chunks": 25,
+      "words": 10367
     },
     {
       "arxiv": "2607.10178",
       "style": "algebraic",
-      "chunks": 29,
-      "words": 13329
+      "chunks": 30,
+      "words": 13842
     },
     {
       "arxiv": "2607.09340",
       "style": "algebraic",
       "chunks": 12,
-      "words": 5170
+      "words": 5381
     },
     {
       "arxiv": "2607.09028",
       "style": "algebraic",
       "chunks": 5,
-      "words": 2672
+      "words": 2786
     },
     {
       "arxiv": "2607.08995",
       "style": "algebraic",
       "chunks": 7,
-      "words": 4326
+      "words": 4484
     },
     {
       "arxiv": "2607.08965",
       "style": "algebraic",
-      "chunks": 7,
-      "words": 4717
+      "chunks": 11,
+      "words": 4919
     },
     {
       "arxiv": "2607.08871",
       "style": "algebraic",
       "chunks": 4,
-      "words": 2471
+      "words": 2490
     },
     {
       "arxiv": "2607.07672",
       "style": "algebraic",
-      "chunks": 31,
-      "words": 12430
+      "chunks": 37,
+      "words": 17596
     },
     {
       "arxiv": "2607.07458",
       "style": "algebraic",
-      "chunks": 19,
-      "words": 11592
+      "chunks": 24,
+      "words": 12034
     },
     {
       "arxiv": "2607.06926",
       "style": "algebraic",
-      "chunks": 25,
-      "words": 17033
+      "chunks": 26,
+      "words": 17443
     },
     {
       "arxiv": "2607.06899",
       "style": "algebraic",
-      "chunks": 10,
-      "words": 5411
+      "chunks": 13,
+      "words": 5554
     },
     {
       "arxiv": "2607.06749",
       "style": "algebraic",
-      "chunks": 14,
-      "words": 8053
+      "chunks": 18,
+      "words": 8252
     },
     {
       "arxiv": "2607.06710",
       "style": "algebraic",
-      "chunks": 19,
-      "words": 10951
+      "chunks": 22,
+      "words": 11174
     },
     {
       "arxiv": "2607.06635",
       "style": "algebraic",
       "chunks": 10,
-      "words": 5091
+      "words": 5152
     },
     {
       "arxiv": "2607.06543",
       "style": "algebraic",
-      "chunks": 16,
-      "words": 6224
+      "chunks": 17,
+      "words": 6332
     },
     {
       "arxiv": "2607.06512",
       "style": "algebraic",
-      "chunks": 12,
-      "words": 6785
+      "chunks": 13,
+      "words": 6793
     },
     {
       "arxiv": "2607.06490",
       "style": "algebraic",
-      "chunks": 29,
-      "words": 13704
+      "chunks": 34,
+      "words": 13726
     },
     {
       "arxiv": "2607.06487",
       "style": "algebraic",
-      "chunks": 19,
-      "words": 10424
+      "chunks": 25,
+      "words": 10650
     },
     {
       "arxiv": "2607.06397",
       "style": "algebraic",
       "chunks": 6,
-      "words": 3598
+      "words": 3662
     },
     {
       "arxiv": "2607.06394",
       "style": "algebraic",
-      "chunks": 17,
-      "words": 9904
+      "chunks": 23,
+      "words": 10203
     },
     {
       "arxiv": "2607.06372",
       "style": "algebraic",
       "chunks": 5,
-      "words": 3329
+      "words": 3352
     },
     {
       "arxiv": "2607.06164",
       "style": "algebraic",
       "chunks": 15,
-      "words": 7530
+      "words": 8317
     },
     {
       "arxiv": "2607.05556",
       "style": "algebraic",
-      "chunks": 9,
-      "words": 5634
+      "chunks": 10,
+      "words": 5767
     },
     {
       "arxiv": "2607.05213",
       "style": "algebraic",
-      "chunks": 8,
-      "words": 4858
+      "chunks": 10,
+      "words": 4895
     },
     {
       "arxiv": "2607.05160",
       "style": "algebraic",
-      "chunks": 19,
-      "words": 10945
+      "chunks": 21,
+      "words": 11186
     },
     {
       "arxiv": "2607.05021",
       "style": "algebraic",
-      "chunks": 13,
-      "words": 7957
+      "chunks": 19,
+      "words": 8220
     },
     {
       "arxiv": "2607.04964",
       "style": "algebraic",
-      "chunks": 12,
-      "words": 6899
+      "chunks": 16,
+      "words": 7114
     },
     {
       "arxiv": "2607.04933",
       "style": "algebraic",
-      "chunks": 13,
-      "words": 8295
+      "chunks": 14,
+      "words": 8672
     },
     {
       "arxiv": "2607.04931",
       "style": "algebraic",
-      "chunks": 9,
-      "words": 6928
+      "chunks": 10,
+      "words": 7071
     },
     {
       "arxiv": "2607.04843",
       "style": "algebraic",
-      "chunks": 13,
-      "words": 7943
+      "chunks": 17,
+      "words": 8358
     },
     {
       "arxiv": "2607.04831",
       "style": "algebraic",
-      "chunks": 5,
-      "words": 2878
+      "chunks": 7,
+      "words": 2927
     },
     {
       "arxiv": "2607.04793",
       "style": "algebraic",
-      "chunks": 7,
-      "words": 3379
+      "chunks": 8,
+      "words": 3460
     },
     {
       "arxiv": "2607.04480",
       "style": "algebraic",
-      "chunks": 97,
-      "words": 62091
+      "chunks": 98,
+      "words": 62786
     },
     {
       "arxiv": "2607.04340",
       "style": "algebraic",
-      "chunks": 7,
-      "words": 4100
+      "chunks": 10,
+      "words": 4228
     },
     {
       "arxiv": "2607.04231",
       "style": "algebraic",
       "chunks": 5,
-      "words": 2781
+      "words": 2915
     },
     {
       "arxiv": "2607.03500",
       "style": "algebraic",
-      "chunks": 8,
-      "words": 4619
+      "chunks": 10,
+      "words": 4724
     },
     {
       "arxiv": "2607.03475",
       "style": "algebraic",
-      "chunks": 15,
-      "words": 9049
+      "chunks": 17,
+      "words": 9614
     },
     {
       "arxiv": "2607.01467",
       "style": "algebraic",
-      "chunks": 12,
-      "words": 8004
+      "chunks": 16,
+      "words": 8384
     },
     {
       "arxiv": "2607.01411",
       "style": "algebraic",
       "chunks": 8,
-      "words": 4999
+      "words": 5137
     },
     {
       "arxiv": "2607.01195",
       "style": "algebraic",
-      "chunks": 52,
-      "words": 33474
+      "chunks": 57,
+      "words": 36172
     },
     {
       "arxiv": "2607.01110",
       "style": "algebraic",
-      "chunks": 19,
-      "words": 11755
+      "chunks": 20,
+      "words": 11996
     },
     {
       "arxiv": "2607.01068",
       "style": "algebraic",
-      "chunks": 7,
-      "words": 3752
+      "chunks": 9,
+      "words": 3910
     },
     {
       "arxiv": "2607.01066",
       "style": "algebraic",
-      "chunks": 18,
-      "words": 9972
+      "chunks": 25,
+      "words": 10265
     },
     {
       "arxiv": "2607.01054",
       "style": "algebraic",
-      "chunks": 17,
-      "words": 10473
+      "chunks": 18,
+      "words": 10894
     },
     {
       "arxiv": "2607.00792",
       "style": "algebraic",
-      "chunks": 22,
-      "words": 9257
+      "chunks": 26,
+      "words": 9403
     },
     {
       "arxiv": "2607.00757",
       "style": "algebraic",
       "chunks": 4,
-      "words": 2485
+      "words": 2519
     },
     {
       "arxiv": "2607.00404",
       "style": "algebraic",
-      "chunks": 21,
-      "words": 12389
+      "chunks": 25,
+      "words": 12746
     },
     {
       "arxiv": "2607.00393",
       "style": "algebraic",
-      "chunks": 9,
-      "words": 5313
+      "chunks": 10,
+      "words": 5478
     },
     {
       "arxiv": "2607.00367",
       "style": "algebraic",
       "chunks": 11,
-      "words": 6939
+      "words": 7088
     },
     {
       "arxiv": "2607.00359",
       "style": "algebraic",
-      "chunks": 10,
-      "words": 4879
+      "chunks": 13,
+      "words": 4909
     },
     {
       "arxiv": "2607.00323",
       "style": "algebraic",
       "chunks": 7,
-      "words": 4602
+      "words": 4690
     },
     {
       "arxiv": "2607.01271",
       "style": "algebraic",
-      "chunks": 13,
-      "words": 7254
+      "chunks": 14,
+      "words": 7276
     },
     {
       "arxiv": "2607.00146",
       "style": "algebraic",
-      "chunks": 34,
-      "words": 19359
+      "chunks": 38,
+      "words": 20027
     },
     {
       "arxiv": "2606.32031",
       "style": "algebraic",
       "chunks": 8,
-      "words": 5140
+      "words": 5392
     },
     {
       "arxiv": "2606.31885",
       "style": "algebraic",
-      "chunks": 14,
-      "words": 5954
+      "chunks": 15,
+      "words": 5967
     },
     {
       "arxiv": "2606.31883",
       "style": "algebraic",
       "chunks": 15,
-      "words": 7583
+      "words": 7597
     },
     {
       "arxiv": "2606.31871",
       "style": "algebraic",
-      "chunks": 21,
-      "words": 9246
+      "chunks": 22,
+      "words": 9258
     },
     {
       "arxiv": "2606.31870",
       "style": "algebraic",
-      "chunks": 23,
-      "words": 9828
+      "chunks": 24,
+      "words": 9905
     },
     {
       "arxiv": "2606.31862",
       "style": "algebraic",
-      "chunks": 12,
-      "words": 5666
+      "chunks": 15,
+      "words": 6671
     },
     {
       "arxiv": "2606.31854",
       "style": "algebraic",
       "chunks": 20,
-      "words": 11483
+      "words": 11501
     },
     {
       "arxiv": "2606.31853",
       "style": "algebraic",
-      "chunks": 17,
-      "words": 8592
+      "chunks": 21,
+      "words": 8596
     },
     {
       "arxiv": "2606.31788",
       "style": "algebraic",
-      "chunks": 18,
-      "words": 7250
+      "chunks": 19,
+      "words": 7264
     },
     {
       "arxiv": "2606.31766",
       "style": "algebraic",
-      "chunks": 11,
-      "words": 7210
+      "chunks": 14,
+      "words": 7422
     },
     {
       "arxiv": "2606.31747",
       "style": "algebraic",
       "chunks": 21,
-      "words": 10548
+      "words": 10943
     },
     {
       "arxiv": "2606.31514",
       "style": "algebraic",
       "chunks": 6,
-      "words": 3782
+      "words": 3802
     },
     {
       "arxiv": "2606.30254",
       "style": "algebraic",
       "chunks": 24,
-      "words": 15105
+      "words": 15291
     },
     {
       "arxiv": "2606.30198",
       "style": "algebraic",
-      "chunks": 23,
-      "words": 15848
+      "chunks": 24,
+      "words": 16351
     },
     {
       "arxiv": "2606.30165",
       "style": "algebraic",
-      "chunks": 37,
-      "words": 26539
+      "chunks": 38,
+      "words": 26626
     },
     {
       "arxiv": "2606.29728",
       "style": "algebraic",
-      "chunks": 11,
-      "words": 7257
+      "chunks": 16,
+      "words": 7555
     },
     {
       "arxiv": "2606.29373",
       "style": "algebraic",
-      "chunks": 2,
-      "words": 27520
+      "chunks": 60,
+      "words": 28120
     },
     {
       "arxiv": "2606.28984",
       "style": "algebraic",
-      "chunks": 39,
-      "words": 21357
+      "chunks": 61,
+      "words": 26465
     },
     {
       "arxiv": "2606.28736",
       "style": "algebraic",
       "chunks": 31,
-      "words": 16637
+      "words": 16644
     },
     {
       "arxiv": "2606.28691",
       "style": "algebraic",
-      "chunks": 32,
-      "words": 19645
+      "chunks": 37,
+      "words": 20189
     },
     {
       "arxiv": "2606.28291",
       "style": "algebraic",
-      "chunks": 12,
-      "words": 6436
+      "chunks": 14,
+      "words": 6552
     },
     {
       "arxiv": "2606.27805",
       "style": "algebraic",
-      "chunks": 21,
-      "words": 10906
+      "chunks": 25,
+      "words": 11038
     },
     {
       "arxiv": "2606.27737",
       "style": "algebraic",
-      "chunks": 29,
-      "words": 16532
+      "chunks": 36,
+      "words": 16689
     },
     {
       "arxiv": "2606.27574",
       "style": "algebraic",
       "chunks": 19,
-      "words": 12144
+      "words": 12331
     },
     {
       "arxiv": "2606.26755",
       "style": "algebraic",
-      "chunks": 22,
-      "words": 13239
+      "chunks": 23,
+      "words": 13871
     }
   ],
-  "chunks_written": 19002,
+  "chunks_written": 22390,
   "errors": [
     "math/0305583: download failed",
     "math/0507693: download failed",
     "math/0508888: download failed",
     "math/0711.0803: download failed",
     "math/0804.3021: download failed",
-    "2603.23157v2: download failed",
-    "2602.05990v1: Stream has ended unexpectedly",
-    "2606.24503: Invalid Elementary Object starting with b']' @223372: b')]T521 7.97013)-4(z)]T521 7.97027R23 96)3TfJ/24.50134(\\\\094(z)]T521 7.9.82h7[(00)'"
+    "2603.23157v2: download failed"
   ],
-  "skipped_resume": 406
+  "skipped_resume": 0
 }

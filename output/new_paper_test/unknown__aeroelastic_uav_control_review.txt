@@ -1,0 +1,1280 @@
+Academic Editor: Dawei Gong
+Received: 10 February 2026
+Revised: 16 April 2026
+Accepted: 17 April 2026
+Published: 22 April 2026
+Copyright: © 2026 by the authors.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed under the terms and
+conditions of the Creative Commons
+Attribution (CC BY) license.
+Review
+A Mathematical Review of Reduced Aeroelastic Models,
+Multiagent Dynamics, and Control Allocation in UA V Systems
+Luis Arturo Reyes-Osorio 1,*
+ , Luis Amezquita-Brooks 1
+ , Aldo Jonathan Munoz-Vazquez 2
+and Octavio Garcia-Salazar 1,*
+1 Aerospace Engineering Research and Innovation Center, Faculty of Mechanical and Electrical Engineering,
+Autonomous University of Nuevo Leon, Apodaca 66616, Mexico; luis.amezquitabrk@uanl.edu.mx
+2 Department of Computer, Electrical & Software Engineering, Embry-Riddle Aeronautical University,
+Prescott, AZ 86301, USA; munozvaa@erau.edu
+* Correspondence: luis.reyessr@uanl.edu.mx (L.A.R.-O.); octavio.garciasl@uanl.edu.mx (O.G.-S.)
+Abstract
+Unmanned Aerial Vehicles (UAVs) are complex nonlinear systems characterized by high
+dimensionality. They are prone to aerodynamic effects, structural dynamics, actuation
+constraints, and networked interactions, requiring advanced mathematical models and
+precise control. Their governing equations involve nonlinear rigid-body dynamics coupled
+with fluid and elasticity models, while modern architectures introduce redundancy that
+creates constrained mappings between generalized forces and actuator inputs. Coordinated
+UAV teams add another layer of mathematical structure through graph-based interaction
+models that determine consensus, formation keeping, and distributed stability. These
+characteristics give rise to several interconnected challenges. High-fidelity aerodynamic and
+aeroelastic solvers provide accurate results; however, these are computationally intensive,
+motivating the development of reduced-order models and data-driven approximations
+that preserve dominant physical behavior. Methods for quantifying uncertainty support
+robustness assessments by characterizing the effects of parametric variation and model form
+error. At the actuation level, control allocation problems rely on constrained linear algebra,
+convex optimization, and dynamic formulations to ensure feasible and stable realization of
+command forces and moments. In multi-agent systems, the spectral properties of adjacency
+and Laplacian matrices govern convergence and cooperative behavior. This article reviews
+the state of the art in these areas, highlights the mathematical foundations that relate them,
+and provides a coherent perspective on the methods that enable reliable modeling and
+control of modern UAV systems.
+Keywords: UAVs; multi-agent systems; reduced-order modeling; control allocation
+MSC: 93-10; 93A16
+1. Introduction
+Unmanned Aerial Vehicles (UAVs) have become a central focus in autonomous systems
+research due to their nonlinear dynamics, actuation redundancy, and increasing use in
+coordinated missions. These vehicles combine aerodynamic forces, structural deformation,
+and actuator interactions within tightly coupled mathematical models. Their behavior is
+typically described by nonlinear ordinary differential equations derived from Newton–
+Euler mechanics, often coupled with partial differential equations that represent unsteady
+aerodynamics and flexible structural responses. As UAV capabilities expand, so does the
+Mathematics 2026, 14, 1401 https://doi.org/10.3390/math14091401
+Mathematics 2026, 14, 1401 2 of 27
+need for rigorous methods that unify modeling, reduced-order simulation, uncertainty
+treatment, control feasibility, and cooperative decision making.
+A recurring challenge in UAV analysis is the high dimensionality of fluid and structural
+models. Aerodynamic loads, flexible modes, and fluid structure interaction effects originate
+from discretizations of the compressible Navier–Stokes equations and structural elasticity
+equations, leading to state dimensions that may reach millions of degrees of freedom.
+Reduced-order modeling provides low-dimensional surrogate systems obtained through
+projection operators onto modal or data-driven bases, producing tractable nonlinear dynamical systems that retain the dominant behavior. Recent advances include projection-based
+techniques for nonlinear aeroelasticity and trans-sonic buffet modeling [1–3] as well as
+tensor-structured decompositions for parametric exploration [4]. When paired with uncertainty quantification, these models allow for the evaluation of parameter sensitivity,
+stochastic variability, and model form discrepancies through polynomial chaos expansions
+and related spectral methods [5,6].
+Another challenge arises from the increasing redundancy of actuation in multirotor
+platforms, tiltrotors, morphing vehicles, and distributed propulsion systems. Mapping highlevel force and moment commands to feasible actuator inputs is fundamentally a problem of
+constrained linear algebra and optimization. The mapping between generalized forces and
+actuator commands is expressed through effectiveness matrices. The rank, conditioning,
+and null space structure of these matrices determines feasibility. Algebraic mappings rely
+on pseudoinverses and weighted least squares; optimization-based strategies solve convex
+quadratic programs defined over actuator polytopes, while dynamic or hybrid methods
+introduce auxiliary differential equations that govern null space evolution and projections
+onto feasible sets. These allocation frameworks form a crucial link between theoretical
+control laws and physical implementation on real platforms, and have been applied to
+diverse configurations such as distributed propulsion wings [7], hybrid morphing UAVs [8],
+tiltrotor Vertical Takeoff and Landing (VTOL) vehicles [9], and hexacopter systems [10].
+Beyond individual vehicles, UAVs now operate in coordinated teams to perform
+surveillance, mapping, and distributed sensing tasks. Such behaviors rely on communication topologies formalized through graphs, where adjacency and Laplacian matrices
+shape the evolution of consensus, formation control, and collision avoidance. The algebraic
+properties of the Laplacian, such as eigenvalue spacing and algebraic connectivity, govern
+convergence rates and robustness in network coupled dynamical systems. Multi-agent
+models combine individual nonlinear UAV dynamics with these network structures [11],
+creating distributed systems that must remain stable and feasible under communication
+limits, delays, and disturbances.
+These topics are closely related, although they are often developed separately in the
+literature. Reduced-order models provide tractable representations of high-dimensional
+aerodynamic and aeroelastic dynamics, control allocation ensures that commanded forces
+and moments remain physically realizable under actuator constraints, and multi-agent
+coordination builds on both to achieve distributed and cooperative behavior. In this
+sense, the three areas can be interpreted as complementary layers within modern UAV
+modeling and control architectures. This linkage between dynamical approximation,
+actuation feasibility, and networked interaction means that progress in one domain directly
+influences the others.
+Accordingly, this article is structured as three focused review sections, each centered
+on one of these mathematical components. Section 2 examines multi-agent coordination
+and graph-based models for distributed UAV dynamics. Section 3 reviews reduced-order
+modeling and uncertainty quantification techniques for aerodynamic and aeroelastic systems. Section 4 surveys control allocation methods for over-actuated aerial platforms.
+https://doi.org/10.3390/math14091401
+Mathematics 2026, 14, 1401 3 of 27
+Although each section is presented as a self-contained mini-review, explicit connections
+are highlighted throughout in order to clarify how modeling accuracy, actuator feasibility,
+and cooperative behavior relate within modern UAV systems.
+2. Multiple UA Vs
+Recent advances in physics, biology, social sciences, and computer science have
+sparked significant interest among scientists in studying and analyzing the behavior of
+animal groups. For instance, animals often collaborate to forage for food, navigate obstacles, and evade predators. Flocks of birds can increase their flight distance when
+flying in a V-formation; similarly, groups of fish enhance their swimming efficiency when
+moving together.
+To perform the tasks mentioned above, each member of the group must follow specific
+rules. These include maintaining a safe distance from one another, matching the speed
+of the rest of the group, and staying in formation. The collective behaviors observed in
+animals can be applied in various engineering fields, both military and civilian. Some of
+these applications involve aircraft and helicopter formations, mobile sensor networks for
+advanced surveillance, handling of hazardous materials, search and rescue operations,
+and observation missions.
+Cooperative flight control, particularly in its application to UAVs, is an active and
+challenging research topic that holds significant importance for various civil and military
+applications. This advanced problem can be addressed using either multirotor or fixed-wing
+aircraft. While linear cooperative control methods have been successfully implemented in
+aerial robots, their applicability is limited, especially during aggressive maneuvers where
+the system’s linearity no longer holds true. Additionally, system stability can only be
+assured in closed-loop configurations within small regions around the equilibrium point,
+which are often difficult to determine accurately [12].
+In multi-UAV formation flight, the dynamic behavior of each vehicle can be described
+using either Euler angle or quaternion representations. The Euler-based model expresses the
+quadrotor dynamics through the Newton–Euler formulation, relating translational motion
+to the total thrust vector and attitude defined by the roll, pitch, and yaw angles. Conversely,
+the quaternion-based model provides a singularity-free representation of orientation in
+which the rotational kinematics are governed by unit quaternions and their associated
+transformation matrices. Both formulations capture the essential coupling between position,
+attitude, and actuator-generated moments, enabling the design of coordinated control laws
+for maintaining formation geometry while synchronizing trajectories and ensuring stable
+collective motion under disturbances.
+2.1. Mathematical Model for Multiple UAVs
+The mathematical model for a group of N quadrotor UAV , considered as agents,
+defines an inertial fixed frame as Ii={xIi, yIi, zIi }, a body frame fixed attached to the center
+of gravity of the vehicle as Bi={xBi, yBi, zBi }, and a wind frame considered during the
+forward flight as Wi={xWi, yWi, zWi } for i = 1, . . . ,N [13].
+The Newton–Euler formulation is used to obtain the dynamic model for the N
+aerial vehicles:
+ ̇ξi = Vi (1)
+mi  ̇Vi = Rie3(−TTi ) + mige3 + Dξi (2)
+ ̇Ri = Ri ˆΩi (3)
+Ji  ̇Ωi = −Ωi × JiΩi + τai + Dηi (4)
+https://doi.org/10.3390/math14091401
+Mathematics 2026, 14, 1401 4 of 27
+where ξi = ( xi, yi, zi)⊤ ∈ R3 represents the position coordinates relative to the inertial
+frame and ηi = ( φi, θi, ψi)⊤ ∈ R3 describes the rotation coordinates for the ith UAV .
+The orientation of each UAV is given by an orthogonal rotation matrixRi ∈ SO(3) : Bi → I i,
+which can be parameterized by the Euler angles φi, θi, and ψi, respectively representing the
+roll, pitch, and yaw or heading. This matrix represents the orientation of the ith vehicle
+from the body frame to the inertial frame. Ωi = (pi, qi, ri)⊤ ∈ R3 is the angular velocity in
+Bi, Vi = (  ̇xi,  ̇yi,  ̇zi)⊤ ∈ R3 is the translational velocity in Ii, and TTi ∈ R is the total thrust,
+while τai ∈ R3 represents the actuator moments acting on the ith aerial vehicle. In addition,
+e1, e2, and e3 are the vectors of the canonical basis of R3, mi ∈ R denotes the mass of the
+ith UAV ,Ji ∈ R3×3 contains the moments of inertia of the ith UAV , and ˆΩi is the skewsymmetric matrix associated with the cross product (i.e., ˆab = a × b ∀a, b ∈ R3). Finally,
+Dξi = ( dξi1
+, dξi2
+, dξi3
+)⊤ ∈ R3 and Dηi = ( dηi1
+, dηi2
+, dηi3
+)⊤ ∈ R3 are bounded disturbances
+that can be time-varying and state-dependent. These disturbances involve the aerodynamic
+forces along with the gyroscopic, and aerodynamic moments [11,14].
+Equations (1)–(4) are described in linear form to propose a coordination approach for
+multiple UAVs:
+ ̇ξi = Vi (5)
+ ̇Vi = upi + dξi (6)
+ ̇Ri = Ri ˆΩi (7)
+ ̇Ωi = uai + dRi (8)
+with miupi = mige3 − TTi (Rie3), τai = Juai, dξi =
+Dξi
+mi
+, and dRi = J−1
+i
+
+−Ωi × JiΩi + Dηi
+
+.
+In this sense, upi ∈ R3 and uai ∈ R3 are virtual control inputs for the position and orientation dynamics of the agent i, while upi and uai are the proposed control inputs [15].
+2.2. Consensus Approach for Motion Coordination
+Consensus is based on the fact that two or more individuals must reach a common
+resolution to a problem. In the simplest conceptual approach applied to multi-agent
+systems, a consensus protocol or algorithm is any dynamic system that can bring these
+agents to a common value (not necessarily equal) in any of their states. The dynamics used
+to simulate individual group members can be simple while still yielding realistic results.
+Consider the motion of the agent according to the dynamics
+ ̇xi = ui, (9)
+where xi = ( x1, x2)⊤ ∈ R2 are states and ui = [ ux1, ux2]⊤ ∈ R2 are the control inputs.
+A control input for collision avoidance is described as
+ui = − ∑
+j∈Nc
+i
+cij (xj − xi), (10)
+which causes agent i to turn away from other agents inside the collision neighborhood
+Nc
+i with cij, that is, the collision avoidance gain. A control input for flock centering is
+described as
+ui = − ∑
+j∈Nc
+i
+aij (xj − xi), (11)
+which causes agent i to turn towards other agents inside the interaction neighborhood Ni
+and outside the collision neighborhood Nc
+i .
+https://doi.org/10.3390/math14091401
+Mathematics 2026, 14, 1401 5 of 27
+2.2.1. UAV Swarm Modeling Frameworks
+A graph is applied to describe the communication topology for the information
+exchange between the agents in multi-agent systems. Let G = ( V, E ) be a directed graph,
+where V = {v1, v2, . . ., vN} is a set of N nodes and E ⊆ V × V is a set of edges. An edge
+(i, j) ∈ E is graphically represented by an arrow with tail node i and head node j, meaning
+that information flows from agent i to agent j. An agent i is called a neighbor of agent j if
+(i, j) ∈ E . The set of neighbors of agent i is denoted as
+Ni = {j | (j, i) ∈ E }. (12)
+Given the edge weights aij, a graph can be represented by an adjacency (or connectivity) matrix A = [ aij ] ∈ RN×N, where aij > 0 if (j, i) ∈ E and aij = 0 otherwise.
+The weighted in-degree of node i is defined as
+din
+i =
+N
+∑
+j=1
+aij (13)
+and the corresponding in-degree matrix is defined as
+D = diag{din
+i } ∈ RN×N. (14)
+Thus, the Laplacian matrix is defined as
+L = D − A. (15)
+A node is said to be balanced if its in-degree is equal to its out-degree, that is,
+din
+i =
+N
+∑
+j=1
+aij =
+N
+∑
+j=1
+aji = dout
+i . (16)
+In this work, the graphs are considered to be invariant over time, meaning that A is
+composed of constant entries [16,17].
+Early advances on UAV swarms focused on modeling and system representation;
+a prototype swarm control framework based on agent technology was introduced in [18],
+where UAVs were modeled as agents interacting with each other and with the environment.
+This approach incorporates maneuverability, communication, and dynamic characteristics, enabling control designers to account for physical constraints while focusing on
+control strategies.
+Building on structural modeling perspectives, ref. [19] analyzed UAV swarm characteristics using complex network theory. The approach proposed a multi-layer swarming
+network model that provided a comprehensive understanding of interaction patterns and
+system topology in large-scale UAV swarms.
+A broader perspective was provided in [ 20], where the authors analyzed the core
+characteristics of swarming drones, discussed linear and nonlinear model-based control
+technologies, and assessed public awareness through experimental survey-based studies. Their work linked technical development with societal perception and acceptance of
+swarm technologies.
+Several works have focused on consolidating existing knowledge and identifying
+research gaps. In [ 21], the authors presented a state-of-the-art review of UAV swarm
+technology with a strong emphasis on unmanned farming applications. The study
+served as a guide for identifying effective control methodologies applicable to agricultural swarm systems.
+https://doi.org/10.3390/math14091401
+Mathematics 2026, 14, 1401 6 of 27
+Formation control techniques were comprehensively reviewed in [22], where classical
+approaches such as leader–follower, virtual structure, behavior-based, consensus-based,
+and Artificial Potential Field (APF) methods were analyzed and compared to highlight
+their advantages and limitations.
+From a learning perspective, ref. [23] provided a systematic survey of Multi-Agent
+Reinforcement Learning (MARL) methods applied to UAV control. The authors categorized
+recent approaches, identified emerging trends, and outlined open challenges, offering a
+structured foundation for future research in cooperative aerial robotics.
+2.2.2. Control for UAV Swarms
+The coordination of UAVs in a swarm relies on a fundamental architectural shift from
+centralized command to decentralized local interactions. In order to achieve robust swarm
+behavior for consensus, formation tracking, or cooperative payload transport, the control
+strategy must seamlessly integrate the algebraic topology of the communication network
+with the highly nonlinear and often underactuated dynamics of the individual aircraft.
+At the heart of decentralized multi-agent systems is algebraic graph theory. The swarm’s
+communication network is defined by a graph in which the flow of information is mathematically governed by the Laplacian matrix (L). The baseline control law for achieving
+spatial consensus dictates that the control input ui for the i-th UAV is proportional to the
+difference between its state and the states of its active neighbors:
+ui(t) = −c ∑
+j∈Ni
+aij (ξi(t) − ξj(t)) (17)
+where c is a coupling gain,Ni is the neighborhood set, andaij represents theadjacency weights.
+The control and coordination of multi-agent systems and multi-quadrotor swarms has
+been extensively explored in the recent literature, with methodologies generally addressing
+consensus tracking, formation maintenance, and communication constraints. To guarantee
+consensus under such conditions, robust nonlinear strategies are frequently employed.
+For example, second-order super-twisting sliding mode controllers [24] and decentralized
+adaptive algorithms [25] have demonstrated significant effectiveness in mitigating external
+disturbances and uncertainties. Furthermore, these robust synchronization techniques have
+been successfully extended to heterogeneous networks, enabling nonidentical followers to
+synchronize with an uncertain leader despite parameter perturbations [26].
+In highly dynamic operational environments, UAV swarms must frequently adapt
+to time-varying formations. Theoretical frameworks have established the necessary and
+sufficient conditions for achieving these dynamic configurations, maintaining stability even
+when the swarm experiences switching interaction topologies [27,28]. Finally, because continuous information exchange is often impractical in real-world scenarios, event-triggered
+strategies have been introduced to optimize bandwidth. By employing model-based predictors, these event-based approaches successfully maintain leader–follower synchronization
+during periods of intermittent communication [29].
+2.2.3. Reinforcement Learning for UAV Swarms
+In unmodeled dynamic and uncertain operational environments, traditional deterministic control methods often have scaling problems than can complicate maintaining the
+robust coordination required for UAV swarms. Consequently, learning-based control strategies, particularly Multi-Agent Reinforcement Learning (MARL), have emerged as a highly
+effective solution for achieving autonomous decentralized swarm intelligence [23,30,31].
+Within this framework, the cooperative navigation and control problem is formally modeled as a Decentralized Partially Observable Markov Decision Process (Dec-POMDP). Each
+https://doi.org/10.3390/math14091401
+Mathematics 2026, 14, 1401 7 of 27
+UAV acts as an autonomous agent operating under a parameterized stochastic policy
+πθ(ui|oi) that maps local neighborhood observations oi to continuous flight control actions ui (e.g., thrust, pitch, and yaw controls). The primary mathematical objective for the
+swarm is to optimize the policy parameters θ in order to maximize the expected cumulative
+discounted reward
+J(θ) = Eπθ
+"
+∞
+∑
+t=0
+γtri(t)
+#
+, (18)
+where γ ∈ [0, 1) represents a discount factor which balances immediate stabilization with
+long-term mission objectives. To guarantee spatial consensus and coherent formation
+tracking across the decentralized network, the local reward function ri(t) must be explicitly
+coupled to the topology of the communication graph. Utilizing elementsaij of the adjacency
+matrix, the formation penalty is mathematically defined as follows:
+ri(t) = −c1 ∑
+j∈Ni
+aij |ξi(t) − ξj(t)|2 − c2|ui(t)|2 + Rtask (19)
+where ξi(t) is the state vector of the i-th UAV ,Ni denotes the set of actively communicating
+neighbors, c1, c2 > 0 are weighting coefficients that penalize formation tracking deviations
+and excessive control effort, respectively, and Rtask represents task-specific incentives
+such as collision avoidance or target tracking. By iteratively updating the policy through
+continuous-space actor–critic algorithms such as Multi-Agent Proximal Policy Optimization
+(MAPPO), the multi-agent system adaptively learns robust collision-free trajectories and
+resilient consensus protocols, effectively mitigating real-time aerodynamic disturbances
+and communication delays without relying on a vulnerable centralized coordinator [23,31].
+To address the challenges posed by complex, uncertain, and large-scale operational
+environments, recent research has increasingly combined optimization techniques with
+learning-based control strategies for UAV swarms. These approaches aim to enhance
+coordination, robustness, adaptability, and mission efficiency under dynamic constraints.
+Optimization-driven methods have been explored to improve swarm formation and
+maneuvering performance in challenging environments. In [32], the authors introduced a
+hybrid swarm formation control algorithm that integrates Velocity-Pausing Particle Swarm
+Optimization (VPPSO) with fractional calculus operators. Their proposed approach demonstrated effective performance in scenarios involving dynamic threats, mountainous terrain,
+and obstacle avoidance, highlighting the suitability of hybrid optimization techniques for
+complex multi-UAV missions.
+In parallel to optimization-based methods, learning-based approaches have gained
+significant attention thanks to their ability to cope with both uncertainty and scalability.
+In [ 33], a MARL framework was developed for UAV swarm search tasks using both
+local and global information. The proposed method enabled cooperative exploration of
+unknown regions, reduced collision risk and redundant coverage, and achieved faster
+target localization compared to benchmark algorithms.
+In addition to motion coordination, communication-aware learning strategies have
+been investigated for joint optimization of the control and networking aspects of UAV
+swarms. In [ 34], the authors proposed a JTFR (joint trajectory control, frequency assignment, and packet routing) framework based on an adaptive distributed multi-agent deep
+deterministic policy gradient algorithm. This approach optimized link stability, signal-tointerference-plus-noise ratio, queuing latency, and energy consumption, thereby improving
+overall swarm communication efficiency and mission reliability.
+More recently, advanced learning paradigms have been introduced to address the
+inherent heterogeneity and nonlinear coupling effects of UAV swarms. In [ 35], a multihttps://doi.org/10.3390/math14091401
+Mathematics 2026, 14, 1401 8 of 27
+agent deep reinforcement learning framework enhanced with dual-layer imitation learning
+and self-adaptive behavior matching was proposed. This method effectively mitigated
+the nonlinear coupling induced by heterogeneous UAV dynamics, resulting in improved
+formation cooperation and mission execution in complex and dynamic environments.
+2.2.4. Fractional-Order Control of Multiple UAV Systems
+The inherent memory properties of fractional-order operators have recently been
+considered for the control and coordination of multi-UAV systems. Fractional calculus
+generalizes standard integration and differentiation to non-integer orders, providing a robust framework for capturing the hereditary and nonlocal characteristics of UAV dynamics.
+Consider the following differintegrals of order ν ∈ (0, 1):
+• Riemann–Liouville fractional integral:
+t0 Iν
+t f (t) = 1
+Γ(ν)
+Z t
+t0
+f (ζ)
+(t − ζ)1−ν dζ. (20)
+• Extended Caputo fractional derivative:
+C
+t0 Dν
+t f (t) = f (t) − f (t0)
+Γ(1 − ν)(t − t0)ν + ν
+Γ(1 − ν)
+Z t
+t0
+f (t) − f (ζ)
+(t − ζ)ν+1 dζ. (21)
+The operator in (21) was proposed by [ 36] to study the topological properties of
+sufficiently regular continuous (but not necessarily integer-order differentiable) functions
+and is well-defined in the sense that complies with C
+t0 Dν
+t t0 Iν
+t f (t) = f (t) and t0 Iν
+t
+C
+t0 Dν
+t f (t) =
+f (t) − f (t0), while the operator in (21) coincides with the conventional Caputo operator
+C
+t0 Dν
+t f (t) = t0 Iν
+t  ̇f (t) for differentiable functions [37].
+In decentralized multi-agent architectures, coordination of Unmanned Aerial Vehicles (UAVs) under complex aerodynamic disturbances often requires control strategies
+that extend beyond classical integer-order dynamics. Fractional-Order Control (FOC) has
+emerged as a highly robust framework that can enhance the resilience and transient performance of UAV swarms. By generalizing differentiation and integration to non-integer
+orders, fractional calculus allows for the modeling of hereditary properties, nonlocal effects,
+and the frequency-dependent damping inherent in aeroelastic systems [38,39]. The fractional dynamics of the i-th UAV in a multi-agent network are typically formulated utilizing
+the Caputo fractional derivative of order α ∈ (0, 1):
+0CDtαξi(t) = 1
+Γ(1 − α)
+Z t
+0
+ ̇ξi(τ)
+(t − τ)α dτ, (22)
+where ξi(t) represents the kinematic state vector of the agent, Γ(·) is the Euler Gamma
+function, and the integration kernel (t − τ)−α mathematically encapsulates the system’s
+structural memory . To achieve robust swarm coordination, the recent literature has integrated this differintegral operator into Sliding Mode Control (FOSMC) and cooperative PID
+architectures. For a directed communication graph, the fractional-order consensus sliding
+manifold si(t) for the i-th agent is structured using the adjacency matrix elementsaij:
+si(t) = c1 ∑
+j∈Ni
+aij (ξi(t) − ξj(t)) + c2, 0CDtα
+"
+∑
+j∈Ni
+aij (ξi(t) − ξj(t))
+#
+(23)
+where Ni denotes the set of communicating neighbors and c1, c2 are positive design parameter matrices. This fractional coupling ensures that the closed-loop multi-agent system
+achieves Mittag-Leffler or fixed-time stability. Compared to classical controllers, these
+https://doi.org/10.3390/math14091401
+Mathematics 2026, 14, 1401 9 of 27
+distributed fractional protocols significantly suppress actuator chattering, reduce steadystate formation errors, and provide superior rejection of time-varying wind gusts and
+unmodeled nonlinearities across the swarm topology [40].
+In [41], a decentralized fault-tolerant control scheme was formulated for a directed
+communication network of UAVs. In that study, fractional-order terms were employed
+to improve robustness against wind disturbances and actuator faults. The overall control
+framework incorporated fractional-order sliding-mode surfaces, nonlinear disturbance
+observers, and fuzzy wavelet neural networks to achieve decentralized attitude tracking. The case of a multi-UAV system subject to time-varying asymmetric constraints was
+considered in [ 42], where an event-triggered distributed fractional-order fault-tolerant
+control scheme was proposed. The control strategy relied on neural networks to cope with
+uncertainties, driving the system states to a prescribed region within a predetermined finite
+time. An innovative approach was proposed in [43] by considering the leader quadrotor
+as a fractional-order system and the followers as integer-order systems. Results showed
+that fractional-order modeling led to superior performance, as characterized by reduced
+tracking errors and faster response times. In [ 44], the authors introduced a hybrid and
+decentralized fractional-order proportional–integral–derivative control strategy that improved tracking accuracy and formation stability while enhancing transient response and
+robustness against disturbances. A fractional-order integral terminal sliding mode control
+law for distributed UAV formations under actuator faults and wind disturbances was also
+proposed in [45], where an extended state observer was formulated to compensate for
+lumped disturbances. The proposed approach provided the ability to respond to fast disturbances, leading to significantly improved robustness. Moreover, the proposed controller
+only required information exchange between neighboring UAVs, reducing dependence on
+global data and alleviating pressure on communication bandwidth.
+From a system-level perspective, the coordination strategies described in this section
+rely on the availability of accurate dynamical models and feasible actuation. This is
+particularly the case for graph-based evolution governed by the Laplacian matrix L, as
+proposed in (15). In practical UAV implementations, the state evolution ξi(t) and resulting
+control inputs ui(t) depend on underlying aerodynamic and inertial models that must
+remain computationally tractable. Reduced-order modeling provides such representations,
+while control allocation ensures that the commanded inputs can be realized under actuator
+constraints. These aspects motivate the need for systematic modeling and uncertainty
+treatment, as discussed in the following section.
+3. Reduced-Order Modeling and Uncertainty Quantification
+The coordination strategies discussed in the context of multi-agent UAV systems
+introduce significant computational and modeling challenges, particularly as the number
+of interacting agents increases and system dynamics become more complex. In this context,
+reduced-order modeling and uncertainty quantification techniques provide a systematic
+framework for obtaining computationally tractable representations of high-dimensional
+aerodynamic and dynamical systems, enabling their integration into real-time control and
+distributed coordination architectures.
+Fluid–Structure Interaction (FSI) phenomena are critical in modern aeronautical and
+aerospace engineering, as virtually all lifting or propulsion components exhibit coupled
+aerodynamic and structural responses. Examples span wing flutter, trans-sonic buffet,
+compressor blade vibration, aeroelastic rotor dynamics, and vibro-acoustic instabilities in
+payload fairings. These phenomena involve nonlinear feedback loops between pressure
+fluctuations, shock motions, structural deformation, and turbulent flow physics.
+https://doi.org/10.3390/math14091401
+Mathematics 2026, 14, 1401 10 of 27
+High-fidelity solvers such as Reynolds-Averaged Navier–Stokes (RANS), Unsteady
+RANS (URANS), Detached Eddy Simulation (DES), and Large Eddy Simulation (LES)
+can accurately resolve these behaviors, but are prohibitively expensive for design space
+exploration and real-time applications. To address this issue, Reduced-Order Models
+(ROMs) can provide significant computational savings by projecting the high-dimensional
+Full-Order Model (FOM) into a low-dimensional subspace.
+An FOM state u(x, t) ∈ RN is represented as
+u(x, t) ≈
+r
+∑
+i=1
+ai(t) φi(x) = Φ a(t), r ≪ N, (24)
+where φi(x) are spatial basis functions and ai(t) are modal coefficients. Projection-based
+ROMs (Galerkin, Petrov–Galerkin (PG), LSPG) and nonlinear data-driven ROMs enable
+orders-of-magnitude speed improvements, allowing for parametric studies, flutter boundary prediction, control-oriented modeling, and real-time digital twins.
+To ensure predictive reliability, ROMs are increasingly paired with Uncertainty Quantification (UQ) frameworks to account for manufacturing tolerances, model-form errors,
+and stochastic variability in aerodynamic and structural parameters.
+3.1. Aeroelastic and Aerodynamic Applications of ROMs
+ROMs have become central tools in analyzing unsteady aerodynamics, aeroelastic
+instabilities, and nonlinear flutter phenomena. In trans-sonic aeroelasticity, ref. [1] developed a nonlinear ROM coupling RANS-level unsteady aerodynamics with structural modal
+dynamics through a dynamically linearized time domain approach, enabling efficient
+prediction of limit-cycle oscillations.
+3.1.1. Trans-Sonic Buffet and Shock Dynamics
+Trans-sonic buffet is a complex and self-sustained aerodynamic instability that arises
+in flows where subsonic and supersonic regions coexist, typically at free-stream Mach
+numbers M∞ ≈ 0.7–0.9. Under these conditions, local supersonic regions form over lifting
+surfaces and terminate in shockwaves; the interaction between these shockwaves and the
+turbulent boundary layer then leads to a highly unsteady flow behavior known as shockinduced buffet [46]. The underlying mechanism is governed by the coupled interaction
+between shock motion and boundary-layer separation, where oscillations of the shock
+induce adverse pressure gradients that promote downstream separation. This separated
+region modifies the pressure distribution, feeding back into the shock position and establishing a self-sustained limit-cycle oscillation characterized by periodic shock motion and
+fluctuating aerodynamic loads [ 47]. The onset of buffeting is typically associated with
+a critical combination of the Mach number and angle of attack beyond which the flow
+transitions from steady to globally unstable behavior, as demonstrated in recent numerical
+and experimental studies [48].
+Proper Orthogonal Decomposition (POD) provides low-dimensional modes that capture shock oscillation, buffet cell propagation, and boundary-layer separation in URANS
+simulations, yielding up to a 95% reduction in computational cost while preserving the
+dominant physics.
+Dynamic Mode Decomposition (DMD) and Koopman operator analysis support
+identification of aeroelastic modes, shock frequency content, and buffet onset conditions,
+enabling frequency-resolved diagnostics of unsteady flow fields [2,3].
+In general, the integration of high-fidelity simulations with modal decomposition
+techniques provides a robust framework for understanding and predicting trans-sonic
+buffeting, which remains a critical consideration in modern aerodynamic design.
+https://doi.org/10.3390/math14091401
+Mathematics 2026, 14, 1401 11 of 27
+3.1.2. Rotorcraft, Propeller, and Turbomachinery Applications
+In rotorcraft and propeller contexts, ROMs are used to model unsteady blade aerodynamics, blade–vortex interactions, and aeroacoustic emissions. DMD-filtered modal
+reconstructions enable separation of blade-passing harmonics from broadband turbulence.
+In turbomachinery, Polynomial Chaos Expansion (PCE) and discrete adjoint approaches support robust aerodynamic optimization under flow uncertainty [ 49]. These
+methods significantly reduce the computational burden associated with stochastic aerodynamic simulations.
+3.1.3. Tensor-Structured ROMs
+Tensor Train Decomposition (TTD) and Higher-Order Singular Value Decomposition
+(HOSVD) preserve the multidimensional structure of high-dimensional Computational
+Fluid Dynamics (CFD) datasets, enabling efficient interpolation across parameters such as
+the Mach number, Reynolds number, angle of attack, and structural mode amplitudes [4].
+3.2. Uncertainty Quantification for ROM-Based Aerospace Models
+Accurate ROM prediction requires rigorous treatment of uncertainties arising from geometric tolerances, material variability , turbulence model discrepancies, and numerical errors.
+Polynomial Chaos Expansion (PCE) is widely used to represent a stochastic outputy(ξ) as
+y(ξ) =
+P
+∑
+i=0
+ci Ψi(ξ), (25)
+where ξ = ( ξ1, . . ., ξd) denotes input random variables and Ψi are orthogonal polynomials
+associated with their distributions.
+Hybrid methodologies such as the combination of PCE with High-Dimensional Model
+Representation (HDMR) can alleviate the curse of dimensionality by identifying dominant interaction terms, enabling efficient uncertainty quantification for large-scale CFD
+systems [5]. Recent work has also quantified uncertainties in compressibility corrections
+for high-Mach turbulence models, highlighting the importance of model-form uncertainty
+quantification in hypersonic flows [6].
+3.3. Machine Learning-Assisted ROMs for FSI
+Linear projection ROMs often struggle with nonlinear flow physics, including shock–
+boundary layer interaction, dynamic stall, and hysteresis in aeroelastic systems. Machine
+learning (ML) provides nonlinear mappings capable of capturing these behaviors.
+3.3.1. Latent Representations via Autoencoders
+Autoencoders learn nonlinear latent variables
+z = Eθ(u), u ≈ Dθ(z), (26)
+where Eθ and Dθ are the encoder and decoder networks. Such ML–assisted ROMs can
+achieve superior accuracy in modeling flexible airfoils and large-amplitude aeroelastic
+oscillations [50].
+3.3.2. Temporal Evolution in Latent Space
+The evolution of reduced-order representations in time is a central component of
+data-driven modeling for complex dynamical systems. In this context, latent variables
+z ∈ Rd, typically obtained through dimensionality reduction techniques such as autoencoders or POD, are used to describe the dominant system dynamics in a compact form.
+https://doi.org/10.3390/math14091401
+Mathematics 2026, 14, 1401 12 of 27
+The temporal evolution of these latent states can be approximated using data-driven or
+physics-informed approaches, enabling efficient long-time predictions while preserving
+essential system behavior.
+Latent-space evolution can be approximated using Recurrent Neural Networks (RNNs)
+or Physics-Informed Neural Networks (PINNs) as
+zt+∆t = Nθ(zt, ∆t), (27)
+offering improved stability and long-time predictive capability [51].
+Data-Driven Temporal Models: RNN-Based Approaches
+RNNs have been widely employed to model temporal dependencies in latent spaces,
+including architectures such as Long Short-Term Memory (LSTM) and Gated Recurrent
+Units (GRU) [52]. These models learn nonlinear mappings of the form in Equation (27),
+where Nθ represents a parameterized neural network.
+RNN-based approaches rely exclusively on data to capture temporal correlations,
+and are particularly effective when large datasets are available; however, purely datadriven models may suffer from limited extrapolation capability and instability in long-time
+integration, especially in nonlinear and multi-physics systems. These limitations have
+motivated the incorporation of physical constraints into the learning process.
+Physics-Informed Temporal Models: PINN-Based Approaches
+Physics-informed neural networks extend data-driven models by incorporating governing equations directly into the training process. In the context of latent temporal modeling,
+PINNs aim to enforce consistency between the learned evolution operator and the underlying
+physical laws, typically expressed as differential equations projected onto the latent space.
+A key challenge in PINN training is the definition of an appropriate composite loss
+function that balances data fidelity and physical consistency:
+L = λdataLdata + λphysLphys + λregLreg. (28)
+where Ldata measures the discrepancy between predicted and observed latent states, Lphys
+enforces the governing equations, and Lreg is an optional regularization term. The weighting coefficients λdata, λphys, and λreg play a critical role in determining model performance.
+Improper weighting may lead to overfitting to the data or to excessive enforcement of
+physical constraints. Either can degrade predictive accuracy and long-term stability, as discussed in a recent study of PINN loss design [53]. Consequently, several strategies have
+been proposed in the literature to address this issue. These include manual normalization
+techniques in which the weights are scaled so as to balance the magnitude of individual
+loss terms. Another approach involves the use of adaptive weighting strategies such as
+gradient-based normalization methods (e.g., GradNorm) to dynamically adjust weights
+during training, as highlighted in recent studies on adaptive PINN formulations [ 54].
+Residual-based Adaptive Refinement (RAR) has also been employed to prioritize regions
+with large physics residuals, improving training efficiency and accuracy in PINNs [55]. Alternatively, curriculum learning approaches can be used to gradually increase the influence
+of physical constraints over the course of training. More recently, Bayesian formulations
+have been introduced; these interpret the weighting coefficients as uncertainty parameters
+that can be learned directly, thereby enhancing uncertainty-aware modeling capabilities in
+physics-informed frameworks [56].
+Proper loss balancing is particularly important for ensuring robust long-time integration
+during temporal modeling of the latent space, since small inconsistencies between data
+https://doi.org/10.3390/math14091401
+Mathematics 2026, 14, 1401 13 of 27
+and physics may accumulate over time. Consequently , hybrid approaches that combine
+data-driven learning with physics-based regularization and adaptive weighting mechanisms
+have emerged as a promising direction for stable and generalizable reduced-order models.
+3.3.3. Koopman-Based Deep Learning
+Koopman neural networks approximate nonlinear dynamics using linearly evolving
+observables in a lifted feature space, enabling interpretable modal decompositions for
+flutter prediction, aeroelastic control, and structural health monitoring [57,58]. By mapping
+nonlinear system behavior into a higher-dimensional linear representation, these models
+facilitate the identification of dominant modes, frequencies, and growth rates, thereby
+providing a physically meaningful description of complex aeroelastic phenomena.
+ML-ROM architectures are increasingly deployed in digital twin environments for
+real-time monitoring and control. In this context, Koopman-based approaches enable
+continuous state estimation, predictive analysis, and rapid decision-making, supporting
+the development of adaptive and safety-critical aerospace systems.
+3.4. Implementation Challenges
+The development of reliable reduced-order models for aerospace applications involves
+interconnected challenges related to data representativeness, numerical stability, multiphysics coupling, and real-time deployment. Addressing these aspects is essential for
+ensuring both predictive accuracy and practical applicability.
+3.4.1. Snapshot Selection and Representativeness
+ROM accuracy depends strongly on the quality of the training dataset. Snapshots
+must capture the relevant flow regimes, including variations in Mach number, angle of
+attack, and transient conditions. Insufficient coverage may lead to extrapolation errors,
+particularly in nonlinear regimes such as shock-induced separation or buffeting. Adaptive
+sampling and active learning strategies are increasingly used to improve dataset efficiency.
+3.4.2. Dimension Selection and Model Stability
+Selection of the reduced basis dimension introduces a tradeoff between accuracy and
+robustness. While low-dimensional models may under-resolve key physics, excessive
+modes can induce instability. Classical Galerkin ROMs are particularly prone to spurious
+energy growth, motivating stabilized formulations such as Least-Squares Petrov–Galerkin
+(LSPG) and the incorporation of closure or data-driven correction terms.
+3.4.3. Coupled Multi-Physics and Uncertainty Quantification
+In aeroelastic and Fluid–Structure Interaction (FSI) problems, ROMs must preserve
+phase consistency and ensure stable coupling between fluid and structural solvers. Additionally, high-dimensional uncertainty quantification remains computationally demanding,
+requiring efficient techniques such as sparse grids, multi-fidelity Monte Carlo methods,
+and surrogate-assisted approaches.
+3.4.4. Onboard Computational Constraints in UAV Systems
+A critical challenge for practical deployment is the execution of ROM-based models in
+real-time onboard platforms such as UAV flight controllers. These systems are constrained
+by limited processing power, memory, and energy while operating under strict control
+loop requirements (typically 100–1000 Hz). As a result, even reduced-order or machine
+learning-based models may become computationally prohibitive if not carefully designed,
+making strategies such as hyper-reduction, model compression, and hardware-aware
+architectures essential.
+https://doi.org/10.3390/math14091401
+Mathematics 2026, 14, 1401 14 of 27
+3.4.5. Comparative Framework and Computational Considerations
+The diversity of ROM approaches motivates a structured comparison to guide method
+selection under practical constraints. Projection-based methods offer high interpretability
+and low online cost, but may struggle in strongly nonlinear regimes, while data-driven
+approaches improve flexibility but may lack robustness under extrapolation; finally, hybrid
+methods can enhance stability and accuracy, but typically increase computational cost.
+A quantitative comparison of computational complexity and real-time feasibility is
+provided in Table 1.
+Table 1. Computational complexity and real-time feasibility of representative ROM approaches.
+Method Offline Online Typical Complexity RT Feasibility
+POD–Galerkin High (SVD) Low O(r2) High
+LSPG High Medium O(r2 + rn) Moderate
+Tensor ROMs High Medium O(r log n) Moderate
+DMD/Koopman Medium Low O(r2) High
+RNN/LSTM High (train.) Medium O(r2) per step Moderate
+Autoencoder-ROM High Medium O(r · nlayers) Moderate
+PINNs Very High High O(Nθ) Low
+These results highlight that while hybrid and physics-informed approaches can improve accuracy and robustness, their additional computational cost may limit real-time
+deployment. In contrast, projection-based and lightweight data-driven models remain
+more suitable for onboard UAV applications.
+3.5. Outlook and Future Directions
+The convergence of reduced-order models, uncertainty quantification, and machine learning is driving a transformative shift in aerospace computational mechanics, enabling efficient prediction of complex multi-physics systems under nonlinear and
+real-time conditions.
+3.5.1. Advanced and Hybrid ROM Paradigms
+Future developments are expected to focus on nonlinear manifold-based ROMs and
+multi-fidelity frameworks that integrate physics-based models with machine learning
+surrogates. These approaches improve the representation of complex phenomena such
+as shock dynamics, flow separation, and large structural deformations while balancing
+accuracy and computational efficiency.
+3.5.2. Bayesian ROM–UQ Frameworks
+Bayesian approaches enable real-time probabilistic inference and online parameter
+updating, providing a systematic way to quantify uncertainty. However, a key challenge
+lies in translating probabilistic outputs into certifiable safety margins so as to ensure that
+uncertainty bounds remain reliable under extrapolation and evolving operating conditions.
+3.5.3. Digital Twins and Autonomous Systems
+Digital twins can combine ROMs, sensor data, and uncertainty quantification to
+enable predictive monitoring and decision support for autonomous aerospace systems.
+Their deployment in civilian airspace requires robust model validation, real-time verification, and consistent performance under adaptive updates, all of which must align with
+certification requirements.
+https://doi.org/10.3390/math14091401
+Mathematics 2026, 14, 1401 15 of 27
+3.5.4. Control-Oriented and Safety-Critical Integration
+Control-oriented ROMs will support advanced strategies such as flutter suppression
+and gust load alleviation. In these applications, robustness, interpretability, and failsafe
+behavior are essential, particularly when models are embedded in onboard control systems.
+3.5.5. Certification and Regulatory Challenges
+A central barrier to adoption is the certification of ROM–UQ and digital twin frameworks within existing aviation standards. Unlike traditional deterministic models, these
+approaches are adaptive and data-driven, requiring certification-aware methodologies
+that embed uncertainty bounds, reliability metrics, and safety constraints. Emerging directions include hybrid physics–data models, continuous in-flight validation, and formal
+verification techniques to ensure compliance with safety requirements.
+In summary, while ROM–UQ frameworks are poised to become essential for nextgeneration aerospace systems, their successful deployment in civilian airspace will depend on achieving a balance between modeling accuracy, computational efficiency, and
+certifiable safety.
+The reduced-order modeling and uncertainty quantification techniques reviewed in
+this section provide compact representations of high-dimensional dynamics, for instance
+through the modal approximation u(x, t) ≈ Φa(t) in (24). These formulations enable
+the computation of generalized aerodynamic forces and moments in a low-dimensional
+setting. However, these quantities must ultimately be mapped onto physical actuator inputs
+through relations of the form v = B(x, θ)u, which introduces feasibility and constraint
+considerations. This requirement gives rise to the control allocation problem, which is
+addressed in the following section.
+4. Control Allocation Problem Formulation
+The reduced-order modeling and uncertainty quantification techniques discussed in
+the previous section enable efficient representations of complex aerodynamic and dynamical effects which could be suitable for real-time implementation. Regardless of how the
+generalized force and moment commands are obtained, they must ultimately be realized
+through physical actuators subject to constraints and redundancies. UAVs and advanced
+aerial platforms frequently employ more actuators than the number of controlled degrees
+of freedom. This redundancy leads to the Control Allocation (CA) problem, in which a desired set of generalized commands must be mapped onto a feasible set of physical actuator
+inputs. The CA problem is ubiquitous, ranging from distributed propulsion systems in
+eVTOL aircraft [7,10] to hybrid or morphing UAVs [8,59], and has motivated a wide variety
+of mathematical formulations in the literature.
+4.1. Virtual and Physical Inputs
+Let
+vcmd ∈ Rn
+denote the commanded virtual input (generalized wrench-level command) produced by
+the flight controller (e.g., total thrust and moments). Let
+u ∈ Rm
+denote the physical actuator input, such as individual rotor thrusts, tilting angles, or control
+surface deflections. The mapping between them is captured by the effectiveness matrix:
+v = B(x, θ) u, (29)
+https://doi.org/10.3390/math14091401
+Mathematics 2026, 14, 1401 16 of 27
+where v ∈ Rn is the virtual input actually generated by the actuators, B(x, θ) ∈ Rn×m may
+depend on the vehicle state x and configuration parameters θ, and R(B) and N (B) denote
+the range and null spaces of B, respectively. Examples include the incremental Jacobian
+formulation in distributed propulsion [7] and trigonometric mappings in articulated dualUAV systems [60].
+In summary, the control allocation problem arises from the mismatch between the
+commanded generalized input vcmd and the physical actuator set, which is further compounded by redundancy, constraints, and actuator dynamics. The generic structure of this
+interaction in the flight control loop is illustrated in Figure 1, where the allocator mediates
+between controller outputs and actuator dynamics before acting on the plant.
+Controller Allocator Actuators UAV/Plant
+Sensors/Estimator
+vcmd u F, M
+ˆx, ˆy
+r
+Allocator families:
+• Algebraic: u = B+vcmd, u = B+vcmd + Nz
+• Optimization: min
+u∈U
+∥Bu − vcmd∥2 + . . .
+• Dynamic/Hybrid: u = B+vcmd + B⊥ω,  ̇ω = μ
+Figure 1. Block diagram of control allocation in the flight control loop. The controller generates
+generalized commands vcmd, the allocator maps them to actuator commands u, and the actuator
+dynamics produce forces/moments for the UAV . Different allocator families are summarized below.
+4.2. Problem Characteristics
+The relationship between the number of controlled degrees of freedom n and number of actuators m determines whether the system is square, under-actuated, or overactuated. A recent taxonomy of multirotor configurations [61] classifies vehicles based on
+input–output rank conditions, clearly showing that many practical designs (e.g., hexarotors, tiltrotors, and distributed-propulsion UAVs) are inherently over-actuated. In such
+cases, multiple actuator combinations can realize the same generalized input. By contrast, hybrid configurations such as morphing UAVs or dual-vehicle systems may remain
+under-actuated, as not all desired commands can be generated [8,60].
+In addition, actuators are subject to the following box and rate constraints:
+umin ≤ u ≤ umax |∆u| ≤ ∆umax
+where ∆u := u − u− is the command increment relative to the previous sampleu− (discretetime implementation). These are especially critical in high-power rotorcraft [ 62,63] and
+fixed-wing UAVs, where throttle dynamics and surface deflection limits dominate [64].
+A simple algebraic inverse such as the Moore–Penrose pseudoinverse can provide one
+possible mapping; however, this neglects the constraints, actuator dynamics, and potential exploitation of redundancy . These limitations have been highlighted in both classical
+pseudoinverse-baseddesigns [8,65] and in more recent studies seeking to exploit the null space
+for secondary objectives [66]. Likewise, actuator dynamics (which are ignored in static formulations) can significantly affect performance, motivating dynamic allocation schemes [67,68].
+Before discussing specific solution families, we introduce a unified optimization
+framework that captures the allocation problem in its most general form.
+https://doi.org/10.3390/math14091401
+Mathematics 2026, 14, 1401 17 of 27
+4.3. Unified Mathematical Formulation
+All control allocation methods can be expressed as variants of a constrained optimization problem. Given a commanded virtual input vcmd ∈ Rn, the allocator selects actuator
+commands u ∈ Rm by solving
+min
+u∈U
+J(u; vcmd) := 1
+2 ∥Bu − vcmd∥2
+Wv + φ(u), (30)
+where:
+• B ∈ Rn×m is the effectiveness matrix (possibly state-dependent, B(x, θ)).
+• U = { u ∈ Rm : umin ≤ u ≤ umax, |∆u| ≤ ∆umax } is the feasible actuator set in
+discrete time, with ∆u := u − u− and u− representing the previous command.
+• ∥y∥2
+Wv = y⊤Wvy, with Wv ⪰ 0; this penalizes deviation from the commanded wrench.
+• φ(u) encodes secondary objectives (effort, energy, load balancing, actuator dynamics).
+This formulation serves as the mathematical backbone of control allocation. In the
+following, we classify existing methods into three families, each corresponding to a specialization of (30): algebraic, optimization-based, and dynamic/hybrid approaches.
+4.4. Mathematical Approaches to Control Allocation
+4.4.1. Algebraic Approaches
+The most direct strategy is to solve (29) using linear algebra. When m > n and
+rank(B) = n, the system admits infinitely many solutions. The Moore–Penrose pseudoinverse provides the minimum-norm solution:
+u⋆ = B+vcmd, B+ = B⊤(BB⊤)−1. (31)
+The expressions in (31) and (32) hold with rank(B) = n, meaning that BB⊤ and B⊤WvB are
+nonsingular. This has been widely applied in multirotor UAVs and hybrid platforms [8,65].
+Existence and Uniqueness
+Equation (29) has an exact solution if and only if vcmd ∈ R (B). If rank(B) = n, then
+vcmd can always be represented as a linear combination of actuator inputs, although the
+solution is not unique when m > n. If rank(B) < n, the command is infeasible and only an
+approximation can be achieved.
+Weighted Least Squares
+A generalization is the Weighted Least Squares (WLS) solution:
+u⋆ = ( B⊤WvB)−1B⊤Wvvcmd (32)
+where Wv ⪰ 0 specifies the importance of matching different components of v. The conditioning of (B⊤WvB) plays a critical role. Poor conditioning amplifies noise and actuator
+errors; this is an issue in distributed propulsion, where B varies with the flight regime [7].
+Nullspace Parameterization
+Because the pseudoinverse sets the null space components to zero, additional structure
+can be introduced as follows:
+u = B+vcmd + Nz BN = 0, (33)
+where N spans the null space N (B). This allows for optimization of secondary objectives
+through z, as demonstrated in SVD-based frameworks [66].
+https://doi.org/10.3390/math14091401
+Mathematics 2026, 14, 1401 18 of 27
+Geometric Transformations
+Geometric extensions modify actuator coordinates to improve conditioning or avoid
+singularities. For example, in articulated dual-UAV systems, trigonometric allocation
+ensures singularity-free control [60], while in vectored-thrust VTOLs the polar variables
+are transformed into Cartesian components [69]. Similarly, grouping strategies can reduce
+dimensionality in over-actuated hexacopters [10].
+Summary
+Algebraic approaches require only matrix factorizations (SVD, QR) and are computationally efficient. Their main limitations are lack of constraint handling and sensitivity to
+ill-conditioning, motivating optimization-based methods.
+4.4.2. Optimization Approaches
+Optimization-based methods cast allocation as a constrained minimization problem
+using Quadratic Programs (QPs). A canonical convex QP is
+min
+u∈Rm
+1
+2 ∥Wv(Bu − vcmd)∥2
+2 + 1
+2 ∥Wu(u − u0)∥2
+2,
+subject to umin ≤ u ≤ umax, |∆u| ≤ ∆umax,
+(34)
+with Wv ⪰ 0 and Wu ⪰ 0. The feasible set is the convex polytope
+U =
+
+u : umin ≤ u ≤ umax, |∆u| ≤ ∆umax
+	
+.
+Slack Variables and Prioritization
+If vcmd /∈ R (BU ), then only an approximate solution is possible. Slack variables relax
+infeasible constraints, a technique used in Fixed-Time Disturbance Observer (FxTDO)based UAV control [59]. Adaptive or hierarchical weighting enforces priorities; examples
+include adaptive nonlinear dynamic inversion with allocation for use in icing scenarios [63]
+and automated weight tuning for improved robustness in Incremental Nonlinear Dynamic
+Inversion (INDI) [70].
+Practical Examples
+Convex QPs have been used to realize blown-yaw methods in tail-sitters [62], while
+dual-layer optimization can separate throttle from aerodynamic load allocation in fixedwing UAVs [64] and active-set QPs with polar transforms enable vectored VTOL feasibility
+across transitions [9].
+Karush–Kuhn–Tucker (KKT Unconstrained View)
+When the box and rate constraints are inactive and Wu ≻ 0, the optimality condition
+reduces to the normal equations
+(B⊤WvB + Wu) u = B⊤Wvvcmd + Wuu0,
+which illuminates connections to weighted least squares.
+Summary
+Optimization approaches explicitly enforce feasibility and tradeoffs, benefit from convexity, and can integrate slack or priorities. Their main limitations are high computational
+load and sensitivity to weight selection.
+https://doi.org/10.3390/math14091401
+Mathematics 2026, 14, 1401 19 of 27
+4.4.3. Dynamic and Hybrid Approaches
+Dynamic and hybrid formulations treat allocation as a dynamical subsystem. Rather
+than computing u instantaneously, auxiliary states represent actuator dynamics, null space
+evolution, or feasible projections.
+Dynamic Control Allocation
+In Dynamic Control Allocation (DCA),
+u = B+vcmd + B⊥ω,  ̇ω = μ(ω, vcmd), (35)
+where B⊥ ∈ Rm×(m−n) has columns forming a basis of N (B) (thus, B B⊥ = 0) and ω is an
+auxiliary state. The dynamics μ(·) can be designed via H∞ or learning-based principles [67].
+Actuator Dynamics and Observers
+Dynamic allocators can embed actuator models
+ ̇xa = Aaxa + Bau + Ead, ya = Caxa,
+estimated via an observer to obtain ˆxa. Control is then closed as
+u = ˆur + Ka(xa,r − ˆxa), (36)
+improving robustness to lags and loads [68].
+Feasible-Set Projections and Nonlinear Model Predictive Control (NMPC)
+Define the feasible wrench set
+W = { v ∈ Rn : ∃u ∈ U , Bu = v }.
+When vcmd /∈ W , commands are projected as follows:
+v+ = ΠW (vcmd) u = h(v+), (37)
+with nonlinear allocationh(·). This principle underlies feasible CA embedded in NMPC [71]
+and algebraic smoothing via conjugate gradient iterations and Schur complements [ 72].
+Incremental Nonlinear Control Allocation (INCA) pairs naturally with INDI.
+Adaptive and Cooperative Allocation
+Dynamic formulations also extend to cooperative systems such as modular leader
+wingman UAVs, where allocation is adapted across vehicles [73].
+Summary
+Dynamic and hybrid approaches integrate state space models, observers, or projection operators into allocation. They offer robustness to actuator dynamics and feasibility
+guarantees, but require careful stability design and greater computational effort.
+4.5. Summary and Classification by Mathematical Underpinnings
+The reviewed approaches can be interpreted as structured solutions of the unified
+problem (30). Table 2 adds concise mathematical “signatures” for each family.
+https://doi.org/10.3390/math14091401
+Mathematics 2026, 14, 1401 20 of 27
+Table 2. Classification of control allocation approaches by mathematical underpinnings, with
+canonical forms.
+Family Canonical Mathematical Forms Representative Studies
+Algebraic
+Least squares/pseudoinverse:
+u⋆ = B+vcmd, B+ = B⊤(BB⊤)−1.
+Weighted LS:
+u⋆ = ( B⊤WvB)−1B⊤Wv vcmd.
+Nullspace parameterization:
+u = B+vcmd + Nz, BN = 0.
+Transformations:
+ ̃v = Tv(v),  ̃u = Tu(u),  ̃v =  ̃B  ̃u.
+Pseudoinverse/hybrid UAVs [8]; WLS in
+modular UAVs [65]; SVD/null space
+use [66]; trig mapping for singularity-free
+Parallel and Distributed UAVs
+(PAD-UAV) [60]; polar→Cartesian in
+vectored VTOL [69]; incremental B(x) for
+distributed propulsion [7]; grouping in
+hexacopters [10].
+Optimization
+Convex QP over actuator polytope:
+min
+u∈U
+1
+2 ∥Wv(Bu − vcmd)∥2
+2 + 1
+2 ∥Wu(u − u0)∥2
+2,
+U = {u : umin ≤ u ≤ umax, |∆u| ≤∆umax}.
+Slack/priorities:
+minu,s ∥Wv(Bu − vcmd − s)∥2
+2 + ρ∥s∥1.
+KKT (unconstrained view):
+(B⊤WvB + Wu) u = B⊤Wvvcmd + Wuu0.
+Blown-yaw QP (tail-sitter) [62]; adaptive
+NDI + allocation (icing) [63]; INDI weight
+tuning via QP/metaheuristics [70];
+constrained CA with FxTDO [59];
+dual-layer QP (throttle vs. surfaces) [64];
+active-set QP + polar transforms [9].
+Dynamic/Hybrid
+Dynamic control allocation (null space state):
+u = B+vcmd + B⊥ω,  ̇ω = μ(ω, vcmd).
+Actuator state embedding:
+ ̇xa = Aaxa + Bau + Ead, u = ˆur + Ka(xa,r − ˆxa).
+Feasible-set projection/co-design:
+W = {v : ∃u ∈ U, Bu = v}, v+ = ΠW (vcmd), u = h(v+).
+Incremental (INDI/INCA) step:
+∆u = arg min
+∆u
+∥B0∆u − ∆v∥2
+Wv + ∥∆u∥2
+Wu.
+DCA with H∞/RL design [67];
+actuator-dynamics DCA + observer [68];
+feasible CA embedded in NMPC [71];
+CGI/Schur smoothing [72]; adaptive
+leader–wingman allocation [73].
+4.6. Practical Considerations
+Although unified mathematically, the three families differ substantially in their
+practical behavior:
+• Algebraic methods are extremely fast and require only matrix factorizations, making
+them attractive for embedded hardware or small UAVs. However, they cannot enforce
+actuator limits explicitly. In practice, this can lead to actuator saturation, which may
+destabilize the system or require external saturation handlers. They also depend
+heavily on accurate modeling of the effectiveness matrix B(x, θ), which can vary
+significantly in configurations with strong aerodynamic coupling [7].
+• Optimization methods can explicitly handle constraints and tradeoffs, which is critical
+in large UAVs or safety-critical applications (e.g., icing scenarios [63]). The downside
+is computational; QP solvers scale roughly as O(m3) for dense problems and tuning
+https://doi.org/10.3390/math14091401
+Mathematics 2026, 14, 1401 21 of 27
+of weighting matrices remains a largely heuristic process. In real-world tests, convergence speed and solver robustness to ill-conditioned contexts often determine whether
+a method can be deployed onboard [62,70].
+• Dynamic and hybrid methods are closest to physical reality, since they directly embed
+actuator dynamics, observers, or feasibility projections. They can improve robustness
+against lags, failures, or external disturbances, and naturally integrate into advanced
+controllers such as NMPC; however, they require additional state estimation, careful
+stability analysis, and more computational resources. Practical deployment remains
+limited to experimental platforms, although these methods show promise for distributed or cooperative UAV systems [73].
+In summary, algebraic methods dominate in small-scale platforms due to their simplicity; optimization methods provide the most reliable handling of constraints in operational
+UAVs; and dynamic methods are the most flexible and physically faithful, but remain at the
+frontier of research and experimental validation. This view makes the continuity explicit:
+algebraic methods are closed-form special cases of (30); optimization methods impose
+convex feasibility on u; and dynamic/hybrid methods add auxiliary states, observers,
+or feasibility projections while often employing the same quadratic cores.
+In addition to the mathematical classification in Table 2, it is also instructive to consider
+how allocator families are typically applied across different UAV configurations. Table 3
+illustrates this mapping: common platforms such as hexacopters, tiltrotors, vectored-thrust
+VTOLs, dual-UA V systems, hybrid morphing vehicles, and distributed-propulsion wings are
+linked to the allocator approaches most often adopted in the literature. This highlights that
+actuator geometry strongly influences which mathematical family is most suitable in practice.
+Control allocation provides the final link between high-level control objectives and
+physical actuation, typically through mappings of the form v = B(x, θ)u in (29) or
+optimization-based formulations such as (30). These actuator commands are derived
+from control laws that depend on reduced-order representations of the system dynamics,
+while in multi-agent settings they influence the collective evolution of states governed by
+graph-based coordination dynamics. Consequently, actuator feasibility directly affects the
+ability to maintain formation and consensus. Together, reduced-order modeling, control
+allocation, and multi-agent coordination form complementary mathematical components
+of modern UAV modeling and control architectures.
+Table 3. Map of configuration methods along with primary and secondary allocator families. Common UAV architectures tend to favor certain allocator families: algebraic (pseudoinverse, WLS,
+transformations), optimization (QP/active-set for constraints and priorities), or dynamic and hybrid
+(null space dynamics, feasible-set embedding). Citations indicate representative implementations.
+Algebraic Optimization Dynamic/Hybrid
+Hexacopter (over-actuated)
+e.g., [10,65] • ◦
+Tiltrotor/tilt-wing VTOL
+e.g., [9,70] ◦ •
+Vectored-thrust VTOL (ducted/nozzled)
+e.g., [7,62] ◦ •
+Dual-UAV (PADUAV)/cooperative link
+e.g., [60,71] ◦ •
+Hybrid/morphing (e.g., Flybbit)
+e.g., [8,59] • ◦
+Distributed propulsion wing (DPW)
+e.g., [7] • ◦
+• primary method, ◦ secondary or occasional method.
+https://doi.org/10.3390/math14091401
+Mathematics 2026, 14, 1401 22 of 27
+5. Conclusions
+This review synthesizes recent developments in reduced aeroelastic modeling, multiagent dynamics, and control allocation for UAV systems, with emphasis on the mathematical principles that underpin these areas. Our analysis shows that advances in projectionbased and data-driven reduced-order models in combination with uncertainty quantification techniques are providing increasingly reliable low-dimensional representations of
+complex aeroelastic phenomena. Multi-agent coordination methods continue to rely on the
+spectral properties of graph Laplacians and stability analyses for coupled nonlinear systems,
+although practical issues such as switching topologies and heterogeneous dynamics remain
+open. Control allocation research has produced algebraic, optimization-based, and dynamic formulations that address actuator redundancy and feasibility constraints through
+structured linear algebra and constrained minimization. Across these areas, common
+mathematical elements such as matrix factorization, projection operators, and constrained
+dynamical systems appear repeatedly and form the basis for unifying theoretical analysis.
+The current literature demonstrates significant progress, but also reveals open questions
+regarding interactions between model reduction accuracy, network-induced behaviors,
+and actuation feasibility in integrated UAV control architectures.
+Future research directions should explicitly address several technical bottlenecks that
+currently limit the deployment of heterogeneous UAV clusters composed of platforms
+with differing dynamics, sensing, and actuation capabilities. A primary challenge is the
+mismatch of dynamic models across heterogeneous platforms, which hinders the formulation of unified reduced-order representations and degrades the consistency of coordinated
+control laws. In parallel, communication latency, packet loss, and bandwidth constraints impose complex perturbations that affect the stability, robustness, and scalability of consensusbased multi-agent coordination. From a control perspective, extending real-time control
+allocation to distributed settings introduces additional complexity, particularly under actuator constraints, disturbances, and model uncertainty. Moreover, the concurrent onboard
+integration of reduced-order modeling, control allocation, and multi-agent coordination
+results in tightly coupled computational and timing requirements that remain difficult
+to satisfy in resource-limited platforms. Overcoming these limitations is essential for
+achieving reliable, scalable, and fully autonomous heterogeneous UAV swarm operations.
+Finally, linking these trends to current practical applications in recent surveys of
+UAV applications indicates that the level of industrial adoption varies across the three
+methodological directions discussed in this review. In many operational UAV platforms,
+simplified or reduced dynamic representations are already widely used to support real-time
+flight control, mission planning, and onboard data processing, particularly in applications such as remote sensing, infrastructure inspection, precision agriculture, and disaster
+monitoring [74]. These applications typically rely on computationally efficient models
+and sensing pipelines that enable real-time operation on resource-constrained aerial platforms. In the area of control allocation, practical UAV systems commonly employ actuator
+distribution strategies adapted to multirotor or hybrid configurations, enabling reliable
+thrust and torque management in inspection drones, delivery platforms, and surveillance
+vehicles [75]. In contrast, multi-agent UAV coordination remains less widely deployed in
+industrial environments and is still developing toward large-scale operational adoption.
+Although cooperative UAV networks are being actively studied for applications such as distributed monitoring, traffic observation, and urban sensing, most implementations remain
+at the level of experiments or pilot projects due to challenges in communication reliability,
+coordination complexity, and regulatory constraints affecting autonomous multi-vehicle
+operations [76,77]. Consequently, while reduced-order modeling and advanced control
+allocation techniques are already being integrated into many operational UAV platforms,
+https://doi.org/10.3390/math14091401
+Mathematics 2026, 14, 1401 23 of 27
+current large-scale multi-agent UAV systems are gradually transitioning from research
+prototypes towards practical industrial deployment.
+Author Contributions: Conceptualization, L.A.R.-O.; methodology , L.A.R.-O. and O.G.-S.;software,
+L.A.R.-O. and L.A.-B.; validation, L.A.R.-O. and L.A.-B.; formal analysis, L.A.R.-O. and O.G.-S.;
+investigation, L.A.R.-O. and A.J.M.-V .; resources, L.A.R.-O., L.A.-B. and O.G.-S.; datacuration, L.A.R.-O.
+and L.A.-B.; writing—original draft preparation, L.A.R.-O., L.A.-B. and A.J.M.-V .;writing—review and
+editing, L.A.R.-O. and O.G.-S.; visualization, L.A.R.-O., L.A.-B. and A.J.M.-V .; supervision, O.G.-S.;
+project administration, O.G.-S.; funding acquisition, L.A.R.-O. All authors have read and agreed to
+the published version of the manuscript.
+Funding: This research work was funded by the Autonomous University of Nuevo Leon under Grant
+PROACTII 7-IDT-2025.
+Institutional Review Board Statement: Not applicable.
+Informed Consent Statement: Not applicable.
+Data Availability Statement: The original contributions presented in this study are included in the
+article. Further inquiries can be directed to the corresponding authors.
+Acknowledgments: The authors would like to express their gratitude to the Faculty of Mechanical
+and Electrical Engineering at the Autonomous University of Nuevo Leon (CIIIA-FIME-UANL).
+Conflicts of Interest: The authors declare no conflicts of interest.
+Abbreviations
+The following abbreviations are used in this manuscript:
+APF Artificial Potential Field
+CA Control Allocation
+CFD Computational Fluid Dynamics
+DCA Dynamic Control Allocation
+DES Discrete Event System
+DLTA Data-Driven Lift and Thrust Approximation
+DMD Dynamic Mode Decomposition
+DPW Distributed Parameter Wind
+FOM Full-Order Model
+FSI Fluid–Structure Interaction
+HDMR High-Dimensional Model Representation
+HOSVD Higher-Order Singular Value Decomposition
+INCA Incremental Nonlinear Control Allocation
+INDI Incremental Nonlinear Dynamic Inversion
+KKT Karush–Kuhn–Tucker conditions
+LES Large Eddy Simulation
+LS Least Squares
+LSPG Least-Squares Petrov–Galerkin
+WLS Weighted Least Squares
+MARL Multi-Agent Reinforcement Learning
+ML Machine Learning
+NDI Nonlinear Dynamic Inversion
+NMPC Nonlinear Model Predictive Control
+PAD-UAV Parallel and Distributed UAV
+PCE Polynomial Chaos Expansion
+POD Proper Orthogonal Decomposition
+https://doi.org/10.3390/math14091401
+Mathematics 2026, 14, 1401 24 of 27
+QP Quadratic Programming
+RANS Reynolds-Averaged Navier–Stokes
+RL Reinforcement Learning
+ROM Reduced-Order Model
+SVD Singular Value Decomposition
+TTD Trajectory Tracking and Disturbance Rejection
+UAV Unmanned Aerial Vehicle
+UQ Uncertainty Quantification
+URANS Unsteady Reynolds-Averaged Navier–Stokes
+VPPSO Velocity Paused Particle Swarm Optimization
+VTOL Vertical Take-Off and Landing
+References
+1. Piccolo Serafim, L.; Dowell, E. Nonlinear Aeroelastic Model Considering RANS Unsteady Aerodynamics with Dynamically
+Linearized Time-Domain Approach. In Proceedings of the AIAA SCITECH 2025 Forum, Orlando, FL, USA, 6–10 January 2025;
+pp. 1–15. [CrossRef]
+2. Das, A.; Marzocca, P .; Coppotelli, G.; Levinski, O.; Taylor, P . A Data-Driven Approach for Rapid Detection of Aeroelastic Modes
+from Flutter Flight Test Based on Limited Sensor Measurements. Mech. Syst. Signal Process. 2024, 220, 111712. [CrossRef]
+3. Li, C.; Chen, Z.; Zhang, X.; Tse, T.; Lin, C. Koopman Analysis by the Dynamic Mode Decomposition in Wind Engineering. J. Wind
+Eng. Ind. Aerodyn. 2023, 232, 105295. [CrossRef]
+4. Li, K.; Utyuzhnikov, S. Tensor Train-Based Higher-Order Dynamic Mode Decomposition for Dynamical Systems. Mathematics
+2023, 11, 1809. [CrossRef]
+5. Wenig, P .; Kelm, S.; Klein, M. CFD Uncertainty Quantification Using PCE–HDMR: Exemplary Application to a Buoyancy-Driven
+Mixing Process. Flow Turbul. Combust. 2024, 112, 191–216. [CrossRef]
+6. Xue, Y.; Feng, Y.; Zheng, X. Uncertainty Quantification of Compressibility Corrections on SA Turbulence Model for High Mach
+Number Flows. Aerosp. Sci. Technol. 2025, 162, 110184. [CrossRef]
+7. Zhao, Q.; Zhou, Z.; Wang, R. Modeling and Transition Flight Control of Distributed Propulsion–Wing VTOL UAV with Induced
+Wing Configuration. Aerospace 2024, 11, 922. [CrossRef]
+8. Sun, C.; Shen, R.; Liu, Y.; Zhang, J.; Guo, F.; Zhan, Q. Flybbit: Design and Control of a Novel Rabbit-like Flying Robot. Drones
+2025, 9, 609. [CrossRef]
+9. Enenakpogbe, E.; Whidborne, J.F.; Lu, L. Full Envelope Control of Over-Actuated Fixed-Wing Vectored Thrust eVTOL. Aerospace
+2024, 11, 979. [CrossRef]
+10. Pimentel, G.O.; Santos, M.F.d.; Lima, J.; Mercorelli, P .; Fernandes, F.M. An Over-Actuated Hexacopter Tilt-Rotor UAV Prototype
+for Agriculture of Precision: Modeling and Control. Sensors 2025, 25, 479. [CrossRef]
+11. Lozano, R. Unmanned Aerial Vehicles Embedded Control; John Wiley-ISTE Ltd.: Hoboken, NJ, USA, 2010.
+12. Abdessameud, A.; Tayebi, A. Motion Coordination for VTOL Unmanned Aerial Vehicles: Attitude Synchronisation and Formation
+Control; Springer: London, UK, 2013.
+13. Stengel, R. Flight Dynamics; Princeton University Press: Princeton, NJ, USA, 2004.
+14. Amezquita-Brooks, L.; Liceaga-Castro, E.; Gonzalez-Sanchez, M.; Garcia-Salazar, O.; Martinez-Vazquez, D. Towards a standard
+design model for quad-rotors: A review of current models, their accuracy and a novel simplified model. Prog. Aerosp. Sci. 2017,
+95, 1–23. [CrossRef]
+15. Ollervides-Vazquez, E.J.; Rojo-Rodriguez, E.G.; Garcia-Salazar, O.; Amezquita-Brooks, L.; Castillo, P .; Santibañez, V . A sectorial
+fuzzy consensus algorithm for the formation flight of multiple quadrotor unmanned aerial vehicles. Int. J. Micro Air Veh. 2020,
+12, 1756829320973579. [CrossRef]
+16. Frank L. Lewis, Hongwei Zhang, K.H.M.; Das, A. Cooperative Control of Multi-Agent Systems: Optimal and Adaptive Design
+Approaches; Springer: London, UK, 2014.
+17. Ren, W.; Beard, R.W. Distributed Consensus in Multi-Vehicle Cooperative Control: Theory and Applications; Springer: London, UK, 2008.
+18. Zhu, X.; Liu, Z.; Yang, J. Model of Collaborative UAV Swarm Toward Coordination and Control Mechanisms Study.Procedia
+Comput. Sci. 2015, 51, 493–502. [CrossRef]
+19. Wang, L.; Lu, D.; Zhang, Y.; Wang, X. A Complex Network Theory-Based Modeling Framework for Unmanned Aerial Vehicle
+Swarms. Sensors 2018, 18, 3434. [CrossRef] [PubMed]
+20. Tahir, A.; Böling, J.; Haghbayan, M.H.; Toivonen, H.T.; Plosila, J. Swarms of Unmanned Aerial Vehicles—A Survey. J. Ind. Inf.
+Integr. 2019, 16, 100106. [CrossRef]
+https://doi.org/10.3390/math14091401
+Mathematics 2026, 14, 1401 25 of 27
+21. Ming, R.; Jiang, R.; Luo, H.; Lai, T.; Guo, E.; Zhou, Z. Comparative Analysis of Different UAV Swarm Control Methods on
+Unmanned Farms. Agronomy 2023, 13, 2499. [CrossRef]
+22. Bu, Y.; Yan, Y.; Yang, Y. Advancement Challenges in UAV Swarm Formation Control: A Comprehensive Review.Drones 2024,
+8, 320. [CrossRef]
+23. Ekechi, C.C.; Elfouly, T.; Alouani, A.; Khattab, T. A Survey on UAV Control with Multi-Agent Reinforcement Learning.Drones
+2025, 9, 484. [CrossRef]
+24. Liu, N.; Ling, R.; Huang, Q.; Zhu, Z. Second-Order Super-Twisting Sliding Mode Control for Finite-Time Leader-Follower
+Consensus with Uncertain Nonlinear Multiagent Systems. Math. Probl. Eng. 2015, 2015, 292437. [CrossRef]
+25. Hou, Z.G.; Cheng, L.; Tan, M. Decentralized Robust Adaptive Control for the Multiagent System Consensus Problem Using
+Neural Networks. IEEE Trans. Syst. Man, Cybern. Part B Cybern. 2009, 39, 636–647. [CrossRef]
+26. Wu, Y.; Lu, R.; Shi, P .; Su, H.; Wu, Z.G. Adaptive output synchronization of heterogeneous network with an uncertain leader.
+Automatica 2017, 76, 183–192. [CrossRef]
+27. Dong, X.; Yu, B.; Shi, Z.; Zhong, Y. Time-Varying Formation Control for Unmanned Aerial Vehicles: Theories and Applications.
+IEEE Trans. Control Syst. Technol. 2015, 23, 340–348. [CrossRef]
+28. Dong, X.; Zhou, Y.; Ren, Z.; Zhong, Y. Time-varying formation control for unmanned aerial vehicles with switching interaction
+topologies. Control Eng. Pract. 2016, 46, 26–36. [CrossRef]
+29. Wu, Y.; Meng, X.; Xie, L.; Lu, R.; Su, H.; Wu, Z.G. An input-based triggering approach to leader-following problems. Automatica
+2017, 75, 221–228. [CrossRef]
+30. Gadiraju, D.S.; Karmakar, P .; Shah, V .K.; Aggarwal, V . GLIDE: Multi-Agent Deep Reinforcement Learning for Coordinated UAV
+Control in Dynamic Military Environments. Information 2024, 15, 477. [CrossRef]
+31. Vera-Amaro, R.; Luviano-Juárez, A.; Rivero-Ángeles, M.E. Delay-Aware UAV Swarm Formation Control via Imitation Learning
+from ARD-PF Expert Policies. Drones 2026, 10, 34. [CrossRef]
+32. Wadood, A.; Yousaf, A.F.; Alatwi, A.M. An Enhanced Multiple Unmanned Aerial Vehicle Swarm Formation Control Using a
+Novel Fractional Swarming Strategy Approach. Fractal Fract. 2024, 8, 334. [CrossRef]
+33. Hou, Y.; Zhao, J.; Zhang, R.; Cheng, X.; Yang, L. UAV Swarm Cooperative Target Search: A Multi-Agent Reinforcement Learning
+Approach. IEEE Trans. Intell. Veh. 2024, 9, 568–578. [CrossRef]
+34. Alam, M.M.; Moh, S. Joint Trajectory Control, Frequency Allocation, and Routing for UA V Swarm Networks: A Multi-Agent Deep
+Reinforcement Learning Approach.IEEE T rans. Mob. Comput.2024, 23, 11989–12005. [CrossRef]
+35. Zhao, L.; Chen, B.; Hu, F. Research on Swarm Control Based on Complementary Collaboration of Unmanned Aerial Vehicle
+Swarms Under Complex Conditions. Drones 2025, 9, 119. [CrossRef]
+36. Muñoz-Vázquez, A.J.; Parra-Vega, V .; Sánchez-Orta, A. Uniformly continuous differintegral sliding mode control of nonlinear
+systems subject to Hölder disturbances. Automatica 2016, 66, 179–184. [CrossRef]
+37. Podlubny, I. Fractional Differential Equations: An Introduction to Fractional Derivatives, Fractional Differential Equations, to Methods of
+Their Solution and Some of Their Applications; Mathematics in Science and Engineering, Academic Press: New York, NY, USA, 1998.
+38. Benaddy, A.; Labbadi, M.; Elyaalaoui, K.; Bouzi, M. Fixed-Time Fractional-Order Sliding Mode Control for UAVs under External
+Disturbances. Fractal Fract. 2023, 7, 775. [CrossRef]
+39. Izaguirre-Espinosa, C.; Muñoz-Vazquez, A.J.; Sanchez-Orta, A.; Parra-Vega, V .; Fantoni, I. Fractional-Order Control for Robust
+Position/Yaw Tracking of Quadrotors With Experiments. IEEE Trans. Control Syst. Technol. 2019, 27, 1645–1650. [CrossRef]
+40. Abro, G.E.M.; Abdallah, A.M. Swarm Coordination and Trajectory Tracking in Quadrotor UAVs Using Fractional-Order PID
+Control Strategy. IEEE Trans. Autom. Sci. Eng. 2026, 23, 2995–3008. [CrossRef]
+41. Yu, Z.; Zhang, Y.; Jiang, B.; Fu, J.; Jin, Y.; Chai, T. Composite Adaptive Disturbance Observer-Based Decentralized Fractional-Order
+Fault-Tolerant Control of Networked UAVs. IEEE Trans. Syst. Man Cybern. Syst. 2022, 52, 799–813. [CrossRef]
+42. Cheng, P .; Cai, C.; Park, P . Distributed event-triggered fractional-order fault-tolerant control of multi-UAVs with full-state
+constraints. Nonlinear Dyn. 2024, 112, 1069–1085. [CrossRef]
+43. Gaufan, K.S.B.; El-Ferik, S.; Alyazidi, N.M. Fractional Model-Based Formation Control of Quad-Rotor UAVs Using Sliding Mode
+Backstepping. IEEE Access 2024, 12, 166460–166473. [CrossRef]
+44. Abro, G.E.M.; Abdallah, A.M. A Synergistic Fractional-Order Control for Precise Helical Trajectory Tracking and Formation
+Stability in Multi-Agent Quadrotor UAVs. Arab. J. Sci. Eng. 2025, 50, 6121–6140. [CrossRef]
+45. Luo, M.; Wang, J. Distributed formation control of multi-four-rotor UAVs using fractional-order robust sliding mode trajectory
+tracking. Trans. Inst. Meas. Control. 2025. [CrossRef]
+46. Polivanov, P .; Sidorenko, A. Oscillation Modes of Transonic Buffet on a Laminar Airfoil. Aerospace 2026, 13, 120. [CrossRef]
+47. Nie, X.; Zheng, G.; Wei, L.; Huang, C.; Yang, G.; Ji, Z. Analysis of the Transonic Buffet Characteristics of Stationary and Pitching
+OAT15A Airfoil. Appl. Sci. 2024, 14, 7149. [CrossRef]
+https://doi.org/10.3390/math14091401
+Mathematics 2026, 14, 1401 26 of 27
+48. Liu, T.; Chen, X.; Tian, Z.; Li, J. Prediction of Transonic Shock Buffet over Supercritical Airfoil OAT15A Based on Zonal
+Detached-Eddy Simulation. Appl. Sci. 2024, 14, 9628. [CrossRef]
+49. Zhang, J.; Li, L.; Dong, X.; Zhang, Z.; Zhang, Y.; Lu, X. A Discrete Adjoint Framework Coupled with Adaptive PCE for Robust
+Aerodynamic Optimization of Turbomachinery under Flow Uncertainty. Aerosp. Sci. Technol. 2023, 142, 108592. [CrossRef]
+50. Lee, S.; Jang, K.; Lee, S.; Cho, H.; Shin, S. Parametric Model Order Reduction by Machine Learning for Fluid–Structure Interaction
+Analysis. Eng. Comput. 2024, 40, 45–60. [CrossRef]
+51. Farea, A.; Yli-Harja, O.; Emmert-Streib, F. Understanding Physics-Informed Neural Networks: Techniques, Applications, Trends,
+and Challenges. AI 2024, 5, 1534–1557. [CrossRef]
+52. Mienye, I.D.; Swart, T.G.; Obaido, G. Recurrent Neural Networks: A Comprehensive Review of Architectures, Variants, and
+Applications. Information 2024, 15, 517. [CrossRef]
+53. Plankovskyy, S.; Tsegelnyk, Y.; Shyshko, N.; Litvinchev, I.; Romanova, T.; Velarde Cantú, J.M. Review of Physics-Informed Neural
+Networks: Challenges in Loss Function Design and Geometric Integration. Mathematics 2025, 13, 3289. [CrossRef]
+54. Zhu, P .; Liu, Z.; Xu, Z.; Lv, J. An Adaptive Weight Physics-Informed Neural Network for Vortex-Induced Vibration Problems.
+Buildings 2025, 15, 1533. [CrossRef]
+55. Wu, C.; Zhu, M.; Tan, Q.; Kartha, Y.; Lu, L. A Comprehensive Study of Non-Adaptive and Residual-Based Adaptive Sampling for
+Physics-Informed Neural Networks. Comput. Methods Appl. Mech. Eng. 2023, 403, 115671. [CrossRef]
+56. Bianchi, D.; Epicoco, N.; Di Ferdinando, M.; Di Gennaro, S.; Pepe, P . Physics-Informed Neural Networks for Unmanned Aerial
+Vehicle System Estimation. Drones 2024, 8, 716. [CrossRef]
+57. Sun, Z.; Chen, M.; Baillieul, J. Koopman-Based Deep Learning for Nonlinear System Estimation. In Proceedings of the 2024 IEEE
+63rd Conference on Decision and Control (CDC), Milan, Italy, 16–19 December 2024; pp. 6452–6458. [CrossRef]
+58. Song, J.; Huang, D. Global Description of Flutter Dynamics via Koopman Theory. In Proceedings of the AIAA SCITECH 2025
+Forum, Orlando, FL, USA, 6–10 January 2025; pp. 1–12. [CrossRef]
+59. Chen, W.; Chen, L.; Liu, Z.; Dang, Q.; Zhao, W.; Zhang, T.; Ma, C. Fixed-Time Disturbance Rejection Attitude Control for a
+Dual-System Hybrid UAV .Drones 2025, 9, 232. [CrossRef]
+60. Sun, J.; Yu, Y.; Chen, Z.; Jiang, M.; Meng, X. Differential Flatness-Based Singularity-Free Control of a Class of 5-DOF Aerial
+Platforms with Applications to Passively Articulated Dual-UAV Systems. Drones 2025, 9, 503. [CrossRef]
+61. Hamandi, M.; Usai, F.; Sablé, Q.; Staub, N.; Tognon, M.; Franchi, A. Design of multirotor aerial vehicles: A taxonomy based on
+input allocation. Int. J. Robot. Res. 2021, 40, 1015–1044. [CrossRef]
+62. Hu, Y.; Wen, G.; Qiu, W.; Xu, C.; Fan, L.; He, Y. Blown Yaw: A Novel Yaw Control Method for Tail-Sitter Aircraft by Deflected
+Propeller Wake During Vertical Take-Off and Landing.Drones 2025, 9, 635. [CrossRef]
+63. Jiang, F.; Liu, X.; Chen, T.; Li, K. Research on an Ice Tolerance Control Method for Large Aircraft Based on Adaptive Dynamic
+Inversion. Actuators 2024, 13, 227. [CrossRef]
+64. Yan, Y.; Liu, C.; Oh, H.; Chen, W.H. Dual-layer optimization-based control allocation for a fixed-wing UAV .Aerosp. Sci. Technol.
+2021, 119, 107184. [CrossRef]
+65. Kotarski, D.; Piljek, P .; Pranji ́ c, M.; Kasa ́ c, J. Concept of a Modular Multirotor Heavy Lift Unmanned Aerial Vehicle Platform.
+Aerospace 2023, 10, 528. [CrossRef]
+66. Amezquita-Brooks, L.; Maciel-Martínez, E.; Hernandez-Alcantara, D. Improved PVTOL Test Bench for the Study of Over-Actuated
+Tilt-Rotor Propulsion Systems. Machines 2024, 12, 46. [CrossRef]
+67. Kolaric, P .; Lopez, V .G.; Lewis, F.L. Optimal dynamic Control Allocation with guaranteed constraints and online Reinforcement
+Learning. Automatica 2020, 122, 109265. [CrossRef]
+68. Yan, Y.; Yang, J.; Liu, C.; Coombes, M.; Li, S.; Chen, W.H. On the Actuator Dynamics of Dynamic Control Allocation for a Small
+Fixed-Wing UAV With Direct Lift Control. IEEE Trans. Control Syst. Technol. 2020, 28, 984–991. [CrossRef]
+69. Enenakpogbe, E.; Whidborne, J.F.; Lu, L. Control allocation problem transformation approaches for over-actuated vectored thrust
+VTOLs. Aerosp. Sci. Technol. 2025, 161, 110145. [CrossRef]
+70. Henkenjohann, M.; Nolte, U.; Sion, F.; Henke, C.; Trächtler, A. Parameter Tuning Approach for Incremental Nonlinear Dynamic
+Inversion-Based Flight Controllers. Actuators 2024, 13, 187. [CrossRef]
+71. Shayan, Z.; Cristobal, J.; Izadi, M.; Yazdanshenas, A.; Naderi, M.; Faieghi, R. Nonlinear Model Predictive Control of Tiltrotor
+Quadrotors using Feasible Control Allocation. J. Intell. Robot. Syst. 2025, 111, 54. [CrossRef]
+72. Qin, Z.; Liu, K.; Zhao, X. A smooth control allocation method for a distributed electric propulsion VTOL aircraft test platform.
+IET Control Theory Appl. 2023, 17, 925–942. [CrossRef]
+73. HUANG, R.; SHENG, H.; CHEN, Q.; RAN, Z.; XUE, Z.; LI, J.; LIU, T. Adaptive configuration control of combined UAVs based on
+leader-wingman mode. Chin. J. Aeronaut. 2024, 37, 416–433. [CrossRef]
+74. Han, Y.; Liu, H.; Wang, Y.; Liu, C. A Comprehensive Review for Typical Applications Based Upon Unmanned Aerial Vehicle
+Platform. IEEE J. Sel. Top. Appl. Earth Obs. Remote Sens. 2022, 15, 9654–9666. [CrossRef]
+https://doi.org/10.3390/math14091401
+Mathematics 2026, 14, 1401 27 of 27
+75. Ahmed, F.; Mohanta, J.C.; Keshari, A.; Yadav, P .S. Recent Advances in Unmanned Aerial Vehicles: A Review.Arab. J. Sci. Eng.
+2022, 47, 7963–7984. [CrossRef] [PubMed]
+76. Refis, F.C.; Mahammedi, N.A.; Kerrache, C.A.; Dhelim, S. From Network Sensors to Intelligent Systems: A Decade-Long Review
+of Swarm Robotics Technologies. Sensors 2025, 25, 6115. [CrossRef] [PubMed]
+77. Xu, H.; Wang, L.; Han, W.; Yang, Y.; Li, J.; Lu, Y.; Li, J. A Survey on UAV Applications in Smart City Management: Challenges,
+Advances, and Opportunities. IEEE J. Sel. Top. Appl. Earth Obs. Remote Sens. 2023, 16, 8982–9010. [CrossRef]
+Disclaimer/Publisher’s Note: The statements, opinions and data contained in all publications are solely those of the individual
+author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to
+people or property resulting from any ideas, methods, instructions or products referred to in the content.
+https://doi.org/10.3390/math14091401

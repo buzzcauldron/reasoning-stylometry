@@ -1,0 +1,5 @@
+"paper","axis","n_slices","share_geometric","share_algebraic","label"
+"stokes","content",77,0.571,0.429,"coin_toss"
+"stokes","style",77,0.234,0.766,"algebraic"
+"aeroelastic","content",116,0.241,0.759,"algebraic"
+"aeroelastic","style",116,0.431,0.569,"coin_toss"

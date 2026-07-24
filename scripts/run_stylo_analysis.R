@@ -7,8 +7,14 @@ if (!file.exists(file.path(root, "scripts/run_jams_quadrant.R"))) {
 setwd(root)
 Sys.setenv(REASONING_STYLOMETRY_ROOT = root)
 
+# extract_jams_pdfs.R has no equivalent of extract_jams_pdfs.py's ligature
+# normalization / merged-italic-variable fix ("ifA" -> "if A") and has
+# diverged from it silently -- it only stayed harmless because its
+# file.exists(out) guard skips re-extraction while the fixed .py output is
+# still on disk. Route this step through the .py version so a future clean
+# rebuild doesn't quietly regenerate uncorrected text.
 steps <- c(
-  "extract_jams_pdfs.R",
+  "extract_jams_pdfs.py",
   "make_style_leading_targets.R",
   "run_jams_quadrant.R",
   "diagnose_corpus.R",
@@ -18,8 +24,9 @@ steps <- c(
 
 for (step in steps) {
   script <- file.path("scripts", step)
+  interpreter <- if (endsWith(step, ".py")) "python3" else "Rscript"
   message("\n========== ", step, " ==========")
-  status <- system2("Rscript", script, stdout = "", stderr = "")
+  status <- system2(interpreter, script, stdout = "", stderr = "")
   if (!is.na(status) && status != 0) {
     stop("Pipeline failed at ", step, " (exit ", status, ")")
   }

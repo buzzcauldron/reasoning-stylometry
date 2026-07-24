@@ -24,9 +24,9 @@ An operator T on a complex Hilbert space H has X as a spectral set if σ (T ) �
 
 for every rational functionf with poles off X. The expressionf (T ) may be interpreted either in terms
 
-of the Riesz functional calculus, or simply by writing the rational functionf aspq− 1 for polynomials
+of the Riesz functional calculus, or simply by writing the rational functionf as()− 1 for polynomials
 
-p andq, in which casef (T ) = p(T )q(T )− 1.
+p and), in which casef (T ) = p(T )q(T )− 1.
 
 The operator T has a normal B-dilation if there exists a Hilbert space K containing H and a normal
 
@@ -1312,7 +1312,7 @@ three zeros, after rotation, really only two are needed. Indeed,
 
 φ p(1)∗φ p =φ q,
 
-whereq = (1,q 1,q 2) andqj ∈ Bj forj = 1, 2, are the unique points such that φ p(qj) = φ p(1).
+where) = (1,q 1,q 2) andqj ∈ Bj forj = 1, 2, are the unique points such that φ p(qj) = φ p(1).
 
 3. S OME RIEMANN SURFACES AND THETA FUNCTIONS
 
@@ -1740,11 +1740,11 @@ Proof. In the neighborhood of a point p ∈ B, the Poisson kernel P(ζ,p ) is th
 
 of the formgp(ζ)(ζ − p)− 1 wheregp is analytic in a neighborhood ofp and does not vanish atp. Near
 
-any other pointq ∈ B, P(ζ,p ) extends to a harmonic function in a neighborhood ofq (see Fisher [21],
+any other point) ∈ B, P(ζ,p ) extends to a harmonic function in a neighborhood of) (see Fisher [21],
 
-chapter 4, proposition 6.4). Thus P(ζ,p ) is, nearq, the real part of an analytic function, the real part
+chapter 4, proposition 6.4). Thus P(ζ,p ) is, near), the real part of an analytic function, the real part
 
-of which is 0 atq.
+of which is 0 at).
 
 From the above discussion, ifp ∈ B is different from 1,q 1,q ∗
 

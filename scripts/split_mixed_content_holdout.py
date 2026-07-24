@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Set aside chunks tagged with BOTH geometric and algebraic content keywords
 (plus anything tagged via the "algebraic geometry" keyword specifically) as a
-held-out test set, instead of letting them join the training pool.
+held-out test set, instead of letting them join the CONTENT training pool.
 
 Most research-length chunks mention vocabulary from both CONTENT_GEOMETRIC_
 KEYWORDS and CONTENT_ALGEBRAIC_KEYWORDS somewhere -- that's expected, not a
@@ -10,9 +10,22 @@ as unambiguously single-topic by keyword tagging, and holds out the (larger)
 set that reads as topically mixed to see how well that classifier generalizes
 to realistic, non-clean-cut papers.
 
-Run after retag_content_style.py (chunks must already be tagged) and before
-balance_research_corpus.py (so the holdout set never enters
-balanced_content/balanced_style).
+Operates ONLY on chunks_content/ -- this check is inherently content-specific
+(it scores CONTENT_GEOMETRIC_KEYWORDS/CONTENT_ALGEBRAIC_KEYWORDS), so it must
+never touch chunks_style/. It used to operate on a single chunks/ pool shared
+by both axes, which meant a chunk removed here for having mixed CONTENT
+vocabulary was also silently unavailable for STYLE training even when its
+style score was perfectly confident -- confirmed to measurably hurt style
+accuracy in practice (2026-07-23 investigation). See retag_content_style.py's
+header for the full chunks_content/chunks_style split this fixed.
+
+A chunk moved to content_mixed_holdout/ by this script keeps whatever
+chunks_style/ membership it already has (untouched, unaffected) -- this
+holdout is purely a content-axis concern.
+
+Run after retag_content_style.py (chunks_content/ must already exist) and
+before balance_research_corpus.py (so the holdout set never enters
+balanced_content/).
 
 Usage: python3 scripts/split_mixed_content_holdout.py [--dry-run]
 """
@@ -29,10 +42,8 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 from style_keyword_tagger import score_content  # noqa: E402
 
-CHUNKS = ROOT / "corpus_classify" / "reference_research" / "chunks"
-HOLDOUT = ROOT / "corpus_classify" / "reference_research" / "mixed_content_holdout"
-HOLDOUT_CONTENT = ROOT / "corpus_classify" / "reference_research" / "mixed_content_holdout_content_leading"
-HOLDOUT_STYLE = ROOT / "corpus_classify" / "reference_research" / "mixed_content_holdout_style_leading"
+CHUNKS_CONTENT = ROOT / "corpus_classify" / "reference_research" / "chunks_content"
+HOLDOUT = ROOT / "corpus_classify" / "reference_research" / "content_mixed_holdout"
 REPORT = ROOT / "output" / "mixed_content_holdout_report.json"
 
 
@@ -62,7 +73,7 @@ def main() -> None:
     examples = []
     to_move: list[Path] = []
 
-    for path in sorted(CHUNKS.glob("*.txt")):
+    for path in sorted(CHUNKS_CONTENT.glob("*.txt")):
         parsed = parse(path.name)
         if parsed is None:
             continue
@@ -83,31 +94,19 @@ def main() -> None:
         else:
             kept += 1
 
-    print(f"{'Would move' if args.dry_run else 'Moving'} {moved} mixed-content chunks "
-          f"({kept} unambiguous chunks remain in the training pool)")
+    print(f"{'Would move' if args.dry_run else 'Moving'} {moved} mixed-content chunks out of chunks_content/ "
+          f"({kept} unambiguous chunks remain in the content training pool; chunks_style/ is untouched)")
 
     if not args.dry_run:
         HOLDOUT.mkdir(parents=True, exist_ok=True)
+        for old in HOLDOUT.glob("*.txt"):
+            old.unlink()
         for path in to_move:
             shutil.move(str(path), str(HOLDOUT / path.name))
 
-        # Build content-leading and style-leading copies for direct use as a
-        # stylo test.corpus.dir against each axis's classifier.
-        HOLDOUT_CONTENT.mkdir(parents=True, exist_ok=True)
-        HOLDOUT_STYLE.mkdir(parents=True, exist_ok=True)
-        for old in HOLDOUT_CONTENT.glob("*.txt"):
-            old.unlink()
-        for old in HOLDOUT_STYLE.glob("*.txt"):
-            old.unlink()
-        for path in HOLDOUT.glob("*.txt"):
-            parsed = parse(path.name)
-            content, style, arxiv_slug, chunk_suffix = parsed
-            shutil.copy2(path, HOLDOUT_CONTENT / f"{content}__{style}__{arxiv_slug}__{chunk_suffix}")
-            shutil.copy2(path, HOLDOUT_STYLE / f"{style}__{content}__{arxiv_slug}__{chunk_suffix}")
-
     report = {
         "n_moved_to_holdout": moved,
-        "n_kept_in_training_pool": kept,
+        "n_kept_in_content_pool": kept,
         "holdout_dir": str(HOLDOUT),
         "examples": examples,
     }

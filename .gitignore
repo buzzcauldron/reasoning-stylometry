@@ -19,6 +19,9 @@ output/rolling_minmax_stopwords.png
 # scripts/balance_research_corpus.py, scripts/lemmatize_corpus.py)
 corpus_classify/reference_research/chunks/
 corpus_classify/reference_research/chunks_lemmatized/
+corpus_classify/reference_research/chunks_content/
+corpus_classify/reference_research/chunks_style/
+corpus_classify/reference_research/chunks_fully_ambiguous/
 corpus_classify/reference_research/chunks_pseudo_labeled/
 corpus_classify/reference_research/chunks_pseudo_labeled_lemmatized/
 corpus_classify/reference_research/textbook_chunks/
@@ -26,11 +29,13 @@ corpus_classify/reference_research/textbook_chunks_lemmatized/
 corpus_classify/reference_research/mixed_content_holdout/
 corpus_classify/reference_research/mixed_content_holdout_content_leading/
 corpus_classify/reference_research/mixed_content_holdout_style_leading/
+corpus_classify/reference_research/content_mixed_holdout/
 corpus_classify/reference_research/balanced/
 corpus_classify/reference_research/balanced_content/
 corpus_classify/reference_research/balanced_content_lemmatized/
 corpus_classify/reference_research/balanced_style/
 corpus_classify/reference_research/balanced_style_lemmatized/
+corpus_classify/reference_research/balanced_style_small/
 
 # Style-first / lemmatized copies of the JAMS test set (rebuild via
 # scripts/make_style_leading_targets.R, scripts/lemmatize_corpus.py --

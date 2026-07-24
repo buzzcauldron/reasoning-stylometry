@@ -1,7 +1,7 @@
 {
-  "n_moved_to_holdout": 14265,
-  "n_kept_in_training_pool": 4793,
-  "holdout_dir": "/Users/halxiii/Projects/reasoning-stylometry/corpus_classify/reference_research/mixed_content_holdout",
+  "n_moved_to_holdout": 16421,
+  "n_kept_in_content_pool": 5322,
+  "holdout_dir": "/Users/halxiii/Projects/reasoning-stylometry/corpus_classify/reference_research/content_mixed_holdout",
   "examples": [
     {
       "file": "algebraic__algebraic__0710_1470__chunk001.txt",

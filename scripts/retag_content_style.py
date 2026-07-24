@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Re-tag reference chunks with independent content + style labels.
+"""Tag reference chunks with independent content + style labels, writing two
+independent pools instead of one shared one.
 
 Previously chunk filenames encoded a single axis twice: `{style}__{topic}__...`
 where topic was hardcoded equal to style (see corpus_classify/CORPUS.md and the
@@ -10,17 +11,27 @@ geometric-style, algebraic-content-and-algebraic-style).
 
 This script re-scores every chunk's own text with the two disjoint scorers in
 style_keyword_tagger.py (score_content: subject vocabulary; score_style:
-rhetorical/discourse markers) and renames files to the canonical
-`{content}__{style}__{arxiv_slug}__chunkNNN.txt` scheme, populating the
-off-diagonal cells. Keyword output is treated as ground truth directly (no
-separate "ambiguous" bucket for weak/no signal, for now).
+rhetorical/discourse markers) and writes each chunk into chunks_content/
+and/or chunks_style/ based on ITS OWN axis's confidence -- a chunk with a
+confident content label but an ambiguous (tied/no-signal) style score still
+gets duplicated into chunks_content/ (with a placeholder "ambiguous" in the
+unused style slot of its filename); it's simply absent from chunks_style/.
+This used to be one shared chunks/ pool gated by a single ambiguous-on-
+EITHER-axis check, which meant a chunk useless for content dragged a
+perfectly good style label down with it (and vice versa) -- confirmed to
+measurably hurt style accuracy in practice (2026-07-23 investigation) once
+split_mixed_content_holdout.py's content-only "hits both dictionaries" filter
+started removing chunks from the single shared pool that had nothing to do
+with style.
 
-Sources from BOTH chunks/ (currently keyword-unambiguous) and
-mixed_content_holdout/ (previously set aside for hitting both keyword lists)
-are re-scored and consolidated back into chunks/ -- run this whenever the
-scorer or its underlying text extraction changes (e.g. the ligature-
-normalization fix), then re-run split_mixed_content_holdout.py to regenerate
-an up-to-date holdout from the fresh scores.
+chunks/ (raw output of build_research_reference.py) is treated as an
+immutable source here -- this script only reads it and writes into
+chunks_content/ / chunks_style/ / chunks_fully_ambiguous/, so re-running it
+is always a full, deterministic re-derivation, never an incremental rename.
+chunks_fully_ambiguous/ holds chunks with no confident label on EITHER axis
+(no signal to salvage for anything); split_mixed_content_holdout.py handles
+the (content-specific) "hits both dictionaries" case separately, downstream
+of chunks_content/.
 
 Usage: python3 scripts/retag_content_style.py [--dry-run]
 """
@@ -38,12 +49,14 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from style_keyword_tagger import score_content, score_style  # noqa: E402
 
 CHUNKS = ROOT / "corpus_classify" / "reference_research" / "chunks"
-MIXED_HOLDOUT = ROOT / "corpus_classify" / "reference_research" / "mixed_content_holdout"
+CHUNKS_CONTENT = ROOT / "corpus_classify" / "reference_research" / "chunks_content"
+CHUNKS_STYLE = ROOT / "corpus_classify" / "reference_research" / "chunks_style"
+FULLY_AMBIGUOUS = ROOT / "corpus_classify" / "reference_research" / "chunks_fully_ambiguous"
 MANIFEST = ROOT / "corpus_classify" / "reference_research" / "manifest.json"
 REPORT = ROOT / "output" / "corpus_diagnosis_content_style_retag.json"
 
 
-def parse_old_name(name: str) -> tuple[str, str, str] | None:
+def parse_old_name(name: str) -> tuple[str, str] | None:
     """Split `{old_a}__{old_b}__{arxiv_slug}__chunkNNN.txt` -> (arxiv_slug, chunk_suffix)."""
     parts = name.split("__")
     if len(parts) != 4:
@@ -72,8 +85,14 @@ def load_expert_style_by_slug() -> dict[str, str]:
     return out
 
 
+def _clear(d: Path) -> None:
+    d.mkdir(parents=True, exist_ok=True)
+    for old in d.glob("*.txt"):
+        old.unlink()
+
+
 def retag(dry_run: bool = False) -> dict:
-    files = sorted(CHUNKS.glob("*.txt")) + sorted(MIXED_HOLDOUT.glob("*.txt"))
+    files = sorted(CHUNKS.glob("*.txt"))
     expert_style = load_expert_style_by_slug()
     contingency = {
         "geometric__geometric": 0,
@@ -81,10 +100,18 @@ def retag(dry_run: bool = False) -> dict:
         "algebraic__geometric": 0,
         "algebraic__algebraic": 0,
     }
-    renamed = 0
-    moved_from_holdout = 0
+    n_content_pool = 0
+    n_style_pool = 0
+    n_fully_ambiguous = 0
     skipped = []
     n_expert_style_preserved = 0
+    n_ambiguous_content = 0
+    n_ambiguous_style = 0
+
+    if not dry_run:
+        _clear(CHUNKS_CONTENT)
+        _clear(CHUNKS_STYLE)
+        _clear(FULLY_AMBIGUOUS)
 
     for path in files:
         parsed = parse_old_name(path.name)
@@ -99,29 +126,46 @@ def retag(dry_run: bool = False) -> dict:
             n_expert_style_preserved += 1
         else:
             style = score_style(text).label
-        contingency[f"{content}__{style}"] += 1
 
-        new_name = f"{content}__{style}__{arxiv_slug}__{chunk_suffix}"
-        dest = CHUNKS / new_name
-        from_holdout = path.parent == MIXED_HOLDOUT
-        if new_name != path.name or from_holdout:
-            renamed += 1
-            if from_holdout:
-                moved_from_holdout += 1
+        if content == "ambiguous":
+            n_ambiguous_content += 1
+        if style == "ambiguous":
+            n_ambiguous_style += 1
+
+        if content == "ambiguous" and style == "ambiguous":
+            n_fully_ambiguous += 1
             if not dry_run:
-                if dest.exists() and dest != path:
-                    # Extremely unlikely (arxiv_slug+chunk_suffix is unique per source);
-                    # keep the existing file rather than clobber it.
-                    skipped.append(f"{path.name} -> collision at {new_name}")
-                    continue
-                path.rename(dest)
+                (FULLY_AMBIGUOUS / path.name).write_text(text, encoding="utf-8")
+            continue
+
+        # Contingency table only makes sense when both axes have a real
+        # label -- an "ambiguous" slot isn't a third class to cross-tabulate,
+        # it's the absence of a label for that axis on this chunk.
+        if content != "ambiguous" and style != "ambiguous":
+            contingency[f"{content}__{style}"] += 1
+
+        # Both slots are always filled in the filename (content__style__...)
+        # even when one side is "ambiguous" -- that slot is simply never read
+        # by whichever axis's pool doesn't want this chunk.
+        name = f"{content}__{style}__{arxiv_slug}__{chunk_suffix}"
+        if content != "ambiguous":
+            n_content_pool += 1
+            if not dry_run:
+                (CHUNKS_CONTENT / name).write_text(text, encoding="utf-8")
+        if style != "ambiguous":
+            n_style_pool += 1
+            if not dry_run:
+                (CHUNKS_STYLE / name).write_text(text, encoding="utf-8")
 
     total = sum(contingency.values())
     off_diagonal = contingency["geometric__algebraic"] + contingency["algebraic__geometric"]
     report = {
-        "n_chunks": total,
-        "n_renamed": renamed,
-        "n_moved_from_prior_holdout": moved_from_holdout,
+        "n_source_chunks": len(files),
+        "n_content_pool": n_content_pool,
+        "n_style_pool": n_style_pool,
+        "n_fully_ambiguous": n_fully_ambiguous,
+        "n_ambiguous_content": n_ambiguous_content,
+        "n_ambiguous_style": n_ambiguous_style,
         "n_skipped": len(skipped),
         "skipped": skipped[:20],
         "n_expert_style_preserved": n_expert_style_preserved,
@@ -129,11 +173,15 @@ def retag(dry_run: bool = False) -> dict:
         "contingency_content__style": contingency,
         "off_diagonal_fraction": round(off_diagonal / total, 4) if total else 0.0,
         "note": (
-            "off_diagonal_fraction is the share of chunks where content and style "
-            "labels disagree (e.g. algebraic content written in geometric style). "
-            "0.0 means content and style are still fully confounded; the two axes "
-            "being independent heuristics does not guarantee a specific fraction, "
-            "but 0.0 would indicate the scorers are not actually decoupled."
+            "off_diagonal_fraction is the share of confidently-labeled-on-both-axes "
+            "chunks where content and style labels disagree (e.g. algebraic content "
+            "written in geometric style). 0.0 would indicate the scorers are not "
+            "actually decoupled. n_content_pool/n_style_pool count chunks written to "
+            "chunks_content/ and chunks_style/ respectively -- these overlap (a chunk "
+            "confident on both axes is duplicated into both) but are independent: "
+            "ambiguity on one axis never removes a chunk from the other axis's pool. "
+            "n_fully_ambiguous chunks (no signal on either axis) go to "
+            "chunks_fully_ambiguous/ instead, unusable for either."
         ),
     }
     return report
@@ -141,7 +189,7 @@ def retag(dry_run: bool = False) -> dict:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--dry-run", action="store_true", help="Score and report without renaming files")
+    ap.add_argument("--dry-run", action="store_true", help="Score and report without writing files")
     args = ap.parse_args()
 
     report = retag(dry_run=args.dry_run)

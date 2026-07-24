@@ -1,0 +1,5566 @@
+      
+REVIEW
+Revealing quantum geometry in nonlinear
+quantum materials
+To cite this article: Yiyang Jiang et al 2025 Rep. Prog. Phys. 88 076502
+ 
+View the article online for updates and enhancements.
+You may also like
+(Invited) Probing Correlated Topological
+Phases via Nonlinear Hall Effect
+Ying Wang
+-
+Anomalous Transport Induced by Non-
+Hermitian Anomalous Berry Connection in
+Non-Hermitian Systems
+Jiong-Hao Wang,  , Yu-Liang Tao et al.
+-
+Geodesic Nature and Quantization of Shift
+Vector
+Hua Wang,  , Kai Chang et al.
+-
+This content was downloaded from IP address 71.112.207.79 on 16/07/2026 at 21:09
+Reports on Progress in Physics
+Rep. Prog. Phys. 88 (2025) 076502 (39pp) https://doi.org/10.1088/1361 -6633/ade454
+Review
+Revealing quantum geometry in
+nonlinear quantum materials
+Yiyang Jiang1,2, Tobias Holder 3,∗ and Binghai Yan1,2,∗
+1 Department of Condensed Matter Physics, Weizmann Institute of Science, Rehovot 7610001, Israel
+2 Department of Physics, The Pennsylvania State University, University Park, PA 16802, United States of
+America
+3 Raymond and Beverly Sackler School of Physics and Astronomy, Tel Aviv University, Tel Aviv, Israel
+E-mail: tobiasholder@tauex.tau.ac.il and binghai.yan@weizmann.ac.il
+Received 16 December 2024, revised 6 March 2025
+Accepted for publication 13 June 2025
+Published 3 July 2025
+Corresponding editor: Dr Georgia Platt
+Abstract
+Berry curvature-related topological phenomena have been a central topic in condensed matter
+physics. Y et, until recently other quantum geometric quantities such as the metric and
+connection received only little attention due to the relatively few effects which have been
+documented for them. This review gives a modern perspective how quantum geometric
+quantities naturally enter the nonlinear responses of quantum materials and demonstrate their
+deep connection with excitation energy, lifetimes, symmetry, and corresponding physical
+processes. The multitude of nonlinear responses can be subdivided into nonlinear optical
+effects, subgap responses, and nonlinear transport phenomena. Such a distinction by energy
+scales facilitates an intuitive understanding of the underlying electronic transitions, giving rise
+to a unified picture of the electron motion beyond linear order. The well-known injection and
+shift currents constitute the main resonances in the optical regime. Exploiting their respective
+lifetime and symmetry dependencies, this review elucidates how these resonances can be
+distinguished by a corresponding quantum geometric quantity that shares the same symmetry.
+This is followed by a brief exposition of the role of quasiparticle lifetimes for nonlinear subgap
+responses, which presents a window into the microscopic short-term dynamics as well as the
+ground state correlation and localization. We conclude with an account of the anomalous motion
+due to the Berry curvature dipole and quantum metric dipole in nonlinear transport, clarifying
+the correspondence between physical observables and the underlying mechanisms. This review
+highlights the close relationship between quantum geometry and nonlinear response, showing
+the way towards promising probes of quantum geometry and enabling novel avenues to
+characterize complex materials.
+Keywords: Berry curvature , quantum metric, topology, quantum geometry,
+nonlinear conductivity
+∗
+Authors to whom any correspondence should be addressed.
+1
+© 2025 IOP Publishing Ltd. All rights, including for text and
+data mining, AI training, and similar technologies, are reserved.
+Rep. Prog. Phys. 88 (2025) 076502 Review
+Contents
+1. Introduction 2
+1.1. Overview 2
+1.2. Frequency 3
+1.3. Lifetime 4
+1.4. Symmetry 5
+1.5. Experiments 7
+1.6. Extrinsic scattering 7
+1.7. Structure of the review 7
+2. Basic concepts 7
+2.1. Quantum geometric quantities 7
+2.2. General nonlinear response theory 8
+2.3. Perturbation theory and Feynman diagrams 8
+2.4. Feynman rules 10
+2.5. Three regimes in 2nd-order responses 10
+3. BPVE 11
+3.1. Injection and shift current 11
+3.2. Geometric interpretation 12
+3.2.1. Formula equivalence 13
+3.2.2. Bloch sphere picture 13
+3.3. Destructive interference 14
+3.4. Symmetry separation 14
+3.5. Extrinsic photocurrents 15
+4. Finite lifetime and subgap response 15
+4.1. Introduction of two lifetimes 15
+4.2. Subgap responses 16
+5. Nonlinear transport 16
+5.1. Berry curvature and quantum metric dipole 17
+5.2. Geometric interpretation and quantum anomaly 18
+5.3. Beyond semiclassics 18
+5.4. Symmetry separation 19
+5.5. Extrinsic effects 19
+6. Summary 20
+Data availability statement 20
+Acknowledgments 20
+Appendix A. Notations 20
+A.1. Conventions for Fourier transforms 20
+A.2. Definition of current and conductivity 20
+A.3. Continuous and discrete form of
+response theory 21
+Appendix B. Symmetry of 2nd order optical
+conductivity 22
+B.1. Intrinsic symmetry 22
+B.1.1. Intrinsic permutation
+symmetry 22
+B.1.2. Conjugation symmetry for
+dc-response 22
+B.1.3. Transport limit 22
+B.2. Linear and circular polarized light 23
+B.3. Spacetime transformation and
+symmetry 23
+B.3.1. Spatial transformation and
+symmetry 23
+B.3.2. Time reversal
+transformation and
+symmetry 24
+Appendix C. Feynman diagrammatics 25
+Appendix D. Comments on nonlinear transport
+conductivity 28
+D.1. Semiclassical formalism 28
+D.1.1. SW transformation 28
+D.1.2. Correction of band dispersion 29
+D.1.3. Correction of wave
+function and Berry
+connection 30
+D.2. Spacetime transformation and
+symmetry 30
+D.3. Quantum perturbative approach 31
+D.3.1. Expanding velocity vertices 31
+D.3.2. Expansion with respect to τ 34
+D.3.3. Quantum metric dipole and
+in-gap nonlinear Hall
+response 35
+References 36
+1 . Introduction
+1 .1 . Overview
+Quantum geometry has recently emerged as an efficient tool
+to characterize the properties of quantum materials [ 1, 2]. On
+one hand, the quantum geometry of a bulk material determ-
+ines the intrinsic localization properties of the electronic states,
+making it an economic and physically meaningful language
+to quantify the charge distribution within the clean bulk solid.
+On the other hand, quantum geometry quantifies the geometric
+properties such as the distance (quantum metric), area (Berry
+curvature), and parallelism (quantum connection) of the Bloch
+wavefunction |ψk⟩ in momentum space.
+Initially, quantum geometric phenomena have been
+explored exclusively in relation to Berry phases and curvature
+effects. Indeed, these quantities are nowadays well-understood
+as, respectively, measures of the charge polarization [ 3] and
+self-rotation of Bloch wavepacket [ 4]. In the early 2000s, the
+improved understanding of quantum geometry in terms of the
+Berry curvature played a crucial role in the topological clas-
+sification of quantum phases beyond Landau’s paradigm [ 5–
+10]. Despite these successes, additional geometric quantities
+such as the quantum metric [ 11] and the quantum connec-
+tion [ 12] are needed for a more complete description of the
+adiabatic evolution of the wavefunction in the ground state.
+Y et, until very recently these latter quantities have not received
+the same amount of attention. Thanks to the progress in the
+engineering and characterization of complex bulk materials
+as well as layered van-der-Waals (vdWs) heterostructures,
+the study of multiorbital systems has propelled the arguably
+subtle effects of quantum geometry to the center of atten-
+tion: with their many degrees of freedom which can give way
+to a large number of interband-coherent processes, these so-
+called quantum materials offer an unprecedented and rich phe-
+nomenology of correlated phases, light-matter coupling and
+transport responses. Importantly, many of these compounds
+also feature giant nonlinear responses [ 13]. This review aims
+to highlight how and why novel phenomena originating from
+2
+Rep. Prog. Phys. 88 (2025) 076502 Review
+quantum geometry become accessible specifically with the
+help of such nonlinear quantum materials.
+To set the stage, we can understand the effect of quantum
+geometry on the charge current response in two ways. Viewed
+from real space, the response of material to an external elec-
+tromagnetic field will definitely be affected by the charge dis-
+tribution, i.e. it depends on the expectation values of various
+moments of the position operator ⟨ψ |ˆr . . .ˆr|ψ ⟩. In momentum
+space, the perturbation by an electromagnetic field formally
+couples an external electromagnetic vector potential A to
+the non-interacting electronic Hamiltonian: ˆH0(k) → ˆH0(k +
+e
+ ̄h A) by minimal coupling, where k and −e are the momentum
+and charge of the electrons. According to response theory,
+different orders of charge current response to electromag-
+netic field A therefore necessarily involve different orders
+of momentum derivatives ∂k . . . ∂k ˆH0, which are related by
+sum rules to the momentum derivatives of the wavefunc-
+tion ⟨ψk|∂k . . . ∂k|ψk⟩, thus containing geometric information
+about the wavefunction in momentum space. These two argu-
+ments, though presented from different perspectives, are fun-
+damentally connected as position and momentum are conjug-
+ate variables in quantum mechanics. However, the argument
+above only superficially relates nonlinear response to quantum
+geometry. To see in detail how the quantum geometry determ-
+ines the response, a case-by-case classification of the nonlinear
+response is necessary as different quantum geometric quantit-
+ies correspond to different nonlinear phenomena. The primary
+purpose of this review is to elucidate this process and the main
+outcomes, as summarized in figures 1 and 2 as well as table 1.
+Even though the study of nonlinear responses has a long
+history dating back to the seventies, the early reviews of the
+field [ 68, 69] did not discuss its inherent quantum geomet-
+ric nature. More recent reviews [ 13, 70–76] included these
+aspects, either focusing solely on optical responses or the non-
+linear Hall effect. Here, we aim to highlight how both spa-
+tial and temporal (spectral) information form interdependent
+physical organizing principles, providing the versatile frame-
+work required to capture the behavior of intrinsic nonlinear
+conductivities each for resonant, off-resonant and even semi-
+classical responses.
+1 .2. Frequency
+The first key factor in distinguishing different types of nonlin-
+ear responses is the perturbation frequency ω, which determ-
+ines the nature of the electronic transitions involved. Here
+we only focus on monochromatic perturbation and 2nd order
+response for simplicity. According to the perturbation fre-
+quency ω and its relation with the band gap Eg and electron
+lifetime τ , nonlinear response can be classified into three main
+regimes. As depicted in figure 2 and row (I) of table 1, these
+include firstly nonlinear optics as shown in figures 2(a) and
+(b) related to resonant excitations and photocurrent genera-
+tion, secondly subgap response as shown in figure 2(c) where
+only off-resonant excitations contribute, and finally in non-
+linear transport as shown in figures 2(d) and (e), in which
+case the quasiparticle decoherence rate τ −1 is larger than the
+frequency ω.
+Figure 1 . Quantum geometry contains both momentum space band
+geometry and information about the charge distribution in real
+space. In band geometry, quantum metric (a), Berry curvature (b),
+and quantum connection (c) characterize the distance ( l1,2), area
+(S1,2), and change of tangent space orientation in Hilbert space
+(drawn as a Bloch sphere), respectively. All three geometric
+quantities are relevant ingredients for the optical response. In terms
+of the quasiparticle motion, quantum metric (a), Berry curvature (b),
+and quantum connection (c) can be associated with the deformation
+(d), rotation (e) and nontrivial shift (f) of a traveling wavepacket,
+respectively. The corresponding anomalous components of the
+equations of motion are the quantum metric dipole (d) and Berry
+curvature dipole (e), as indicated by red curved arrows, while (f)
+does not appear in the intrinsic nonlinear conductivity.
+In nonlinear optics, two kinds of responses arise in 2nd
+order, second harmonic generation (SHG) which generates
+an alternating current (AC) with frequency 2 ω twice the per-
+turbation frequency (figure 2(a)), and the bulk photovoltaic
+effect (BPVE, also called bulk photogalvanic effect, BPGE)
+which describes a direct current (DC) generation (figure 2(b)).
+The BPVE can furthermore be separated into the so-called
+injection current whose magnitude grows with time, and the
+so-called shift current whose magnitude remains finite. Quite
+amazingly, already the original resonant response theory of
+3
+Rep. Prog. Phys. 88 (2025) 076502 Review
+Figure 2. Nonlinear responses can be subdivided into three main categories: nonlinear optics consisting of (a) second harmonic generation
+(SHG) and (b) bulk photovoltaic effect (BPVE), subgap response (c), and nonlinear transport for (d) metal and (e) insulator respectively. In
+(a)–(e), red and blue parabolas represent the conduction ( c) and valence ( v) bands, the straight and wavelike arrows represent electronic
+transitions and corresponding photon absorption/emission (red/blue) processes, while the shaded area represents the filled valence band
+states.
+the intrinsic BPVE [ 14, 68, 77–80] correctly captured both
+injection and shift contributions for time-reversal symmetric
+systems [ 44]. However, the early interpretation of the shift
+current as a transient, induced polarization was influenced
+majorly by the polar semiconductors which were of interest
+at the time. Therefore, it came as a surprise when topolo-
+gical materials were later found to have both a giant SHG [ 81,
+82] as well as BVPE [ 24–26], leading to a refined under-
+standing of the phenomenology [ 27–33] using concepts from
+quantum geometry [15, 34–43]. Similar conclusions have been
+reached for the injection current driven by circular polar-
+ized light [ 16–18], most notably leading to the prediction of
+a quantized circular photogalvanic effect for non-interacting
+two-band systems [ 19, 20]. In addition to the quantized cir-
+cular photogalvanic effect, recent studies have also proposed
+a quantized shift current in multigap topological phases [ 83].
+Several experiments have been able to resolve the BPVE for
+circular polarized light [ 21–23]. Recent progress has shown
+that the quantum geometric origin is inherent in all nonlin-
+ear optical responses [ 42, 49, 84, 85]. We note that the mag-
+nitude of the nonlinear optical response function depends
+sensitively on the choice of model and the resulting wave
+functions [86, 87].
+Regarding the geometric perspective, the injection current
+can be related to the quantum metric and Berry curvature of
+the system, which measure the length and area in the wave-
+function space as shown in figures 1(a) and (b). Similarly, the
+shift current has been related to a higher order quantum geo-
+metric quantity called quantum connection, which describes
+the change in tangential vectors of the wavefunction space as
+shown in figure 1(c).
+Quantum geometry also manifest in nonlinear transport
+when the perturbation frequency ω approaches zero. The
+theory of semiclassical transport at nonlinear order is well
+developed [51, 88–91]. By their dependencies on lifetime τ ,
+nonlinear transport can also be categorized into three different
+parts, including the nonlinear Drude (NLD) term which scales
+like τ 2 [50–53], the Berry curvature dipole (BCD) which is
+linear in τ [50, 54–56], and the (band-normalized) quantum
+metric dipole (QMD) term which is independent of τ [62–
+65]. The purely dispersion-related NLD term describes the
+rigid-body-like movement of wavepacket, while QMD and
+BCD terms, which originate from quantum metric and Berry
+curvature, describe the deformation and self-rotation of the
+wavepacket as shown in figures 1(d) and (e). These geomet-
+ric responses have been observed to contribute to the intrinsic
+nonreciprocal magnetoresistance [ 66, 67] and the nonlinear
+anomalous Hall (NLAH) effect [57–59]. All these three contri-
+butions are Fermi surface responses, i.e. they are only nonzero
+in metals (figure 2(d)). However, just as the quantum anom-
+alous Hall (QAH) at linear order can arise from a completely
+filled band, similarly, there exists Fermi sea contribution to the
+nonlinear Hall effect in insulators [ 92] (figure 2(e)).
+Between these two regimes exists the so-called subgap
+regime (figure 2(c)), where the perturbation frequency ω is
+smaller than the band gap Eg so that resonant optical transition
+can not happen [ 88, 93, 94]. Although off-resonant, the DC
+generation does not necessarily vanish entirely inside the gap
+of a magnetic insulator [46–49]. Instead, it can pertain its mag-
+nitude for an limited window of subgap frequencies, where the
+quasiparticle lifetimes play an important role.
+1 .3. Lifetime
+Besides perturbation frequency, the role of finite lifetime
+is also important in separating different parts of nonlinear
+responses and unifying three regimes in one unified formal-
+ism, as shown in the row (II) of table 1. In nonlinear optics,
+the injection part will not grow indefinitely with time in real
+materials due to dissipation while the shift part does not expli-
+citly depend on it. The time scale for such dissipation is
+approximately the quasiparticle lifetime τ . Based on the life-
+time dependence, injection ( ∝ τ 1) and shift ( ∝ τ 0) current
+can be separated [ 14, 15], as noted in the ‘Nonlinear Optics’
+column of table 1. However, this seemingly simple classifica-
+tion does not fully account for the fact that nonlinear responses
+require the introduction of at least two quasiparticle lifetimes,
+the interband lifetime τinter and the intraband lifetime τintra,
+that play a significant role in regulating both the optically
+resonant as well as the transport response [ 49, 95–101]. It
+is therefore no surprise that these lifetimes compete in the
+4
+Rep. Prog. Phys. 88 (2025) 076502 Review
+Table 1 . Detailed classifications of nonlinear DC response by perturbation (I) frequency, (II) lifetime, (III) symmetry, together with detailed
+correspondences between (IV) different nonlinear phenomena and (V) quantum geometry. (I) Similar to the overview in figure 2, the
+possible responses are sorted into three columns according to the excitation frequency . (II) When a finite quasiparticle lifetime is
+introduced, injection and shift current can be separated by their lifetime dependence, as can be NLD, BCD and QMD in the transport
+regime. In the subgap regime between optics and transport, both interband lifetime τinter and intraband lifetime τintra matter. (III) The
+intrinsic symmetry of the response is denoted by round brackets (· , ·) for symmetric indices, while square brackets [· , ·] denote
+antisymmetric spatial components. Time reversal ( T ) and the combined parity-time reversal symmetry ( PT ) denote which responses are
+singled out if present. (IV) Different probing methods also help the classification, such as the linear/circular polarization of the perturbation
+in optics and the longitudinal/Hall response in transport. (V) Recent progress has revealed that each phenomenon can be associated with a
+geometric property of the underlying Hilbert space.
+Nonlinear DC Response
+(I) Frequency  ̄hω > Eg  ̄hω < Eg ωτ ≪ 1
+Nonlinear Optics Subgap Nonlinear Transport
+(II) Lifetime O(τ 1) O(τ 0) τinter
+τintra
+̸= 2 τinter
+τintra
+= 2 O(τ 2) O(τ 1) O(τ 0)
+Injection current Shift current Weak
+Correlation/
+Localization
+Strong
+Correlation/
+Localization
+Nonlinear
+Drude
+Berry
+curvature
+dipole
+Quantum
+metric dipole
+(III)
+Symmetry
+σ(a,b);c σ[a,b];c σ(a,b);c σ[a,b];c σ(a,b;c) σ(a,b);c σ(a,b);c
+PT T T PT T -breaking PT T PT
+(IV)
+Phenomenon
+Linear
+injection
+[14, 15]
+Circular
+injection
+[16–23]
+Linear
+shift
+[24–43]
+Circular
+shift
+[15, 44, 45]
+Subgap response [46–49] Nonreciprocal
+magneto-
+resistance
+(NMR)
+[50–53]
+Nonlinear
+Anomalous
+Hall (NLAH)
+[50, 54–59]
+Intrinsic
+NMR &
+NLAH
+[60–67]
+(V) Quantum
+Geometry
+Quantum
+metric
+Berry
+curvature
+Symplectic
+Christoffel
+symbol
+Christoffel
+symbol of
+1st kind
+— Translation Rotation Distortion
+subgap regime, where their ratio τinter
+τintra
+can indicate the differ-
+ence between strong and weak correlation effects, as indicated
+in the ‘Subgap’ column of table 1.
+The introduction of two lifetimes helps to establish a con-
+nection across optical, subgap and transport regime under a
+unified Feynman diagrammatic formalism. Historically, the
+above three categories have been discussed under very differ-
+ent perspectives, even though they belong to the same order
+nonlinear processes. For instance, optical responses are usu-
+ally derived in the reduced density matrix formalism [14, 100],
+while transport responses are typically discussed in a semiclas-
+sical approach [ 51]. In these latter approaches, only a single
+phenomenological lifetime τ is introduced, which has a vague
+physical origin and does not distinguish between interband
+and intraband processes. Y et, as shown in figure 4, using a
+diagrammatic approach, interband and intraband transitions
+are clearly separated and the relaxation times can be connec-
+ted to a physical mechanism via the self-energies Σ = i/(2τ )
+of the quasiparticle Green’s functions [ 15]. In such a dia-
+grammatic formalism, the subgap response likewise arises nat-
+urally as an incomplete cancellation between injection and
+shift current. This incompletely canceled conductivity can
+therefore serve as a probe of the quasiparticle self-energies
+in the system, and shed light on the microscopic scattering
+mechanisms.
+Finally, from the same diagrams the transport regime is
+accessible by a combined limit ω → 0 and τinter
+τintra
+→ 2. Here, the
+lifetime ratio being 2 might seem somewhat special. However,
+it is merely implementing the requirement that the quasi-
+particle cannot decay (and thus escape) while being in the
+excited state, which enforces charge conservation in the adia-
+batic case. In terms of the underlying electronic processes,
+it is not surprising that both intraband and interband trans-
+itions are important in all nonlinear response regimes: DC cur-
+rent generation (like in the BPVE) always arises from intra-
+band transitions as shown in figures 4(a) and (b), while on the
+flip side even in the transport limit virtual (i.e. off-resonant)
+excitations continue to contribute. This further highlights the
+importance of keeping track of the microscopic quasiparticle
+properties.
+1 .4. Symmetry
+Contributions of these quantum geometric quantities can be
+further separated or singled out by their symmetry dependen-
+cies since different geometric quantities and their correspond-
+ing nonlinear effects possess dissimilar symmetries as shown
+from the row (III)–(V) of table 1. As we point out in the row
+(III) of table 1 and figure 3, two kinds of symmetry properties
+dictate the behavior of nonlinear phenomena and their corres-
+ponding quantum geometric quantities, firstly the symmetry of
+conductivity tensor and secondly the symmetry of the material.
+The symmetry of conductivity tensor originates from the
+permutation symmetry between spatial indices. In table 1 and
+5
+Rep. Prog. Phys. 88 (2025) 076502 Review
+Figure 3. Overview for the separation of the nonlinear response based on symmetry. (a) In the optical regime, linearly ( E↕) and circularly
+(Eö) can distinguish responses which are symmetric and antisymmetric with respect to the spatial indices of electric field. (b) In the
+transport regime, a measurement of different currents ( j1,2) with different applied fields ( E1,2) allows the investigation of both fully
+transverse (σyy;x) and off-axis directions ( σxy;y) conductivities, which helps separate the NLD contribution that is fully permutational
+symmetric (σ(a,b;c)). It’s also possible to distinguish different geometric contributions using materials with different symmetry, e.g. (c)
+time-reversal (T -) symmetric material WTe 2 and (d) the parity-time inversion ( PT -) symmetric material MnBi 2Te4, the red arrows
+represents magnetic moments of Mn, showing an anti-ferromagnetic order.
+throughout this review, we use σ(a,b);c and σ[a,b];c to represent
+the conductivity tensors that are symmetric and antisymmet-
+ric after permutation of electric field spatial indices a and b.
+Likewise, the symbol σ(a,b;c) will indicate a fully symmetric
+conductivity tensor under any permutation among both elec-
+tric field spatial indices a and b as well as the current spatial
+index c (cf NLD column of table 1).
+The symmetry of the conductivity tensor can be exploited
+by the spatial configuration of perturbation to separate differ-
+ent quantum geometric responses. In the optical regime, this
+is achieved by perturbing the system with linearly or circu-
+larly polarized light, which detects the symmetric and anti-
+symmetric part of the optical conductivity tensor, respectively
+(cf figure3(a)). This allows, for instance, separating a quantum
+metric contribution from the Berry curvature in the injection
+current, where the former is spatial indices symmetric while
+the latter is antisymmetric. In the transport regime, this is
+achieved by measuring current at different Hall bar contacts
+when applying distinct electric field (cf figure 3(b)), which
+allows separating NLD from BCD and QMD terms that are not
+symmetric under full spatial indices permutation [ 102]. It is
+worth mentioning that the difference of permutation symmetry
+is actually a manifestation of the axial-gravitational anom-
+aly [ 103], a close relative of the chiral anomaly. This may
+provide a promising avenue to explore a quantum anomaly
+which is otherwise rather difficult to access. Finally, also at
+nonlinear order surface contributions can exist which often
+enhance the nonlinear photocurrents [ 104–106].
+Apart from the symmetry of conductivity tensor, it is also
+possible to utilize the symmetry of materials to single out
+certain quantum geometric contribution (cf figures 3(c) and
+(d)). For the second order charge response, the most important
+symmetries are the magnetic point group symmetry and the
+space-time symmetry. This encompasses, in particular, inver-
+sion (P) and time-reversal (T ) as well as the combined parity-
+time reversal symmetry ( PT ).
+Generally, all 2nd-order current responses require break-
+ing of P. This is because the current j changes sign while
+the electric field, which enters quadratically, does not. In a
+P-breaking system, we can further separate different geomet-
+ric contributions in T - or PT -symmetric materials. In non-
+linear optics, the injection current growing with time and the
+shift current with constant amplitude possess distinct T - and
+PT - symmetries, and so do the linear and circular polariz-
+ations of the electromagnetic field. T - and PT - symmetry
+transformation can also be used to distinguish different geo-
+metric quantities [ 15, 45]; for instance, the Berry curvature
+vanishes in a PT -symmetric system. Similar symmetry con-
+straints appear in nonlinear transport, where PT enforces a
+vanishing BCD contribution, such that only the NLD and
+QMD terms survive. On the other hand, T enforces vanishing
+NLD and QMD terms, leaving only the NLAH effect nonzero.
+It is this NLAH which famously can lead to an anomalous Hall
+signal in a time-reversal symmetric system [58], which helped
+ignite much of the recent developments regarding nonlinear
+responses.
+Additionally, one can consider more intricate space-time
+symmetries such as rotational symmetries ( Cn) and their com-
+bination with T . Although all 2nd-order conductivity tensors
+share the same rotational transformation properties, it is still
+possible to exclude a pure Hall contribution based on the pres-
+ence of spatial rotational symmetries such as C3z. It is also pos-
+sible to separate different responses by their combined space-
+time symmetries. For example, the combination CnT usually
+results in a separation of the response in different directions.
+Namely, C2zT acts as T in the z-direction while also acting
+like PT in the x–y plane, therefore responses that respect
+PT survive in the x–y plane while those respecting T sur-
+vive in the z-direction. We also point out here that for the
+most general system with no specific symmetry, it is possible
+to contain contributions from all geometric quantities, then it
+is still possible to utilize the permutational symmetry of the
+6
+Rep. Prog. Phys. 88 (2025) 076502 Review
+corresponding conductivity tensor to conduct relevant meas-
+urement to distinguish different contributions, as shown in
+figures 3(a) and (b).
+1 .5. Experiments
+The nonlinear Hall effect has been studied experimentally in
+transition metal dichalcogenides like WTe 2 and MoTe 2 [58,
+59, 107, 108], and in the semimetals BaMnSb 2 [109] and
+TaIrTe4 [110]. These and other Weyl semimetals like TaAs,
+CoSi and RhSi can likewise exhibit a large nonlinear optical
+response [ 21–25, 82]. Another promising platform is even-
+numbered layers of CrI 3, which constitute a PT-symmetric
+band structure [ 44, 81]. Enhanced nonlinear responses have
+also been reported vdWs heterostructures stacked at a finite
+twist angle like twisted multilayer graphene [ 111, 112], twis-
+ted WSe 2 [113] as well as twisted WTe 2 [114]. Bi 2Se3 is a
+well-studied topological insulator for which SHG has been
+mapped out [ 115]. Finally, experiments in the weakly doped
+semiconductor MnBi 2Te4 have seen signatures of the trans-
+verse and longitudinal contributions of the QMD [66, 67], and
+a BPVE has also been reported [ 26].
+1 .6. Extrinsic scattering
+Despite the fact that the emerging physical picture regarding
+nonlinear responses is rather well-understood, we emphasize
+that this phenomenology does not capture the entire range of
+nonlinear current generation. The mechanisms covered by the
+diagrammatic approach mentioned above are usually referred
+to as intrinsic nonlinear response formalism, which includes
+the effect of disorder, phonons and other relaxation mech-
+anisms only indirectly in the form of the self-energy of the
+one-particle Green’s functions. However, the underlying phys-
+ical processes can lead to additional contributions to the cur-
+rent, which are usually termedextrinsic mechanisms. Extrinsic
+AC-effects are related to the current carrying steady-state that
+develops in the presence of additional relaxation channels, for
+example via skew scattering [ 116] or phonon creation [ 87,
+94, 117]. In the dc-limit, the major sources of extrinsic cur-
+rent generation are resonant impurity scattering and related
+momentum-relaxing processes, which enter as a renormaliz-
+ation of velocity vertices or even higher-order contributions in
+the diagrammatic expansion. Such effects beyond lifetime cor-
+rections are known to contribute prominently to the anomalous
+Hall effect at linear order [118]. Similar extrinsic mechanisms
+are to be expected and have been discussed in the nonlinear
+regime [ 56, 119–124]. Most importantly, in some cases they
+might be comparable or even larger than the intrinsic contribu-
+tions [72]. Although extrinsic and intrinsic mechanisms gen-
+erally coexist in most systems, it is often possible to separate,
+suppress, or even exclude extrinsic contributions through cer-
+tain symmetries [64] or measurement methods [ 66, 67].
+1 .7 . Structure of the review
+The relationship between quantum geometry and nonlinear
+responses extends beyond formal associations, revealing a rich
+collection of physical phenomena where quantum geometric
+quantities, especially those other than Berry curvature, directly
+play a role. The recent establishment of this perspective thus
+makes nonlinear responses promising probes of quantum geo-
+metric properties. Additionally, the insights from the quantum
+geometry can be leveraged to better control for example pho-
+tosensing in nonlinear optics or rectification in nonlinear trans-
+port devices.
+This review is structured as follows. In section 2, we
+briefly review the perturbation theory underlying nonlinear
+responses, elucidating three major regimes: nonlinear optics,
+subgap response and nonlinear transport and the corres-
+ponding physical process using Feynman diagrammatics. In
+section 3, we discuss the BPVE in nonlinear optics, illuminat-
+ing the direct correspondence between quantum geometry and
+nonlinear responses. In particular, we show how the physical
+observables including the injection and shift current follow
+from the quantum geometry. The symmetry property shared
+by quantum geometry and the corresponding phenomena is
+also discussed. In section 4, we give an exposition of the sub-
+gap regime, a much less studied parameter range, focusing
+on lifetime effects and the 2-lifetime prescription. We clarify
+how the subgap response arises from the incomplete cancella-
+tion between injection and shift current in off-resonant optics,
+which highlights the subtle but important interplay of intra-
+and interband processes in all nonlinear charge responses.
+Section 5 is dedicated to the nonlinear transport regime, illus-
+trating the geometric interpretation of NLD, BCD, and QMD
+as translation, self-rotation, and distortion of semiclassical
+wavepackets. We further discuss the strong constraints on life-
+times and symmetry properties, in particular how the transport
+limit arises when τinter = 2τintra, a consequence of charge con-
+servation. The resulting intrinsic nonlinear response formal-
+ism not only unifies different regimes in nonlinear responses,
+but also predicts new effects such as a nonlinear Hall effect in
+magnetic insulators. Finally, in section 6, we provide a sum-
+mary of the key points discussed and offer an outlook on future
+research directions in the field of nonlinear responses and
+quantum geometry. A number of abbreviations are used for
+frequently recurring terms, which are summarized in table 2
+for convenience.
+2. Basic concepts
+2.1 . Quantum geometric quantities
+For a set of Bloch-periodic eigenfunctions |un(k)⟩ with band
+index n, it is possible to study the geometric properties of the
+complex projective space spanned by the momentum k in the
+BZ. To this end, one can define the QGT [11, 125, 126],
+Qab
+n (k) = ⟨∂kaun (k) | [1 − |un (k)⟩⟨un (k) |] |∂kbun (k)⟩
+= gab
+n (k) − i
+2 Ωab
+n (k) , (1)
+whose imaginary part is the Berry curvature, whereas the
+real part is called quantum metric . In the complex manifold
+spanned by a given band n, gab
+n measures distances, while Ωab
+n
+quantifies local sources of the Berry phase. It’s also common to
+7
+Rep. Prog. Phys. 88 (2025) 076502 Review
+Table 2. List of abbreviations used in the text.
+Abbr. Meaning
+SHG Second harmonic generation
+BPVE Bulk photovoltaic effect
+BPGE Bulk photogalvanic effect
+AC(ac) Alternating current
+DC(dc) Direct current
+NLD Nonlinear Drude
+BCD Berry curvature dipole
+QMD Quantum metric dipole
+QAH Quantum anomalous Hall
+NLAH Nonlinear anomalous Hall
+NMR Nonreciprocal magneto-resistance
+NQAHE Nonlinear quantum anomalous Hall effect
+T Time-reversal
+P Parity (spatial inversion)
+PT Parity-time inversion
+Cnz n-fold rotational symmetry with respect to z-axis
+Mz Mirror symmetry with respect to z-axis
+TMDs Transition metal dichalcogenides
+vdWs van-der-Waals
+QGT Quantum geometric tensor
+QC Quantum connection
+BZ Brillouin zone
+encounter vector form of Berry curvature Ωn which is related
+to the antisymmetric tensor form of Ωab
+n by (Ωn)a ≡ 1
+2 εabcΩbc
+n
+where εabc is the Levi-Civita symbol.
+One can also define the Qab
+M (k) for manifolds M con-
+taining multiple bands, which is in general not the sum of
+equation ( 1) [ 127]. Of particular interest is the QGT of the
+ground state, a fundamental property of an bulk solid. For the
+ground state, the QGT has an intuitive interpretation as the
+second moment of the position operator, ⟨( ˆXa − ⟨ˆXa⟩)( ˆXb −
+⟨ ˆXb⟩)⟩. Denoting the projection to the target manifold by ˆP and
+momentum derivatives as ∂ka
+ˆP = ∂a ˆP, the QGT tensor can be
+written very compactly as
+Qab = tr
+h
+ˆP
+
+∂a ˆP
+
+∂b ˆP
+i
+. (2)
+Based on this form, it is possible to generalize the notion of
+quasi-local geometric objects, with the canonical next order
+term being the QC [ 12]
+Qa;bc = tr
+h
+ˆP
+
+∂a ˆP
+
+∂b∂c ˆP
+i
+. (3)
+The imaginary part of the QC is related to the third cumu-
+lant ⟨ ˆX3⟩. In optical responses, it further becomes necessary
+to define multistate (i.e. multiband) variants of the QGT and
+QC, which read respectively [ 85, 128],
+Qab
+mn = tr
+h
+ˆPn
+
+∂a ˆPm
+
+∂b ˆPn
+i
+, (4)
+Qa;bc
+mn = tr
+""
+ˆPn
+
+∂a ˆPm
+"
+∂b∂c ˆPn
+
++
+
+∂b ˆPm
+
+∂c ˆPn
+##
+.
+(5)
+Similar to QGT, QC can also be separated into an sym-
+metric Qa;(b,c)
+mn part and anti-symmetric part Qa;[b,c]
+mn , which are
+termed ‘Symplectic Christoffel symbol’ and ‘Christoffel sym-
+bol of 1st kind’ respectively, as shown in table 1.
+A big driving force of the recent developments regarding
+nonlinear responses is the fact that sometimes the matrix ele-
+ments of response functions simplify to the QGT or the QC.
+Explaining the physical origin behind this observation is the
+main purpose of the remainder of this review.
+2.2. General nonlinear response theory
+The basic concepts in nonlinear response theory have been
+reviewed before, see for example [ 68]. This section mostly
+introduces the associated notation, focusing on the nonlin-
+ear response induced by a monochromatic perturbation and
+identifying three primary regimes: nonlinear optics, subgap
+responses, and nonlinear transports.
+If system and perturbation both exhibit time translation
+symmetry, the respective response functions also adhere to
+it. Taking the electrical conductivity σ as an example, the
+response function is given by
+σ (t; t1, . . . ,tn) = σ (t + ∆t; t1 + ∆t, . . . ,tn + ∆t) (6)
+where {ti}n
+i =1 are the times at which perturbations occur,
+which contribute to the induced response at time t, while ∆t
+represents an arbitrary time translation.
+Therefore, after a Fourier transform to the frequency
+domain, the response function is proportional to a delta
+function, i.e.
+σ ( ̄ω; ω1, ω2, . . . , ωn) ∝ δ
+0
+@ ̄ω −
+nX
+j =1
+ωj
+1
+A (7)
+where {ωi}n
+i =1 are the frequencies contained in the perturba-
+tion that contribute to the response frequency  ̄ω. This is known
+as the frequency sum rule of nth order nonlinear responses. We
+point out that the limit  ̄ω → 0 is subtle when the quasiparticle
+lifetime τ is finite [ 15, 129], resulting non-commuting limits
+between  ̄ω → 0, τ → ∞ and ∆t → ∞.
+2.3. Perturbation theory and Feynman diagrams
+The microscopic photon absorption and emission processes
+occurring during a nonlinear perturbation can be effectively
+represented using Feynman diagrams [ 15, 37].
+When electromagnetic field is introduced to a crystal-
+line system with unperturbed Bloch Hamiltonian ˆH0(k), the
+perturbed Bloch Hamiltonian by minimal coupling becomes
+ˆH0(k + e
+ ̄h A), where A is the vector potential of the electro-
+magnetic field. For a spatially homogeneous electric field, we
+can adopt a time-dependent yet spatially homogeneous vec-
+tor potential A(t) such that E = −∂A/∂t. This perturbation
+method is known as the ‘velocity gauge’ because it introduces
+the electric field through the vector potential.
+It is worth noting that another approach, known as the
+‘length gauge’ [14], introduces the external electric field via a
+8
+Rep. Prog. Phys. 88 (2025) 076502 Review
+Figure 4. (a) Typical 2nd order DC current generation process in band systems (a.i) with corresponding Feynman diagram (a.ii). An
+electron in the valence ( v) band absorbs a photon with frequency ω from vertex va together with an interband transition to conduction ( c)
+band, then it absorbs a photon with frequency −ω from vertex vb together with an interband transition to v band, then it generates DC
+current with frequency  ̄ω = 0 from vertex vc with an intraband transition this time. (b) all Feynman diagrams contributes to nonlinear
+conductivity σab;c( ̄ω; ω1, ω2).
+spatially inhomogeneous perturbation ˆH ′ = −eE · ˆr. Although
+the ‘length gauge’ and ‘velocity gauge’ are equivalent up to a
+gauge transformation of the single-particle basis [ 100, 101],
+the ‘length gauge’ breaks the lattice translation symmetry of
+the system. This symmetry breaking necessitates the use of a
+covariant derivative in momentum space to represent the effect
+of the coordinate operator ˆr.
+In the velocity gauge the perturbed Bloch Hamiltonian
+yields,
+ˆH0
+
+k + e
+ ̄h A
+
+= ˆH0 (k) + e
+ ̄h ˆvaAa +
+ e
+ ̄h
+2 ˆwab
+2! AaAb + . . . (8)
+Here, ˆva ≡ ∂ ˆH0
+∂ka
+, ˆwab ≡ ∂2 ˆH0
+∂ka∂kb
+, etc serve as coefficients in
+perturbative expansions, where the Roman subscripts ( a, b, c)
+represent the spatial indices ( x, y, z) and the Einstein summa-
+tion convention is assumed. These coefficients can also be
+regarded as electron–photon scattering vertices in Feynman
+diagrams, representing the physical processes occurring dur-
+ing a nonlinear response. These vertices are intrinsic prop-
+erties of a crystalline system and encapsulate quantum geo-
+metric information, which will be reflected in the nonlinear
+responses.
+To understand how these vertices take part in the electro-
+magnetic transitions, we consider the time evolution of an
+unperturbed quasiparticle eigenstate |ψn(k)⟩, where n is the
+band index. The time evolution satisfies the time-dependent
+Schrödinger equation:
+i  ̄h∂t|ψn⟩ =
+
+ˆH0 + e
+ ̄h ˆvaAa +
+ e
+ ̄h
+2 ˆwab
+2! AaAb + . . .
+
+|ψn⟩. (9)
+The first term, ˆH0|ψn⟩ =  ̄hεn|ψn⟩, results in a dynamical phase
+e−iεnt of the normal propagating quasiparticle eigenstate and
+will not contribute a transition to other eigenstates.
+On the other hand, terms involvingA can be interpreted as a
+one-photon absorption (emission) processes, accompanied by
+the transition of an occupied quasiparticle state into an unoc-
+cupied state. Such a process is easy to identify in Feynman dia-
+grams. For instance, a one-photon absorption process (photon
+with frequency ω), which induces a transition from valence
+band to conduction band in figure 4(a.i) can be represented by
+a scattering across a one-photon vertex in Feynman diagram
+as shown by the ˆvb vertex in figure 4(a.ii), where the subscript
+indicates the contribution from the b-direction component of
+the electric field E (which shares the same direction with the
+vector potential A).
+Similarly, we can interpret the higher-order couplings as
+multi-photon absorption/emission processes accompanied by
+a quasiparticle transition. For example, the multi-photon pro-
+cesses ˆuabc and ˆwab are depicted in figures 4(b.i) and (b.iv).
+It is worth noting that multi-photon absorption/emission hap-
+pens simultaneously, in contrast to the sequential one-photon
+processes depicted for example in figure 4(b.v).
+Combining these processes, we can describe the behavior
+of a Bloch state in a perturbed system as follows: the elec-
+tromagnetic perturbation can induce one-photon and multi-
+photon absorptions/emissions, causing electronic transitions
+9
+Rep. Prog. Phys. 88 (2025) 076502 Review
+Table 3. Feynman rules and definition of symbols.
+among Bloch bands. After each such a transition, the per-
+turbed state continues to propagate in a new band until another
+transition occurs. Finally, the current vertex is by definition
+1
+V
+δH
+δA where V is the volume of the full system. Thus the cur-
+rent vertex enters the diagrammatic expansion in exactly the
+same fashion as electron–photon vertices. All processes at
+second order in the electric field are shown in figures 4(b.i)–
+(b.vi), along with the corresponding Feynman rules and defin-
+ition of symbols summarized in table 3. Combined, they
+provide a comprehensive description of the intrinsic nonlinear
+response.
+2.4. Feynman rules
+Feynman diagrams not only helps differentiate different
+physical processes contributing to each order of nonlinear
+responses, but also provide a simple way to formulate the non-
+linear conductivity. In principle, the concepts elucidated below
+can be employed for the nonlinear response at any order [ 97,
+98, 130–134]. However, for the sake of clarity, we restrict the
+discussion to the 2nd-order conductivity. We define the 2nd-
+order current generation to be described by,
+jc ( ̄ω) = σab;c ( ̄ω; ω1, ω2) Ea (ω1) Eb (ω2) (10)
+where j( ̄ω) is the magnitude of 2nd-order current response
+with frequency  ̄ω, E(ωi) is the magnitude of electric field with
+frequency ωi. Since the frequency summation law is always
+satisfied, we can neglect the delta function part for notational
+simplicity, more details about this notation is discussed in
+appendix A.
+To formulate the contribution of different physical pro-
+cesses depicted in figures 4(b.i)–(b.vi), one collects all ver-
+tices ( ˆv, ˆw, ˆu) and fermionic Matsubara Green’s functions
+G(iω) = 1
+i ̄hω−H0
+along the fermionic loop in the correspond-
+ing Feynman diagram and calculates its trace over degree of
+freedom of band indices. The internal momentum is integ-
+rated over the BZ and the internal frequency is unrestricted.
+At each vertex we enforce frequency and momentum conser-
+vation. The Matsubara summation is done by residues, which
+is followed by an analytical continuation to the real axis.
+The full expression of the 2nd-order conductivity is just the
+sum of all 2nd-order Feynman diagrams figures 4(b.i)–(b.vi)
+in a symmetrized form under internal permutation symmetry
+(ω1, a ↔ ω2, b) as shown in equation ( 11), whose derivation
+can be found in appendix C.
+σab;c ( ̄ω; ω1, ω2) = − e3
+ ̄h2ω1ω2
+ˆ
+k
+∑
+m
+fm
+( ˆuabc
+2 + 1
+2
+[
+ˆwab, ˆvc
+ ̃ ̄ω − ˆε
+]
++
+[ ˆva
+ ̃ω1 + ˆε , ˆwbc
+]
++
+[ ˆva
+ ̃ω1 + ˆε ,
+[
+ˆvb, ˆvc
+ ̃ ̄ω − ˆε
+]])
+mm
++ (ω1, a ↔ ω2, b) . (11)
+Here, fm ≡ 1
+eβ ̄h(εm−μ)+1 represents the Fermi–Dirac distri-
+bution of mth band where μ is the chemical potential, β−1 =
+kBT for temperature T, and
+ ́
+k ≡
+ ́ dDk
+(2π)D , where D is the spa-
+tial dimension of the system. Most of the discussion will
+be restricted to temperature T = 0. The fractions of operat-
+ors in equation ( 11) are defined element-wise. For example,
+( ˆva
+ωi +ˆε )nm ≡ ˆva
+nm
+ωi +(ˆε)nm
+, where (ˆε)nm = εn − εm. The tilde over
+the frequency is defined via analytical continuation  ̃ω = ω +
+i 0+, which becomes important for finite quasiparticle particle
+lifetimes and will be addressed more in details in section 4.
+2.5. Three regimes in 2nd-order responses
+In practical scenarios, the most common and simplest perturb-
+ation is a monochromatic perturbation which has the form of
+cos ωt ∼ eiωt + e−iωt, which contains both ω and −ω compon-
+ents. This type of perturbation serves as a fundamental basis
+for understanding more complex nonlinear processes.
+For a linear order response ( n = 1), the absolute value of
+response frequency would always be | ̄ω| = |ω|, meaning the
+linear response shares the same frequency as the perturbation.
+For a second order response, we can have both| ̄ω| = |ω + ω| =
+2|ω| or | ̄ω| = |ω + (−ω)| = 0. The response with | ̄ω| = |2ω|
+frequency corresponds to the SHG while the response with
+| ̄ω| = 0 corresponds to the BPVE.
+When the perturbation frequency ω is comparable with
+the band gap Eg, the corresponding nonlinear response is
+termed ‘nonlinear optics’, where resonant excitation can hap-
+pen between valence and conduction bands. By frequency
+10
+Rep. Prog. Phys. 88 (2025) 076502 Review
+sum rule, the perturbation frequency is  ̄hω > Eg/2 for SHG or
+ ̄hω > Eg for BPVE as shown in figures 2(a) and (b) to achieve
+this regime.
+When the frequency ω does not satisfy the previous condi-
+tions, yet it is still comparable to the band gap, off-resonant
+optical excitation can still occur. Specifically, for BPVE with
+ ̄hω < Eg, the DC current will not necessarily vanish since off-
+resonant excitation also contributes to the nonlinear response.
+We define this regime where only off-resonant processes con-
+tributes to the DC generation in an insulator as the so-called
+‘subgap response’.
+When the perturbation frequency is further reduced to the
+full DC limit, where also ω approaches zero, the quasiparticle
+lifetime is much shorter than the perturbation period, i.e. ω ≪
+τ −1. This defines the so-called ‘nonlinear transport’ regime
+where a semiclassical (Fermi-surface dominated) phenomeno-
+logy is expected. Since ω → 0, the formerly distinct processes
+SHG and BPVE merge into the same DC response.
+3. BPVE
+The creation of a photocurrent via rectification has a long his-
+tory, but it was not until the works of Kraut and von Baltz [ 78,
+79] that it was realized that the bulk band structure of an
+inversion-symmetry breaking material can give rise to such.
+Phenomenologically, the BPVE can be separated into two
+parts according to their time dependence, namely the injec-
+tion current whose magnitude grows linearly with time and
+the shift current whose magnitude is fixed.
+In a real material, no current can grow indefinitely. Instead,
+injection and shift current are differentiated by their depend-
+ence on quasiparticle lifetime because the injection current
+grows until the quasiparticle decoheres. Thus the quasiparticle
+lifetime cuts off the injection of current into the system and
+making the steady state current proportional to the quasi-
+particle lifetime τ . On the other hand, the shift current is not
+created by this kind of mechanism and thus does not depend
+on τ altogether.
+In the following, we present and compare between the semi-
+classical and quantum perturbative approaches, which have
+been developed in order to rationalize the quantitative prop-
+erties of shift and injection currents (cf figure 5).
+3.1 . Injection and shift current
+The BPVE is a resonant phenomenon. As such, it can be
+interpreted as a sequence of excited intermediate states [ 84]
+(figures 5(a) and (b)). For injection current, let us focus on the
+change in velocity which the transition between valence and
+conduction bands causes. The transition rate of electrons from
+nth band to mth band is determined by Fermi’s golden rule,
+Im←n = 2π
+ ̄h2 |⟨m| − eˆr · E|n⟩|2 δ (ω − εmn) (12)
+where εmn ≡ (εm − εn) and the momentum dependencies have
+been suppressed. Further considering the velocity change
+during the transition ∆c
+nm ≡ vc
+nn − vc
+mm =  ̄h∂kcεnm, the rate of
+increase in current can then be expressed as,
+∂tjc
+inj =
+ˆ
+k
+X
+n∈occ
+m∈unocc
+(−e∆c
+mn) Im←nfnm (13)
+where fnm ≡ fn − fm represents the difference in equilibrium
+Fermi–Dirac distribution function. Since there is a squared
+electric field in the transition rate, we can rewrite it as
+|⟨m|ˆr · E|n⟩|2 = ra
+mnrb
+nmEaEb and read the injection conductiv-
+ity from it,
+σab;c
+inj = −τ 2π e3
+ ̄h2
+X
+nm
+ˆ
+k
+fnm∆c
+mnra
+nmrb
+mnδ (ω − εmn) . (14)
+Because of the ∂t in equation (13), we first get a frequency
+denominator (−i ̄ω) in the injection conductivity, which nom-
+inally diverges for the BPVE (  ̄ω → 0). However, in a real sys-
+tem it is regularized by a finite quasiparticle lifetime which
+shifts  ̄ω →  ̄ω + i/τ and makes the injection current propor-
+tional to τ .
+Similarly, the shift current can be understood as the pos-
+itional shift during the transition. To this end, we first recall
+that the position of a wavepacket center composed ofnth Bloch
+band can be represented by the momentum space integral over
+the Berry connection ⟨ˆr⟩n ≡ ⟨un|i ∇k|un⟩ up to a lattice con-
+stant according to the modern theory of polarization [ 135],
+where |un⟩ is the periodic part of the Bloch wavefunction.
+Therefore, the positional shift during an interband transition
+should contain the difference ⟨ˆr⟩m − ⟨ˆr⟩n, which is, however,
+not invariant under the gauge transformation |un⟩ → eiθn|un⟩.
+To remove this ambiguity, the positional shift has to be cor-
+rected for the interband phase difference, yielding,
+Rc
+mn,a = rc
+mm − rc
+nn + i ∂kc log ra
+mn, (15)
+which is a gauge invariant observable describing the positional
+shift during the interband transition caused by the transition
+dipole ra
+nm.
+The longitudinal shift current can then be expressed as the
+positional shift multiplied by the transition rate Im←n and an
+occupancy factor f nm, i.e.
+jc
+shift =
+ˆ
+k
+X
+n∈occ
+m∈unocc
+
+−eRc
+mn,c
+
+Im←nfnm (16)
+which leads to the corresponding shift conductivity for arbit-
+rary spatial directions in the resonant optical regime, i.e.
+σab;c
+shift = − 2π e3
+ ̄h2
+X
+nm
+ˆ
+k
+fnmra
+nmrb
+mnRc
+mn,aδ (ω − εmn)
++ (a, ω ↔ b, −ω) . (17)
+Since there is one time derivative difference between posi-
+tion and velocity, the factor (−iω) in the denominator of σinj is
+absent in the expression of σshift, which explains the different
+lifetime scaling of both resonances.
+1 1
+Rep. Prog. Phys. 88 (2025) 076502 Review
+Figure 5. Overview regarding the photocurrent creation in inversion-symmetry broken bulk materials. The linear response formulation at
+second order in the electric field can either be approached as a collection of interband corrections to the semiclassical expectations values (a)
+and (b), in terms of the contained quantum geometry (c) and (d), or using diagrammatics (e) and (f). Here, the Feynman diagrams illustrate
+the fact that the time-reversed Green’s functions (propagators) of the clockwise and anticlockwise triangle diagrams will not be identical
+even if all other parameters a kept fixed. Importantly, there is more than one way in which the time-reversal properties can be broken, as we
+elucidate in detail in the text.
+The argument presented above employs the length gauge
+where the perturbation has the form H ′ = −eˆr · E. It is equi-
+valent to the velocity-gauged perturbation H0(k) → H0(k +
+e
+ ̄h A) up to a time-dependent unitary transformation [ 100],
+where the latter one can be formulated easily using Feynman
+diagrams. However, we point out that the expression of
+the shift current based on this ‘transition rate’ ×‘positional
+shift’ only gives the dominant part when resonant trans-
+itions happen. For broad resonances, the complete expres-
+sions based on the Kubo formula for shift conductivity is
+needed [14, 15],
+σab;c
+shift = e3
+ ̄h2
+ˆ
+k
+X
+nm
+fnmra
+nmrb
+mnRc
+mn,a
+ω − εmn + i0+ + (a, ω ↔ b, −ω) . (18)
+Using the formula 1
+x±i0+ = P 1
+x ∓ iπδ(x), it is easy to find
+that the physically motivated formulae equations (14) and (17)
+are the resonant (delta-function) part of the full response.
+On the other hand, the principal parts become important far
+from resonance, where they may provide useful informa-
+tion about the localization and interaction of system’s ground
+state [46, 49].
+3.2. Geometric interpretation
+As we have seen in the previous section, both injection and
+shift conductivity contain matrix elements of the positional
+operator rc
+mn and shift vector Rc
+mn,a, which offer the attractive
+opportunity to draw conclusions about the encoded quantum
+geometry.
+Y et such a geometric interpretation of nonlinear optical
+response is subtle compared to more direct geometric nature
+of the linear order anomalous Hall effect, where the anom-
+alous velocity and Hall current is directly the integral of a
+single geometric quantity, the Berry curvature. In contrast, the
+injection and shift conductivities are related to several geomet-
+ric properties, and multiplied by occupation and dispersion-
+related quantities. Also, unlike Hall current where the geo-
+metric response is completely determined by the ground state
+property, the optical response necessarily involves information
+of both ground state and excited states, making the discussion
+of geometry quite intricate.
+Not surprisingly, the geometric nature of nonlinear optical
+responses has only recently been appreciated, starting with
+the observation that the injection current induced by circu-
+lar polarized light is related to the Berry curvature [ 19]. More
+recently, injection and shift current have been associated with
+the QGT and QC, respectively [ 84].
+The geometric nature of injection and shift current can be
+elucidated through a mathematical formula equivalence (cf
+figure 5). It can also be related with the geometric properties
+of general projected Hilbert space, which becomes a simple
+Bloch sphere in systems with only two bands (figures 5(c) and
+(d)). Alternatively, both resonant responses can be interpreted
+12
+Rep. Prog. Phys. 88 (2025) 076502 Review
+as an interference effect of coherently counterpropagating qua-
+siparticles (figures 5(e) and (f)).
+3.2.1 . Formula equivalence. Since the optical response
+indispensably involves information from both occupied and
+unoccupied states, let us focus on a pair of occupied and unoc-
+cupied bands with a momentum subspace where the transition
+between unoccupied mth band and occupied nth band matches
+the frequency of incident light, i.e. ω = εmn(k). One can then
+define a manifold Sk of optically allowed transitions as Sk ≡
+{k ∈ BZ|ω = εmn(k)}. Similar to the linear order anomalous
+Hall conductivity, which is proportional to the integral of
+Berry curvature over all occupied states, the injection and shift
+current are then proportional to the integral of their corres-
+ponding quantum geometric quantities over Sk.
+Specifically, the injection current is proportional to the
+momentum space integral of QGT Qab =P
+n∈occ
+m∈unocc
+ra
+nmrb
+mn
+over Sk, i.e.
+σab;c
+inj = −τ 2π e3
+ ̄h2 ˆc ·
+ˆ
+ωmn=ω
+d⃗SkQab (19)
+where the Qab is composed of the quantum metric gab
+(real/symmetric part) and Berry curvature Ωab (imagin-
+ary/antisymmetric part), and can be roughly expressed as the
+expectation value of two momentum derivative over Bloch
+states, i.e. ⟨∂k∂k⟩.
+Similarly, [42, 84, 85] found that the shift current is pro-
+portional to the momentum space integral of the QC over Sk,
+i.e.
+σab;c
+shift = − 2π e3
+ ̄h2
+ˆ
+k
+X
+n∈occ
+m∈unocc
+Im
+
+Qc;ab
+mn
+
+δ (ω − εmn) . (20)
+This connection describes how the tangential vector changes
+as it moves along a curved manifold, which in this case
+is the projected Hilbert space. However, a much more in-
+depth analysis reveals that the (interband) QC actually con-
+tains two distinct geometric pieces, one related to the third
+moment of position, while the second piece constitutes torsion
+tensor, a true multi-state quantity which has no ground-state
+equivalent [42, 128].
+3.2.2. Bloch sphere picture. For illustration let us repeat
+the previous analysis for a 2-band system. Then, the projec-
+ted Hilbert space is just a Bloch sphere whose geometry is
+easy to draw (figures 5(c) and (d)). Moreover, there is only
+one pair of occupied and unoccupied bands that contributes to
+the optical response while in general systems all combinations
+of occupied and unoccupied bands may contribute as long as
+ωmn = ω. Most importantly, the unoccupied states are com-
+pletely determined by the occupied states since the remain-
+ing state vector is orthogonal. The Hamiltonian of a general
+2-band system can be described as,
+ˆH0 (k) = d (k) · ⃗ σ+ d0 (k) σ0 (21)
+where σi, i ∈ {1, 2, 3} are Pauli matrices of a generic
+pseudo-spin degree of freedom, and σ0 is the 2 by 2 identity
+matrix. The wavefunction information is completely stored in
+the vector d(k) or equivalently ˆd(k) ≡ d(k)
+|d(k)| , where the eigen-
+states can be defined as polarized states, |u±,k⟩ ≡ | ˆd(k), ±⟩,
+satisfying ˆH0|ˆd, ±⟩ = (d0 ± |d|)|ˆd, ±⟩. The manifold com-
+posed of ˆd forms a unit sphere in R3 space, i.e. the Bloch
+sphere. The wavefunction maps a momentum vector k to a
+point on the Bloch sphere ˆd(k), or equivalently its corres-
+ponding state vector |un,k⟩, assuming the band index n is
+determined. Such a map is analogous to the map from spher-
+ical coordinate x ≡ (x1, x2) = (θ, φ) to the sphere S2. In this
+spherical coordinate map, the metric gμν is defined by the
+squared distance d s2 = gabdxadxb between two close points
+xa and xa + dxa, the curvature Ωab is defined by the oriented
+area of small parallelogram d A = Ωabdxa
+1 ∧ dxb
+2 formed by dxa
+1
+and d xb
+2 near point x, and the connection Qa;bc is defined by
+the shift in the orientation of a basis tangent vectors when
+parallel-transported along certain directions.
+Therefore, in order to discuss the distance between two
+state vectors mapped from k and k + dk in the projected
+Hilbert space, or the area of small parallelogram formed by
+state vector mapped from k and k + dk1 to k and k + dk2,
+or a of the local coordinate frame upon translation from k to
+k + dk, this information is contained in the metric, curvature,
+and connection induced by the map between the BZ and the
+projected Hilbert space.
+Returning to the nonlinear optical resonances, the quantum
+metric and Berry curvature depict the infinitesimal length and
+area which a state travels in the projected Hilbert space, which
+is measured by the injection current. For shift current, the QC
+can be regarded as the change in tangent vector when a given
+state moves adiabatically along the Bloch sphere. Of course,
+the same quantity also represents the shift of the center point
+of a Bloch wave packet in the unit cell. Since the geometric
+understanding of the connection is the shift of the tangent vec-
+tor during parallel transport, the physical understanding of the
+connection in the projected Hilbert space should be as a shift of
+the wavepacket position along certain k-path, thereby recov-
+ering the previously outlined interpretation.
+Nonetheless, we caution against taking the Bloch sphere
+trajectory too literally. First, the Bloch sphere here should
+be considered as an ‘interband’ manifold made up of inter-
+band transition since nonlinear optics inevitably involves one
+unoccupied and one occupied band. Only for two bands such
+an ‘interband’ Bloch sphere actually isomorphic to the usual
+Bloch sphere. Secondly, even when an N-band system is con-
+sidered, the N single-band geometric quantities should be gen-
+eralized to N(N − 1) interband geometric quantities where
+quantum metric, Berry curvature and QC are all redefined for
+pairs of bands made up of mth and nth index, which means
+that a suitable generalized Bloch sphere grows rapidly in
+dimension [42, 84, 128].
+13
+Rep. Prog. Phys. 88 (2025) 076502 Review
+3.3. Destructive interference
+In weakly disordered system, the weak localization mechan-
+ism features a constructive interference between two time-
+reversed paths, which maximizes the probability amplitude at
+the origin where the wavepacket starts to move. Therefore,
+a wavepacket has an enhanced probability to stay at its ori-
+ginal position, indicating the tendency towards localization.
+However, breaking time-reversal symmetry, for example by
+magnetic impurities, destroys the constructive interference at
+the origin, thus increasing the mobility of charge carriers in an
+effect termed weak anti-localization.
+A similar argument can be applied to explain the physical
+origins of the injection and shift current: If the response breaks
+time-reversal symmetry, two time-reversed diagrams cannot
+interfere constructively, thus the electron can become deloc-
+alized and contribute a nonzero conductivity. The destructive
+interference results from in-equivalent time-reversed closed
+trajectories, which can be caused by two mechanisms. One
+comes from the inequivalence in distance and area, the other
+comes from the inequivalence caused by local direction (cf
+figures 5(e) and (f)).
+Taking injection current as an example, the appearance of
+injection current can be regarded as the inequivalence of time-
+reversal counterpart Feynman diagram because of nontrivial
+quantum metric and Berry curvature. From diagrammatic lan-
+guage, the 2 closed trajectories in the triangular diagrams are
+related by time-reversal (denoted by ö and œ, respectively)
+and contribute,
+σab;c
+△;ö + σab;c
+△;œ = e3
+ ̄h2ω2
+X
+n,m,l
+ˆ
+k
+fnm
+ω + εnm + i0+
+×
+ va
+nmvb
+mlvc
+ln
+ ̄ω + εnl + i0+ − va
+nmvc
+mlvb
+ln
+ ̄ω + εlm + i0+
+
++ (a, ω ↔ b, −ω) . (22)
+Using that  ̄ω = 0, the summation of time-reversal counter-
+part diagrams gives,
+1
+ω + εnm − i0+ − 1
+ω + εnm + i0+ = 2π iδ (ω + εnm) (23)
+which corresponds to the energy conserving delta function in
+the ‘transition rate’ ×‘velocity/position shift’ -based physical
+interpretation. Because of the delta function, one can substitute
+ω with εa
+mn which changes va
+nm into ra
+mn by va
+mn = i εnmra
+nm. This
+yields the same expression as equation ( 14) as we derived in
+section 3.1.
+The two transition dipoles indicate a proportionality to
+QGT. Such an incomplete cancellation is caused by the non-
+trivial distance and area property on the projected Hilbert
+space. Similarly, the shift current can also be regarded as
+caused by destructive interference between two time-reversal
+counterparts via the nontrivial nonparallelism of the projected
+Hilbert space, which manifests the QC of the system. The lat-
+ter mechanism is much weaker because time-reversal is broken
+only in terms of the rectified current, i.e. an inverted traject-
+ory is not guaranteed to trace out the same positions, while
+velocity and distances are equal for both directions. Of course,
+we hasten to note that the analogy with weak anti-localization
+works in some features, but fails for others. For example, non-
+linear responses do not entail any resummation over repeated
+perturbations up to infinite order.
+Altogether, the physical interpretation by a ‘transition
+rate’×‘velocity/positional shift’ argument, the geometric
+interpretation via a Bloch sphere picture, as well as the inter-
+pretation via quantum interference provide a complete and
+versatile understanding of the nonlinear optical response in
+both physical and quantum geometric aspects. This shows the
+power of quantum geometry in re-imagining convoluted per-
+turbation expressions, which can help us develop new avenues
+towards measuring quantum geometry or, conversely, sharpen
+the predictions regarding nonlinear response functions.
+3.4. Symmetry separation
+We have shown in nonlinear optical regime that the total cur-
+rent response can be separated into the injection and shift cur-
+rent, which are further linked with different quantum geomet-
+ric quantities. However, the current response always comes as
+a whole, which makes the investigation of a specific kind of
+quantum geometric quantity difficult. As we explain hence-
+forth, such difficulties can be bypassed by exploiting different
+symmetry constraints, which include the intrinsic permutation
+symmetry of the nonlinear conductivity tensor and the sym-
+metry of the material’s microscopic Hamiltonian.
+Regarding the permutation symmetry of nonlinear conduct-
+ivity tensor, it essentially boils down to inducing bulk photo-
+voltaic currents with different spatial configurations of the per-
+turbing electromagnetic field, i.e. linearly polarized light vs
+circularly polarized light. As detailed in appendix B.2, the
+BPVE induced by linearly polarized light is proportional to
+the symmetric part of the conductivity tensor σ(a,b);c while
+the difference in the current induced by left and right handed
+circularly polarized light is proportional to the antisymmetric
+part of the conductivity tensor σ[a,b];c. Since the conductivity
+tensor and their corresponding quantum geometric quantities
+share the same symmetry, we can expect linearly polarized
+light to single out the contribution of quantum metricgab in the
+injection current as well as the contribution of symplectic QC
+Qa;(b,c) in the shift current, while the circular BPVE extracts
+those of Berry curvature Ωab and Christoffel symbol of 1st
+kind Qa;[b,c], as shown in table 1.
+Regarding the symmetry of the bulk material, the most
+important two symmetries are spatial inversion ( P, parity)
+and time-reversal (T ). As mentioned, P symmetry renders the
+second order current jc( ̄ω) = σab;c( ̄ω; ω1, ω2)Ea(ω1)Eb(ω2)
+zero since P changes the sign of current jc( ̄ω) yet leaves EaEb
+invariant. With respect to T , the shift current jshift and the
+injection current ∂tjinj possess opposing symmetry properties,
+similar to the behavior of velocity and acceleration under T .
+Such distinct T -symmetry properties of different nonlinear
+responses result from different symmetry properties of their
+corresponding quantum geometric quantities under T trans-
+formation. Therefore, Berry-curvature-, quantum-metric-, and
+14
+Rep. Prog. Phys. 88 (2025) 076502 Review
+quantum-connection-related conductivities are also expec-
+ted to be separable by T and other magnetic point group
+symmetries.
+To be more specific, T transformation of injection con-
+ductivity (equation (14)) and shift conductivity (equation (17))
+require time-reversal transforming all corresponding matrix
+elements. As further explained in the appendix B.3, we have
+fT ,nm(k) = −fmn(−k), va
+T ,nm(k) = −va
+mn(−k), ∆c
+T ,mn(k) =
+∆c
+nm(−k), Rc
+T ,mn,a(k) = −Rc
+nm,a(−k), εT ,nm(k) = εnm(−k).
+Substituting these results into the expression of injection
+conductivity yields σab;c
+T ,inj(ω) = −σab;c
+inj (−ω) and σab;c
+T ,shift(ω) =
+σab;c
+shift(−ω). Also as detailed in appendix B.1, a real-valued
+physical response further imposes an intrinsic permuta-
+tion symmetry on conductivity tensor, i.e. σab;c
+inj/shift(−ω) =
+σba;c
+inj/shift(ω). Furthermore, time reversal symmetry enforces the
+constraint σab;c
+inj/shift(ω) = σab;c
+T ,inj/shift(ω), which implies,
+σab;c
+inj (ω)
+T
+= −σba;c
+inj (ω) , σ ab;c
+shift (ω)
+T
+= σba;c
+shift (ω) . (24)
+The real-valued dc current requires the second order BPVE
+conductivity to be symmetric in the real part, which there-
+fore contributes to the response for linear polarization, while
+the imaginary part contributes to the circular polarized light
+response, giving rise to circular dichroism, i.e. the difference
+in currents induced by left and right handed circularly polar-
+ized light (cf appendix B.2). Based on this analysis, it becomes
+obvious why in T -symmetric system the injection current can
+only be induced by circular polarized light. Along the same
+lines, one can show that in T -symmetric systems the shift cur-
+rent is induced by linear polarized light.
+With respect to the combined symmetry transformation
+of space-time inversion ( PT ), which induces another (−1)3
+factor because of the P transformation on 3 spatial indices,
+the situation is reversed, i.e.
+σab;c
+inj (ω)
+PT
+= σba;c
+inj (ω) , σ ab;c
+shift (ω)
+PT
+= −σba;c
+shift (ω) . (25)
+Therefore, in PT -symmetric system the resonant responses
+exchange roles, i.e. current injection is induced by linear polar-
+ized light while the shift current forms in response to circular
+polarized light [44, 45].
+More general magnetic point group symmetries lead to
+more subtle constraints [ 102]. For example, C2zT symmetry
+acts like T symmetry on the z axis while acting like PT
+symmetry on the x–y plane. This will cause a separation of
+the response in the material based on spatial direction. For
+instance, linear polarized light can only induce shift currents
+along z-direction while inducing injection current in the x–y
+plane. Similar response separation effects based on the effect-
+ive symmetry in a certain sub-direction or sub-plane, are sum-
+marized in table 4.
+As a corollary of these symmetry considerations, we point
+out that magnetic systems with low internal symmetry gener-
+ically exhibit both injection and shift current.
+Table 4. Effective symmetry of (magnetic) point groups along
+different spatial directions. I represents identity transformation,
+while Pxy and Pz represents spatial inversion only in x–y plane and
+z-axis, which renders all 2nd order charge current response in that
+sub-direction or sub-plane zero.
+C2z C3z C4z C6z Mz C2zT C 3zT C 4zT C 6zT M zT
+x–y Pxy C3z Pxy Pxy I PxyT T P xy PxyT T
+z I I I I Pz T T T T P zT
+3.5. Extrinsic photocurrents
+Besides the response created by the bulk band structure, a
+number of extrinsic effects of nonlinear photocurrent gen-
+eration have been investigated. Historically, these are usu-
+ally known as ballistic currents [ 69], which arise in the
+driven steady state alongside the shift current, mostly due
+to phonon-assisted relaxation [ 87, 136–139], and which have
+been observed experimentally [140]. Another important factor
+outside the purview of the non-interacting band structure are
+excitonic in-gap states [ 141–143]. Scattering can also lead to
+additional AC-DC effects [ 144], and even facilitate a reverse
+BVPE which converts DC current into an AC signal, known as
+the gyrotropic Hall effect [ 145]. Compared to intrinsic contri-
+butions, less is known about the underlying quantum geometry
+of extrinsic photocurrent generation, but recent progress [ 87]
+suggests that generalized shift vectors can be constructed
+which account for the changes in the Bloch wave function in
+diagonal transitions which can involve different energies or
+momenta due to extrinsic scattering and are related to both the
+diagonal and off-diagonal components of the Berry curvature.
+4. Finite lifetime and subgap response
+When the frequency is smaller than the bandgap, in an insu-
+lator one might expect the DC response to vanish, as reson-
+ant interband transitions are no longer possible [ 146–148].
+However, as it turns out in magnetic materials the second order
+response is not entirely extinguished [ 46–48, 149]. To appre-
+ciate this aspect, let us point out that the derivation of the non-
+linear optical resonances as detailed in the previous sections
+implicitly assumes a clean limit, where the only lifetime effect
+is to broaden the resonance peak (i.e. the response consists
+entirely of regularized delta-functions). Not contained in such
+an approach are broad features in the response which contrib-
+ute an off-resonant background that is unavoidably present in
+second order responses. Indeed, in the most general case the
+subgap response remains nonzero and offers a valuable avenue
+for probing the effects of finite lifetimes, as well as the inter-
+action and localization mechanisms underlying the system.
+4.1 . Introduction of two lifetimes
+As alluded to in the introduction, from the nonlinear Kubo
+expressions it is expected that both interband and intraband
+lifetimes impact the conductivity [ 46]. Phenomenologically,
+on one hand nonlinear optical responses are entirely derived
+15
+Rep. Prog. Phys. 88 (2025) 076502 Review
+from resonant interband transitions. On the other hand, nonlin-
+ear transport probes the adiabatic regime where the frequency
+is so small that only intraband transitions matter. It is then
+logical that an intermediate crossover regime exists where the
+frequency is neither resonant to interband nor intraband trans-
+itions and both two lifetimes matters.
+On a formal level, compared to implementing a simple
+lifetime broadening in all Green’s functions G(ω) → G(ω +
+i/(2τ )), in a multiband setting it is worthwhile to consider
+several, band-specific broadening factors. For example, when
+comparing conduction band and valence band electrons, one
+can immediately deduce from their respective density of states
+that a more dispersive band will exhibit weaker disorder scat-
+tering, thus giving rise to dissimilar lifetimes. This holds true
+even before taking into account orbitally selective interac-
+tion or disorder effects. If the quasiparticle excitations are rel-
+atively long-lived, one can assume that each decay process
+is statistically independent. In that case, staying within the
+two-band picture, the interband and intraband lifetime can be
+related to individual lifetimes from conduction and valence
+band through Matthiessen’s Rule, i.e.
+τ −1
+inter = (2τc)−1 + (2τv)−1 (26)
+τ −1
+intra = (2τv)−1 + (2τv)−1 . (27)
+Two physically important cases can be distinguished. In the
+optical regime ( ωτ ≫ 1), the quasiparticles in the conduction
+and valence band are both on-shell, carrying their respective
+microscopic lifetimes τ c and τ v, which can lead to a nonlin-
+ear subgap response with a substantial amplitude and distinct
+frequency-dependence.
+On the other hand, in the transport regime ( ωτ ≪ 1), the
+transport problem becomes entirely restricted to the low-
+energy regime close to the Fermi level. In the latter case, it
+becomes important to enforce charge conservation in the low-
+energy sector. Mainly, this means that electrons which are
+(virtually) excited to the conduction band should not decay
+within the excited band but instead return to the valence
+band unperturbed, because otherwise the state is lost for
+the low-energy description. This requirement is straightfor-
+wardly implemented in the Feynman diagrammatic formalism
+by choosing τv/τc → 0, which provides a natural transition
+from the optical regime to the transport regime. As outlined
+below, this approach can yield all key results of the intrinsic
+nonlinear transport such as the NLD response, BCD, and
+QMD—findings that align with those derived from a semiclas-
+sical Boltzmann formalism. Moreover, the quantum-coherent
+treatment extends beyond the capabilities of a semiclassical
+approach. On the other hand, a real material might violate the
+condition τv/τc → 0, in which case a more elaborate quantum
+kinetic ansatz must be pursued.
+4.2. Subgap responses
+In subgap regime, the separation of the injection and shift
+current is no longer guaranteed because the response is
+completely off-resonant. Y et it still makes sense to discuss
+both off-resonant parts separately and see how they merge
+upon lower the drive frequency.
+To make progress, the perturbation theory needs to be mod-
+ified to include finite lifetimes such that they account for inter-
+band and intraband processes. To this end, the poles in the
+response functions are adjusted such that ω − εmn is replaced
+either by by ω − εmn + i τ −1
+inter for the case n ̸= m, which rep-
+resents the interband transition. Conversely, in the case n = m
+representing intraband transitions, it is replaced by ω − εnn +
+i τ −1
+intra. For sake of clarity, let us focus on the longitudinal
+response, i.e. a = b = c. The leading-order, off-resonant con-
+ductivity in a time-reversal breaking compound is then [ 49],
+σaa;a
+inj + σaa;a
+shift ≈ − e3
+ ̄h2ω2
+ 2
+α − 1
+X
+nm
+ˆ
+k
+fnm|ra
+nm|2∆a
+nm (28)
+where a lifetime dependence enters through the parameter
+α = τinter/τintra. For large enough frequencies, typically near
+the band edge, the subgap signal is still sufficiently strong.
+Since the value of α depends on the microscopic lifetimes in
+the system, this subgap signal thus offers a window into the
+short-time dynamics across the band gap. On the other hand, as
+ω decreases, charge conservation enforces that τinter → 2τintra,
+hence α → 2 and the off-resonant ac conductivity thus tends
+to zero very quickly inside the gap.
+5. Nonlinear transport
+The charge conductivity at linear order famously carries an
+anomalous Hall effect which is due to a modification of the
+semiclassical equation of motion by the Berry curvature. The
+Berry curvature is a ground state property which encodes
+the self-rotation of the corresponding Bloch state. Crucially,
+while the Berry curvature is a ground state property, it can
+only assume nonzero values if the band structure entails more
+than a single band. Therefore, the anomalous motion which
+is induced by the Berry curvature is clearly a multi-band
+effect, seemingly depending on the entire band structure, des-
+pite the fact that the wavepacket propagation itself exclus-
+ively involves states close to the Fermi surface. This apparent
+contradiction is resolved by noting that quantum-mechanical
+operators can acquire renormalized expectation values due to
+virtual (interband) fluctuations.
+The same guiding principles regarding anomalous compon-
+ents of the motion can be applied in the nonlinear regime.
+Nevertheless, semiclassically it is tough to capture all pieces
+of the anomalous motion at second order in the electric field,
+depending on which operators are modified in the semiclas-
+sics [50, 51, 62, 64, 90, 150]. Starting from the finite-frequency
+expressions and performing a low-frequency expansion is like-
+wise a subtle endeavor [37, 49, 129] because the limit ωτ → 0
+has to be taken while keeping τ < ∞. Even though all recent
+works agree that the nonlinear dc-conductivity has three major
+components, i.e. nonlinear Drude , Berry curvature dipole ,
+and quantum metric dipole (cf figure 6), it is no surprise that
+16
+Rep. Prog. Phys. 88 (2025) 076502 Review
+Figure 6. Physical features of nonlinear charge transport, which
+couples to the average acceleration of the wavepacket motion. The
+kinetic and anomalous parts of the motion can be understood either
+in terms of semiclassical renormalizations to the Fermi velocity and
+Berry curvature, or as deformations of the semiclassical
+wavepacket. Finally, the triangle diagram gives rise to a triangle
+anomaly which is of the mixed axial-gravitational type and results
+in a longitudinal nonreciprocity in the current on the level of the
+quantum metric dipole.
+varying predictions have been made regarding the coefficients
+and signs of the respective dc-conductivity terms [ 45, 52,
+64, 65, 150, 151]. In the following, we present a particularly
+simple perspective which emerges based on the renormalized
+kinetic approach as well as Kubo formalism.
+5.1 . Berry curvature and quantum metric dipole
+We first elucidate within the renormalized kinetic approach
+how nonlinear order anomalous transport including BCD and
+QMD arise. Semiclassically, the current density in a material
+can be expressed as:
+j = −e
+X
+n
+ˆ
+k
+fnvn (29)
+where fn is the (non-equilibrium) distribution function of the
+nth band, va
+n is the velocity of the nth band in a-direction.
+Momentum arguments will be suppressed throughout in this
+section.
+The external electric field E is considered as the perturba-
+tion to the system, under which the evolution of the distribution
+function fn(r, k, t) follows the Boltzmann transport equation,
+i.e.
+∂tfn − e E
+ ̄h · ∇kfn + v · ∇rfn = − fn − f(0)
+n
+τ , (30)
+where τ is the transport relaxation time and f(0)
+n is the equilib-
+rium distribution function of nth band, i.e. Fermi–Dirac dis-
+tribution function. Under the assumption of a steady-state and
+spatially uniform system, time and spatial derivative terms can
+be excluded in equation ( 30) and the distribution function can
+be solved perturbatively by expanding with respect to the amp-
+litude of electric field: fn = f(0)
+n + f(1)
+n + f(2)
+n + . . ., whose solu-
+tion yields f(l)
+n =
+ eτ
+ ̄h E · ∇k
+l
+f(0)
+n .
+Crucially, a determination of the current (equation ( 29))
+also requires an expansion of vn with respect to the perturb-
+ation. The velocity of an electron in nth band is given by the
+semiclassical equation of motion [ 135], which also holds at
+nonlinear order [ 51, 62]:
+vn = 1
+ ̄h ∇kεn − e
+ ̄h E × Ωn. (31)
+The first term 1
+ ̄h ∇kεn represents the normal group velo-
+city of semiclassical wavepacket, which only depends on the
+energetics of band. The second term captures the anomal-
+ous contribution due to Berry curvature Ωn. Under the per-
+turbation of electric field ˆH ′ = −eˆr · E, the band dispersion
+εn and the wavefunction |un⟩ as well as the Berry curvature
+Ωn will be renormalized. They can also be formally expan-
+ded with respect to E, denoted as εn = ε(0)
+n + ε(1)
+n + ε(2)
+n + . . .
+and Ωn = Ω(0)
+n + Ω(1)
+n + Ω(2)
+n + . . ., which further results in
+a renormalized velocity expanded as vn = v(0)
+n + v(1)
+n + v(2)
+n +
+. . ., where v(l)
+n = 1
+ ̄h
+∂ε(l)
+n
+∂k − e
+ ̄h E × Ω(l−1)
+n . The renormalized dis-
+persion and Berry curvature can be determined in perturbation
+theory by a Schrieffer–Wolff (SW) transformation as detailed
+in appendix D.1.
+After inserting the renormalized quantities, the charge cur-
+rent and the corresponding conductivity can be evaluated at
+arbitrary order. Specifically, linear order and second order cur-
+rent densities have the form,
+j(1) = −e
+ˆ
+k
+X
+n
+f(1)
+n v(0)
+n + f(0)
+n v(1)
+n (32)
+j(2) = −e
+ˆ
+k
+X
+n
+f(2)
+n v(0)
+n + f(1)
+n v(1)
+n + f(0)
+n v(2)
+n . (33)
+For linear order current, these are the well-known Drude
+term ( ∝ f(1)v(0)) and the anomalous velocity term ( ∝ v(1)),
+where the former is proportional to relaxation time τ because
+of linear order change in distribution function f(1) while the
+anomalous velocity term does not carry an explicit depend-
+ence on the relaxation time τ .
+Similarly in the second order response, NLD term, BCD,
+and QMD can be differentiated by their relaxation time
+dependences, which originate from different ordered perturb-
+ation on the distribution function as shown in figures 6(a)–
+(c). After substituting the expression of renormalized velo-
+city, the 2nd order transport conductivity then becomesσab;c ≡
+σab;c
+NLD + σab;c
+BCD + σab;c
+QMD, where each piece is given by [ 45, 50–
+53, 62, 64, 65, 150, 151]
+17
+Rep. Prog. Phys. 88 (2025) 076502 Review
+σab;c
+NLD = − e3τ 2
+ ̄h3
+X
+n
+ˆ
+k
+fn∂a∂b∂cεn (34)
+σab;c
+BCD = e3τ
+ ̄h2
+X
+n
+ˆ
+k
+fn
+1
+2
+
+∂aΩbc
+n + ∂bΩac
+n
+
+(35)
+σab;c
+QMD = − e3
+ ̄h
+X
+n
+ˆ
+k
+fn
+
+2∂cGab
+n − 1
+2
+
+∂aGbc
+n + ∂bGac
+n
+
+.
+(36)
+Here, the conductivities are already written exclusively in
+terms of equilibrium band structure properties, i.e. all quantit-
+ies are evaluated in the ground state and carry the superscript
+□(0). Namely, this includes the equilibrium dispersion εn and
+occupation function fn for band index n, as well as the band-
+resolved Berry curvature Ωab
+n and band-resolved, normalized
+quantum metric Gab
+n , defined as
+Ωab
+n =
+X
+m̸=n
+
+ra
+nmrb
+mn − rb
+nmra
+mn
+
+(37)
+Gab
+n =
+X
+m̸=n
+ra
+nmrb
+mn + rb
+nmra
+mn
+εnm
+. (38)
+Both Ωab
+n and Gab
+n are gauge invariant and contain only one
+band index n, which means they are proper low energy quant-
+ities. Of course, their definitions entail a sum over all other
+bands, clearly identifying them as virtual interband contri-
+butions. Additionally, we emphasize that Gab
+n depends expli-
+citly on the dispersion, which means that it cannot be purely
+geometric—it is necessarily a mixed property of the system.
+This has to be seen in distinction to the Berry curvature Ωab
+n ,
+which only depends on the wavefunctions.
+We reiterate that NLD, BCD and QMD are each measurable
+independently, and can for example be isolated by their life-
+time dependence [66, 67]. We also mention that Kubo formal-
+ism with two lifetime has been shown to reproduce the NLD,
+BCD, and QMD terms [49], for further details cf appendixD.3.
+5.2. Geometric interpretation and quantum anomaly
+In the same way that the linear conductivity measures the semi-
+classical mobility (drift velocity) of a wavepacket, the second-
+order conductivity couples to the average acceleration that the
+wavepacket is exposed to [ 152]. In particular, the anomalous
+components created by the BCD and QMD encode an anomal-
+ous acceleration which is created due to the intra-unit cell vari-
+ation of the electron density that exerts forces on the extended
+wavepacket which are not locally compensated all the time,
+thus deforming the propagating state. This view is also com-
+pletely in line with the observation that the BCD and QMD
+derive from virtual interband transitions, i.e. they originate
+from (virtual) changes of the total wavefunction, thus deform-
+ing the real-space charge distribution.
+This intuition can be made precise upon turning the non-
+linear dc-conductivity according to equations ( 34)–(36) into
+an integral over the Fermi surface by partial integration. Then,
+the NLD term reads as a Fermi surface average over the k-
+local effective mass of the quasiparticle, and thus measures
+the skewness of the drift motion (cf figure 6(d)). Similarly,
+the BCD weighs the Berry curvature on the Fermi surface
+along the electric field directions, which results in an angular
+momentum mismatch (figure6(e)). Finally, the QMD accounts
+for the imbalance in the shift of the dispersion, which will
+deform the local Fermi surface geometry, and thus the wave-
+packet (figure 6(f)).
+The fact that anomalous components of the motion derive
+from virtual interband excitations also constitutes the phys-
+ical mechanism for semiclassical manifestations of quantum
+anomalies, for example for the chiral anomaly in Weyl semi-
+metals [ 8, 153, 154]. A quantum anomaly denotes the non-
+conservation of a charge even though it is conserved by the
+classical action. The reason is that the measure in the quantum
+statistical partition function is not invariant under the cor-
+responding symmetry. One could say more sloppily that the
+quantum fluctuations enable additional transitions which are
+classically forbidden and which break the conservation law.
+Quantum anomalies are frequently induced by triangle dia-
+grams, so it is no surprise that the triangle diagram of the non-
+linear conductivity gives rise to the mixed axial-gravitational
+anomaly [103], which is normally only accessible in the pres-
+ence of a temperature gradient [ 155–157]. The mixed axial-
+gravitational anomaly results from a shift in the absolute value
+of the free energy, and thus of the chemical potential. Such
+a shift is supplied by the renormalization of the dispersion
+in the QMD response, leading to a non-conservation of the
+momentum-local neighborhood of a given point on the Fermi
+surface. For illustration, consider a very simple band struc-
+ture with two Fermi pockets. If the QMD is nonzero, it can
+for example move one Fermi pocket up in energy, and one
+down, which conserves total charge in accordance with the
+global electrostatic requirements. However, the semiclassical
+continuity equations for each of these (shifted, displaced and
+resized) Fermi pockets will then be anomalous, allowing for
+a small leakage current between them. Completely analogous
+to the more well-known chiral anomaly, this leakage current
+cannot be removed entirely unless one assumes that the scat-
+tering between both Fermi pockets is very strong [ 103, 153],
+which is the origin of the longitudinal QMD current.
+5.3. Beyond semiclassics
+In a band insulator, the Fermi surface contributions to the
+conductivity (equations ( 34)–(36)) vanish. It is a question of
+fundamental interest whether it is nonetheless possible for a
+NQAHE to exist. This holds true in particular because it is
+widely appreciated that at linear order the quantum Hall effect
+and the QAH effect are highly analogous in terms of the trans-
+port properties and quantized edge channels [ 135, 158].
+This question has recently been answered in the posit-
+ive [92]; a NQAHE can indeed arise both in time-reversal sym-
+metric systems as well as in magnetic insulators, provided that
+the band structure does not possess any spatial symmetries.
+The latter property may be due to an intrinsically low internal
+symmetry, or could be induced by strain.
+Given these circumstances, the NQAHE current is then
+j = E × σNQAHE, where σNQA is linear in electric field
+18
+Rep. Prog. Phys. 88 (2025) 076502 Review
+Table 5. Symmetry properties of nonlinear transport, listed for the
+basic symmetry operations as explained in table 1. Checkmarks
+denote allowed response types. A special case is the BCD for C3z
+symmetry (denoted by the star), which is symmetry forbidden for all
+in-plane (x–y plane) components, but allowed for out-of-plane
+directions. Cyclic permutations of the indices are an inherent
+symmetry only for the NLD term.
+Symmetry P T PT C 3z (a ↔ b ↔ c)
+Nonlinear Drude term 8 8 4 4 Inherent
+Berry curvature dipole 8 4 8 8 ∗ Absent
+Quantum metric dipole 8 8 4 4 Absent
+and defined as
+σa
+NQAHE = e2
+ ̄h
+X
+n
+ˆ
+k
+εabcfn
+ Ab
+ε , vc + Sc + Ωc
+
+nn
+. (39)
+The effect arises due to three operator renormalizations which
+are all linear in the electric field and which are related to,
+respectively, a velocity shift v, a positional shift S and finally
+a Berry curvature shift Ω (cf appendix D.3).
+Even though the NQAHE effect typically leads to a rather
+small correction to the quantized response, it is nonetheless
+noteworthy for the fact that it can even appear in a time-
+reversal-breaking insulator with zero Chern number at linear
+order. Furthermore, the appearance of σNQAHE shows that the
+close agreement between Quantum Hall and QAH phenomen-
+ology does not extend to all orders in the applied field. This
+does make sense based on the fact that the Quantum Hall effect
+is exactly linear in electric field, while such a property cannot
+be expected from a dispersive band structure.
+5.4. Symmetry separation
+Similar to nonlinear optics, it is also possible to utilize the per-
+mutation symmetry of the dc conductivity tensor and the sym-
+metry of the material to separate the NLD, BCD, and QMD
+contributions as detailed in table 5.
+Regarding the role of inversion (P), time-reversal (T ), and
+parity-time reversal (PT ) symmetries, let us reiterate that P-
+symmetry disables all 2nd order charge current responses (cf
+section 3.4). Regarding T - and PT -symmetry, as further elu-
+cidated in appendix D.2, both NLD and QMD are odd under
+time reversal transformation, while BCD is even. Therefore,
+NLD and QMD can only be present in magnetic systems
+where T is broken, while the BCD will be excluded in PT -
+symmetric materials such as antiferromagnets.
+Regarding pure rotational symmetries, although all 2nd-
+order conductivity tensors share the same rotational trans-
+formation properties, it is still possible to distinguish BCD
+from NLD and QMD by C3z-symmetry. The reason is that
+C3z-symmetry connects a pure Hall (transverse) conductivity
+to a longitudinal component while BCD is a pure transverse
+response, i.e.
+σyy;x
+BCD
+C3z
+= −σxx;x
+BCD = 0. (40)
+For magnetic point group symmetries such as CnT and
+MT , we expect a separation of responses based on spatial
+directions, similar to the behavior in the optical regime. For
+instance, a MzT system is effectively T -symmetric in x–y
+plane while being PT -symmetric in z-direction. Then in x–
+y plane only BCD is allowed while in z-direction, only NLD
+and QMD is allowed. Such separation of responses can also
+be found for other (magnetic) point group symmetries. Their
+effective symmetries in different sub-directions are detailed in
+table 4.
+Regarding the permutation symmetry of the conductivity
+tensor, unlike in optical regime where nonlinear conductivity
+can generally have both symmetric ( σ(a,b);c) and antisymmet-
+ric (σ[a,b];c) part, the transport conductivity must be symmetric
+when imposing (a ↔ b) permutation since ω → 0 eliminates
+the difference between ω and −ω upon exchange of the spatial
+indices of the electric field (cf appendix B.1.3). Additionally,
+NLD has a fully permutation symmetry (a ↔ b ↔ c) since
+σab;c
+NLD ∝
+ ́
+k ∂a∂b∂cεk, which is notably absent in both BCD
+and QMD. Therefore, even though NLD and QMD are both
+present in a PT -symmetric system and contribute to both
+the nonlinear Hall (transverse) and the longitudinal (nonre-
+ciprocal) current, it is still possible to isolate certain pieces
+by mixing and matching spatial components, for example to
+distill the quantum metric effect [ 103]. This can be achieved
+by measuring both transverse conductivity (e.g. σyy;x) and off-
+axis conductivity (e.g. σxy;y) with the transport setup shown
+in figure 3(b). Specifically, NLD contributes the same to both
+two conductivity components, while QMD generally does
+not, i.e.
+σyy;x
+NLD = σxy;y
+NLD, σ yy;x
+QMD ̸= σxy;y
+QMD. (41)
+5.5. Extrinsic effects
+Finally, we emphasize that the dc-conductivity as given by
+equations ( 34)–(36) only contains anomalous pieces due to
+virtual interband processes. Additionally, there exist extrinsic
+contributions due to quasiparticle scattering from impurities,
+phonons, and collective modes. Qualitatively speaking, the
+anomalous intrinsic parts of the motion are the result of virtual
+(i.e. vertical) transitions involving different energies, while
+extrinsic scattering leads to on-shell (horizontal) transitions
+involving more than one momentum.
+In close analogy to processes found for the first-order
+extrinsic mechanisms [ 72, 118], nonlinear skew-scattering
+and side-jump have been identified as major sources of the
+extrinsic conductivity [ 121, 124]. Additionally, quantum kin-
+etic approaches have discovered genuine second-order relaxa-
+tion paths [56, 119, 122, 123, 159, 160]. The study of the role
+of quantum geometry in such extrinsic processes is still in its
+infancy, partially because the response function will invariably
+depend on the microscopic details of the impurities or collect-
+ive modes. However, some results are known. For example, in
+case of a simple potential scatterer, skew and side-jump at lin-
+ear order can be connected to the Pancharatnam phase [ 161].
+Extrinsic processes often lead to currents comparable in
+size to intrinsic ones and can by no means be neglected
+19
+Rep. Prog. Phys. 88 (2025) 076502 Review
+unless some symmetry arguments exist which suppress them
+or render them zero (cf for example [ 45, 72]). Nevertheless,
+similar to Hall responses at linear order, recent works have
+successfully disentangled intrinsic and extrinsic contribu-
+tions [ 66, 67] by investigating the temperature scaling of the
+nonlinear Hall conductivity versus the linear longitudinal con-
+ductivity squared, which removes the leading order lifetime
+dependence and thus helps to highlight the anomalous com-
+ponents of the conductivity.
+6. Summary
+In this review, we elucidated the rich structure of nonlinear
+charge responses using several, mutually complementing con-
+cepts. The development of these concepts has been ignited and
+fueled by rapid experimental progress, fertilizing a profound
+reevaluation of the established intuition regarding the semi-
+classical electron motion in the bulk solid and culminating in
+the prediction of a range of novel nonlinear effects. At the same
+time, the multi-faceted nature of the electron motion beyond
+linear order has proven indispensable in the exploration and
+characterization of modern layered and engineered quantum
+materials, in particular in moving the observational techniques
+towards measuring features of quantum geometry in nonlinear
+quantum materials.
+Looking forward, we firmly believe that further progress
+can be expected from a close collaboration between experi-
+mental and theoretical efforts. Currently, most theory estim-
+ates are made a posteriori because it remains a major challenge
+to render ab-initio models as well as effective low-energy
+models quantitative and predictive. Only a joint theoretical/
+experimental effort can reduce these uncertainties and estab-
+lish protocols to isolate certain materials properties in tractable
+fashion.
+On the other hand, quantum geometry is rapidly devel-
+oping into a valuable tool for a range of condensed matter
+questions [1, 2], for which multicomponent/tensorial response
+functions are the primary observational probe. The versatil-
+ity of the concepts reviewed here have already sparked several
+adjacent developments. For example, using similar methods
+and language, it is possible to study nonlinear features with
+added magnetic field [ 51, 139, 162]. Furthermore, extensions
+exist for charge transport at third order in the field [ 132, 133],
+which is relevant in monolayer graphene [ 97, 98] and in alter-
+magnets [134].
+Zooming out, as this review powerfully demonstrates it is
+worthwhile and insightful to explore nonlinear response func-
+tions because they give rise to genuine new effects that can
+be connected not only with material-specific features, but also
+with fundamental concepts at the very core of condensed mat-
+ter physics.
+Data availability statement
+No new data were created or analysed in this study.
+Acknowledgments
+We thank Daniel Kaplan for fruitful discussions. T. H
+acknowledges financial support by the European Research
+Council (ERC) under grant QuantumCUSP (Grant Agreement
+No. 101077020). B Y acknowledges the financial sup-
+port by the European Research Council (ERC Consolidator
+Grant ‘NonlinearTopo’, No. 815869) and the Israel Science
+Foundation (ISF: 2932/21, 2974/23)
+Appendix A. Notations
+Let us briefly introduce the rationale and language behind non-
+linear conductivities.
+A.1 . Conventions for Fourier transforms
+∂a ≡ ∂
+∂ka
+,
+ˆ
+[dω] ≡
+ˆ
+dω
+2π ,
+ˆ 
+dDk
+
+≡
+ˆ
+dDk
+(2π)D . (A1)
+For a time-dependent physical quantity O(t), we define its
+Fourier component O(ω) as,
+O (t) =
+ˆ
+[dω] e−iωtO (ω) , O (ω) =
+ˆ
+dteiωtO (t) . (A2)
+For a spatial uniform, time-dependent electric fieldE(t) and
+its corresponding vector potential A(t), we have,
+Ea (t) = −∂tAa (t) . (A3)
+Therefore,
+Ea (ω) = i ωAa (ω) ⇔ Aa (ω) = Ea (ω)
+i ω . (A4)
+A.2. Definition of current and conductivity
+We define different orders of conductivity in the time-domain
+as,
+ja (t) ≡
+ˆ
+dt1 σb1;a (t; t1) Eb1 (t1) + 1
+2!
+ˆ
+dt1
+ˆ
+dt2 σb1b2;a (t; t1, t2) Eb1 (t1) Eb2 (t2) + . . . (A5)
+Therefore, the conductivity can be formally expressed in functional derivative form,
+σb1...bn;a (t; t1, . . . ,tn) = δnja (t)
+δEb1 (t1) . . . δEbn (tn) . (A6)
+20
+Rep. Prog. Phys. 88 (2025) 076502 Review
+The expression of current in frequency domain can be written as,
+ja (ω) =
+ˆ
+dteiωtja (t)
+=
+ˆ
+dteiωt
+ˆ
+dt1 σb1;a (t; t1) Eb1 (t1) + 1
+2!
+ˆ
+dteiωt
+ˆ
+dt1
+ˆ
+dt2 σb1b2;a (t; t1, t2) Eb1 (t1) Eb2 (t2) + . . .
+=
+ˆ
+[dω1] σb1;a (ω; ω1) Eb1 (ω1) + 1
+2!
+ˆ
+[dω1]
+ˆ
+[dω2] σb1b2;a (ω; ω1, ω2) Eb1 (ω1) Eb2 (ω2) + . . .
+(A7)
+where we have defined the nth order conductivity in frequency domain as,
+σb1...bn;a (ω; ω1, . . . , ωn) ≡
+ˆ
+. . .
+ˆ
+dtdt1 . . .dtneiωtσb1...bn;a (t; t1, . . . ,tn) e−iω1t1 . . .e−iωntn. (A8)
+A.3. Continuous and discrete form of response theory
+In standard 2nd order current response, the response can be
+written as,
+jc ( ̄ω) =
+ˆ
+[dω1]
+ˆ
+[dω2] σab;c ( ̄ω; ω1, ω2) Ea (ω1) Eb (ω2) .
+(A9)
+To further simplify our notation, we consider a monochromatic
+electric field,
+Ea (t) = E a (ω) e−iωt + E a∗ (ω) eiωt
+= [Re E a (ω) + i Im E a (ω)] (cos ωt − i sin ωt) + c.c.
+= 2 [Re E a (ω) cos ωt + Im E a (ω) sin ωt] .
+(A10)
+Here ⃗E can be regarded as the amplitude vector of the elec-
+tric field, then for linear polarized light in x direction, we
+can use ⃗E(ω) = |⃗E|(1, 0, 0), for circular polarized light in x–
+y plane propagating in z direction, we can use ⃗Eö/œ(ω) =
+| ⃗E|√
+2 (1, ±i, 0), where |⃗E| ≡
+p
+⃗E ∗ · ⃗E is half the amplitude of the
+electric field.
+Then the electric field in frequency domain can be written
+as,
+Ea (ω ′) =
+ˆ
+dteiω ′tEa (t)
+=
+ˆ
+dteiω ′t
+E a (ω) e−iωt + E a∗ (ω) eiωt
+= 2π [E a (ω) δ (ω ′ − ω) + E a (−ω) δ (ω ′ + ω)] .
+(A11)
+Let us generalize this notation based on ⃗E into multi-frequency
+{ωi} electric fields by writing,
+Ea (t) =
+X
+i
+E a (ωi) e−iωi t, (A12)
+where we define E a(−ωi) = E a∗(ωi) to keep the electric field
+real-valued. Then Ea(ω) has a discrete spectrum,
+Ea (ω) = 2π
+X
+i
+E a (ωi) δ (ω − ωi) . (A13)
+The response formula is therefore in terms of the amplitude ⃗E
+given by,
+jc ( ̄ω) =
+ˆ
+[dω1]
+ˆ
+[dω2] σab;c ( ̄ω; ω1, ω2) Ea (ω1) Eb (ω2)
+=
+ˆ
+dω1
+ˆ
+dω2 σab;c ( ̄ω; ω1, ω2)
+X
+i,j
+E a (ωi) E b (ωj) δ (ω1 − ωi) δ (ω2 − ωj)
+=
+X
+i,j
+σab;c ( ̄ω; ωi, ωj) E a (ωi) E b (ωj) .
+(A14)
+By time translational symmetry the conductivity is proportional to a delta function as well. This delta function can be resolved
+by defining a similar discretized frequency spectrum description of current and conductivity,
+jc (t) =
+X
+i
+J c ( ̄ωi) e−iωi t, jc ( ̄ω) = 2π
+X
+i
+J c (ωi) δ ( ̄ω −  ̄ωi) , σ ab;c ( ̄ω; ω1, ω2) = 2π ςab;c ( ̄ω; ω1, ω2) δ ( ̄ω − ω1 − ω2) .
+(A15)
+21
+Rep. Prog. Phys. 88 (2025) 076502 Review
+This leads to the well-known discretized frequency spectrum
+form of the second order current generation,
+jc ( ̄ω) = 2π
+X
+i
+J c (ωi) δ ( ̄ω −  ̄ωi)
+= 2π
+X
+j,k
+ς ab;c ( ̄ω; ωj, ωk) δ ( ̄ω − ωj − ωk) E a (ωj) E b (ωk) ,
+(A16)
+which is equivalent to,
+J c ( ̄ωi = ωj + ωk) = ς ab;c ( ̄ω; ωj, ωk) E a (ωj) E b (ωk) . (A17)
+This is just a transformation from the integral version of ori-
+ginal continuous spectrum description into the summation
+form of discrete spectrum description. To avoid adding com-
+plexity in the use of letters in the formulas, in the main text
+we treat E and E interchangeably, and uniformly write them
+as E, understanding the meaning based on the specific con-
+text. Different symbols will be used for distinction only when
+necessary.
+Appendix B. Symmetry of 2nd order optical
+conductivity
+Symmetries and symmetry operations are an important tool in
+studying nonlinear conductivities. In the following we intro-
+duce the main ingredients towards such an analysis.
+B.1 . Intrinsic symmetry
+B.1 .1 . Intrinsic permutation symmetry . Consider the 2nd
+order current generation,
+jc ( ̄ω) = σab;c ( ̄ω; ω1, ω2) Ea (ω1) Eb (ω2) . (B1)
+The intrinsic permutation symmetry of this response is
+(a, ω1) ↔ (b, ω2), because changing the order of multiplic-
+ation of Ea(ω1) and Eb(ω2) leaves the current invariant.
+Therefore, the conductivity is symmetric with respect to this
+exchange of indices,
+jc ( ̄ω) = σba;c ( ̄ω; ω2, ω1) Eb (ω2) Ea (ω1) . (B2)
+It follows for the conductivity that
+σab;c ( ̄ω; ω1, ω2) = σba;c ( ̄ω; ω2, ω1) , (B3)
+i.e. it is symmetric under the exchange(a, ω1) ↔ (b, ω2). In the
+following we consider 2nd order dc current generation, where
+ω1 = −ω2 = ω and  ̄ω = ω1 + ω2 = 0. In the language of adia-
+batic switching, a finite quasiparticle lifetime enters through
+the interband and intraband relaxation rates Γ and γ,
+ω1,2 → ω1,2 + i Γ,  ̄ω →  ̄ω + i γ. (B4)
+This yields,
+σab;c ( ̄ω; ω1, ω2; {γ, Γ}) = σab;c ( ̄ω + iγ; ω1 + iΓ, ω2 + iΓ) .
+(B5)
+The 2nd order dc conductivity tensor thus becomes
+σab;c
+dc (ω; {γ, Γ}) ≡ σab;c (0; ω, −ω; {γ, Γ})
+= σab;c (iγ; ω + i Γ, −ω + iΓ) .
+(B6)
+In that case the intrinsic permutation symmetry assumes the
+form,
+σab;c
+dc (ω; {γ, Γ}) = σba;c
+dc (−ω; {γ, Γ}) . (B7)
+B.1 .2. Conjugation symmetry for dc-response. Since phys-
+ical observables are always real-valued O∗(t) = O(t), in
+the frequency domain it holds that O∗(ω) = O(−ω). For
+dc current generation, such symmetry leads to jc( ̄ω = 0) =
+jc∗(− ̄ω = 0), specifically,
+jc ( ̄ω = 0) = σab;c ( ̄ω; −ω, ω; {γ, Γ}) Ea (−ω) Eb (ω)
+= σab;c
+dc (−ω; {γ, Γ}) Ea (−ω) Eb (ω)
+= σba;c
+dc (ω; {γ, Γ}) Ea (−ω) Eb (ω)
+= jc∗ (− ̄ω = 0) =
+
+σdc
+ba;c (ω; {γ, Γ})
+∗
+Ea∗ (ω) Eb∗
+(−ω)
+=
+
+σdc
+ab;c (ω; {γ, Γ})
+∗
+Ea (−ω) Eb (ω) .
+(B8)
+On the third line, we have implemented the intrinsic permuta-
+tion symmetry σab;c
+dc (ω; {γ, Γ}) = σba;c
+dc (−ω; {γ, Γ}) as dis-
+cussed previously. Therefore the 2nd order dc conductivity
+tensor respects the symmetry,
+σba;c
+dc (ω; {γ, Γ}) =
+h
+σab;c
+dc (ω; {γ, Γ})
+i∗
+. (B9)
+One can further separate the 2nd order dc conductivity into its
+real and imaginary parts,
+σab;c
+dc (ω; {γ, Γ}) ≡ σab;c
+Re (ω; {γ, Γ}) + i σab;c
+Im (ω; {γ, Γ}) .
+(B10)
+This yields a real symmetric and an imaginary antisymmetric
+part of σab;c
+dc upon exchanging electric field spatial index (a ↔
+b), i.e.
+σab;c
+Re (ω; {γ, Γ}) = σba;c
+Re (ω; {γ, Γ}) (B11)
+σab;c
+Im (ω; {γ, Γ}) = −σba;c
+Im (ω; {γ, Γ}) . (B12)
+B.1 .3. T ransport limit. The nonlinear transport limit is
+reached upon taking ω → 0. According to the intrinsic per-
+mutation symmetry,
+σdc
+ab;c (ω; {γ, Γ})
+
+ω→0 = σdc
+ba;c (−ω; {γ, Γ})
+
+ω→0 . (B13)
+Therefore,
+σab;c
+tr ≡ σab;c
+dc (0; {γ, Γ}) = σba;c
+dc (−ω; {γ, Γ}) = σba;c
+tr , (B14)
+or equivalently,
+σab;c
+tr = σ(ab);c
+tr . (B15)
+22
+Rep. Prog. Phys. 88 (2025) 076502 Review
+B.2. Linear and circular polarized light
+Consider incident light with the electric field,
+Ea (t) = E a (ω) e−iωt + E a∗ (ω) eiωt
+= 2 [Re E a (ω) cos ωt + Im E a (ω) sin ωt] . (B16)
+Without loss of generality, let the incident light propag-
+ate along the +z direction and choose linear polarized light
+to be E ↕(ω) = E0(cos φ, sin φ, 0), while circular polarization
+is given by E ö(ω) = E0√
+2 (1, i, 0) and E œ(ω) = E0√
+2 (1, −i, 0).
+Then according to the definition of 2nd-order BPVE conduct-
+ivity tensor σab;c( ̄ω; ω, −ω), the 2nd-order dc current response
+can be written as,
+J c ( ̄ω = 0) = σab;c ( ̄ω = 0; ω, −ω) E a (ω) E b∗
+(ω) (B16)
+=
+
+E x E y
+σxx;c σxy;c
+σyx;c σyy;c
+
+E x∗
+E y∗
+
+. (B17)
+Here, the frequency arguments have been omitted for simpli-
+city. One can further simplify the above expression using the
+symmetry of the conductivity tensor imposed by the dc current
+generation,
+σba;c
+dc (ω; {γ, Γ}) =
+h
+σab;c
+dc (ω; {γ, Γ})
+i∗
+. (B18)
+The conductivity matrix is therefore Hermitian and can be
+rewritten as,
+J c =
+
+E x E y
+σxx;c
+Re σxy;c
+Re + iσxy;c
+Im
+σxy;c
+Re − iσxy;c
+Im σyy;c
+Re
+
+E x∗
+E y∗
+
+.
+(B19)
+For linear polarized light, this yields
+J c
+↕ = σab;cE a
+↕ (ω) E b
+↕
+∗
+(ω)
+= E2
+0
+
+cos φ sin φ
+
+σxx;c
+Re σxy;c
+Re + iσxy;c
+Im
+σxy;c
+Re − iσxy;c
+Im σyy;c
+Re
+
+cos φ
+sin φ
+
+= E2
+0
+
+σxx;c
+Re cos2 φ + σyy;c
+Re sin2 φ + 2σxy;c
+Re sin φ cos φ
+
+,
+(B20)
+which only depends on the real part of the conductivity tensor.
+For circular polarized light, the result is
+J c
+ö/œ = σab;cE a
+ö/œ (ω) E b
+ö/œ
+∗
+(ω)
+= E2
+0
+2
+
+1 ±i
+
+σxx;c
+Re σxy;c
+Re + iσxy;c
+Im
+σxy;c
+Re − iσxy;c
+Im σyy;c
+Re
+
+1
+∓i
+
+= E2
+0
+2 [σxx;c
+Re + σyy;c
+Re ± 2σxy;c
+Im ] . (B21)
+Although the BPVE generated by circular polarized light
+depends both on the real and imaginary parts of the conductiv-
+ity tensor, the difference in the response between left and right
+circular polarized light only depends on the imaginary part of
+the conductivity tensor, which can be defined as,
+J c
+ö − J c
+œ = 2E2
+0σxy;c
+Im . (B22)
+B.3. Spacetime transformation and symmetry
+B.3.1 . Spatial transformation and symmetry . Consider a
+pure spatial transformation xa → x ′
+a = Raa′xa′. The transform-
+ation of the Hamiltonian is accordingly
+ˆH → ˆH ′ = ˆR ˆH ˆR−1, (B23)
+where ˆR is the matrix representation of the spatial transform-
+ation R, which acts on a real space local basis as ˆR|r, α⟩ =P
+α ′ Rαα ′
+|r ′, α′⟩, where r ′a = (Rr)a ≡P
+a′ Raa′
+ra′
+and
+α, α′ indicate the orbital degree of freedom and Rαα ′ is the
+matrix representation in the corresponding Hilbert space. In
+momentum space, the transformation acts very similarly,
+with ˆR|k, α⟩ =P
+α ′ Rαα ′
+|k ′, α′⟩, where k ′a
+= (Rk)a ≡P
+a′ Raa′
+ka′
+. Notably, one can express the transformation
+of the position/momentum and the orbital degree of free-
+dom separately as ˆR = ˆRR, where ˆR denotes the part of the
+transformation which only acts in orbital space, whereas
+the matrix R without operator hat only acts on spatial
+coordinates/momenta.
+Given eigenvalues and eigenstates for momentum k and
+band index n satisfying ˆH|ψnk⟩ = εnk|ψnk⟩, the transformed
+Hamiltonian ˆH ′ = ˆR ˆH ˆR−1 should therefore have the follow-
+ing eigenvalues and eigenstates:
+ˆH ′
+
+ˆR|ψn,R−1k⟩
+
+= ˆR ˆH ˆR−1 ˆR|ψn,R−1k⟩
+= ˆR ˆH|ψn,R−1k⟩
+= ˆRεn,R−1k|ψn,R−1k⟩
+= εn,R−1k
+
+ˆR|ψn,R−1k⟩
+
+.
+(B24)
+Since
+
+ˆR|ψn,R−1k⟩
+
+must have the momentum R
+
+R−1k
+
+=
+k, the corresponding eigenvalues for a specific momentum k
+are ε ′
+nk = εnR−1k and the corresponding eigenstate is |ψ ′
+nk⟩ =
+ˆR|ψn,R−1k⟩.
+The transformation of the Bloch Hamiltonian ˆH(k) ≡
+eik·ˆr ˆHe−ik·ˆr with momentum k, reads
+ˆH (k) → ˆH ′ (k) = eik·ˆr ˆH ′e−ik·ˆr
+= eik·ˆr R ˆR|{z}
+ˆR
+ˆH ˆR−1R−1
+| {z }
+ˆR−1
+e−ik·ˆr
+= eik·(Rˆr) ˆR ˆH ˆR−1e−ik·(Rˆr)
+= ˆReiR−1k·ˆr ˆHe−iR−1k·ˆr ˆR−1
+= ˆR ˆH
+
+R−1k
+ ˆR−1.
+(B25)
+To obtain line three, note that e ik·ˆrR = eik·(Rˆr), since
+eik·ˆrR|r⟩ = eik·ˆr|Rr⟩ = eik·(Rr)|r⟩ = eik·(Rˆr)|r⟩. Similarly,
+we have R−1e−ik·ˆr = e−ik·(Rˆr) by Hermitian conjugation.
+Finally, the eigenvalues and eigenstates of the transformed
+Bloch Hamiltonian are
+23
+Rep. Prog. Phys. 88 (2025) 076502 Review
+ˆH ′ (k) |u ′
+nk⟩ = ε ′
+nk|u ′
+nk⟩
+⇔ ˆR ˆH
+
+R−1k
+ ˆR−1
+
+ˆR|un,R−1k⟩
+
+= ˆR ˆH
+
+R−1k
+
+|un,R−1k⟩
+= εn,R−1k
+
+ˆR|un,R−1k⟩
+
+,
+(B26)
+confirming that the transformed eigenvalues and eigenstates
+of the transformed Bloch Hamiltonian are ε ′
+nk = εn,R−1k and
+|u ′
+nk⟩ = ˆR|un,R−1k⟩.
+Next, we calculate the transformation of different matrix
+elements. For example, the transformation of the dipole mat-
+rix element (Berry connection) is,
+ra
+mn (k) ≡ ⟨umk|i ∂ka|unk⟩
+→ r ′a
+mn (k) = ⟨u ′
+mk|i ∂ka|u ′
+nk⟩
+= ⟨ ˆRum,R−1k|i ∂ka| ˆRun,R−1k⟩
+= ⟨um,R−1k| ˆR−1i ∂ka
+ˆR|un,R−1k⟩
+= ⟨um,R−1k|i ∂ka|un,R−1k⟩
+=
+X
+b
+∂
+
+R−1k
+b
+∂ka
+⟨um,R−1k|i ∂(R−1k)b
+|un,R−1k⟩
+=
+X
+b
+
+R−1ba
+rb
+mn
+
+R−1k
+
+=
+X
+b
+Rabrb
+mn
+
+R−1k
+
+. (B27)
+Here, it was assumed that the transformation on the orbital degree of freedom is k-independent, which is appropriate for a point
+group symmetry operation ˆR (without translation). The dipole matrix element thus transforms like a vector field.
+The transformation property of different orders of velocity matrix elements, i.e. va
+mn, wab
+mn, uabc
+mn , or equivalently, the spatial
+transformation of ha1...an
+mn follow in the same fashion,
+ha1...an
+mn (k) ≡ ⟨umk|
+
+∂ka1
+. . . ∂kan
+ˆH (k)
+
+|unk⟩
+→ h ′a1...an
+mn (k) ≡ ⟨u ′
+mk|
+
+∂ka1
+. . . ∂kan
+ˆH ′ (k)
+
+|u ′
+nk⟩
+= ⟨ ˆRum,R−1k|
+
+∂ka1
+. . . ∂kan
+ˆR ˆH
+
+R−1k
+ ˆR−1
+
+| ˆRun,R−1k⟩
+=
+X
+b1,...,bn
+Ra1b1 . . .Ranbn⟨um,R−1k|
+
+∂(R−1k)b1
+. . . ∂(R−1k)bn
+ˆH
+
+R−1k
+
+|un,R−1k⟩
+=
+X
+b1,...,bn
+Ra1b1 . . .Ranbnhb1...bn
+mn
+
+R−1k
+
+.
+(B28)
+In other words, the nth order velocity matrix element trans-
+forms as an nth order tensor field. The spatial transformation
+property of nonlinear conductivity is therefore,
+σab;c → σ ′ab;c =
+X
+a′,b ′,c ′
+Raa ′
+Rbb ′
+Rcc ′
+σa′b ′;c ′
+, (B29)
+in line with the phenomenological expectation.
+B.3.2. Time reversal transformation and symmetry .
+Similarly, we can also analyze the time reversal transform-
+ation property of the Hamiltonian, eigenvalues, eigenstates,
+and different matrix elements. We denote the time reversal
+operator as ˆT, which is an anti-unitary operator. The time
+reversal transformed Hamiltonian is,
+ˆH → ˆH ′ = ˆT ˆHˆT−1, (B30)
+while the time reversal transformed Bloch Hamiltonian is,
+ˆH (k) → ˆH ′ (k) = eik·ˆr ˆH ′e−ik·ˆr
+= eik·ˆr ˆT ˆHˆT−1e−ik·ˆr
+= ˆTe−ik·ˆr ˆHeik·ˆr ˆT−1
+= ˆT ˆH (−k) ˆT−1.
+(B31)
+Here, note that the time reversal operator ˆT is anti-unitary,
+which adds a complex conjugation when interchanging the
+order of eik·ˆr and ˆT. The band dispersion and unit cell periodic
+24
+Rep. Prog. Phys. 88 (2025) 076502 Review
+Bloch states of the time reversal transformed Hamiltonian are
+ε ′
+nk = εn,−k and |u ′
+nk⟩ = ˆT|un,−k⟩ respectively.
+The time reversal transformation property of the dipole
+matrix element (Berry connection) is then,
+ra
+mn (k) ≡ ⟨umk|i ∂ka|unk⟩
+→ r ′a
+mn (k) = ⟨u ′
+mk|i ∂ka|u ′
+nk⟩
+= i ⟨ˆTum,−k|∂ka|ˆTun,−k⟩
+= i ⟨ˆTum,−k|ˆT∂kaun,−k⟩
+= i ⟨∂kaun,−k|um,−k⟩
+= −i ⟨un,−k|∂kaum,−k⟩
+= ⟨un,−k|i ∂(−k)a
+um,−k⟩
+= ra
+nm (−k) . (B32)
+Here again, the assumption being that the transformation on
+the orbital degree of freedom is k independent, which is
+appropriate for a point group symmetry operation ˆR (without
+translation).
+For the derivatives of the Bloch Hamiltonian ha1...an
+mn , one
+obtains similarly,
+ha1...an
+mn (k) ≡ ⟨umk|
+
+∂ka1
+. . . ∂kan
+ˆH (k)
+
+|unk⟩
+→ h ′a1...an
+mn (k) ≡ ⟨u ′
+mk|
+
+∂ka1
+. . . ∂kan
+ˆH ′ (k)
+
+|u ′
+nk⟩
+= ⟨ˆTum,−k|ˆT
+
+∂ka1
+. . . ∂kan
+ˆH (−k)
+
+ˆT−1|ˆTun,−k⟩
+= ⟨ˆTum,−k|ˆT
+
+∂ka1
+. . . ∂kan
+ˆH (−k)
+
+un,−k⟩
+= ⟨
+
+∂ka1
+. . . ∂kan
+ˆH (−k)
+
+un,−k|um,−k⟩
+= ⟨un,−k|
+
+∂(−k)a1
+. . . ∂(−k)an
+ˆH (−k)
+
+|um,−k⟩
+= (−1)n ha1...an
+nm (−k) . (B33)
+As we see, velocity matrix elements with odd numbered order
+are odd under time reversal transformation, while velocity
+matrix elements with even numbered order are even under time
+reversal transformation.
+For the derivation of time reversal transformation of non-
+linear conductivity, we also need the transformation proper-
+ties of fFD
+nm (k), va
+nm(k), ∆c
+nm(k), Rc
+mn,a(k), and εnm(k). They are,
+respectively,
+fFD
+T ,nm (k) = fFD (εT ,n (k)) − fFD (εT ,m (k))
+= fFD (εn (−k)) − fFD (εm (−k))
+= fFD
+nm (−k)
+= −fFD
+mn (−k) (B34)
+va
+T ,nm (k) = −va
+mn (−k) (B35)
+∆c
+T ,mn (k) = vc
+T ,mm (k) − vc
+T ,nn (k)
+= [−vc
+mm (−k)] − [−vc
+nn (−k)]
+= ∆c
+nm (−k) (B36)
+Rc
+T ,mn,a (k)
+=rc
+T ,mm (k) − rc
+T ,nn (k) + i ∂kc log ra
+T ,mn (k)
+=rc
+mm (−k) − rc
+nn (−k) + i ∂kc log ra
+nm (k)
+= − [rc
+nn (−k) − rc
+mm (−k) + i ∂−kc log ra
+nm (−k)]
+= − Rc
+nm,a (−k) (B37)
+εT ,nm (k) = εnm (−k) (B38)
+Appendix C. Feynman diagrammatics
+Here, we introduce the quantum perturbative analysis. Further
+details can be found in [15, 37]. An applied electric field enters
+via minimal coupling to the electric gauge potential,
+ˆH0 (k) → ˆH ′ (k, t) = ˆH0
+
+k − q
+ ̄h A (t)
+
+, (C1)
+where q = −e is the charge of the electron, here we keep
+the notation of q for smooth generalization of our theoretical
+derivation to any kinds of charge carriers. The perturbation
+expansion yields,
+ˆH ′ (k, t) = ˆH0 (k) +
+∞X
+k=1
+(−q/ ̄h)k
+k! Ab1 (t) . . .Abk (t) ˆhb1...bk
+(C2)
+where ˆhb1...bk ≡ ∂b1 . . . ∂bk
+ˆH0(k) and the Einstein summation
+convention is used. The ˆhb1...bk’s constitute the electron–
+photon interaction vertices. It is common to introduce new
+notation for commonly used low order vertices and suppress
+the momentum dependence, such as,
+ˆva ≡ ˆha, ˆwab ≡ ˆhab, ˆuabc ≡ ˆhabc. (C3)
+The current operator can be obtained by,
+ˆJa (t) ≡ 1
+V
+δ ˆH ′
+δAa (t)
+= − q
+V ̄h
+∞X
+k=1
+(−q/ ̄h)k
+k! Ab1 (t) . . .Abk (t) ˆhab1...bk. (C4)
+Therefore the current generation vertices are the same as the
+electron–photon interaction vertices.
+25
+Rep. Prog. Phys. 88 (2025) 076502 Review
+Figure 7 . Structrure of the Feynman diagrams for (1) linear and (2) second order conductivity. In the two (six) contributions at first (second)
+the wavy lines connected to the ‘ ◦’ and ‘ ⊗’ represent the incoming and outgoing photons respectively, while the solid lines with arrows
+represents the fermion propagators.
+In imaginary time perturbation theory, the partition func-
+tion is given by,
+Z =
+ˆ
+D  ̄ψDψ exp
+(
+−
+ˆ β
+0
+dτ
+h
+ ̄ψ
+
+∂τ + ˆH ′
+
+ψ
+i)
+. (C5)
+The current expectation value is therefore,
+⟨ˆJa (τ )⟩
+= 1
+Z
+ˆ
+D  ̄ψDψ ˆJa (t) exp
+(
+−
+ˆ β
+0
+dτ
+h
+ ̄ψ
+
+∂τ + ˆH ′
+
+ψ
+i)
+= 1
+Z
+ˆ
+D  ̄ψDψ δ ˆH ′
+δAa (τ ) exp
+(
+−
+ˆ β
+0
+dτ
+h
+ ̄ψ
+
+∂τ + ˆH ′
+
+ψ
+i)
+= − 1
+Z
+δZ
+δAa (τ ) . (C6)
+Transforming to the Matsubara frequency domain yields
+⟨ˆJa (i νn)⟩ =
+ˆ β
+0
+dτ eiνnτ ⟨ˆJa (τ )⟩ = − δ ln Z
+δAa (−i νn) . (C7)
+The susceptibility with respect to the vector potential in
+Matsubara frequency domain is defined by,
+⟨ˆJa (i  ̄ν)⟩
+=
+X
+iν1
+χb;a (i  ̄ν; i ν1) Ab (i ν1)
++ 1
+2!
+X
+iν1
+X
+iν2
+χb1b2;a (i  ̄ν; i ν1, i ν2) Ab1 (i ν1) Ab2 (i ν2) + . . .
+(C8)
+which is synonymous with the definition in terms of functional
+derivatives,
+χb;a (i  ̄ν; i ν1) = − δ2 ln Z
+δAb (i ν1) δAa (−i  ̄ν)
+χb1b2;a (i  ̄ν; i ν1, i ν2) = − δ3 ln Z
+δAb1 (i ν1) δAb2 (i ν2) δAa (−i  ̄ν) .
+(C9)
+Here we can see thenth order susceptibility consists of connec-
+ted Feynman diagrams (as imposed by the ln Z function) with
+n incoming external photon lines with frequency ν1, ν2, . . .
+(as imposed by δ
+δAb(i ν1)
+δ
+δAb(i ν2) . . .), and one outgoing external
+photon line with frequency  ̄ν (as imposed by δ
+δAa(−i  ̄ν) ).
+Let us calculate the susceptibility. The first order suscept-
+ibility follows from two diagrams,
+χb;a = χb;a
+(1.A) + χb;a
+(1.B), (C10)
+where the susceptibilities are defined using the fermionic
+Matsubara green’s function G(iω) = 1
+i ̄hω−H0
+,
+26
+Rep. Prog. Phys. 88 (2025) 076502 Review
+χb;a
+(1.A) (i  ̄ν; i ν1) = − 1
+β
+X
+iωl
+ˆ
+k
+Tr
+ ˆwabG (i ωl)
+
+δi ̄ν,iν1 (C11)
+χb;a
+(1.B) (i  ̄ν; i ν1) = − 1
+β
+X
+iωl
+ˆ
+k
+Tr
+ˆvaG (i ν1 + i ωl) ˆvbG (i ωl)
+
+δi ̄ν,iν1, (C12)
+Similarly, the second order susceptibility is contributed by six diagrams that correspond to,
+χb1b2;a = χb1b2;a
+(2.A) + χb1b2;a
+(2.B) + χb1b2;a
+(2.C) + χb1b2;a
+(2.D) + χb1b2;a
+(2.E) + χb1b2;a
+(2.F) , (C13)
+where
+χb1b2;a
+(2.A) (i  ̄ν; i ν1, i ν2) = − 1
+β
+X
+iωm
+ˆ
+k
+Tr
+ˆuab1b2G (i ωm)
+
+δi ̄ν,iν1+iν2 (C14)
+χb1b2;a
+(2.B) (i  ̄ν; i ν1, i ν2) = − 1
+β
+X
+iωm
+ˆ
+k
+Tr
+ ˆwab1G (i ν2 + i ωm) ˆvb2G (i ωm)
+
+δi ̄ν,iν1+iν2 (C15)
+χb1b2;a
+(2.C) (i  ̄ν; i ν1, i ν2) = − 1
+β
+X
+iωm
+ˆ
+k
+Tr
+ ˆwab2G (i ν1 + i ωm) ˆvb1G (i ωm)
+
+δi ̄ν,iν1+iν2 (C16)
+χb1b2;a
+(2.D) (i  ̄ν; i ν1, i ν2) = − 1
+β
+X
+iωm
+ˆ
+k
+Tr
+ˆvaG (i  ̄ν + i ωm) ˆwb1b2G (i ωm)
+
+δi ̄ν,iν1+iν2 (C17)
+χb1b2;a
+(2.E) (i  ̄ν; i ν1, i ν2) = − 1
+β
+X
+iωm
+ˆ
+k
+Tr
+ˆvaG (i  ̄ν + i ωm) ˆvb2G (i ν1 + i ωm) ˆvb1G (i ωm)
+
+δi ̄ν,iν1+iν2 (C18)
+χb1b2;a
+(2.F) (i  ̄ν; i ν1, i ν2) = − 1
+β
+X
+iωm
+ˆ
+k
+Tr
+ˆvaG (i  ̄ν + i ωm) ˆvb1G (i ν2 + i ωm) ˆvb2G (i ωm)
+
+δi ̄ν,iν1+iν2. (C19)
+We note that the topology of the diagrams up to second order do not lead to nontrivial multiplicities [ 37].
+After analytical continuation iν → ω + i 0+, this yields the susceptibility for real frequencies. In order to obtain the conduct-
+ivity, note that Ea(ω) = i ωAa(ω), which leads to the conductivity,
+σb1...bn;a ( ̄ω; {ωi}) = χb1b2;a (i ̄ν →  ̄ω + i 0+; {i νi → ωi + i 0+})Qn
+i =1 (i ωi) . (C20)
+We introduce the Fermi–DIrac distribution fm ≡ 1
+eβ ̄h(εm−μ)+1 of band m where μ is the chemical potential and β−1 = kBT for
+temperature T. Restoring the electric charge and Planck constant, the 2nd order conductivity then becomes,
+σb1b2;a
+(2.A) ( ̄ω; ω1, ω2) = − e3
+ ̄h2ω1ω2
+X
+n
+ˆ
+k
+fnub1b2a
+nn (C21)
+σb1b2;a
+(2.B) ( ̄ω; ω1, ω2) = − e3
+ ̄h2ω1ω2
+X
+nm
+ˆ
+k
+fnmvb2
+nmwab1
+mn
+ω2 + εnm + i 0+ (C22)
+σb1b2;a
+(2.C) ( ̄ω; ω1, ω2) = − e3
+ ̄h2ω1ω2
+X
+nm
+ˆ
+k
+fnmvb1
+nmwab2
+mn
+ω1 + εnm + i 0+ (C23)
+σb1b2;a
+(2.D) ( ̄ω; ω1, ω2) = − e3
+ ̄h2ω1ω2
+X
+nm
+ˆ
+k
+fnmwb1b2
+nm va
+mn
+ ̄ω − εmn + i 0+ (C24)
+27
+Rep. Prog. Phys. 88 (2025) 076502 Review
+σb1b2;a
+(2.E) ( ̄ω; ω1, ω2) = − e3
+ ̄h2ω1ω2
+X
+nml
+ˆ
+k
+ 
+fnmvb2
+nmvb1
+mlva
+ln
+(ω2 + εnm + i 0+)( ̄ω − εln + i 0+) − fnmvb1
+nmva
+mlvb2
+ln
+(ω1 + εnm + i 0+)( ̄ω − εml + i 0+)
+!
+(C25)
+σb1b2;a
+(2.F) ( ̄ω; ω1, ω2) = − e3
+ ̄h2ω1ω2
+X
+nml
+ˆ
+k
+ 
+fnmvb1
+nmvb2
+mlva
+ln
+(ω1 + εnm + i 0+)( ̄ω − εln + i 0+) − fnmvb2
+nmva
+mlvb1
+ln
+(ω2 + εnm + i 0+)( ̄ω − εml + i 0+)
+!
+. (C26)
+A more compact and symmetric notation reads
+σb1b2;a
+(2.A) ( ̄ω; ω1, ω2) = − e3
+ ̄h2ω1ω2
+X
+n
+ˆ
+k
+fn
+ub1b2a
+nn
+2 + (b1, ω1 ↔ b2, ω2) (C27)
+σb1b2;a
+(2.B)+(2.C) ( ̄ω; ω1, ω2) = − e3
+ ̄h2ω1ω2
+X
+n
+ˆ
+k
+fn
+ vb1
+ω1 + ε + i 0+ , wab2
+
+nn
++ (b1, ω1 ↔ b2, ω2) (C28)
+σb1b2;a
+(2.D) ( ̄ω; ω1, ω2) = − e3
+ ̄h2ω1ω2
+X
+n
+ˆ
+k
+fn
+2
+
+wb1b2, va
+ ̄ω − ε + i 0+
+
+nn
++ (b1, ω1 ↔ b2, ω2) (C29)
+σb1b2;a
+(2.E)+(2.F) ( ̄ω; ω1, ω2) = − e3
+ ̄h2ω1ω2
+X
+n
+ˆ
+k
+fn
+ vb1
+ω1 + ε + i 0+ ,
+
+vb2, va
+ ̄ω − ε + i 0+
+
+nn
++ (b1, ω1 ↔ b2, ω2) . (C30)
+Here the infinitesimal imaginary part in the denominator is the inverse interband/intraband lifetime, which is detailed in
+appendix D.3.
+Appendix D. Comments on nonlinear transport
+conductivity
+The literature on nonlinear transport is extensive [ 50–52, 54–
+56, 62–65, 91, 92, 103], with various different approaches
+leading to similar but not identical results [ 45, 50–53, 60,
+62, 64, 65, 150, 151]. For the sake of clarity, in the follow-
+ing we elucidate the main steps towards the semiclassical and
+quantum perturbative calculations, emphasizing the underly-
+ing ingredients rather than the technical aspects. The argu-
+mentation mostly follows [ 64, 92].
+D.1 . Semiclassical formalism
+D.1 .1 . SW transformation. As mentioned above, second
+order response requires eigenvalues up to the 3rd order per-
+turbative correction, i.e. O(E3), and wavefunction up to the
+2nd order, i.e. O(E2).
+One way to avoid a painstaking derivation of higher-order
+perturbation theory, is to implement a SW transformation,
+which changes the wave function basis, transforming the low-
+est order perturbation to the same order of O(E2), i.e.
+H → H ′ ≡ eSHe−S, |n⟩ → |n ′⟩ ≡ eS|n⟩ (D1)
+H ′ = H ′
+0 + H ′
+1 (D2)
+H ′
+1 = O
+
+E2
+. (D3)
+In the new basis, the perturbative expansions of the eigenvalue
+and eigenstate only require the 2nd order eigenvalue and 1st
+order eigenstate perturbation theory for H′ to cover O(E3) for
+the former and O(E2) for the latter. Throughout the discus-
+sion below, the prime ′ represents the eigenstates and operat-
+ors after the SW transformation.
+Let us first separate the Hamiltonian H into diagonal and
+off-diagonal parts,
+H = H(0) + eE · r ≡ H0 + H1 (D4)
+where H(0) is the original lattice Hamiltonian, and H0, H1
+correspond to the diagonal and off-diagonal parts of the full
+Hamiltonian after applying the external field, which read
+explicitly,
+H0 = H(0) +
+X
+n,k
+
+eE · ⟨ψ(0)
+nk |r|ψ(0)
+nk ⟩
+
+|ψ(0)
+nk ⟩⟨ψ(0)
+nk |
+=
+X
+n,k
+
+ε(0)
+n (k) + eE · A(0)
+nn (k)
+
+|ψ(0)
+nk ⟩⟨ψ(0)
+nk | (D5)
+H1 =
+X
+k̸=k ′
+X
+n̸=m
+
+eE · ⟨ψ(0)
+nk |r|ψ(0)
+mk ′⟩
+
+|ψ(0)
+nk ⟩⟨ψ(0)
+mk ′|
+=
+X
+k
+X
+n̸=m
+
+eE · ⟨ψ(0)
+nk |r|ψ(0)
+mk ⟩
+
+|ψ(0)
+nk ⟩⟨ψ(0)
+mk |
+≡
+X
+k
+X
+n̸=m
+
+eE · A(0)
+nm (k)
+
+|ψ(0)
+nk ⟩⟨ψ(0)
+mk |. (D6)
+Here, ε(n)
+n (k), |ψ(0)
+nk ⟩ represent the eigenvalues and eigenstates
+(Bloch wavefunction) of the nth band at crystal momentum k
+of the original Hamiltonian H(0) before applying the electric
+field, and A(0)
+nm (k) denotes the (0th order) Berry connection.
+We emphasize that the upper index (. . .)(n) indicates con-
+sidering eE · r as the perturbation, since we only know about
+the dispersion ε(0)
+n (k) and the eigenstate (Bloch wavefunction)
+28
+Rep. Prog. Phys. 88 (2025) 076502 Review
+|ψ(0)
+nk ⟩, so we have to transform all the quantities we want to
+calculate into forms of (. . .)(n).
+To this end, we write the SW transformation as,
+H ′ = eεSHe−εS, (D7)
+and we regard the perturbative parameter ε as the marker for
+the order of the original perturbation theory (i.e. ε ∝ |E|).
+The separation of the diagonal and off-diagonal parts of H
+now becomes,
+H = H0 + εH1. (D8)
+One can check the correspondence of the order of the perturb-
+ation theory both before and after the SW transformation by
+expanding the SW transformation order by order with respect
+to the parameter ε,
+H ′ =
+∞X
+n=0
+εn
+n! [S, [S, . . . ,[S, H] . . .]]| {z }
+nnested commutators
+= H + ε [S, H] + ε2
+2! [S, [S, H]] + ε3
+3! [S, [S, [S, H]]] + . . .
+= H0 + ε (H1 + [S, H0]) + ε2
+
+[S, H1] + 1
+2 [S, [S, H0]]
+
++ . . . (D9)
+This imposes consistency conditions on the operator S, which
+should also be anti-Hermitian to guarantee the SW trans-
+formation is unitary. To enforce that the SW-transformed
+Hamiltonian has a perturbation term only at order O(E2) ∼
+O(ε2), it should hold that
+H1 + [S, H0] = 0. (D10)
+As long as S has the same discrete translational symmetry
+as H(0), we can write the operator S in the Bloch basis, which
+is block diagonal in momentum space,
+S =
+X
+k
+X
+n,m
+Snm|ψ(0)
+nk ⟩⟨ψ(0)
+mk |, (D11)
+where the matrix element is Snm ≡ ⟨ψ(0)
+nk |S|ψ(0)
+mk ⟩. We can also
+write this constraint in the basis of |ψ(0)
+nk ⟩ as:
+X
+k
+X
+n̸=m
+
+eE · A(0)
+nm
+
+|ψ(0)
+nk ⟩⟨ψ(0)
+mk |
++
+X
+k
+X
+n,m
+h
+Snm
+
+ε(0)
+m (k) + eE · A(0)
+mm (k)
+
+−
+
+ε(0)
+n (k) + eE · A(0)
+nn (k)
+
+Snm
+i
+|ψ(0)
+nk ⟩⟨ψ(0)
+mk |
+= 0. (D12)
+The diagonal part is identically fulfilled by choosing Snn = 0,
+while the off-diagonal part reads,
+eE · A(0)
+nm + Snm
+
+ε(0)
+m (k) + eE · A(0)
+mm (k)
+
+−
+
+ε(0)
+n (k) + eE · A(0)
+nn (k)
+
+Snm = 0, (D13)
+which has the solution,
+Snm = −eE · A(0)
+nm
+ε(0)
+nm − eE · (An − Am)
+≈ −eE · A(0)
+nm
+ε(0)
+nm| {z }
+O(E)
+− e2EaEbAa
+nm
+
+Ab
+n − Ab
+m
+
+
+ε(0)
+nm
+2
+| {z }
+O(E2)
++O
+
+E3
+≡ εS(1)
+nm + ε2S(2)
+nm + O
+
+E3
+(D14)
+where ε(0)
+nm ≡ ε(0)
+n − ε(0)
+m .
+With this choice of S, the expression for H′ is simplified to,
+H ′ = H0 + 1
+2 ε [S, H1] + 1
+3 ε [S, [S, H1]] + . . .
+= H0 + 1
+2 ε2
+h
+S(1), H1
+i
++ ε3
+ 1
+2
+h
+S(2), H1
+i
++ 1
+3
+h
+S(1),
+h
+S(1), H1
+ii
++ O
+
+E4
+= H0 + H ′
+1|{z}
+O(E2)
+. (D15)
+Now, the unperturbed part of the SW-transformed Hamiltonian
+can be regarded as the diagonal part of the original
+Hamiltonian H0, whose unperturbed eigenstates are just
+|ψ(0)
+nk ⟩, and the corresponding eigenvalues are (ε(0)
+n − eE ·
+A(0)
+nn ). We have transformed the perturbation Hamiltonian into
+a O(E2) term.
+Thus, the 1st order perturbation theory for this SW-
+transformed Hamiltonian is enough to tell us the correction
+of dispersion up to 3rd order, i.e. ε(3)
+n [134]. Since the per-
+turbation is O(E2) and contains O(E4), the correction of the
+dispersion up to ε(4)
+n will contain contributions from both the
+1st order perturbation theory’s O(E4) term and the 2nd order
+perturbation theory’s (H ′
+1)2 ∼ O(E4) term. However, this dis-
+cussion is complex and will not be covered here. Additionally,
+since the SW transformation is unitary, the calculation yields
+the same eigenvalue for the original Hamiltonian H.
+D.1 .2. Correction of band dispersion. We calculate the cor-
+rection to eigenvalues order by order. The SW-transformed
+Hamiltonian’s 0th order eigenvalue already contains
+O(E0) and O(E1) corrections for the original Hamiltonian
+eigenvalues:
+ε(1)
+n = −eEaAa
+nn. (D16)
+The SW-transformed Hamiltonian’s 1st order eigenvalue
+contains the O(E2) correction, where ε(2)
+n is:
+29
+Rep. Prog. Phys. 88 (2025) 076502 Review
+ε(2)
+n = ⟨ψ(0)
+nk | 1
+2 ε2
+h
+S(1), H1
+i
+|ψ(0)
+nk ⟩
+= 1
+2
+X
+m̸=n
+εS(1)
+nm
+
+−eE · A(0)
+mn
+
+−
+
+−eE · A(0)
+nm
+
+εS(1)
+mn
+= 1
+2 e2EaEb
+0
+@X
+m̸=n
+Aa
+nmAb
+mn + Ab
+nmAa
+mn
+ε(0)
+nm
+1
+A . (D17)
+Here, the ath component of unperturbed Berry connection has
+been abbreviated as Aa
+nm = (A(0)
+nm )a.
+D.1 .3. Correction of wave function and Berry connection.
+The correction to the wave function corresponds to
+|n⟩ ≡ e−S|n ′⟩
+= |n ′⟩ − S|n ′⟩ + 1
+2! S2|n ′⟩ + . . .
+=
+
+|n(0)⟩ + O
+
+E2
+− S
+
+|n(0)⟩ + O
+
+E2
++ O
+
+E2
+= |n(0)⟩ − S|n(0)⟩ + O
+
+E2
+. (D18)
+Here, |n⟩ is the eigenstate of the original perturbed system
+(before the SW transformation), and |n ′⟩ is the eigenstate
+of the Hamiltonian after the SW transformation. We’ve used
+the fact that |n ′⟩ is |n(0)⟩ up to O(E2) and S ∼ O(E), where
+|n(0)⟩ represents the eigenstate of the original unperturbed
+Hamiltonian.
+The corrected Berry connection is,
+Anm = ⟨ψnk|r|ψmk⟩
+=
+
+⟨ψ(0)
+nk | − ⟨ψ(0)
+nk |S† + O
+
+E2
+× r
+
+|ψ(0)
+nk ⟩ − S|ψ(0)
+nk ⟩ + O
+
+E2
+= A(0)
+nm|{z}
+O(E0)
++ ⟨ψ(0)
+nk | [S, r] |ψ(0)
+mk ⟩| {z }
+O(E1)
++O
+
+E2
+. (D19)
+Therefore, the 1st order correction to the Berry connection
+reads explicitly,
+
+A(1)
+nm
+b
+= ⟨ψ(0)
+nk |
+h
+S(1), rb
+i
+|ψ(0)
+mk ⟩
+=
+X
+l
+S(1)
+nl
+
+A(0)
+lm
+b
+−
+
+A(0)
+nl
+b
+S(1)
+lm
+= −eEaX
+l
+
+A(0)
+nl
+a
+A(0)
+lm
+b
+ε(0)
+nl
+−
+
+A(0)
+nl
+b
+A(0)
+lm
+a
+ε(0)
+lm
+= −eEaGab
+nm. (D20)
+The quantity Gab
+nm ≡P
+l(A(0)
+nl )a(A(0)
+lm )b/ε(0)
+nl − (A(0)
+nl )b
+(A(0)
+lm )a/ε(0)
+lm is defined as the (non-Abelian) band-normalized
+quantum metric. For response up to 2nd order, we only need
+its diagonal (Abelian) part, i.e. the Band-normalized Quantum
+metric of the nth band,
+Gab
+n ≡
+X
+m̸=n
+
+A(0)
+nm
+a
+A(0)
+mn
+b
++
+
+A(0)
+nm
+b
+A(0)
+mn
+a
+ε(0)
+nm
+. (D21)
+The corresponding 1st order correction of Berry curvature
+is,
+
+Ω(1)
+n
+c
+= εabc∂a
+
+A(1)
+nn
+
+= −eEdεabc∂aΩdb
+n , (D22)
+where εabc is the Levi-Civita tensor.
+This completes the semiclassical perspective, which after
+some algebra results in equations (34)–(36) quoted in the main
+text.
+D.2. Spacetime transformation and symmetry
+With the knowledge of the spatial transformation property
+of dipole and velocity matrix elements, one can straightfor-
+wardly deduce the symmetry of Drude, BCD and QMD. To
+this end, consider the symmetry of Berry curvature and band-
+normalized quantum metric,
+Ωab
+n =
+X
+m̸=n
+
+ra
+nmrb
+mn − rb
+nmra
+mn
+
+(D23)
+Gab
+n =
+X
+m̸=n
+ra
+nmrb
+mn + rb
+nmra
+mn
+εnm
+. (D24)
+As explained in appendix B, the spatial transformation of
+dipole matrix element behave like a vector field,
+ra
+nm (k) → r ′a
+nm (k) =
+X
+b
+Rabrb
+nm
+
+R−1k
+
+. (D25)
+The spatial transformation of energy (difference) behaves like
+a scalar field,
+εnm (k) → ε ′
+nm (k) = εnm
+
+R−1k
+
+. (D26)
+Thus, the Berry curvature and band-normalized quantum
+metric both transform as rank two tensors,
+Ωab
+n (k) → Ω ′ab
+n (k) =
+X
+a′b ′
+Raa ′
+Rbb ′
+Ωa′b ′
+n
+
+R−1k
+
+, (D27)
+Gab
+n (k) → G ′ab
+n (k) =
+X
+a′b ′
+Raa ′
+Rbb ′
+Ga′b ′
+n
+
+R−1k
+
+. (D28)
+Regarding the pure spatial transformation of NLD, BCD and
+QMD, we conclude that they are all cubic in the dipole mat-
+rix element rnm and momentum derivative ∂k. Therefore, the
+pure spatial transformation property of NLD, BCD and QMD
+behave like a 3rd rank order tensor field.
+30
+Rep. Prog. Phys. 88 (2025) 076502 Review
+Turning to the time reversal transformation, the dipole mat-
+rix element reads
+ra
+nm (k) → r ′a
+nm (k) = ra
+mn (−k) (D29)
+while the energy (difference) is
+εnm (k) → ε ′
+nm (k) = εnm (−k) . (D30)
+The time reversal transformation of Berry curvature and band-
+normalized quantum metric then follow as,
+Ωab
+n (k) → Ω ′ab
+n (k)
+=
+X
+m̸=n
+h
+r ′a
+nm (k) r ′b
+mn (k) − r ′b
+nm (k) r ′a
+mn (k)
+i
+=
+X
+m̸=n
+
+ra
+mn (−k) rb
+nm (−k) − rb
+nm (−k) ra
+mn (−k)
+
+=
+X
+m̸=n
+
+rb
+nm (−k) ra
+mn (−k) − ra
+mn (−k) rb
+nm (−k)
+
+= Ωba
+n (−k) = −Ωab
+n (−k) (D31)
+Gab
+n (k) → G ′ab
+n (k)
+=
+X
+m̸=n
+r ′a
+nm (k) r ′b
+mn (k) + r ′b
+nm (k) r ′a
+nm (k)
+ε ′nm (k)
+=
+X
+m̸=n
+ra
+mn (−k) rb
+nm (−k) + rb
+nm (−k) ra
+mn (−k)
+εnm (−k)
+=
+X
+m̸=n
+rb
+nm (−k) ra
+mn (−k) + ra
+mn (−k) rb
+nm (−k)
+εnm (−k)
+= Gba
+n (−k) = Gab
+n (−k) . (D32)
+Combining both transformations, we note that the Berry
+curvature is odd under PT transformation, i.e.
+Ωab
+n (k)
+T
+− → −Ωab
+n (−k)
+P
+− → −Ωba
+n (k) . (D33)
+Therefore if the system has PT symmetry, the Berry curvature
+should be zero, which directly rules out the BCD term in the
+2nd order dc conductivity. As an instructive example, we ana-
+lyze the QMD term,
+σab;c
+QMD ≡ − e3
+ ̄h
+X
+n
+ˆ
+k
+fn (k)
+
+2∂cGab
+n (k) − 1
+2
+
+∂aGbc
+n (k) + ∂bGac
+n (k)
+
+(D34)
+→ σ ′ab;c
+QMD = − (−1) e2
+ ̄h3
+X
+n
+ˆ
+k
+fn (−k)
+
+2∂(−k)c
+Gab
+n (−k) − 1
+2
+
+∂(−k)a
+Gbc
+n (−k) + ∂(−k)b
+Gac
+n (−k)
+
+= −σab;c
+QMD. (D35)
+In conclusion, the NLD and QMD terms are odd under time
+reversal transformation, while the BCD term is even under
+time reversal transformation, which means NLD and QMD
+terms can only appear when time reversal symmetry is broken.
+D.3. Quantum perturbative approach
+We elucidate the two key steps how the dc-limit can be taken
+in a Green–Kubo approach, leading back to the same result of
+equations (34)–(36) obtained from the semiclassical approach.
+D.3.1 . Expanding velocity vertices. In the diagrammatic
+approach, all geometric information is contained in different
+orders of velocity vertices, e.g. ˆva, ˆwab, and ˆuabc. However,
+they the quantum geometric quantities are far from explicit in
+these vertices. Namely, the Berry connection ra, the quantum
+metric gab, the Berry curvature Ωab, the QC Qa;bc, the BCD
+∂kcΩab, and the QMD ∂kcgab have to be first extracted by sum
+rules.
+To this end, note that the geometric quantities are essen-
+tially momentum derivatives of the wavefunction, e.g. ∂k|m⟩
+rather than derivatives of the Hamiltonian ∂k . . . ∂k ˆH(k), the
+latter of which contains both dispersion εm and wavefunction
+information |m⟩.
+The crucial ingredient is the covariant derivative [ 37, 100],
+which connects the matrix element of momentum derivative to
+the momentum derivative of matrix elements in Bloch basis,
+i.e.
+31
+Rep. Prog. Phys. 88 (2025) 076502 Review
+
+∂a ˆO
+
+mn
+= ⟨m|∂a
+ X
+m′n ′
+|m ′⟩Om′n ′⟨n ′|
+!
+|n⟩
+=
+X
+m′n ′
+⟨m|∂am ′⟩Om′n ′⟨n ′|n⟩ +
+X
+m′n ′
+⟨m|m ′⟩∂aOm′n ′⟨n ′|n⟩ +
+X
+m′n ′
+⟨m|m ′⟩Om′n ′⟨∂an ′|n⟩
+= ∂aOmn +
+X
+m′
+⟨m|∂am ′⟩Om′n +
+X
+n′
+Omn′⟨∂an ′|n⟩
+= ∂aOmn + i
+h
+ˆO, ˆr
+i
+mn
+, (D36)
+where the Berry connection ˆr is, as usual given by,
+ra
+mn ≡ i ⟨m|∂an⟩ = −i ⟨∂am|n⟩, (D37)
+which follows from 0 = ∂a(⟨m|n⟩) = ⟨∂am|n⟩ + ⟨m|∂an⟩. The
+matrix element of commutator should be understood as,
+h
+ˆA, ˆB
+i
+mn
+=
+X
+m′
+(Amm′Bm′n − Bmm′Am′n) . (D38)
+Then we can start from analyzing the 1st order velocity ver-
+tex ˆva,
+va
+mn =
+
+∂a ˆH
+
+mn
+= ∂aHmn + i
+h
+ˆH, ˆra
+i
+mn
+= ∂aεnδmn + i (ˆε ◦ ˆr)mn .
+(D39)
+Here we used the property that the Bloch Hamiltonian is
+undoubtedly diagonal in the Bloch basis, i.e. Hmn = εnδmn.
+Hadamard product ◦ denotes the element-wise product of two
+matrices, ( ˆA ◦ ˆB)mn = AmnBmn. The matrix element of ˆε is the
+energy difference between different bands, (ˆε)mn = εm − εn.
+The expected geometric content in anth-order vertex is thus
+a collection of at mostn number of pure momentum derivatives
+of Bloch wavefunctions. In order to capture this, we define a
+(gauge-dependent) higher-order derivative via
+Λa1...an
+mn ≡ i
+2 (⟨m|∂a1 . . . ∂ann⟩ − ⟨∂a1 . . . ∂anm|n⟩) . (D40)
+At first order this is just the Berry connection, i.e. Λa
+mn = ra
+mn,
+while the second order gauge-dependent geometric quantity
+becomes,
+λa1a2
+mn ≡ Λa1a2
+mn ≡ i
+2 (⟨m|∂a1∂a2n⟩ − ⟨∂a1∂a2m|n⟩) . (D41)
+Now we keep on expanding higher order velocity vertices,
+the matrix elements of the second order velocity vertex ˆwa1a2
+is,
+wab
+mn =
+
+∂aˆvb
+mn
+= ∂avb
+mn + i
+ˆvb, ˆra
+mn
+= ∂a
+
+∂bεnδmn + i
+
+ˆε ◦ ˆrb
+mn
+
++ i
+
+∂bεnδmn + i
+
+ˆε ◦ ˆrb
+, ˆrb
+mn
+= ∂a∂bεnδmn + i ∂a
+
+ˆε ◦ ˆrb
+mn + i (∂aεmn) rb
+mn −
+
+ˆε ◦ ˆra, ˆrb
+mn
+= ∂a∂bεnδmn + i
+
+ˆ∆a ◦ ˆrb + ˆ∆b ◦ ˆra
+
+mn
++ i εmn∂arb
+mn −
+
+ˆε ◦ ˆra, ˆrb
+mn (D42)
+where the velocity shift is ∆a
+mn ≡ ∂aεmn = ∂aεm − ∂aεn = va
+mm − va
+nn.
+Y et, the second order velocity vertex, can also be expanded for(a ↔ b), i.e. ˆwab = ∂bˆva. Both expressions are not manifestly
+the same because the expansion in terms of ˆra breaks the explicit permutation symmetry in spatial indices a and b. We can
+recover such explicit permutation symmetry by manually symmetrizing the expansion in terms of (a ↔ b), which affects both
+i εmn∂arb
+mn and −[ˆε ◦ ˆra, ˆrb]mn which are not symmetric under (a ↔ b). A useful organizing principle is to introduce a higher
+order analogue to the Berry curvature as,
+ ̃Ωab,N
+mn ≡
+ i
+
+ˆεN ◦ ˆra, ˆrb
+mn if N even
+ˆεN ◦ ˆrb, ˆra
+mn if N odd (D43)
+it is easy to see that the zeroth order generalized Berry curvature is just the ordinary Berry curvature, i.e.  ̃Ωab,0
+mn = Ωab
+mn. The
+derivative of the position operator is then,
+32
+Rep. Prog. Phys. 88 (2025) 076502 Review
+∂bra
+mn = i
+2 ∂b (⟨m|∂an⟩ − ⟨∂am|n⟩)
+= i
+2 (⟨m|∂a∂bn⟩ − ⟨∂a∂bm|n⟩) + i
+2 (⟨∂bm|∂an⟩ − ⟨∂am|∂bn⟩)
+= λab
+mn + i
+2
+X
+l
+(⟨∂bm|l⟩⟨l|∂an⟩ − ⟨∂am|l⟩⟨l|∂bn⟩)
+= λab
+mn + i
+2
+X
+l
+
+rb
+mlra
+ln − ra
+mlrb
+ln
+
+= λab
+mn − 1
+2 Ωab
+mn. (D44)
+In this notation, the first term is symmetric while the second term is antisymmetric under (a ↔ b). Symmetrizing the second
+order vertex thus yields,
+wab
+mn = 1
+2
+
+(∂bˆra)mn + (a ↔ b)
+
+= ∂a∂bεnδmn + i
+
+ˆ∆a ◦ ˆrb + ˆ∆b ◦ ˆra
+
+mn
++ i
+
+ˆε ◦ ˆλab
+
+mn
+− 1
+2
+
+ ̃Ωab,1
+mn +  ̃Ωba,1
+mn
+
+. (D45)
+The remaining expansions follow the same principles. For example, the diagonal matrix elements of the third order velocity
+vertex ˆuabc read (note that εnn = 0, ∆a
+nn = 0),
+uabc
+nn = ∂cwab
+nn + i
+
+wab, ˆrc
+nn
+= ∂a∂b∂cεn − 1
+2 ∂c
+
+ ̃Ωab,1
+nn +  ̃Ωba,1
+nn
+
+| {z }
+∂cwabnn
+−
+h
+ˆ∆a ◦ ˆrb + ˆ∆b ◦ ˆra, ˆrc
+i
+nn
+− i
+2
+h
+ ̃Ωab,1 +  ̃Ωba,1, ˆrc
+i
+nn
+−
+h
+ˆε ◦ ˆλab, ˆrc
+i
+nn| {z }
+i [wab,ˆrc]nn
+. (D46)
+We mention in passing that only the∂cwab
+nn part is needed when deriving the 2nd order conductivity, since thei [wab, ˆrc]nn part will
+be canceled by diagram (2.D) that contributes a i [ˆrc, wab]nn term. Additionally, for a fully filled band (insulator) with fn = 1or 0,
+it is
+ ́
+k fn∂cwab
+nn = 0.
+The last ingredient is the expansion of the momentum derivative of generalized Berry curvature, i.e.
+∂c  ̃Ωab,1
+nn = ∂c
+
+ˆε ◦ ˆra, ˆrb
+nn
+=
+h
+ˆ∆c ◦ ˆra, ˆrb
+i
+nn
++
+
+ˆε ◦ ∂cˆra, ˆrb
+nn +
+
+ˆε ◦ ˆra, ∂cˆrb
+nn
+=
+h
+ˆ∆c ◦ ˆra, ˆrb
+i
+nn
++
+
+ˆε ◦
+
+ˆλca + 1
+2
+ ̃Ωca,0
+
+, ˆrb
+
+nn
++
+
+ˆε ◦ ˆra,
+
+ˆλcb + 1
+2
+ ̃Ωcb,0
+
+nn
+. (D47)
+Using the property
+h
+ˆε ◦ ˆA, ˆB
+i
+nn
+=
+h
+ˆε ◦ ˆB, ˆA
+i
+nn
+, it is,
+∂c  ̃Ωab,1
+nn =
+h
+ˆ∆c ◦ ˆra, ˆrb
+i
+nn
++
+h
+ˆε ◦ ˆλca, ˆrb
+i
+nn
++
+h
+ˆε ◦ ˆra, ˆλcb
+i
+nn
++ i
+2
+
+ˆε ◦ [ˆrc, ˆra] , ˆrb
+nn + i
+2
+
+ˆε ◦
+ˆrc, ˆrb
+, ˆra
+nn
+=
+h
+ˆ∆c ◦ ˆra, ˆrb
+i
+nn
++
+h
+ˆε ◦ ˆλca, ˆrb
+i
+nn
++
+h
+ˆε ◦ ˆra, ˆλcb
+i
+nn
+− i
+2
+nh
+ˆrb,
+h
+ˆH, [ˆrc, ˆra]
+ii
+nn
++ (a ↔ b)
+o
+. (D48)
+With the help of the Jacobi identities for nested commutators,
+0 =
+h
+ˆA,
+h
+ˆB, ˆC
+ii
++
+h
+ˆB,
+h
+ˆC, ˆA
+ii
++
+h
+ˆC,
+h
+ˆA, ˆB
+ii
+, (D49)
+0 =
+h
+ˆA,
+h
+ˆB,
+h
+ˆC, ˆD
+iii
++
+h
+ˆB,
+h
+ˆC,
+h
+ˆD, ˆA
+iii
++
+h
+ˆC,
+h
+ˆD,
+h
+ˆA, ˆB
+iii
++
+h
+ˆD,
+h
+ˆA,
+h
+ˆB, ˆC
+iii
+, (D50)
+one obtains
+−
+h
+ˆrb,
+h
+ˆH, [ˆrc, ˆra]
+ii
+nn
+=
+h
+ˆH,
+ˆrc,
+ˆra, ˆrbi
+nn
++
+h
+ˆrc,
+h
+ˆra,
+h
+ˆrb, ˆH
+iii
+nn
++
+h
+ˆra,
+h
+ˆrb,
+h
+ˆH, ˆrc
+iii
+nn
+. (D51)
+33
+Rep. Prog. Phys. 88 (2025) 076502 Review
+Therefore, we can rewrite the expression of ∂c  ̃Ωab,1
+nn as,
+∂c  ̃Ωab,1
+nn =
+h
+ˆ∆c ◦ ˆra, ˆrb
+i
+nn
++
+h
+ˆε ◦ ˆλca, ˆrb
+i
+nn
++
+h
+ˆε ◦ ˆra, ˆλcb
+i
+nn
++ i
+2
+8
+>><
+>>:
+2
+64 ˆH,
+2
+64ˆrc,
+ˆra, ˆrb
+| {z }
++(a↔b)=0
+3
+75
+3
+75
+nn
++
+2
+664ˆrc,
+h
+ˆra,
+h
+ˆrb, ˆH
+ii
+| {z }
+ ̃Ωba,1
+3
+775
+nn
++
+2
+664ˆra,
+h
+ˆrb,
+h
+ˆH, ˆrc
+ii
+| {z }
+−  ̃Ωcb,1
+3
+775
+nn
++ (a ↔ b)
+9
+>>=
+>>;
+=
+h
+ˆ∆c ◦ ˆra, ˆrb
+i
+nn
++
+h
+ˆε ◦ ˆλca, ˆrb
+i
+nn
++
+h
+ˆε ◦ ˆra, ˆλcb
+i
+nn
++ i
+2
+n
+−
+h
+ ̃Ωba,1, ˆrc
+i
+nn
++
+h
+ ̃Ωcb,1, ˆra
+i
+nn
++ (a ↔ b)
+o
+. (D52)
+The final expression of uabc
+nn is then, after some lengthy algebra,
+uabc
+nn = ∂a∂b∂cεn +
+h
+ˆrc, ˆ∆a ◦ ˆrb
+i
+nn
++
+h
+ˆra, ˆ∆b ◦ ˆrc
+i
+nn
++
+h
+ˆrb, ˆ∆c ◦ ˆra
+i
+nn
+−
+h
+ˆε ◦ ˆλab, ˆrc
+i
+nn
+−
+h
+ˆε ◦ ˆλca, ˆrb
+i
+nn
+−
+h
+ˆε ◦ ˆλbc, ˆra
+i
+nn
++ i
+2
+nh
+ˆra,  ̃Ωcb,1
+i
+nn
++ (a ↔ b)
+o
+. (D53)
+D.3.2. Expansion with respect to τ . In the transport regime,
+where ω → 0, the quasiparticle lifetime τ becomes the only
+parameter available for expansion. As discussed in the main
+text, the most general case inevitably involves at least two dis-
+tinct lifetimes: the interband lifetime τinter and the intraband
+lifetime τintra. Let us define two corresponding relaxation rates:
+Γ = τ −1
+inter and γ = τ −1
+intra. Taking the interband relaxation time as
+the reference timescale τ = τinter, the intraband relaxation time
+becomes τintra = α−1τ , with the undetermined ratio α = γ/Γ
+distinguishing them. As discussed in the main text, the ratio
+α = 2 implies that the quasiparticle lifetime in the conduction
+band is much longer than in the valence band. In the transport
+regime, this ensures charge conservation in the valence band
+as now the localization effect dominates the relaxation process
+in transports. In the following, we keep the α as a free para-
+meter to discuss the most general case, and we will showα = 2
+arises as a natural choice not only in the sense of guaranteeing
+charge conservation but also in the sense of sharing consist-
+ent results (including NLD, BCD, and QMD terms) with the
+derivation from semiclassical formalism.
+Inserting the proper lifetimes into the formula for the
+second-order conductivity derived from Feynman diagram-
+matics, yields,
+σab;c
+(2.A) (0; ω, −ω) = − e3
+ ̄h2 (ω + i τ −1) (−ω + i τ −1)
+X
+n
+ˆ
+k
+fn
+uabc
+nn
+2 + (a, ω ↔ b, −ω) (D54)
+σab;c
+(2.B)+(2.C) (0; ω, −ω) = − e3
+ ̄h2 (ω + i τ −1) (−ω + i τ −1)
+X
+nm
+ˆ
+k
+fnmva
+nmwcb
+mn
+ω + εnm + i τ −1 + (a, ω ↔ b, −ω) (D55)
+σab;c
+(2.D) (0; ω, −ω) = − e3
+ ̄h2 (ω + i τ −1) (−ω + i τ −1)
+X
+nm
+ˆ
+k
+1
+2
+fnmwab
+nmvc
+mn
+−εmn + i ατ −1 + (a, ω ↔ b, −ω) (D56)
+σab;c
+(2.E)+(2.F) (0; ω, −ω) = − e3
+ ̄h2 (ω + i τ −1) (−ω + i τ −1)
+X
+nml
+ˆ
+k
+fnmva
+nm
+ω + εnm + i τ −1
+ vb
+mlvc
+ln
+−εln + i ατ −1 − vc
+mlvb
+ln
+−εml + i ατ −1
+
++ (a, ω ↔ b, −ω) . (D57)
+In these expressions, the interband/intraband lifetime have
+been introduced according to whether ±ω (interband) or  ̄ω
+(intraband) is present in the denominator. Note that the relax-
+ation time is also included in the global coefficient − e3
+ ̄h2ω1ω2
+which is a consequence of the (quasi-) adiabatic perturbation
+protocol with Ea(ω) = i ωAa(ω), which is also subject to the
+relaxation time.
+We note that compared to the expressions at first order, at
+second order it is not possible to perform adiabatic switching
+by simply replacing ω → iτ −1 because mixed terms appear not
+34
+Rep. Prog. Phys. 88 (2025) 076502 Review
+only in the Green’s functions but also in the global frequency
+denominator. Instead, the zero frequency limit ω → 0 should
+be taken by expanding with respect to τ . Let us demonstrate
+with a few examples.
+Regarding (2.B) +(2.C), recall that f nm always excludes
+terms where n = m, therefore the expansion can be performed
+while assuming that |εnmτ | ≫ 1,
+lim
+ω→0
+1
+(ω + i τ −1) (−ω + i τ −1)
+1
+ω + εnm + i τ −1 = − τ 2
+εnm
++ i τ
+ε2nm
++ 1
+ε3nm
+− i τ −1
+ε4nm
++ O
+
+τ −2
+(D58)
+(2.D) becomes similarly,
+lim
+ω→0
+1
+(ω + i τ −1) (−ω + i τ −1)
+1
+−εmn + i ατ −1 = τ 2
+εmn
++ i α τ
+ε2mn
+− α2 1
+ε3mn
+− i α3 τ −1
+ε4mn
++ O
+
+τ −2
+. (D59)
+However, regarding (2.E)+(2.F) we point out that for the denominator 1
+−εln+i ατ −1 , it is possible to have both n ̸= l and n = l
+cases, therefore it becomes necessary to discuss both cases separately when doing the expansion. In particular, in the n = l case
+one obtains terms of size O(τ 3) for each diagram, which cancel each other in the final result.
+D.3.3. Quantum metric dipole and in-gap nonlinear Hall response. Using the sum rules for the velocity vertices and with
+the help of the lifetime expansion, one can recover the semiclassical NLD at order O(τ 2) and the BCD at order O(τ ) by
+straightforward but tedious algebra. However, at order O(τ 0), the quantum perturbative result differs from the semiclassical
+one by the presence of an additional Fermi sea term. For completeness, we state this observation using the language introduced
+above.
+It is possible to construct the band-normalized QMD in terms of the sum rule expressions,
+∂cGab = ∂c
+h
+ˆε−1 ◦ ˆAa, ˆAb
+i
+=
+h
+ˆε−2 ◦ ˆAb, ˆ∆c ◦ ˆAa
+i
++
+h
+ˆε−1 ◦ ˆAb, ˆSac
+i
++ i
+2
+h
+ˆε−1 ◦ ˆAb,
+h
+ˆAa, ˆAc
+ii
++
+h
+ˆε−1 ◦ ˆAa, ˆSbc
+i
++ i
+2
+h
+ˆε−1 ◦ ˆAa,
+h
+ˆAb, ˆAc
+ii
+. (D60)
+From the semiclassical derivation, one expects this band-normalized QMD term, i.e. the nonlinear conductivity should con-
+tain a piece β∂cGab
+nn + γ∂aGbc
+nn + (a ↔ b), where the coefficients β and γ are parameters which still need to be determined.
+A lengthy calculation [ 92] then reveals that three Fermi sea terms are left over besides the QMD in the conductivity at
+order τ 0,
+σab;c
+τ 0 = e3
+ ̄h2
+ˆ
+k
+X
+n
+fn
+
+β∂cGab
+nn + γ∂aGbc
+nn + O
+
+ε−2∆A2
++ O
+
+ε−1SA
+
++ O
+
+ε−1A3	
++ (a ↔ b) . (D61)
+The three Fermi sea contributions to the intrinsic nonlinear response are purely quantum and do not appear in the semiclassical
+derivation. Individually, they correspond to the contribution from the velocity shift, the positional shift, and the Berry curvature
+renormalization during the nonlinear transport process, and read explicitly
+O
+
+ε−2∆A2
+=
+ 1
+α − 1 − β
+h
+ˆε−2 ◦ ˆAa, ˆ∆c ◦ ˆAb
+i
++ (α − γ)
+h
+ˆε−2 ◦ ˆAc, ˆ∆a ◦ ˆAb
+i
+(D62)
+O
+
+ε−1SA
+
+= (−2β − γ + 1)
+h
+ˆε−1 ◦ ˆAa, ˆSbc
+i
++
+
+−γ + α2
+2
+h
+ˆε−1 ◦ ˆAc, ˆSab
+i
+(D63)
+O
+
+ε−1A3
+=
+
+−β − γ
+2 + α
+h
+ˆε−1 ◦ ˆAa, i
+h
+ˆAb, ˆAc
+ii
++ i α
+
+1 − α
+2
+h
+ˆAa,
+h
+ˆAb, ˆε−1 ◦ ˆAc
+ii
+. (D64)
+35
+Rep. Prog. Phys. 88 (2025) 076502 Review
+One can ask whether it is possible to eliminate all terms other
+than the QMD term by choosing a certain combination of α,
+β and γ so that all the coefficients becomes zero. However,
+this is not possible. The second term in O(ε−1A3) enforces
+α = 2, then the second term in O(ε−1SA) enforces γ = 2,
+which further leads to β = − 1
+2 to cancel the first term in
+O(ε−1SA). Although this cancels all terms in O(ε−1SA)
+and O(ε−2∆A2), yet we are still left with O(ε−1A3) =
+3
+2
+h
+ˆε−1 ◦ ˆAa, i
+h
+ˆAb, ˆAc
+ii
+̸= 0. Thus the diagrammatic deriva-
+tion contains at least one more Fermi sea contribution that is
+missed in the semiclassical derivation.
+Although different values have been reported for β and
+γ [51, 62, 64, 65, 150], there is an emerging agreement that
+the intrinsic nonlinear transport conductivity should contain
+both a longitudinal and transverse QMD.
+References
+[1] Törmä P 2023 Essay: where can quantum geometry lead us?
+Phys. Rev. Lett. 131 240001
+[2] Y u J, Bernevig B A, Queiroz R, Rossi E, Törmä P and
+Y ang B-J 2024 Quantum geometry in quantum materials
+(arXiv:2501.00098 [cond-mat.mes-hall])
+[3] Resta R and V anderbilt D 2007 Theory of polarization: a
+modern approach Physics of Ferroelectrics: A Modern
+Perspective (Springer) pp 31–68 http://dx.doi.org/10.1007/
+978-3-540-34591-6_2
+[4] The self-rotation can alternatively be expressed as the
+non-commutativity of the position operator in the ground
+state manifold [163]
+[5] Hasan M Z and Kane C L 2010 Colloquium: topological
+insulators Rev. Mod. Phys. 82 3045–67
+[6] Qi X-L and Zhang S-C 2011 Topological insulators and
+superconductors Rev. Mod. Phys. 83 1057–110
+[7] Hasan M Z and Moore J E 2011 Three-dimensional
+topological insulators Annu. Rev. Condens. Matter Phys.
+2 55–78
+[8] Y an B and Felser C 2017 Topological materials: Weyl
+semimetals Annu. Rev. Condens. Matter Phys.
+8 337–54
+[9] Armitage N P , Mele E J and Vishwanath A 2018 Weyl and
+Dirac semimetals in three-dimensional solids Rev. Mod.
+Phys. 90 015001
+[10] V anderbilt D 2018Berry Phases in Electronic Structure
+Theory: Electric Polarization, Orbital Magnetization and
+Topological Insulators (Cambridge University Press)
+http://dx.doi.org/10.1017/9781316662205
+[11] Provost J P and V allee G 1980 Riemannian structure on
+manifolds of quantum states Commun. Math. Phys.
+76 289–301
+[12] Avdoshkin A and Popov F K 2023 Extrinsic geometry of
+quantum states Phys. Rev. B 107 245136
+[13] Ma Q, Grushin A G and Burch K S 2021 Topology and
+geometry under the nonlinear electromagnetic spotlight
+Nat. Mater .20 1601–14
+[14] Sipe J E and Shkrebtii A I 2000 Second-order optical
+response in semiconductors Phys. Rev. B 61 5337–52
+[15] Holder T, Kaplan D and Y an B 2020 Consequences of
+time-reversal-symmetry breaking in the light-matter
+interaction: Berry curvature, quantum metric and diabatic
+motion Phys. Rev. Res. 2 033100
+[16] Hosur P 2011 Phys. Rev. B 83 035309
+[17] Chang G et al 2017 Unconventional chiral fermions and large
+topological fermi arcs in RhSi Phys. Rev. Lett. 119 206401
+[18] Golub L E, Ivchenko E Â L and Spivak B 2020 Semiclassical
+theory of the circular photogalvanic effect in gyrotropic
+systems Phys. Rev. B 102 085202
+[19] de Juan F, Grushin A G, Morimoto T and Moore J E 2017
+Quantized circular photogalvanic effect in Weyl
+semimetals Nat. Commun. 8 15995
+[20] Avdoshkin A, Kozii V and Moore J E 2020 Interactions
+remove the quantization of the chiral photocurrent at Weyl
+points Phys. Rev. Lett. 124 196603
+[21] Ma Q et al 2017 Direct optical detection of Weyl fermion
+chirality in a topological semimetal Nat. Phys. 13 842–7
+[22] Rees D, Manna K, Lu B, Morimoto T, Borrmann H, Felser C,
+Moore J E, Torchinsky D H and Orenstein J 2020
+Helicity-dependent photocurrents in the chiral Weyl
+semimetal RhSi Sci. Adv. 6 eaba0509
+[23] Ni Z et al 2021 Giant topological longitudinal circular
+photo-galvanic effect in the chiral multifold semimetal
+cosi Nat. Commun. 12 154
+[24] Wu L, Patankar S, Morimoto T, Nair N L, Thewalt E,
+Little A, Analytis J G, Moore J E and Orenstein J 2017
+Giant anisotropic nonlinear optical response in transition
+metal monopnictide Weyl semimetals Nat. Phys. 13 350–5
+[25] Osterhoudt G B et al 2019 Colossal mid-infrared bulk
+photovoltaic effect in a type-I Weyl semimetal Nat. Mater .
+18 471–5
+[26] Fei R, Song W and Y ang Li 2020 Giant photogalvanic effect
+and second-harmonic generation in magnetic axion
+insulators Phys. Rev. B 102 035440
+[27] Chan C-K, Lee P A, Burch K S, Han J H and Ran Y 2016
+When chiral photons meet chiral fermions: photoinduced
+anomalous Hall effects in Weyl semimetals Phys. Rev.
+Lett. 116 026805
+[28] Chan C-K, Lindner N H, Refael G and Lee P A 2017
+Photocurrents in Weyl semimetals Phys. Rev. B 95 041104
+[29] Rangel T, Fregoso B M, Mendoza B S, Morimoto T,
+Moore J E and Neaton J B 2017 Large bulk photovoltaic
+effect and spontaneous polarization of single-layer
+monochalcogenides Phys. Rev. Lett. 119 067402
+[30] König E J, Xie H Y , Pesin D A and Levchenko A 2017
+Photogalvanic effect in Weyl semimetals Phys. Rev. B
+96 075123
+[31] Zhang Y , Ishizuka H, van den Brink J, Felser C, Y an B and
+Nagaosa N 2018a Photogalvanic effect in Weyl
+semimetals from first principles Phys. Rev. B 97 241118
+[32] Golub L E and Ivchenko E L 2018 Circular and
+magnetoinduced photocurrents in Weyl semimetals Phys.
+Rev. B 98 075305
+[33] Raj A, Chaudhary S and Fiete G A 2024 Photogalvanic
+response in multi-Weyl semimetals Phys. Rev. Res.
+6 013048
+[34] Tan L Z and Rappe A M 2016 Enhancement of the bulk
+photovoltaic effect in topological insulators Phys. Rev.
+Lett. 116 237402
+[35] Fregoso B M, Morimoto T and Moore J E 2017 Quantitative
+relationship between polarization differences and the
+zone-averaged shift photocurrent Phys. Rev. B 96 075421
+[36] Cook A M, Fregoso B M, de Juan F, Coh S and Moore J E
+2017 Design principles for shift current photovoltaics Nat.
+Commun. 8 14176
+[37] Parker D E, Morimoto T, Orenstein J and Moore J E 2019
+Diagrammatic approach to nonlinear optical response with
+application to Weyl semimetals Phys. Rev. B 99 045121
+[38] Kaplan D, Holder T and Y an B 2022 Twisted photovoltaics at
+terahertz frequencies from momentum shift current Phys.
+Rev. Res. 4 013209
+[39] Chaudhary S, Lewandowski C and Refael G 2022
+Shift-current response as a probe of quantum geometry
+and electron-electron interactions in twisted bilayer
+graphene Phys. Rev. Res. 4 013164
+36
+Rep. Prog. Phys. 88 (2025) 076502 Review
+[40] Watanabe H and Y anase Y 2021 Photocurrent response in
+parity-time symmetric current-ordered states Phys. Rev. B
+104 024416
+[41] Watanabe H, Daido A and Y anase Y 2022 Nonreciprocal
+optical response in parity-breaking superconductors Phys.
+Rev. B 105 024308
+[42] Avdoshkin A, Mitscherling J and Moore J E 2024 The
+multi-state geometry of shift current and polarization
+(arXiv:2409.16358)
+[43] Alexandradinata A 2024 Quantization of intraband and
+interband Berry phases in the shift current Phys. Rev. B
+110 075159
+[44] Zhang Y , Holder T, Ishizuka H, de Juan F, Nagaosa N,
+Felser C and Y an B 2019 Switchable magnetic bulk
+photovoltaic effect in the two-dimensional magnet CrI 3
+Nat. Commun. 10 3783
+[45] Watanabe H and Y anase Y 2021b Chiral photocurrent in
+parity-violating magnet and enhanced response in
+topological antiferromagnet Phys. Rev. X 11 011001
+[46] Kaplan D, Holder T and Y an B 2020 Nonvanishing subgap
+photocurrent as a probe of lifetime effects Phys. Rev. Lett.
+125 227401
+[47] Michishita Y and Peters R 2021 Effects of renormalization
+and non-Hermiticity on nonlinear responses in strongly
+correlated electron systems Phys. Rev. B 103 195133
+[48] Matsyshyn O, Song J C W, Villadiego I S and Shi Li-kun
+2023 Fermi-Dirac staircase occupation of Floquet bands
+and current rectification inside the optical gap of metals:
+an exact approach Phys. Rev. B 107 195135
+[49] Kaplan D, Holder T and Y an B 2023 Unifying semiclassics
+and quantum perturbation theory at nonlinear order
+SciPost Phys. 14 082
+[50] Sodemann I and Fu L 2015 Quantum nonlinear Hall effect
+induced by berry curvature dipole in time-reversal
+invariant materials Phys. Rev. Lett. 115 216806
+[51] Gao Y 2019 Semiclassical dynamics and nonlinear charge
+current Front. Phys. 14 33404
+[52] Watanabe H and Y anase Y 2020 Nonlinear electric transport
+in odd-parity magnetic multipole systems: application to
+Mn-based compounds Phys. Rev. Res. 2 043081
+[53] Wang C, Gao Y and Xiao D 2021 Intrinsic nonlinear Hall
+effect in antiferromagnetic tetragonal CuMnAs Phys. Rev.
+Lett. 127 277201
+[54] Zhang Y , Sun Y and Y an B 2018 Berry curvature dipole in
+Weyl semimetal materials: an ab initio study Phys. Rev. B
+97 041101
+[55] Matsyshyn O and Sodemann I 2019 Nonlinear Hall
+acceleration and the quantum rectification sum rule Phys.
+Rev. Lett. 123 246602
+[56] Nandy S and Sodemann I 2019 Symmetry and quantum
+kinetics of the nonlinear Hall effect Phys. Rev. B
+100 195117
+[57] Xu S-Y 2018 Electrically switchable Berry curvature dipole
+in the monolayer topological insulator WTe 2 Nat. Phys.
+14 900–6
+[58] Ma Q 2019 Observation of the nonlinear Hall effect
+under time-reversal-symmetric conditions Nature
+565 337–42
+[59] Kang K, Li T, Sohn E, Shan J and Mak K F 2019 Nonlinear
+anomalous Hall effect in few-layer WTe 2 Nat. Mater .
+18 324–8
+[60] Jiang Y , Yi Q and Y an B 2024 Electrical magnetochiral
+anisotropy and quantum metric in chiral conductors 2D
+Mater .12 015020
+[61] Zhao Y , Jiang Y and Bae H and Das K, Li Y , Liu C-X and
+Y an B 2024 Hybrid-order topology in unconventional
+magnets of Eu-based Zintl compounds with
+surface-dependent quantum geometry Phys. Rev. B
+110 205111
+[62] Gao Y , Y ang S A and Niu Q 2014 Field induced positional
+shift of bloch electrons and its dynamical implications
+Phys. Rev. Lett. 112 166601
+[63] Liu H, Zhao J, Huang Y -X, Wu W, Sheng X-L, Xiao C and
+Y ang S A 2021 Intrinsic second-order anomalous Hall
+effect and its application in compensated antiferromagnets
+Phys. Rev. Lett. 127 277202
+[64] Kaplan D, Holder T and Y an B 2024 Unification of nonlinear
+anomalous Hall effect and nonreciprocal
+magnetoresistance in metals by the quantum geometry
+Phys. Rev. Lett. 132 026301
+[65] Das K, Lahiri S, Atencia R B, Culcer D and Agarwal A 2023
+Intrinsic nonlinear conductivities induced by the quantum
+metric Phys. Rev. B 108 L201405
+[66] Wang N 2023 Quantum-metric-induced nonlinear transport
+in a topological antiferromagnet Nature 621 487–92
+[67] Gao A et al 2023 Quantum metric nonlinear Hall effect in a
+topological antiferromagnetic heterostructure Science
+381 181–6
+[68] Boyd R W 2003 Nonlinear Optics (Elsevier)
+[69] Sturman B and Fridkin V 2021 Photovoltaic and
+Photo-Refractive Effects in Noncentrosymmetric Materials
+(Routledge)
+[70] Morimoto T and Nagaosa N 2016 Topological nature of
+nonlinear optical effects in solids Sci. Adv. 2 e1501524
+[71] Tokura Y and Nagaosa N 2018 Nonreciprocal responses from
+non-centrosymmetric quantum materials Nat. Commun.
+9 3740
+[72] Du Z Z, Lu H-Z and Xie X C 2021 Nonlinear Hall effects
+Nat. Rev. Phys. 3 744–52
+[73] Morimoto T, Kitamura S and Nagaosa N 2023 Geometric
+aspects of nonlinear and nonequilibrium phenomena J.
+Phys. Soc. Japan 92 072001
+[74] Nagaosa N 2022 Nonlinear optical responses in
+noncentrosymmetric quantum materials Ann. Phys., NY
+447 169146
+[75] Dai Z and Rappe A M 2023 Recent progress in the theory of
+bulk photovoltaic effect Chem. Phys. Rev. 4 011303
+[76] Liu T, Qiang X-B, Lu H-Z and Xie X C 2024 Quantum
+geometry in condensed matter Natl. Sci. Rev. 12 nwae334
+[77] Belinicher V I and Sturman B I 1980 The photogalvanic
+effect in media lacking a center of symmetry Sov. Phys.
+Usp. 23 199–223
+[78] von Baltz R and Kraut W 1981 Theory of the bulk
+photovoltaic effect in pure crystals Phys. Rev. B 23 5590–6
+[79] Kraut W and von Baltz R 1979 Anomalous bulk photovoltaic
+effect in ferroelectrics: a quadratic response theory Phys.
+Rev. B 19 1548–54
+[80] Aversa C and Sipe J E 1995 Nonlinear optical susceptibilities
+of semiconductors: Results with a length-gauge analysis
+Phys. Rev. B 52 14636–45
+[81] Sun Z et al 2019 Giant nonreciprocal second-harmonic
+generation from antiferromagnetic bilayer CrI 3 Nature
+572 497–501
+[82] Ma J, Gu Q, Liu Y , Lai J, Y u P , Zhuo X, Liu Z, Chen J-H,
+Feng J and Sun D 2019 Nonlinear photoresponse of
+type-II Weyl semimetals Nat. Mater .18 476–81
+[83] Jankowski W J and Slager R-J 2024 Quantized integrated
+shift effect in multigap topological phases Phys. Rev. Lett.
+133 186601
+[84] Ahn J, Guo G-Y and Nagaosa N 2020 Low-frequency
+divergence and quantum geometry of the bulk photovoltaic
+effect in topological semimetals Phys. Rev. X 10 041041
+[85] Ahn J, Guo G-Y , Nagaosa N and Vishwanath A 2022
+Riemannian geometry of resonant optical responses Nat.
+Phys. 18 290–5
+[86] Iba nez-Azpiroz J, Tsirkin S S and Souza I 2018 Ab initio
+calculation of the shift photocurrent by Wannier
+interpolation Phys. Rev. B 97 245143
+37
+Rep. Prog. Phys. 88 (2025) 076502 Review
+[87] Zhu P and Alexandradinata A 2024 Anomalous shift and
+optical vorticity in the steady photovoltaic current Phys.
+Rev. B 110 115108
+[88] Sundaram G and Niu Q 1999 Wave-packet dynamics in
+slowly perturbed crystals: gradient corrections and
+Berry-phase effects Phys. Rev. B 59 14915–25
+[89] Culcer D, Y ao Y and Niu Q 2005 Coherent wave-packet
+evolution in coupled bands Phys. Rev. B 72 085110
+[90] Chang M-C and Niu Q 2008 TOPICAL REVIEW: Berry
+curvature, orbital moment and effective quantum theory of
+electrons in electromagnetic fields J. Phys.: Condens.
+Matter .20 193202
+[91] Bhalla P , Das K, Agarwal A and Culcer D 2023 Quantum
+kinetic theory of nonlinear optical currents: Finite Fermi
+surface and Fermi sea contributions Phys. Rev. B
+107 165131
+[92] Kaplan D, Holder T and Y an B 2023 General nonlinear Hall
+current in magnetic insulators beyond the quantum
+anomalous Hall effect Nat. Commun. 14 3053
+[93] Deyo E, Golub L E, Ivchenko E L and Spivak B 2009
+Semiclassical theory of the photogalvanic effect in
+non-centrosymmetric systems (arXiv:0904.1917)
+[94] Sturman B I and Fridkin V M 1992 The Photovoltaic and
+Photorefractive Effects in Noncentrosymmetric Materials
+(Gordon and Breach Philadelphia)
+[95] Mikhailov S A 2014 Quantum theory of third-harmonic
+generation in graphene Phys. Rev. B 90 241301
+[96] Mikhailov S A 2016 Quantum theory of the third-order
+nonlinear electrodynamic effects of graphene Phys. Rev. B
+93 085403
+[97] Cheng J L, V ermeulen N and Sipe J E 2014 Third order
+optical nonlinearity of graphene New J. Phys. 16 053014
+[98] Cheng J L, V ermeulen N and Sipe J E 2015 Third-order
+nonlinearity of graphene: effects of phenomenological
+relaxation and finite temperature Phys. Rev. B 91 235320
+[99] Cheng J L, V ermeulen N and Sipe J E 2017 Second order
+optical nonlinearity of graphene due to electric quadrupole
+and magnetic dipole effects Sci. Rep. 7 43843
+[100] V entura G B, Passos D J, Lopes dos Santos J M B, Viana
+Parente Lopes J M and Peres N M R 2017 Gauge
+covariances and nonlinear optical responses Phys. Rev. B
+96 035431
+[101] Passos D J, V entura G B, Lopes J M V P , Santos J M B L dos
+and Peres N M R 2018 Nonlinear optical responses of
+crystalline systems: results from a velocity gauge analysis
+Phys. Rev. B 97 235446
+[102] Zhang Z-fan, Zhu Z-G and Su G 2023 Symmetry dictionary
+on charge and spin nonlinear responses for all magnetic
+point groups with nontrivial topological nature Natl Sci.
+Rev. 10 nwad104
+[103] Holder T, Kaplan D, Ilan R and Y an B 2021 Mixed
+axial-gravitational anomaly from emergent curved
+spacetime in nonlinear charge transport
+(arXiv:2111.07780)
+[104] Kim K W, Morimoto T and Nagaosa N 2017 Shift charge and
+spin photocurrents in Dirac surface states of topological
+insulator Phys. Rev. B 95 035134
+[105] Chang G et al 2020 Unconventional photocurrents from
+surface fermi arcs in topological chiral semimetals Phys.
+Rev. Lett. 124 166404
+[106] Steiner J F, Andreev A V and Breitkreiz M 2022 Surface
+photogalvanic effect in Weyl semimetals Phys. Rev. Res.
+4 023021
+[107] Du Z Z, Wang C M, Lu H-Z and Xie X C 2018 Band
+signatures for strong nonlinear Hall effect in bilayer WTe 2
+Phys. Rev. Lett. 121 266601
+[108] Tiwari A et al 2021 Giant c-axis nonlinear anomalous Hall
+effect in T d-MoTe2 and WTe2 Nat. Commun. 12 2049
+[109] Min L et al 2023 Strong room-temperature bulk nonlinear
+Hall effect in a spin-valley locked Dirac material Nat.
+Commun. 14 364
+[110] Kumar D, Hsu C-H, Sharma R, Chang T-R, Y u P , Wang J,
+Eda G, Liang G and Y ang H 2021 Room-temperature
+nonlinear Hall effect and wireless radiofrequency
+rectification in Weyl semimetal TaIrTe4 Nat. Nanotechnol.
+16 421–5
+[111] Duan J, Jian Y , Gao Y , Peng H, Zhong J, Feng Q, Mao J
+and Y ao Y 2022 Giant second-order nonlinear Hall
+effect in twisted bilayer graphene Phys. Rev. Lett.
+129 186801
+[112] He P , Koon G K W, Isobe H, Tan J Y , Hu J, Neto A H C, Fu L
+and Y ang H 2022 Graphene moiré superlattices with giant
+quantum nonlinearity of chiral bloch electrons Nat.
+Nanotechnol. 17 378–83
+[113] Huang M et al 2022 Giant nonlinear Hall effect in twisted
+WSe2 Natl. Sci. Rev. 10 nwac232
+[114] He Z and Weng H 2021 Giant nonlinear Hall effect in twisted
+bilayer WTe2 npj Quantum Mater .6 101
+[115] He P , Isobe H, Zhu D, Hsu C-H, Fu L and Y ang H 2021
+Quantum frequency doubling in the topological insulator
+Bi2Se3 Nat. Commun. 12 698
+[116] Isobe H, Xu S-Y and Fu L 2020 High-frequency rectification
+via chiral Bloch electrons Sci. Adv. 6 eaay2497
+[117] Sturman B 2019 Ballistic and shift currents in the bulk
+photovoltaic effect theory Phys. Usp. 63 4
+[118] Nagaosa N, Sinova J, Onoda S, MacDonald A H and
+Ong N P 2010 Anomalous Hall effect Rev. Mod. Phys.
+82 1539–92
+[119] Xiao C, Du Z Z and Niu Q 2019 Theory of nonlinear Hall
+effects: modified semiclassics from quantum kinetics
+Phys. Rev. B 100 165422
+[120] Papaj M and Fu L 2019 Magnus Hall effect Phys. Rev. Lett.
+123 216802
+[121] Du Z Z, Wang C M, Li S, Lu H-Z and Xie X C 2019
+Disorder-induced nonlinear Hall effect with time-reversal
+symmetry Nat. Commun. 10 3047
+[122] König E J and Levchenko A 2021 Quantum kinetics of
+anomalous and nonlinear Hall effects in topological
+semimetals Ann. Phys., NY 435 168492
+[123] Du Z Z, Wang C M, Sun H-P , Lu H-Z and Xie X C 2021
+Quantum theory of the nonlinear Hall effect Nat.
+Commun. 12 5038
+[124] Atencia R B, Niu Q and Culcer D 2022 Semiclassical
+response of disordered conductors: extrinsic carrier
+velocity and spin and field-corrected collision integral
+Phys. Rev. Res. 4 013001
+[125] Bouhon A, Timmel A and Slager R-J 2023 Quantum
+geometry beyond projective single bands arXiv Preprint
+(arXiv:2303.02180)
+[126] Kolodrubetz M, Sels D, Mehta P and Polkovnikov A 2017
+Geometry and non-adiabatic response in quantum and
+classical systems Phys. Rep. 697 1–87
+[127] Mera B and Mitscherling J 2022 Nontrivial quantum
+geometry of degenerate flat bands Phys. Rev. B
+106 165133
+[128] Mitscherling J, Avdoshkin A and Moore J E 2024
+Gauge-invariant projector calculus for quantum state
+geometry and applications to observables in crystals
+(arXiv:2412.03637)
+[129] de Juan F, Zhang Y , Morimoto T, Sun Y , Moore J E and
+Grushin A G 2020 Difference frequency generation
+in topological semimetals Phys. Rev. Res.
+2 012017
+[130] Xiang L, Zhang C, Wang L and Wang J 2023 Third-order
+intrinsic anomalous Hall effect with generalized
+semiclassical theory Phys. Rev. B 107 075411
+38
+Rep. Prog. Phys. 88 (2025) 076502 Review
+[131] Jankowski W J, Morris A S, Bouhon A,  ́Unal F N and
+Slager R-J 2025 Optical manifestations and
+bounds of topological Euler class Phys. Rev. B
+111 L081103
+[132] Fregoso B M 2019 Bulk photovoltaic effects in the presence
+of a static electric field Phys. Rev. B 100 064301
+[133] Liu H, Zhao J, Huang Y -X, Feng X, Xiao C, Wu W, Lai S,
+Gao W-bo and Y ang S A 2022 Berry connection
+polarizability tensor and third-order Hall effect Phys. Rev.
+B 105 045118
+[134] Fang Y , Cano J and Ghorashi S A A 2024 Quantum geometry
+induced nonlinear transport in altermagnets Phys. Rev.
+Lett. 133 106701
+[135] Xiao D, Chang M-C and Niu Q 2010 Berry phase effects on
+electronic properties Rev. Mod. Phys. 82 1959–2007
+[136] Gong S-J, Zheng F and Rappe A M 2018 Phonon influence
+on bulk photovoltaic effect in the ferroelectric
+semiconductor GeTe Phys. Rev. Lett. 121 017402
+[137] Dai Z, Schankler A M, Gao L, Tan L Z and Rappe A M 2021
+Phonon-assisted ballistic current from first-principles
+calculations Phys. Rev. Lett. 126 177403
+[138] Xu H, Wang H and Li J 2022 Nonlinear nonreciprocal
+photocurrents under phonon dressing Phys. Rev. B
+106 035102
+[139] Dai Z and Rappe A M 2023 Magnetic bulk photovoltaic
+effect: strong and weak field Phys. Rev. B
+107 L201201
+[140] Burger A M, Agarwal R, Aprelev A, Schruba E,
+Gutierrez-Perez A, Fridkin V M and Spanier J E 2019
+Direct observation of shift and ballistic photovoltaic
+currents Sci. Adv. 5 eaau5588
+[141] Fei R, Tan L Z and Rappe A M 2020 Shift-current bulk
+photovoltaic effect influenced by quasiparticle and exciton
+Phys. Rev. B 101 045104
+[142] Chang Y -T and Chan Y -H 2024 Diagrammatic approach to
+excitonic effects on nonlinear optical response Phys. Rev.
+B 109 155437
+[143] Nakamura M et al 2024 Strongly enhanced shift current at
+exciton resonances in a noncentrosymmetric wide-gap
+semiconductor Nat. Commun. 15 9672
+[144] Bhalla P , MacDonald A H and Culcer D 2020 Resonant
+photovoltaic effect in doped magnetic semiconductors
+Phys. Rev. Lett. 124 087402
+[145] König E J, Dzero M, Levchenko A and Pesin D A 2019
+Gyrotropic Hall effect in Berry-curved materials Phys.
+Rev. B 99 155404
+[146] Belinicher V , Ivchenko E and Pikus G 1986 Transient
+photocurrent in gyrotropic crystals Sov. Phys. Semicond.
+20 558
+[147] Onishi Y , Watanabe H, Morimoto T and Nagaosa N 2022
+Effects of relaxation on the photovoltaic effect and
+possibility for photocurrent within the transparent region
+Phys. Rev. B 106 235110
+[148] Golub L E and Glazov M M 2022 Raman photogalvanic
+effect: photocurrent at inelastic light scattering Phys. Rev.
+B 106 205205
+[149] Shi Li-kun, Matsyshyn O, Song J C W and Villadiego I S
+2023 Berry-dipole photovoltaic demon and the
+thermodynamics of photocurrent generation
+within the optical gap of metals Phys. Rev. B
+107 125151
+[150] Jia J, Xiang L, Qiao Z and Wang J 2024 Equivalence of
+semiclassical and response theories for
+second-order nonlinear ac Hall effects Phys. Rev. B
+110 245406
+[151] Oiwa R and Kusunose H 2022 Systematic analysis method
+for nonlinear response tensors J. Phys. Soc. Japan
+91 014701
+[152] Holder T 2021 Electrons flow like falling cats: deformations
+and emergent gravity in quantum transport
+(arXiv:2111.07782)
+[153] Son D T and Spivak B Z 2013 Chiral anomaly and classical
+negative magnetoresistance of Weyl metals Phys. Rev. B
+88 104412
+[154] Ilan R, Grushin A G and Pikulin D I 2020
+Pseudo-electromagnetic fields in 3D topological
+semimetals Nat. Rev. Phys. 2 29–41
+[155] Landsteiner K 2016 Notes on anomaly induced transport
+Acta Phys. Pol. B 47 2617
+[156] Gooth J et al 2017 Experimental signatures of the mixed
+axial-gravitational anomaly in the Weyl semimetal NbP
+Nature 547 324–7
+[157] Chernodub M N, Ferreiros Y , Grushin A G, Landsteiner K
+and V ozmediano M A H 2022 Thermal transport,
+geometry and anomalies Phys. Rep. 977 1–58
+[158] Y u R, Zhang W, Zhang H-J, Zhang S-C, Dai Xi and Fang Z
+2010 Quantized anomalous Hall Effect in magnetic
+topological insulators Science 329 61
+[159] Gao Y , Zhang F and Zhang W 2020 Second-order nonlinear
+Hall effect in Weyl semimetals Phys. Rev. B 102 245116
+[160] Mehraeen M 2024 Quantum kinetic theory of quadratic
+responses Phys. Rev. B 110 174423
+[161] Sinitsyn N A, Niu Q and MacDonald A H 2006 Coordinate
+shift in the semiclassical Boltzmann
+equation and the anomalous Hall effect Phys. Rev. B
+73 075318
+[162] Xiang L and Wang J 2024 Intrinsic in-plane
+magnetononlinear Hall effect in tilted Weyl semimetals
+Phys. Rev. B 109 075419
+[163] Haldane F D 2004 Berry curvature on the fermi surface:
+anomalous hall effect as a topological fermi-liquid
+property Phys. Rev. Lett. 93 206602
+39

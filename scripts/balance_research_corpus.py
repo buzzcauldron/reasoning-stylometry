@@ -1,16 +1,22 @@
 #!/usr/bin/env python3
 """Build balanced training sets for the content and style classifiers.
 
-Chunks in reference_research/chunks/ are named
+Chunks in reference_research/chunks_content/ and chunks_style/ are named
 `{content}__{style}__{arxiv_slug}__chunkNNN.txt` with content and style labels
 assigned independently by retag_content_style.py (see that script and
 corpus_classify/CORPUS.md for why this matters — content and style used to be
-the same value by construction).
+the same value by construction). The two pools are independent: a chunk with
+a confident content label but an ambiguous style score (or vice versa) is
+duplicated into only the pool that wants it, and content_mixed_holdout/
+(split_mixed_content_holdout.py) only ever removes chunks from
+chunks_content/ -- see that script's header for why chunks_style/ must never
+be gated by a content-specific ambiguity check (confirmed to measurably hurt
+style accuracy when it was, 2026-07-23).
 
 stylo::classify() always uses the filename segment before the first
 underscore as the ground-truth class. That means training a CONTENT
 classifier and a STYLE classifier requires two differently-ordered filename
-views of the same chunks:
+views:
 
 - balanced_content/: `{content}__{style}__...` (content leading) — matches the
   existing corpus_classify/jams_quadrant test file convention.
@@ -28,11 +34,9 @@ bigger, higher-cap version on a machine with enough RAM (see akdeniz setup in
 project notes) rather than lowering this back down.
 
 Also pulls in corpus_classify/reference_research/chunks_pseudo_labeled/ if
-present -- chunks originally held out by split_mixed_content_holdout.py
-(ambiguous by keyword tagging) whose content/style labels were instead
-assigned by the trained classifier itself (see
-scripts/merge_pseudo_labels.py). These are pseudo-labels, not
-keyword-verified ground truth; provenance (verified vs pseudo-labeled) is
+present -- chunks classify_mixed_content.R predicted labels for (ambiguous by
+keyword tagging), merged in by merge_pseudo_labels.py. These are pseudo-labels,
+not keyword-verified ground truth; provenance (verified vs pseudo-labeled) is
 reported in the balance report so this can be audited or excluded later.
 """
 
@@ -50,7 +54,8 @@ ROOT = Path(__file__).resolve().parents[1]
 # for A/B comparison against the raw-text balanced sets.
 SUFFIX = "_lemmatized" if os.environ.get("STYLO_LEMMATIZED") == "1" else ""
 RR = ROOT / "corpus_classify" / "reference_research"
-CHUNKS = RR / f"chunks{SUFFIX}"
+CHUNKS_CONTENT = RR / f"chunks_content{SUFFIX}"
+CHUNKS_STYLE = RR / f"chunks_style{SUFFIX}"
 PSEUDO_LABELED = RR / f"chunks_pseudo_labeled{SUFFIX}"
 TEXTBOOK_CHUNKS = RR / f"textbook_chunks{SUFFIX}"
 BALANCED_CONTENT = RR / f"balanced_content{SUFFIX}"
@@ -75,13 +80,19 @@ def build_balanced(out_dir: Path, axis: str, seed: int = 42) -> dict:
 
     by_label: dict[str, list[Path]] = {"geometric": [], "algebraic": []}
     provenance: dict[Path, str] = {}
-    pools = [("verified", CHUNKS)]
+    verified_pool = CHUNKS_CONTENT if axis == "content" else CHUNKS_STYLE
+    pools = [("verified", verified_pool)]
     if PSEUDO_LABELED.exists():
         pools.append(("pseudo_labeled", PSEUDO_LABELED))
     if TEXTBOOK_CHUNKS.exists():
         pools.append(("textbook", TEXTBOOK_CHUNKS))
     for source_name, pool_dir in pools:
-        for path in pool_dir.glob("*.txt"):
+        # sorted(): glob() order is filesystem directory-entry order (APFS:
+        # not alphabetical, changes across machines and after any upstream
+        # rename e.g. every retag_content_style.py run) -- rng.sample(seed=42)
+        # depends on input order, so the fixed seed only actually reproduces
+        # the same sample when the input order is itself deterministic.
+        for path in sorted(pool_dir.glob("*.txt")):
             parsed = parse(path.name)
             if parsed is None:
                 continue
